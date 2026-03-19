@@ -138,9 +138,9 @@
             background: white;
             border-radius: 12px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            padding: 1.5rem;
             transition: transform 0.3s, box-shadow 0.3s;
             border: 1px solid var(--border);
+            overflow: hidden;
         }
         .hospital-card:hover {
             transform: translateY(-5px);
@@ -148,6 +148,15 @@
         }
         .hospital-card.hidden {
             display: none;
+        }
+        .hospital-image {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            display: block;
+        }
+        .hospital-content {
+            padding: 1.5rem;
         }
         .hospital-name {
             color: var(--primary);
@@ -218,6 +227,27 @@
   gtag('js', new Date());
   gtag('config', 'G-RVYZENK472');
 </script>
+    <!-- BreadcrumbList Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://chinahospitalsguide.com/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Hospitals",
+                "item": "https://chinahospitalsguide.com/hospitals.html"
+            }
+        ]
+    }
+    </script>
 </head>
 <body>
     <nav>
@@ -265,17 +295,17 @@
 
     <script>
         const hospitals = [
-            { name: "Fu Wai Hospital", city: "Beijing", district: "Xicheng", phone: "Contact us for details", rank: "#1 Cardiology in China", airport: "45-60min from Capital", tags: ["cardiology", "heart-surgery", "general"] },
+            { name: "Fu Wai Hospital", city: "Beijing", district: "Xicheng", phone: "Contact us for details", rank: "#1 Cardiology in China", airport: "45-60min from Capital", tags: ["cardiology", "heart-surgery", "general"], image: "images/hospitals/fuwai-hospital.jpg" },
             { name: "Anzhen Hospital", city: "Beijing", district: "Chaoyang", phone: "Contact us for details", rank: "Top Cardiovascular Center", airport: "40-55min from Capital", tags: ["cardiology", "heart-surgery"] },
             { name: "Zhongshan Hospital (Shanghai)", city: "Shanghai", district: "Xuhui", phone: "Contact us for details", rank: "Top 3 Cardiology, Top 5 Oncology", airport: "55-75min from Pudong", tags: ["cardiology", "oncology", "general"] },
-            { name: "Jishuitan Hospital", city: "Beijing", district: "Xicheng", phone: "Contact us for details", rank: "#1 Orthopedics in China", airport: "40-50min from Capital", tags: ["orthopedics", "joint-replacement", "spine-surgery"] },
+            { name: "Jishuitan Hospital", city: "Beijing", district: "Xicheng", phone: "Contact us for details", rank: "#1 Orthopedics in China", airport: "40-50min from Capital", tags: ["orthopedics", "joint-replacement", "spine-surgery"], image: "images/hospitals/jishuitan-hospital.jpg" },
             { name: "Shanghai Sixth Hospital", city: "Shanghai", district: "Xuhui", phone: "Contact us for details", rank: "#2 Orthopedics", airport: "50-60min from Pudong", tags: ["orthopedics", "sports-medicine", "joint-replacement"] },
             { name: "Peking University Third Hospital", city: "Beijing", district: "Haidian", phone: "Contact us for details", rank: "#4 Obstetrics, #1 Fertility, Top Orthopedics", airport: "45min from Capital", tags: ["orthopedics", "maternity", "fertility", "sports-medicine"] },
             { name: "Fudan University Women's Hospital (Red House)", city: "Shanghai", district: "Huangpu", phone: "Contact us for details", rank: "#2 Obstetrics in China", airport: "60min from Pudong", tags: ["maternity", "obstetrics", "prenatal-diagnosis", "fertility"] },
             { name: "Zhejiang University Women's Hospital", city: "Hangzhou", district: "Shangcheng", phone: "Contact us for details", rank: "Top Obstetrics", airport: "50min from Xiaoshan", tags: ["maternity", "obstetrics", "prenatal-diagnosis", "fertility"] },
             { name: "Cancer Hospital, CAMS", city: "Beijing", district: "Chaoyang", phone: "Contact us for details", rank: "#1 Oncology in China", airport: "40-50min from Capital", tags: ["oncology", "cancer-surgery", "radiotherapy"] },
             { name: "Tiantan Hospital", city: "Beijing", district: "Fengtai", phone: "Contact us for details", rank: "#1 Neurosurgery", airport: "50-70min from Capital", tags: ["neurosurgery", "neurology", "general"] },
-            { name: "Huashan Hospital", city: "Shanghai", district: "Jing'an", phone: "Contact us for details", rank: "#2 Neurosurgery", airport: "65-85min from Pudong", tags: ["neurosurgery", "neurology"] },
+            { name: "Huashan Hospital", city: "Shanghai", district: "Jing'an", phone: "Contact us for details", rank: "#2 Neurosurgery", airport: "65-85min from Pudong", tags: ["neurosurgery", "neurology"], image: "images/hospitals/huashan-hospital.jpg" },
             { name: "Beijing Children's Hospital", city: "Beijing", district: "Xicheng", phone: "Contact us for details", rank: "#1 Pediatrics", airport: "45-60min from Capital", tags: ["pediatrics", "childrens-health"] },
             { name: "Peking Union Medical College Hospital", city: "Beijing", district: "Dongcheng", phone: "Contact us for details", rank: "#1 Comprehensive Hospital", airport: "45-60min from Capital", tags: ["general", "all-specialties"] },
             { name: "China-Japan Friendship Hospital", city: "Beijing", district: "Chaoyang", phone: "Contact us for details", rank: "Top International Department", airport: "40-55min from Capital", tags: ["general", "international"] },
@@ -288,7 +318,7 @@
             { name: "Zhongshan Sixth Hospital", city: "Guangzhou", district: "Tianhe", phone: "Contact us for details", rank: "Top Gastroenterology", airport: "45-60min from Baiyun", tags: ["gastroenterology", "general"] },
             { name: "Zhujiang Hospital", city: "Guangzhou", district: "Haizhu", phone: "Contact us for details", rank: "Top Neurosurgery South China", airport: "45-60min from Baiyun", tags: ["neurosurgery", "general"] },
             { name: "First Affiliated Hospital of Guangzhou TCM", city: "Guangzhou", district: "Baiyun", phone: "Contact us for details", rank: "Top Traditional Chinese Medicine", airport: "35-50min from Baiyun", tags: ["tcm", "general"] },
-            { name: "First Affiliated Hospital of Sun Yat-sen University", city: "Guangzhou", district: "Yuexiu", phone: "Contact us for details", rank: "Top Comprehensive Hospital", airport: "50-70min from Baiyun", tags: ["general", "all-specialties"] },
+            { name: "First Affiliated Hospital of Sun Yat-sen University", city: "Guangzhou", district: "Yuexiu", phone: "Contact us for details", rank: "Top Comprehensive Hospital", airport: "50-70min from Baiyun", tags: ["general", "all-specialties"], image: "images/hospitals/sun-yat-sen-hospital.jpg" },
             { name: "First Affiliated Hospital of Guangzhou Medical University", city: "Guangzhou", district: "Liwan", phone: "Contact us for details", rank: "Top Respiratory Medicine", airport: "40-55min from Baiyun", tags: ["respiratory", "general"] },
             { name: "Peking University People's Hospital", city: "Beijing", district: "Xicheng", phone: "Contact us for details", rank: "Top General Hospital", airport: "50-70min from Capital", tags: ["general", "hematology"] },
             { name: "Beijing Chaoyang Hospital", city: "Beijing", district: "Chaoyang", phone: "Contact us for details", rank: "Top Respiratory Medicine", airport: "40-55min from Capital", tags: ["respiratory", "general"] },
@@ -298,7 +328,7 @@
             { name: "Shenzhen Second People's Hospital", city: "Shenzhen", district: "Futian", phone: "Contact us for details", rank: "Top Orthopedics Shenzhen", airport: "40-55min from Bao'an", tags: ["orthopedics", "general"] },
             { name: "Shenzhen Traditional Chinese Medicine Hospital", city: "Shenzhen", district: "Futian", phone: "Contact us for details", rank: "Top TCM Shenzhen", airport: "45-60min from Bao'an", tags: ["tcm", "general"] },
             { name: "Shenzhen Maternity & Child Healthcare Hospital", city: "Shenzhen", district: "Futian", phone: "Contact us for details", rank: "Top Maternity Shenzhen", airport: "40-55min from Bao'an", tags: ["maternity", "pediatrics"] },
-            { name: "West China Hospital", city: "Chengdu", district: "Wuhou", phone: "Contact us for details", rank: "Top Hospital West China", airport: "45-60min from Tianfu", tags: ["general", "all-specialties"] }
+            { name: "West China Hospital", city: "Chengdu", district: "Wuhou", phone: "Contact us for details", rank: "Top Hospital West China", airport: "45-60min from Tianfu", tags: ["general", "all-specialties"], image: "images/hospitals/west-china-hospital.jpg" }
         ];
 
         const specialtyNames = {
@@ -403,13 +433,20 @@
                     `<span class="hospital-tag" onclick="toggleTag('${tag}')">${specialtyNames[tag] || tag}</span>`
                 ).join('');
                 
+                const imageHtml = hospital.image ? 
+                    `<img src="${hospital.image}" alt="${hospital.name}" class="hospital-image" onerror="this.style.display='none'">` : 
+                    '';
+                
                 card.innerHTML = `
-                    <div class="hospital-name">${hospital.name}</div>
-                    <div class="hospital-location">📍 ${hospital.city} | ${hospital.district} District</div>
-                    <div class="hospital-info"><strong>Phone:</strong> ${hospital.phone}</div>
-                    <div class="hospital-info"><strong>Rank:</strong> ${hospital.rank}</div>
-                    <div class="hospital-info"><strong>Airport:</strong> ${hospital.airport}</div>
-                    <div class="hospital-tags">${tagsHtml}</div>
+                    ${imageHtml}
+                    <div class="hospital-content">
+                        <div class="hospital-name">${hospital.name}</div>
+                        <div class="hospital-location">📍 ${hospital.city} | ${hospital.district} District</div>
+                        <div class="hospital-info"><strong>Phone:</strong> ${hospital.phone}</div>
+                        <div class="hospital-info"><strong>Rank:</strong> ${hospital.rank}</div>
+                        <div class="hospital-info"><strong>Airport:</strong> ${hospital.airport}</div>
+                        <div class="hospital-tags">${tagsHtml}</div>
+                    </div>
                 `;
                 
                 container.appendChild(card);
