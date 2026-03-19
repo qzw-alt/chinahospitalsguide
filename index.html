@@ -51,6 +51,14 @@
     </noscript>
     <!-- End Facebook Pixel Code -->
     
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("5fO60dvOGsKzPk_Ir");
+        })();
+    </script>
+    
     <!-- BreadcrumbList Schema -->
     <script type="application/ld+json">
     {
@@ -1453,14 +1461,21 @@
             };
             
             try {
-                // Submit to Jiandaoyun via webhook
-                const response = await fetch('https://tzu2c79rqy.jiandaoyun.com/f/69ad77bb9fad89d6a1fdb769', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify(formData)
-                });
+                // Send email using EmailJS
+                const templateParams = {
+                    from_name: formData.name,
+                    from_email: formData.email,
+                    country: formData.country,
+                    whatsapp: formData.whatsapp || 'Not provided',
+                    condition: formData.condition,
+                    city: formData.city || 'Not specified',
+                    timeline: formData.timeline || 'Not specified',
+                    questions: formData.questions || 'None',
+                    submit_time: new Date().toLocaleString(),
+                    source: 'Website Contact Form'
+                };
+                
+                await emailjs.send('service_0gb6hmx', 'template_ezmtqvb', templateParams);
                 
                 // Show success message
                 document.getElementById('inquiryForm').style.display = 'none';
