@@ -779,6 +779,62 @@
             🔥 <strong>23 patients</strong> saved $1.2M+ this month • Join them!
         </div>
         
+        <!-- Hero Quick Form -->
+        <div style="margin-top: 30px; background: rgba(255,255,255,0.1); padding: 30px; border-radius: 20px; max-width: 600px; margin-left: auto; margin-right: auto; backdrop-filter: blur(10px);">
+            <h3 style="color: white; margin-bottom: 20px; font-size: 1.3rem;">🏥 Get Your Free Cost Estimate</h3>
+            <form id="heroForm" style="display: flex; flex-wrap: wrap; gap: 15px; justify-content: center;">
+                <input type="email" id="heroEmail" placeholder="Your email address" required 
+                    style="flex: 1; min-width: 200px; padding: 15px 20px; border: none; border-radius: 10px; font-size: 1rem;">
+                <input type="text" id="heroCondition" placeholder="What treatment do you need?" required
+                    style="flex: 1; min-width: 200px; padding: 15px 20px; border: none; border-radius: 10px; font-size: 1rem;">
+                
+                <button type="submit" class="cta-button" style="flex: 0 0 auto; margin: 0;">
+                    Get Free Estimate →
+                </button>
+            </form>
+            <p style="color: rgba(255,255,255,0.7); font-size: 0.85rem; margin-top: 15px;">
+                ✅ No spam. Response within 24 hours. 100% free.
+            </p>
+        </div>
+        
+        <script>
+            // Hero form submission
+            document.getElementById('heroForm').addEventListener('submit', async function(e) {
+                e.preventDefault();
+                
+                const email = document.getElementById('heroEmail').value;
+                const condition = document.getElementById('heroCondition').value;
+                
+                try {
+                    await emailjs.send('service_0gb6hmx', 'template_ezmtqvb', {
+                        from_name: 'Hero Form User',
+                        from_email: email,
+                        country: 'Not provided',
+                        whatsapp: 'Not provided',
+                        condition: condition,
+                        city: 'Not specified',
+                        timeline: 'Not specified',
+                        questions: 'Submitted via Hero quick form',
+                        submit_time: new Date().toLocaleString(),
+                        source: 'Hero Quick Form'
+                    });
+                    
+                    // Show success
+                    alert('Thank you! We\'ll send you a personalized cost estimate within 24 hours.');
+                    document.getElementById('heroForm').reset();
+                    
+                    // Track conversion
+                    if (typeof fbq !== 'undefined') {
+                        fbq('track', 'Lead', { content_name: 'Hero Quick Form' });
+                    }
+                    
+                } catch (error) {
+                    console.error('Error:', error);
+                    alert('Sorry, there was an error. Please try again or use the full form below.');
+                }
+            });
+        </script>
+        
         <!-- Trust Badges -->
         <div class="trust-badges">
             <div class="badge"><span class="badge-icon">🛡️</span><span>Trusted by 500+ International Patients</span></div>
@@ -1739,6 +1795,35 @@
             <span class="chat-tooltip">🛬 In China: Need help? Chat here</span>
         </a>
     </div>
+    <!-- Floating CTA Button -->
+    <div id="floatingCTA" style="position: fixed; bottom: 90px; right: 20px; z-index: 9997; display: none;">
+        <a href="#contact" style="display: flex; align-items: center; gap: 8px; background: linear-gradient(135deg, #ff6b6b 0%, #ff8e53 100%); color: white; padding: 15px 25px; border-radius: 50px; text-decoration: none; font-weight: bold; box-shadow: 0 5px 20px rgba(255,107,107,0.4); animation: floatPulse 2s infinite;">
+            <span style="font-size: 1.3rem;">💬</span>
+            <span>Get Free Quote</span>
+        </a>
+    </div>
+    
+    <style>
+        @keyframes floatPulse {
+            0%, 100% { transform: scale(1); box-shadow: 0 5px 20px rgba(255,107,107,0.4); }
+            50% { transform: scale(1.05); box-shadow: 0 8px 30px rgba(255,107,107,0.6); }
+        }
+    </style>
+    
+    <script>
+        // Show floating CTA after scrolling past hero
+        window.addEventListener('scroll', function() {
+            const hero = document.querySelector('.hero');
+            const floatingCTA = document.getElementById('floatingCTA');
+            
+            if (hero && window.scrollY > hero.offsetHeight * 0.8) {
+                floatingCTA.style.display = 'block';
+            } else {
+                floatingCTA.style.display = 'none';
+            }
+        });
+    </script>
+    
     <!-- Mobile Fixed Bottom Bar -->
     <div class="mobile-bottom-bar" style="display: none; position: fixed; bottom: 0; left: 0; right: 0; background: white; padding: 10px 15px; box-shadow: 0 -2px 10px rgba(0,0,0,0.1); z-index: 9998; justify-content: space-around; align-items: center;">
         <a href="https://wa.me/447947060056" style="display: flex; flex-direction: column; align-items: center; color: #25D366; text-decoration: none; font-size: 0.75rem;">
