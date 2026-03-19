@@ -1477,6 +1477,13 @@
                 
                 await emailjs.send('service_0gb6hmx', 'template_ezmtqvb', templateParams);
                 
+                // Also send to assistant for data entry
+                await emailjs.send('service_0gb6hmx', 'template_ezmtqvb', {
+                    ...templateParams,
+                    to_email: 'motionlessbottle950@agentmail.to',
+                    _subject: `[ASSISTANT] New Lead: ${formData.name} from ${formData.country}`
+                });
+                
                 // Show success message
                 document.getElementById('inquiryForm').style.display = 'none';
                 document.getElementById('successMessage').style.display = 'block';
