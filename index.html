@@ -373,18 +373,29 @@
                 max-height: 0;
                 overflow: hidden;
                 transition: max-height 0.3s;
+                padding: 0;
             }
             
             .nav-links.active {
                 max-height: 400px;
+                padding: 10px 0;
+            }
+            
+            .nav-links li {
+                width: 100%;
             }
             
             .nav-links a {
                 padding: 15px 20px;
                 border-bottom: 1px solid rgba(255,255,255,0.1);
+                display: block;
+                text-align: center;
             }
             
             .nav-cta {
+                display: none;
+            }
+        }
                 display: none;
             }
         }
@@ -653,6 +664,50 @@
             .cta-button {
                 padding: 18px 30px;
                 font-size: 1rem;
+                width: 100%;
+                max-width: 300px;
+            }
+            /* 表单移动端优化 */
+            .form-row {
+                flex-direction: column;
+                gap: 0;
+            }
+            .form-group {
+                margin-bottom: 15px;
+            }
+            .form-section {
+                padding: 40px 15px;
+            }
+            .form-container {
+                padding: 25px 20px;
+            }
+            /* 定价卡片移动端优化 */
+            .pricing-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            .pricing-card {
+                padding: 25px 20px;
+            }
+            /* FAQ 移动端优化 */
+            .faq-question {
+                padding: 15px 20px;
+                font-size: 1rem;
+            }
+            .faq-answer {
+                padding: 0 20px 15px;
+            }
+            /* 限时优惠横幅移动端优化 */
+            .hero div[style*="LIMITED TIME"] {
+                font-size: 0.85rem !important;
+                padding: 12px 20px !important;
+            }
+            /* Lead Magnet 横幅移动端优化 */
+            .form-section div[style*="Lead Magnet"] {
+                padding: 20px !important;
+            }
+            .form-section div[style*="Lead Magnet"] h3 {
+                font-size: 1.2em !important;
             }
         }
     </style>
@@ -1662,6 +1717,34 @@
             <span class="chat-tooltip">🛬 In China: Need help? Chat here</span>
         </a>
     </div>
+    <!-- Mobile Fixed Bottom Bar -->
+    <div class="mobile-bottom-bar" style="display: none; position: fixed; bottom: 0; left: 0; right: 0; background: white; padding: 10px 15px; box-shadow: 0 -2px 10px rgba(0,0,0,0.1); z-index: 9998; justify-content: space-around; align-items: center;">
+        <a href="https://wa.me/447947060056" style="display: flex; flex-direction: column; align-items: center; color: #25D366; text-decoration: none; font-size: 0.75rem;">
+            <span style="font-size: 1.5rem;">💬</span>
+            WhatsApp
+        </a>
+        <a href="tel:+8615763107083" style="display: flex; flex-direction: column; align-items: center; color: #1e3c72; text-decoration: none; font-size: 0.75rem;">
+            <span style="font-size: 1.5rem;">📞</span>
+            Call
+        </a>
+        <a href="#contact" style="display: flex; flex-direction: column; align-items: center; color: #ff6b6b; text-decoration: none; font-size: 0.75rem;">
+            <span style="font-size: 1.5rem;">✉️</span>
+            Email
+        </a>
+    </div>
+    
+    <style>
+        @media (max-width: 768px) {
+            .mobile-bottom-bar {
+                display: flex !important;
+            }
+            /* Add padding to body to prevent content from being hidden behind the bar */
+            body {
+                padding-bottom: 70px;
+            }
+        }
+    </style>
+    
 </body>
 </html>
 
