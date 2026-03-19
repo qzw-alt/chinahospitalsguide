@@ -481,8 +481,28 @@
                     `<span class="hospital-tag" onclick="toggleTag('${tag}')">${specialtyNames[tag] || tag}</span>`
                 ).join('');
                 
-                const imageHtml = hospital.image ? 
-                    `<img src="${hospital.image}" alt="${hospital.name}" class="hospital-image" onerror="this.style.display='none'">` : 
+                // Use hospital image if available, otherwise use city image
+                let imageUrl = hospital.image;
+                if (!imageUrl) {
+                    const cityImageMap = {
+                        'Beijing': 'images/hospitals/beijing-city.jpg',
+                        'Shanghai': 'images/hospitals/shanghai-city.jpg',
+                        'Guangzhou': 'images/hospitals/guangzhou-city.jpg',
+                        'Shenzhen': 'images/hospitals/shenzhen-city.jpg',
+                        'Hangzhou': 'images/hospitals/hangzhou-city.jpg',
+                        'Chengdu': 'images/hospitals/chengdu-city.jpg'
+                    };
+                    imageUrl = cityImageMap[hospital.city] || '';
+                }
+                
+                const imageHtml = imageUrl ? 
+                    `<img src="${imageUrl}" alt="${hospital.name}" class="hospital-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="hospital-image-placeholder" style="background: linear-gradient(135deg, ${getCityColor(hospital.city)} 0%, ${getCityColor(hospital.city, true)} 100%); display: none;">
+                        <div style="text-align: center;">
+                            <div style="font-size: 3rem; font-weight: bold; text-shadow: 0 2px 10px rgba(0,0,0,0.3);">${hospital.city.charAt(0)}</div>
+                            <div style="font-size: 0.9rem; margin-top: 5px; opacity: 0.9;">${hospital.city}</div>
+                        </div>
+                    </div>` : 
                     `<div class="hospital-image-placeholder" style="background: linear-gradient(135deg, ${getCityColor(hospital.city)} 0%, ${getCityColor(hospital.city, true)} 100%);">
                         <div style="text-align: center;">
                             <div style="font-size: 3rem; font-weight: bold; text-shadow: 0 2px 10px rgba(0,0,0,0.3);">${hospital.city.charAt(0)}</div>
