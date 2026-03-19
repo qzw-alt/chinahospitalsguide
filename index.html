@@ -1050,6 +1050,9 @@
             <div class="faq-answer"><strong>Starter Guide ($30):</strong> Non-refundable. We immediately begin preparing your information package.<br><br><strong>Standard Package ($299):</strong> Cancel 72+ hours before service for a $269 refund (the $30 information fee is non-refundable). No refunds within 72 hours of service start.</div>
         </div>
         
+        <!-- 折叠区域开始 -->
+        <div id="moreFaqs" style="display: none;">
+        
         <div class="faq-item">
             <button class="faq-question">Do hospitals have English-speaking staff?<span class="faq-toggle">▼</span></button>
             <div class="faq-answer">Yes! We work with 40+ top hospitals that have dedicated international patient departments with English-speaking coordinators. For medical consultations, we provide translation services to ensure clear communication between you and your doctor.</div>
@@ -1088,6 +1091,15 @@
         <div class="faq-item">
             <button class="faq-question">What's included in the $30 Starter Guide?<span class="faq-toggle">▼</span></button>
             <div class="faq-answer">The Starter Guide includes: 1) Personalized hospital recommendations (3-5 hospitals matched to your condition), 2) Doctor profiles and specialties, 3) Treatment cost estimates, 4) City guides and travel tips, 5) Visa application guidance. It's delivered within 24-48 hours after purchase.</div>
+        </div>
+        
+        </div><!-- 折叠区域结束 -->
+        
+        <!-- 查看更多按钮 -->
+        <div style="text-align: center; margin: 30px 0;">
+            <button id="toggleFaqs" onclick="toggleMoreFaqs()" style="background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%); color: white; border: none; padding: 15px 40px; border-radius: 30px; font-size: 1rem; cursor: pointer; transition: all 0.3s; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+                📖 View More FAQs (8 more)
+            </button>
         </div>
         
         <!-- Final CTA -->
@@ -1498,6 +1510,24 @@
         
         function closeModal() {
             document.getElementById('thankYouModal').classList.remove('active');
+        }
+        
+        // Toggle More FAQs
+        function toggleMoreFaqs() {
+            const moreFaqs = document.getElementById('moreFaqs');
+            const toggleBtn = document.getElementById('toggleFaqs');
+            
+            if (moreFaqs.style.display === 'none') {
+                moreFaqs.style.display = 'block';
+                toggleBtn.innerHTML = '📖 Show Less FAQs';
+                // Smooth scroll to the expanded section
+                moreFaqs.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            } else {
+                moreFaqs.style.display = 'none';
+                toggleBtn.innerHTML = '📖 View More FAQs (8 more)';
+                // Scroll back to FAQ section title
+                document.getElementById('faq').scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
         }
         
         // Scroll progress bar
