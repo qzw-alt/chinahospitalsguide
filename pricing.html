@@ -4,11 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pricing - Medical Tourism Services | China Hospitals Guide</title>
-    <meta name="description" content="Transparent pricing for medical tourism coordination services in China. Starter Guide $30, Standard Package $299, Premium Concierge $799.">
+    <meta name="description" content="Transparent pricing for medical tourism coordination services in China. Starter Guide $30, Standard Package $299.">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- PayPal SDK -->
+    <script src="https://www.paypal.com/sdk/js?client-id=BAAuEJ4aj4Glmel3a35W5yg1QY9idTSZt5LkxbWG-z5pvfIMEyG8E6vnCCLJNynRoAVW6XjqCCtnSKBzEY&components=hosted-buttons&disable-funding=venmo&currency=USD"></script>
     
     <style>
         :root {
@@ -332,7 +335,13 @@
                     <li>Visa guide</li>
                     <li class="not-included">No coordination support</li>
                 </ul>
-                <a href="mailto:motionlessbottle950@agentmail.to" class="pricing-cta pricing-cta-secondary">Get Started</a>
+                <!-- PayPal Button for $30 -->
+                <div id="paypal-container-K4HNCDD7GDS5C"></div>
+                <script>
+                  paypal.HostedButtons({
+                    hostedButtonId: "K4HNCDD7GDS5C",
+                  }).render("#paypal-container-K4HNCDD7GDS5C")
+                </script>
             </div>
 
             <div class="pricing-card featured">
@@ -350,23 +359,13 @@
                     <li>24/7 WhatsApp support</li>
                     <li>Post-treatment follow-up</li>
                 </ul>
-                <a href="mailto:motionlessbottle950@agentmail.to" class="pricing-cta pricing-cta-primary">Get Started</a>
-            </div>
-
-            <div class="pricing-card">
-                <div class="pricing-header">
-                    <h3 class="pricing-name">Premium Concierge</h3>
-                    <p class="pricing-desc">White-glove VIP service</p>
-                    <div class="pricing-price">$799 <span>per patient</span></div>
-                </div>
-                <ul class="pricing-features">
-                    <li>Everything in Standard</li>
-                    <li>5-day on-ground coordinator</li>
-                    <li>Personal assistant</li>
-                    <li>Dedicated translator</li>
-                    <li>Priority appointments</li>
-                </ul>
-                <a href="mailto:motionlessbottle950@agentmail.to" class="pricing-cta pricing-cta-secondary">Contact Us</a>
+                <!-- PayPal Button for $299 -->
+                <div id="paypal-container-ZBY36JV2X5A3U"></div>
+                <script>
+                  paypal.HostedButtons({
+                    hostedButtonId: "ZBY36JV2X5A3U",
+                  }).render("#paypal-container-ZBY36JV2X5A3U")
+                </script>
             </div>
         </div>
     </div>
