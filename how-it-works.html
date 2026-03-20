@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How It Works | China Hospitals Guide</title>
+    <meta name="description" content="Simple 4-step process to get world-class medical treatment in China. From consultation to treatment, we guide you every step.">
+    <link rel="canonical" href="https://chinahospitalsguide.com/how-it-works.html">
+    <style>
+        :root {
+            --primary: #1e3c72;
+            --secondary: #2a5298;
+            --accent: #ff6b6b;
+            --text: #333;
+            --light: #f8f9fa;
+            --success: #27ae60;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: var(--text); }
+        
+        /* Navigation */
+        nav { background: white; padding: 15px 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
+        .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.5rem; font-weight: bold; color: var(--primary); text-decoration: none; }
+        .nav-links { display: flex; gap: 30px; list-style: none; }
+        .nav-links a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.3s; }
+        .nav-links a:hover { color: var(--accent); }
+        .mobile-menu { display: none; font-size: 1.5rem; cursor: pointer; }
+        
+        @media (max-width: 768px) {
+            .nav-links { display: none; position: absolute; top: 60px; left: 0; right: 0; background: white; flex-direction: column; padding: 20px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); }
+            .nav-links.active { display: flex; }
+            .mobile-menu { display: block; }
+        }
+        
+        /* Hero */
+        .hero { background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%); color: white; padding: 80px 20px; text-align: center; }
+        .hero h1 { font-size: 2.5rem; margin-bottom: 20px; }
+        .hero p { font-size: 1.2rem; max-width: 700px; margin: 0 auto; opacity: 0.9; }
+        
+        /* Process Steps */
+        .process { padding: 80px 20px; max-width: 1000px; margin: 0 auto; }
+        .section-title { text-align: center; font-size: 2rem; color: var(--primary); margin-bottom: 60px; }
+        
+        .step { display: flex; gap: 40px; margin-bottom: 60px; align-items: flex-start; }
+        .step:nth-child(even) { flex-direction: row-reverse; }
+        .step-number { 
+            width: 80px; height: 80px; 
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white; 
+            border-radius: 50%; 
+            display: flex; align-items: center; justify-content: center;
+            font-size: 2rem; font-weight: bold;
+            flex-shrink: 0;
+            box-shadow: 0 10px 30px rgba(30,60,114,0.3);
+        }
+        .step-content { flex: 1; }
+        .step-content h3 { color: var(--primary); font-size: 1.5rem; margin-bottom: 15px; }
+        .step-content p { color: #666; margin-bottom: 15px; }
+        .step-details { background: var(--light); padding: 20px; border-radius: 10px; margin-top: 15px; }
+        .step-details h4 { color: var(--primary); margin-bottom: 10px; }
+        .step-details ul { list-style: none; }
+        .step-details li { padding: 5px 0; }
+        .step-details li::before { content: "✓ "; color: var(--success); font-weight: bold; }
+        
+        @media (max-width: 768px) {
+            .step, .step:nth-child(even) { flex-direction: column; gap: 20px; }
+            .step-number { width: 60px; height: 60px; font-size: 1.5rem; }
+        }
+        
+        /* Timeline connector */
+        .timeline { position: relative; }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 40px;
+            top: 80px;
+            bottom: 80px;
+            width: 4px;
+            background: linear-gradient(to bottom, var(--primary), var(--secondary));
+            z-index: -1;
+        }
+        @media (max-width: 768px) {
+            .timeline::before { left: 30px; }
+        }
+        
+        /* What You Get */
+        .deliverables { background: var(--light); padding: 80px 20px; }
+        .deliverables-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .deliverable-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            border-left: 4px solid var(--accent);
+        }
+        .deliverable-card h3 { color: var(--primary); margin-bottom: 15px; display: flex; align-items: center; gap: 10px; }
+        .deliverable-card ul { list-style: none; }
+        .deliverable-card li { padding: 8px 0; border-bottom: 1px solid #f0f0f0; }
+        .deliverable-card li:last-child { border-bottom: none; }
+        
+        /* Timeline visual */
+        .timeline-visual { background: white; padding: 60px 20px; }
+        .timeline-container { max-width: 1000px; margin: 0 auto; }
+        .timeline-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            margin: 40px 0;
+        }
+        .timeline-bar::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            z-index: 0;
+        }
+        .timeline-point {
+            width: 60px; height: 60px;
+            background: white;
+            border: 4px solid var(--primary);
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.5rem;
+            position: relative;
+            z-index: 1;
+        }
+        .timeline-labels {
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #666;
+        }
+        .timeline-labels span { width: 80px; }
+        
+        /* CTA */
+        .cta { background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%); color: white; padding: 80px 20px; text-align: center; }
+        .cta h2 { font-size: 2rem; margin-bottom: 20px; }
+        .cta p { font-size: 1.1rem; margin-bottom: 30px; opacity: 0.9; }
+        .cta-buttons { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
+        .cta-btn {
+            display: inline-block;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .cta-btn:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
+        .btn-primary { background: var(--accent); color: white; }
+        .btn-secondary { background: white; color: var(--primary); }
+        
+        /* FAQ */
+        .faq { padding: 80px 20px; max-width: 800px; margin: 0 auto; }
+        .faq-item { background: var(--light); padding: 25px; border-radius: 10px; margin-bottom: 20px; }
+        .faq-item h4 { color: var(--primary); margin-bottom: 10px; }
+        
+        /* Footer */
+        footer { background: #1a1a2e; color: white; padding: 40px 20px; text-align: center; }
+        .footer-links { display: flex; justify-content: center; gap: 30px; margin-bottom: 20px; flex-wrap: wrap; }
+        .footer-links a { color: white; text-decoration: none; opacity: 0.8; }
+        .footer-links a:hover { opacity: 1; }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">🏥 China Hospitals Guide</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="hospitals.html">Hospitals</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="mobile-menu" onclick="toggleMenu()">☰</div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <h1>How It Works</h1>
+        <p>Your journey to world-class healthcare in China, simplified into 4 easy steps</p>
+    </section>
+
+    <!-- Timeline Visual -->
+    <section class="timeline-visual">
+        <div class="timeline-container">
+            <h2 class="section-title">Your Medical Journey Timeline</h2>
+            <div class="timeline-bar">
+                <div class="timeline-point">💬</div>
+                <div class="timeline-point">📋</div>
+                <div class="timeline-point">✅</div>
+                <div class="timeline-point">📚</div>
+            </div>
+            <div class="timeline-labels">
+                <span>Consult</span>
+                <span>Recommend</span>
+                <span>Pay</span>
+                <span>Receive</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Steps -->
+    <section class="process">
+        <h2 class="section-title">The 4-Step Process</h2>
+        
+        <div class="timeline">
+            <!-- Step 1 -->
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Contact Us & Share Your Needs</h3>
+                    <p>Reach out via WhatsApp or fill out our consultation form. Tell us about your medical condition, preferred treatment, and any specific requirements.</p>
+                    <div class="step-details">
+                        <h4>What happens:</h4>
+                        <ul>
+                            <li>You describe your medical condition</li>
+                            <li>We ask clarifying questions if needed</li>
+                            <li>We understand your timeline and budget</li>
+                            <li>Response within 24 hours</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Receive Personalized Hospital Recommendations</h3>
+                    <p>We provide a curated list of 3-5 hospitals that best match your needs, with preliminary cost estimates and doctor profiles.</p>
+                    <div class="step-details">
+                        <h4>What you receive (FREE):</h4>
+                        <ul>
+                            <li>3-5 hospital recommendations</li>
+                            <li>Doctor credentials and specialties</li>
+                            <li>Estimated treatment costs</li>
+                            <li>Hospital location and facilities overview</li>
+                            <li>No obligation to purchase</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Choose Your Package & Complete Payment</h3>
+                    <p>Select the service package that fits your needs and complete secure payment via PayPal.</p>
+                    <div class="step-details">
+                        <h4>Package options:</h4>
+                        <ul>
+                            <li><strong>Starter Guide ($30):</strong> Information package for self-guided patients</li>
+                            <li><strong>Standard Package ($299):</strong> Full coordination until hospital arrival</li>
+                            <li>Secure PayPal payment</li>
+                            <li>Instant payment confirmation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <h3>Receive Detailed Service Package</h3>
+                    <p>Based on your selected package, we deliver comprehensive support materials and coordination services within 24 hours.</p>
+                    <div class="step-details">
+                        <h4>What you receive:</h4>
+                        <ul>
+                            <li>Detailed hospital and doctor information</li>
+                            <li>Step-by-step treatment guide</li>
+                            <li>Visa and travel documentation</li>
+                            <li>For Standard Package: appointment booking, translation, airport pickup</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What You Get -->
+    <section class="deliverables">
+        <h2 class="section-title">What You Get With Each Package</h2>
+        
+        <div class="deliverables-grid">
+            <div class="deliverable-card">
+                <h3>📋 Starter Guide ($30)</h3>
+                <ul>
+                    <li>Comprehensive hospital database access</li>
+                    <li>Detailed doctor profiles and specialties</li>
+                    <li>Accurate treatment cost estimates</li>
+                    <li>Visa application guide</li>
+                    <li>Travel and accommodation tips</li>
+                    <li>DIY coordination - you arrange everything</li>
+                </ul>
+            </div>
+
+            <div class="deliverable-card">
+                <h3>⭐ Standard Package ($299)</h3>
+                <ul>
+                    <li>Everything in Starter Guide</li>
+                    <li>Hospital appointment scheduling</li>
+                    <li>Medical record translation</li>
+                    <li>Pre-arrival doctor video consultation</li>
+                    <li>🎁 FREE airport pickup and drop-off</li>
+                    <li>24/7 WhatsApp support until hospital arrival</li>
+                    <li>Service ends when you arrive at hospital</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+        <h2 class="section-title">Common Questions</h2>
+        
+        <div class="faq-item">
+            <h4>How long does it take to get hospital recommendations?</h4>
+            <p>We typically respond within 24 hours with personalized hospital recommendations.</p>
+        </div>
+
+        <div class="faq-item">
+            <h4>Is the initial consultation free?</h4>
+            <p>Yes! The initial consultation and hospital recommendations are completely free. You only pay when you choose to purchase a service package.</p>
+        </div>
+
+        <div class="faq-item">
+            <h4>What if I'm not satisfied with the recommendations?</h4>
+            <p>No problem! The initial recommendations are free with no obligation. You can ask for alternatives or choose not to proceed.</p>
+        </div>
+
+        <div class="faq-item">
+            <h4>How soon after payment do I receive my package?</h4>
+            <p>Within 24 hours of payment confirmation. For Standard Package, we also begin scheduling your appointments immediately.</p>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+        <h2>Ready to Start Your Journey?</h2>
+        <p>Get free hospital recommendations within 24 hours. No obligation.</p>
+        <div class="cta-buttons">
+            <a href="https://wa.me/447947060056" class="cta-btn btn-primary">💬 WhatsApp Us Now</a>
+            <a href="contact.html" class="cta-btn btn-secondary">📝 Fill Out Form</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="about.html">About Us</a>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <p>&copy; 2026 China Hospitals Guide. We provide information about hospitals in China.</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('navLinks').classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
