@@ -1815,6 +1815,16 @@
         </a>
     </div>
     
+    <!-- Mobile: Quick Form Button (Right side, above bottom bar) -->
+    <div id="quickFormBtn" style="position: fixed; bottom: 80px; right: 15px; z-index: 9996; display: none;">
+        <a href="#contact" style="display: flex; align-items: center; justify-content: center; width: 56px; height: 56px; background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); color: white; border-radius: 50%; text-decoration: none; box-shadow: 0 4px 15px rgba(30,60,114,0.4); font-size: 1.5rem;">
+            📝
+        </a>
+        <div style="position: absolute; top: -30px; right: 0; background: #333; color: white; padding: 5px 10px; border-radius: 5px; font-size: 12px; white-space: nowrap;">
+            快速填表
+        </div>
+    </div>
+    
     <style>
         @keyframes floatPulse {
             0%, 100% { transform: scale(1); box-shadow: 0 5px 20px rgba(255,107,107,0.4); }
@@ -1873,6 +1883,9 @@
             }
             .mobile-bottom-bar {
                 display: flex !important;
+            }
+            #quickFormBtn {
+                display: block !important;
             }
             /* Add padding to body to prevent content from being hidden behind the bar */
             body {
