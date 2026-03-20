@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | Medical Tourism China</title>
+    <meta name="description" content="Comprehensive medical tourism services in China: cancer treatment, cardiac surgery, orthopedics, IVF, and full coordination support.">
+    <link rel="canonical" href="https://chinahospitalsguide.com/services.html">
+    <style>
+        :root {
+            --primary: #1e3c72;
+            --secondary: #2a5298;
+            --accent: #ff6b6b;
+            --text: #333;
+            --light: #f8f9fa;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: var(--text); }
+        
+        /* Navigation */
+        nav { background: white; padding: 15px 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
+        .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.5rem; font-weight: bold; color: var(--primary); text-decoration: none; }
+        .nav-links { display: flex; gap: 30px; list-style: none; }
+        .nav-links a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.3s; }
+        .nav-links a:hover { color: var(--accent); }
+        .mobile-menu { display: none; font-size: 1.5rem; cursor: pointer; }
+        
+        @media (max-width: 768px) {
+            .nav-links { display: none; position: absolute; top: 60px; left: 0; right: 0; background: white; flex-direction: column; padding: 20px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); }
+            .nav-links.active { display: flex; }
+            .mobile-menu { display: block; }
+        }
+        
+        /* Hero */
+        .hero { background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%); color: white; padding: 80px 20px; text-align: center; }
+        .hero h1 { font-size: 2.5rem; margin-bottom: 20px; }
+        .hero p { font-size: 1.2rem; max-width: 700px; margin: 0 auto; opacity: 0.9; }
+        
+        /* Services Grid */
+        .services { padding: 60px 20px; max-width: 1200px; margin: 0 auto; }
+        .section-title { text-align: center; font-size: 2rem; color: var(--primary); margin-bottom: 50px; }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+        
+        .service-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 2px solid transparent;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+            border-color: var(--accent);
+        }
+        .service-icon { font-size: 4rem; margin-bottom: 20px; }
+        .service-card h3 { color: var(--primary); font-size: 1.5rem; margin-bottom: 15px; }
+        .service-card p { color: #666; margin-bottom: 20px; }
+        .service-features { list-style: none; text-align: left; margin-top: 20px; }
+        .service-features li { padding: 8px 0; border-bottom: 1px solid #f0f0f0; }
+        .service-features li::before { content: "✓ "; color: #27ae60; font-weight: bold; }
+        
+        /* Coordination Services */
+        .coordination { background: var(--light); padding: 60px 20px; }
+        .coordination-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .coordination-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+        }
+        .coordination-card h3 { color: var(--primary); margin-bottom: 15px; display: flex; align-items: center; gap: 10px; }
+        
+        /* CTA */
+        .cta { background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%); color: white; padding: 80px 20px; text-align: center; }
+        .cta h2 { font-size: 2rem; margin-bottom: 20px; }
+        .cta p { font-size: 1.1rem; margin-bottom: 30px; opacity: 0.9; }
+        .cta-btn {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .cta-btn:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(255,107,107,0.4); }
+        
+        /* Footer */
+        footer { background: #1a1a2e; color: white; padding: 40px 20px; text-align: center; }
+        .footer-links { display: flex; justify-content: center; gap: 30px; margin-bottom: 20px; flex-wrap: wrap; }
+        .footer-links a { color: white; text-decoration: none; opacity: 0.8; }
+        .footer-links a:hover { opacity: 1; }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">🏥 China Hospitals Guide</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="hospitals.html">Hospitals</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="mobile-menu" onclick="toggleMenu()">☰</div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <h1>Our Medical Tourism Services</h1>
+        <p>Comprehensive healthcare solutions for international patients seeking world-class treatment in China</p>
+    </section>
+
+    <!-- Medical Services -->
+    <section class="services">
+        <h2 class="section-title">Medical Treatment Services</h2>
+        <div class="services-grid">
+            <a href="treatments/cancer.html" class="service-card">
+                <div class="service-icon">🎗️</div>
+                <h3>Cancer Treatment</h3>
+                <p>World-class oncology care at China's top cancer centers with advanced therapies and significant cost savings.</p>
+                <ul class="service-features">
+                    <li>Top 5 cancer hospitals in China</li>
+                    <li>60-80% cost savings vs US/Europe</li>
+                    <li>Surgery, chemotherapy, radiation</li>
+                    <li>Immunotherapy & targeted therapy</li>
+                </ul>
+            </a>
+
+            <a href="treatments/cardiac.html" class="service-card">
+                <div class="service-icon">❤️</div>
+                <h3>Cardiac Surgery</h3>
+                <p>Expert heart care from China's leading cardiovascular specialists with state-of-the-art facilities.</p>
+                <ul class="service-features">
+                    <li>Fuwai Hospital - #1 in cardiology</li>
+                    <li>Bypass surgery, valve replacement</li>
+                    <li>Interventional cardiology</li>
+                    <li>50-70% cost savings</li>
+                </ul>
+            </a>
+
+            <a href="treatments/orthopedics.html" class="service-card">
+                <div class="service-icon">🦴</div>
+                <h3>Orthopedic Surgery</h3>
+                <p>Advanced joint replacement and spine surgery at China's premier orthopedic centers.</p>
+                <ul class="service-features">
+                    <li>Beijing Jishuitan Hospital</li>
+                    <li>Joint replacement & spine surgery</li>
+                    <li>Sports medicine & rehabilitation</li>
+                    <li>70-85% cost savings</li>
+                </ul>
+            </a>
+
+            <a href="treatments/ivf.html" class="service-card">
+                <div class="service-icon">👶</div>
+                <h3>IVF & Fertility</h3>
+                <p>High-success fertility treatments at China's top reproductive medicine centers.</p>
+                <ul class="service-features">
+                    <li>60-70% IVF success rates</li>
+                    <li>Full IVF cycle services</li>
+                    <li>Egg freezing & genetic screening</li>
+                    <li>60% cost savings vs US</li>
+                </ul>
+            </a>
+        </div>
+    </section>
+
+    <!-- Coordination Services -->
+    <section class="coordination">
+        <h2 class="section-title">Coordination Services</h2>
+        <div class="coordination-grid">
+            <div class="coordination-card">
+                <h3>📋 Starter Guide ($30)</h3>
+                <p>Information package for self-guided patients:</p>
+                <ul style="list-style: none; margin-top: 15px;">
+                    <li>✓ Hospital database access</li>
+                    <li>✓ Doctor profiles & specialties</li>
+                    <li>✓ Treatment cost estimates</li>
+                    <li>✓ Visa & travel guides</li>
+                </ul>
+            </div>
+
+            <div class="coordination-card">
+                <h3>⭐ Standard Package ($299)</h3>
+                <p>Full coordination support until hospital arrival:</p>
+                <ul style="list-style: none; margin-top: 15px;">
+                    <li>✓ Everything in Starter Guide</li>
+                    <li>✓ Hospital appointment booking</li>
+                    <li>✓ Medical record translation</li>
+                    <li>✓ Pre-arrival doctor consultation</li>
+                    <li>✓ FREE airport pickup & drop-off</li>
+                    <li>✓ 24/7 WhatsApp support</li>
+                </ul>
+            </div>
+
+            <div class="coordination-card">
+                <h3>🛬 Additional Services</h3>
+                <p>À-la-carte services during & after treatment:</p>
+                <ul style="list-style: none; margin-top: 15px;">
+                    <li>✓ On-ground support ($150/day)</li>
+                    <li>✓ Airport transfers ($80/trip)</li>
+                    <li>✓ Translation services</li>
+                    <li>✓ Accommodation assistance</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+        <h2>Ready to Start Your Medical Journey?</h2>
+        <p>Get personalized hospital recommendations and cost estimates within 24 hours</p>
+        <a href="contact.html" class="cta-btn">Get Free Consultation</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="about.html">About Us</a>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <p>&copy; 2026 China Hospitals Guide. We provide information about hospitals in China.</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('navLinks').classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
