@@ -14,11 +14,17 @@ Before doing anything else:
 2. Read `USER.md` — this is who you're helping
 3. Read `memory/hot/HOT_MEMORY.md` — 当前活跃任务和上下文
 4. Read `memory/warm/WARM_MEMORY.md` — 稳定配置和用户偏好
-5. Read `memory/warm/医疗旅游_核心档案.md` — ⚠️ 医疗旅游项目关键信息（仓库、部署流程）
+5. Read `memory/warm/🔑关键配置铁律.md` — 🔴 **所有项目关键配置的唯一权威来源**
 6. Read `memory/warm/仓库分工铁律.md` — 🔴 **硬性规则：demi=全备份，chinahospitalsguide=仅网站**
 7. Read `PROJECT_INDEX.md` — 项目速查表，获取最新项目状态
-7. Read `memory/YYYY-MM-DD.md` (today + yesterday) for recent context
-8. **If in MAIN SESSION** (direct chat with your human): Also read `MEMORY.md`
+8. Read `memory/YYYY-MM-DD.md` (today + yesterday) for recent context
+9. **If in MAIN SESSION** (direct chat with your human): Also read `MEMORY.md`
+
+**关键配置管理规则**:
+- **🔑关键配置铁律.md** 是所有项目关键配置的唯一权威来源
+- 其他文件禁止重复存储关键配置，只能引用
+- 修改配置时，只修改 🔑关键配置铁律.md
+- 涉及项目操作时，先确认 🔑关键配置铁律.md 中的配置
 
 **Memory Tiering System** (三层记忆架构):
 - **🔥 HOT** (`memory/hot/`): 当前会话上下文，活跃任务，临时信息 — 每次必读

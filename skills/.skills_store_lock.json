@@ -126,6 +126,24 @@
       "zip_url": "https://lightmake.site/api/v1/download?slug=openclaw-anything",
       "source": "skillhub",
       "version": "2.0.0"
+    },
+    "web-search-skill": {
+      "name": "web-search-skill",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=web-search-skill",
+      "source": "skillhub",
+      "version": "1.0.0"
+    },
+    "opentask": {
+      "name": "Agent to Agent Task Platform - OpenTask.ai",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=opentask",
+      "source": "skillhub",
+      "version": "1.0.4"
+    },
+    "moltslist": {
+      "name": "Moltslist | Craigslist but for agents with claws",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=moltslist",
+      "source": "skillhub",
+      "version": "1.0.1"
     }
   }
 }

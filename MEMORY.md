@@ -1,37 +1,33 @@
 # MEMORY.md - 德米 long-term memory
 
-> 最后更新：2026-03-16
+> 最后更新：2026-03-20（修正仓库信息错误）
 
 ---
 
 ## 🏥 医疗旅游项目 - 核心信息（长期记忆）
 
-> **创建日期**: 2026-03-16  
-> **重要性**: 🔴 最高优先级 - 每次涉及网站工作时必须确认
+> **创建日期**: 2026-02-26  
+> **重要性**: 🔴 最高优先级 - 每次涉及网站工作时必须确认  
+> **详细配置**: 见 [🔑关键配置铁律.md](memory/warm/🔑关键配置铁律.md)
 
 ### ⚠️ 关键事实（必须记住）
 | 项目 | 值 | 重要性 |
 |------|-----|--------|
-| **网站仓库** | `qzw-alt/demi` | 🔴 唯一正确的仓库 |
-| **错误仓库** | `qzw-alt/medical-tourism-notes` | ❌ 不是网站！ |
+| **网站仓库** | `qzw-alt/chinahospitalsguide` | 🔴 只上传网站文件 |
+| **备份仓库** | `qzw-alt/demi` | ✅ 所有文件备份 |
 | **网站域名** | `chinahospitalsguide.com` | GitHub Pages托管 |
-| **本地工作目录** | `/root/.openclaw/workspace/` | 所有编辑在这里 |
-
-**为什么有两个仓库？**
-- `demi` = 网站仓库（GitHub Pages部署）
-- `medical-tourism-notes` = 共享笔记仓库（不部署网站）
 
 **记忆锚点**: 
-> "网站在 demi 仓库，不是 notes 仓库"
-> "推送到 demi，等待5分钟，检查网站"
+> "网站文件推送到 chinahospitalsguide 仓库"
+> "所有文件备份到 demi 仓库"
 
 ### 部署流程（每次修改后必须执行）
 ```bash
 # 1. 编辑文件（在 /root/.openclaw/workspace/ 目录）
 
-# 2. 推送到正确的仓库
+# 2. 推送到网站仓库（只传网站文件）
 cd /tmp
-git clone https://github.com/qzw-alt/demi.git website-temp
+git clone https://github.com/qzw-alt/chinahospitalsguide.git website-temp
 cp -r /root/.openclaw/workspace/blog/* website-temp/blog/
 cp /root/.openclaw/workspace/index.html website-temp/
 cd website-temp
@@ -39,19 +35,22 @@ git add .
 git commit -m "更新描述"
 git push origin master
 
-# 3. 等待2-5分钟部署
-# 4. 验证网站更新
+# 3. 备份到 demi 仓库（所有文件）
+# 4. 等待2-5分钟部署
+# 5. 验证网站更新
 ```
 
 ### 常见错误（避免重复）
-1. ❌ 推送到 `medical-tourism-notes` 仓库（这是笔记仓库，不是网站）
-2. ❌ 只在 `docs/` 修改，不同步到根目录
-3. ❌ 推送后立即检查网站（需要等待2-5分钟）
+1. ❌ 推送到 `demi` 仓库来部署网站（这是备份仓库，不是网站仓库！）
+2. ❌ 推送到 `medical-tourism-notes` 仓库（这是笔记仓库，不是网站）
+3. ❌ 只在 `docs/` 修改，不同步到根目录
+4. ❌ 推送后立即检查网站（需要等待2-5分钟）
 
 ### 快速链接
 - 网站: https://chinahospitalsguide.com
-- 仓库: https://github.com/qzw-alt/demi
-- 设置: https://github.com/qzw-alt/demi/settings/pages
+- 网站仓库: https://github.com/qzw-alt/chinahospitalsguide
+- 备份仓库: https://github.com/qzw-alt/demi
+- 网站设置: https://github.com/qzw-alt/chinahospitalsguide/settings/pages
 
 ---
 

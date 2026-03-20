@@ -128,6 +128,18 @@
     "openclaw-anything": {
       "version": "2.0.0",
       "installedAt": 1773399053613
+    },
+    "web-search-skill": {
+      "version": "1.0.0",
+      "installedAt": 1773954346458
+    },
+    "opentask": {
+      "version": "1.0.4",
+      "installedAt": 1774014074352
+    },
+    "moltslist": {
+      "version": "1.0.1",
+      "installedAt": 1774018182195
     }
   }
 }
