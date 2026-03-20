@@ -1841,7 +1841,24 @@
     </div>
     
     <style>
+        /* Desktop: Show floating buttons, hide bottom bar */
+        @media (min-width: 769px) {
+            .floating-buttons {
+                display: flex !important;
+            }
+            .mobile-bottom-bar {
+                display: none !important;
+            }
+        }
+        
+        /* Mobile: Hide floating buttons, show bottom bar */
         @media (max-width: 768px) {
+            .floating-buttons {
+                display: none !important;
+            }
+            #floatingCTA {
+                display: none !important;
+            }
             .mobile-bottom-bar {
                 display: flex !important;
             }
