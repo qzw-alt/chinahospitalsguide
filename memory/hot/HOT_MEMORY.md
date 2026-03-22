@@ -34,4 +34,8 @@
 
 ---
 
+## 📌 今晚提醒伟烨
+
+- [ ] **hindsight skill 安装** — 来源：抖音看到的 sethcorker/hindsight，功能：Capture and learn from mistakes in workflows。GitHub 上搜不到，可能在 clawhub 私有库或有其他名字。今晚和伟烨确认详情后再安装
+
 *此文件每次会话更新，只保留当前活跃信息*
