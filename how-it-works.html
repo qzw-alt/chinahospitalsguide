@@ -68,8 +68,9 @@
         .step-details li::before { content: "✓ "; color: var(--success); font-weight: bold; }
         
         @media (max-width: 768px) {
-            .step, .step:nth-child(even) { flex-direction: column; gap: 20px; }
-            .step-number { width: 60px; height: 60px; font-size: 1.5rem; }
+            .step, .step:nth-child(even) { flex-direction: column; gap: 20px; align-items: center; text-align: center; }
+            .step-number { width: 70px; height: 70px; font-size: 1.8rem; }
+            .step-content h3 { font-size: 1.3rem; }
         }
         
         /* Timeline connector */
@@ -85,7 +86,7 @@
             z-index: -1;
         }
         @media (max-width: 768px) {
-            .timeline::before { left: 30px; }
+            .timeline::before { left: 50%; transform: translateX(-50%); }
         }
         
         /* What You Get */
