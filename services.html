@@ -3,13 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Services | Medical Tourism China</title>
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Our Services">
-    <meta name="twitter:description" content="Medical coordination, hospital booking, translation, airport pickup, and more for your trip to China.">
-    <meta name="twitter:image" content="https://chinahospitalsguide.com/og-image.jpg">
-    <meta name="description" content="Comprehensive medical tourism services in China: cancer treatment, cardiac surgery, orthopedics, IVF, and full coordination support.">
+    <title>Our Services | Professional Medical Tourism Coordination in China</title>
+    <meta name="description" content="Professional medical tourism coordination in China. We match you with top hospitals and provide end-to-end support—from records translation to post-treatment follow-up.">
     <link rel="canonical" href="https://chinahospitalsguide.com/services.html">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Our Services | Professional Medical Tourism Coordination in China">
+    <meta property="og:description" content="Professional medical tourism coordination in China. We match you with top hospitals and provide end-to-end support.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://chinahospitalsguide.com/services.html">
+    <meta property="og:image" content="https://chinahospitalsguide.com/og-image.jpg">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Our Services | Professional Medical Tourism Coordination in China">
+    <meta name="twitter:description" content="Professional medical tourism coordination in China. We match you with top hospitals and provide end-to-end support.">
+    <meta name="twitter:image" content="https://chinahospitalsguide.com/og-image.jpg">
+    
     <style>
         :root {
             --primary: #1e3c72;
@@ -17,6 +27,7 @@
             --accent: #ff6b6b;
             --text: #333;
             --light: #f8f9fa;
+            --success: #27ae60;
         }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: var(--text); }
@@ -41,62 +52,103 @@
         .hero h1 { font-size: 2.5rem; margin-bottom: 20px; }
         .hero p { font-size: 1.2rem; max-width: 700px; margin: 0 auto; opacity: 0.9; }
         
-        /* Services Grid */
-        .services { padding: 60px 20px; max-width: 1200px; margin: 0 auto; }
+        /* Core Value */
+        .core-value { padding: 80px 20px; max-width: 900px; margin: 0 auto; text-align: center; }
+        .core-value h2 { font-size: 2rem; color: var(--primary); margin-bottom: 30px; }
+        .core-value p { font-size: 1.1rem; color: #555; margin-bottom: 20px; max-width: 700px; margin-left: auto; margin-right: auto; }
+        .value-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 50px; }
+        .value-card { background: var(--light); padding: 30px; border-radius: 15px; text-align: left; }
+        .value-card h3 { color: var(--primary); margin-bottom: 15px; font-size: 1.2rem; }
+        .value-card p { font-size: 1rem; color: #666; margin: 0; }
+        
+        /* Services */
+        .services { padding: 80px 20px; max-width: 1100px; margin: 0 auto; }
         .section-title { text-align: center; font-size: 2rem; color: var(--primary); margin-bottom: 50px; }
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+        
+        .service-block { margin-bottom: 80px; }
+        .service-block:last-child { margin-bottom: 0; }
+        
+        .service-header { text-align: center; margin-bottom: 40px; }
+        .service-header h2 { font-size: 1.8rem; color: var(--primary); margin-bottom: 15px; }
+        .service-header p { color: #666; max-width: 600px; margin: 0 auto; }
+        
+        .service-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
         
         .service-card {
             background: white;
-            border-radius: 20px;
-            padding: 40px 30px;
-            text-align: center;
+            border-radius: 16px;
+            padding: 35px;
             box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            border: 1px solid #eee;
             transition: transform 0.3s, box-shadow 0.3s;
-            border: 2px solid transparent;
-            text-decoration: none;
-            color: inherit;
-            display: block;
         }
         .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
-            border-color: var(--accent);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(0,0,0,0.12);
         }
-        .service-icon { font-size: 4rem; margin-bottom: 20px; }
-        .service-card h3 { color: var(--primary); font-size: 1.5rem; margin-bottom: 15px; }
-        .service-card p { color: #666; margin-bottom: 20px; }
-        .service-features { list-style: none; text-align: left; margin-top: 20px; }
-        .service-features li { padding: 8px 0; border-bottom: 1px solid #f0f0f0; }
-        .service-features li::before { content: "✓ "; color: #27ae60; font-weight: bold; }
+        .service-icon { font-size: 3rem; margin-bottom: 20px; }
+        .service-card h3 { color: var(--primary); font-size: 1.3rem; margin-bottom: 15px; }
+        .service-card p { color: #555; font-size: 0.95rem; margin-bottom: 20px; }
+        .service-card ul { list-style: none; }
+        .service-card li { padding: 8px 0; border-bottom: 1px solid #f5f5f5; color: #444; font-size: 0.9rem; }
+        .service-card li:last-child { border-bottom: none; }
+        .service-card li::before { content: "✓ "; color: var(--success); font-weight: bold; margin-right: 8px; }
         
-        /* Coordination Services */
-        .coordination { background: var(--light); padding: 60px 20px; }
-        .coordination-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .coordination-card {
+        /* Pricing */
+        .pricing { background: var(--light); padding: 80px 20px; }
+        .pricing-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        
+        .pricing-card {
             background: white;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+            border-radius: 20px;
+            padding: 40px 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            text-align: center;
         }
-        .coordination-card h3 { color: var(--primary); margin-bottom: 15px; display: flex; align-items: center; gap: 10px; }
+        .pricing-card.featured { border: 2px solid var(--primary); position: relative; }
+        .pricing-card.featured::before {
+            content: "Most Popular";
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--primary);
+            color: white;
+            padding: 5px 20px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+        .pricing-card h3 { font-size: 1.5rem; color: var(--primary); margin-bottom: 10px; }
+        .pricing-card .price { font-size: 2.5rem; font-weight: bold; color: var(--text); margin: 20px 0; }
+        .pricing-card .price span { font-size: 1rem; color: #888; font-weight: normal; }
+        .pricing-card .tagline { color: #666; font-size: 0.9rem; margin-bottom: 25px; }
+        .pricing-card ul { list-style: none; text-align: left; margin-bottom: 30px; }
+        .pricing-card li { padding: 10px 0; border-bottom: 1px solid #f0f0f0; font-size: 0.9rem; }
+        .pricing-card li:last-child { border-bottom: none; }
+        .pricing-card li::before { content: "✓ "; color: var(--success); font-weight: bold; margin-right: 8px; }
+        .pricing-card li.missing::before { content: "— "; color: #ccc; font-weight: normal; margin-right: 8px; }
+        .pricing-card li.missing { color: #aaa; }
+        .btn { display: inline-block; padding: 12px 30px; border-radius: 25px; text-decoration: none; font-weight: bold; font-size: 1rem; transition: transform 0.3s; }
+        .btn-primary { background: var(--primary); color: white; }
+        .btn-primary:hover { transform: translateY(-2px); background: var(--secondary); }
+        .btn-outline { border: 2px solid var(--primary); color: var(--primary); }
+        .btn-outline:hover { background: var(--primary); color: white; }
+        
+        /* Why Our Service Has Value */
+        .why-value { padding: 80px 20px; max-width: 900px; margin: 0 auto; text-align: center; }
+        .why-value h2 { font-size: 2rem; color: var(--primary); margin-bottom: 50px; }
+        .why-item { display: flex; gap: 25px; margin-bottom: 35px; text-align: left; align-items: flex-start; }
+        .why-item .num { background: var(--primary); color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0; }
+        .why-item h4 { color: var(--primary); margin-bottom: 8px; font-size: 1.1rem; }
+        .why-item p { color: #555; font-size: 0.95rem; margin: 0; }
         
         /* CTA */
         .cta { background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%); color: white; padding: 80px 20px; text-align: center; }
         .cta h2 { font-size: 2rem; margin-bottom: 20px; }
-        .cta p { font-size: 1.1rem; margin-bottom: 30px; opacity: 0.9; }
-        .cta-btn {
-            display: inline-block;
-            background: var(--accent);
-            color: white;
-            padding: 15px 40px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1.1rem;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        .cta-btn:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(255,107,107,0.4); }
+        .cta p { font-size: 1.1rem; margin-bottom: 30px; opacity: 0.9; max-width: 600px; margin-left: auto; margin-right: auto; }
+        .cta-btn { display: inline-block; background: white; color: var(--primary); padding: 15px 40px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 1.1rem; transition: transform 0.3s; }
+        .cta-btn:hover { transform: translateY(-3px); }
         
         /* Footer */
         footer { background: #1a1a2e; color: white; padding: 40px 20px; text-align: center; }
@@ -124,110 +176,146 @@
 
     <!-- Hero -->
     <section class="hero">
-        <h1>Our Medical Tourism Services</h1>
-        <p>Comprehensive healthcare solutions for international patients seeking world-class treatment in China</p>
+        <h1>Professional Medical Tourism Coordination</h1>
+        <p>We connect you with China's top hospitals—and stay with you every step of the way. The right hospital, the right doctor, and professional support from inquiry to recovery.</p>
     </section>
 
-    <!-- Medical Services -->
+    <!-- Core Value Proposition -->
+    <section class="core-value">
+        <h2>Good Hospitals + Professional Coordination = Better Outcomes</h2>
+        <p>China has world-class hospitals. But accessing them on your own—navigating the system, communicating in a foreign language, coordinating logistics across multiple parties—is a real challenge. That's the gap we fill.</p>
+        <p>We don't just introduce you to hospitals. We manage the entire process so you can focus on your health.</p>
+        
+        <div class="value-grid">
+            <div class="value-card">
+                <h3>🏥 Top Hospital Resources</h3>
+                <p>We work with 40+ top-tier hospitals across Beijing, Shanghai, Guangzhou, and other major cities. We know which hospitals excel in which specialties—and we match you based on your actual medical needs.</p>
+            </div>
+            <div class="value-card">
+                <h3>🤝 Professional Service</h3>
+                <p>Dedicated coordinators who know the system. Medical records translated accurately. Appointments arranged efficiently. Problems escalated quickly. We bring the professionalism that matching resources alone can't provide.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Service Process -->
     <section class="services">
-        <h2 class="section-title">Medical Treatment Services</h2>
-        <div class="services-grid">
-            <a href="treatments/cancer.html" class="service-card">
-                <div class="service-icon">🎗️</div>
-                <h3>Cancer Treatment</h3>
-                <p>World-class oncology care at China's top cancer centers with advanced therapies and significant cost savings.</p>
-                <ul class="service-features">
-                    <li>Top 5 cancer hospitals in China</li>
-                    <li>60-80% cost savings vs US/Europe</li>
-                    <li>Surgery, chemotherapy, radiation</li>
-                    <li>Immunotherapy & targeted therapy</li>
-                </ul>
-            </a>
-
-            <a href="treatments/cardiac.html" class="service-card">
-                <div class="service-icon">❤️</div>
-                <h3>Cardiac Surgery</h3>
-                <p>Expert heart care from China's leading cardiovascular specialists with state-of-the-art facilities.</p>
-                <ul class="service-features">
-                    <li>Fuwai Hospital - #1 in cardiology</li>
-                    <li>Bypass surgery, valve replacement</li>
-                    <li>Interventional cardiology</li>
-                    <li>50-70% cost savings</li>
-                </ul>
-            </a>
-
-            <a href="treatments/orthopedics.html" class="service-card">
-                <div class="service-icon">🦴</div>
-                <h3>Orthopedic Surgery</h3>
-                <p>Advanced joint replacement and spine surgery at China's premier orthopedic centers.</p>
-                <ul class="service-features">
-                    <li>Beijing Jishuitan Hospital</li>
-                    <li>Joint replacement & spine surgery</li>
-                    <li>Sports medicine & rehabilitation</li>
-                    <li>70-85% cost savings</li>
-                </ul>
-            </a>
-
-            <a href="treatments/ivf.html" class="service-card">
-                <div class="service-icon">👶</div>
-                <h3>IVF & Fertility</h3>
-                <p>High-success fertility treatments at China's top reproductive medicine centers.</p>
-                <ul class="service-features">
-                    <li>60-70% IVF success rates</li>
-                    <li>Full IVF cycle services</li>
-                    <li>Egg freezing & genetic screening</li>
-                    <li>60% cost savings vs US</li>
-                </ul>
-            </a>
+        <div class="service-header">
+            <h2>What We Actually Do For You</h2>
+            <p>From your first inquiry to your recovery back home—here's how we support you at every stage.</p>
+        </div>
+        
+        <div class="service-row">
+            <div class="service-card">
+                <div class="service-icon">🎯</div>
+                <h3>Hospital & Doctor Matching</h3>
+                <p>We review your medical records and match you with the right hospital and specialist—not the most famous one, the one that fits your specific condition.</p>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">📋</div>
+                <h3>Medical Records Translation</h3>
+                <p>We translate your medical history, imaging, and lab results so your Chinese doctors have full context before your first appointment—not just a list of diagnoses.</p>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">📅</div>
+                <h3>Appointment Scheduling</h3>
+                <p>We coordinate directly with the hospital's international department to lock in your appointment dates before you travel. No arriving and waiting for days.</p>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">🛬</div>
+                <h3>Travel & Logistics Support</h3>
+                <p>Visa invitation letters, airport pickup, accommodation near the hospital—we help coordinate the logistics so you arrive prepared and can focus on treatment.</p>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">🗣️</div>
+                <h3>On-Ground Interpretation</h3>
+                <p>Our coordinators help you understand treatment options, ask the right questions, and make informed decisions—not just translate words, but advocate for you at key appointments.</p>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">💊</div>
+                <h3>Post-Treatment Follow-Up</h3>
+                <p>We stay in contact after you leave China. We help translate discharge summaries, coordinate remote follow-up with your Chinese doctor, and keep your home physician informed.</p>
+            </div>
         </div>
     </section>
 
-    <!-- Coordination Services -->
-    <section class="coordination">
-        <h2 class="section-title">Coordination Services</h2>
-        <div class="coordination-grid">
-            <div class="coordination-card">
-                <h3>📋 Starter Guide ($30)</h3>
-                <p>Information package for self-guided patients:</p>
-                <ul style="list-style: none; margin-top: 15px;">
-                    <li>✓ Hospital database access</li>
-                    <li>✓ Doctor profiles & specialties</li>
-                    <li>✓ Treatment cost estimates</li>
-                    <li>✓ Visa & travel guides</li>
+    <!-- Pricing -->
+    <section class="pricing">
+        <h2 class="section-title">Choose Your Level of Support</h2>
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <h3>Starter Guide</h3>
+                <div class="price">$30<span>/one-time</span></div>
+                <p class="tagline">DIY option — everything you need to arrange yourself</p>
+                <ul>
+                    <li>Hospital database access</li>
+                    <li>Doctor profiles & specialties</li>
+                    <li>Treatment cost estimates</li>
+                    <li>Visa & travel guides</li>
+                    <li class="missing">No coordination support</li>
+                    <li class="missing">No on-ground assistance</li>
                 </ul>
+                <a href="contact.html" class="btn btn-outline">Get Started</a>
             </div>
-
-            <div class="coordination-card">
-                <h3>⭐ Standard Package ($299)</h3>
-                <p>Full coordination support until hospital arrival:</p>
-                <ul style="list-style: none; margin-top: 15px;">
-                    <li>✓ Everything in Starter Guide</li>
-                    <li>✓ Hospital appointment booking</li>
-                    <li>✓ Medical record translation</li>
-                    <li>✓ Pre-arrival doctor consultation</li>
-                    <li>✓ FREE airport pickup & drop-off</li>
-                    <li>✓ 24/7 WhatsApp support</li>
+            
+            <div class="pricing-card featured">
+                <h3>Standard Package</h3>
+                <div class="price">$299<span>/one-time</span></div>
+                <p class="tagline">Full coordination until you arrive at the hospital</p>
+                <ul>
+                    <li>Everything in Starter Guide</li>
+                    <li>Hospital appointment booking</li>
+                    <li>Medical record translation</li>
+                    <li>Pre-arrival doctor consultation</li>
+                    <li>FREE airport pickup + drop-off</li>
+                    <li>24/7 WhatsApp support (until hospital arrival)</li>
                 </ul>
-            </div>
-
-            <div class="coordination-card">
-                <h3>🛬 Additional Services</h3>
-                <p>À-la-carte services during & after treatment:</p>
-                <ul style="list-style: none; margin-top: 15px;">
-                    <li>✓ On-ground support ($150/day)</li>
-                    <li>✓ Airport transfers ($80/trip)</li>
-                    <li>✓ Translation services</li>
-                    <li>✓ Accommodation assistance</li>
-                </ul>
+                <a href="contact.html" class="btn btn-primary">Get Started</a>
             </div>
         </div>
+    </section>
+
+    <!-- Why Our Service Has Value -->
+    <section class="why-value">
+        <h2>Why Pay for Coordination? Here's the Honest Answer.</h2>
+        
+        <div class="why-item">
+            <div class="num">1</div>
+            <div>
+                <h4>You could book the hospital yourself—but would you pick the right doctor?</h4>
+                <p>We match based on your specific case, procedure volume, and outcomes data. The hospital's international department will book you with whoever is available—not necessarily the best person for your condition.</p>
+            </div>
+        </div>
+        
+        <div class="why-item">
+            <div class="num">2</div>
+            <div>
+                <h4>You could translate records yourself—but would they be medically accurate?</h4>
+                <p>We use coordinators familiar with Chinese medical terminology. Generic translation services often miss clinically significant details that affect how doctors approach your case.</p>
+            </div>
+        </div>
+        
+        <div class="why-item">
+            <div class="num">3</div>
+            <div>
+                <h4>You could navigate the system alone—but what if something goes wrong?</h4>
+                <p>We stay connected after you leave China. When our clients have post-treatment questions or concerns, they have someone who knows their case and can reach their medical team. That's the value most people don't think about until they need it.</p>
+            </div>
+        </div>
+        
+        <p style="margin-top: 40px; font-size: 1.1rem; color: #444; max-width: 650px; margin-left: auto; margin-right: auto;">We're transparent about what we do and what we don't do. Our coordinators are real people—not bots. And we take responsibility for the coordination work we commit to.</p>
     </section>
 
     <!-- CTA -->
     <section class="cta">
-        <h2>Ready to Start Your Medical Journey?</h2>
-        <p>Get personalized hospital recommendations and cost estimates within 24 hours</p>
-        <a href="contact.html" class="cta-btn">Get Free Consultation</a>
+        <h2>Not Sure Which Package Is Right for You?</h2>
+        <p>Tell us about your situation and we'll give you an honest recommendation—whether you need our full coordination or just need the right information to go direct.</p>
+        <a href="contact.html" class="cta-btn">Get a Free Consultation</a>
     </section>
 
     <!-- Footer -->
@@ -238,7 +326,7 @@
             <a href="terms.html">Terms of Service</a>
             <a href="contact.html">Contact</a>
         </div>
-        <p>&copy; 2026 China Hospitals Guide. We provide information about hospitals in China.</p>
+        <p>&copy; 2026 China Hospitals Guide. Professional medical tourism coordination services.</p>
     </footer>
 
     <script>
