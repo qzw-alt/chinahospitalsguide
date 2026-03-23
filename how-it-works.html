@@ -68,8 +68,9 @@
         .step-details li::before { content: "✓ "; color: var(--success); font-weight: bold; }
         
         @media (max-width: 768px) {
-            .step, .step:nth-child(even) { flex-direction: column; gap: 20px; align-items: center; text-align: center; }
-            .step-number { width: 70px; height: 70px; font-size: 1.8rem; }
+            .step, .step:nth-child(even) { flex-direction: column; gap: 20px; align-items: center; text-align: center; justify-content: center; }
+            .step-number { width: 70px; height: 70px; font-size: 1.8rem; margin: 0 auto; }
+            .step-content { width: 100%; }
             .step-content h3 { font-size: 1.3rem; }
         }
         
@@ -86,7 +87,7 @@
             z-index: -1;
         }
         @media (max-width: 768px) {
-            .timeline::before { left: 50%; transform: translateX(-50%); }
+            .timeline::before { display: none; }
         }
         
         /* What You Get */
