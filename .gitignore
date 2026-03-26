@@ -1,0 +1,19 @@
+# Embedded repos (these are cloned separately)
+chinahospitalsguide/
+demi/
+
+# Secrets and credentials
+.env
+.env.*
+*.pem
+*.key
+credentials*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
