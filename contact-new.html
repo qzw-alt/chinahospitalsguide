@@ -6,6 +6,7 @@
     <title>Submit Your Case | Medical Tourism Consultation - China Hospitals Guide</title>
     <meta name="description" content="Submit your medical case for a free initial consultation. We'll review your needs and provide expert guidance on treatment options in China.">
     <link rel="canonical" href="https://chinahospitalsguide.com/contact-new.html">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     
     <style>
         :root {
@@ -76,17 +77,18 @@
         
         .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
         
-        .checkbox-group { display: flex; flex-wrap: wrap; gap: 15px; }
-        .checkbox-item {
+        .radio-group { display: flex; flex-direction: column; gap: 10px; }
+        .radio-item {
             display: flex;
-            align-items: center;
-            gap: 8px;
+            align-items: flex-start;
+            gap: 10px;
             background: var(--bg);
-            padding: 10px 15px;
-            border-radius: 6px;
+            padding: 15px;
+            border-radius: 8px;
             cursor: pointer;
         }
-        .checkbox-item input { width: auto; }
+        .radio-item input { margin-top: 3px; }
+        .radio-item span { font-size: 0.95rem; }
         
         .submit-btn {
             width: 100%;
@@ -104,6 +106,11 @@
             transform: translateY(-2px);
             box-shadow: 0 6px 20px rgba(200, 75, 49, 0.35);
         }
+        .submit-btn:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+            transform: none;
+        }
         
         .privacy-note {
             text-align: center;
@@ -111,6 +118,17 @@
             font-size: 0.9rem;
             color: var(--text-light);
         }
+        
+        .success-message {
+            display: none;
+            text-align: center;
+            padding: 40px;
+            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+            border-radius: 16px;
+            border: 2px solid var(--success);
+        }
+        .success-message h3 { color: #15803d; font-size: 1.5rem; margin-bottom: 15px; }
+        .success-message p { color: #166534; font-size: 1.1rem; }
         
         .page-footer { background: var(--bg); padding: 30px 0; text-align: center; color: var(--text-light); font-size: 0.9rem; }
         .page-footer a { color: var(--primary); }
@@ -136,33 +154,33 @@
                 <p><strong>💰 Service:</strong> We charge consulting fees ($30 for Basic, $299 for Full Consultation). Hospital treatment costs are paid directly to the hospital. <strong>We are NOT affiliated with any hospital</strong> — you get independent, professional advice.</p>
             </div>
             
-            <form id="consultForm" action="mailto:contact@chinahospitalsguide.com" method="GET" enctype="text/plain">
+            <form id="consultForm">
                 
                 <div class="form-row">
                     <div class="form-group">
                         <label>First Name <span>*</span></label>
-                        <input type="text" name="firstname" required placeholder="John">
+                        <input type="text" id="firstname" name="firstname" required placeholder="John">
                     </div>
                     <div class="form-group">
                         <label>Last Name <span>*</span></label>
-                        <input type="text" name="lastname" required placeholder="Smith">
+                        <input type="text" id="lastname" name="lastname" required placeholder="Smith">
                     </div>
                 </div>
                 
                 <div class="form-row">
                     <div class="form-group">
                         <label>Email <span>*</span></label>
-                        <input type="email" name="email" required placeholder="john@example.com">
+                        <input type="email" id="email" name="email" required placeholder="john@example.com">
                     </div>
                     <div class="form-group">
                         <label>Phone / WhatsApp</label>
-                        <input type="tel" name="phone" placeholder="+1 234 567 8900">
+                        <input type="tel" id="phone" name="phone" placeholder="+1 234 567 8900">
                     </div>
                 </div>
                 
                 <div class="form-group">
                     <label>Country <span>*</span></label>
-                    <select name="country" required>
+                    <select id="country" name="country" required>
                         <option value="">Select your country...</option>
                         <option value="United States">United States</option>
                         <option value="United Kingdom">United Kingdom</option>
@@ -186,7 +204,7 @@
                 
                 <div class="form-group">
                     <label>Medical Condition / Treatment Needed <span>*</span></label>
-                    <select name="treatment_category" required>
+                    <select id="treatment_category" name="treatment_category" required>
                         <option value="">Select treatment type...</option>
                         <option value="Cancer Treatment / Oncology">Cancer Treatment / Oncology</option>
                         <option value="Proton Therapy">Proton Therapy</option>
@@ -205,12 +223,12 @@
                 
                 <div class="form-group">
                     <label>Describe Your Medical Situation <span>*</span></label>
-                    <textarea name="medical_details" required placeholder="Please describe your condition, previous treatments, what you're looking for, and any specific questions. The more details you provide, the better our consultation can be."></textarea>
+                    <textarea id="medical_details" name="medical_details" required placeholder="Please describe your condition, previous treatments, what you're looking for, and any specific questions. The more details you provide, the better our consultation can be."></textarea>
                 </div>
                 
                 <div class="form-group">
                     <label>How did you hear about us?</label>
-                    <select name="source">
+                    <select id="source" name="source">
                         <option value="">Select...</option>
                         <option value="Google Search">Google Search</option>
                         <option value="Social Media">Social Media</option>
@@ -222,23 +240,29 @@
                 
                 <div class="form-group">
                     <label>Preferred Consultation Package <span>*</span></label>
-                    <div class="checkbox-group">
-                        <label class="checkbox-item">
-                            <input type="radio" name="package" value="Basic $30" required>
-                            Basic Consultation ($30) — Case review + hospital options
+                    <div class="radio-group">
+                        <label class="radio-item">
+                            <input type="radio" name="package" value="Basic Consultation ($30)" required>
+                            <span><strong>Basic Consultation ($30)</strong> — Case review + hospital options overview</span>
                         </label>
-                        <label class="checkbox-item">
-                            <input type="radio" name="package" value="Full $299">
-                            Full Consultation ($299) — Comprehensive analysis + written report
+                        <label class="radio-item">
+                            <input type="radio" name="package" value="Full Consultation ($299)">
+                            <span><strong>Full Consultation ($299)</strong> — Comprehensive analysis + written report + follow-up support</span>
                         </label>
                     </div>
                 </div>
                 
-                <button type="submit" class="submit-btn">📧 Submit Consultation Request</button>
+                <button type="submit" class="submit-btn" id="submitBtn">📧 Submit Consultation Request</button>
                 
                 <p class="privacy-note">Your information is kept strictly confidential and used only for providing consultation services.</p>
             
             </form>
+            
+            <div class="success-message" id="successMessage">
+                <h3>✅ Submission Received!</h3>
+                <p>Thank you for your inquiry. Our team will review your case and contact you within 24 hours with personalized recommendations.</p>
+                <p style="margin-top:15px;">Please check your email for confirmation.</p>
+            </div>
             
         </div>
     </main>
@@ -251,25 +275,41 @@
     </footer>
     
     <script>
-        document.getElementById('consultForm').addEventListener('submit', function(e) {
+        emailjs.init("5fO60dvOGsKzPk_Ir");
+        
+        document.getElementById('consultForm').addEventListener('submit', async function(e) {
             e.preventDefault();
             
-            var form = this;
-            var subject = 'Medical Consultation Request from ' + form.firstname.value + ' ' + form.lastname.value;
-            var body = 'MEDICAL CONSULTATION REQUEST\n============================\n\n';
-            body += 'Name: ' + form.firstname.value + ' ' + form.lastname.value + '\n';
-            body += 'Email: ' + form.email.value + '\n';
-            body += 'Phone: ' + (form.phone.value || 'Not provided') + '\n';
-            body += 'Country: ' + form.country.value + '\n\n';
-            body += 'Treatment Category: ' + form.treatment_category.value + '\n\n';
-            body += 'Medical Details:\n' + form.medical_details.value + '\n\n';
-            body += 'How did you hear about us: ' + (form.source.value || 'Not specified') + '\n\n';
-            body += 'Preferred Package: ' + form.package.value + '\n';
+            var submitBtn = document.getElementById('submitBtn');
+            submitBtn.disabled = true;
+            submitBtn.textContent = '⏳ Submitting...';
             
-            var mailtoLink = 'mailto:contact@chinahospitalsguide.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-            window.location.href = mailtoLink;
+            var formData = {
+                firstname: document.getElementById('firstname').value,
+                lastname: document.getElementById('lastname').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value || 'Not provided',
+                country: document.getElementById('country').value,
+                treatment_category: document.getElementById('treatment_category').value,
+                medical_details: document.getElementById('medical_details').value,
+                source: document.getElementById('source').value || 'Not specified',
+                package: document.querySelector('input[name="package"]:checked')?.value || 'Not specified',
+                submit_time: new Date().toLocaleString(),
+                source_page: 'contact-new'
+            };
             
-            alert('Your email client will open with the consultation request. Please send the email to complete your submission.\n\nIf you don\'t see an email window, please email us directly at contact@chinahospitalsguide.com');
+            try {
+                await emailjs.send('service_0gb6hmx', 'template_ezmtqvb', formData);
+                
+                document.getElementById('consultForm').style.display = 'none';
+                document.getElementById('successMessage').style.display = 'block';
+                
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Sorry, there was an error submitting your form. Please try again or email us directly at contact@chinahospitalsguide.com');
+                submitBtn.disabled = false;
+                submitBtn.textContent = '📧 Submit Consultation Request';
+            }
         });
     </script>
 </body>
