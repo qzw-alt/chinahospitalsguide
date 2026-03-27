@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>How It Works | Medical Tourism to China - China Hospitals Guide</title>
-    <meta name="description" content="Simple 4-step process to access world-class medical treatment in China. Free consultation, hospital matching, appointment scheduling, and full travel support.">
+    <meta name="description" content="Professional medical tourism consulting service for China. Expert guidance, hospital matching, and treatment coordination. Transparent fees, no hospital commissions.">
     <link rel="canonical" href="https://chinahospitalsguide.com/how-it-works.html">
     
     <style>
@@ -35,6 +35,17 @@
         .page-header p { font-size: 1.3rem; opacity: 0.9; max-width: 650px; margin: 0 auto; }
         
         .content { background: var(--white); padding: 80px 0; }
+        
+        .trust-banner {
+            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+            border: 2px solid #22c55e;
+            border-radius: 16px;
+            padding: 30px 40px;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .trust-banner h3 { font-size: 1.5rem; color: #15803d; margin-bottom: 10px; }
+        .trust-banner p { font-size: 1.1rem; color: #166534; }
         
         .steps-container { position: relative; }
         
@@ -95,25 +106,59 @@
         }
         .step:last-child .connector { display: none; }
         
-        .free-banner {
-            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
-            border: 2px solid #f59e0b;
+        .pricing-section {
+            background: var(--bg);
             border-radius: 16px;
-            padding: 30px 40px;
-            text-align: center;
+            padding: 40px;
             margin: 50px 0;
         }
-        .free-banner h3 { font-size: 1.5rem; color: #92400e; margin-bottom: 10px; }
-        .free-banner p { font-size: 1.1rem; color: #78350f; }
-        .free-badge { 
-            display: inline-block; 
-            background: #f59e0b; 
-            color: white; 
-            padding: 8px 20px; 
-            border-radius: 20px; 
-            font-weight: 600;
-            margin-top: 15px;
+        .pricing-section h2 { font-size: 1.8rem; color: var(--primary); margin-bottom: 25px; text-align: center; }
+        
+        .pricing-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
         }
+        .pricing-card {
+            background: var(--white);
+            border: 2px solid var(--border);
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+        }
+        .pricing-card.featured {
+            border-color: var(--primary);
+            box-shadow: 0 4px 20px rgba(30, 60, 114, 0.15);
+        }
+        .pricing-card h3 { font-size: 1.2rem; color: var(--text); margin-bottom: 15px; }
+        .pricing-card .price { font-size: 2rem; font-weight: 700; color: var(--primary); margin-bottom: 15px; }
+        .pricing-card .price span { font-size: 1rem; font-weight: 400; color: var(--text-light); }
+        .pricing-card ul { list-style: none; text-align: left; }
+        .pricing-card li { padding: 8px 0; border-bottom: 1px solid var(--border); font-size: 0.95rem; }
+        .pricing-card li::before { content: "✓ "; color: var(--success); font-weight: 700; }
+        
+        .why-us {
+            background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%);
+            border: 1px solid #fed7aa;
+            border-radius: 16px;
+            padding: 40px;
+            margin: 50px 0;
+        }
+        .why-us h2 { font-size: 1.8rem; color: var(--accent); margin-bottom: 25px; text-align: center; }
+        
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+        .why-item {
+            background: var(--white);
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+        }
+        .why-item h4 { font-size: 1.1rem; color: var(--primary); margin-bottom: 10px; }
+        .why-item p { font-size: 0.95rem; color: var(--text-light); }
         
         .cta-section {
             background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
@@ -160,6 +205,7 @@
             .connector { display: none; }
             .step-features { grid-template-columns: 1fr; }
             .cta-section { padding: 30px 20px; }
+            .pricing-cards { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -167,17 +213,16 @@
     <header class="page-header">
         <div class="container">
             <h1>How It Works</h1>
-            <p>Access world-class medical treatment in China in 4 simple steps. We're with you every step of the way.</p>
+            <p>Expert medical tourism consulting for China. Independent advice, transparent pricing, no hospital commissions.</p>
         </div>
     </header>
     
     <main class="content">
         <div class="container">
             
-            <div class="free-banner">
-                <h3>💰 Our Service is 100% FREE to You</h3>
-                <p>We partner with top JCI-certified hospitals in China. Our coordination service costs you nothing — hospitals cover our fees.</p>
-                <span class="free-badge">No Hidden Fees • No Consultation Fees • Completely Free</span>
+            <div class="trust-banner">
+                <h3>🛡️ Independent & Transparent</h3>
+                <p><strong>We are NOT affiliated with any hospital.</strong> We provide independent consulting services and charge transparent consulting fees. Our recommendations are based solely on your medical needs, not hospital commissions.</p>
             </div>
             
             <div class="steps-container">
@@ -187,13 +232,13 @@
                 <div class="step">
                     <div class="step-number">1</div>
                     <div class="step-content">
-                        <h2>🔍 Search & Discover</h2>
-                        <p>Browse our comprehensive guides to medical treatments in China. Compare hospitals, procedures, costs, and patient reviews. Find the treatment that fits your needs and budget.</p>
+                        <h2>📋 Submit Your Inquiry</h2>
+                        <p>Tell us about your medical condition and treatment needs. Our medical consultants will review your case and provide independent expert advice on the most suitable hospitals and specialists in China.</p>
                         <div class="step-features">
-                            <div class="step-feature">Browse treatment guides</div>
-                            <div class="step-feature">Compare hospital quality</div>
-                            <div class="step-feature">Check procedure costs</div>
-                            <div class="step-feature">Read patient stories</div>
+                            <div class="step-feature">Free initial assessment</div>
+                            <div class="step-feature">Share medical documents</div>
+                            <div class="step-feature">Specify preferences</div>
+                            <div class="step-feature">No commitment required</div>
                         </div>
                     </div>
                 </div>
@@ -202,13 +247,13 @@
                 <div class="step">
                     <div class="step-number">2</div>
                     <div class="step-content">
-                        <h2>📩 Submit Your Inquiry</h2>
-                        <p>Fill out our simple contact form with your treatment requirements, medical history, and preferences. No commitment required — this is just a consultation request.</p>
+                        <h2>📊 Receive Expert Analysis</h2>
+                        <p>Our consulting team provides you with detailed analysis of your options: hospital comparisons, doctor credentials, treatment plans, and transparent cost estimates. You get professional medical consulting — not hospital marketing.</p>
                         <div class="step-features">
-                            <div class="step-feature">Free consultation request</div>
-                            <div class="step-feature">No commitment required</div>
-                            <div class="step-feature">Share medical documents</div>
-                            <div class="step-feature">Specify your preferences</div>
+                            <div class="step-feature">Hospital comparison report</div>
+                            <div class="step-feature">Doctor credentials verified</div>
+                            <div class="step-feature">Treatment plan outline</div>
+                            <div class="step-feature">Transparent cost breakdown</div>
                         </div>
                     </div>
                 </div>
@@ -217,13 +262,13 @@
                 <div class="step">
                     <div class="step-number">3</div>
                     <div class="step-content">
-                        <h2>🏥 Get Matched & Plan</h2>
-                        <p>Our medical coordinators will match you with the most suitable hospitals and specialists. You'll receive a personalized treatment plan including cost estimates, doctor credentials, and timeline.</p>
+                        <h2>✅ Choose & Approve</h2>
+                        <p>You decide which hospital and treatment plan best fits your needs and budget. We handle all coordination: appointment scheduling, visa documentation, and travel logistics. Our consulting fee is clearly stated upfront — no hidden costs.</p>
                         <div class="step-features">
-                            <div class="step-feature">Hospital matching</div>
-                            <div class="step-feature">Treatment plan & cost</div>
-                            <div class="step-feature">Doctor credentials</div>
-                            <div class="step-feature">Travel timeline</div>
+                            <div class="step-feature">You make the final decision</div>
+                            <div class="step-feature">Appointment coordination</div>
+                            <div class="step-feature">Visa assistance</div>
+                            <div class="step-feature">Transparent pricing</div>
                         </div>
                     </div>
                 </div>
@@ -233,54 +278,128 @@
                     <div class="step-number">✓</div>
                     <div class="step-content">
                         <h2>✈️ Travel & Treatment</h2>
-                        <p>Once you approve the plan, we handle the logistics: hospital appointment, visa assistance, airport pickup, accommodation coordination, and interpreter services. Travel with confidence.</p>
+                        <p>We provide ongoing consulting support throughout your medical journey. Airport pickup coordination, interpreter arrangement, and 24/7 consulting hotline. We're your independent advocate — not the hospital's agent.</p>
                         <div class="step-features">
-                            <div class="step-feature">Visa assistance</div>
-                            <div class="step-feature">Airport pickup</div>
+                            <div class="step-feature">Airport pickup coordination</div>
                             <div class="step-feature">Medical interpreter</div>
-                            <div class="step-feature">24/7 support</div>
+                            <div class="step-feature">24/7 consulting hotline</div>
+                            <div class="step-feature">Independent advocacy</div>
                         </div>
                     </div>
                 </div>
             </div>
             
+            <section class="pricing-section">
+                <h2>💰 Consulting Fees</h2>
+                <p style="text-align:center; margin-bottom:30px; color: var(--text-light);">Transparent consulting fees. No hospital commissions, no hidden charges.</p>
+                
+                <div class="pricing-cards">
+                    <div class="pricing-card">
+                        <h3>📋 Consultation Report</h3>
+                        <div class="price">$299 <span>/ case</span></div>
+                        <ul>
+                            <li>Medical case review</li>
+                            <li>Hospital comparison analysis</li>
+                            <li>Doctor credentials verification</li>
+                            <li>Treatment cost estimates</li>
+                            <li>Written consulting report</li>
+                            <li>Email support (7 days)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pricing-card featured">
+                        <h3>🎯 Full Service Package</h3>
+                        <div class="price">$599 <span>/ case</span></div>
+                        <ul>
+                            <li>Everything in Consultation</li>
+                            <li>Hospital appointment booking</li>
+                            <li>Visa documentation assistance</li>
+                            <li>Airport pickup coordination</li>
+                            <li>Interpreter arrangement</li>
+                            <li>24/7 hotline during trip</li>
+                            <li>Follow-up consulting (30 days)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pricing-card">
+                        <h3>💎 Premium Support</h3>
+                        <div class="price">$999 <span>/ case</span></div>
+                        <ul>
+                            <li>Everything in Full Service</li>
+                            <li>Dedicated medical consultant</li>
+                            <li>Personalized care coordination</li>
+                            <li>Luxury accommodation arranged</li>
+                            <li>Private nurse coordination</li>
+                            <li>Medical record translation</li>
+                            <li>Priority scheduling</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <p style="text-align:center; margin-top:25px; font-size:0.95rem; color: var(--text-light);">
+                    * Hospital treatment costs are paid directly to the hospital. We do not take commissions from hospitals.
+                </p>
+            </section>
+            
+            <section class="why-us">
+                <h2>Why Choose Our Consulting Service?</h2>
+                <div class="why-grid">
+                    <div class="why-item">
+                        <h4>🏛️ Independent</h4>
+                        <p>We have NO financial relationship with any hospital. Our advice is based solely on your medical needs.</p>
+                    </div>
+                    <div class="why-item">
+                        <h4>📋 Professional</h4>
+                        <p>Medical consultants with healthcare background. Doctor credentials independently verified.</p>
+                    </div>
+                    <div class="why-item">
+                        <h4>💰 Transparent</h4>
+                        <p>Clear consulting fees upfront. You know exactly what you're paying for.</p>
+                    </div>
+                    <div class="why-item">
+                        <h4>🛡️ Your Advocate</h4>
+                        <p>We represent YOUR interests, not the hospital's. You get honest assessment, not sales pitches.</p>
+                    </div>
+                </div>
+            </section>
+            
             <div class="cta-section">
-                <h3>Ready to Get Started?</h3>
-                <p>Get a free treatment plan and cost estimate within 24 hours. No commitment, no fees.</p>
-                <a href="/contact-new.html" class="cta-btn">Get Free Consultation →</a>
+                <h3>Get Expert Medical Tourism Consulting</h3>
+                <p>Submit your case for a free initial assessment. No commitment, no hospital commissions.</p>
+                <a href="/contact-new.html" class="cta-btn">Submit Your Case →</a>
             </div>
             
             <section class="faq-section">
                 <h2>Frequently Asked Questions</h2>
                 
                 <div class="faq-item">
-                    <h4>Is this really free? How do you make money?</h4>
-                    <p>Yes, our service is completely free for patients. We partner with JCI-certified hospitals in China, and they cover our coordination fees. You pay only for the medical treatment directly to the hospital.</p>
+                    <h4>How are you different from other medical tourism services?</h4>
+                    <p><strong>Most medical tourism agencies earn commissions from hospitals.</strong> We do NOT. We charge transparent consulting fees and have no financial relationship with any hospital. This means you get honest, unbiased recommendations based solely on your medical needs.</p>
                 </div>
                 
                 <div class="faq-item">
-                    <h4>How do I know the hospitals are qualified?</h4>
-                    <p>We work only with hospitals that meet international standards. Many of our partner hospitals are JCI (Joint Commission International) accredited, and all have English-speaking staff and dedicated international patient departments.</p>
+                    <h4>Do I pay the hospital directly?</h4>
+                    <p>Yes. Hospital treatment costs are paid directly to the hospital — just like you would at home. We do not handle hospital payments or take commissions from hospitals.</p>
                 </div>
                 
                 <div class="faq-item">
                     <h4>What if I don't speak Chinese?</h4>
-                    <p>No problem! We provide medical interpreters at all major hospitals. Our coordinators also communicate with you in English throughout the entire process.</p>
+                    <p>We arrange professional medical interpreters at all major hospitals. Our coordinators also communicate with you in English throughout the entire process.</p>
                 </div>
                 
                 <div class="faq-item">
-                    <h4>How long does the process take?</h4>
-                    <p>Most inquiries get a response within 24 hours. Once you approve a treatment plan, appointments can typically be scheduled within 1-2 weeks. Visa processing and travel arrangements add another 2-4 weeks.</p>
+                    <h4>Can I choose any hospital I want?</h4>
+                    <p>Absolutely. We provide recommendations, but you make the final decision. We coordinate with whichever hospital you choose.</p>
                 </div>
                 
                 <div class="faq-item">
-                    <h4>What if something goes wrong?</h4>
-                    <p>We have 24/7 support available throughout your treatment. If any issues arise, our coordinators act as your advocate, working directly with the hospital administration to resolve them.</p>
+                    <h4>Is the consulting fee refundable?</h4>
+                    <p>Our consultation fee covers the work we do reviewing your case and preparing the report. If we cannot find suitable hospitals for your needs, we'll discuss this with you before proceeding.</p>
                 </div>
                 
                 <div class="faq-item">
-                    <h4>Can I get a second opinion?</h4>
-                    <p>Absolutely. We can help you get second opinions from multiple specialists before you make any decisions. This is part of our free consultation service.</p>
+                    <h4>What hospitals do you work with?</h4>
+                    <p>We provide consulting for all major hospitals in China, including public tertiary hospitals, specialized centers, and international-standard facilities. We match you with the most appropriate hospital for your specific condition — not the hospital that pays us.</p>
                 </div>
             </section>
             
@@ -290,7 +409,7 @@
     <footer class="page-footer">
         <div class="container">
             <p>📍 <a href="/">China Hospitals Guide</a> | <a href="/contact-new.html">Contact Us</a> | <a href="/resources.html">Resources</a></p>
-            <p style="margin-top:10px;">Helping international patients access quality healthcare in China since 2024.</p>
+            <p style="margin-top:10px;">Independent medical tourism consulting service. Not affiliated with any hospital.</p>
         </div>
     </footer>
 </body>
