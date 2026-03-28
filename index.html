@@ -504,9 +504,6 @@
         
         /* Stats */
         /* Quick Search Section */
-        .quick-search { background: white; padding: 50px 20px; text-align: center; }
-        .quick-search h2 { font-size: 2rem; color: var(--primary); margin-bottom: 10px; }
-        .quick-search p { color: #666; margin-bottom: 40px; font-size: 1.1rem; }
         .search-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; max-width: 1000px; margin: 0 auto; }
         .search-card { background: var(--light); border-radius: 15px; padding: 25px; text-align: left; transition: all 0.3s; border: 2px solid transparent; }
         .search-card:hover { border-color: var(--primary); transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
@@ -521,13 +518,6 @@
         .view-all { display: inline-block; margin-top: 30px; color: var(--primary); text-decoration: none; font-weight: 600; }
         .view-all:hover { text-decoration: underline; }
 
-        .stats { background: var(--light); padding: 60px 20px; }
-        .stats-grid { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; text-align: center; }
-        .stat-number { font-size: 3rem; font-weight: bold; color: var(--primary); display: block; }
-        .stat-label { color: #666; font-size: 1rem; }
-        
-        /* Features */
-        .features { padding: 80px 20px; max-width: 1200px; margin: 0 auto; }
         .section-title { text-align: center; font-size: 2.2rem; margin-bottom: 50px; color: var(--primary); }
         .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
         .feature-card { padding: 35px; border-radius: 15px; background: var(--light); text-align: center; transition: all 0.3s; border: 2px solid transparent; }
@@ -536,24 +526,6 @@
         .feature-icon { font-size: 3rem; margin-bottom: 15px; }
         
         /* Testimonials */
-        .testimonials { background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%); color: white; padding: 80px 20px; }
-        .testimonials h2 { text-align: center; font-size: 2.2rem; margin-bottom: 50px; }
-        .testimonial-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
-        .testimonial-card { background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); padding: 30px; border-radius: 15px; border: 1px solid rgba(255,255,255,0.2); }
-        .testimonial-text { font-style: italic; font-size: 1.05rem; margin-bottom: 20px; line-height: 1.8; }
-        .testimonial-author { display: flex; align-items: center; gap: 15px; }
-        .author-avatar { width: 50px; height: 50px; border-radius: 50%; background: var(--accent); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold; }
-        .author-info strong { display: block; font-size: 1.1rem; }
-        .author-info span { opacity: 0.8; font-size: 0.9rem; }
-        
-        /* Hospital List */
-        .hospitals { background: #f0f4f8; padding: 80px 20px; }
-        .hospital-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; max-width: 1200px; margin: 0 auto; }
-        @media (max-width: 900px) {
-            .hospital-grid { grid-template-columns: repeat(2, 1fr); }
-        }
-        @media (max-width: 600px) {
-            .hospital-grid { grid-template-columns: 1fr; }
         }
         .hospital-card { background: white; padding: 25px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); transition: all 0.3s; overflow: hidden; }
         .hospital-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.12); }
@@ -594,12 +566,6 @@
         .pricing-card li::before { content: "✓ "; color: var(--success); font-weight: bold; margin-right: 8px; }
         
         /* FAQ */
-        .faq { padding: 80px 20px; max-width: 800px; margin: 0 auto; }
-        .faq-item { background: var(--light); border-radius: 12px; margin-bottom: 15px; overflow: hidden; }
-        .faq-question { padding: 20px 25px; background: none; border: none; width: 100%; text-align: left; font-size: 1.1rem; font-weight: 600; color: var(--primary); cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
-        .faq-answer { padding: 0 25px 20px; color: #666; line-height: 1.8; display: none; }
-        .faq-item.active .faq-answer { display: block; }
-        .faq-toggle { transition: transform 0.3s; }
         .faq-item.active .faq-toggle { transform: rotate(180deg); }
         
         /* Form */
@@ -920,46 +886,26 @@
     </section>
 
     <!-- Quick Search Section -->
-    <section class="quick-search">
-        <h2>Find the Right Hospital for You</h2>
-        <p>Browse by specialty or city to find the best hospital for your needs</p>
-        <div class="search-grid">
-            <div class="search-card">
-                <h3>🏥 By Specialty</h3>
-                <ul>
-                    <li><a href="treatments/cancer.html">Cancer Treatment</a></li>
-                    <li><a href="treatments/cardiac.html">Cardiac Care</a></li>
-                    <li><a href="treatments/orthopedics.html">Orthopedics</a></li>
-                    <li><a href="treatments/ivf.html">IVF & Fertility</a></li>
-                    <li><a href="hospitals.html">All Specialties →</a></li>
-                </ul>
-            </div>
-            <div class="search-card">
-                <h3>📍 By City</h3>
-                <ul>
-                    <li><a href="hospitals.html?city=beijing">Beijing</a></li>
-                    <li><a href="hospitals.html?city=shanghai">Shanghai</a></li>
-                    <li><a href="hospitals.html?city=guangzhou">Guangzhou</a></li>
-                    <li><a href="hospitals.html?city=shenzhen">Shenzhen</a></li>
-                    <li><a href="hospitals.html">All Cities →</a></li>
-                </ul>
-            </div>
-            <div class="search-card">
-                <h3>✨ Popular Services</h3>
-                <ul>
-                    <li><a href="services.html">Medical Check-up Packages</a></li>
-                    <li><a href="services.html">VIP Hospital Accommodation</a></li>
-                    <li><a href="services.html">Airport Pick-up Service</a></li>
-                    <li><a href="services.html">Interpretation Services</a></li>
-                    <li><a href="services.html">All Services →</a></li>
-                </ul>
-            </div>
+    <!-- Compact Quick Search -->
+    <section style="background: white; padding: 40px 20px; text-align: center;">
+        <h2 style="font-size: 1.5rem; color: var(--primary); margin-bottom: 8px;">Find a Hospital</h2>
+        <p style="color: #666; font-size: 0.95rem; margin-bottom: 25px;">Browse by city or specialty</p>
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; max-width: 800px; margin: 0 auto;">
+            <a href="hospitals.html?city=beijing" style="background: #f0f4f8; color: #1e3c72; padding: 10px 20px; border-radius: 25px; text-decoration: none; font-size: 0.9rem; font-weight: 500;">Beijing</a>
+            <a href="hospitals.html?city=shanghai" style="background: #f0f4f8; color: #1e3c72; padding: 10px 20px; border-radius: 25px; text-decoration: none; font-size: 0.9rem; font-weight: 500;">Shanghai</a>
+            <a href="hospitals.html?city=guangzhou" style="background: #f0f4f8; color: #1e3c72; padding: 10px 20px; border-radius: 25px; text-decoration: none; font-size: 0.9rem; font-weight: 500;">Guangzhou</a>
+            <a href="hospitals.html?city=shenzhen" style="background: #f0f4f8; color: #1e3c72; padding: 10px 20px; border-radius: 25px; text-decoration: none; font-size: 0.9rem; font-weight: 500;">Shenzhen</a>
+            <a href="hospitals.html?city=hangzhou" style="background: #f0f4f8; color: #1e3c72; padding: 10px 20px; border-radius: 25px; text-decoration: none; font-size: 0.9rem; font-weight: 500;">Hangzhou</a>
+            <a href="hospitals.html" style="background: #1e3c72; color: white; padding: 10px 20px; border-radius: 25px; text-decoration: none; font-size: 0.9rem; font-weight: 500;">All Cities →</a>
         </div>
-        <a href="hospitals.html" class="view-all">View All 40+ Partner Hospitals →</a>
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; max-width: 800px; margin: 15px auto 0;">
+            <a href="treatments/cancer.html" style="background: #fff3e0; color: #e65100; padding: 8px 18px; border-radius: 20px; text-decoration: none; font-size: 0.85rem;">Cancer</a>
+            <a href="treatments/cardiac.html" style="background: #fff3e0; color: #e65100; padding: 8px 18px; border-radius: 20px; text-decoration: none; font-size: 0.85rem;">Cardiac</a>
+            <a href="treatments/orthopedics.html" style="background: #fff3e0; color: #e65100; padding: 8px 18px; border-radius: 20px; text-decoration: none; font-size: 0.85rem;">Orthopedics</a>
+            <a href="treatments/ivf.html" style="background: #fff3e0; color: #e65100; padding: 8px 18px; border-radius: 20px; text-decoration: none; font-size: 0.85rem;">IVF & Fertility</a>
+            <a href="hospitals.html" style="background: #e65100; color: white; padding: 8px 18px; border-radius: 20px; text-decoration: none; font-size: 0.85rem;">All Specialties →</a>
+        </div>
     </section>
-    
-    <!-- Stats -->
-    <section class="stats">
         <div class="stats-grid">
             <div class="stat-item"><span class="stat-number">500+</span><span class="stat-label">Patients Helped</span></div>
             <div class="stat-item"><span class="stat-number">98%</span><span class="stat-label">Satisfaction Rate</span></div>
@@ -968,107 +914,6 @@
         </div>
     </section>
     
-    <!-- Why Choose Us -->
-    <section class="features">
-        <h2 class="section-title">Why Patients Choose Professional Coordination</h2>        
-        <div style="background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); padding: 30px; border-radius: 15px; margin-bottom: 40px; text-align: center;">
-            <h3 style="color: #2e7d32; margin-bottom: 20px;">🏥 Recent Patient Outcomes</h3>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
-                <div style="background: white; padding: 20px; border-radius: 10px;">
-                    <div style="font-size: 1.8rem; color: #4CAF50; font-weight: bold;">✓ Successful</div>
-                    <div style="color: #666; font-size: 0.9rem;">Knee Replacement<br>Beijing</div>
-                </div>
-                <div style="background: white; padding: 20px; border-radius: 10px;">
-                    <div style="font-size: 1.8rem; color: #4CAF50; font-weight: bold;">✓ Successful</div>
-                    <div style="color: #666; font-size: 0.9rem;">Heart Surgery<br>Shanghai</div>
-                </div>
-                <div style="background: white; padding: 20px; border-radius: 10px;">
-                    <div style="font-size: 1.8rem; color: #4CAF50; font-weight: bold;">✓ Successful</div>
-                    <div style="color: #666; font-size: 0.9rem;">IVF Treatment<br>Guangzhou</div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="feature-grid">
-            <div class="feature-card"><div class="feature-icon">💰</div><h3>Transparent, Competitive Pricing</h3><p>Competitive treatment costs with full transparency. We provide detailed cost estimates upfront—no surprise billing. Compare the value of getting world-class treatment with professional coordination included.</p></div>
-            <div class="feature-card"><div class="feature-icon">🏆</div><h3>World-Class Standards</h3><p>China's top hospitals rank alongside the best in the world. Many have JCI accreditation and feature in the prestigious Fudan Hospital Rankings.</p></div>
-            <div class="feature-card"><div class="feature-icon">⚡</div><h3>Minimal Waiting Times</h3><p>Skip the months-long waiting lists. Most procedures can be scheduled within 1-2 weeks, not months. Your health can't wait.</p></div>
-            <div class="feature-card"><div class="feature-icon">🌐</div><h3>English-Speaking Support</h3><p>Dedicated international patient coordinators provide full translation services from consultation to recovery. Language is never a barrier.</p></div>
-            <div class="feature-card"><div class="feature-icon">🛡️</div><h3>Comprehensive Care</h3><p>From visa invitation letters to airport pickup, accommodation assistance, and post-operative follow-up—we handle everything so you can focus on healing.</p></div>
-            <div class="feature-card"><div class="feature-icon">✈️</div><h3>Easy Access</h3><p>Major cities with international airports and convenient transport from airport to hospital. We coordinate every step of your journey.</p></div>
-        </div>
-    </section>
-    
-    <!-- Trust Badges -->
-    <section style="background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); padding: 40px 20px; text-align: center; color: white;">
-        <div style="max-width: 1000px; margin: 0 auto;">
-            <h2 style="color: white; border: none; margin-bottom: 30px;">⭐⭐⭐⭐⭐ What Our Patients Say</h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
-                <div style="background: rgba(255,255,255,0.1); padding: 25px; border-radius: 15px;">
-                    <div style="font-size: 1.2em; margin-bottom: 15px;">⭐⭐⭐⭐⭐</div>
-                    <p style="font-style: italic; margin-bottom: 15px;">"Saved $45,000 on my hip replacement. The hospital was world-class and the coordination was flawless. Highly recommend!"</p>
-                    <strong>— Sarah M., USA</strong><br>
-                    <small>Hip Replacement, Beijing</small>
-                </div>
-                <div style="background: rgba(255,255,255,0.1); padding: 25px; border-radius: 15px;">
-                    <div style="font-size: 1.2em; margin-bottom: 15px;">⭐⭐⭐⭐⭐</div>
-                    <p style="font-style: italic; margin-bottom: 15px;">"My wife and I spent $8,000 for IVF that would have cost $45,000 in the US. Beautiful baby girl on the way!"</p>
-                    <strong>— Michael T., Canada</strong><br>
-                    <small>IVF Treatment, Shanghai</small>
-                </div>
-                <div style="background: rgba(255,255,255,0.1); padding: 25px; border-radius: 15px;">
-                    <div style="font-size: 1.2em; margin-bottom: 15px;">⭐⭐⭐⭐⭐</div>
-                    <p style="font-style: italic; margin-bottom: 15px;">"Professional, caring, and affordable. They arranged my father's cancer treatment in just 5 days. Forever grateful."</p>
-                    <strong>— Jennifer L., UK</strong><br>
-                    <small>Cancer Treatment, Guangzhou</small>
-                </div>
-            </div>
-            <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.2);">
-                <div style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap;">
-                    <div>
-                        <div style="font-size: 2.5em; font-weight: bold;">500+</div>
-                        <div>Patients Helped</div>
-                    </div>
-                    <div>
-                        <div style="font-size: 2.5em; font-weight: bold;">98%</div>
-                        <div>Satisfaction Rate</div>
-                    </div>
-                    <div>
-                        <div style="font-size: 2.5em; font-weight: bold;">4.9/5</div>
-                        <div>Average Rating</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Testimonials -->
-    <section class="testimonials">
-        <h2>What Our Patients Say</h2>
-        <div class="testimonial-grid">
-            <a href="stories/james-wilson.html" style="text-decoration: none; color: inherit;">
-                <div class="testimonial-card" style="cursor: pointer; transition: transform 0.3s;">
-                    <p class="testimonial-text">"I saved over $40,000 on my heart surgery in Beijing. The team arranged everything - from airport pickup to hospital admission. Truly life-changing service."</p>
-                    <div class="testimonial-author"><div class="author-avatar">J</div><div class="author-info"><strong>James Wilson</strong><span>USA → Beijing, Cardiology</span></div></div>
-                    <div style="text-align: center; margin-top: 15px; color: #2a5298; font-weight: bold;">Read full story →</div>
-                </div>
-            </a>
-            <a href="stories/maria-garcia.html" style="text-decoration: none; color: inherit;">
-                <div class="testimonial-card" style="cursor: pointer; transition: transform 0.3s;">
-                    <p class="testimonial-text">"The English coordination made everything so easy. Dr. Zhang explained everything in detail. The quality of care was outstanding."</p>
-                    <div class="testimonial-author"><div class="author-avatar">M</div><div class="author-info"><strong>Maria Garcia</strong><span>Spain → Shanghai, Orthopedics</span></div></div>
-                    <div style="text-align: center; margin-top: 15px; color: #2a5298; font-weight: bold;">Read full story →</div>
-                </div>
-            </a>
-            <a href="stories/sophie-b.html" style="text-decoration: none; color: inherit;">
-                <div class="testimonial-card" style="cursor: pointer; transition: transform 0.3s;">
-                    <p class="testimonial-text">"The surgery was incredibly fast—just 5 minutes per eye. The next day my vision was 20/20. Now I don't need glasses at all. Only one-third the cost of France!"</p>
-                    <div class="testimonial-author"><div class="author-avatar">S</div><div class="author-info"><strong>Sophie Bernard</strong><span>France → Shanghai, Eye Surgery</span></div></div>
-                    <div style="text-align: center; margin-top: 15px; color: #2a5298; font-weight: bold;">Read full story →</div>
-                </div>
-            </a>
-        </div>
-    </section>
     
     <!-- Top Hospitals -->
     <section class="hospitals">
@@ -1239,114 +1084,7 @@
         </div>
     </section>
 
-    <!-- FAQ -->
-    <section class="faq" id="faq">
-        <h2 class="section-title">Frequently Asked Questions</h2>
-        
-        <div class="faq-item">
-            <button class="faq-question">What visa do I need for medical treatment in China?<span class="faq-toggle">▼</span></button>
-            <div class="faq-answer">
-                <p><strong>Good news: You can start with a simple Tourist Visa (L Visa)!</strong></p>
-                <ul style="margin: 10px 0; padding-left: 20px;">
-                    <li>🟢 <strong>Tourist Visa (L Visa)</strong> — Perfect for most treatments. You can enter China, see doctors, and even use your international insurance for direct payment. Only need to switch if hospitalization exceeds your visa duration.</li>
-                    <li>🟡 <strong>S2 Medical Visa</strong> — For extended hospitalization (>10 days). We can help you convert from L to S2 visa <em>while you're already in China</em> — no need to leave the country.</li>
-                </ul>
-                <p><strong>How it works:</strong></p>
-                <ol style="margin: 10px 0; padding-left: 20px;">
-                    <li>Apply for L Visa (easiest to get)</li>
-                    <li>Enter China and consult with hospitals</li>
-                    <li>If you need extended treatment, we help you convert to S2 visa locally</li>
-                </ol>
-                <p><strong>Insurance tip:</strong> International insurance works with L Visa too! The visa type doesn't affect your insurance coverage.</p>
-            </div>
-        </div>
-        
-        <div class="faq-item">
-            <button class="faq-question">How long does it take to get an appointment?<span class="faq-toggle">▼</span></button>
-            <div class="faq-answer">Typically 3-7 days. For urgent cases, we can often arrange within 24-48 hours. We'll give you a confirmed date before you book your flight.</div>
-        </div>
-        
-        <div class="faq-item">
-            <button class="faq-question">What happens if I need to change hospitals?<span class="faq-toggle">▼</span></button>
-            <div class="faq-answer">Standard package includes 1 FREE hospital change. Additional changes are $10 per change. We'll help you transfer all records and arrange new appointments.</div>
-        </div>
-        
-        <div class="faq-item">
-            <button class="faq-question">Is my medical information kept confidential?<span class="faq-toggle">▼</span></button>
-            <div class="faq-answer">Absolutely. We take privacy seriously. Your medical information is only shared with hospitals you've approved. We comply with international privacy standards.</div>
-        </div>
-        
-        <div class="faq-item">
-            <button class="faq-question">What payment methods do you accept?<span class="faq-toggle">▼</span></button>
-            <div class="faq-answer">We accept PayPal and major credit cards. Payment is made after you approve our recommendations.</div>
-        </div>
-        
-        <div class="faq-item">
-            <button class="faq-question">Can I get a refund if I change my mind?<span class="faq-toggle">▼</span></button>
-            <div class="faq-answer"><strong>Starter Guide ($30):</strong> Non-refundable. We immediately begin preparing your information package.<br><br><strong>Standard Package ($299):</strong> Cancel 72+ hours before service for a $269 refund (the $30 information fee is non-refundable). No refunds within 72 hours of service start.</div>
-        </div>
-        
-        <!-- 折叠区域开始 -->
-        <div id="moreFaqs" style="display: none;">
-        
-        <div class="faq-item">
-            <button class="faq-question">Do hospitals have English-speaking staff?<span class="faq-toggle">▼</span></button>
-            <div class="faq-answer">Yes! We provide information about 40+ top hospitals that have dedicated international patient departments with English-speaking coordinators. For medical consultations, we provide translation services to ensure clear communication between you and your doctor.</div>
-        </div>
-        
-        <div class="faq-item">
-            <button class="faq-question">How much can I save compared to US/Europe?<span class="faq-toggle">▼</span></button>
-            <div class="faq-answer">Patients typically save 50-85% on treatment costs. For example: Knee replacement surgery costs $40,000-70,000 in the US, but only $8,000-15,000 in China. Cardiac surgery that costs $100,000+ in the US is $15,000-25,000 in China. Quality is comparable to top Western hospitals.</div>
-        </div>
-        
-        <div class="faq-item">
-            <button class="faq-question">What documents do I need to bring?<span class="faq-toggle">▼</span></button>
-            <div class="faq-answer">You'll need: 1) Passport with valid visa, 2) Medical records and imaging (X-rays, MRI, CT scans), 3) Current medication list, 4) Insurance documents (if applicable). We'll send you a complete checklist after you book our service.</div>
-        </div>
-        
-        <div class="faq-item">
-            <button class="faq-question">Can I extend my stay for tourism after treatment?<span class="faq-toggle">▼</span></button>
-            <div class="faq-answer">Absolutely! Many patients combine medical treatment with tourism. Your medical visa (S2) typically allows a 30-90 day stay, which is plenty of time for both treatment and sightseeing. We can recommend safe travel options post-recovery.</div>
-        </div>
-        
-        <div class="faq-item">
-            <button class="faq-question">What if complications arise after I return home?<span class="faq-toggle">▼</span></button>
-            <div class="faq-answer">We recommend purchasing medical travel insurance that covers complications. While we don't provide medical care ourselves, we can help facilitate follow-up consultations with your Chinese doctor via telemedicine, and assist with medical record transfers to your home country doctor.</div>
-        </div>
-        
-        <div class="faq-item">
-            <button class="faq-question">Do you work with insurance companies?<span class="faq-toggle">▼</span></button>
-            <div class="faq-answer">We don't directly bill insurance companies, but we provide all necessary documentation (itemized receipts, medical reports, doctor's letters) for you to submit to your insurer for reimbursement. Many international insurance plans cover treatment in China.</div>
-        </div>
-        
-        <div class="faq-item">
-            <button class="faq-question">How do I choose the right hospital?<span class="faq-toggle">▼</span></button>
-            <div class="faq-answer">We help you choose based on: 1) Your specific condition and required specialty, 2) Hospital rankings and success rates, 3) Doctor experience, 4) Your budget and preferred city, 5) Language support availability. Our Starter Guide includes personalized recommendations based on your medical needs.</div>
-        </div>
-        
-        <div class="faq-item">
-            <button class="faq-question">What's included in the $30 Starter Guide?<span class="faq-toggle">▼</span></button>
-            <div class="faq-answer">The Starter Guide includes: 1) Personalized hospital recommendations (3-5 hospitals matched to your condition), 2) Doctor profiles and specialties, 3) Treatment cost estimates, 4) City guides and travel tips, 5) Visa application guidance. It's delivered within 24-48 hours after purchase.</div>
-        </div>
-        
-        </div><!-- 折叠区域结束 -->
-        
-        <!-- 查看更多按钮 -->
-        <div style="text-align: center; margin: 30px 0;">
-            <button id="toggleFaqs" onclick="toggleMoreFaqs()" style="background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%); color: white; border: none; padding: 15px 40px; border-radius: 30px; font-size: 1rem; cursor: pointer; transition: all 0.3s; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
-                📖 View More FAQs (8 more)
-            </button>
-        </div>
-        
-        <!-- Final CTA -->
-        <div style="text-align: center; margin-top: 40px; padding: 30px; background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%); border-radius: 15px;">
-            <h3 style="color: white; margin-bottom: 15px;">🚀 Ready to start your medical journey?</h3>
-            <p style="color: rgba(255,255,255,0.9); margin-bottom: 20px;">Get your free personalized guide today</p>
-            <a href="#contact" class="cta-button" style="background: white; color: var(--primary);">Start My Medical Journey</a>
-        </div>
-    </section>
-    
-    <!-- Contact Form - 自定义表单 -->
+<!-- Contact Form - 自定义表单 -->
     <section class="form-section" id="contact">
         <h2>📝 Get Your Personalized Guide</h2>
         <p class="form-subtitle">Free consultation • No obligation • Reply within 24 hours</p>
