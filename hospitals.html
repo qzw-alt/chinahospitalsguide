@@ -124,6 +124,35 @@
             background: var(--secondary);
             color: white;
         }
+        .filter-label {
+            text-align: center;
+            font-size: 0.8rem;
+            color: #888;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .city-tags {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .city-tag {
+            padding: 0.4rem 0.9rem;
+            background: white;
+            border: 2px solid var(--accent);
+            color: var(--accent);
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 0.85rem;
+        }
+        .city-tag:hover, .city-tag.active {
+            background: var(--accent);
+            color: white;
+        }
         .results-count {
             text-align: center;
             padding: 1rem;
@@ -331,6 +360,8 @@
                 <input type="text" id="searchInput" placeholder="Search hospitals, cities, or specialties...">
             </div>
             <div class="specialty-tags" id="specialtyTags"></div>
+            <div class="filter-label">Or filter by city:</div>
+            <div class="city-tags" id="cityTags"></div>
         </div>
     </section>
 
@@ -406,6 +437,39 @@
         };
 
         let activeTags = new Set();
+        let activeCities = new Set();
+
+        function getCityCounts() {
+            const counts = {};
+            hospitals.forEach(h => {
+                counts[h.city] = (counts[h.city] || 0) + 1;
+            });
+            return counts;
+        }
+
+        function generateCityTags() {
+            const counts = getCityCounts();
+            const container = document.getElementById('cityTags');
+            // Show cities in order of count
+            const sortedCities = Object.entries(counts).sort((a, b) => b[1] - a[1]);
+            sortedCities.forEach(([city, count]) => {
+                const btn = document.createElement('button');
+                btn.className = 'city-tag';
+                btn.setAttribute('data-city', city);
+                btn.innerHTML = `${city} (${count})`;
+                btn.onclick = () => toggleCity(city);
+                container.appendChild(btn);
+            });
+        }
+
+        function toggleCity(city) {
+            if (activeCities.has(city)) {
+                activeCities.delete(city);
+            } else {
+                activeCities.add(city);
+            }
+            updateUI();
+        }
 
         function getSpecialtyCounts() {
             const counts = {};
@@ -446,6 +510,10 @@
                 const tag = btn.getAttribute('data-tag');
                 btn.classList.toggle('active', activeTags.has(tag));
             });
+            document.querySelectorAll('.city-tag').forEach(btn => {
+                const city = btn.getAttribute('data-city');
+                btn.classList.toggle('active', activeCities.has(city));
+            });
             filterHospitals();
         }
 
@@ -456,15 +524,18 @@
 
             hospitals.forEach((hospital, index) => {
                 const card = cards[index];
-                const matchesSearch = !searchTerm || 
+                const matchesSearch = !searchTerm ||
                     hospital.name.toLowerCase().includes(searchTerm) ||
                     hospital.city.toLowerCase().includes(searchTerm) ||
                     hospital.tags.some(tag => tag.includes(searchTerm) || (specialtyNames[tag] || '').toLowerCase().includes(searchTerm));
 
-                const matchesTags = activeTags.size === 0 || 
+                const matchesTags = activeTags.size === 0 ||
                     hospital.tags.some(tag => activeTags.has(tag));
 
-                if (matchesSearch && matchesTags) {
+                const matchesCity = activeCities.size === 0 ||
+                    activeCities.has(hospital.city);
+
+                if (matchesSearch && matchesTags && matchesCity) {
                     card.classList.remove('hidden');
                     visibleCount++;
                 } else {
@@ -472,8 +543,9 @@
                 }
             });
 
-            document.getElementById('resultsCount').textContent = 
-                activeTags.size === 0 && !searchTerm 
+            const noFilter = activeTags.size === 0 && activeCities.size === 0 && !searchTerm;
+            document.getElementById('resultsCount').textContent =
+                noFilter
                     ? `Showing all ${hospitals.length} hospitals`
                     : `Showing ${visibleCount} of ${hospitals.length} hospitals`;
         }
@@ -574,8 +646,25 @@
 
         document.getElementById('searchInput').addEventListener('input', filterHospitals);
 
+        // Handle URL city parameter (e.g., hospitals.html?city=beijing)
+        function handleUrlParams() {
+            const params = new URLSearchParams(window.location.search);
+            const city = params.get('city');
+            if (city) {
+                // Normalize: capitalize first letter
+                const normalizedCity = city.charAt(0).toUpperCase() + city.slice(1).toLowerCase();
+                const cityExists = hospitals.some(h => h.city.toLowerCase() === normalizedCity.toLowerCase());
+                if (cityExists) {
+                    activeCities.add(normalizedCity);
+                }
+            }
+        }
+
         generateSpecialtyTags();
+        generateCityTags();
+        handleUrlParams();
         generateHospitalCards();
+        updateUI();
     </script>
 <div style="text-align:center;padding:30px 0;border-top:1px solid #eee;margin-top:40px;"><a href="index.html" style="color:#1e3c72;text-decoration:none;font-size:14px;">← Back to Home</a></div>
 <script>
