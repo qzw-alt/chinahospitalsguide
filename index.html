@@ -288,7 +288,7 @@
         }
         
         body {
-            padding-top: 120px;
+            padding-top: 70px;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: var(--dark);
@@ -503,6 +503,24 @@
         .badge-icon { font-size: 1.5rem; }
         
         /* Stats */
+        /* Quick Search Section */
+        .quick-search { background: white; padding: 50px 20px; text-align: center; }
+        .quick-search h2 { font-size: 2rem; color: var(--primary); margin-bottom: 10px; }
+        .quick-search p { color: #666; margin-bottom: 40px; font-size: 1.1rem; }
+        .search-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; max-width: 1000px; margin: 0 auto; }
+        .search-card { background: var(--light); border-radius: 15px; padding: 25px; text-align: left; transition: all 0.3s; border: 2px solid transparent; }
+        .search-card:hover { border-color: var(--primary); transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .search-card h3 { color: var(--primary); margin-bottom: 15px; font-size: 1.2rem; display: flex; align-items: center; gap: 10px; }
+        .search-card ul { list-style: none; padding: 0; margin: 0; }
+        .search-card li { padding: 8px 0; border-bottom: 1px solid #eee; }
+        .search-card li:last-child { border-bottom: none; }
+        .search-card a { color: #444; text-decoration: none; display: flex; justify-content: space-between; align-items: center; }
+        .search-card a:hover { color: var(--primary); }
+        .search-card a::after { content: "→"; opacity: 0; transition: opacity 0.2s; }
+        .search-card a:hover::after { opacity: 1; }
+        .view-all { display: inline-block; margin-top: 30px; color: var(--primary); text-decoration: none; font-weight: 600; }
+        .view-all:hover { text-decoration: underline; }
+
         .stats { background: var(--light); padding: 60px 20px; }
         .stats-grid { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; text-align: center; }
         .stat-number { font-size: 3rem; font-weight: bold; color: var(--primary); display: block; }
@@ -784,9 +802,20 @@
             </div>
         </div>
     </nav>
+
+    <!-- Destinations Bar -->
+    <div style="background: var(--light); border-bottom: 1px solid var(--border); padding: 8px 20px; text-align: center;">
+        <span style="color: #666; font-size: 0.9rem; margin-right: 15px;">Top Destinations:</span>
+        <a href="hospitals.html?city=beijing" style="color: var(--primary); text-decoration: none; margin: 0 8px; font-weight: 500;">Beijing</a>
+        <a href="hospitals.html?city=shanghai" style="color: var(--primary); text-decoration: none; margin: 0 8px; font-weight: 500;">Shanghai</a>
+        <a href="hospitals.html?city=guangzhou" style="color: var(--primary); text-decoration: none; margin: 0 8px; font-weight: 500;">Guangzhou</a>
+        <a href="hospitals.html?city=shenzhen" style="color: var(--primary); text-decoration: none; margin: 0 8px; font-weight: 500;">Shenzhen</a>
+        <a href="hospitals.html?city=hangzhou" style="color: var(--primary); text-decoration: none; margin: 0 8px; font-weight: 500;">Hangzhou</a>
+        <a href="hospitals.html" style="color: #999; text-decoration: none; margin: 0 8px; font-size: 0.85rem;">+ All Cities</a>
+    </div>
     
     <!-- Hero -->
-    <section class="hero" style="padding-top: 170px;">
+    <section class="hero">
         <h1>World-Class Medical Care in China</h1>
         <p class="subtitle">Access China's top JCI-accredited hospitals and internationally renowned specialists. We guide you through every step of your medical journey with professional care and support.</p>
         <a href="#contact" class="cta-button">Get Free Consultation</a>
@@ -887,6 +916,45 @@
                 document.getElementById('liveCounter').textContent = counters[counterIndex];
             }, 3000);
         </script>
+    </section>
+
+    <!-- Quick Search Section -->
+    <section class="quick-search">
+        <h2>Find the Right Hospital for You</h2>
+        <p>Browse by specialty or city to find the best hospital for your needs</p>
+        <div class="search-grid">
+            <div class="search-card">
+                <h3>🏥 By Specialty</h3>
+                <ul>
+                    <li><a href="treatments/cancer.html">Cancer Treatment</a></li>
+                    <li><a href="treatments/cardiac.html">Cardiac Care</a></li>
+                    <li><a href="treatments/orthopedics.html">Orthopedics</a></li>
+                    <li><a href="treatments/ivf.html">IVF & Fertility</a></li>
+                    <li><a href="hospitals.html">All Specialties →</a></li>
+                </ul>
+            </div>
+            <div class="search-card">
+                <h3>📍 By City</h3>
+                <ul>
+                    <li><a href="hospitals.html?city=beijing">Beijing</a></li>
+                    <li><a href="hospitals.html?city=shanghai">Shanghai</a></li>
+                    <li><a href="hospitals.html?city=guangzhou">Guangzhou</a></li>
+                    <li><a href="hospitals.html?city=shenzhen">Shenzhen</a></li>
+                    <li><a href="hospitals.html">All Cities →</a></li>
+                </ul>
+            </div>
+            <div class="search-card">
+                <h3>✨ Popular Services</h3>
+                <ul>
+                    <li><a href="services.html">Medical Check-up Packages</a></li>
+                    <li><a href="services.html">VIP Hospital Accommodation</a></li>
+                    <li><a href="services.html">Airport Pick-up Service</a></li>
+                    <li><a href="services.html">Interpretation Services</a></li>
+                    <li><a href="services.html">All Services →</a></li>
+                </ul>
+            </div>
+        </div>
+        <a href="hospitals.html" class="view-all">View All 40+ Partner Hospitals →</a>
     </section>
     
     <!-- Stats -->
