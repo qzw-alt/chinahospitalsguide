@@ -288,7 +288,7 @@
         }
         
         body {
-            padding-top: 70px;
+            padding-top: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: var(--dark);
@@ -803,21 +803,22 @@
         </div>
     </nav>
 
-    <!-- Destinations Bar -->
-    <div style="background: var(--light); border-bottom: 1px solid var(--border); padding: 8px 20px; text-align: center;">
-        <span style="color: #666; font-size: 0.9rem; margin-right: 15px;">Top Destinations:</span>
-        <a href="hospitals.html?city=beijing" style="color: var(--primary); text-decoration: none; margin: 0 8px; font-weight: 500;">Beijing</a>
-        <a href="hospitals.html?city=shanghai" style="color: var(--primary); text-decoration: none; margin: 0 8px; font-weight: 500;">Shanghai</a>
-        <a href="hospitals.html?city=guangzhou" style="color: var(--primary); text-decoration: none; margin: 0 8px; font-weight: 500;">Guangzhou</a>
-        <a href="hospitals.html?city=shenzhen" style="color: var(--primary); text-decoration: none; margin: 0 8px; font-weight: 500;">Shenzhen</a>
-        <a href="hospitals.html?city=hangzhou" style="color: var(--primary); text-decoration: none; margin: 0 8px; font-weight: 500;">Hangzhou</a>
-        <a href="hospitals.html" style="color: #999; text-decoration: none; margin: 0 8px; font-size: 0.85rem;">+ All Cities</a>
-    </div>
-    
     <!-- Hero -->
     <section class="hero">
         <h1>World-Class Medical Care in China</h1>
         <p class="subtitle">Access China's top JCI-accredited hospitals and internationally renowned specialists. We guide you through every step of your medical journey with professional care and support.</p>
+
+        <!-- City Quick Links -->
+        <div style="margin-top: 15px; margin-bottom: 30px; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
+            <span style="color: rgba(255,255,255,0.7); font-size: 0.9rem; width: 100%;">Find hospital in:</span>
+            <a href="hospitals.html?city=beijing" style="background: rgba(255,255,255,0.15); color: white; padding: 6px 16px; border-radius: 20px; text-decoration: none; font-size: 0.9rem; transition: background 0.2s;">Beijing</a>
+            <a href="hospitals.html?city=shanghai" style="background: rgba(255,255,255,0.15); color: white; padding: 6px 16px; border-radius: 20px; text-decoration: none; font-size: 0.9rem; transition: background 0.2s;">Shanghai</a>
+            <a href="hospitals.html?city=guangzhou" style="background: rgba(255,255,255,0.15); color: white; padding: 6px 16px; border-radius: 20px; text-decoration: none; font-size: 0.9rem; transition: background 0.2s;">Guangzhou</a>
+            <a href="hospitals.html?city=shenzhen" style="background: rgba(255,255,255,0.15); color: white; padding: 6px 16px; border-radius: 20px; text-decoration: none; font-size: 0.9rem; transition: background 0.2s;">Shenzhen</a>
+            <a href="hospitals.html?city=hangzhou" style="background: rgba(255,255,255,0.15); color: white; padding: 6px 16px; border-radius: 20px; text-decoration: none; font-size: 0.9rem; transition: background 0.2s;">Hangzhou</a>
+            <a href="hospitals.html" style="background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.7); padding: 6px 16px; border-radius: 20px; text-decoration: none; font-size: 0.9rem;">+ All Cities</a>
+        </div>
+
         <a href="#contact" class="cta-button">Get Free Consultation</a>
         
         <!-- Trust Indicators -->
