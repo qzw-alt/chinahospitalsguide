@@ -29,13 +29,13 @@
         .page-header {
             background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
             color: var(--white);
-            padding: 80px 0;
+            padding: 80px 20px;
             text-align: center;
         }
         .page-header h1 { font-size: 2.8rem; margin-bottom: 15px; }
         .page-header p { font-size: 1.3rem; opacity: 0.9; max-width: 650px; margin: 0 auto; }
         
-        .content { background: var(--white); padding: 80px 0; }
+        .content { background: var(--white); padding: 80px 20px; }
         
         .trust-banner {
             background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
@@ -222,9 +222,7 @@
         .nav-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 10px; }
         .nav-toggle span { width: 25px; height: 3px; background: white; transition: all 0.3s; }
         @media (max-width: 768px) { .nav-toggle { display: flex; } .nav-links { position: absolute; top: 70px; left: 0; right: 0; background: rgba(30, 60, 114, 0.98); flex-direction: column; max-height: 0; overflow: hidden; transition: max-height 0.3s; padding: 0; } .nav-links.active { max-height: 400px; padding: 10px 0; } .nav-links li { width: 100%; } .nav-links a { padding: 15px 20px; border-bottom: 1px solid rgba(255,255,255,0.1); display: block; text-align: center; } .nav-cta { display: none; } }
-        .page-header { padding-top: 100px !important; }
-        .page-header .container { max-width: 1000px; margin: 0 auto; }
-        .content-area .container { max-width: 1000px; margin: 0 auto; }
+
       
     </style>
 </head>
