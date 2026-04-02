@@ -887,6 +887,50 @@
         </script>
     </section>
     
+    <!-- Quick Search Section -->
+    <section style="background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); padding: 40px 20px;">
+        <div style="max-width: 900px; margin: 0 auto; text-align: center;">
+            <h2 style="color: white; font-size: 1.8rem; margin-bottom: 10px;">Find the Right Hospital</h2>
+            <p style="color: rgba(255,255,255,0.85); margin-bottom: 30px;">Search by department or city to find verified hospitals</p>
+            <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; align-items: center;">
+                <select id="deptSelect" style="padding: 15px 20px; font-size: 1rem; border-radius: 10px; border: none; min-width: 200px; cursor: pointer;">
+                    <option value="">All Departments</option>
+                    <option value="cardiology">❤️ Cardiology</option>
+                    <option value="oncology">🎗️ Oncology</option>
+                    <option value="orthopedics">🦴 Orthopedics</option>
+                    <option value="neurosurgery">🧠 Neurosurgery</option>
+                    <option value="ivf">👶 IVF / Fertility</option>
+                    <option value="pediatrics">🧒 Pediatrics</option>
+                    <option value="general">🏥 General</option>
+                </select>
+                <select id="citySelect" style="padding: 15px 20px; font-size: 1rem; border-radius: 10px; border: none; min-width: 180px; cursor: pointer;">
+                    <option value="">All Cities</option>
+                    <option value="Beijing">Beijing</option>
+                    <option value="Shanghai">Shanghai</option>
+                    <option value="Guangzhou">Guangzhou</option>
+                    <option value="Shenzhen">Shenzhen</option>
+                    <option value="Hangzhou">Hangzhou</option>
+                    <option value="Chengdu">Chengdu</option>
+                </select>
+                <button onclick="searchHospitals()" style="background: #ff6b6b; color: white; border: none; padding: 15px 35px; font-size: 1rem; border-radius: 10px; cursor: pointer; font-weight: bold; transition: all 0.3s;">Search →</button>
+            </div>
+            <p style="color: rgba(255,255,255,0.6); font-size: 0.9rem; margin-top: 15px;">34 verified hospitals across China</p>
+        </div>
+    </section>
+    
+    <script>
+    function searchHospitals() {
+        var dept = document.getElementById('deptSelect').value;
+        var city = document.getElementById('citySelect').value;
+        var url = 'hospitals.html';
+        var params = [];
+        if (dept) params.push('dept=' + dept);
+        if (city) params.push('city=' + city);
+        if (params.length > 0) url += '?' + params.join('&');
+        window.location.href = url;
+    }
+    </script>
+    
     <!-- Stats -->
     <!-- Why Choose Us -->
     <section class="features">
