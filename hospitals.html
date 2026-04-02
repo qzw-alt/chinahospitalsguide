@@ -575,6 +575,28 @@
 
         generateSpecialtyTags();
         generateHospitalCards();
+        
+        // Handle URL parameters for direct links from homepage
+        const urlParams = new URLSearchParams(window.location.search);
+        const cityParam = urlParams.get('city');
+        const deptParam = urlParams.get('dept');
+        
+        if (cityParam || deptParam) {
+            const searchInput = document.getElementById('searchInput');
+            if (cityParam) {
+                searchInput.value = cityParam;
+            }
+            if (deptParam) {
+                // Click the matching specialty tag
+                const tags = document.querySelectorAll('.specialty-tag');
+                tags.forEach(function(tag) {
+                    if (tag.getAttribute('data-tag') === deptParam) {
+                        tag.click();
+                    }
+                });
+            }
+            filterHospitals();
+        }
     </script>
 <div style="text-align:center;padding:30px 0;border-top:1px solid #eee;margin-top:40px;"><a href="index.html" style="color:#1e3c72;text-decoration:none;font-size:14px;">← Back to Home</a></div>
 <script>

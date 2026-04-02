@@ -887,49 +887,30 @@
         </script>
     </section>
     
-    <!-- Quick Search Section -->
-    <section style="background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); padding: 40px 20px;">
-        <div style="max-width: 900px; margin: 0 auto; text-align: center;">
-            <h2 style="color: white; font-size: 1.8rem; margin-bottom: 10px;">Find the Right Hospital</h2>
-            <p style="color: rgba(255,255,255,0.85); margin-bottom: 30px;">Search by department or city to find verified hospitals</p>
-            <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; align-items: center;">
-                <select id="deptSelect" style="padding: 15px 20px; font-size: 1rem; border-radius: 10px; border: none; min-width: 200px; cursor: pointer;">
-                    <option value="">All Departments</option>
-                    <option value="cardiology">❤️ Cardiology</option>
-                    <option value="oncology">🎗️ Oncology</option>
-                    <option value="orthopedics">🦴 Orthopedics</option>
-                    <option value="neurosurgery">🧠 Neurosurgery</option>
-                    <option value="ivf">👶 IVF / Fertility</option>
-                    <option value="pediatrics">🧒 Pediatrics</option>
-                    <option value="general">🏥 General</option>
-                </select>
-                <select id="citySelect" style="padding: 15px 20px; font-size: 1rem; border-radius: 10px; border: none; min-width: 180px; cursor: pointer;">
-                    <option value="">All Cities</option>
-                    <option value="Beijing">Beijing</option>
-                    <option value="Shanghai">Shanghai</option>
-                    <option value="Guangzhou">Guangzhou</option>
-                    <option value="Shenzhen">Shenzhen</option>
-                    <option value="Hangzhou">Hangzhou</option>
-                    <option value="Chengdu">Chengdu</option>
-                </select>
-                <button onclick="searchHospitals()" style="background: #ff6b6b; color: white; border: none; padding: 15px 35px; font-size: 1rem; border-radius: 10px; cursor: pointer; font-weight: bold; transition: all 0.3s;">Search →</button>
+    <!-- Quick Access Section -->
+    <section style="background: white; padding: 40px 20px; box-shadow: 0 2px 20px rgba(0,0,0,0.08);">
+        <div style="max-width: 1000px; margin: 0 auto;">
+            <h2 style="text-align: center; color: #1e3c72; font-size: 1.6rem; margin-bottom: 30px;">Find Hospital by City</h2>
+            <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+                <a href="hospitals.html?city=Beijing" style="display: inline-block; background: linear-gradient(135deg, #1e3c72, #2a5298); color: white; padding: 15px 30px; border-radius: 50px; text-decoration: none; font-weight: 600; transition: all 0.3s; box-shadow: 0 4px 15px rgba(30,60,114,0.3);">🏙️ Beijing</a>
+                <a href="hospitals.html?city=Shanghai" style="display: inline-block; background: linear-gradient(135deg, #1e3c72, #2a5298); color: white; padding: 15px 30px; border-radius: 50px; text-decoration: none; font-weight: 600; transition: all 0.3s; box-shadow: 0 4px 15px rgba(30,60,114,0.3);">🌆 Shanghai</a>
+                <a href="hospitals.html?city=Guangzhou" style="display: inline-block; background: linear-gradient(135deg, #1e3c72, #2a5298); color: white; padding: 15px 30px; border-radius: 50px; text-decoration: none; font-weight: 600; transition: all 0.3s; box-shadow: 0 4px 15px rgba(30,60,114,0.3);">🏙️ Guangzhou</a>
+                <a href="hospitals.html?city=Shenzhen" style="display: inline-block; background: linear-gradient(135deg, #1e3c72, #2a5298); color: white; padding: 15px 30px; border-radius: 50px; text-decoration: none; font-weight: 600; transition: all 0.3s; box-shadow: 0 4px 15px rgba(30,60,114,0.3);">🌃 Shenzhen</a>
+                <a href="hospitals.html?city=Hangzhou" style="display: inline-block; background: linear-gradient(135deg, #1e3c72, #2a5298); color: white; padding: 15px 30px; border-radius: 50px; text-decoration: none; font-weight: 600; transition: all 0.3s; box-shadow: 0 4px 15px rgba(30,60,114,0.3);">🌿 Hangzhou</a>
+                <a href="hospitals.html?city=Chengdu" style="display: inline-block; background: linear-gradient(135deg, #1e3c72, #2a5298); color: white; padding: 15px 30px; border-radius: 50px; text-decoration: none; font-weight: 600; transition: all 0.3s; box-shadow: 0 4px 15px rgba(30,60,114,0.3);">🦕 Chengdu</a>
             </div>
-            <p style="color: rgba(255,255,255,0.6); font-size: 0.9rem; margin-top: 15px;">34 verified hospitals across China</p>
+            
+            <h2 style="text-align: center; color: #1e3c72; font-size: 1.6rem; margin: 40px 0 30px;">Or Browse by Department</h2>
+            <div style="display: flex; justify-content: center; gap: 12px; flex-wrap: wrap;">
+                <a href="hospitals.html?dept=cardiology" style="display: inline-block; background: #f8f9fa; color: #1e3c72; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: 500; border: 2px solid #1e3c72; transition: all 0.3s;">❤️ Cardiology</a>
+                <a href="hospitals.html?dept=oncology" style="display: inline-block; background: #f8f9fa; color: #1e3c72; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: 500; border: 2px solid #1e3c72; transition: all 0.3s;">🎗️ Oncology</a>
+                <a href="hospitals.html?dept=orthopedics" style="display: inline-block; background: #f8f9fa; color: #1e3c72; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: 500; border: 2px solid #1e3c72; transition: all 0.3s;">🦴 Orthopedics</a>
+                <a href="hospitals.html?dept=neurosurgery" style="display: inline-block; background: #f8f9fa; color: #1e3c72; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: 500; border: 2px solid #1e3c72; transition: all 0.3s;">🧠 Neurosurgery</a>
+                <a href="hospitals.html?dept=ivf" style="display: inline-block; background: #f8f9fa; color: #1e3c72; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: 500; border: 2px solid #1e3c72; transition: all 0.3s;">👶 IVF / Fertility</a>
+                <a href="hospitals.html?dept=pediatrics" style="display: inline-block; background: #f8f9fa; color: #1e3c72; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: 500; border: 2px solid #1e3c72; transition: all 0.3s;">🧒 Pediatrics</a>
+            </div>
         </div>
     </section>
-    
-    <script>
-    function searchHospitals() {
-        var dept = document.getElementById('deptSelect').value;
-        var city = document.getElementById('citySelect').value;
-        var url = 'hospitals.html';
-        var params = [];
-        if (dept) params.push('dept=' + dept);
-        if (city) params.push('city=' + city);
-        if (params.length > 0) url += '?' + params.join('&');
-        window.location.href = url;
-    }
-    </script>
     
     <!-- Stats -->
     <!-- Why Choose Us -->
