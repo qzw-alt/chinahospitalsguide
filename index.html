@@ -1412,12 +1412,11 @@
     </style>
     
     <script>
-        // Exit intent detection
-        let exitIntentShown = false;
+        // Exit intent detection - only show once per browser session
         document.addEventListener('mouseout', function(e) {
-            if (e.clientY < 0 && !exitIntentShown) {
+            if (e.clientY < 0 && !sessionStorage.getItem('exitPopupShown')) {
                 document.getElementById('exitPopup').style.display = 'flex';
-                exitIntentShown = true;
+                sessionStorage.setItem('exitPopupShown', 'true');
             }
         });
         
