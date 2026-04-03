@@ -120,7 +120,7 @@
                 padding: 0;
             }
             .nav-links.active {
-                max-height: 400px;
+                max-height: 600px;
                 padding: 10px 0;
             }
             .nav-links li { width: 100%; }
@@ -134,19 +134,21 @@
                 padding-bottom: 5px;
             }
             .nav-links li.nav-mobile-pricing a {
-                background: #ff6b6b;
-                color: white;
-                border: none;
-                border-radius: 25px;
-                margin: 0 20px;
-                padding: 12px 20px;
-                font-weight: bold;
-                text-align: center;
+                background: #ff6b6b !important;
+                color: white !important;
+                border: none !important;
+                border-radius: 25px !important;
+                margin: 0 20px !important;
+                padding: 12px 20px !important;
+                font-weight: bold !important;
+                text-align: center !important;
+                display: block !important;
             }
             .nav-links li.nav-mobile-pricing a:hover {
                 background: #ff5252;
             }
             .nav-cta { display: none; }
+            .mobile-pricing-btn { display: block !important; }
         }
 
         body {
@@ -334,7 +336,9 @@
                 <span></span>
             </div>
         </div>
-    </nav>    <div class="container">
+    </nav>
+        <a href="../pricing.html" class="mobile-pricing-btn" style="display:none; position:fixed; bottom:20px; right:20px; background:#ff6b6b; color:white; padding:14px 24px; border-radius:30px; font-weight:bold; font-size:1rem; z-index:999; text-decoration:none; box-shadow:0 4px 15px rgba(255,107,107,0.4);">💰 View Pricing</a>
+    <div class="container">
         <div class="header">
             <h1>🏥 Medical Tourism Blog</h1>
             <p>Expert guides, cost comparisons, and patient stories to help you make informed decisions about healthcare in China</p>
