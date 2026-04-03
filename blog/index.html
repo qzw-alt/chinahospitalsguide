@@ -129,15 +129,21 @@
                 border-bottom: 1px solid rgba(255,255,255,0.1);
                 text-align: center;
             }
-            .nav-links a.pricing-mobile {
+            .nav-links li.nav-mobile-pricing {
+                margin-top: 5px;
+                padding-bottom: 5px;
+            }
+            .nav-links li.nav-mobile-pricing a {
                 background: #ff6b6b;
                 color: white;
-                border-bottom: none;
-                border-radius: 0 0 8px 8px;
-                margin: 0 10px 10px;
-                width: auto;
+                border: none;
+                border-radius: 25px;
+                margin: 0 20px;
+                padding: 12px 20px;
+                font-weight: bold;
+                text-align: center;
             }
-            .nav-links a.pricing-mobile:hover {
+            .nav-links li.nav-mobile-pricing a:hover {
                 background: #ff5252;
             }
             .nav-cta { display: none; }
@@ -320,9 +326,8 @@
                 <li><a href="../news/">News</a></li>
                 <li><a href="../resources.html">Resources</a></li>
                 <li><a href="../contact.html">Contact</a></li>
-                <li><a href="../pricing.html" class="pricing-mobile">💰 Pricing</a></li>
+                <li class="nav-mobile-pricing"><a href="../pricing.html">💰 Pricing</a></li>
             </ul>
-            <a href="../pricing.html" class="nav-cta">Pricing</a>
             <div class="nav-toggle" id="navToggle">
                 <span></span>
                 <span></span>
