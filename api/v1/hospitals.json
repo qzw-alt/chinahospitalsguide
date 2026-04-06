@@ -107,7 +107,7 @@
         "general"
       ],
       "rank": "Top 3 Cardiology, Top 5 Oncology",
-      "phone": "Contact via our service",
+      "phone": "021-64041990",
       "website": "https://www.zs-hospital.sh.cn",
       "international": true,
       "jci": false,
@@ -120,19 +120,22 @@
           "district",
           "rank",
           "tags",
-          "airport_info"
+          "airport_info",
+          "address",
+          "phone"
         ],
         "data_source": "multi_source",
         "cross_validated": [
           "official_website",
           "public_ranking"
         ],
-        "last_verified": "2026-03-15",
+        "last_verified": "2026-04-06",
         "notes": [
           "Fudan affiliation verifiable",
           "Innovation hub reputation documented in multiple sources"
         ]
-      }
+      },
+      "address": "上海市徐汇区枫林路180号"
     },
     {
       "id": "jishuitan-hospital",
@@ -190,7 +193,7 @@
         "joint-replacement"
       ],
       "rank": "#2 Orthopedics",
-      "phone": "Contact via our service",
+      "phone": "021-64369181",
       "website": "http://www.6thhospitalsh.com",
       "international": true,
       "jci": false,
@@ -203,18 +206,21 @@
           "district",
           "rank",
           "tags",
-          "airport_info"
+          "airport_info",
+          "address",
+          "phone"
         ],
         "data_source": "dual_source",
         "cross_validated": [
           "public_ranking"
         ],
-        "last_verified": "2026-03-15",
+        "last_verified": "2026-04-06",
         "notes": [
           "#2 orthopedics from public ranking data",
           "Diabetic foot treatment specialization notable"
         ]
-      }
+      },
+      "address": "上海市徐汇区宜山路600号（徐汇院区）"
     },
     {
       "id": "pku-third-hospital",
@@ -274,7 +280,7 @@
         "fertility"
       ],
       "rank": "#2 Obstetrics in China",
-      "phone": "Contact via our service",
+      "phone": "021-33189900",
       "website": "https://www.fdfck.com",
       "international": true,
       "jci": false,
@@ -287,19 +293,22 @@
           "district",
           "rank",
           "tags",
-          "airport_info"
+          "airport_info",
+          "address",
+          "phone"
         ],
         "data_source": "multi_source",
         "cross_validated": [
           "official_website",
           "public_ranking"
         ],
-        "last_verified": "2026-03-15",
+        "last_verified": "2026-04-06",
         "notes": [
           "#2 obstetrics claim from public ranking",
           "Well-known as 'Red House' brand in Shanghai"
         ]
-      }
+      },
+      "address": "黄浦区方斜路419号（黄浦院区）；杨浦区沈阳路128号（杨浦院区）"
     },
     {
       "id": "zhejiang-womens-hospital",
@@ -440,7 +449,7 @@
         "neurology"
       ],
       "rank": "#2 Neurosurgery",
-      "phone": "Contact via our service",
+      "phone": "021-52889999",
       "website": "https://www.hshs.com.cn",
       "international": true,
       "jci": false,
@@ -453,19 +462,22 @@
           "district",
           "rank",
           "tags",
-          "airport_info"
+          "airport_info",
+          "address",
+          "phone"
         ],
         "data_source": "multi_source",
         "cross_validated": [
           "official_website",
           "public_ranking"
         ],
-        "last_verified": "2026-03-10",
+        "last_verified": "2026-04-06",
         "notes": [
           "Fudan affiliation adds credibility",
           "#2 neurosurgery documented in rankings"
         ]
-      }
+      },
+      "address": "上海市静安区乌鲁木齐中路12号（总院）"
     },
     {
       "id": "beijing-childrens-hospital",
@@ -609,7 +621,7 @@
         "vip-services"
       ],
       "rank": "Top VIP Center",
-      "phone": "Contact via our service",
+      "phone": "021-64370045",
       "website": "https://www.rjh.com.cn",
       "international": true,
       "jci": false,
@@ -622,18 +634,21 @@
           "district",
           "rank",
           "tags",
-          "airport_info"
+          "airport_info",
+          "address",
+          "phone"
         ],
         "data_source": "dual_source",
         "cross_validated": [
           "official_website",
           "public_ranking"
         ],
-        "last_verified": "2026-03-15",
+        "last_verified": "2026-04-06",
         "notes": [
           "VIP services documented in multiple sources"
         ]
-      }
+      },
+      "address": "上海市黄浦区瑞金二路197号"
     },
     {
       "id": "renji-hospital",
