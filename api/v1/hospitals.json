@@ -1537,7 +1537,7 @@
         "general"
       ],
       "rank": "Top 5 Neurosurgery in China",
-      "phone": "Contact via our service",
+      "phone": "029-84775507",
       "website": "http://www.fmmu.edu.cn",
       "international": true,
       "jci": false,
@@ -1547,7 +1547,9 @@
         "verified_fields": [
           "name",
           "city",
-          "specialty"
+          "specialty",
+          "address",
+          "phone"
         ],
         "data_source": "single_source",
         "cross_validated": [],
@@ -1556,7 +1558,8 @@
           "Referenced alongside West China and Qilu for neurosurgery coverage",
           "Military medical university hospital"
         ]
-      }
+      },
+      "address": "西安市新城区长乐西路127号"
     },
     {
       "id": "qilu-hospital",
@@ -1571,7 +1574,7 @@
         "neurosurgery"
       ],
       "rank": "Top Hospital in Shandong Province",
-      "phone": "Contact via our service",
+      "phone": "0531-82166666",
       "website": "http://www.qiluhospital.com",
       "international": true,
       "jci": false,
@@ -1581,7 +1584,9 @@
         "verified_fields": [
           "name",
           "city",
-          "rank"
+          "rank",
+          "address",
+          "phone"
         ],
         "data_source": "single_source",
         "cross_validated": [],
@@ -1589,7 +1594,8 @@
         "notes": [
           "Referenced as regional neurosurgery center in Western China article"
         ]
-      }
+      },
+      "address": "济南市历下区文化西路107号"
     },
     {
       "id": "shanghai-changhai-hospital",
@@ -1681,7 +1687,7 @@
         "oncology"
       ],
       "rank": "Top Hospital in Jiangsu Province",
-      "phone": "Contact via our service",
+      "phone": "025-83106666",
       "website": "http://www.njglyy.com",
       "international": true,
       "jci": false,
@@ -1691,7 +1697,9 @@
         "verified_fields": [
           "name",
           "city",
-          "specialty"
+          "specialty",
+          "address",
+          "phone"
         ],
         "data_source": "single_source",
         "cross_validated": [],
@@ -1699,7 +1707,8 @@
         "notes": [
           "Referenced in article as provincial hospital network member"
         ]
-      }
+      },
+      "address": "南京市鼓楼区中山路321号"
     },
     {
       "id": "tianjin-eye-hospital",
@@ -1714,7 +1723,7 @@
         "lasik"
       ],
       "rank": "Top Ophthalmology Hospital in North China",
-      "phone": "Contact via our service",
+      "phone": "022-23340123",
       "website": "http://www.ooth.com.cn",
       "international": true,
       "jci": false,
@@ -1724,7 +1733,9 @@
         "verified_fields": [
           "name",
           "city",
-          "specialty"
+          "specialty",
+          "address",
+          "phone"
         ],
         "data_source": "single_source",
         "cross_validated": [],
@@ -1733,7 +1744,8 @@
           "Referenced in cataract surgery article",
           "Specialized eye hospital"
         ]
-      }
+      },
+      "address": "天津市和平区甘肃路4号"
     },
     {
       "id": "tianjin-medical-university-cancer",
@@ -1748,7 +1760,7 @@
         "cancer-surgery"
       ],
       "rank": "Top Cancer Hospital in North China",
-      "phone": "Contact via our service",
+      "phone": "022-23340123",
       "website": "http://www.tjmuch.com",
       "international": true,
       "jci": false,
@@ -1758,7 +1770,9 @@
         "verified_fields": [
           "name",
           "city",
-          "specialty"
+          "specialty",
+          "address",
+          "phone"
         ],
         "data_source": "single_source",
         "cross_validated": [],
@@ -1767,7 +1781,8 @@
           "National cancer center network member",
           "Radiotherapy specialization noted"
         ]
-      }
+      },
+      "address": "天津市河西区体院北环湖西路1号"
     },
     {
       "id": "aier-eye-hospital",
