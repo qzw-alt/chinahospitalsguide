@@ -1055,7 +1055,7 @@
         "general"
       ],
       "rank": "Top Respiratory Medicine",
-      "phone": "Contact via our service",
+      "phone": "010-85231777",
       "website": "http://www.bjcyh.com.cn",
       "international": true,
       "jci": false,
@@ -1067,17 +1067,20 @@
           "city",
           "district",
           "rank",
-          "tags"
+          "tags",
+          "address",
+          "phone"
         ],
         "data_source": "single_source",
         "cross_validated": [
           "public_ranking"
         ],
-        "last_verified": "2026-03-15",
+        "last_verified": "2026-04-06",
         "notes": [
           "Respiratory department well-known"
         ]
-      }
+      },
+      "address": "北京市朝阳区工人体育场南路8号（本部）"
     },
     {
       "id": "301-hospital",
@@ -1091,7 +1094,7 @@
         "military"
       ],
       "rank": "Military Hospital",
-      "phone": "Contact via our service",
+      "phone": "010-66887329",
       "website": "http://www.301hospital.com.cn",
       "international": true,
       "jci": false,
@@ -1104,18 +1107,21 @@
           "district",
           "rank",
           "tags",
-          "airport_info"
+          "airport_info",
+          "address",
+          "phone"
         ],
         "data_source": "dual_source",
         "cross_validated": [
           "official_website"
         ],
-        "last_verified": "2026-03-15",
+        "last_verified": "2026-04-06",
         "notes": [
           "China's largest military hospital",
           "All specialties available"
         ]
-      }
+      },
+      "address": "北京市海淀区复兴路28号"
     },
     {
       "id": "shenzhen-peoples-hospital",
@@ -1418,7 +1424,7 @@
         "cardiology"
       ],
       "rank": "#1 Ophthalmology in China",
-      "phone": "Contact via our service",
+      "phone": "010-58266699",
       "website": "http://www.trhosp.com.cn",
       "international": true,
       "jci": false,
@@ -1430,7 +1436,9 @@
           "city",
           "district",
           "rank",
-          "tags"
+          "tags",
+          "address",
+          "phone"
         ],
         "data_source": "dual_source",
         "cross_validated": [
@@ -1441,7 +1449,8 @@
           "#1 ophthalmology ranking widely documented",
           "ENT department also nationally recognized"
         ]
-      }
+      },
+      "address": "北京市东城区东交民巷1号（西区）"
     },
     {
       "id": "xijing-hospital",
@@ -1695,7 +1704,7 @@
         "cataract"
       ],
       "rank": "Largest Private Eye Hospital Chain in China",
-      "phone": "Contact via our service",
+      "phone": "0731-85179288",
       "website": "http://www.aierchina.com",
       "international": true,
       "jci": false,
@@ -1704,7 +1713,9 @@
         "level": "medium_high",
         "verified_fields": [
           "name",
-          "specialty"
+          "specialty",
+          "address",
+          "phone"
         ],
         "data_source": "single_source",
         "cross_validated": [],
@@ -1713,7 +1724,8 @@
           "Listed in eye surgery comparison article",
           "Nationwide chain with international patient services"
         ]
-      }
+      },
+      "address": "长沙市天心区芙蓉南路一段188号"
     },
     {
       "id": "shanghai-dental-hospital",
@@ -1829,7 +1841,7 @@
         "general"
       ],
       "rank": "Top TCM Hospital in China",
-      "phone": "Contact via our service",
+      "phone": "010-84018292",
       "website": "http://www.dzmhospital.com",
       "international": true,
       "jci": false,
@@ -1840,7 +1852,9 @@
           "name",
           "city",
           "rank",
-          "tags"
+          "tags",
+          "address",
+          "phone"
         ],
         "data_source": "dual_source",
         "cross_validated": [
@@ -1850,7 +1864,8 @@
         "notes": [
           "Neurology TCM specialization documented"
         ]
-      }
+      },
+      "address": "北京市东城区海运仓5号（东城院区）"
     },
     {
       "id": "guangzhou-dental-hospital",
