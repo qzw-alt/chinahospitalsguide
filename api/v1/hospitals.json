@@ -398,7 +398,7 @@
         "general"
       ],
       "rank": "#1 Neurosurgery",
-      "phone": "Contact via our service",
+      "phone": "010-59976611",
       "website": "http://www.bjtth.org",
       "international": true,
       "jci": false,
@@ -411,19 +411,22 @@
           "district",
           "rank",
           "tags",
-          "airport_info"
+          "airport_info",
+          "address",
+          "phone"
         ],
         "data_source": "official",
         "cross_validated": [
           "official_website",
           "public_ranking"
         ],
-        "last_verified": "2026-03-10",
+        "last_verified": "2026-04-06",
         "notes": [
           "#1 neurosurgery public ranking widely accepted",
           "International neuroscience research reputation"
         ]
-      }
+      },
+      "address": "北京市丰台区南四环西路119号"
     },
     {
       "id": "huashan-hospital",
@@ -476,10 +479,10 @@
         "childrens-health"
       ],
       "rank": "#1 Pediatrics",
-      "phone": "Contact via our service",
+      "phone": "010-59612345",
       "website": "http://www.bch.com.cn",
       "international": true,
-      "jci": true,
+      "jci": false,
       "trust": {
         "score": 0.96,
         "level": "very_high",
@@ -489,7 +492,9 @@
           "district",
           "rank",
           "tags",
-          "airport_info"
+          "airport_info",
+          "address",
+          "phone"
         ],
         "data_source": "official",
         "cross_validated": [
@@ -497,13 +502,14 @@
           "public_ranking",
           "jci_verified"
         ],
-        "last_verified": "2026-03-10",
+        "last_verified": "2026-04-06",
         "notes": [
           "JCI accredited",
           "National Children's Medical Center designation",
           "#1 pediatrics widely documented"
         ]
-      }
+      },
+      "address": "北京市西城区南礼士路56号"
     },
     {
       "id": "pumch",
@@ -517,7 +523,7 @@
         "all-specialties"
       ],
       "rank": "#1 Comprehensive Hospital",
-      "phone": "Contact via our service",
+      "phone": "东单院区:010-69151188 / 西单院区:010-69158100",
       "website": "https://www.pumch.cn",
       "international": true,
       "jci": false,
@@ -530,7 +536,9 @@
           "district",
           "rank",
           "tags",
-          "airport_info"
+          "airport_info",
+          "address",
+          "phone"
         ],
         "data_source": "official",
         "cross_validated": [
@@ -538,13 +546,14 @@
           "public_ranking",
           "who_reference"
         ],
-        "last_verified": "2026-03-10",
+        "last_verified": "2026-04-06",
         "notes": [
           "Most prestigious hospital in China",
           "#1 comprehensive claim universally accepted",
           "Highest trust level in database"
         ]
-      }
+      },
+      "address": "东单院区：北京市东城区帅府园一号；西单院区：北京市西城区大木仓胡同41号"
     },
     {
       "id": "china-japan-friendship-hospital",
@@ -558,10 +567,10 @@
         "international"
       ],
       "rank": "Top International Department",
-      "phone": "Contact via our service",
+      "phone": "本部:010-84205566 / 国际部:010-84205121",
       "website": "https://www.zryhyy.com.cn",
       "international": true,
-      "jci": true,
+      "jci": false,
       "trust": {
         "score": 0.9,
         "level": "high",
@@ -571,19 +580,22 @@
           "district",
           "rank",
           "tags",
-          "airport_info"
+          "airport_info",
+          "address",
+          "phone"
         ],
         "data_source": "official",
         "cross_validated": [
           "official_website",
           "jci_verified"
         ],
-        "last_verified": "2026-03-15",
+        "last_verified": "2026-04-06",
         "notes": [
           "JCI accredited",
           "International patient services well-established"
         ]
-      }
+      },
+      "address": "北京市朝阳区樱花园东街2号"
     },
     {
       "id": "ruijin-hospital",
@@ -1001,7 +1013,7 @@
         "hematology"
       ],
       "rank": "Top General Hospital",
-      "phone": "Contact via our service",
+      "phone": "010-88326666",
       "website": "http://www.pkuph.com.cn",
       "international": true,
       "jci": false,
@@ -1014,19 +1026,22 @@
           "district",
           "rank",
           "tags",
-          "airport_info"
+          "airport_info",
+          "address",
+          "phone"
         ],
         "data_source": "dual_source",
         "cross_validated": [
           "official_website",
           "public_ranking"
         ],
-        "last_verified": "2026-03-15",
+        "last_verified": "2026-04-06",
         "notes": [
           "Peking University affiliation",
           "Hematology department notable"
         ]
-      }
+      },
+      "address": "西直门院区：北京市西城区西直门南大街11号；白塔寺院区：北京市西城区阜成门内大街133号"
     },
     {
       "id": "beijing-chaoyang-hospital",
