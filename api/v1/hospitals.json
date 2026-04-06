@@ -15,21 +15,42 @@
       "city": "Beijing",
       "district": "Xicheng",
       "airport_info": "45-60min from Beijing Capital International Airport",
-      "tags": ["cardiology", "heart-surgery", "general"],
+      "tags": [
+        "cardiology",
+        "heart-surgery",
+        "general"
+      ],
       "rank": "#1 Cardiology in China",
-      "phone": "Contact via our service",
+      "phone": "010-88398866",
       "website": "https://www.fuwaihospital.org",
       "international": true,
       "jci": false,
       "trust": {
         "score": 0.94,
         "level": "high",
-        "verified_fields": ["name", "city", "district", "rank", "tags", "airport_info"],
+        "verified_fields": [
+          "name",
+          "city",
+          "district",
+          "rank",
+          "tags",
+          "airport_info",
+          "address",
+          "phone"
+        ],
         "data_source": "multi_source",
-        "cross_validated": ["official_website", "public_ranking"],
-        "last_verified": "2026-03-15",
-        "notes": ["Rank #1 cardiology claim backed by public ranking data", "Success rate claims from official sources", "Airport time typical for Beijing traffic"]
-      }
+        "cross_validated": [
+          "official_website",
+          "public_ranking"
+        ],
+        "last_verified": "2026-04-06",
+        "notes": [
+          "Rank #1 cardiology claim backed by public ranking data",
+          "Success rate claims from official sources",
+          "Airport time typical for Beijing traffic"
+        ]
+      },
+      "address": "北京市西城区北礼士路167号"
     },
     {
       "id": "anzhen-hospital",
@@ -38,21 +59,40 @@
       "city": "Beijing",
       "district": "Chaoyang",
       "airport_info": "40-55min from Beijing Capital International Airport",
-      "tags": ["cardiology", "heart-surgery"],
+      "tags": [
+        "cardiology",
+        "heart-surgery"
+      ],
       "rank": "Top Cardiovascular Center",
-      "phone": "Contact via our service",
+      "phone": "010-64412431",
       "website": "http://www.anzhen.org",
       "international": true,
       "jci": false,
       "trust": {
         "score": 0.91,
         "level": "high",
-        "verified_fields": ["name", "city", "district", "rank", "tags", "airport_info"],
+        "verified_fields": [
+          "name",
+          "city",
+          "district",
+          "rank",
+          "tags",
+          "airport_info",
+          "address",
+          "phone"
+        ],
         "data_source": "multi_source",
-        "cross_validated": ["official_website", "public_ranking"],
-        "last_verified": "2026-03-15",
-        "notes": ["Aortic specialist reputation from multiple patient testimonials", "High-risk case acceptance is verifiable claim"]
-      }
+        "cross_validated": [
+          "official_website",
+          "public_ranking"
+        ],
+        "last_verified": "2026-04-06",
+        "notes": [
+          "Aortic specialist reputation from multiple patient testimonials",
+          "High-risk case acceptance is verifiable claim"
+        ]
+      },
+      "address": "北京市朝阳区安贞路2号"
     },
     {
       "id": "zhongshan-hospital-shanghai",
@@ -61,7 +101,11 @@
       "city": "Shanghai",
       "district": "Xuhui",
       "airport_info": "55-75min from Shanghai Pudong International Airport",
-      "tags": ["cardiology", "oncology", "general"],
+      "tags": [
+        "cardiology",
+        "oncology",
+        "general"
+      ],
       "rank": "Top 3 Cardiology, Top 5 Oncology",
       "phone": "Contact via our service",
       "website": "https://www.zs-hospital.sh.cn",
@@ -70,11 +114,24 @@
       "trust": {
         "score": 0.92,
         "level": "high",
-        "verified_fields": ["name", "city", "district", "rank", "tags", "airport_info"],
+        "verified_fields": [
+          "name",
+          "city",
+          "district",
+          "rank",
+          "tags",
+          "airport_info"
+        ],
         "data_source": "multi_source",
-        "cross_validated": ["official_website", "public_ranking"],
+        "cross_validated": [
+          "official_website",
+          "public_ranking"
+        ],
         "last_verified": "2026-03-15",
-        "notes": ["Fudan affiliation verifiable", "Innovation hub reputation documented in multiple sources"]
+        "notes": [
+          "Fudan affiliation verifiable",
+          "Innovation hub reputation documented in multiple sources"
+        ]
       }
     },
     {
@@ -84,21 +141,41 @@
       "city": "Beijing",
       "district": "Xicheng",
       "airport_info": "40-50min from Beijing Capital International Airport",
-      "tags": ["orthopedics", "joint-replacement", "spine-surgery"],
+      "tags": [
+        "orthopedics",
+        "joint-replacement",
+        "spine-surgery"
+      ],
       "rank": "#1 Orthopedics in China",
-      "phone": "Contact via our service",
+      "phone": "010-58516688",
       "website": "http://www.jst-hosp.com",
       "international": true,
       "jci": false,
       "trust": {
         "score": 0.93,
         "level": "high",
-        "verified_fields": ["name", "city", "district", "rank", "tags", "airport_info"],
+        "verified_fields": [
+          "name",
+          "city",
+          "district",
+          "rank",
+          "tags",
+          "airport_info",
+          "address",
+          "phone"
+        ],
         "data_source": "multi_source",
-        "cross_validated": ["official_website", "public_ranking"],
-        "last_verified": "2026-03-15",
-        "notes": ["#1 orthopedics claim backed by Chinese public hospital rankings", "Sports medicine specialization noted in multiple sources"]
-      }
+        "cross_validated": [
+          "official_website",
+          "public_ranking"
+        ],
+        "last_verified": "2026-04-06",
+        "notes": [
+          "#1 orthopedics claim backed by Chinese public hospital rankings",
+          "Sports medicine specialization noted in multiple sources"
+        ]
+      },
+      "address": "北京市西城区新街口东街31号"
     },
     {
       "id": "shanghai-sixth-hospital",
@@ -107,7 +184,11 @@
       "city": "Shanghai",
       "district": "Xuhui",
       "airport_info": "50-60min from Shanghai Pudong International Airport",
-      "tags": ["orthopedics", "sports-medicine", "joint-replacement"],
+      "tags": [
+        "orthopedics",
+        "sports-medicine",
+        "joint-replacement"
+      ],
       "rank": "#2 Orthopedics",
       "phone": "Contact via our service",
       "website": "http://www.6thhospitalsh.com",
@@ -116,11 +197,23 @@
       "trust": {
         "score": 0.89,
         "level": "high",
-        "verified_fields": ["name", "city", "district", "rank", "tags", "airport_info"],
+        "verified_fields": [
+          "name",
+          "city",
+          "district",
+          "rank",
+          "tags",
+          "airport_info"
+        ],
         "data_source": "dual_source",
-        "cross_validated": ["public_ranking"],
+        "cross_validated": [
+          "public_ranking"
+        ],
         "last_verified": "2026-03-15",
-        "notes": ["#2 orthopedics from public ranking data", "Diabetic foot treatment specialization notable"]
+        "notes": [
+          "#2 orthopedics from public ranking data",
+          "Diabetic foot treatment specialization notable"
+        ]
       }
     },
     {
@@ -130,21 +223,42 @@
       "city": "Beijing",
       "district": "Haidian",
       "airport_info": "45min from Beijing Capital International Airport",
-      "tags": ["orthopedics", "maternity", "fertility", "sports-medicine"],
+      "tags": [
+        "orthopedics",
+        "maternity",
+        "fertility",
+        "sports-medicine"
+      ],
       "rank": "#4 Obstetrics, #1 Fertility, Top Orthopedics",
-      "phone": "Contact via our service",
+      "phone": "010-82266699",
       "website": "http://www.puh3.net.cn",
       "international": true,
       "jci": false,
       "trust": {
         "score": 0.91,
         "level": "high",
-        "verified_fields": ["name", "city", "district", "rank", "tags", "airport_info"],
+        "verified_fields": [
+          "name",
+          "city",
+          "district",
+          "rank",
+          "tags",
+          "airport_info",
+          "address",
+          "phone"
+        ],
         "data_source": "multi_source",
-        "cross_validated": ["official_website", "public_ranking"],
-        "last_verified": "2026-03-15",
-        "notes": ["Fertility reputation well-documented", "Sports medicine department notable"]
-      }
+        "cross_validated": [
+          "official_website",
+          "public_ranking"
+        ],
+        "last_verified": "2026-04-06",
+        "notes": [
+          "Fertility reputation well-documented",
+          "Sports medicine department notable"
+        ]
+      },
+      "address": "北京市海淀区花园北路49号"
     },
     {
       "id": "fudan-womens-hospital",
@@ -153,20 +267,38 @@
       "city": "Shanghai",
       "district": "Huangpu",
       "airport_info": "60min from Shanghai Pudong International Airport",
-      "tags": ["maternity", "obstetrics", "prenatal-diagnosis", "fertility"],
+      "tags": [
+        "maternity",
+        "obstetrics",
+        "prenatal-diagnosis",
+        "fertility"
+      ],
       "rank": "#2 Obstetrics in China",
       "phone": "Contact via our service",
       "website": "https://www.fdfck.com",
       "international": true,
       "jci": false,
       "trust": {
-        "score": 0.90,
+        "score": 0.9,
         "level": "high",
-        "verified_fields": ["name", "city", "district", "rank", "tags", "airport_info"],
+        "verified_fields": [
+          "name",
+          "city",
+          "district",
+          "rank",
+          "tags",
+          "airport_info"
+        ],
         "data_source": "multi_source",
-        "cross_validated": ["official_website", "public_ranking"],
+        "cross_validated": [
+          "official_website",
+          "public_ranking"
+        ],
         "last_verified": "2026-03-15",
-        "notes": ["#2 obstetrics claim from public ranking", "Well-known as 'Red House' brand in Shanghai"]
+        "notes": [
+          "#2 obstetrics claim from public ranking",
+          "Well-known as 'Red House' brand in Shanghai"
+        ]
       }
     },
     {
@@ -176,7 +308,12 @@
       "city": "Hangzhou",
       "district": "Shangcheng",
       "airport_info": "50min from Hangzhou Xiaoshan International Airport",
-      "tags": ["maternity", "obstetrics", "prenatal-diagnosis", "fertility"],
+      "tags": [
+        "maternity",
+        "obstetrics",
+        "prenatal-diagnosis",
+        "fertility"
+      ],
       "rank": "Top Obstetrics",
       "phone": "Contact via our service",
       "website": "https://www.womanhospital.cn",
@@ -185,11 +322,22 @@
       "trust": {
         "score": 0.88,
         "level": "high",
-        "verified_fields": ["name", "city", "district", "rank", "tags"],
+        "verified_fields": [
+          "name",
+          "city",
+          "district",
+          "rank",
+          "tags"
+        ],
         "data_source": "dual_source",
-        "cross_validated": ["public_ranking"],
+        "cross_validated": [
+          "public_ranking"
+        ],
         "last_verified": "2026-03-15",
-        "notes": ["Zhejiang province leading obstetrics hospital", "Fertility department established"]
+        "notes": [
+          "Zhejiang province leading obstetrics hospital",
+          "Fertility department established"
+        ]
       }
     },
     {
@@ -199,21 +347,43 @@
       "city": "Beijing",
       "district": "Chaoyang",
       "airport_info": "40-50min from Beijing Capital International Airport",
-      "tags": ["oncology", "cancer-surgery", "radiotherapy"],
+      "tags": [
+        "oncology",
+        "cancer-surgery",
+        "radiotherapy"
+      ],
       "rank": "#1 Oncology in China",
-      "phone": "Contact via our service",
+      "phone": "010-67781331",
       "website": "http://www.cicams.ac.cn",
       "international": true,
       "jci": false,
       "trust": {
         "score": 0.95,
         "level": "very_high",
-        "verified_fields": ["name", "city", "district", "rank", "tags", "airport_info"],
+        "verified_fields": [
+          "name",
+          "city",
+          "district",
+          "rank",
+          "tags",
+          "airport_info",
+          "address",
+          "phone"
+        ],
         "data_source": "official",
-        "cross_validated": ["official_website", "public_ranking", "who_reference"],
-        "last_verified": "2026-03-10",
-        "notes": ["CAMS affiliation provides highest credibility", "#1 oncology claim widely documented", "National cancer center designation"]
-      }
+        "cross_validated": [
+          "official_website",
+          "public_ranking",
+          "who_reference"
+        ],
+        "last_verified": "2026-04-06",
+        "notes": [
+          "CAMS affiliation provides highest credibility",
+          "#1 oncology claim widely documented",
+          "National cancer center designation"
+        ]
+      },
+      "address": "北京市朝阳区潘家园南里17号"
     },
     {
       "id": "tiantan-hospital",
@@ -222,7 +392,11 @@
       "city": "Beijing",
       "district": "Fengtai",
       "airport_info": "50-70min from Beijing Capital International Airport",
-      "tags": ["neurosurgery", "neurology", "general"],
+      "tags": [
+        "neurosurgery",
+        "neurology",
+        "general"
+      ],
       "rank": "#1 Neurosurgery",
       "phone": "Contact via our service",
       "website": "http://www.bjtth.org",
@@ -231,11 +405,24 @@
       "trust": {
         "score": 0.94,
         "level": "very_high",
-        "verified_fields": ["name", "city", "district", "rank", "tags", "airport_info"],
+        "verified_fields": [
+          "name",
+          "city",
+          "district",
+          "rank",
+          "tags",
+          "airport_info"
+        ],
         "data_source": "official",
-        "cross_validated": ["official_website", "public_ranking"],
+        "cross_validated": [
+          "official_website",
+          "public_ranking"
+        ],
         "last_verified": "2026-03-10",
-        "notes": ["#1 neurosurgery public ranking widely accepted", "International neuroscience research reputation"]
+        "notes": [
+          "#1 neurosurgery public ranking widely accepted",
+          "International neuroscience research reputation"
+        ]
       }
     },
     {
@@ -245,7 +432,10 @@
       "city": "Shanghai",
       "district": "Jing'an",
       "airport_info": "65-85min from Shanghai Pudong International Airport",
-      "tags": ["neurosurgery", "neurology"],
+      "tags": [
+        "neurosurgery",
+        "neurology"
+      ],
       "rank": "#2 Neurosurgery",
       "phone": "Contact via our service",
       "website": "https://www.hshs.com.cn",
@@ -254,11 +444,24 @@
       "trust": {
         "score": 0.93,
         "level": "high",
-        "verified_fields": ["name", "city", "district", "rank", "tags", "airport_info"],
+        "verified_fields": [
+          "name",
+          "city",
+          "district",
+          "rank",
+          "tags",
+          "airport_info"
+        ],
         "data_source": "multi_source",
-        "cross_validated": ["official_website", "public_ranking"],
+        "cross_validated": [
+          "official_website",
+          "public_ranking"
+        ],
         "last_verified": "2026-03-10",
-        "notes": ["Fudan affiliation adds credibility", "#2 neurosurgery documented in rankings"]
+        "notes": [
+          "Fudan affiliation adds credibility",
+          "#2 neurosurgery documented in rankings"
+        ]
       }
     },
     {
@@ -268,7 +471,10 @@
       "city": "Beijing",
       "district": "Xicheng",
       "airport_info": "45-60min from Beijing Capital International Airport",
-      "tags": ["pediatrics", "childrens-health"],
+      "tags": [
+        "pediatrics",
+        "childrens-health"
+      ],
       "rank": "#1 Pediatrics",
       "phone": "Contact via our service",
       "website": "http://www.bch.com.cn",
@@ -277,11 +483,26 @@
       "trust": {
         "score": 0.96,
         "level": "very_high",
-        "verified_fields": ["name", "city", "district", "rank", "tags", "airport_info"],
+        "verified_fields": [
+          "name",
+          "city",
+          "district",
+          "rank",
+          "tags",
+          "airport_info"
+        ],
         "data_source": "official",
-        "cross_validated": ["official_website", "public_ranking", "jci_verified"],
+        "cross_validated": [
+          "official_website",
+          "public_ranking",
+          "jci_verified"
+        ],
         "last_verified": "2026-03-10",
-        "notes": ["JCI accredited", "National Children's Medical Center designation", "#1 pediatrics widely documented"]
+        "notes": [
+          "JCI accredited",
+          "National Children's Medical Center designation",
+          "#1 pediatrics widely documented"
+        ]
       }
     },
     {
@@ -291,7 +512,10 @@
       "city": "Beijing",
       "district": "Dongcheng",
       "airport_info": "45-60min from Beijing Capital International Airport",
-      "tags": ["general", "all-specialties"],
+      "tags": [
+        "general",
+        "all-specialties"
+      ],
       "rank": "#1 Comprehensive Hospital",
       "phone": "Contact via our service",
       "website": "https://www.pumch.cn",
@@ -300,11 +524,26 @@
       "trust": {
         "score": 0.97,
         "level": "very_high",
-        "verified_fields": ["name", "city", "district", "rank", "tags", "airport_info"],
+        "verified_fields": [
+          "name",
+          "city",
+          "district",
+          "rank",
+          "tags",
+          "airport_info"
+        ],
         "data_source": "official",
-        "cross_validated": ["official_website", "public_ranking", "who_reference"],
+        "cross_validated": [
+          "official_website",
+          "public_ranking",
+          "who_reference"
+        ],
         "last_verified": "2026-03-10",
-        "notes": ["Most prestigious hospital in China", "#1 comprehensive claim universally accepted", "Highest trust level in database"]
+        "notes": [
+          "Most prestigious hospital in China",
+          "#1 comprehensive claim universally accepted",
+          "Highest trust level in database"
+        ]
       }
     },
     {
@@ -314,20 +553,36 @@
       "city": "Beijing",
       "district": "Chaoyang",
       "airport_info": "40-55min from Beijing Capital International Airport",
-      "tags": ["general", "international"],
+      "tags": [
+        "general",
+        "international"
+      ],
       "rank": "Top International Department",
       "phone": "Contact via our service",
       "website": "https://www.zryhyy.com.cn",
       "international": true,
       "jci": true,
       "trust": {
-        "score": 0.90,
+        "score": 0.9,
         "level": "high",
-        "verified_fields": ["name", "city", "district", "rank", "tags", "airport_info"],
+        "verified_fields": [
+          "name",
+          "city",
+          "district",
+          "rank",
+          "tags",
+          "airport_info"
+        ],
         "data_source": "official",
-        "cross_validated": ["official_website", "jci_verified"],
+        "cross_validated": [
+          "official_website",
+          "jci_verified"
+        ],
         "last_verified": "2026-03-15",
-        "notes": ["JCI accredited", "International patient services well-established"]
+        "notes": [
+          "JCI accredited",
+          "International patient services well-established"
+        ]
       }
     },
     {
@@ -337,7 +592,10 @@
       "city": "Shanghai",
       "district": "Huangpu",
       "airport_info": "50-70min from Shanghai Pudong International Airport",
-      "tags": ["general", "vip-services"],
+      "tags": [
+        "general",
+        "vip-services"
+      ],
       "rank": "Top VIP Center",
       "phone": "Contact via our service",
       "website": "https://www.rjh.com.cn",
@@ -346,11 +604,23 @@
       "trust": {
         "score": 0.89,
         "level": "high",
-        "verified_fields": ["name", "city", "district", "rank", "tags", "airport_info"],
+        "verified_fields": [
+          "name",
+          "city",
+          "district",
+          "rank",
+          "tags",
+          "airport_info"
+        ],
         "data_source": "dual_source",
-        "cross_validated": ["official_website", "public_ranking"],
+        "cross_validated": [
+          "official_website",
+          "public_ranking"
+        ],
         "last_verified": "2026-03-15",
-        "notes": ["VIP services documented in multiple sources"]
+        "notes": [
+          "VIP services documented in multiple sources"
+        ]
       }
     },
     {
@@ -360,7 +630,10 @@
       "city": "Shanghai",
       "district": "Pudong",
       "airport_info": "30-45min from Shanghai Pudong International Airport",
-      "tags": ["general", "gastroenterology"],
+      "tags": [
+        "general",
+        "gastroenterology"
+      ],
       "rank": "Top General Hospital",
       "phone": "Contact via our service",
       "website": "https://www.renji.com",
@@ -369,11 +642,23 @@
       "trust": {
         "score": 0.88,
         "level": "high",
-        "verified_fields": ["name", "city", "district", "rank", "tags", "airport_info"],
+        "verified_fields": [
+          "name",
+          "city",
+          "district",
+          "rank",
+          "tags",
+          "airport_info"
+        ],
         "data_source": "dual_source",
-        "cross_validated": ["official_website", "public_ranking"],
+        "cross_validated": [
+          "official_website",
+          "public_ranking"
+        ],
         "last_verified": "2026-03-15",
-        "notes": ["Gastroenterology reputation documented"]
+        "notes": [
+          "Gastroenterology reputation documented"
+        ]
       }
     },
     {
@@ -383,7 +668,10 @@
       "city": "Shanghai",
       "district": "Jing'an",
       "airport_info": "60-80min from Shanghai Pudong International Airport",
-      "tags": ["general", "geriatrics"],
+      "tags": [
+        "general",
+        "geriatrics"
+      ],
       "rank": "Top Geriatrics",
       "phone": "Contact via our service",
       "website": "http://www.huadonghospital.com",
@@ -392,11 +680,21 @@
       "trust": {
         "score": 0.85,
         "level": "medium_high",
-        "verified_fields": ["name", "city", "district", "rank", "tags"],
+        "verified_fields": [
+          "name",
+          "city",
+          "district",
+          "rank",
+          "tags"
+        ],
         "data_source": "single_source",
-        "cross_validated": ["public_ranking"],
+        "cross_validated": [
+          "public_ranking"
+        ],
         "last_verified": "2026-03-15",
-        "notes": ["Geriatrics specialization notable in Shanghai"]
+        "notes": [
+          "Geriatrics specialization notable in Shanghai"
+        ]
       }
     },
     {
@@ -406,7 +704,10 @@
       "city": "Shanghai",
       "district": "Huangpu",
       "airport_info": "50-70min from Shanghai Pudong International Airport",
-      "tags": ["plastic-surgery", "general"],
+      "tags": [
+        "plastic-surgery",
+        "general"
+      ],
       "rank": "Top Plastic Surgery",
       "phone": "Contact via our service",
       "website": "https://www.ninthhospital.com.cn",
@@ -415,11 +716,21 @@
       "trust": {
         "score": 0.87,
         "level": "medium_high",
-        "verified_fields": ["name", "city", "district", "rank", "tags"],
+        "verified_fields": [
+          "name",
+          "city",
+          "district",
+          "rank",
+          "tags"
+        ],
         "data_source": "dual_source",
-        "cross_validated": ["public_ranking"],
+        "cross_validated": [
+          "public_ranking"
+        ],
         "last_verified": "2026-03-15",
-        "notes": ["Plastic surgery reputation well-known domestically"]
+        "notes": [
+          "Plastic surgery reputation well-known domestically"
+        ]
       }
     },
     {
@@ -429,7 +740,10 @@
       "city": "Guangzhou",
       "district": "Yuexiu",
       "airport_info": "45-60min from Guangzhou Baiyun International Airport",
-      "tags": ["cardiology", "general"],
+      "tags": [
+        "cardiology",
+        "general"
+      ],
       "rank": "Top Cardiology South China",
       "phone": "Contact via our service",
       "website": "http://www.e5413.com",
@@ -438,11 +752,22 @@
       "trust": {
         "score": 0.86,
         "level": "medium_high",
-        "verified_fields": ["name", "city", "district", "rank", "tags", "airport_info"],
+        "verified_fields": [
+          "name",
+          "city",
+          "district",
+          "rank",
+          "tags",
+          "airport_info"
+        ],
         "data_source": "dual_source",
-        "cross_validated": ["public_ranking"],
+        "cross_validated": [
+          "public_ranking"
+        ],
         "last_verified": "2026-03-15",
-        "notes": ["Leading cardiology in South China region"]
+        "notes": [
+          "Leading cardiology in South China region"
+        ]
       }
     },
     {
@@ -452,7 +777,10 @@
       "city": "Guangzhou",
       "district": "Baiyun",
       "airport_info": "40-55min from Guangzhou Baiyun International Airport",
-      "tags": ["general", "kidney-disease"],
+      "tags": [
+        "general",
+        "kidney-disease"
+      ],
       "rank": "Top General Hospital",
       "phone": "Contact via our service",
       "website": "http://www.nfyy.com",
@@ -461,11 +789,21 @@
       "trust": {
         "score": 0.85,
         "level": "medium_high",
-        "verified_fields": ["name", "city", "district", "rank", "tags"],
+        "verified_fields": [
+          "name",
+          "city",
+          "district",
+          "rank",
+          "tags"
+        ],
         "data_source": "single_source",
-        "cross_validated": ["public_ranking"],
+        "cross_validated": [
+          "public_ranking"
+        ],
         "last_verified": "2026-03-15",
-        "notes": ["Kidney disease specialization notable"]
+        "notes": [
+          "Kidney disease specialization notable"
+        ]
       }
     },
     {
@@ -475,7 +813,10 @@
       "city": "Guangzhou",
       "district": "Tianhe",
       "airport_info": "45-60min from Guangzhou Baiyun International Airport",
-      "tags": ["gastroenterology", "general"],
+      "tags": [
+        "gastroenterology",
+        "general"
+      ],
       "rank": "Top Gastroenterology",
       "phone": "Contact via our service",
       "website": "http://www.zs6h.com",
@@ -484,11 +825,21 @@
       "trust": {
         "score": 0.84,
         "level": "medium_high",
-        "verified_fields": ["name", "city", "district", "rank", "tags"],
+        "verified_fields": [
+          "name",
+          "city",
+          "district",
+          "rank",
+          "tags"
+        ],
         "data_source": "single_source",
-        "cross_validated": ["public_ranking"],
+        "cross_validated": [
+          "public_ranking"
+        ],
         "last_verified": "2026-03-15",
-        "notes": ["Gastroenterology reputation growing"]
+        "notes": [
+          "Gastroenterology reputation growing"
+        ]
       }
     },
     {
@@ -498,7 +849,10 @@
       "city": "Guangzhou",
       "district": "Haizhu",
       "airport_info": "45-60min from Guangzhou Baiyun International Airport",
-      "tags": ["neurosurgery", "general"],
+      "tags": [
+        "neurosurgery",
+        "general"
+      ],
       "rank": "Top Neurosurgery South China",
       "phone": "Contact via our service",
       "website": "http://www.zjyy.com.cn",
@@ -507,11 +861,21 @@
       "trust": {
         "score": 0.83,
         "level": "medium_high",
-        "verified_fields": ["name", "city", "district", "rank", "tags"],
+        "verified_fields": [
+          "name",
+          "city",
+          "district",
+          "rank",
+          "tags"
+        ],
         "data_source": "single_source",
-        "cross_validated": ["public_ranking"],
+        "cross_validated": [
+          "public_ranking"
+        ],
         "last_verified": "2026-03-15",
-        "notes": ["Neurosurgery notable in South China"]
+        "notes": [
+          "Neurosurgery notable in South China"
+        ]
       }
     },
     {
@@ -521,7 +885,10 @@
       "city": "Guangzhou",
       "district": "Baiyun",
       "airport_info": "35-50min from Guangzhou Baiyun International Airport",
-      "tags": ["tcm", "general"],
+      "tags": [
+        "tcm",
+        "general"
+      ],
       "rank": "Top Traditional Chinese Medicine",
       "phone": "Contact via our service",
       "website": "http://www.gzhtcm.com",
@@ -530,11 +897,21 @@
       "trust": {
         "score": 0.85,
         "level": "medium_high",
-        "verified_fields": ["name", "city", "district", "rank", "tags"],
+        "verified_fields": [
+          "name",
+          "city",
+          "district",
+          "rank",
+          "tags"
+        ],
         "data_source": "dual_source",
-        "cross_validated": ["official_website"],
+        "cross_validated": [
+          "official_website"
+        ],
         "last_verified": "2026-03-15",
-        "notes": ["TCM integrated with modern medicine"]
+        "notes": [
+          "TCM integrated with modern medicine"
+        ]
       }
     },
     {
@@ -544,20 +921,36 @@
       "city": "Guangzhou",
       "district": "Yuexiu",
       "airport_info": "50-70min from Guangzhou Baiyun International Airport",
-      "tags": ["general", "all-specialties"],
+      "tags": [
+        "general",
+        "all-specialties"
+      ],
       "rank": "Top Comprehensive Hospital",
       "phone": "Contact via our service",
       "website": "https://www.gzsums.net",
       "international": true,
       "jci": false,
       "trust": {
-        "score": 0.90,
+        "score": 0.9,
         "level": "high",
-        "verified_fields": ["name", "city", "district", "rank", "tags", "airport_info"],
+        "verified_fields": [
+          "name",
+          "city",
+          "district",
+          "rank",
+          "tags",
+          "airport_info"
+        ],
         "data_source": "multi_source",
-        "cross_validated": ["official_website", "public_ranking"],
+        "cross_validated": [
+          "official_website",
+          "public_ranking"
+        ],
         "last_verified": "2026-03-15",
-        "notes": ["Sun Yat-sen University affiliation provides credibility", "Top comprehensive hospital in Guangdong"]
+        "notes": [
+          "Sun Yat-sen University affiliation provides credibility",
+          "Top comprehensive hospital in Guangdong"
+        ]
       }
     },
     {
@@ -567,7 +960,10 @@
       "city": "Guangzhou",
       "district": "Liwan",
       "airport_info": "40-55min from Guangzhou Baiyun International Airport",
-      "tags": ["respiratory", "general"],
+      "tags": [
+        "respiratory",
+        "general"
+      ],
       "rank": "Top Respiratory Medicine",
       "phone": "Contact via our service",
       "website": "http://www.fahyy.com",
@@ -576,11 +972,21 @@
       "trust": {
         "score": 0.86,
         "level": "medium_high",
-        "verified_fields": ["name", "city", "district", "rank", "tags"],
+        "verified_fields": [
+          "name",
+          "city",
+          "district",
+          "rank",
+          "tags"
+        ],
         "data_source": "dual_source",
-        "cross_validated": ["public_ranking"],
+        "cross_validated": [
+          "public_ranking"
+        ],
         "last_verified": "2026-03-15",
-        "notes": ["Respiratory medicine reputation during COVID noted"]
+        "notes": [
+          "Respiratory medicine reputation during COVID noted"
+        ]
       }
     },
     {
@@ -590,7 +996,10 @@
       "city": "Beijing",
       "district": "Xicheng",
       "airport_info": "50-70min from Beijing Capital International Airport",
-      "tags": ["general", "hematology"],
+      "tags": [
+        "general",
+        "hematology"
+      ],
       "rank": "Top General Hospital",
       "phone": "Contact via our service",
       "website": "http://www.pkuph.com.cn",
@@ -599,11 +1008,24 @@
       "trust": {
         "score": 0.88,
         "level": "high",
-        "verified_fields": ["name", "city", "district", "rank", "tags", "airport_info"],
+        "verified_fields": [
+          "name",
+          "city",
+          "district",
+          "rank",
+          "tags",
+          "airport_info"
+        ],
         "data_source": "dual_source",
-        "cross_validated": ["official_website", "public_ranking"],
+        "cross_validated": [
+          "official_website",
+          "public_ranking"
+        ],
         "last_verified": "2026-03-15",
-        "notes": ["Peking University affiliation", "Hematology department notable"]
+        "notes": [
+          "Peking University affiliation",
+          "Hematology department notable"
+        ]
       }
     },
     {
@@ -613,7 +1035,10 @@
       "city": "Beijing",
       "district": "Chaoyang",
       "airport_info": "40-55min from Beijing Capital International Airport",
-      "tags": ["respiratory", "general"],
+      "tags": [
+        "respiratory",
+        "general"
+      ],
       "rank": "Top Respiratory Medicine",
       "phone": "Contact via our service",
       "website": "http://www.bjcyh.com.cn",
@@ -622,11 +1047,21 @@
       "trust": {
         "score": 0.85,
         "level": "medium_high",
-        "verified_fields": ["name", "city", "district", "rank", "tags"],
+        "verified_fields": [
+          "name",
+          "city",
+          "district",
+          "rank",
+          "tags"
+        ],
         "data_source": "single_source",
-        "cross_validated": ["public_ranking"],
+        "cross_validated": [
+          "public_ranking"
+        ],
         "last_verified": "2026-03-15",
-        "notes": ["Respiratory department well-known"]
+        "notes": [
+          "Respiratory department well-known"
+        ]
       }
     },
     {
@@ -636,7 +1071,10 @@
       "city": "Beijing",
       "district": "Haidian",
       "airport_info": "55-75min from Beijing Capital International Airport",
-      "tags": ["general", "military"],
+      "tags": [
+        "general",
+        "military"
+      ],
       "rank": "Military Hospital",
       "phone": "Contact via our service",
       "website": "http://www.301hospital.com.cn",
@@ -645,11 +1083,23 @@
       "trust": {
         "score": 0.88,
         "level": "high",
-        "verified_fields": ["name", "city", "district", "rank", "tags", "airport_info"],
+        "verified_fields": [
+          "name",
+          "city",
+          "district",
+          "rank",
+          "tags",
+          "airport_info"
+        ],
         "data_source": "dual_source",
-        "cross_validated": ["official_website"],
+        "cross_validated": [
+          "official_website"
+        ],
         "last_verified": "2026-03-15",
-        "notes": ["China's largest military hospital", "All specialties available"]
+        "notes": [
+          "China's largest military hospital",
+          "All specialties available"
+        ]
       }
     },
     {
@@ -659,7 +1109,10 @@
       "city": "Shenzhen",
       "district": "Luohu",
       "airport_info": "50-70min from Shenzhen Bao'an International Airport",
-      "tags": ["general", "all-specialties"],
+      "tags": [
+        "general",
+        "all-specialties"
+      ],
       "rank": "Top Hospital in Shenzhen",
       "phone": "Contact via our service",
       "website": "http://www.sz-hospital.com",
@@ -668,11 +1121,21 @@
       "trust": {
         "score": 0.84,
         "level": "medium_high",
-        "verified_fields": ["name", "city", "district", "rank", "tags"],
+        "verified_fields": [
+          "name",
+          "city",
+          "district",
+          "rank",
+          "tags"
+        ],
         "data_source": "single_source",
-        "cross_validated": ["public_ranking"],
+        "cross_validated": [
+          "public_ranking"
+        ],
         "last_verified": "2026-03-15",
-        "notes": ["Leading hospital in Shenzhen"]
+        "notes": [
+          "Leading hospital in Shenzhen"
+        ]
       }
     },
     {
@@ -682,7 +1145,10 @@
       "city": "Shenzhen",
       "district": "Futian",
       "airport_info": "45-60min from Shenzhen Bao'an International Airport",
-      "tags": ["general", "all-specialties"],
+      "tags": [
+        "general",
+        "all-specialties"
+      ],
       "rank": "Top General Hospital",
       "phone": "Contact via our service",
       "website": "http://www.pkuszh.com",
@@ -691,11 +1157,23 @@
       "trust": {
         "score": 0.87,
         "level": "medium_high",
-        "verified_fields": ["name", "city", "district", "rank", "tags"],
+        "verified_fields": [
+          "name",
+          "city",
+          "district",
+          "rank",
+          "tags"
+        ],
         "data_source": "dual_source",
-        "cross_validated": ["official_website", "jci_verified"],
+        "cross_validated": [
+          "official_website",
+          "jci_verified"
+        ],
         "last_verified": "2026-03-15",
-        "notes": ["JCI accredited", "Peking University affiliation"]
+        "notes": [
+          "JCI accredited",
+          "Peking University affiliation"
+        ]
       }
     },
     {
@@ -705,7 +1183,10 @@
       "city": "Shenzhen",
       "district": "Futian",
       "airport_info": "40-55min from Shenzhen Bao'an International Airport",
-      "tags": ["orthopedics", "general"],
+      "tags": [
+        "orthopedics",
+        "general"
+      ],
       "rank": "Top Orthopedics Shenzhen",
       "phone": "Contact via our service",
       "website": "http://www.szey.com",
@@ -714,11 +1195,19 @@
       "trust": {
         "score": 0.82,
         "level": "medium",
-        "verified_fields": ["name", "city", "district", "rank", "tags"],
+        "verified_fields": [
+          "name",
+          "city",
+          "district",
+          "rank",
+          "tags"
+        ],
         "data_source": "single_source",
         "cross_validated": [],
         "last_verified": "2026-03-15",
-        "notes": ["Orthopedics specialization growing in reputation"]
+        "notes": [
+          "Orthopedics specialization growing in reputation"
+        ]
       }
     },
     {
@@ -728,7 +1217,10 @@
       "city": "Shenzhen",
       "district": "Futian",
       "airport_info": "45-60min from Shenzhen Bao'an International Airport",
-      "tags": ["tcm", "general"],
+      "tags": [
+        "tcm",
+        "general"
+      ],
       "rank": "Top TCM Shenzhen",
       "phone": "Contact via our service",
       "website": "http://www.sztcm.com",
@@ -737,11 +1229,19 @@
       "trust": {
         "score": 0.81,
         "level": "medium",
-        "verified_fields": ["name", "city", "district", "rank", "tags"],
+        "verified_fields": [
+          "name",
+          "city",
+          "district",
+          "rank",
+          "tags"
+        ],
         "data_source": "single_source",
         "cross_validated": [],
         "last_verified": "2026-03-15",
-        "notes": ["TCM hospital, limited international patient data"]
+        "notes": [
+          "TCM hospital, limited international patient data"
+        ]
       }
     },
     {
@@ -751,7 +1251,10 @@
       "city": "Shenzhen",
       "district": "Futian",
       "airport_info": "40-55min from Shenzhen Bao'an International Airport",
-      "tags": ["maternity", "pediatrics"],
+      "tags": [
+        "maternity",
+        "pediatrics"
+      ],
       "rank": "Top Maternity Shenzhen",
       "phone": "Contact via our service",
       "website": "http://www.szmama.net",
@@ -760,11 +1263,19 @@
       "trust": {
         "score": 0.83,
         "level": "medium",
-        "verified_fields": ["name", "city", "district", "rank", "tags"],
+        "verified_fields": [
+          "name",
+          "city",
+          "district",
+          "rank",
+          "tags"
+        ],
         "data_source": "single_source",
         "cross_validated": [],
         "last_verified": "2026-03-15",
-        "notes": ["Leading maternity hospital in Shenzhen"]
+        "notes": [
+          "Leading maternity hospital in Shenzhen"
+        ]
       }
     },
     {
@@ -774,7 +1285,10 @@
       "city": "Chengdu",
       "district": "Wuhou",
       "airport_info": "45-60min from Chengdu Tianfu International Airport",
-      "tags": ["general", "all-specialties"],
+      "tags": [
+        "general",
+        "all-specialties"
+      ],
       "rank": "Top Hospital West China",
       "phone": "Contact via our service",
       "website": "http://www.wchscu.cn",
@@ -783,11 +1297,25 @@
       "trust": {
         "score": 0.92,
         "level": "high",
-        "verified_fields": ["name", "city", "district", "rank", "tags", "airport_info"],
+        "verified_fields": [
+          "name",
+          "city",
+          "district",
+          "rank",
+          "tags",
+          "airport_info"
+        ],
         "data_source": "multi_source",
-        "cross_validated": ["official_website", "public_ranking"],
+        "cross_validated": [
+          "official_website",
+          "public_ranking"
+        ],
         "last_verified": "2026-03-15",
-        "notes": ["#2 in China overall ranking", "Most authoritative in Western China", "Large patient volume documented"]
+        "notes": [
+          "#2 in China overall ranking",
+          "Most authoritative in Western China",
+          "Large patient volume documented"
+        ]
       }
     },
     {
@@ -797,7 +1325,11 @@
       "city": "Guangzhou",
       "district": "Tianhe",
       "airport_info": "60-90min from Guangzhou Baiyun International Airport",
-      "tags": ["oncology", "cryosurgery", "nanoknife"],
+      "tags": [
+        "oncology",
+        "cryosurgery",
+        "nanoknife"
+      ],
       "rank": "Top Private Cancer Hospital",
       "phone": "Contact via our service",
       "website": "http://www.fudahospital.com",
@@ -806,11 +1338,18 @@
       "trust": {
         "score": 0.83,
         "level": "medium_high",
-        "verified_fields": ["name", "city", "specialty"],
+        "verified_fields": [
+          "name",
+          "city",
+          "specialty"
+        ],
         "data_source": "single_source",
         "cross_validated": [],
         "last_verified": "2026-04-06",
-        "notes": ["Cryosurgery and nanoknife (IRE) reputation documented in articles", "Known for international patients"]
+        "notes": [
+          "Cryosurgery and nanoknife (IRE) reputation documented in articles",
+          "Known for international patients"
+        ]
       }
     },
     {
@@ -820,7 +1359,11 @@
       "city": "Guangzhou",
       "district": "Yuexiu",
       "airport_info": "45-60min from Guangzhou Baiyun International Airport",
-      "tags": ["oncology", "cancer-surgery", "radiotherapy"],
+      "tags": [
+        "oncology",
+        "cancer-surgery",
+        "radiotherapy"
+      ],
       "rank": "Top 3 Cancer Hospital in China",
       "phone": "Contact via our service",
       "website": "http://www.sysucc.com.cn",
@@ -829,11 +1372,22 @@
       "trust": {
         "score": 0.91,
         "level": "high",
-        "verified_fields": ["name", "city", "district", "rank", "tags"],
+        "verified_fields": [
+          "name",
+          "city",
+          "district",
+          "rank",
+          "tags"
+        ],
         "data_source": "dual_source",
-        "cross_validated": ["public_ranking"],
+        "cross_validated": [
+          "public_ranking"
+        ],
         "last_verified": "2026-04-06",
-        "notes": ["Top cancer center in South China", "Referenced in international patient articles"]
+        "notes": [
+          "Top cancer center in South China",
+          "Referenced in international patient articles"
+        ]
       }
     },
     {
@@ -843,7 +1397,11 @@
       "city": "Beijing",
       "district": "Dongcheng",
       "airport_info": "40-55min from Beijing Capital International Airport",
-      "tags": ["ophthalmology", "ent", "cardiology"],
+      "tags": [
+        "ophthalmology",
+        "ent",
+        "cardiology"
+      ],
       "rank": "#1 Ophthalmology in China",
       "phone": "Contact via our service",
       "website": "http://www.trhosp.com.cn",
@@ -852,11 +1410,22 @@
       "trust": {
         "score": 0.88,
         "level": "high",
-        "verified_fields": ["name", "city", "district", "rank", "tags"],
+        "verified_fields": [
+          "name",
+          "city",
+          "district",
+          "rank",
+          "tags"
+        ],
         "data_source": "dual_source",
-        "cross_validated": ["public_ranking"],
+        "cross_validated": [
+          "public_ranking"
+        ],
         "last_verified": "2026-04-06",
-        "notes": ["#1 ophthalmology ranking widely documented", "ENT department also nationally recognized"]
+        "notes": [
+          "#1 ophthalmology ranking widely documented",
+          "ENT department also nationally recognized"
+        ]
       }
     },
     {
@@ -866,7 +1435,11 @@
       "city": "Xi'an",
       "district": "Beilin",
       "airport_info": "40-55min from Xi'an Xianyang International Airport",
-      "tags": ["neurosurgery", "cardiology", "general"],
+      "tags": [
+        "neurosurgery",
+        "cardiology",
+        "general"
+      ],
       "rank": "Top 5 Neurosurgery in China",
       "phone": "Contact via our service",
       "website": "http://www.fmmu.edu.cn",
@@ -875,11 +1448,18 @@
       "trust": {
         "score": 0.86,
         "level": "medium_high",
-        "verified_fields": ["name", "city", "specialty"],
+        "verified_fields": [
+          "name",
+          "city",
+          "specialty"
+        ],
         "data_source": "single_source",
         "cross_validated": [],
         "last_verified": "2026-04-06",
-        "notes": ["Referenced alongside West China and Qilu for neurosurgery coverage", "Military medical university hospital"]
+        "notes": [
+          "Referenced alongside West China and Qilu for neurosurgery coverage",
+          "Military medical university hospital"
+        ]
       }
     },
     {
@@ -889,7 +1469,11 @@
       "city": "Jinan",
       "district": "Lixia",
       "airport_info": "40-60min from Jinan Yaoqiang International Airport",
-      "tags": ["general", "oncology", "neurosurgery"],
+      "tags": [
+        "general",
+        "oncology",
+        "neurosurgery"
+      ],
       "rank": "Top Hospital in Shandong Province",
       "phone": "Contact via our service",
       "website": "http://www.qiluhospital.com",
@@ -898,11 +1482,17 @@
       "trust": {
         "score": 0.84,
         "level": "medium_high",
-        "verified_fields": ["name", "city", "rank"],
+        "verified_fields": [
+          "name",
+          "city",
+          "rank"
+        ],
         "data_source": "single_source",
         "cross_validated": [],
         "last_verified": "2026-04-06",
-        "notes": ["Referenced as regional neurosurgery center in Western China article"]
+        "notes": [
+          "Referenced as regional neurosurgery center in Western China article"
+        ]
       }
     },
     {
@@ -912,7 +1502,11 @@
       "city": "Shanghai",
       "district": "Yangpu",
       "airport_info": "45-65min from Shanghai Pudong International Airport",
-      "tags": ["general", "urology", "kidney-disease"],
+      "tags": [
+        "general",
+        "urology",
+        "kidney-disease"
+      ],
       "rank": "Top 10 General Hospital in China",
       "phone": "Contact via our service",
       "website": "http://www.chhospital.com.cn",
@@ -921,11 +1515,18 @@
       "trust": {
         "score": 0.87,
         "level": "medium_high",
-        "verified_fields": ["name", "city", "rank"],
+        "verified_fields": [
+          "name",
+          "city",
+          "rank"
+        ],
         "data_source": "single_source",
         "cross_validated": [],
         "last_verified": "2026-04-06",
-        "notes": ["Second Military Medical University affiliated", "Strong urology and kidney disease departments"]
+        "notes": [
+          "Second Military Medical University affiliated",
+          "Strong urology and kidney disease departments"
+        ]
       }
     },
     {
@@ -935,7 +1536,11 @@
       "city": "Hangzhou",
       "district": "Shangcheng",
       "airport_info": "40-55min from Hangzhou Xiaoshan International Airport",
-      "tags": ["general", "fertility", "cardiology"],
+      "tags": [
+        "general",
+        "fertility",
+        "cardiology"
+      ],
       "rank": "Top Hospital in Zhejiang Province",
       "phone": "Contact via our service",
       "website": "http://www.srrsh.com",
@@ -944,11 +1549,21 @@
       "trust": {
         "score": 0.86,
         "level": "medium_high",
-        "verified_fields": ["name", "city", "rank", "jci"],
+        "verified_fields": [
+          "name",
+          "city",
+          "rank",
+          "jci"
+        ],
         "data_source": "dual_source",
-        "cross_validated": ["public_ranking"],
+        "cross_validated": [
+          "public_ranking"
+        ],
         "last_verified": "2026-04-06",
-        "notes": ["JCI accredited", "Fertility department well-known"]
+        "notes": [
+          "JCI accredited",
+          "Fertility department well-known"
+        ]
       }
     },
     {
@@ -958,7 +1573,11 @@
       "city": "Nanjing",
       "district": "Gulou",
       "airport_info": "40-60min from Nanjing Lukou International Airport",
-      "tags": ["general", "cardiology", "oncology"],
+      "tags": [
+        "general",
+        "cardiology",
+        "oncology"
+      ],
       "rank": "Top Hospital in Jiangsu Province",
       "phone": "Contact via our service",
       "website": "http://www.njglyy.com",
@@ -967,11 +1586,17 @@
       "trust": {
         "score": 0.83,
         "level": "medium_high",
-        "verified_fields": ["name", "city", "specialty"],
+        "verified_fields": [
+          "name",
+          "city",
+          "specialty"
+        ],
         "data_source": "single_source",
         "cross_validated": [],
         "last_verified": "2026-04-06",
-        "notes": ["Referenced in article as provincial hospital network member"]
+        "notes": [
+          "Referenced in article as provincial hospital network member"
+        ]
       }
     },
     {
@@ -981,20 +1606,31 @@
       "city": "Tianjin",
       "district": "Heping",
       "airport_info": "30-45min from Tianjin Binhai International Airport",
-      "tags": ["ophthalmology", "cataract", "lasik"],
+      "tags": [
+        "ophthalmology",
+        "cataract",
+        "lasik"
+      ],
       "rank": "Top Ophthalmology Hospital in North China",
       "phone": "Contact via our service",
       "website": "http://www.ooth.com.cn",
       "international": true,
       "jci": false,
       "trust": {
-        "score": 0.80,
+        "score": 0.8,
         "level": "medium_high",
-        "verified_fields": ["name", "city", "specialty"],
+        "verified_fields": [
+          "name",
+          "city",
+          "specialty"
+        ],
         "data_source": "single_source",
         "cross_validated": [],
         "last_verified": "2026-04-06",
-        "notes": ["Referenced in cataract surgery article", "Specialized eye hospital"]
+        "notes": [
+          "Referenced in cataract surgery article",
+          "Specialized eye hospital"
+        ]
       }
     },
     {
@@ -1004,7 +1640,11 @@
       "city": "Tianjin",
       "district": "Heping",
       "airport_info": "35-50min from Tianjin Binhai International Airport",
-      "tags": ["oncology", "radiotherapy", "cancer-surgery"],
+      "tags": [
+        "oncology",
+        "radiotherapy",
+        "cancer-surgery"
+      ],
       "rank": "Top Cancer Hospital in North China",
       "phone": "Contact via our service",
       "website": "http://www.tjmuch.com",
@@ -1013,11 +1653,18 @@
       "trust": {
         "score": 0.82,
         "level": "medium",
-        "verified_fields": ["name", "city", "specialty"],
+        "verified_fields": [
+          "name",
+          "city",
+          "specialty"
+        ],
         "data_source": "single_source",
         "cross_validated": [],
         "last_verified": "2026-04-06",
-        "notes": ["National cancer center network member", "Radiotherapy specialization noted"]
+        "notes": [
+          "National cancer center network member",
+          "Radiotherapy specialization noted"
+        ]
       }
     },
     {
@@ -1027,20 +1674,30 @@
       "city": "Beijing",
       "district": "Chaoyang",
       "airport_info": "40-55min from Beijing Capital International Airport",
-      "tags": ["ophthalmology", "lasik", "cataract"],
+      "tags": [
+        "ophthalmology",
+        "lasik",
+        "cataract"
+      ],
       "rank": "Largest Private Eye Hospital Chain in China",
       "phone": "Contact via our service",
       "website": "http://www.aierchina.com",
       "international": true,
       "jci": false,
       "trust": {
-        "score": 0.80,
+        "score": 0.8,
         "level": "medium_high",
-        "verified_fields": ["name", "specialty"],
+        "verified_fields": [
+          "name",
+          "specialty"
+        ],
         "data_source": "single_source",
         "cross_validated": [],
         "last_verified": "2026-04-06",
-        "notes": ["Listed in eye surgery comparison article", "Nationwide chain with international patient services"]
+        "notes": [
+          "Listed in eye surgery comparison article",
+          "Nationwide chain with international patient services"
+        ]
       }
     },
     {
@@ -1050,7 +1707,11 @@
       "city": "Shanghai",
       "district": "Huangpu",
       "airport_info": "45-60min from Shanghai Pudong International Airport",
-      "tags": ["dental", "oral-surgery", "cosmetic-dental"],
+      "tags": [
+        "dental",
+        "oral-surgery",
+        "cosmetic-dental"
+      ],
       "rank": "Top Dental Hospital in Shanghai",
       "phone": "Contact via our service",
       "website": "http://www.9hospital.com.cn",
@@ -1059,11 +1720,17 @@
       "trust": {
         "score": 0.81,
         "level": "medium",
-        "verified_fields": ["name", "city", "specialty"],
+        "verified_fields": [
+          "name",
+          "city",
+          "specialty"
+        ],
         "data_source": "single_source",
         "cross_validated": [],
         "last_verified": "2026-04-06",
-        "notes": ["Referenced in dental tourism article"]
+        "notes": [
+          "Referenced in dental tourism article"
+        ]
       }
     },
     {
@@ -1073,20 +1740,30 @@
       "city": "Shanghai",
       "district": "Huangpu",
       "airport_info": "45-65min from Shanghai Pudong International Airport",
-      "tags": ["tcm", "general", "fertility"],
+      "tags": [
+        "tcm",
+        "general",
+        "fertility"
+      ],
       "rank": "Top TCM Hospital in Shanghai",
       "phone": "Contact via our service",
       "website": "http://www.sdjyy.com",
       "international": true,
       "jci": false,
       "trust": {
-        "score": 0.80,
+        "score": 0.8,
         "level": "medium_high",
-        "verified_fields": ["name", "city", "rank"],
+        "verified_fields": [
+          "name",
+          "city",
+          "rank"
+        ],
         "data_source": "single_source",
         "cross_validated": [],
         "last_verified": "2026-04-06",
-        "notes": ["Referenced alongside Dongzhimen in TCM article"]
+        "notes": [
+          "Referenced alongside Dongzhimen in TCM article"
+        ]
       }
     },
     {
@@ -1096,7 +1773,11 @@
       "city": "Shanghai",
       "district": "Xuhui",
       "airport_info": "50-70min from Shanghai Pudong International Airport",
-      "tags": ["tcm", "oncology", "general"],
+      "tags": [
+        "tcm",
+        "oncology",
+        "general"
+      ],
       "rank": "Top TCM Hospital in China",
       "phone": "Contact via our service",
       "website": "http://www.longhua-hospital.com",
@@ -1105,11 +1786,19 @@
       "trust": {
         "score": 0.82,
         "level": "medium_high",
-        "verified_fields": ["name", "city", "rank"],
+        "verified_fields": [
+          "name",
+          "city",
+          "rank"
+        ],
         "data_source": "dual_source",
-        "cross_validated": ["public_ranking"],
+        "cross_validated": [
+          "public_ranking"
+        ],
         "last_verified": "2026-04-06",
-        "notes": ["Oncology TCM integration noted in articles"]
+        "notes": [
+          "Oncology TCM integration noted in articles"
+        ]
       }
     },
     {
@@ -1119,7 +1808,11 @@
       "city": "Beijing",
       "district": "Dongzhimen",
       "airport_info": "35-50min from Beijing Capital International Airport",
-      "tags": ["tcm", "neurology", "general"],
+      "tags": [
+        "tcm",
+        "neurology",
+        "general"
+      ],
       "rank": "Top TCM Hospital in China",
       "phone": "Contact via our service",
       "website": "http://www.dzmhospital.com",
@@ -1128,11 +1821,20 @@
       "trust": {
         "score": 0.83,
         "level": "medium_high",
-        "verified_fields": ["name", "city", "rank", "tags"],
+        "verified_fields": [
+          "name",
+          "city",
+          "rank",
+          "tags"
+        ],
         "data_source": "dual_source",
-        "cross_validated": ["public_ranking"],
+        "cross_validated": [
+          "public_ranking"
+        ],
         "last_verified": "2026-04-06",
-        "notes": ["Neurology TCM specialization documented"]
+        "notes": [
+          "Neurology TCM specialization documented"
+        ]
       }
     },
     {
@@ -1142,7 +1844,11 @@
       "city": "Guangzhou",
       "district": "Yuexiu",
       "airport_info": "45-60min from Guangzhou Baiyun International Airport",
-      "tags": ["dental", "oral-surgery", "cosmetic-dental"],
+      "tags": [
+        "dental",
+        "oral-surgery",
+        "cosmetic-dental"
+      ],
       "rank": "Top Dental Hospital in South China",
       "phone": "Contact via our service",
       "website": "http://www.gyqty.com",
@@ -1151,11 +1857,17 @@
       "trust": {
         "score": 0.79,
         "level": "medium",
-        "verified_fields": ["name", "city", "specialty"],
+        "verified_fields": [
+          "name",
+          "city",
+          "specialty"
+        ],
         "data_source": "single_source",
         "cross_validated": [],
         "last_verified": "2026-04-06",
-        "notes": ["Referenced in dental tourism article"]
+        "notes": [
+          "Referenced in dental tourism article"
+        ]
       }
     }
   ]
