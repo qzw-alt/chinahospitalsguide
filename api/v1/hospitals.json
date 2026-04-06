@@ -1180,7 +1180,7 @@
         "all-specialties"
       ],
       "rank": "Top Hospital in Shenzhen",
-      "phone": "Contact via our service",
+      "phone": "0755-25533018",
       "website": "http://www.sz-hospital.com",
       "international": true,
       "jci": false,
@@ -1192,17 +1192,20 @@
           "city",
           "district",
           "rank",
-          "tags"
+          "tags",
+          "address",
+          "phone"
         ],
         "data_source": "single_source",
         "cross_validated": [
           "public_ranking"
         ],
-        "last_verified": "2026-03-15",
+        "last_verified": "2026-04-06",
         "notes": [
           "Leading hospital in Shenzhen"
         ]
-      }
+      },
+      "address": "深圳市罗湖区东门北路1017号"
     },
     {
       "id": "pku-shenzhen-hospital",
@@ -1216,10 +1219,10 @@
         "all-specialties"
       ],
       "rank": "Top General Hospital",
-      "phone": "Contact via our service",
+      "phone": "0755-83923333",
       "website": "http://www.pkuszh.com",
       "international": true,
-      "jci": true,
+      "jci": false,
       "trust": {
         "score": 0.87,
         "level": "medium_high",
@@ -1228,19 +1231,22 @@
           "city",
           "district",
           "rank",
-          "tags"
+          "tags",
+          "address",
+          "phone"
         ],
         "data_source": "dual_source",
         "cross_validated": [
           "official_website",
           "jci_verified"
         ],
-        "last_verified": "2026-03-15",
+        "last_verified": "2026-04-06",
         "notes": [
           "JCI accredited",
           "Peking University affiliation"
         ]
-      }
+      },
+      "address": "深圳市福田区莲花路1120号"
     },
     {
       "id": "shenzhen-second-peoples-hospital",
@@ -1254,7 +1260,7 @@
         "general"
       ],
       "rank": "Top Orthopedics Shenzhen",
-      "phone": "Contact via our service",
+      "phone": "0755-83366388",
       "website": "http://www.szey.com",
       "international": true,
       "jci": false,
@@ -1266,15 +1272,18 @@
           "city",
           "district",
           "rank",
-          "tags"
+          "tags",
+          "address",
+          "phone"
         ],
         "data_source": "single_source",
         "cross_validated": [],
-        "last_verified": "2026-03-15",
+        "last_verified": "2026-04-06",
         "notes": [
           "Orthopedics specialization growing in reputation"
         ]
-      }
+      },
+      "address": "深圳市福田区笋岗西路3002号"
     },
     {
       "id": "shenzhen-tcm-hospital",
@@ -1434,7 +1443,7 @@
         "radiotherapy"
       ],
       "rank": "Top 3 Cancer Hospital in China",
-      "phone": "Contact via our service",
+      "phone": "020-87343088",
       "website": "http://www.sysucc.com.cn",
       "international": true,
       "jci": false,
@@ -1446,7 +1455,9 @@
           "city",
           "district",
           "rank",
-          "tags"
+          "tags",
+          "address",
+          "phone"
         ],
         "data_source": "dual_source",
         "cross_validated": [
@@ -1457,7 +1468,8 @@
           "Top cancer center in South China",
           "Referenced in international patient articles"
         ]
-      }
+      },
+      "address": "广州市越秀区东风东路651号"
     },
     {
       "id": "beijing-tongren-hospital",
@@ -1940,7 +1952,7 @@
         "cosmetic-dental"
       ],
       "rank": "Top Dental Hospital in South China",
-      "phone": "Contact via our service",
+      "phone": "020-81299942",
       "website": "http://www.gyqty.com",
       "international": true,
       "jci": false,
@@ -1950,7 +1962,9 @@
         "verified_fields": [
           "name",
           "city",
-          "specialty"
+          "specialty",
+          "address",
+          "phone"
         ],
         "data_source": "single_source",
         "cross_validated": [],
@@ -1958,7 +1972,8 @@
         "notes": [
           "Referenced in dental tourism article"
         ]
-      }
+      },
+      "address": "广州市越秀区东风西路195号"
     }
   ]
 }
