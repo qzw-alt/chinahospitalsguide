@@ -899,7 +899,7 @@
         "general"
       ],
       "rank": "Top Neurosurgery South China",
-      "phone": "Contact via our service",
+      "phone": "020-61643888",
       "website": "http://www.zjyy.com.cn",
       "international": true,
       "jci": false,
@@ -911,17 +911,20 @@
           "city",
           "district",
           "rank",
-          "tags"
+          "tags",
+          "address",
+          "phone"
         ],
         "data_source": "single_source",
         "cross_validated": [
           "public_ranking"
         ],
-        "last_verified": "2026-03-15",
+        "last_verified": "2026-04-06",
         "notes": [
           "Neurosurgery notable in South China"
         ]
-      }
+      },
+      "address": "广州市海珠区工业大道中253号"
     },
     {
       "id": "first-affiliated-guangzhou-tcm",
@@ -935,7 +938,7 @@
         "general"
       ],
       "rank": "Top Traditional Chinese Medicine",
-      "phone": "Contact via our service",
+      "phone": "020-36591912",
       "website": "http://www.gzhtcm.com",
       "international": true,
       "jci": false,
@@ -947,17 +950,20 @@
           "city",
           "district",
           "rank",
-          "tags"
+          "tags",
+          "address",
+          "phone"
         ],
         "data_source": "dual_source",
         "cross_validated": [
           "official_website"
         ],
-        "last_verified": "2026-03-15",
+        "last_verified": "2026-04-06",
         "notes": [
           "TCM integrated with modern medicine"
         ]
-      }
+      },
+      "address": "广州市白云区机场路16号大院"
     },
     {
       "id": "first-affiliated-sun-yat-sen",
@@ -971,7 +977,7 @@
         "all-specialties"
       ],
       "rank": "Top Comprehensive Hospital",
-      "phone": "Contact via our service",
+      "phone": "020-87755766",
       "website": "https://www.gzsums.net",
       "international": true,
       "jci": false,
@@ -984,19 +990,22 @@
           "district",
           "rank",
           "tags",
-          "airport_info"
+          "airport_info",
+          "address",
+          "phone"
         ],
         "data_source": "multi_source",
         "cross_validated": [
           "official_website",
           "public_ranking"
         ],
-        "last_verified": "2026-03-15",
+        "last_verified": "2026-04-06",
         "notes": [
           "Sun Yat-sen University affiliation provides credibility",
           "Top comprehensive hospital in Guangdong"
         ]
-      }
+      },
+      "address": "广州市越秀区中山二路58号（院本部）"
     },
     {
       "id": "first-affiliated-guangzhou-medical",
@@ -1010,7 +1019,7 @@
         "general"
       ],
       "rank": "Top Respiratory Medicine",
-      "phone": "Contact via our service",
+      "phone": "020-83062114",
       "website": "http://www.fahyy.com",
       "international": true,
       "jci": false,
@@ -1022,17 +1031,20 @@
           "city",
           "district",
           "rank",
-          "tags"
+          "tags",
+          "address",
+          "phone"
         ],
         "data_source": "dual_source",
         "cross_validated": [
           "public_ranking"
         ],
-        "last_verified": "2026-03-15",
+        "last_verified": "2026-04-06",
         "notes": [
           "Respiratory medicine reputation during COVID noted"
         ]
-      }
+      },
+      "address": "沿江院区：广州市越秀区沿江西路151号；大坦沙院区：广州市荔湾区桥中中路28号"
     },
     {
       "id": "pku-peoples-hospital",
@@ -1385,17 +1397,19 @@
         "nanoknife"
       ],
       "rank": "Top Private Cancer Hospital",
-      "phone": "Contact via our service",
+      "phone": "020-38993955",
       "website": "http://www.fudahospital.com",
       "international": true,
-      "jci": false,
+      "jci": true,
       "trust": {
         "score": 0.83,
         "level": "medium_high",
         "verified_fields": [
           "name",
           "city",
-          "specialty"
+          "specialty",
+          "address",
+          "phone"
         ],
         "data_source": "single_source",
         "cross_validated": [],
@@ -1404,7 +1418,8 @@
           "Cryosurgery and nanoknife (IRE) reputation documented in articles",
           "Known for international patients"
         ]
-      }
+      },
+      "address": "北院：广州市天河区棠德西路2号；南院：广州市海珠区聚德中路91号"
     },
     {
       "id": "sun-yat-sen-cancer-hospital",
