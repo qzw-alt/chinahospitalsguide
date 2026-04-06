@@ -662,7 +662,7 @@
         "gastroenterology"
       ],
       "rank": "Top General Hospital",
-      "phone": "Contact via our service",
+      "phone": "021-58752345",
       "website": "https://www.renji.com",
       "international": true,
       "jci": false,
@@ -675,18 +675,21 @@
           "district",
           "rank",
           "tags",
-          "airport_info"
+          "airport_info",
+          "address",
+          "phone"
         ],
         "data_source": "dual_source",
         "cross_validated": [
           "official_website",
           "public_ranking"
         ],
-        "last_verified": "2026-03-15",
+        "last_verified": "2026-04-06",
         "notes": [
           "Gastroenterology reputation documented"
         ]
-      }
+      },
+      "address": "西院区：上海市黄浦区山东中路145号；东院区：上海市浦东新区浦建路160号"
     },
     {
       "id": "huadong-hospital",
@@ -700,7 +703,7 @@
         "geriatrics"
       ],
       "rank": "Top Geriatrics",
-      "phone": "Contact via our service",
+      "phone": "021-62483180",
       "website": "http://www.huadonghospital.com",
       "international": true,
       "jci": false,
@@ -712,17 +715,20 @@
           "city",
           "district",
           "rank",
-          "tags"
+          "tags",
+          "address",
+          "phone"
         ],
         "data_source": "single_source",
         "cross_validated": [
           "public_ranking"
         ],
-        "last_verified": "2026-03-15",
+        "last_verified": "2026-04-06",
         "notes": [
           "Geriatrics specialization notable in Shanghai"
         ]
-      }
+      },
+      "address": "上海市静安区延安西路221号（总院）"
     },
     {
       "id": "shanghai-ninth-hospital",
@@ -736,7 +742,7 @@
         "general"
       ],
       "rank": "Top Plastic Surgery",
-      "phone": "Contact via our service",
+      "phone": "021-23271699",
       "website": "https://www.ninthhospital.com.cn",
       "international": true,
       "jci": false,
@@ -748,17 +754,20 @@
           "city",
           "district",
           "rank",
-          "tags"
+          "tags",
+          "address",
+          "phone"
         ],
         "data_source": "dual_source",
         "cross_validated": [
           "public_ranking"
         ],
-        "last_verified": "2026-03-15",
+        "last_verified": "2026-04-06",
         "notes": [
           "Plastic surgery reputation well-known domestically"
         ]
-      }
+      },
+      "address": "南部院区：上海市黄浦区制造局路639号；北部院区：上海市宝山区漠河路280号"
     },
     {
       "id": "guangdong-provincial-peoples-hospital",
@@ -1547,7 +1556,7 @@
         "kidney-disease"
       ],
       "rank": "Top 10 General Hospital in China",
-      "phone": "Contact via our service",
+      "phone": "021-31161616",
       "website": "http://www.chhospital.com.cn",
       "international": true,
       "jci": false,
@@ -1557,7 +1566,9 @@
         "verified_fields": [
           "name",
           "city",
-          "rank"
+          "rank",
+          "address",
+          "phone"
         ],
         "data_source": "single_source",
         "cross_validated": [],
@@ -1566,7 +1577,8 @@
           "Second Military Medical University affiliated",
           "Strong urology and kidney disease departments"
         ]
-      }
+      },
+      "address": "上海市杨浦区长海路168号"
     },
     {
       "id": "sir-run-run-shaw-hospital",
@@ -1755,7 +1767,7 @@
         "cosmetic-dental"
       ],
       "rank": "Top Dental Hospital in Shanghai",
-      "phone": "Contact via our service",
+      "phone": "021-63509092",
       "website": "http://www.9hospital.com.cn",
       "international": true,
       "jci": false,
@@ -1765,7 +1777,9 @@
         "verified_fields": [
           "name",
           "city",
-          "specialty"
+          "specialty",
+          "address",
+          "phone"
         ],
         "data_source": "single_source",
         "cross_validated": [],
@@ -1773,7 +1787,8 @@
         "notes": [
           "Referenced in dental tourism article"
         ]
-      }
+      },
+      "address": "上海市黄浦区北京东路356号"
     },
     {
       "id": "shanghai-shuguang-hospital",
