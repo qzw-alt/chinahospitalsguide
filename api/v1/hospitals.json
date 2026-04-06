@@ -781,7 +781,7 @@
         "general"
       ],
       "rank": "Top Cardiology South China",
-      "phone": "Contact via our service",
+      "phone": "020-83827812",
       "website": "http://www.e5413.com",
       "international": true,
       "jci": false,
@@ -794,17 +794,20 @@
           "district",
           "rank",
           "tags",
-          "airport_info"
+          "airport_info",
+          "address",
+          "phone"
         ],
         "data_source": "dual_source",
         "cross_validated": [
           "public_ranking"
         ],
-        "last_verified": "2026-03-15",
+        "last_verified": "2026-04-06",
         "notes": [
           "Leading cardiology in South China region"
         ]
-      }
+      },
+      "address": "广州市越秀区中山二路106号"
     },
     {
       "id": "nanfang-hospital",
@@ -818,7 +821,7 @@
         "kidney-disease"
       ],
       "rank": "Top General Hospital",
-      "phone": "Contact via our service",
+      "phone": "020-61641888",
       "website": "http://www.nfyy.com",
       "international": true,
       "jci": false,
@@ -830,17 +833,20 @@
           "city",
           "district",
           "rank",
-          "tags"
+          "tags",
+          "address",
+          "phone"
         ],
         "data_source": "single_source",
         "cross_validated": [
           "public_ranking"
         ],
-        "last_verified": "2026-03-15",
+        "last_verified": "2026-04-06",
         "notes": [
           "Kidney disease specialization notable"
         ]
-      }
+      },
+      "address": "广州市白云区广州大道北1838号"
     },
     {
       "id": "zhongshan-sixth-hospital",
@@ -854,7 +860,7 @@
         "general"
       ],
       "rank": "Top Gastroenterology",
-      "phone": "Contact via our service",
+      "phone": "020-38254140",
       "website": "http://www.zs6h.com",
       "international": true,
       "jci": false,
@@ -866,17 +872,20 @@
           "city",
           "district",
           "rank",
-          "tags"
+          "tags",
+          "address",
+          "phone"
         ],
         "data_source": "single_source",
         "cross_validated": [
           "public_ranking"
         ],
-        "last_verified": "2026-03-15",
+        "last_verified": "2026-04-06",
         "notes": [
           "Gastroenterology reputation growing"
         ]
-      }
+      },
+      "address": "广州市天河区员村二横路26号（院本部）"
     },
     {
       "id": "zhujiang-hospital",
@@ -1803,7 +1812,7 @@
         "fertility"
       ],
       "rank": "Top TCM Hospital in Shanghai",
-      "phone": "Contact via our service",
+      "phone": "021-53821650",
       "website": "http://www.sdjyy.com",
       "international": true,
       "jci": false,
@@ -1813,7 +1822,9 @@
         "verified_fields": [
           "name",
           "city",
-          "rank"
+          "rank",
+          "address",
+          "phone"
         ],
         "data_source": "single_source",
         "cross_validated": [],
@@ -1821,7 +1832,8 @@
         "notes": [
           "Referenced alongside Dongzhimen in TCM article"
         ]
-      }
+      },
+      "address": "东院：上海市浦东新区张衡路528号；西院：上海市黄浦区普安路185号"
     },
     {
       "id": "shanghai-longhua-hospital",
@@ -1836,17 +1848,19 @@
         "general"
       ],
       "rank": "Top TCM Hospital in China",
-      "phone": "Contact via our service",
+      "phone": "021-64385700",
       "website": "http://www.longhua-hospital.com",
       "international": true,
-      "jci": false,
+      "jci": true,
       "trust": {
         "score": 0.82,
         "level": "medium_high",
         "verified_fields": [
           "name",
           "city",
-          "rank"
+          "rank",
+          "address",
+          "phone"
         ],
         "data_source": "dual_source",
         "cross_validated": [
@@ -1856,7 +1870,8 @@
         "notes": [
           "Oncology TCM integration noted in articles"
         ]
-      }
+      },
+      "address": "上海市徐汇区宛平南路725号（总院）"
     },
     {
       "id": "dongzhimen-hospital",
