@@ -212,8 +212,9 @@
         .nav-container { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; height: 70px; }
         .nav-logo { font-size: 1.5rem; font-weight: bold; color: white; text-decoration: none; display: flex; align-items: center; gap: 10px; }
         .nav-logo:hover { color: #ff6b6b; }
-        .nav-links { display: flex; list-style: none; gap: 0; margin: 0; padding: 0; }
-        .nav-links a { color: rgba(255,255,255,0.9); text-decoration: none; padding: 25px 20px; display: block; transition: all 0.3s; font-weight: 500; position: relative; }
+        .nav-links { display: flex; list-style: none; gap: 0; margin: 0; padding: 0; flex-wrap: nowrap; }
+        .nav-links li { display: flex; }
+        .nav-links a { color: rgba(255,255,255,0.9); text-decoration: none; padding: 25px 14px; display: block; transition: all 0.3s; font-weight: 500; position: relative; font-size: 0.9rem; }
         .nav-links a:hover { color: white; background: rgba(255,255,255,0.1); }
         .nav-links a.active { color: #ff6b6b; }
         .nav-links a.active::after { content: ''; position: absolute; bottom: 0; left: 20px; right: 20px; height: 3px; background: #ff6b6b; }
@@ -234,7 +235,7 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="hospitals.html">Hospitals</a></li>
                 <li><a href="services.html">Services</a></li>
-                <li><a href="how-it-works.html">How It Works</a></li>
+                <li><a href="how-it-works.html">Process</a></li>
                 <li><a href="blog/">Blog</a></li>
                 <li><a href="news/">News</a></li>
                 <li><a href="resources.html">Resources</a></li>
