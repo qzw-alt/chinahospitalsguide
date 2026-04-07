@@ -50,6 +50,7 @@
             text-decoration: none;
         }
         .nav-links { display: flex; list-style: none; gap: 0; }
+        .nav-links li { display: flex; }
         .nav-links a {
             color: rgba(255,255,255,0.9);
             text-decoration: none;
@@ -60,6 +61,7 @@
         }
         .nav-links a:hover { background: rgba(255,255,255,0.1); color: white; }
         .nav-links a.active { color: #ff6b6b; }
+        .nav-links a.active::after { content: ''; position: absolute; bottom: 0; left: 18px; right: 18px; height: 3px; background: #ff6b6b; }
         .nav-cta {
             background: #ff6b6b;
             color: white;
@@ -228,7 +230,14 @@
             .course-stats { flex-direction: column; gap: 20px; }
             .chapter-item { flex-direction: column; text-align: center; gap: 15px; }
             .chapter-meta { justify-content: center; }
-            .nav-links { display: none; }
+            @media (max-width: 768px) {
+            .nav-toggle { display: flex; }
+            .nav-links { position: absolute; top: 70px; left: 0; right: 0; background: rgba(30, 60, 114, 0.98); flex-direction: column; max-height: 0; overflow: hidden; transition: max-height 0.3s; padding: 0; }
+            .nav-links.active { max-height: 500px; padding: 10px 0; }
+            .nav-links li { width: 100%; }
+            .nav-links a { padding: 15px 20px; border-bottom: 1px solid rgba(255,255,255,0.1); display: block; text-align: center; }
+            .nav-cta { display: none; }
+        }
         }
     </style>
     
@@ -244,14 +253,23 @@
     <nav class="navbar">
         <div class="nav-container">
             <a href="index.html" class="nav-logo">🏥 China Hospitals Guide</a>
-            <ul class="nav-links">
+            <ul class="nav-links" id="navLinks">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="hospitals.html">Hospitals</a></li>
                 <li><a href="services.html">Services</a></li>
+                <li><a href="how-it-works.html">How It Works</a></li>
+                <li><a href="blog/">Blog</a></li>
+                <li><a href="news/">News</a></li>
+                <li><a href="resources.html">Resources</a></li>
                 <li><a href="course.html" class="active">Course</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
-            <a href="contact.html" class="nav-cta">Get Free Consultation</a>
+            <a href="pricing.html" class="nav-cta">Pricing</a>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </nav>
     
@@ -464,6 +482,14 @@
                 item.querySelector('.chapter-status').className = 'chapter-status status-available';
             }
         });
+        // Mobile menu toggle
+        var navToggle = document.getElementById('navToggle');
+        var navLinks = document.getElementById('navLinks');
+        if (navToggle && navLinks) {
+            navToggle.addEventListener('click', function() {
+                navLinks.classList.toggle('active');
+            });
+        }
     </script>
 </body>
 </html>
