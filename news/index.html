@@ -40,16 +40,33 @@
         .nav-links {
             display: flex;
             list-style: none;
-            gap: 30px;
+            gap: 0;
         }
+        .nav-links li { display: flex; }
         .nav-links a {
-            color: #333;
+            color: rgba(255,255,255,0.9);
             text-decoration: none;
+            padding: 25px 18px;
+            display: block;
             font-weight: 500;
+            font-size: 0.95rem;
         }
-        .nav-links a:hover, .nav-links a.active {
-            color: #ff6b6b;
+        .nav-links a:hover { color: white; background: rgba(255,255,255,0.1); }
+        .nav-links a.active { color: #ff6b6b; }
+        .nav-links a.active::after { content: ''; position: absolute; bottom: 0; left: 18px; right: 18px; height: 3px; background: #ff6b6b; }
+        .nav-cta {
+            background: #ff6b6b;
+            color: white;
+            padding: 10px 22px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.9rem;
+            transition: all 0.3s;
         }
+        .nav-cta:hover { background: #ff5252; transform: translateY(-2px); }
+        .nav-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 10px; }
+        .nav-toggle span { width: 25px; height: 3px; background: white; transition: all 0.3s; }
         .header {
             background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
             color: white;
@@ -141,9 +158,14 @@
             color: #ff6b6b;
             text-decoration: none;
         }
-        @media (max-width: 600px) {
+        @media (max-width: 768px) {
             .header h1 { font-size: 1.8rem; }
-            .nav-links { display: none; }
+            .nav-toggle { display: flex; }
+            .nav-links { position: absolute; top: 70px; left: 0; right: 0; background: rgba(30, 60, 114, 0.98); flex-direction: column; max-height: 0; overflow: hidden; transition: max-height 0.3s; padding: 0; }
+            .nav-links.active { max-height: 500px; padding: 10px 0; }
+            .nav-links li { width: 100%; }
+            .nav-links a { padding: 15px 20px; border-bottom: 1px solid rgba(255,255,255,0.1); display: block; text-align: center; }
+            .nav-cta { display: none; }
         }
     </style>
 
@@ -155,14 +177,23 @@
     <nav class="navbar">
         <div class="nav-container">
             <a href="../index.html" class="nav-logo">🏥 China Hospitals Guide</a>
-            <ul class="nav-links">
+            <ul class="nav-links" id="navLinks">
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="../hospitals.html">Hospitals</a></li>
                 <li><a href="../services.html">Services</a></li>
+                <li><a href="../how-it-works.html">How It Works</a></li>
                 <li><a href="../blog/">Blog</a></li>
                 <li><a href="./" class="active">News</a></li>
+                <li><a href="../resources.html">Resources</a></li>
+                <li><a href="../course.html">Course</a></li>
                 <li><a href="../contact.html">Contact</a></li>
             </ul>
+            <a href="../pricing.html" class="nav-cta">Pricing</a>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </nav>
 
@@ -437,5 +468,15 @@
         <p>© 2026 China Hospitals Guide. All rights reserved.</p>
         <p><a href="../index.html">← Back to Homepage</a></p>
     </footer>
+
+    <script>
+        var navToggle = document.getElementById('navToggle');
+        var navLinks = document.getElementById('navLinks');
+        if (navToggle && navLinks) {
+            navToggle.addEventListener('click', function() {
+                navLinks.classList.toggle('active');
+            });
+        }
+    </script>
 </body>
 </html>
