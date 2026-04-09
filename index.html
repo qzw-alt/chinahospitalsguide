@@ -1581,6 +1581,10 @@
             <span class="chat-tooltip">🛬 In China: Need help? Chat here</span>
         </a>
     </div>
+    <!-- Floating Pricing Button (Desktop only) -->
+    <a href="pricing.html" id="floatingPricing" style="position: fixed; top: 200px; right: 0; background: linear-gradient(135deg, #1e3c72, #2a5298); color: white; padding: 12px 20px; border-radius: 8px 0 0 8px; text-decoration: none; font-weight: bold; font-size: 0.9rem; box-shadow: -3px 3px 15px rgba(0,0,0,0.2); z-index: 9996; writing-mode: vertical-rl; text-orientation: mixed; letter-spacing: 2px; display: none;">
+        💰 Pricing
+    </a>
     <!-- Floating CTA Button -->
     <div id="floatingCTA" style="position: fixed; bottom: 90px; right: 20px; z-index: 9997; display: none;">
         <a href="#contact" style="display: flex; align-items: center; gap: 8px; background: linear-gradient(135deg, #ff6b6b 0%, #ff8e53 100%); color: white; padding: 15px 25px; border-radius: 50px; text-decoration: none; font-weight: bold; box-shadow: 0 5px 20px rgba(255,107,107,0.4); animation: floatPulse 2s infinite;">
@@ -1636,6 +1640,13 @@
             }
             .mobile-bottom-bar {
                 display: none !important;
+            }
+            #floatingPricing {
+                display: block !important;
+            }
+            #floatingPricing:hover {
+                background: linear-gradient(135deg, #ff6b6b 0%, #ff8e53 100%);
+                transform: translateX(-5px);
             }
         }
         
