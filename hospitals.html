@@ -82,6 +82,33 @@
             max-width: 1200px;
             margin: 0 auto;
         }
+        .region-tabs {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .region-tab {
+            padding: 0.6rem 1.4rem;
+            background: white;
+            border: 2px solid var(--border);
+            color: var(--text);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+        .region-tab:hover {
+            border-color: var(--secondary);
+            color: var(--secondary);
+        }
+        .region-tab.active {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: white;
+        }
         .search-box {
             width: 100%;
             max-width: 500px;
@@ -315,14 +342,21 @@
     </nav>
 
     <header class="page-header">
-        <h1>Find Hospitals by Specialty</h1>
-        <p>34 world-class hospitals across 6 major cities. Click tags to filter, or search by name, city, or specialty.</p>
+        <h1>Find Hospitals by Region & Specialty</h1>
+        <p>34+ world-class hospitals across Beijing, Shanghai, Guangzhou & Pearl River Delta. Filter by region, then click specialty tags to narrow down.</p>
     </header>
 
     <section class="filter-section">
         <div class="filter-container">
             <div class="search-box">
                 <input type="text" id="searchInput" placeholder="Search hospitals, cities, or specialties...">
+            </div>
+            <div class="region-tabs" id="regionTabs">
+                <button class="region-tab active" data-region="all">🌐 All Regions</button>
+                <button class="region-tab" data-region="beijing">🇨🇳 Beijing</button>
+                <button class="region-tab" data-region="shanghai">🇨🇳 Shanghai</button>
+                <button class="region-tab" data-region="guangzhou">🇨🇳 Guangzhou</button>
+                <button class="region-tab" data-region="prd">🇨🇳 Pearl River Delta</button>
             </div>
             <div class="specialty-tags" id="specialtyTags"></div>
         </div>
@@ -396,7 +430,18 @@
     { name: "Longhua Hospital (Shanghai University of Traditional Chinese Medicine)", city: "Shanghai", district: "Xuhui", phone: "021-64385700", rank: "Top TCM Hospital in China", airport: "50-70min from Shanghai Pudong International Airport", tags: ["tcm", "oncology", "general"], international: true, jci: true, address: "上海市徐汇区宛平南路725号", website: "http://www.longhua-hospital.com" },
     { name: "Dongzhimen Hospital (Beijing University of Chinese Medicine)", city: "Beijing", district: "Dongzhimen", phone: "010-84018292", rank: "Top TCM Hospital in China", airport: "35-50min from Beijing Capital International Airport", tags: ["tcm", "neurology", "general"], international: true, jci: false, address: "北京市东城区海运仓5号", website: "http://www.dzmhospital.com" },
     { name: "Guangzhou Dental Hospital", city: "Guangzhou", district: "Yuexiu", phone: "020-81299942", rank: "Top Dental Hospital in South China", airport: "45-60min from Guangzhou Baiyun International Airport", tags: ["dental", "oral-surgery", "cosmetic-dental"], international: true, jci: false, address: "广州市越秀区东风西路195号", website: "http://www.gyqty.com" },
+    { name: "Sun Yat-sen Memorial Hospital", city: "Guangzhou", district: "Yuexiu", phone: "020-81332114", rank: "Top Endocrinology & Gynecology in South China", airport: "45-60min from Guangzhou Baiyun International Airport", tags: ["gynecology", "maternity", "oncology", "general"], international: true, jci: false, address: "广州市越秀区沿江西路107号", website: "http://www.syshospital.com" },
+    { name: "Guangdong Women and Children Hospital", city: "Guangzhou", district: "Baiyun", phone: "020-39151611", rank: "Top Maternity & Pediatrics Hospital in Guangdong", airport: "40-55min from Guangzhou Baiyun International Airport", tags: ["maternity", "pediatrics", "obstetrics", "fertility"], international: true, jci: false, address: "广州市白云区广园西路13号", website: "http://www.gdwer.net" },
+    { name: "Third Affiliated Hospital of Sun Yat-sen University", city: "Guangzhou", district: "Tianhe", phone: "020-85252244", rank: "Top Hepatology & Immunology in South China", airport: "40-55min from Guangzhou Baiyun International Airport", tags: ["gastroenterology", "liver-disease", "oncology", "general"], international: true, jci: false, address: "广州市天河区天河路600号", website: "http://www.zssy.com.cn" },
+    { name: "Guangdong Provincial Traditional Chinese Medicine Hospital", city: "Guangzhou", district: "Yuexiu", phone: "020-81887233", rank: "Top TCM Hospital in China", airport: "45-60min from Guangzhou Baiyun International Airport", tags: ["tcm", "acupuncture", "rehabilitation", "general"], international: true, jci: false, address: "广州市越秀区大德路111号", website: "http://www.satcm.gov.cn" },
+    { name: "Guangzhou University Chinese Medicine (Second Affiliated Hospital)", city: "Guangzhou", district: "Haizhu", phone: "020-84412290", rank: "Top Bone & Joint TCM in South China", airport: "45-60min from Guangzhou Baiyun International Airport", tags: ["tcm", "orthopedics", "joint-replacement", "rehabilitation"], international: true, jci: false, address: "广州市海珠区江南西路青竹大街17号", website: "http://www.gzzyy.com" },
+    { name: "Dongguan People's Hospital", city: "Dongguan", district: "Nancheng", phone: "0769-28637300", rank: "Top General Hospital in Dongguan", airport: "60-80min from Shenzhen Bao'an International Airport", tags: ["general", "all-specialties"], international: true, jci: false, address: "东莞市南城区鸿福路108号", website: "http://www.dghospital.com" },
+    { name: "Zhuhai People's Hospital", city: "Zhuhai", district: "Xiangzhou", phone: "0756-2168999", rank: "Top General Hospital in Zhuhai", airport: "50-70min from Zhuhai Jinwan Airport", tags: ["general", "cardiology"], international: true, jci: false, address: "珠海市香洲区柠溪路79号", website: "http://www.zhhospital.com" },
+    { name: "Hong Kong University Shenzhen Hospital", city: "Shenzhen", district: "Nanshan", phone: "0755-86913333", rank: "Top Hybrid Hospital with Hong Kong Standards", airport: "35-50min from Shenzhen Bao'an International Airport", tags: ["general", "all-specialties", "oncology", "cardiology"], international: true, jci: true, address: "深圳市南山区白石路与沙河西路交汇处", website: "http://www.hku-szh.org" },
+    { name: "Shenzhen University General Hospital", city: "Shenzhen", district: "Nanshan", phone: "0755-22381114", rank: "Top New General Hospital in Shenzhen", airport: "30-45min from Shenzhen Bao'an International Airport", tags: ["general", "all-specialties", "cardiology"], international: true, jci: false, address: "深圳市南山区西丽大学城学苑大道1098号", website: "http://www.szuugh.com" },
 ];
+
+        // PRD region = Pearl River Delta: Guangzhou + Shenzhen + Dongguan + Foshan + Zhuhai + etc.
 
         const specialtyNames = {
             "cardiology": "Cardiology & Cardiac Surgery", "heart-surgery": "Heart Surgery",
@@ -418,14 +463,18 @@
             "lasik": "LASIK & Eye Surgery", "cataract": "Cataract Surgery",
             "ent": "ENT (Ear, Nose & Throat)", "urology": "Urology",
             "cryosurgery": "Cryosurgery", "nanoknife": "Nanoknife Treatment",
-            "ophthalmology": "Ophthalmology"
+            "ophthalmology": "Ophthalmology",
+            "gynecology": "Gynecology", "liver-disease": "Hepatology & Liver Disease",
+            "acupuncture": "Acupuncture & TCM", "rehabilitation": "Rehabilitation Medicine"
         };
 
         let activeTags = new Set();
+        let activeRegion = 'all';
 
         function getSpecialtyCounts() {
             const counts = {};
             hospitals.forEach(h => {
+                if (activeRegion !== 'all' && h.region !== activeRegion) return;
                 h.tags.forEach(tag => {
                     counts[tag] = (counts[tag] || 0) + 1;
                 });
@@ -436,11 +485,12 @@
         function generateSpecialtyTags() {
             const counts = getSpecialtyCounts();
             const container = document.getElementById('specialtyTags');
+            container.innerHTML = '';
             const sortedSpecialties = Object.entries(counts).sort((a, b) => b[1] - a[1]).slice(0, 15);
 
             sortedSpecialties.forEach(([tag, count]) => {
                 const btn = document.createElement('button');
-                btn.className = 'specialty-tag';
+                btn.className = 'specialty-tag' + (activeTags.has(tag) ? ' active' : '');
                 btn.setAttribute('data-tag', tag);
                 btn.innerHTML = `${specialtyNames[tag] || tag} (${count})`;
                 btn.onclick = () => toggleTag(tag);
@@ -457,12 +507,22 @@
             updateUI();
         }
 
+        function toggleRegion(region) {
+            activeRegion = region;
+            activeTags.clear();
+            document.querySelectorAll('.region-tab').forEach(btn => {
+                btn.classList.toggle('active', btn.getAttribute('data-region') === region);
+            });
+            updateUI();
+        }
+
         function updateUI() {
             document.querySelectorAll('.specialty-tag').forEach(btn => {
                 const tag = btn.getAttribute('data-tag');
                 btn.classList.toggle('active', activeTags.has(tag));
             });
             filterHospitals();
+            generateSpecialtyTags();
         }
 
         function filterHospitals() {
@@ -472,6 +532,7 @@
 
             hospitals.forEach((hospital, index) => {
                 const card = cards[index];
+                const matchesRegion = activeRegion === 'all' || hospital.region === activeRegion;
                 const matchesSearch = !searchTerm || 
                     hospital.name.toLowerCase().includes(searchTerm) ||
                     hospital.city.toLowerCase().includes(searchTerm) ||
@@ -480,7 +541,7 @@
                 const matchesTags = activeTags.size === 0 || 
                     hospital.tags.some(tag => activeTags.has(tag));
 
-                if (matchesSearch && matchesTags) {
+                if (matchesRegion && matchesSearch && matchesTags) {
                     card.classList.remove('hidden');
                     visibleCount++;
                 } else {
@@ -488,9 +549,10 @@
                 }
             });
 
+            const regionLabel = activeRegion === 'all' ? '' : activeRegion.toUpperCase() + ' ';
             document.getElementById('resultsCount').textContent = 
                 activeTags.size === 0 && !searchTerm 
-                    ? `Showing all ${hospitals.length} hospitals`
+                    ? `Showing ${visibleCount} hospitals${activeRegion !== 'all' ? ' in ' + regionLabel : ''}`
                     : `Showing ${visibleCount} of ${hospitals.length} hospitals`;
         }
 
@@ -518,15 +580,17 @@
         // City color schemes (simulating city atmosphere)
         function getCityColor(city, isDark = false) {
             const cityColors = {
-                'Beijing': isDark ? '#8B0000' : '#DC143C',      // 故宫红
-                'Shanghai': isDark ? '#1a237e' : '#3949ab',     // 外滩蓝
-                'Guangzhou': isDark ? '#e65100' : '#ff9800',    // 羊城橙
-                'Shenzhen': isDark ? '#006064' : '#00acc1',     // 科技青
-                'Hangzhou': isDark ? '#2e7d32' : '#4caf50',     // 西湖绿
-                'Chengdu': isDark ? '#c62828' : '#e53935',      // 火锅红
-                'Nanjing': isDark ? '#4a148c' : '#7b1fa2',      // 紫金山紫
-                'Wuhan': isDark ? '#1565c0' : '#42a5f5',        // 长江蓝
-                'Xi\'an': isDark ? '#6d4c41' : '#8d6e63',       // 兵马俑棕
+                'Beijing': isDark ? '#8B0000' : '#DC143C',
+                'Shanghai': isDark ? '#1a237e' : '#3949ab',
+                'Guangzhou': isDark ? '#e65100' : '#ff9800',
+                'Shenzhen': isDark ? '#006064' : '#00acc1',
+                'Hangzhou': isDark ? '#2e7d32' : '#4caf50',
+                'Chengdu': isDark ? '#c62828' : '#e53935',
+                'Nanjing': isDark ? '#4a148c' : '#7b1fa2',
+                'Wuhan': isDark ? '#1565c0' : '#42a5f5',
+                'Xi\'an': isDark ? '#6d4c41' : '#8d6e63',
+                'Dongguan': isDark ? '#004d40' : '#00897b',
+                'Zhuhai': isDark ? '#01579b' : '#0288d1',
                 'default': isDark ? '#37474f' : '#607d8b'
             };
             return cityColors[city] || cityColors['default'];
@@ -591,6 +655,23 @@
                 container.appendChild(card);
             });
         }
+
+        function getHospitalRegion(city) {
+            const prdCities = ['Guangzhou', 'Shenzhen', 'Foshan', 'Dongguan', 'Zhuhai', 'Zhongshan', 'Jiangmen', 'Huizhou', 'Zhaoqing', 'Maoming', 'Shantou', 'Shaoguan'];
+            if (city === 'Beijing') return 'beijing';
+            if (city === 'Shanghai') return 'shanghai';
+            if (city === 'Guangzhou') return 'guangzhou';
+            if (prdCities.includes(city)) return 'prd';
+            return 'other';
+        }
+
+        // Set region field on each hospital
+        hospitals.forEach(h => h.region = getHospitalRegion(h.city));
+
+        // Wire up region tabs
+        document.querySelectorAll('.region-tab').forEach(btn => {
+            btn.addEventListener('click', () => toggleRegion(btn.getAttribute('data-region')));
+        });
 
         document.getElementById('searchInput').addEventListener('input', filterHospitals);
 
