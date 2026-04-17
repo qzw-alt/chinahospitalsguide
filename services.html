@@ -39,7 +39,8 @@
         .logo { font-size: 1.5rem; font-weight: bold; color: var(--primary); text-decoration: none; }
         .nav-links { display: flex; gap: 30px; list-style: none; }
         .nav-links a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.3s; }
-        .nav-links a:hover { color: var(--accent); }
+            
+            .nav-links a:hover { color: var(--accent); }
         .mobile-menu { display: none; font-size: 1.5rem; cursor: pointer; }
         
         @media (max-width: 768px) {
@@ -162,6 +163,7 @@
         .nav-logo:hover { color: #ff6b6b; }
         .nav-links { display: flex; list-style: none; gap: 0; margin: 0; padding: 0; flex-wrap: nowrap; }
         .nav-links a { color: rgba(255,255,255,0.9); text-decoration: none; padding: 25px 20px; display: block; transition: all 0.3s; font-weight: 500; position: relative; }
+            
         .nav-links a:hover { color: white; background: rgba(255,255,255,0.1); }
         .nav-links a.active { color: #ff6b6b; }
         .nav-links a.active::after { content: ''; position: absolute; bottom: 0; left: 20px; right: 20px; height: 3px; background: #ff6b6b; }
@@ -169,7 +171,19 @@
         .nav-cta:hover { background: #ff5252; transform: translateY(-2px); }
         .nav-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 10px; }
         .nav-toggle span { width: 25px; height: 3px; background: white; transition: all 0.3s; }
-        @media (max-width: 768px) { .nav-toggle { display: flex; } .nav-links { position: absolute; top: 70px; left: 0; right: 0; background: rgba(30, 60, 114, 0.98); flex-direction: column; max-height: 0; overflow: hidden; transition: max-height 0.3s; padding: 0; } .nav-links.active { max-height: 600px; padding: 10px 0; } .nav-links li { width: 100%; } .nav-links a { padding: 15px 20px; border-bottom: 1px solid rgba(255,255,255,0.1); display: block; text-align: center; } .nav-cta { display: none; } }
+        @media (max-width: 768px) { .nav-toggle { display: flex; } .nav-links { position: absolute; top: 70px; left: 0; right: 0; background: rgba(30, 60, 114, 0.98); flex-direction: column; max-height: 0; overflow: hidden; transition: max-height 0.3s; padding: 0; } .nav-links.active { max-height: 600px; padding: 10px 0; } .nav-links li { width: 100%; } .nav-links a { padding: 15px 20px; border-bottom: 1px solid rgba(255,255,255,0.1); display: block; text-align: center; }
+            
+            .nav-links .nav-cta-mobile {
+                display: block;
+                margin: 10px 20px;
+                padding: 12px 25px;
+                background: #ff6b6b;
+                color: white;
+                border-radius: 25px;
+                text-align: center;
+                font-weight: bold;
+                text-decoration: none;
+            } .nav-cta { display: none; } }
         .page-header { padding-top: 130px !important; }
       
     </style>
@@ -177,6 +191,24 @@
     <!-- Google AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2521119288266043"
      crossorigin="anonymous"></script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "serviceType": "Medical Tourism Coordination",
+        "name": "China Hospitals Guide - Medical Tourism Services",
+        "description": "Professional medical tourism coordination in China. We match you with top hospitals and provide end-to-end support.",
+        "provider": {
+            "@type": "Organization",
+            "name": "China Hospitals Guide",
+            "url": "https://chinahospitalsguide.com"
+        },
+        "areaServed": "Worldwide",
+        "url": "https://chinahospitalsguide.com/services.html"
+    }
+    </script>
+
 </head>
 <body>
     <nav class="navbar">
