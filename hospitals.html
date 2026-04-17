@@ -244,6 +244,22 @@
             background: var(--secondary);
             color: white;
         }
+        .view-details-btn {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+            transition: all 0.3s;
+            text-align: center;
+        }
+        .view-details-btn:hover {
+            background: var(--secondary);
+            transform: translateY(-2px);
+        }
         .disclaimer {
             background: #fff3e0;
             border-left: 4px solid #ff9800;
@@ -649,6 +665,9 @@
                         <div class="hospital-info"><strong>Tel:</strong> ${hospital.phone}</div>
                         <div class="hospital-info"><strong>Rank:</strong> ${hospital.rank}</div>
                         <div class="hospital-tags">${tagsHtml}</div>
+                        <div style="margin-top:1rem; padding-top:1rem; border-top:1px solid var(--border);">
+                            <a href="${hospital.website}" target="_blank" rel="noopener" class="view-details-btn">View Details →</a>
+                        </div>
                     </div>
                 `;
                 
