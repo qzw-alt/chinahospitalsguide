@@ -1873,3 +1873,294 @@ disabled {
             border-radius: 8px;
             cursor: pointer;
         }
+/* ============================================
+   v2.1 Structural Improvements
+   Extracted inline styles to classes
+   ============================================ */
+
+/* Live Activity Indicator */
+.live-activity {
+    margin-top: 25px;
+    background: rgba(255,255,255,0.15);
+    padding: 15px 30px;
+    border-radius: 30px;
+    display: inline-block;
+}
+.live-activity-inner {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+.live-dot {
+    width: 10px;
+    height: 10px;
+    background: #4CAF50;
+    border-radius: 50%;
+    animation: blink 1.5s infinite;
+}
+
+/* Testimonial Cards */
+.testimonial-link {
+    text-decoration: none;
+    color: inherit;
+}
+.testimonial-card {
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+.testimonial-card:hover {
+    transform: translateY(-5px);
+}
+.testimonial-cta {
+    text-align: center;
+    margin-top: 15px;
+    color: #2a5298;
+    font-weight: bold;
+}
+
+/* Hospitals CTA */
+.hospitals-cta-wrap {
+    text-align: center;
+    margin-top: 30px;
+}
+.hospitals-cta {
+    background: var(--primary);
+    color: white;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+.hospitals-cta:hover {
+    background: var(--secondary);
+}
+
+/* Risk Reversal Banner */
+.risk-banner {
+    max-width: 700px;
+    margin: 0 auto 30px;
+    background: rgba(255,255,255,0.15);
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+}
+.risk-banner-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+.risk-banner-icon {
+    font-size: 2rem;
+}
+.risk-banner-text {
+    text-align: left;
+}
+.risk-banner-text strong {
+    color: white;
+    font-size: 1.1rem;
+}
+.risk-banner-text p {
+    color: rgba(255,255,255,0.9);
+    margin: 5px 0 0 0;
+    font-size: 0.88rem;
+}
+
+/* Lead Magnet Banner */
+.lead-magnet {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    text-align: center;
+    color: white;
+}
+.lead-magnet-icon {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+.lead-magnet-title {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+.lead-magnet-desc {
+    margin-bottom: 20px;
+    opacity: 0.95;
+}
+.lead-magnet-btn {
+    display: inline-block;
+    background: white;
+    color: #667eea;
+    padding: 15px 35px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    transition: transform 0.3s;
+}
+.lead-magnet-btn:hover {
+    transform: translateY(-2px);
+}
+
+/* Footer */
+.footer-link {
+    color: white;
+}
+.refund-policy-link {
+    color: var(--primary);
+}
+.footer-bottom-meta {
+    margin-bottom: 8px;
+    opacity: 0.7;
+}
+.footer-version {
+    margin-left: 20px;
+    background: rgba(255,255,255,0.2);
+    padding: 3px 10px;
+    border-radius: 10px;
+    font-size: 0.8rem;
+}
+
+/* Version Badge */
+.version-badge {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(30, 60, 114, 0.9);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    z-index: 9998;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+/* Floating Buttons */
+.whatsapp-pre {
+    background: #25D366 !important;
+}
+.whatsapp-cn {
+    background: #0088cc !important;
+}
+
+/* Floating Pricing */
+#floatingPricing {
+    position: fixed;
+    top: 200px;
+    right: 0;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 8px 0 0 8px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.75rem;
+    box-shadow: -3px 3px 15px rgba(0,0,0,0.2);
+    z-index: 9996;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    letter-spacing: 2px;
+    display: none;
+}
+
+/* Floating CTA */
+#floatingCTA {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    z-index: 9997;
+    display: none;
+}
+#floatingCTA a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, #ff6b6b 0%, #ff8e53 100%);
+    color: white;
+    padding: 15px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 5px 20px rgba(255,107,107,0.4);
+    animation: floatPulse 2s infinite;
+}
+#floatingCTA a span:first-child {
+    font-size: 1.3rem;
+}
+
+/* Exit Intent Popup */
+#exitPopup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    z-index: 10000;
+    justify-content: center;
+    align-items: center;
+}
+.exit-popup-content {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    max-width: 500px;
+    text-align: center;
+    animation: slideIn 0.3s ease;
+}
+.exit-popup-icon {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+.exit-popup-title {
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+.exit-popup-text {
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+.exit-popup-urgency {
+    background: #fff3e0;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.exit-popup-urgency p {
+    color: #e65100;
+    margin: 0;
+    font-weight: 600;
+}
+.exit-popup-cta {
+    display: inline-block;
+    background: var(--accent);
+    color: white;
+    padding: 15px 40px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+.exit-popup-dismiss {
+    color: #999;
+    font-size: 0.9rem;
+}
+
+/* Hero Form Button */
+.hero-form-btn {
+    margin: 0 !important;
+}
+
+/* Contact page note */
+.contact-note {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #666;
+}
