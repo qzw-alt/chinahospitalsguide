@@ -5,53 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>How It Works | Medical Tourism to China - China Hospitals Guide</title>
     <meta name="description" content="Professional medical tourism consulting service for China. Expert guidance, hospital matching, and treatment coordination. Transparent fees, no hospital commissions.">
-    <link rel="canonical" href="https://chinahospitalsguide.com/how-it-works.html">    
-    <!-- BreadcrumbList Schema -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://chinahospitalsguide.com/"},
-            {"@type": "ListItem", "position": 2, "name": "How It Works", "item": "https://chinahospitalsguide.com/how-it-works.html"}
-        ]
-    }
-    </script>    
-    <!-- Organization Schema -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "China Hospitals Guide",
-        "alternateName": "Medical Tourism China",
-        "url": "https://chinahospitalsguide.com",
-        "logo": "https://chinahospitalsguide.com/logo.png",
-        "description": "Independent medical tourism coordinator helping international patients access world-class healthcare in China",
-        "foundingDate": "2026",
-        "areaServed": {
-            "@type": "Country",
-            "name": "China"
-        },
-        "contactPoint": {
-            "@type": "ContactPoint",
-            "contactType": "Customer Service",
-            "availableLanguage": ["English", "Chinese"],
-            "contactOption": ["WhatsApp", "WeChat"],
-            "telephone": "+44-7947-060056"
-        },
-        "sameAs": [
-            "https://wa.me/447947060056",
-            "weixin://dl/chat?+8615763107083"
-        ]
-    }
-    </script>
+    <link rel="canonical" href="https://chinahospitalsguide.com/how-it-works.html">
     
-    <!-- Shared CSS -->
-    <link rel="stylesheet" href="styles.css">
-    
-    <!-- Page-specific CSS -->
     <style>
         :root {
+            --primary: #1e3c72;
             --primary-light: #2a5298;
             --accent: #c84b31;
             --accent-light: #e85d4a;
@@ -63,18 +21,21 @@
             --border: #e2e8f0;
         }
         
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.7; color: var(--text); background: var(--bg); }
+            padding-top: 120px;
         .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
         
         .page-header {
             background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
             color: var(--white);
-            padding: 80px 20px;
+            padding: 80px 0;
             text-align: center;
         }
         .page-header h1 { font-size: 2.8rem; margin-bottom: 15px; }
         .page-header p { font-size: 1.3rem; opacity: 0.9; max-width: 650px; margin: 0 auto; }
         
-        .content { background: var(--white); padding: 80px 20px; }
+        .content { background: var(--white); padding: 80px 0; }
         
         .trust-banner {
             background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
@@ -131,7 +92,7 @@
             display: flex;
             align-items: center;
             gap: 10px;
-            font-size: 0.88rem;
+            font-size: 0.95rem;
         }
         .step-feature::before { content: "✓"; color: var(--success); font-weight: 700; }
         
@@ -174,8 +135,8 @@
         .pricing-card .price { font-size: 2rem; font-weight: 700; color: var(--primary); margin-bottom: 15px; }
         .pricing-card .price span { font-size: 1rem; font-weight: 400; color: var(--text-light); }
         .pricing-card ul { list-style: none; text-align: left; }
-        .pricing-card li { padding: 8px 0; border-bottom: 1px solid var(--border); font-size: 0.88rem; }
-        .pricing-card li::before { content: "??"; color: var(--success); font-weight: 700; }
+        .pricing-card li { padding: 8px 0; border-bottom: 1px solid var(--border); font-size: 0.95rem; }
+        .pricing-card li::before { content: "✓ "; color: var(--success); font-weight: 700; }
         
         .why-us {
             background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%);
@@ -198,7 +159,7 @@
             text-align: center;
         }
         .why-item h4 { font-size: 1.1rem; color: var(--primary); margin-bottom: 10px; }
-        .why-item p { font-size: 0.88rem; color: var(--text-light); }
+        .why-item p { font-size: 0.95rem; color: var(--text-light); }
         
         .cta-section {
             background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
@@ -247,23 +208,94 @@
             .cta-section { padding: 30px 20px; }
             .pricing-cards { grid-template-columns: 1fr; }
         }
+        .navbar { background: rgba(30, 60, 114, 0.95); backdrop-filter: blur(10px); padding: 0; position: fixed; top: 0; left: 0; right: 0; z-index: 1000; box-shadow: 0 2px 20px rgba(0,0,0,0.1); }
+        .nav-container { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; height: 70px; }
+        .nav-logo { font-size: 1.5rem; font-weight: bold; color: white; text-decoration: none; display: flex; align-items: center; gap: 10px; }
+        .nav-logo:hover { color: #ff6b6b; }
+        .nav-links { display: flex; list-style: none; gap: 0; margin: 0; padding: 0; }
+        .nav-links a { color: rgba(255,255,255,0.9); text-decoration: none; padding: 25px 20px; display: block; transition: all 0.3s; font-weight: 500; position: relative; }
+        .nav-links a:hover { color: white; background: rgba(255,255,255,0.1); }
+        .nav-links a.active { color: #ff6b6b; }
+        .nav-links a.active::after { content: ''; position: absolute; bottom: 0; left: 20px; right: 20px; height: 3px; background: #ff6b6b; }
+        .nav-cta { background: #ff6b6b; color: white; padding: 10px 25px; border-radius: 25px; text-decoration: none; font-weight: bold; transition: all 0.3s; }
+        .nav-cta:hover { background: #ff5252; transform: translateY(-2px); }
+        .nav-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 10px; }
+        .nav-toggle span { width: 25px; height: 3px; background: white; transition: all 0.3s; }
+        @media (max-width: 768px) { .nav-toggle { display: flex; } .nav-links { position: absolute; top: 70px; left: 0; right: 0; background: rgba(30, 60, 114, 0.98); flex-direction: column; max-height: 0; overflow: hidden; transition: max-height 0.3s; padding: 0; } .nav-links.active { max-height: 400px; padding: 10px 0; } .nav-links li { width: 100%; } .nav-links a { padding: 15px 20px; border-bottom: 1px solid rgba(255,255,255,0.1); display: block; text-align: center; } .nav-cta { display: none; } }
+        .page-header { padding-top: 130px !important; }
+      
     </style>
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RVYZENK472"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-RVYZENK472');
+</script>
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2521119288266043"
+     crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- BreadcrumbList Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://chinahospitalsguide.com/"},
+            {"@type": "ListItem", "position": 2, "name": "How It Works", "item": "https://chinahospitalsguide.com/how-it-works.html"}
+        ]
+    }
+    </script>    
+    <!-- Organization Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "China Hospitals Guide",
+        "alternateName": "Medical Tourism China",
+        "url": "https://chinahospitalsguide.com",
+        "logo": "https://chinahospitalsguide.com/logo.png",
+        "description": "Independent medical tourism coordinator helping international patients access world-class healthcare in China",
+        "foundingDate": "2026",
+        "areaServed": {
+            "@type": "Country",
+            "name": "China"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "Customer Service",
+            "availableLanguage": ["English", "Chinese"],
+            "contactOption": ["WhatsApp", "WeChat"],
+            "telephone": "+44-7947-060056"
+        },
+        "sameAs": [
+            "https://wa.me/447947060056",
+            "weixin://dl/chat?+861****7083"
+        ]
+    }
+    </script>
+
     <nav class="navbar">
         <div class="nav-container">
-            <a href="index.html" class="nav-logo">📐 China Hospitals Guide</a>
+            <a href="index.html" class="nav-logo">🏥 China Hospitals Guide</a>
             <ul class="nav-links" id="navLinks">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="hospitals.html">Hospitals</a></li>
                 <li><a href="services.html">Services</a></li>
-                <li><a href="how-it-works.html">Process</a></li>
+                <li><a href="how-it-works.html">How It Works</a></li>
                 <li><a href="blog/">Blog</a></li>
                 <li><a href="news/">News</a></li>
                 <li><a href="resources.html">Resources</a></li>
-<li><a href="contact.html">Contact</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
-            <a href="pricing.html" class="nav-cta">Pricing</a>
+            <a href="contact-new.html" class="nav-cta">Get Started</a>
             <div class="nav-toggle" id="navToggle">
                 <span></span>
                 <span></span>
@@ -308,8 +340,8 @@
                 <div class="step">
                     <div class="step-number">2</div>
                     <div class="step-content">
+                        <h2>📊 Receive Expert Analysis</h2>
                         <p>Our consulting team provides you with detailed analysis of your options: hospital comparisons, doctor credentials, treatment plans, and transparent cost estimates. You get professional medical consulting — not hospital marketing.</p>
-                        <p>Our consulting team provides you with detailed analysis of your options: hospital comparisons, doctor credentials, treatment plans, and transparent cost estimates. You get professional medical consulting ??not hospital marketing.</p>
                         <div class="step-features">
                             <div class="step-feature">Hospital comparison report</div>
                             <div class="step-feature">Doctor credentials verified</div>
@@ -323,8 +355,8 @@
                 <div class="step">
                     <div class="step-number">3</div>
                     <div class="step-content">
+                        <h2>✅ Choose & Approve</h2>
                         <p>You decide which hospital and treatment plan best fits your needs and budget. We handle all coordination: appointment scheduling, visa documentation, and travel logistics. Our consulting fee is clearly stated upfront — no hidden costs.</p>
-                        <p>You decide which hospital and treatment plan best fits your needs and budget. We handle all coordination: appointment scheduling, visa documentation, and travel logistics. Our consulting fee is clearly stated upfront ??no hidden costs.</p>
                         <div class="step-features">
                             <div class="step-feature">You make the final decision</div>
                             <div class="step-feature">Appointment coordination</div>
@@ -338,8 +370,8 @@
                 <div class="step">
                     <div class="step-number">✓</div>
                     <div class="step-content">
+                        <h2>✈️ Travel & Treatment</h2>
                         <p>We provide ongoing consulting support throughout your medical journey. Airport pickup coordination, interpreter arrangement, and 24/7 consulting hotline. We're your independent advocate — not the hospital's agent.</p>
-                        <p>We provide ongoing consulting support throughout your medical journey. Airport pickup coordination, interpreter arrangement, and 24/7 consulting hotline. We're your independent advocate ??not the hospital's agent.</p>
                         <div class="step-features">
                             <div class="step-feature">Airport pickup coordination</div>
                             <div class="step-feature">Medical interpreter</div>
@@ -456,8 +488,7 @@
             <p style="margin-top:10px;">Independent medical tourism consulting service. Not affiliated with any hospital.</p>
         </div>
     </footer>
-
-    <script>
+<script>
         document.getElementById('navToggle').addEventListener('click', function() {
             document.getElementById('navLinks').classList.toggle('active');
         });
