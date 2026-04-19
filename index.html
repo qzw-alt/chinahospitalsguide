@@ -270,27 +270,24 @@
         <a href="#contact" class="cta-button">Get Free Consultation</a>
         
         <!-- Trust Indicators -->
-        <div style="margin-top: 40px; display: flex; flex-wrap: wrap; justify-content: center; gap: 30px;">
-            <div style="text-align: center;"><div style="font-size: 2rem;">🏥</div><div style="color: white; font-weight: bold;">40+ Top Hospitals</div></div>
-            <div style="text-align: center;"><div style="font-size: 2rem;">⚕️</div><div style="color: white; font-weight: bold;">JCI Accredited</div></div>
-            <div style="text-align: center;"><div style="font-size: 2rem;">🌍</div><div style="color: white; font-weight: bold;">English Support</div></div>
-            <div style="text-align: center;"><div style="font-size: 2rem;">✓</div><div style="color: white; font-weight: bold;">500+ Patients Helped</div></div>
+        <div class="hero-trust">
+            <div class="hero-trust-item"><div class="hero-trust-icon">🏥</div><div class="hero-trust-text">40+ Top Hospitals</div></div>
+            <div class="hero-trust-item"><div class="hero-trust-icon">⚕️</div><div class="hero-trust-text">JCI Accredited</div></div>
+            <div class="hero-trust-item"><div class="hero-trust-icon">🌍</div><div class="hero-trust-text">English Support</div></div>
+            <div class="hero-trust-item"><div class="hero-trust-icon">✓</div><div class="hero-trust-text">500+ Patients Helped</div></div>
         </div>
         
         <!-- Hero Quick Form -->
-        <div style="margin-top: 40px; background: rgba(255,255,255,0.1); padding: 30px; border-radius: 20px; max-width: 600px; margin-left: auto; margin-right: auto; backdrop-filter: blur(10px);">
-            <h3 style="color: white; margin-bottom: 20px; font-size: 1.3rem;">🏥 Get Your Free Cost Estimate</h3>
-            <form id="heroForm" style="display: flex; flex-wrap: wrap; gap: 15px; justify-content: center;">
-                <input type="email" id="heroEmail" placeholder="Your email address" required 
-                    style="flex: 1; min-width: 200px; padding: 15px 20px; border: none; border-radius: 10px; font-size: 1rem;">
-                <input type="text" id="heroCondition" placeholder="What treatment do you need?" required
-                    style="flex: 1; min-width: 200px; padding: 15px 20px; border: none; border-radius: 10px; font-size: 1rem;">
-                
-                <button type="submit" class="cta-button" style="flex: 0 0 auto; margin: 0;">
+        <div class="hero-form-box">
+            <h3 class="hero-form-title">🏥 Get Your Free Cost Estimate</h3>
+            <form id="heroForm" class="hero-form">
+                <input type="email" id="heroEmail" placeholder="Your email address" required class="hero-form-input">
+                <input type="text" id="heroCondition" placeholder="What treatment do you need?" required class="hero-form-input">
+                <button type="submit" class="cta-button" style="margin: 0;">
                     Get Free Consultation →
                 </button>
             </form>
-            <p style="color: rgba(255,255,255,0.7); font-size: 0.85rem; margin-top: 15px;">
+            <p class="hero-form-note">
                 ✅ No spam. Response within 24 hours. 100% free.
             </p>
         </div>
@@ -361,26 +358,26 @@
     </section>
     
     <!-- Quick Access Section -->
-    <section style="background: white; padding: 40px 20px; box-shadow: 0 2px 20px rgba(0,0,0,0.08);">
-        <div style="max-width: 1000px; margin: 0 auto;">
-            <h2 style="text-align: center; color: #1e3c72; font-size: 1.6rem; margin-bottom: 30px;">Find Hospital by City</h2>
-            <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
-                <a href="hospitals.html?city=Beijing" style="display: inline-block; background: linear-gradient(135deg, #1e3c72, #2a5298); color: white; padding: 15px 30px; border-radius: 50px; text-decoration: none; font-weight: 600; transition: all 0.3s; box-shadow: 0 4px 15px rgba(30,60,114,0.3);">🏙️ Beijing</a>
-                <a href="hospitals.html?city=Shanghai" style="display: inline-block; background: linear-gradient(135deg, #1e3c72, #2a5298); color: white; padding: 15px 30px; border-radius: 50px; text-decoration: none; font-weight: 600; transition: all 0.3s; box-shadow: 0 4px 15px rgba(30,60,114,0.3);">🌆 Shanghai</a>
-                <a href="hospitals.html?city=Guangzhou" style="display: inline-block; background: linear-gradient(135deg, #1e3c72, #2a5298); color: white; padding: 15px 30px; border-radius: 50px; text-decoration: none; font-weight: 600; transition: all 0.3s; box-shadow: 0 4px 15px rgba(30,60,114,0.3);">🏙️ Guangzhou</a>
-                <a href="hospitals.html?city=Shenzhen" style="display: inline-block; background: linear-gradient(135deg, #1e3c72, #2a5298); color: white; padding: 15px 30px; border-radius: 50px; text-decoration: none; font-weight: 600; transition: all 0.3s; box-shadow: 0 4px 15px rgba(30,60,114,0.3);">🌃 Shenzhen</a>
-                <a href="hospitals.html?city=Hangzhou" style="display: inline-block; background: linear-gradient(135deg, #1e3c72, #2a5298); color: white; padding: 15px 30px; border-radius: 50px; text-decoration: none; font-weight: 600; transition: all 0.3s; box-shadow: 0 4px 15px rgba(30,60,114,0.3);">🌿 Hangzhou</a>
-                <a href="hospitals.html?city=Chengdu" style="display: inline-block; background: linear-gradient(135deg, #1e3c72, #2a5298); color: white; padding: 15px 30px; border-radius: 50px; text-decoration: none; font-weight: 600; transition: all 0.3s; box-shadow: 0 4px 15px rgba(30,60,114,0.3);">🦕 Chengdu</a>
+    <section class="quick-access">
+        <div class="quick-access-container">
+            <h2 class="quick-access-title">Find Hospital by City</h2>
+            <div class="city-buttons">
+                <a href="hospitals.html?city=Beijing" class="city-btn">🏙️ Beijing</a>
+                <a href="hospitals.html?city=Shanghai" class="city-btn">🌆 Shanghai</a>
+                <a href="hospitals.html?city=Guangzhou" class="city-btn">🏙️ Guangzhou</a>
+                <a href="hospitals.html?city=Shenzhen" class="city-btn">🌃 Shenzhen</a>
+                <a href="hospitals.html?city=Hangzhou" class="city-btn">🌿 Hangzhou</a>
+                <a href="hospitals.html?city=Chengdu" class="city-btn">🦕 Chengdu</a>
             </div>
             
-            <h2 style="text-align: center; color: #1e3c72; font-size: 1.6rem; margin: 40px 0 30px;">Or Browse by Department</h2>
-            <div style="display: flex; justify-content: center; gap: 12px; flex-wrap: wrap;">
-                <a href="hospitals.html?dept=cardiology" style="display: inline-block; background: #f8f9fa; color: #1e3c72; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: 500; border: 2px solid #1e3c72; transition: all 0.3s;">❤️ Cardiology</a>
-                <a href="hospitals.html?dept=oncology" style="display: inline-block; background: #f8f9fa; color: #1e3c72; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: 500; border: 2px solid #1e3c72; transition: all 0.3s;">🎗️ Oncology</a>
-                <a href="hospitals.html?dept=orthopedics" style="display: inline-block; background: #f8f9fa; color: #1e3c72; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: 500; border: 2px solid #1e3c72; transition: all 0.3s;">🦴 Orthopedics</a>
-                <a href="hospitals.html?dept=neurosurgery" style="display: inline-block; background: #f8f9fa; color: #1e3c72; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: 500; border: 2px solid #1e3c72; transition: all 0.3s;">🧠 Neurosurgery</a>
-                <a href="hospitals.html?dept=ivf" style="display: inline-block; background: #f8f9fa; color: #1e3c72; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: 500; border: 2px solid #1e3c72; transition: all 0.3s;">👶 IVF / Fertility</a>
-                <a href="hospitals.html?dept=pediatrics" style="display: inline-block; background: #f8f9fa; color: #1e3c72; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: 500; border: 2px solid #1e3c72; transition: all 0.3s;">🧒 Pediatrics</a>
+            <h2 class="quick-access-title">Or Browse by Department</h2>
+            <div class="dept-buttons">
+                <a href="hospitals.html?dept=cardiology" class="dept-btn">❤️ Cardiology</a>
+                <a href="hospitals.html?dept=oncology" class="dept-btn">🎗️ Oncology</a>
+                <a href="hospitals.html?dept=orthopedics" class="dept-btn">🦴 Orthopedics</a>
+                <a href="hospitals.html?dept=neurosurgery" class="dept-btn">🧠 Neurosurgery</a>
+                <a href="hospitals.html?dept=ivf" class="dept-btn">👶 IVF / Fertility</a>
+                <a href="hospitals.html?dept=pediatrics" class="dept-btn">🧒 Pediatrics</a>
             </div>
         </div>
     </section>
@@ -389,20 +386,20 @@
     <!-- Why Choose Us -->
     <section class="features">
         <h2 class="section-title">Why Patients Choose Professional Coordination</h2>        
-        <div style="background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); padding: 30px; border-radius: 15px; margin-bottom: 40px; text-align: center;">
-            <h3 style="color: #2e7d32; margin-bottom: 20px;">🏥 Recent Patient Outcomes</h3>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
-                <div style="background: white; padding: 20px; border-radius: 10px;">
-                    <div style="font-size: 1.8rem; color: #4CAF50; font-weight: bold;">✓ Successful</div>
-                    <div style="color: #666; font-size: 0.9rem;">Knee Replacement<br>Beijing</div>
+        <div class="outcomes-banner">
+            <h3 class="outcomes-title">🏥 Recent Patient Outcomes</h3>
+            <div class="outcomes-grid">
+                <div class="outcome-card">
+                    <div class="outcome-status">✓ Successful</div>
+                    <div class="outcome-detail">Knee Replacement<br>Beijing</div>
                 </div>
-                <div style="background: white; padding: 20px; border-radius: 10px;">
-                    <div style="font-size: 1.8rem; color: #4CAF50; font-weight: bold;">✓ Successful</div>
-                    <div style="color: #666; font-size: 0.9rem;">Heart Surgery<br>Shanghai</div>
+                <div class="outcome-card">
+                    <div class="outcome-status">✓ Successful</div>
+                    <div class="outcome-detail">Heart Surgery<br>Shanghai</div>
                 </div>
-                <div style="background: white; padding: 20px; border-radius: 10px;">
-                    <div style="font-size: 1.8rem; color: #4CAF50; font-weight: bold;">✓ Successful</div>
-                    <div style="color: #666; font-size: 0.9rem;">IVF Treatment<br>Guangzhou</div>
+                <div class="outcome-card">
+                    <div class="outcome-status">✓ Successful</div>
+                    <div class="outcome-detail">IVF Treatment<br>Guangzhou</div>
                 </div>
             </div>
         </div>
@@ -925,17 +922,17 @@
     </script>
     
     <!-- Mobile Fixed Bottom Bar -->
-    <div class="mobile-bottom-bar" style="display: none; position: fixed; bottom: 0; left: 0; right: 0; background: white; padding: 10px 15px; box-shadow: 0 -2px 10px rgba(0,0,0,0.1); z-index: 9998; justify-content: space-around; align-items: center;">
-        <a href="https://wa.me/447947060056" style="display: flex; flex-direction: column; align-items: center; color: #25D366; text-decoration: none; font-size: 0.75rem;">
-            <span style="font-size: 1.5rem;">💬</span>
+    <div class="mobile-bottom-bar">
+        <a href="https://wa.me/447947060056">
+            <span>💬</span>
             WhatsApp
         </a>
-        <a href="#contact" style="display: flex; flex-direction: column; align-items: center; color: #1e3c72; text-decoration: none; font-size: 0.75rem;">
-            <span style="font-size: 1.5rem;">📝</span>
+        <a href="#contact">
+            <span>📝</span>
             Form
         </a>
-        <a href="#contact" style="display: flex; flex-direction: column; align-items: center; color: #ff6b6b; text-decoration: none; font-size: 0.75rem;">
-            <span style="font-size: 1.5rem;">✉️</span>
+        <a href="#contact">
+            <span>✉️</span>
             Email
         </a>
     </div>
