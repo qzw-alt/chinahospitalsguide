@@ -36,26 +36,6 @@
         gtag('config', 'G-RVYZENK472');
     </script>
     
-    <!-- Facebook Pixel Code - TODO: Replace YOUR_PIXEL_ID with real Pixel ID when available -->
-    <!--
-    <script>
-        !function(f,b,e,v,n,t,s)
-        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-        n.queue=[];t=b.createElement(e);t.async=!0;
-        t.src=v;s=b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t,s)}(window, document,'script',
-        'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', 'YOUR_PIXEL_ID');
-        fbq('track', 'PageView');
-    </script>
-    <noscript>
-        <img height="1" width="1" style="display:none" 
-        src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1"/>
-    </noscript>
-    -->
-    
     <!-- EmailJS SDK -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script type="text/javascript">
@@ -318,11 +298,6 @@
                     // Show success
                     alert('Thank you! We\'ll send you a personalized cost estimate within 24 hours.');
                     document.getElementById('heroForm').reset();
-                    
-                    // Track conversion
-                    if (typeof fbq !== 'undefined') {
-                        fbq('track', 'Lead', { content_name: 'Hero Quick Form' });
-                    }
                     
                 } catch (error) {
                     console.error('Error:', error);
@@ -701,14 +676,7 @@
                 document.getElementById('inquiryForm').style.display = 'none';
                 document.getElementById('successMessage').style.display = 'block';
                 
-                // Track form submission with Facebook Pixel
-                if (typeof fbq !== 'undefined') {
-                    fbq('track', 'Lead', {
-                        content_name: 'Free Consultation',
-                        content_category: 'Medical Tourism Inquiry'
-                    });
-                }
-                
+
             } catch (error) {
                 console.error('Error:', error);
                 alert('Sorry, there was an error submitting your form. Please try again or contact us directly.');
