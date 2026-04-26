@@ -796,10 +796,10 @@ p {
         .faq-item.active .faq-toggle { transform: rotate(180deg); }
         
         /* Form */
-        .form-section { background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%); padding: 80px 20px; }
-        .form-section h2 { text-align: center; color: white; font-size: 2rem; margin-bottom: 15px; }
-        .form-subtitle { text-align: center; color: rgba(255,255,255,0.9); margin-bottom: 40px; font-size: 1.1rem; }
-        .form-container { max-width: 600px; margin: 0 auto; background: white; padding: 40px; border-radius: 20px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); }
+        .form-section { background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 60%, #3a6bc0 100%); padding: 100px 20px; position: relative; overflow: hidden; }
+        .form-section h2 { text-align: center; color: white; font-size: 2.2rem; margin-bottom: 12px; position: relative; }
+        .form-subtitle { text-align: center; color: rgba(255,255,255,0.85); margin-bottom: 48px; font-size: 1.05rem; font-weight: 300; position: relative; }
+        .form-container { max-width: 680px; margin: 0 auto; background: white; padding: 48px; border-radius: var(--radius-xl); box-shadow: var(--shadow-xl); position: relative; border: 1px solid var(--border); }
         .form-group { margin-bottom: 20px; }
         label { display: block; margin-bottom: 8px; font-weight: 600; color: var(--dark); }
         input, select, textarea { width: 100%; padding: 14px; border: 2px solid #e0e0e0; border-radius: 10px; font-size: 1rem; transition: border-color 0.3s; }
@@ -1285,37 +1285,6 @@ footer p {
 
 /* Form success styles */
 
-.form-section {
-    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 60%, #3a6bc0 100%);
-    padding: 100px 20px;
-    position: relative;
-    overflow: hidden;
-}
-.form-section h2 {
-    text-align: center;
-    color: white;
-    font-size: 2.2rem;
-    margin-bottom: 12px;
-    position: relative;
-}
-.form-subtitle {
-    text-align: center;
-    color: rgba(255,255,255,0.85);
-    margin-bottom: 48px;
-    font-size: 1.05rem;
-    font-weight: 300;
-    position: relative;
-}
-.form-container {
-    max-width: 680px;
-    margin: 0 auto;
-    background: white;
-    padding: 48px;
-    border-radius: var(--radius-xl);
-    box-shadow: var(--shadow-xl);
-    position: relative;
-    border: 1px solid var(--border);
-}
         .custom-form {
             display: flex;
             flex-direction: column;
@@ -1593,8 +1562,11 @@ footer p {
 .checklist-section {
             margin-bottom: 40px;
         }
-print {
-            body { background: white; }
+
+@media print {
+    body { background: white; }
+}
+
 .highlight-box {
             background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
             padding: 25px;
@@ -1921,21 +1893,28 @@ disabled {
 /* Hospitals CTA */
 .hospitals-cta-wrap {
     text-align: center;
-    margin-top: 30px;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
 }
 .hospitals-cta {
     background: var(--primary);
     color: white;
-    padding: 15px 40px;
+    padding: 16px 40px;
     border: none;
-    border-radius: 30px;
-    font-size: 1rem;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
     cursor: pointer;
     text-decoration: none;
     display: inline-block;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(30,60,114,0.3);
 }
 .hospitals-cta:hover {
     background: var(--secondary);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(30,60,114,0.4);
 }
 
 /* Risk Reversal Banner */
