@@ -2502,3 +2502,186 @@ disabled {
         max-width: 100%;
     }
 }
+
+/* ============================================
+   Patient Stories & Trust Section
+   ============================================ */
+
+/* Trust Stats Bar */
+.trust-stats {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    background: var(--white);
+    border-radius: var(--radius-xl);
+    padding: 30px 40px;
+    box-shadow: var(--shadow);
+    max-width: 900px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.trust-stat {
+    text-align: center;
+    padding: 10px 40px;
+    flex: 1;
+    min-width: 140px;
+}
+
+.trust-stat-number {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--primary);
+    line-height: 1;
+    font-family: 'Playfair Display', serif;
+}
+
+.trust-stat-label {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    margin-top: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.trust-stat-divider {
+    width: 1px;
+    height: 50px;
+    background: var(--border);
+    flex-shrink: 0;
+}
+
+/* Story Grid */
+.story-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 1100px;
+    margin: 0 auto 40px;
+}
+
+.story-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 32px 28px;
+    box-shadow: var(--shadow-sm);
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+}
+
+.story-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+    border-color: rgba(42, 82, 152, 0.2);
+}
+
+.story-card-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 16px;
+}
+
+.story-avatar {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 700;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
+
+.story-meta {
+    display: flex;
+    flex-direction: column;
+}
+
+.story-meta strong {
+    font-size: 1rem;
+    color: var(--dark);
+    font-family: 'Inter', sans-serif;
+}
+
+.story-meta span {
+    font-size: 0.85rem;
+    color: var(--text-light);
+}
+
+.story-treatment {
+    font-size: 0.85rem;
+    color: var(--primary);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-bottom: 12px;
+}
+
+.story-quote {
+    font-size: 0.95rem;
+    color: var(--text);
+    line-height: 1.6;
+    font-style: italic;
+    flex: 1;
+    margin-bottom: 20px;
+}
+
+.story-savings {
+    background: linear-gradient(135deg, #e8f5e9, #f1f8e9);
+    border-left: 4px solid var(--success);
+    padding: 14px 16px;
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    margin-bottom: 16px;
+}
+
+.savings-amount {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #2e7d32;
+    line-height: 1;
+}
+
+.savings-label {
+    font-size: 0.8rem;
+    color: #558b2f;
+    margin-top: 4px;
+}
+
+.story-footer {
+    text-align: center;
+}
+
+.story-footer span {
+    font-size: 0.9rem;
+    color: var(--primary);
+    font-weight: 600;
+}
+
+/* Stories CTA */
+.stories-cta {
+    text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .trust-stats {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .trust-stat-divider {
+        width: 80px;
+        height: 1px;
+    }
+    .story-grid {
+        grid-template-columns: 1fr;
+    }
+}
