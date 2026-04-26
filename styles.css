@@ -5,7 +5,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
+* { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+html { -webkit-text-size-adjust: 100%; }
+img { max-width: 100%; height: auto; display: block; }
+input, button, select, textarea { -webkit-appearance: none; appearance: none; font-family: inherit; }
 
 :root {
     --primary: #1a3a6b;
@@ -1035,20 +1038,20 @@ footer p {
         padding: 20px;
         margin-top: 30px;
     }
-    .badge {
-        font-size: 0.9rem;
+    .hospital-image {
+        height: 180px;
     }
     
-    /* Process */
-    .process {
-        padding: 60px 16px;
+    /* Stats */
+    .stats {
+        padding: 50px 16px;
     }
-    .process-steps {
-        grid-template-columns: 1fr;
-        gap: 16px;
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
     }
-    .process-step {
-        padding: 24px 20px;
+    .stat-number { 
+        font-size: 2.2rem; 
     }
     
     /* Testimonials */
@@ -1153,6 +1156,53 @@ footer p {
     .feature-card:active,
     .pricing-card:active {
         transform: scale(0.97);
+    }
+    
+    /* Lead Magnet mobile */
+    .lead-magnet {
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+    .lead-magnet-icon {
+        font-size: 2.5rem;
+    }
+    .lead-magnet-title {
+        font-size: 1.2rem;
+    }
+    .lead-magnet-btn {
+        padding: 12px 28px;
+        font-size: 1rem;
+    }
+    
+    /* Risk Banner mobile */
+    .risk-banner {
+        padding: 16px;
+        margin-bottom: 20px;
+    }
+    .risk-banner-icon {
+        font-size: 2rem;
+    }
+    .risk-banner-text strong {
+        font-size: 1rem;
+    }
+    .risk-banner-text p {
+        font-size: 0.85rem;
+    }
+    
+    /* Exit Popup mobile */
+    .exit-popup-content {
+        padding: 30px 20px;
+        margin: 0 16px;
+    }
+    .exit-popup-icon {
+        font-size: 3rem;
+    }
+    .exit-popup-title {
+        font-size: 1.4rem;
+    }
+    .exit-popup-cta {
+        padding: 14px 30px;
+        font-size: 1rem;
     }
 }
 
