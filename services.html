@@ -28,6 +28,9 @@
             margin: 16px auto 0;
             color: rgba(255,255,255,0.86);
         }
+        .page-hero h1 {
+            color: white;
+        }
         .service-shell {
             max-width: 1120px;
             margin: 0 auto;
@@ -107,6 +110,42 @@
                 justify-self: start;
             }
         }
+        @media (max-width: 768px) {
+            .page-hero {
+                padding: 130px 20px 64px;
+            }
+            .page-hero h1 {
+                font-size: 2.1rem;
+            }
+            .service-shell,
+            .service-note,
+            .service-cta {
+                padding-bottom: 56px;
+            }
+            .service-shell {
+                padding-top: 56px;
+            }
+            .phase-block,
+            .service-note-box,
+            .service-cta-box {
+                padding: 24px;
+                border-radius: 18px;
+            }
+            .phase-block {
+                gap: 20px;
+            }
+            .phase-grid {
+                grid-template-columns: 1fr;
+            }
+            .service-actions {
+                width: 100%;
+                flex-direction: column;
+            }
+            .service-actions .cta-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
     </style>
 </head>
 <body>
@@ -131,8 +170,8 @@
 </nav>
 
     <section class="page-hero">
-        <h1>What the service includes, and when it starts</h1>
-        <p>See what is included at each stage, from your first inquiry through preparation before hospital arrival.</p>
+        <h1>What we help with before you travel</h1>
+        <p>From first questions to records and appointment planning, here is what our support includes at each stage.</p>
     </section>
 
     <main class="service-shell">
@@ -140,20 +179,20 @@
             <div class="phase-side">
                 <div class="phase-label">Before payment</div>
                 <h2>Free case review</h2>
-                <p>For visitors who are still deciding whether China is a fit and which package makes sense.</p>
+                <p>For patients who want a first conversation before choosing a paid service.</p>
             </div>
             <div class="phase-grid">
                 <div class="phase-card">
                     <h3>Case intake</h3>
-                    <p>We review your condition, timeline, target city, and the type of help you are looking for.</p>
+                    <p>We review your condition, timeline, preferred city, and what kind of help you may need.</p>
                 </div>
                 <div class="phase-card">
                     <h3>Direction</h3>
-                    <p>We tell you whether the starter guide or standard package is the right next step.</p>
+                    <p>We explain whether a shortlist, cost guidance, or hands-on coordination is the best next step.</p>
                 </div>
                 <div class="phase-card">
                     <h3>Expectation setting</h3>
-                    <p>We explain what we do, what the hospital does, and when payment makes sense.</p>
+                    <p>We explain what support we provide, what stays with the hospital, and when it makes sense to move forward.</p>
                 </div>
             </div>
         </div>
@@ -162,20 +201,20 @@
             <div class="phase-side">
                 <div class="phase-label">Starter guide</div>
                 <h2>Research support for self-directed patients</h2>
-                <p>For patients who want structure and clarity before buying more hands-on help.</p>
+                <p>For patients who want a clearer shortlist and more confidence before committing to fuller support.</p>
             </div>
             <div class="phase-grid">
                 <div class="phase-card">
                     <h3>Hospital shortlist</h3>
-                    <p>We highlight likely hospitals and specialties that fit your case and city preferences.</p>
+                    <p>We highlight hospitals and specialties that are more likely to fit your case, budget, and city preferences.</p>
                 </div>
                 <div class="phase-card">
                     <h3>Decision support</h3>
-                    <p>We give you a cleaner way to compare likely options, costs, and travel implications.</p>
+                    <p>We help you compare likely options, expected costs, and the practical side of treatment travel.</p>
                 </div>
                 <div class="phase-card">
                     <h3>Preparation material</h3>
-                    <p>You receive structured guidance that helps you decide whether to continue on your own or upgrade to full coordination.</p>
+                    <p>You receive practical guidance that helps you decide whether to continue on your own or move into active coordination.</p>
                 </div>
             </div>
         </div>
@@ -184,20 +223,20 @@
             <div class="phase-side">
                 <div class="phase-label">Standard package</div>
                 <h2>Hands-on coordination before hospital arrival</h2>
-                <p>For patients ready to move from planning into appointments, record preparation, and travel coordination.</p>
+                <p>For patients who want help getting records ready, arranging appointments, and preparing for hospital arrival.</p>
             </div>
             <div class="phase-grid">
                 <div class="phase-card">
                     <h3>Record handling</h3>
-                    <p>We help prepare and translate records so the receiving team has useful information before the first appointment.</p>
+                    <p>We help prepare and translate records so the hospital side receives useful information before the first appointment.</p>
                 </div>
                 <div class="phase-card">
                     <h3>Appointment support</h3>
-                    <p>We coordinate with the hospital side to help you secure the right consultation and next step.</p>
+                    <p>We help coordinate with the hospital side so you can move toward the right consultation and next step.</p>
                 </div>
                 <div class="phase-card">
                     <h3>Pre-arrival planning</h3>
-                    <p>We guide key logistics before hospital arrival so the trip starts with less friction.</p>
+                    <p>We guide the key practical details before hospital arrival so the trip starts with less uncertainty.</p>
                 </div>
             </div>
         </div>
@@ -206,7 +245,7 @@
             <div class="phase-side">
                 <div class="phase-label">What is not included</div>
                 <h2>Boundaries of the service</h2>
-                <p>Clear boundaries build trust and reduce confusion during payment.</p>
+                <p>Clear boundaries help patients understand exactly what they are paying for.</p>
             </div>
             <div class="phase-grid">
                 <div class="phase-card">
@@ -227,16 +266,16 @@
 
     <section class="service-note">
         <div class="service-note-box">
-            <h2 class="section-title">Clear Service Stages</h2>
-            <p class="section-lead">Each stage is explained clearly so you know what is included before payment, after payment, and before your hospital visit begins.</p>
+            <h2 class="section-title">Clear, practical support</h2>
+            <p class="section-lead">We keep the service clear so you know what is included, what to prepare, and what happens next.</p>
         </div>
     </section>
 
     <section class="service-cta">
         <div class="service-cta-box">
             <div>
-                <h2>Ready for the next step?</h2>
-                <p>Move to pricing if you are ready to buy, or start a free case review if you want help choosing the right package first.</p>
+                <h2>Ready to talk through your case?</h2>
+                <p>Start with a free case review if you are still deciding, or go to pricing if you already know you want support.</p>
             </div>
             <div class="service-actions">
                 <a href="pricing.html" class="cta-button">See Pricing</a>

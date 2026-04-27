@@ -38,6 +38,7 @@ body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.65;
     color: var(--text);
+    background: var(--bg);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -145,10 +146,23 @@ p {
             transition: all 0.3s;
         }
         
-        .nav-cta:hover {
-            background: #ff5252;
-            transform: translateY(-2px);
-        }
+.nav-cta:hover {
+    background: #ff5252;
+    transform: translateY(-2px);
+}
+
+.site-footer {
+    background: #f7f9fc;
+    border-top: 1px solid #e5eaf1;
+}
+
+.site-footer a {
+    transition: color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+}
+
+.site-footer a:hover {
+    color: var(--primary) !important;
+}
         
         /* Mobile Menu Toggle */
         .nav-toggle {
@@ -167,33 +181,48 @@ p {
         }
         
 @media (max-width: 768px) {
+    .nav-container {
+        height: 64px;
+        padding: 0 16px;
+    }
+
     .nav-toggle {
         display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 42px;
+        height: 42px;
+        border-radius: 12px;
+        background: rgba(255,255,255,0.08);
     }
     
     .nav-logo {
-        font-size: 1.2rem;
+        font-size: 1.05rem;
+        max-width: calc(100% - 64px);
+        line-height: 1.15;
     }
     
     .nav-links {
         position: absolute;
-        top: 70px;
-        left: 0;
-        right: 0;
-        background: rgba(26, 58, 107, 0.98);
+        top: 72px;
+        left: 12px;
+        right: 12px;
+        background: rgba(20, 47, 88, 0.98);
         flex-direction: column;
         max-height: 0;
         overflow: hidden;
-        transition: max-height 0.3s ease;
-        padding: 0;
+        transition: max-height 0.3s ease, padding 0.3s ease;
+        padding: 0 0;
         backdrop-filter: blur(12px);
         -webkit-backdrop-filter: blur(12px);
         box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        border-radius: 18px;
+        border: 1px solid rgba(255,255,255,0.08);
     }
     
     .nav-links.active {
-        max-height: 500px;
-        padding: 8px 0;
+        max-height: 520px;
+        padding: 8px 0 12px;
     }
     
     .nav-links li {
@@ -201,11 +230,23 @@ p {
     }
     
     .nav-links a {
-        padding: 14px 20px;
+        padding: 14px 18px;
         border-bottom: 1px solid rgba(255,255,255,0.08);
         display: block;
-        text-align: center;
+        text-align: left;
         font-size: 0.95rem;
+        margin: 0 8px;
+        border-radius: 12px;
+        border-bottom: 0;
+    }
+
+    .nav-links a.active::after {
+        display: none;
+    }
+
+    .nav-links a.active {
+        background: rgba(255,255,255,0.12);
+        color: white;
     }
     
     .nav-links .nav-cta-mobile {
@@ -223,6 +264,42 @@ p {
     
     .nav-cta {
         display: none;
+    }
+
+    .site-footer {
+        margin-top: 36px !important;
+        padding: 32px 16px 24px !important;
+    }
+
+    .site-footer > div > p:first-of-type {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        line-height: 1.4 !important;
+        margin-bottom: 18px !important;
+    }
+
+    .site-footer > div > p:first-of-type a {
+        margin: 0 !important;
+        padding: 6px 10px;
+        border-radius: 999px;
+        background: white;
+        box-shadow: var(--shadow-sm);
+    }
+
+    .site-footer [style*='display:grid'] {
+        grid-template-columns: 1fr !important;
+        gap: 18px !important;
+        text-align: center !important;
+    }
+
+    .site-footer [style*='display:grid'] p {
+        line-height: 1.7 !important;
+    }
+
+    .site-footer [style*='display:grid'] a {
+        margin: 4px 6px !important;
     }
 }
         
@@ -1376,6 +1453,10 @@ footer p {
     color: var(--text);
     font-family: 'Inter', sans-serif;
 }
+.form-group textarea {
+    min-height: 140px;
+    resize: vertical;
+}
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
@@ -1895,6 +1976,10 @@ disabled {
             border-radius: 8px;
             cursor: pointer;
         }
+.radio-item span {
+            display: block;
+            line-height: 1.55;
+        }
 /* ============================================
    v2.1 Structural Improvements
    Extracted inline styles to classes
@@ -2278,43 +2363,44 @@ disabled {
 
 /* Band - colored background section */
 .band {
-    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-    color: white;
+    background: linear-gradient(180deg, #f5f8fc 0%, #edf3fa 100%);
+    color: var(--text);
     padding: 80px 20px;
 }
 
 .band .section-title {
-    color: white;
+    color: var(--dark);
 }
 
 .band .section-lead {
-    color: rgba(255,255,255,0.85);
+    color: var(--text-light);
 }
 
 .band .journey-card {
-    background: rgba(255,255,255,0.1);
-    backdrop-filter: blur(8px);
-    border: 1px solid rgba(255,255,255,0.2);
+    background: white;
+    backdrop-filter: none;
+    border: 1px solid rgba(30, 60, 114, 0.08);
     border-radius: 12px;
     padding: 28px 20px;
     text-align: center;
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
 }
 
 .band .journey-card h3 {
-    color: #ffffff;
+    color: var(--primary);
     font-size: 1rem;
     margin-bottom: 8px;
 }
 
 .band .journey-card p {
-    color: rgba(255,255,255,0.82);
+    color: var(--text);
     font-size: 0.9rem;
 }
 
 .band .step-badge {
     width: 36px;
     height: 36px;
-    background: rgba(255,255,255,0.2);
+    background: var(--primary);
     color: white;
     border-radius: 50%;
     display: flex;

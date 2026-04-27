@@ -20,6 +20,9 @@
             margin: 16px auto 0;
             color: rgba(255,255,255,0.86);
         }
+        .case-hero h1 {
+            color: white;
+        }
         .case-shell {
             max-width: 980px;
             margin: 0 auto;
@@ -33,6 +36,9 @@
         }
         .case-intro p {
             margin-bottom: 10px;
+        }
+        .case-intro p:last-child {
+            margin-bottom: 0;
         }
         .case-grid {
             display: grid;
@@ -51,6 +57,9 @@
             color: var(--primary);
             margin-bottom: 12px;
         }
+        .case-panel p {
+            color: var(--text-light);
+        }
         .case-panel ul {
             list-style: none;
             margin: 18px 0 0;
@@ -66,6 +75,42 @@
         @media (max-width: 900px) {
             .case-grid {
                 grid-template-columns: 1fr;
+            }
+        }
+        @media (max-width: 768px) {
+            .case-hero {
+                padding: 130px 20px 64px;
+            }
+            .case-hero h1 {
+                font-size: 2.1rem;
+            }
+            .case-shell {
+                padding: 48px 20px 56px;
+            }
+            .case-hero p {
+                font-size: 1rem;
+            }
+            .case-intro,
+            .case-panel {
+                padding: 22px;
+                border-radius: 18px;
+            }
+            .case-panel h2 {
+                font-size: 1.55rem;
+            }
+            .link-actions {
+                flex-direction: column;
+            }
+            .link-actions .cta-button,
+            .submit-btn {
+                width: 100%;
+                text-align: center;
+            }
+            .privacy-note {
+                text-align: left;
+            }
+            .radio-item {
+                padding: 14px;
             }
         }
     </style>
@@ -93,13 +138,13 @@
 
     <section class="case-hero">
         <h1>Start your case review</h1>
-        <p>This is the best first step for most new visitors. Tell us your case, and we will help you choose the right service path before you pay for more support.</p>
+        <p>Tell us about your case and we will help you understand the right next step before you commit to more support.</p>
     </section>
 
     <main class="case-shell">
         <div class="case-intro">
-            <p><strong>Use this form if:</strong> you are a new patient, you want guidance before choosing a package, or you already paid and need to hand off your case details cleanly.</p>
-            <p><strong>Tip:</strong> If you already paid, mention the package in your message so we can move you into the correct next step faster.</p>
+            <p><strong>Use this form if:</strong> you are a new patient, want guidance before choosing a package, or already paid and need to hand off your case details.</p>
+            <p><strong>Tip:</strong> If you already paid, mention the package in your message so we can move faster.</p>
         </div>
 
         <div class="case-grid">
@@ -219,6 +264,7 @@
 
             <div class="case-panel">
                 <h2>What happens after you submit</h2>
+                <p>We keep the next step simple and let you know the most useful action first.</p>
                 <ul>
                     <li>We review your case details and timeline.</li>
                     <li>If you are undecided, we recommend the right package.</li>
