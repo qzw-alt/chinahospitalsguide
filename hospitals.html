@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Top Hospitals in China for International Patients (2026) | China Hospitals Guide</title>
+    <title>Hospitals in China for International Patients (2026) | China Hospitals Guide</title>
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Top Hospitals in China 2026">
-    <meta name="twitter:description" content="Guide to the best JCI-accredited hospitals in China. English support, international departments, quality care.">
+    <meta name="twitter:title" content="Hospitals in China for International Patients (2026)">
+    <meta name="twitter:description" content="Compare hospitals in Beijing, Shanghai, Guangzhou, and Shenzhen by specialty, international departments, and practical planning details.">
     <meta name="twitter:image" content="https://chinahospitalsguide.com/og-image.jpg">
-    <meta name="description" content="Browse verified Chinese hospitals with international departments. Filter by specialty—cardiology, orthopedics, oncology, IVF, and more. All hospitals accept foreign patients.">
+    <meta name="description" content="Compare hospitals in China for international patients. Browse hospitals in Beijing, Shanghai, Guangzhou, and Shenzhen by specialty, international departments, and practical planning details.">
     <link rel="canonical" href="https://chinahospitalsguide.com/hospitals.html">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -280,6 +280,47 @@
             border-radius: 0 8px 8px 0;
             max-width: 1200px;
         }
+        .assist-strip {
+            max-width: 1200px;
+            margin: 0 auto 2rem;
+            padding: 0 2rem;
+        }
+        .assist-box {
+            background: linear-gradient(135deg, #18345f 0%, #2a5298 100%);
+            color: white;
+            border-radius: 18px;
+            padding: 1.5rem;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 1rem;
+            align-items: center;
+        }
+        .assist-box p {
+            opacity: 0.92;
+            margin-top: 0.4rem;
+        }
+        .assist-actions {
+            display: flex;
+            justify-content: flex-end;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+        .assist-btn {
+            display: inline-block;
+            padding: 0.75rem 1.1rem;
+            border-radius: 999px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+        .assist-btn.primary {
+            background: white;
+            color: var(--primary);
+        }
+        .assist-btn.secondary {
+            border: 1px solid rgba(255,255,255,0.35);
+            color: white;
+        }
         footer {
             background: var(--primary);
             color: white;
@@ -292,6 +333,15 @@
             }
             .page-header h1 {
                 font-size: 1.8rem;
+            }
+            .assist-strip {
+                padding: 0 1rem;
+            }
+            .assist-box {
+                grid-template-columns: 1fr;
+            }
+            .assist-actions {
+                justify-content: flex-start;
             }
         }
         .navbar { background: rgba(30, 60, 114, 0.95); backdrop-filter: blur(10px); padding: 0; position: fixed; top: 0; left: 0; right: 0; z-index: 1000; box-shadow: 0 2px 20px rgba(0,0,0,0.1); }
@@ -391,8 +441,8 @@
 </nav>
 
     <header class="page-header">
-        <h1>Find Hospitals by Region & Specialty</h1>
-        <p>34+ world-class hospitals across Beijing, Shanghai, Guangzhou & Pearl River Delta. Filter by region, then click specialty tags to narrow down.</p>
+        <h1>Hospitals in China for International Patients</h1>
+        <p>Compare hospitals in Beijing, Shanghai, Guangzhou, Shenzhen, and other major cities by specialty, international support, and practical planning details.</p>
     </header>
 
     <section class="filter-section">
@@ -414,8 +464,21 @@
     <div class="results-count" id="resultsCount">Showing all 50 hospitals</div>
 
     <div class="disclaimer">
-        <p><strong>Disclaimer:</strong> All hospital information and cost estimates are based on publicly available data and patient feedback. Actual services, availability, and fees may vary. Please contact the hospital's international department directly for the most current and accurate information.</p>
+        <p><strong>Disclaimer:</strong> Hospital information and cost references are based on publicly available information and may change. Use this page to compare options first, then confirm current details with the hospital or ask us to help you narrow the shortlist.</p>
     </div>
+
+    <section class="assist-strip">
+        <div class="assist-box">
+            <div>
+                <h2>Need help narrowing the shortlist?</h2>
+                <p>If you already know the specialty you need, we can help you compare hospitals, likely costs, and the next practical step before you travel.</p>
+            </div>
+            <div class="assist-actions">
+                <a href="contact-new.html" class="assist-btn primary">Start Case Review</a>
+                <a href="services.html" class="assist-btn secondary">See Services</a>
+            </div>
+        </div>
+    </section>
 
     <main class="hospitals-section">
         <div class="hospital-grid" id="hospitalGrid"></div>
