@@ -2291,6 +2291,41 @@ disabled {
     color: rgba(255,255,255,0.85);
 }
 
+.band .journey-card {
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 12px;
+    padding: 28px 20px;
+    text-align: center;
+}
+
+.band .journey-card h3 {
+    color: #ffffff;
+    font-size: 1rem;
+    margin-bottom: 8px;
+}
+
+.band .journey-card p {
+    color: rgba(255,255,255,0.82);
+    font-size: 0.9rem;
+}
+
+.band .step-badge {
+    width: 36px;
+    height: 36px;
+    background: rgba(255,255,255,0.2);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.9rem;
+    margin: 0 auto 14px;
+    border: 1px solid rgba(255,255,255,0.3);
+}
+
 /* Package Grid */
 .package-grid {
     display: grid;
