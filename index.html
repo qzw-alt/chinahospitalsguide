@@ -98,13 +98,14 @@
             padding: 80px 20px;
         }
         .band {
-            background: linear-gradient(180deg, #f6f8fb 0%, #eef4fb 100%);
+            background: linear-gradient(135deg, #1e3c6e 0%, #2a5298 100%);
+            color: white;
         }
         .section-lead {
             max-width: 760px;
             margin: 0 auto 40px;
             text-align: center;
-            color: #5f6b7b;
+            color: rgba(255,255,255,0.85);
         }
         .journey-grid,
         .choice-grid,
@@ -119,10 +120,17 @@
         .package-card,
         .proof-card {
             background: white;
-            border: 1px solid rgba(30, 60, 114, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.12);
             border-radius: 20px;
             padding: 28px;
             box-shadow: 0 12px 36px rgba(16, 24, 40, 0.08);
+        }
+        .journey-card h3,
+        .choice-card h3,
+        .package-card h3,
+        .proof-card h3 {
+            color: #1e3c6e;
+            margin-bottom: 10px;
         }
         .step-badge {
             display: inline-flex;
@@ -135,13 +143,6 @@
             color: white;
             font-weight: 700;
             margin-bottom: 16px;
-        }
-        .journey-card h3,
-        .choice-card h3,
-        .package-card h3,
-        .proof-card h3 {
-            color: var(--primary);
-            margin-bottom: 10px;
         }
         .choice-card ul,
         .package-card ul {
