@@ -85,6 +85,16 @@
         .compare-card li:last-child {
             border-bottom: 0;
         }
+        .payment-note {
+            margin-top: 14px;
+            font-size: 0.92rem;
+            color: #607084;
+        }
+        .payment-note a {
+            color: var(--primary);
+            font-weight: 600;
+            text-decoration: none;
+        }
         .pricing-band {
             background: linear-gradient(180deg, #f7f9fc 0%, #eef4fb 100%);
             border-radius: 26px;
@@ -191,6 +201,7 @@
                         hostedButtonId: "K4HNCDD7GDS5C"
                     }).render("#paypal-container-K4HNCDD7GDS5C");
                 </script>
+                <p class="payment-note">Already paid for this package? <a href="contact-new.html?paid=1&package=Starter%20Guide%20($30)&source=pricing">Open the intake form</a>.</p>
             </div>
 
             <div class="pricing-card-local featured">
@@ -209,6 +220,7 @@
                         hostedButtonId: "ZBY36JV2X5A3U"
                     }).render("#paypal-container-ZBY36JV2X5A3U");
                 </script>
+                <p class="payment-note">Already paid for this package? <a href="contact-new.html?paid=1&package=Full%20Consultation%20($299)&source=pricing">Open the intake form</a>.</p>
             </div>
         </div>
     </main>
