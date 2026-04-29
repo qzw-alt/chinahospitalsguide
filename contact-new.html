@@ -258,7 +258,7 @@
                                 <span><strong>Starter Guide ($30)</strong> - research-oriented support</span>
                             </label>
                             <label class="radio-item">
-                                <input type="radio" name="package" value="Full Consultation ($299)">
+                                <input type="radio" name="package" value="Standard Package ($299)">
                                 <span><strong>Standard Package ($299)</strong> - active coordination before hospital arrival</span>
                             </label>
                         </div>
@@ -386,21 +386,34 @@
             };
 
             try {
-                await emailjs.send('service_0gb6hmx', 'template_ezmtqvb', formData);
                 const sheetEndpoint = window.CHG_FORM_DESTINATIONS && window.CHG_FORM_DESTINATIONS.googleSheetsWebhookUrl;
+                const submitTasks = [
+                    emailjs.send('service_0gb6hmx', 'template_ezmtqvb', formData)
+                ];
+
                 if (sheetEndpoint) {
                     const sheetBody = new URLSearchParams(formData);
-                    fetch(sheetEndpoint, {
-                        method: 'POST',
-                        mode: 'no-cors',
-                        headers: {
-                            'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
-                        },
-                        body: sheetBody.toString()
-                    }).catch(function() {
-                        // Best-effort sync only; email delivery remains the primary channel.
-                    });
+                    submitTasks.push(
+                        fetch(sheetEndpoint, {
+                            method: 'POST',
+                            mode: 'no-cors',
+                            headers: {
+                                'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
+                            },
+                            body: sheetBody.toString()
+                        })
+                    );
                 }
+
+                const results = await Promise.allSettled(submitTasks);
+                const hasSuccessfulDelivery = results.some(function(result) {
+                    return result.status === 'fulfilled';
+                });
+
+                if (!hasSuccessfulDelivery) {
+                    throw new Error('All submission channels failed.');
+                }
+
                 document.getElementById('consultForm').style.display = 'none';
                 document.getElementById('successMessage').style.display = 'block';
             } catch (error) {
