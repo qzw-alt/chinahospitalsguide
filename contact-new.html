@@ -7,6 +7,7 @@
     <meta name="description" content="Start your case review and get guidance on the right service path for treatment in China.">
     <link rel="canonical" href="https://chinahospitalsguide.com/contact-new.html">
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="scripts/form-destinations.js"></script>
     <link rel="stylesheet" href="styles.css">
     <style>
         .case-hero {
@@ -19,6 +20,9 @@
             max-width: 720px;
             margin: 16px auto 0;
             color: rgba(255,255,255,0.86);
+        }
+        .case-hero h1 {
+            color: white;
         }
         .case-shell {
             max-width: 980px;
@@ -33,6 +37,17 @@
         }
         .case-intro p {
             margin-bottom: 10px;
+        }
+        .case-intro p:last-child {
+            margin-bottom: 0;
+        }
+        .case-intro strong.note-pill {
+            display: inline-block;
+            margin-bottom: 10px;
+            padding: 6px 10px;
+            border-radius: 999px;
+            background: rgba(30, 60, 114, 0.08);
+            color: var(--primary);
         }
         .case-grid {
             display: grid;
@@ -51,6 +66,9 @@
             color: var(--primary);
             margin-bottom: 12px;
         }
+        .case-panel p {
+            color: var(--text-light);
+        }
         .case-panel ul {
             list-style: none;
             margin: 18px 0 0;
@@ -66,6 +84,42 @@
         @media (max-width: 900px) {
             .case-grid {
                 grid-template-columns: 1fr;
+            }
+        }
+        @media (max-width: 768px) {
+            .case-hero {
+                padding: 130px 20px 64px;
+            }
+            .case-hero h1 {
+                font-size: 2.1rem;
+            }
+            .case-shell {
+                padding: 48px 20px 56px;
+            }
+            .case-hero p {
+                font-size: 1rem;
+            }
+            .case-intro,
+            .case-panel {
+                padding: 22px;
+                border-radius: 18px;
+            }
+            .case-panel h2 {
+                font-size: 1.55rem;
+            }
+            .link-actions {
+                flex-direction: column;
+            }
+            .link-actions .cta-button,
+            .submit-btn {
+                width: 100%;
+                text-align: center;
+            }
+            .privacy-note {
+                text-align: left;
+            }
+            .radio-item {
+                padding: 14px;
             }
         }
     </style>
@@ -93,19 +147,23 @@
 
     <section class="case-hero">
         <h1>Start your case review</h1>
-        <p>This is the best first step for most new visitors. Tell us your case, and we will help you choose the right service path before you pay for more support.</p>
+        <p>Tell us about your case and we will help you understand the right next step before you commit to more support.</p>
     </section>
 
     <main class="case-shell">
         <div class="case-intro">
-            <p><strong>Use this form if:</strong> you are a new patient, you want guidance before choosing a package, or you already paid and need to hand off your case details cleanly.</p>
-            <p><strong>Tip:</strong> If you already paid, mention the package in your message so we can move you into the correct next step faster.</p>
+            <p><strong>Use this form if:</strong> you are a new patient, want guidance before choosing a package, or already paid and need to hand off your case details.</p>
+            <p><strong>Tip:</strong> If you already paid, mention the package in your message so we can move faster.</p>
         </div>
 
         <div class="case-grid">
             <div class="case-panel">
                 <h2>Case review form</h2>
                 <form id="consultForm">
+                    <input type="hidden" id="payment_status" name="payment_status" value="Not paid yet">
+                    <input type="hidden" id="lead_status" name="lead_status" value="New lead">
+                    <input type="hidden" id="follow_up_stage" name="follow_up_stage" value="Awaiting review">
+                    <input type="hidden" id="source_page" name="source_page" value="contact-new">
                     <div class="form-row">
                         <div class="form-group">
                             <label>First Name <span>*</span></label>
@@ -200,7 +258,7 @@
                                 <span><strong>Starter Guide ($30)</strong> - research-oriented support</span>
                             </label>
                             <label class="radio-item">
-                                <input type="radio" name="package" value="Full Consultation ($299)">
+                                <input type="radio" name="package" value="Standard Package ($299)">
                                 <span><strong>Standard Package ($299)</strong> - active coordination before hospital arrival</span>
                             </label>
                         </div>
@@ -219,6 +277,7 @@
 
             <div class="case-panel">
                 <h2>What happens after you submit</h2>
+                <p>We keep the next step simple and let you know the most useful action first.</p>
                 <ul>
                     <li>We review your case details and timeline.</li>
                     <li>If you are undecided, we recommend the right package.</li>
@@ -272,6 +331,36 @@
     <script>
         emailjs.init("5fO60dvOGsKzPk_Ir");
 
+        const urlParams = new URLSearchParams(window.location.search);
+        const prefilledPackage = urlParams.get('package');
+        const paidFlag = urlParams.get('paid');
+        const sourceParam = urlParams.get('source');
+        const paymentStatusInput = document.getElementById('payment_status');
+        const sourcePageInput = document.getElementById('source_page');
+        const introBox = document.querySelector('.case-intro');
+
+        if (sourceParam) {
+            sourcePageInput.value = sourceParam;
+        }
+
+        if (prefilledPackage) {
+            const packageOptions = document.querySelectorAll('input[name="package"]');
+            packageOptions.forEach(function(option) {
+                if (option.value === prefilledPackage) {
+                    option.checked = true;
+                }
+            });
+        }
+
+        if (paidFlag === '1') {
+            paymentStatusInput.value = 'Paid - awaiting confirmation';
+            introBox.innerHTML = `
+                <p><strong class="note-pill">Payment flow detected</strong></p>
+                <p><strong>Use this form if:</strong> you already paid and want to hand off your case details, or you want us to begin the next step faster.</p>
+                <p><strong>Tip:</strong> Keep the selected package below and include your main medical need so we can match your payment to the right case.</p>
+            `;
+        }
+
         document.getElementById('consultForm').addEventListener('submit', async function(e) {
             e.preventDefault();
 
@@ -289,12 +378,42 @@
                 medical_details: document.getElementById('medical_details').value,
                 source: document.getElementById('source').value || 'Not specified',
                 package: document.querySelector('input[name="package"]:checked')?.value || 'Not specified',
+                payment_status: document.getElementById('payment_status').value,
+                lead_status: document.getElementById('lead_status').value,
+                follow_up_stage: document.getElementById('follow_up_stage').value,
                 submit_time: new Date().toLocaleString(),
-                source_page: 'contact-new'
+                source_page: document.getElementById('source_page').value
             };
 
             try {
-                await emailjs.send('service_0gb6hmx', 'template_ezmtqvb', formData);
+                const sheetEndpoint = window.CHG_FORM_DESTINATIONS && window.CHG_FORM_DESTINATIONS.googleSheetsWebhookUrl;
+                const submitTasks = [
+                    emailjs.send('service_0gb6hmx', 'template_ezmtqvb', formData)
+                ];
+
+                if (sheetEndpoint) {
+                    const sheetBody = new URLSearchParams(formData);
+                    submitTasks.push(
+                        fetch(sheetEndpoint, {
+                            method: 'POST',
+                            mode: 'no-cors',
+                            headers: {
+                                'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
+                            },
+                            body: sheetBody.toString()
+                        })
+                    );
+                }
+
+                const results = await Promise.allSettled(submitTasks);
+                const hasSuccessfulDelivery = results.some(function(result) {
+                    return result.status === 'fulfilled';
+                });
+
+                if (!hasSuccessfulDelivery) {
+                    throw new Error('All submission channels failed.');
+                }
+
                 document.getElementById('consultForm').style.display = 'none';
                 document.getElementById('successMessage').style.display = 'block';
             } catch (error) {

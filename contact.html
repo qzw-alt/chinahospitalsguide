@@ -28,6 +28,9 @@
             margin: 16px auto 0;
             color: rgba(255,255,255,0.86);
         }
+        .contact-hero h1 {
+            color: white;
+        }
         .contact-shell {
             max-width: 1120px;
             margin: 0 auto;
@@ -81,6 +84,31 @@
             gap: 16px;
             margin-top: 24px;
         }
+        @media (max-width: 768px) {
+            .contact-hero {
+                padding: 130px 20px 64px;
+            }
+            .contact-hero h1 {
+                font-size: 2.1rem;
+            }
+            .contact-shell {
+                padding: 56px 20px;
+            }
+            .path-card,
+            .detail-card,
+            .contact-band {
+                padding: 24px;
+                border-radius: 18px;
+            }
+            .link-actions {
+                flex-direction: column;
+            }
+            .link-actions .cta-button,
+            .path-card .cta-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
     </style>
 </head>
 <body>
@@ -105,8 +133,8 @@
 </nav>
 
     <section class="contact-hero">
-        <h1>Choose the contact path that matches your stage</h1>
-        <p>Choose the best contact option for your situation, whether you are making a new inquiry, continuing a paid case, or asking an urgent question.</p>
+        <h1>Talk to us in the way that fits your situation</h1>
+        <p>Whether you are making a new inquiry, continuing a paid case, or asking an urgent question, start in the right place here.</p>
     </section>
 
     <main class="contact-shell">

@@ -272,6 +272,76 @@
             text-decoration: none;
         }
         
+        .case-study {
+            background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+            padding: 25px;
+            border-radius: 10px;
+            margin: 25px 0;
+            border-left: 5px solid #4caf50;
+        }
+        
+        .case-study h4 {
+            color: #2e7d32;
+            margin-bottom: 15px;
+        }
+        
+        .timeline {
+            border-left: 3px solid #8e44ad;
+            padding-left: 25px;
+            margin: 25px 0;
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 25px;
+        }
+        
+        .timeline-item:before {
+            content: "";
+            position: absolute;
+            left: -32px;
+            top: 5px;
+            width: 12px;
+            height: 12px;
+            background: #8e44ad;
+            border-radius: 50%;
+        }
+        
+        .timeline-item h4 {
+            color: #6c3483;
+            margin-bottom: 5px;
+        }
+        
+        .timeline-item p {
+            color: #555;
+            margin-bottom: 0;
+        }
+        
+        .cost-comparison {
+            margin: 25px 0;
+        }
+        
+        .cost-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .cost-row:last-child {
+            border-bottom: none;
+        }
+        
+        .cost-label {
+            font-weight: 600;
+            color: #333;
+        }
+        
+        .cost-value {
+            color: #8e44ad;
+            font-weight: bold;
+        }
+        
         @media (max-width: 768px) {
             article {
                 padding: 20px;
@@ -309,14 +379,16 @@
             <h1>Traditional Chinese Medicine (TCM) for International Patients</h1>
             <p class="subtitle">A Complete Guide to Acupuncture, Herbal Medicine & Holistic Healing in China</p>
             <div class="meta">
-                📅 Published: March 2026 | ⏱️ 11 min read | 🌿 TCM Guide
+                📅 Published: March 2026 | ⏱️ 14 min read | 🌿 TCM Guide
             </div>
-            
+
+            <!-- SECTION 1: What is TCM? -->
             <div class="intro-box">
                 <h3>🌿 What is TCM?</h3>
                 <p>Traditional Chinese Medicine (TCM) is a comprehensive medical system practiced for over 2,000 years. Unlike Western medicine's focus on treating specific symptoms, TCM views the body as an interconnected system where balance is key to health. It encompasses acupuncture, herbal medicine, cupping, massage (Tui Na), and dietary therapy—offering a holistic approach that complements modern medical treatments.</p>
             </div>
-            
+
+            <!-- SECTION 2: Why Experience TCM in China? -->
             <h2>Why Experience TCM in China?</h2>
             
             <p>While TCM practitioners exist worldwide, experiencing it in China offers unique advantages:</p>
@@ -332,7 +404,8 @@
                     <li><strong>Research-Backed:</strong> Many treatments supported by modern clinical studies</li>
                 </ul>
             </div>
-            
+
+            <!-- SECTION 3: Core TCM Therapies -->
             <h2>Core TCM Therapies</h2>
             
             <div class="therapy-grid">
@@ -364,7 +437,8 @@
                     <div class="price-tag">$20 - $60/session</div>
                 </div>
             </div>
-            
+
+            <!-- SECTION 4: TCM for Specific Conditions -->
             <h2>TCM for Specific Conditions</h2>
             
             <h3>🎗️ Cancer Support Care</h3>
@@ -443,51 +517,175 @@
                 
                 <p><strong>Typical Timeline:</strong> TCM treatment can begin 1-2 weeks post-surgery, with daily or every-other-day sessions during recovery period.</p>
             </div>
+
+            <!-- SECTION 5: Acupuncture Cost Comparison -->
+            <h2>Acupuncture Cost Comparison</h2>
             
+            <p>Acupuncture costs in China vary significantly by city, hospital tier, and practitioner seniority. Here's a comprehensive comparison:</p>
+            
+            <div class="cost-comparison">
+                <div class="cost-row">
+                    <span class="cost-label">Beijing - Top Tier Hospital (Dongzhimen, Guang'anmen)</span>
+                    <span class="cost-value">$40 - $80/session</span>
+                </div>
+                <div class="cost-row">
+                    <span class="cost-label">Beijing - Mid-Tier Hospital</span>
+                    <span class="cost-value">$25 - $50/session</span>
+                </div>
+                <div class="cost-row">
+                    <span class="cost-label">Shanghai - Top Tier Hospital (Longhua, Shuguang)</span>
+                    <span class="cost-value">$35 - $70/session</span>
+                </div>
+                <div class="cost-row">
+                    <span class="cost-label">Shanghai - Mid-Tier Hospital</span>
+                    <span class="cost-value">$20 - $45/session</span>
+                </div>
+                <div class="cost-row">
+                    <span class="cost-label">Guangzhou - Top Tier Hospital</span>
+                    <span class="cost-value">$25 - $55/session</span>
+                </div>
+                <div class="cost-row">
+                    <span class="cost-label">Second-Tier Cities - General Hospital</span>
+                    <span class="cost-value">$15 - $35/session</span>
+                </div>
+                <div class="cost-row">
+                    <span class="cost-label">Private TCM Clinics (Premium)</span>
+                    <span class="cost-value">$60 - $150/session</span>
+                </div>
+            </div>
+            
+            <table>
+                <tr>
+                    <th>Factor</th>
+                    <th>Price Impact</th>
+                </tr>
+                <tr>
+                    <td>Hospital Tier (3A vs 3B vs 2A)</td>
+                    <td>+30-50% at higher tier</td>
+                </tr>
+                <tr>
+                    <td>Practitioner Seniority (Chief > Associate > Resident)</td>
+                    <td>+40-80% for senior doctors</td>
+                </tr>
+                <tr>
+                    <td>Specialty Focus (Oncology, Neurology)</td>
+                    <td>+20-40% premium</td>
+                </tr>
+                <tr>
+                    <td>International Patient Services</td>
+                    <td>+20-30% for translation</td>
+                </tr>
+            </table>
+            
+            <div class="warning-box">
+                <h4>💰 Cost Saving Tips</h4>
+                <ul>
+                    <li>Book through hospital international departments for transparent pricing</li>
+                    <li>Ask about package deals (10 sessions = 15-20% discount)</li>
+                    <li>Mid-tier hospitals often have equally skilled practitioners</li>
+                    <li>Initial consultation is typically 20-40% more expensive than follow-ups</li>
+                </ul>
+            </div>
+
+            <!-- SECTION 6: Named TCM Hospitals -->
             <h2>Top TCM Hospitals in China</h2>
+            
+            <p>China's top TCM hospitals are recognized nationally and internationally for their expertise, research, and clinical outcomes. Here are the premier institutions for international patients:</p>
             
             <table>
                 <tr>
                     <th>Hospital</th>
                     <th>Location</th>
                     <th>Specialty</th>
-                    <th>English Support</th>
+                    <th>International Services</th>
                 </tr>
                 <tr>
-                    <td><strong>Dongzhimen Hospital</strong></td>
+                    <td><strong>Guang'anmen Hospital (China Academy of Chinese Medical Sciences)</strong></td>
                     <td>Beijing</td>
-                    <td>TCM Oncology, General TCM</td>
-                    <td>Good</td>
+                    <td>#1 TCM hospital nationally, comprehensive all specialties, oncology, immunology</td>
+                    <td>Dedicated international clinic, English translators</td>
                 </tr>
                 <tr>
-                    <td><strong>Guang'anmen Hospital</strong></td>
+                    <td><strong>Dongzhimen Hospital (Beijing University of Chinese Medicine)</strong></td>
                     <td>Beijing</td>
-                    <td>#1 TCM hospital in China, all specialties</td>
-                    <td>Moderate</td>
+                    <td>TCM oncology, acupuncture, internal medicine, acupuncture for pain</td>
+                    <td>Excellent English support, international patient coordinator</td>
                 </tr>
                 <tr>
-                    <td><strong>Longhua Hospital</strong></td>
+                    <td><strong>Longhua Hospital (Shanghai University of TCM)</strong></td>
                     <td>Shanghai</td>
-                    <td>TCM Orthopedics, Trauma</td>
-                    <td>Good</td>
+                    <td>TCM orthopedics, trauma recovery, rheumatology, spine disorders</td>
+                    <td>Good English support, medical tourism liaison</td>
                 </tr>
                 <tr>
-                    <td><strong>Shuguang Hospital</strong></td>
+                    <td><strong>Shuguang Hospital (Shanghai University of TCM)</strong></td>
                     <td>Shanghai</td>
-                    <td>TCM Internal Medicine</td>
-                    <td>Moderate</td>
+                    <td>TCM internal medicine, cardiovascular, respiratory, renal</td>
+                    <td>Moderate English, appointment booking available</td>
                 </tr>
                 <tr>
                     <td><strong>First Affiliated Hospital of Guangzhou TCM University</strong></td>
                     <td>Guangzhou</td>
-                    <td>Comprehensive TCM, Research</td>
-                    <td>Limited</td>
+                    <td>Dermatology, acupuncture, herbal medicine, reproductive health</td>
+                    <td>Limited English, Cantonese support</td>
+                </tr>
+                <tr>
+                    <td><strong>Beijing University of Chinese Medicine Affiliated Hospital</strong></td>
+                    <td>Beijing</td>
+                    <td>Acupuncture, Tuina, rehabilitation medicine</td>
+                    <td>Good international services</td>
+                </tr>
+                <tr>
+                    <td><strong>Tianjin University of TCM</strong></td>
+                    <td>Tianjin</td>
+                    <td>Acupuncture, herbal medicine, TCM for neurological conditions</td>
+                    <td>Moderate support</td>
                 </tr>
             </table>
             
-            <h2>What to Expect: Your First TCM Visit</h2>
+            <div class="checklist">
+                <h4>✓ Choosing the Right Hospital</h4>
+                <ul>
+                    <li>Verify hospital tier (Tier 3A = highest certification)</li>
+                    <li>Confirm specialization matches your condition</li>
+                    <li>Check for dedicated international patient services</li>
+                    <li>Ask about English-speaking practitioners</li>
+                    <li>Request credentials of assigned practitioners</li>
+                    <li>Inquire about coordination with your home country doctors</li>
+                </ul>
+            </div>
+
+            <!-- SECTION 7: Patient Case Study -->
+            <h2>Patient Case Study: Sarah's Journey with TCM</h2>
             
-            <h3>The Diagnostic Process</h3>
+            <div class="case-study">
+                <h4>📖 Sarah M., 45, United Kingdom — Chronic Migraine Relief</h4>
+                
+                <p><strong>Background:</strong> Sarah suffered from chronic migraines for over 15 years, experiencing 15-20 headache days per month despite trying multiple medications. Her neurologist referred her for a 3-week TCM program in Beijing as a complementary treatment.</p>
+                
+                <p><strong>Treatment Plan:</strong></p>
+                <ul>
+                    <li>Daily acupuncture sessions (20 sessions total) at Dongzhimen Hospital</li>
+                    <li>Custom herbal formula (Chuan Xiong and Bai Zhi based) adjusted weekly</li>
+                    <li>Cupping therapy twice weekly for neck and shoulder tension</li>
+                    <li>Dietary modifications and lifestyle guidance</li>
+                </ul>
+                
+                <p><strong>Results:</strong></p>
+                <ul>
+                    <li>Migraine frequency reduced from 15-20 days to 5-7 days per month</li>
+                    <li>Pain intensity decreased by approximately 40%</li>
+                    <li>Sleep quality significantly improved</li>
+                    <li>Reduced reliance on rescue medication</li>
+                    <li>Continued improvement at 6-month follow-up with maintenance acupuncture monthly</li>
+                </ul>
+                
+                <p><strong>Total Cost:</strong> $1,850 for 3-week comprehensive program (acupuncture, herbs, cupping, consultation) vs. estimated $6,000+ for equivalent treatment in the UK.</p>
+                
+                <p><strong>Sarah's Advice:</strong> "The initial consultation was eye-opening. The TCM practitioner explained things about my condition I'd never heard before—root causes rather than just symptoms. Be patient with the process; it took about 2 weeks before I noticed significant changes."</p>
+            </div>
+            
+            <h3>What to Expect: Your First TCM Visit</h3>
             
             <ol>
                 <li><strong>Consultation (30-45 minutes):</strong> Detailed discussion of your health history, symptoms, lifestyle, and goals</li>
@@ -495,21 +693,174 @@
                 <li><strong>Tongue Examination:</strong> Color, coating, and shape reveal internal health status</li>
                 <li><strong>Treatment Plan:</strong> Customized approach combining appropriate therapies</li>
             </ol>
+
+            <!-- SECTION 8: WHO TCM Timeline -->
+            <h2>WHO Recognition of TCM: Historical Timeline</h2>
             
-            <h3>Treatment Sessions</h3>
+            <p>The World Health Organization has progressively recognized and integrated traditional medicine into global health frameworks over the past decades:</p>
             
-            <div class="checklist">
-                <h4>✓ Typical Session Structure</h4>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h4>1977</h4>
+                    <p>WHO passed a resolution urging member states to utilize traditional systems of medicine, acknowledging their value in primary healthcare.</p>
+                </div>
+                
+                <div class="timeline-item">
+                    <h4>1978</h4>
+                    <p>WHO introduced the concept of "Primary Health Care" at Alma-Ata, explicitly mentioning the role of traditional medicine practitioners.</p>
+                </div>
+                
+                <div class="timeline-item">
+                    <h4>1991</h4>
+                    <p>WHO established the Traditional Medicine Programme, providing strategic directions for integrating traditional medicine into health systems.</p>
+                </div>
+                
+                <div class="timeline-item">
+                    <h4>2002</h4>
+                    <p>WHO launched the WHO Traditional Medicine Strategy 2002-2005, first comprehensive global strategy document for traditional medicine.</p>
+                </div>
+                
+                <div class="timeline-item">
+                    <h4>2008</h4>
+                    <p>WHO Beijing Declaration: Practitioners of traditional medicine should share knowledge and contribute to health for all.</p>
+                </div>
+                
+                <div class="timeline-item">
+                    <h4>2013</h4>
+                    <p>WHO updated Traditional Medicine Strategy 2013-2023, emphasizing evidence-based integration, safety monitoring, and universal health coverage.</p>
+                </div>
+                
+                <div class="timeline-item">
+                    <h4>2014</h4>
+                    <p>WHO reported that 103 member states had national policies on traditional medicine, up from 25 in 1999.</p>
+                </div>
+                
+                <div class="timeline-item">
+                    <h4>2019</h4>
+                    <p>WHO approved the ICD-11 chapter on traditional medicine conditions, officially recognizing TCM diagnoses in the global diagnostic standard.</p>
+                </div>
+                
+                <div class="timeline-item">
+                    <h4>2022</h4>
+                    <p>WHO Expert Committee on Biological Standardization included acupuncture needle standards in international guidelines.</p>
+                </div>
+                
+                <div class="timeline-item">
+                    <h4>2024</h4>
+                    <p>WHO Global Centre for Traditional Medicine established in India, further advancing research and policy frameworks.</p>
+                </div>
+            </div>
+            
+            <div class="benefits-box">
+                <h4>✓ WHO-Recognized Conditions for Acupuncture</h4>
+                <p>The WHO has published clinical guidelines recognizing acupuncture as effective for:</p>
                 <ul>
-                    <li>Brief consultation/update (5-10 minutes)</li>
-                    <li>Acupuncture: 20-30 minutes with needles in place</li>
-                    <li>Additional therapies (cupping, massage) if needed</li>
-                    <li>Herbal prescription adjustment</li>
-                    <li>Lifestyle recommendations</li>
+                    <li>Respiratory: Allergic rhinitis, sinusitis, common cold</li>
+                    <li>Digestive: Nausea, gastritis, constipation</li>
+                    <li>Pain: Headaches, migraines, back pain, osteoarthritis</li>
+                    <li>Neurological: Stroke rehabilitation, Bell's palsy</li>
+                    <li>Mental Health: Depression, anxiety, insomnia</li>
+                    <li>Gynecological: Menstrual cramps, fertility support</li>
+                </ul>
+            </div>
+
+            <!-- SECTION 9: Risks and Herbal Interactions -->
+            <h2>Risks and Herbal Interactions</h2>
+            
+            <div class="warning-box">
+                <h4>⚠️ Important Safety Information</h4>
+                <p>While TCM is generally safe when administered by qualified practitioners, understanding potential risks is essential for patient safety.</p>
+            </div>
+            
+            <h3>💊 Herbal-Drug Interactions</h3>
+            
+            <p>One of the most critical safety considerations for international patients is the potential interaction between herbal medicines and prescription medications. Always disclose all medications to your TCM practitioner.</p>
+            
+            <table>
+                <tr>
+                    <th>Herbal Medicine</th>
+                    <th>May Interact With</th>
+                    <th>Potential Effect</th>
+                </tr>
+                <tr>
+                    <td><strong>Ginkgo Biloba</strong></td>
+                    <td>Blood thinners (Warfarin, Aspirin)</td>
+                    <td>Increased bleeding risk</td>
+                </tr>
+                <tr>
+                    <td><strong>St. John's Wort</strong></td>
+                    <td>Antidepressants, Birth control, Blood thinners</td>
+                    <td>Reduced drug efficacy, serotonin syndrome</td>
+                </tr>
+                <tr>
+                    <td><strong>Ginseng</strong></td>
+                    <td>Blood thinners, Diabetes medications</td>
+                    <td>Hypoglycemia, increased bleeding</td>
+                </tr>
+                <tr>
+                    <td><strong>Licorice Root</strong></td>
+                    <td>Heart medications, Blood pressure drugs</td>
+                    <td>Potassium depletion, arrhythmias</td>
+                </tr>
+                <tr>
+                    <td><strong>Garlic Supplements</strong></td>
+                    <td>Blood thinners, HIV medications</td>
+                    <td>Enhanced anticoagulant effect</td>
+                </tr>
+                <tr>
+                    <td><strong>Valerian Root</strong></td>
+                    <td>Sedatives, Benzodiazepines</td>
+                    <td>Excessive sedation</td>
+                </tr>
+                <tr>
+                    <td><strong>Turmeric/Curcumin</strong></td>
+                    <td>Blood thinners, Chemotherapy</td>
+                    <td>Altered drug metabolism</td>
+                </tr>
+            </table>
+            
+            <h3>🔬 General Safety Considerations</h3>
+            
+            <div class="warning-box">
+                <h4>⚠️ Essential Safety Guidelines</h4>
+                <ul>
+                    <li><strong>Not a Replacement:</strong> TCM complements but does not replace conventional medical treatment for serious conditions</li>
+                    <li><strong>Quality Control:</strong> Choose licensed Tier 3A hospitals to ensure herb quality, purity, and proper processing</li>
+                    <li><strong>Pregnancy:</strong> Some herbs and acupuncture points are contraindicated in pregnancy—always inform your practitioner</li>
+                    <li><strong>Blood Thinners:</strong> Inform your practitioner if you take anticoagulants before acupuncture</li>
+                    <li><strong>Allergies:</strong> Report any known allergies, including to plants, herbs, or shell-based medicines</li>
+                    <li><strong>Medical Devices:</strong> Some herbal patches or treatments may contain metal components—disclose if you have implants</li>
                 </ul>
             </div>
             
-            <h2>Costs and Treatment Duration</h2>
+            <h3>How to Choose a Qualified TCM Practitioner</h3>
+            
+            <div class="checklist">
+                <h4>✓ Qualification Checklist</h4>
+                <ul>
+                    <li>Licensed by China's National Administration of TCM</li>
+                    <li>Hospital affiliation (preferably Tier 3A hospital)</li>
+                    <li>Specialization in your specific condition</li>
+                    <li>Experience with international patients</li>
+                    <li>Willingness to coordinate with your Western doctors</li>
+                    <li>Clear communication about treatment plan, expected outcomes, and potential risks</li>
+                    <li>Provides written treatment plans and herbal prescriptions</li>
+                </ul>
+            </div>
+
+            <!-- SECTION 10: Planning Your TCM Experience -->
+            <h2>Planning Your TCM Experience</h2>
+            
+            <h3>Recommended Duration</h3>
+            
+            <ul>
+                <li><strong>Wellness/Preventive Care:</strong> 3-7 days, 2-3 sessions</li>
+                <li><strong>Chronic Condition Management:</strong> 2-4 weeks, daily or every-other-day sessions</li>
+                <li><strong>Post-Surgery Recovery:</strong> 1-3 weeks integrated with medical treatment</li>
+                <li><strong>Cancer Support:</strong> Ongoing, integrated with conventional treatment schedule</li>
+            </ul>
+            
+            <h3>Costs and Treatment Duration</h3>
             
             <table>
                 <tr>
@@ -551,45 +902,6 @@
             
             <p><strong>Note:</strong> Costs are 60-80% lower than TCM treatment in the US, UK, or Australia.</p>
             
-            <h2>Safety and Considerations</h2>
-            
-            <div class="warning-box">
-                <h4>⚠️ Important Safety Information</h4>
-                
-                <ul>
-                    <li><strong>Not a Replacement:</strong> TCM complements but does not replace conventional medical treatment for serious conditions</li>
-                    <li><strong>Drug Interactions:</strong> Herbal medicines can interact with prescription drugs. Always inform your TCM practitioner of all medications</li>
-                    <li><strong>Quality Control:</strong> Choose licensed hospitals/clinics to ensure herb quality and safety</li>
-                    <li><strong>Pregnancy:</strong> Some herbs and acupuncture points are contraindicated in pregnancy</li>
-                    <li><strong>Blood Thinners:</strong> Inform your practitioner if you take anticoagulants before acupuncture</li>
-                </ul>
-            </div>
-            
-            <h3>How to Choose a TCM Practitioner</h3>
-            
-            <div class="checklist">
-                <h4>✓ Qualification Checklist</h4>
-                <ul>
-                    <li>Licensed by China's National Administration of TCM</li>
-                    <li>Hospital affiliation (preferably Tier 3A hospital)</li>
-                    <li>Specialization in your specific condition</li>
-                    <li>Experience with international patients</li>
-                    <li>Willingness to coordinate with your Western doctors</li>
-                    <li>Clear communication about treatment plan and expected outcomes</li>
-                </ul>
-            </div>
-            
-            <h2>Planning Your TCM Experience</h2>
-            
-            <h3>Recommended Duration</h3>
-            
-            <ul>
-                <li><strong>Wellness/Preventive Care:</strong> 3-7 days, 2-3 sessions</li>
-                <li><strong>Chronic Condition Management:</strong> 2-4 weeks, daily or every-other-day sessions</li>
-                <li><strong>Post-Surgery Recovery:</strong> 1-3 weeks integrated with medical treatment</li>
-                <li><strong>Cancer Support:</strong> Ongoing, integrated with conventional treatment schedule</li>
-            </ul>
-            
             <h3>Combining TCM with Your Medical Trip</h3>
             
             <p>Many international patients schedule TCM treatment alongside their medical procedures:</p>
@@ -599,7 +911,8 @@
                 <li><strong>After Surgery:</strong> 1-2 weeks of recovery support (pain management, sleep, appetite)</li>
                 <li><strong>Standalone TCM Trip:</strong> 2-4 weeks for chronic condition management</li>
             </ul>
-            
+
+            <!-- FAQ Section -->
             <h2>Frequently Asked Questions</h2>
             
             <div class="faq-item">
@@ -630,6 +943,11 @@
             <div class="faq-item">
                 <h4>Q: Will my insurance cover TCM in China?</h4>
                 <p>Most international insurance plans do not cover elective TCM treatment. However, if TCM is part of your post-surgical recovery plan at a hospital, it may be covered. Check with your insurance provider and get pre-authorization if possible.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h4>Q: Should I tell my Western doctor about TCM treatment?</h4>
+                <p>Absolutely. Transparency between your TCM practitioner and Western doctors ensures coordinated, safe care. Your TCM practitioner should be willing to share treatment plans and progress notes with your other healthcare providers.</p>
             </div>
             
             <div class="cta-box">

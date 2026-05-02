@@ -78,6 +78,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://chinahospitalsguide.com/medical-chinese-phrases.html</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://chinahospitalsguide.com/cost-comparison.html</loc>
     <lastmod>2026-04-27</lastmod>
     <changefreq>monthly</changefreq>
@@ -158,10 +164,28 @@
 
   <!-- Blog -->
   <url>
-    <loc>https://chinahospitalsguide.com/blog/</loc>
-    <lastmod>2026-04-27</lastmod>
+    <loc>https://chinahospitalsguide.com/news/</loc>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://chinahospitalsguide.com/blog/car-t-therapy-china-2026.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://chinahospitalsguide.com/blog/dental-implants-china.html</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://chinahospitalsguide.com/blog/lasik-smile-surgery-china.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://chinahospitalsguide.com/blog/why-medical-tourism-coordinator-china.html</loc>
@@ -191,9 +215,21 @@
   <!-- News -->
   <url>
     <loc>https://chinahospitalsguide.com/news/</loc>
-    <lastmod>2026-04-27</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://chinahospitalsguide.com/blog/rhinoplasty-china-2026.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://chinahospitalsguide.com/news/2026-05-01-thailand-medical-tourism-china-comparison.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://chinahospitalsguide.com/news/2026-04-26-china-24-hour-spa-viral-wellness.html</loc>
@@ -434,5 +470,29 @@
     <lastmod>2026-03-24</lastmod>
     <changefreq>never</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://chinahospitalsguide.com/blog/foreigners-guide-healthcare-china.html</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://chinahospitalsguide.com/blog/how-to-see-a-doctor-in-shanghai-as-a-foreigner.html</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://chinahospitalsguide.com/blog/how-to-see-a-doctor-in-guangzhou-as-a-foreigner.html</loc>
+    <lastmod>2026-05-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://chinahospitalsguide.com/blog/how-to-see-a-doctor-in-beijing-as-a-foreigner.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
 </urlset>

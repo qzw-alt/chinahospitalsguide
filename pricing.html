@@ -29,6 +29,9 @@
             margin: 16px auto 0;
             color: rgba(255,255,255,0.86);
         }
+        .pricing-hero h1 {
+            color: white;
+        }
         .pricing-shell,
         .pricing-band {
             max-width: 1120px;
@@ -82,6 +85,16 @@
         .compare-card li:last-child {
             border-bottom: 0;
         }
+        .payment-note {
+            margin-top: 14px;
+            font-size: 0.92rem;
+            color: #607084;
+        }
+        .payment-note a {
+            color: var(--primary);
+            font-weight: 600;
+            text-decoration: none;
+        }
         .pricing-band {
             background: linear-gradient(180deg, #f7f9fc 0%, #eef4fb 100%);
             border-radius: 26px;
@@ -108,6 +121,39 @@
             gap: 16px;
             margin-top: 20px;
         }
+        @media (max-width: 768px) {
+            .pricing-hero {
+                padding: 130px 20px 64px;
+            }
+            .pricing-hero h1 {
+                font-size: 2.1rem;
+            }
+            .pricing-shell,
+            .pricing-band {
+                padding: 56px 20px;
+            }
+            .pricing-band {
+                border-radius: 20px;
+            }
+            .pricing-card-local,
+            .step-card,
+            .compare-card,
+            .after-pay-box {
+                padding: 24px;
+                border-radius: 18px;
+            }
+            .pricing-price {
+                font-size: 2rem;
+            }
+            .next-actions {
+                flex-direction: column;
+            }
+            .next-actions .cta-button,
+            .pricing-grid-local .cta-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
     </style>
 </head>
 <body>
@@ -132,22 +178,22 @@
 </nav>
 
     <section class="pricing-hero">
-        <h1>Simple pricing with visible next steps</h1>
-        <p>Review the package options, pay securely, and see what happens next once your service begins.</p>
+        <h1>Simple pricing before you commit</h1>
+        <p>Review the packages, understand what is included, and see what happens after payment before you decide.</p>
     </section>
 
     <main class="pricing-shell">
-        <h2 class="section-title">Choose the support level that fits your case</h2>
-        <p class="section-copy">If you are not sure which package fits, start with the free case review first. If you already know what you need, pay here and then move to contact to begin coordination.</p>
+        <h2 class="section-title">Choose the support that fits your case</h2>
+        <p class="section-copy">If you are unsure, start with a free case review first. If you already know what you need, you can pay here and we will guide you into the next step.</p>
         <div class="pricing-grid-local">
             <div class="pricing-card-local">
                 <h3>Starter Guide</h3>
-                <p>Best for self-directed patients who want guidance before buying more support.</p>
+                <p>Best for patients who want a shortlist, cost guidance, and help deciding what to do next.</p>
                 <div class="pricing-price">$30</div>
                 <ul>
-                    <li>Structured hospital and treatment guidance</li>
+                    <li>Hospital and treatment shortlist guidance</li>
                     <li>Useful for early research and decision making</li>
-                    <li>Good fit if you expect to manage more yourself</li>
+                    <li>Good if you expect to manage more yourself</li>
                 </ul>
                 <div id="paypal-container-K4HNCDD7GDS5C" style="margin-top:24px;"></div>
                 <script>
@@ -155,11 +201,12 @@
                         hostedButtonId: "K4HNCDD7GDS5C"
                     }).render("#paypal-container-K4HNCDD7GDS5C");
                 </script>
+                <p class="payment-note">Already paid for this package? <a href="contact-new.html?paid=1&package=Starter%20Guide%20($30)&source=pricing">Open the intake form</a>.</p>
             </div>
 
             <div class="pricing-card-local featured">
                 <h3>Standard Package</h3>
-                <p>Best for patients ready to move into translation, booking, and pre-arrival coordination.</p>
+                <p>Best for patients who want help with records, appointments, and preparation before hospital arrival.</p>
                 <div class="pricing-price">$299</div>
                 <ul>
                     <li>Medical record translation support</li>
@@ -173,6 +220,7 @@
                         hostedButtonId: "ZBY36JV2X5A3U"
                     }).render("#paypal-container-ZBY36JV2X5A3U");
                 </script>
+                <p class="payment-note">Already paid for this package? <a href="contact-new.html?paid=1&package=Standard%20Package%20($299)&source=pricing">Open the intake form</a>.</p>
             </div>
         </div>
     </main>
@@ -180,24 +228,24 @@
     <section class="pricing-shell">
         <div class="pricing-band">
             <h2 class="section-title">What happens after payment</h2>
-            <p class="section-copy">After payment, we guide you into the next step so your case can move forward clearly and smoothly.</p>
+            <p class="section-copy">After payment, we guide you into the next step so your case can move forward clearly and without guesswork.</p>
             <div class="steps-grid">
                 <div class="step-card">
                     <h3>1. Confirmation</h3>
-                    <p>Once payment is complete, you move to contact and case intake so we can confirm your priorities and records.</p>
+                    <p>Once payment is complete, we confirm your package and guide you into case intake.</p>
                 </div>
                 <div class="step-card">
                     <h3>2. Case materials</h3>
-                    <p>You share the details we need for the chosen package, such as medical history, reports, and timing.</p>
+                    <p>You send the information we need, such as medical reports, treatment history, and timing.</p>
                 </div>
                 <div class="step-card">
                     <h3>3. Service begins</h3>
-                    <p>We start the research or coordination work that matches the package you purchased.</p>
+                    <p>We begin the research or coordination work included in the package you purchased.</p>
                 </div>
             </div>
             <div class="after-pay-box">
                 <h3>Already paid?</h3>
-                <p>Go directly to the contact page or consultation form and mention that payment is complete. That gives us a clean handoff from checkout into service delivery.</p>
+                <p>Go to the contact page or case form and mention that payment is complete so we can move your case into active handling.</p>
                 <div class="next-actions">
                     <a href="contact.html" class="cta-button">Go to Contact</a>
                     <a href="contact-new.html" class="cta-button">Open Intake Form</a>
