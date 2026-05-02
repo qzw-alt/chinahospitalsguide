@@ -25,7 +25,7 @@
             "name": "China Hospitals Guide",
             "logo": {
                 "@type": "ImageObject",
-                "url": "https://chinahospitalsguide.com/logo.png"
+                "url": "https://chinahospitalsguide.com/og-image.jpg"
             }
         },
         "datePublished": "2026-04-10",
@@ -83,17 +83,7 @@
             font-size: 0.88rem;
         }
             
-            .nav-links .nav-cta-mobile {
-                display: block;
-                margin: 10px 20px;
-                padding: 12px 25px;
-                background: #ff6b6b;
-                color: white;
-                border-radius: 25px;
-                text-align: center;
-                font-weight: bold;
-                text-decoration: none;
-            }
+            .nav-cta-mobile { display: none; }
         .nav-links a:hover { color: white; background: rgba(255,255,255,0.1); }
         .nav-links a.active { color: #ff6b6b; }
         .nav-cta {
@@ -274,6 +264,13 @@
             .nav-cta { display: none; }
         }
     </style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RVYZENK472"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-RVYZENK472');
+</script>
 </head>
 <body>
     <nav class="navbar">
@@ -288,8 +285,9 @@
                 <li><a href="./" class="active">News</a></li>
                 <li><a href="../resources.html">Resources</a></li>
 <li><a href="../contact.html">Contact</a></li>
+                <li><a href="../contact-new.html" class="nav-cta-mobile">Start Here</a></li>
             </ul>
-            <a href="../pricing.html" class="nav-cta">Pricing</a>
+            <a href="../contact-new.html" class="nav-cta">Start Here</a>
             <div class="nav-toggle" id="navToggle"><span></span><span></span><span></span></div>
         </div>
     </nav>

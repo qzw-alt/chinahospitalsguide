@@ -52,17 +52,7 @@
             font-size: 0.88rem;
         }
             
-            .nav-links .nav-cta-mobile {
-                display: block;
-                margin: 10px 20px;
-                padding: 12px 25px;
-                background: #ff6b6b;
-                color: white;
-                border-radius: 25px;
-                text-align: center;
-                font-weight: bold;
-                text-decoration: none;
-            }
+            .nav-cta-mobile { display: none; }
         .nav-links a:hover { color: #ff6b6b; background: rgba(30,60,114,0.05); }
         .nav-links a.active { color: #ff6b6b; font-weight: 600; }
         .nav-cta {
@@ -195,6 +185,13 @@
     <!-- Google AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2521119288266043"
      crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RVYZENK472"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-RVYZENK472');
+</script>
 </head>
 <body>
     <nav class="navbar">
@@ -209,8 +206,9 @@
                 <li><a href="./" class="active">News</a></li>
                 <li><a href="../resources.html">Resources</a></li>
 <li><a href="../contact.html">Contact</a></li>
+                <li><a href="../contact-new.html" class="nav-cta-mobile">Start Here</a></li>
             </ul>
-            <a href="../pricing.html" class="nav-cta">Pricing</a>
+            <a href="../contact-new.html" class="nav-cta">Start Here</a>
             <div class="nav-toggle" id="navToggle">
                 <span></span>
                 <span></span>

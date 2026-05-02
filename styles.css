@@ -151,6 +151,10 @@ p {
     transform: translateY(-2px);
 }
 
+.nav-cta-mobile {
+    display: none;
+}
+
 .site-footer {
     background: #f7f9fc;
     border-top: 1px solid #e5eaf1;
