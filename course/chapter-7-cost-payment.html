@@ -137,6 +137,60 @@
             .comparison-table, .cost-table { font-size: 0.85rem; }
             .comparison-table th, .cost-table th, .comparison-table td, .cost-table td { padding: 10px 12px; }
         }
+
+        .nav-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0,0,0,0.4);
+            z-index: 999;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+        .nav-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        .mobile-bottom-bar {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #fff;
+            border-top: 1px solid #e5eaf1;
+            z-index: 1001;
+            justify-content: space-around;
+            padding: 8px 0;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
+        }
+        .mobile-bottom-bar a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: #4b5565;
+            font-size: 0.75rem;
+            gap: 3px;
+        }
+        .mobile-bottom-bar a span {
+            font-size: 1.3rem;
+        }
+        .mobile-bottom-bar a:hover {
+            color: #1e3c72;
+        }
+        @media (max-width: 768px) {
+            body {
+                padding-bottom: calc(90px + env(safe-area-inset-bottom)) !important;
+            }
+            .mobile-bottom-bar {
+                display: flex;
+                padding: 8px 0 calc(8px + env(safe-area-inset-bottom));
+            }
+        }
     </style>
 </head>
 <body>
@@ -144,8 +198,9 @@
     <div class="course-progress-bar"><div class="progress-fill" id="progressFill"></div></div>
 
     <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
+    <div class="nav-overlay" id="navOverlay"></div>
+<nav class="navbar">
+    <div class="nav-container">
             <a href="./index.html" class="nav-logo">&#x1F3E5; China Hospitals Guide</a>
             <ul class="nav-links" id="navLinks">
                 <li><a href="index.html">Home</a></li>
@@ -996,7 +1051,15 @@
         // Mobile Navigation Toggle
         function toggleNav() {
             const navLinks = document.getElementById('navLinks');
+            const navOverlay = document.getElementById('navOverlay');
             navLinks.classList.toggle('active');
+            if (navOverlay) navOverlay.classList.toggle('active');
+        }
+        function closeMenu() {
+            const navLinks = document.getElementById('navLinks');
+            const navOverlay = document.getElementById('navOverlay');
+            if (navLinks) navLinks.classList.remove('active');
+            if (navOverlay) navOverlay.classList.remove('active');
         }
 
         // Scroll Progress Bar
@@ -1021,6 +1084,18 @@
                 }
             });
         });
+        document.querySelectorAll('.nav-links a').forEach(function(link) {
+            link.addEventListener('click', closeMenu);
+        });
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeMenu();
+        });
     </script>
+    <div class="mobile-bottom-bar">
+        <a href="../index.html"><span>🏠</span>Home</a>
+        <a href="../services.html"><span>🩺</span>Services</a>
+        <a href="../hospitals.html"><span>🏥</span>Hospitals</a>
+        <a href="../contact-new.html"><span>✉️</span>Contact</a>
+    </div>
 </body>
 </html>

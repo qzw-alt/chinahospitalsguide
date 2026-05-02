@@ -6,7 +6,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
 
 * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
-html { -webkit-text-size-adjust: 100%; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
 img { max-width: 100%; height: auto; display: block; }
 input, button, select, textarea { -webkit-appearance: none; appearance: none; font-family: inherit; }
 
@@ -41,6 +41,7 @@ body {
     background: var(--bg);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overscroll-behavior-y: none;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -1047,7 +1048,6 @@ footer p {
         padding: 16px 36px;
         font-size: 1rem;
         width: 100%;
-        max-width: 320px;
     }
     
     /* Section titles */
@@ -1333,8 +1333,11 @@ footer p {
     .modal h2 {
         font-size: 1.4rem;
     }
+    .nav-logo {
+        font-size: 0.9rem;
+    }
 }
-        
+
         /* 超小屏幕优化 */
         @media (max-width: 480px) {
             .hero { padding: 60px 15px; }
@@ -1586,6 +1589,23 @@ footer p {
             }
         }
         
+.nav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.4);
+    z-index: 999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+.nav-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
 /* Mobile: Hide floating buttons, show bottom bar */
 @media (max-width: 768px) {
     .floating-buttons {
@@ -1601,7 +1621,7 @@ footer p {
         left: 0;
         right: 0;
         background: white;
-        padding: 8px 0;
+        padding: 8px 0 calc(8px + env(safe-area-inset-bottom));
         box-shadow: 0 -2px 20px rgba(0,0,0,0.1);
         z-index: 9998;
         justify-content: space-around;
@@ -1630,7 +1650,7 @@ footer p {
     }
     /* Add padding to body to prevent content from being hidden behind the bar */
     body {
-        padding-bottom: 64px;
+        padding-bottom: calc(90px + env(safe-area-inset-bottom));
     }
     #floatingPricing {
         display: none !important;
@@ -2808,5 +2828,17 @@ disabled {
     }
     .story-grid {
         grid-template-columns: 1fr;
+    }
+}
+
+/* Accessibility: Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
     }
 }
