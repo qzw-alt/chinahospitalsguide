@@ -150,6 +150,7 @@
 | Heart Surgery in China | /blog/heart-surgery-china.html | 2026-03 | heart surgery cost China |
 | Spine Surgery in China (2026): Robot-Assisted Procedure Cuts Incision from 20cm to 1cm | /news/2026-05-03-spine-surgery-robot-china.html | 2026-05-03 | spine surgery China cost, robotic spine surgery China, spinal endoscopy China |
 | Thailand Medical Tourism vs China | /news/2026-05-01-thailand-medical-tourism-china-comparison.html | 2026-05-01 | Thailand medical tourism, China vs Thailand dental, China medical tourism competitive landscape |
+| Thailand Mandates Tourist Health Insurance — What It Means for China Medical Tourism | /news/2026-05-05-thailand-health-insurance-china-tourism-impact.html | 2026-05-05 | Thailand medical tourism policy 2026, China medical tourism competitive landscape, Thailand vs China healthcare |
 
 ---
 
