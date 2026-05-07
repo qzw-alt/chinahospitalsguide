@@ -2,7 +2,8 @@
   "permissions": {
     "allow": [
       "Bash(python update_mobile.py)",
-      "Bash(xargs grep *)"
+      "Bash(xargs grep *)",
+      "Bash(git add *)"
     ]
   }
 }

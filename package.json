@@ -1,0 +1,16 @@
+{
+  "name": "chinahospitalsguide",
+  "version": "1.0.0",
+  "description": "China Hospitals Guide - Static site built with Eleventy",
+  "scripts": {
+    "build": "eleventy",
+    "serve": "eleventy --serve --watch",
+    "debug": "DEBUG=* eleventy"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
