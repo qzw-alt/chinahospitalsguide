@@ -1,0 +1,6 @@
+# 301 redirects for legacy phantom URLs
+/course/services.html     /services.html       301
+/course/resources.html   /resources.html      301
+/course/news/            /news/               301
+/course/blog/            /blog/               301
+/course/how-it-works.html /how-it-works.html  301
