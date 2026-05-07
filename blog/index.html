@@ -64,17 +64,7 @@
             position: relative;
         }
             
-            .nav-links .nav-cta-mobile {
-                display: block;
-                margin: 10px 20px;
-                padding: 12px 25px;
-                background: #ff6b6b;
-                color: white;
-                border-radius: 25px;
-                text-align: center;
-                font-weight: bold;
-                text-decoration: none;
-            }
+            .nav-cta-mobile { display: none; }
         .nav-links a:hover {
             color: white;
             background: rgba(255,255,255,0.1);
@@ -326,6 +316,60 @@
             .header h1 { font-size: 2em; }
             .blog-grid { grid-template-columns: 1fr; }
         }
+
+        .nav-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0,0,0,0.4);
+            z-index: 999;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+        .nav-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        .mobile-bottom-bar {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #fff;
+            border-top: 1px solid #e5eaf1;
+            z-index: 1001;
+            justify-content: space-around;
+            padding: 8px 0;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
+        }
+        .mobile-bottom-bar a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: #4b5565;
+            font-size: 0.75rem;
+            gap: 3px;
+        }
+        .mobile-bottom-bar a span {
+            font-size: 1.3rem;
+        }
+        .mobile-bottom-bar a:hover {
+            color: #1e3c72;
+        }
+        @media (max-width: 768px) {
+            body {
+                padding-bottom: calc(90px + env(safe-area-inset-bottom)) !important;
+            }
+            .mobile-bottom-bar {
+                display: flex;
+                padding: 8px 0 calc(8px + env(safe-area-inset-bottom));
+            }
+        }
     </style>
 <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-RVYZENK472"></script>
@@ -341,8 +385,9 @@
      crossorigin="anonymous"></script>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="nav-container">
+    <div class="nav-overlay" id="navOverlay"></div>
+<nav class="navbar">
+    <div class="nav-container">
             <a href="../index.html" class="nav-logo">🏥 China Hospitals Guide</a>
             <ul class="nav-links" id="navLinks">
                 <li><a href="../index.html">Home</a></li>
@@ -353,8 +398,9 @@
                 <li><a href="../news/">News</a></li>
                 <li><a href="../resources.html">Resources</a></li>
 <li><a href="../contact.html">Contact</a></li>
+                <li><a href="../contact-new.html" class="nav-cta-mobile">Start Here</a></li>
             </ul>
-            <a href="../pricing.html" class="nav-cta">Pricing</a>
+            <a href="../contact-new.html" class="nav-cta">Start Here</a>
             <div class="nav-toggle" id="navToggle">
                 <span></span>
                 <span></span>
@@ -442,6 +488,19 @@
                 </div>
             </div>
             <div class="blog-card">
+                <div class="blog-image" style="background: linear-gradient(135deg, #113c7a 0%, #4f7dd8 100%);">SZ</div>
+                <div class="blog-content">
+                    <div class="blog-category">City Guide</div>
+                    <h3 class="blog-title">How to See a Doctor in Shenzhen as a Foreigner</h3>
+                    <p class="blog-excerpt">A practical Shenzhen guide to public vs private hospitals, emergency care, registration, insurance, payment, and where foreigners often start.</p>
+                    <div class="blog-meta">
+                        <span>May 2026</span>
+                        <span>10 min read</span>
+                    </div>
+                    <a href="how-to-see-a-doctor-in-shenzhen-as-a-foreigner.html" class="read-more">Read Article</a>
+                </div>
+            </div>
+            <div class="blog-card">
                 <div class="blog-image" style="background: linear-gradient(135deg, #0d5c2e 0%, #28a745 100%);">GZ</div>
                 <div class="blog-content">
                     <div class="blog-category">City Guide</div>
@@ -525,6 +584,21 @@
                 </div>
             </div>
             
+            <!-- NEW: Dental Implant Cost in China 2026 -->
+            <div class="blog-card">
+                <div class="blog-image" style="background: linear-gradient(135deg, #00b4db 0%, #0083b0 100%);">🦷</div>
+                <div class="blog-content">
+                    <div class="blog-category">Dental Care</div>
+                    <h3 class="blog-title">Dental Implant Cost in China 2026: Prices, Top Hospitals & What Foreign Patients Need to Know</h3>
+                    <p class="blog-excerpt">Save 70% on dental implants in China. $800-$2,500 per implant at top JCI-accredited stomatology hospitals. Full cost breakdown with hospital comparisons.</p>
+                    <div class="blog-meta">
+                        <span>📅 May 2026</span>
+                        <span>⏱️ 12 min read</span>
+                    </div>
+                    <a href="dental-implants-china.html" class="read-more">Read Article →</a>
+                </div>
+            </div>
+
             <!-- NEW: Dental Tourism -->
             <div class="blog-card">
                 <div class="blog-image" style="background: linear-gradient(135deg, #00b4db 0%, #0083b0 100%);">🦷</div>
@@ -963,12 +1037,37 @@
         <a href="/" class="back-link">← Back to Home</a>
     </div>
     <script>
-        document.getElementById('navToggle').addEventListener('click', function() {
-            document.getElementById('navLinks').classList.toggle('active');
-        });
-        document.querySelectorAll('.nav-links a').forEach(function(link) {
-            if (link.href === window.location.href) link.classList.add('active');
-        });
+        (function() {
+            var navToggle = document.getElementById('navToggle');
+            var navLinks = document.getElementById('navLinks');
+            var navOverlay = document.getElementById('navOverlay');
+            function closeMenu() {
+                if (navLinks) navLinks.classList.remove('active');
+                if (navOverlay) navOverlay.classList.remove('active');
+            }
+            if (navToggle && navLinks) {
+                navToggle.addEventListener('click', function() {
+                    navLinks.classList.toggle('active');
+                    if (navOverlay) navOverlay.classList.toggle('active');
+                });
+            }
+            if (navOverlay) {
+                navOverlay.addEventListener('click', closeMenu);
+            }
+            document.querySelectorAll('.nav-links a').forEach(function(link) {
+                link.addEventListener('click', closeMenu);
+                if (link.href === window.location.href) link.classList.add('active');
+            });
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') closeMenu();
+            });
+        })();
     </script>
+    <div class="mobile-bottom-bar">
+        <a href="../index.html"><span>🏠</span>Home</a>
+        <a href="../services.html"><span>🩺</span>Services</a>
+        <a href="../hospitals.html"><span>🏥</span>Hospitals</a>
+        <a href="../contact-new.html"><span>✉️</span>Contact</a>
+    </div>
 </body>
 </html>

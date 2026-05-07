@@ -52,17 +52,7 @@
             font-size: 0.88rem;
         }
             
-            .nav-links .nav-cta-mobile {
-                display: block;
-                margin: 10px 20px;
-                padding: 12px 25px;
-                background: #ff6b6b;
-                color: white;
-                border-radius: 25px;
-                text-align: center;
-                font-weight: bold;
-                text-decoration: none;
-            }
+            .nav-cta-mobile { display: none; }
         .nav-links a:hover { color: #ff6b6b; background: rgba(30,60,114,0.05); }
         .nav-links a.active { color: #ff6b6b; font-weight: 600; }
         .nav-cta {
@@ -190,15 +180,77 @@
             }
             .nav-cta { display: none; }
         }
+
+        .nav-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0,0,0,0.4);
+            z-index: 999;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+        .nav-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        .mobile-bottom-bar {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #fff;
+            border-top: 1px solid #e5eaf1;
+            z-index: 1001;
+            justify-content: space-around;
+            padding: 8px 0;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
+        }
+        .mobile-bottom-bar a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: #4b5565;
+            font-size: 0.75rem;
+            gap: 3px;
+        }
+        .mobile-bottom-bar a span {
+            font-size: 1.3rem;
+        }
+        .mobile-bottom-bar a:hover {
+            color: #1e3c72;
+        }
+        @media (max-width: 768px) {
+            body {
+                padding-bottom: calc(90px + env(safe-area-inset-bottom)) !important;
+            }
+            .mobile-bottom-bar {
+                display: flex;
+                padding: 8px 0 calc(8px + env(safe-area-inset-bottom));
+            }
+        }
     </style>
 
     <!-- Google AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2521119288266043"
      crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RVYZENK472"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-RVYZENK472');
+</script>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="nav-container">
+    <div class="nav-overlay" id="navOverlay"></div>
+<nav class="navbar">
+    <div class="nav-container">
             <a href="../index.html" class="nav-logo">🏥 China Hospitals Guide</a>
             <ul class="nav-links" id="navLinks">
                 <li><a href="../index.html">Home</a></li>
@@ -209,8 +261,9 @@
                 <li><a href="./" class="active">News</a></li>
                 <li><a href="../resources.html">Resources</a></li>
 <li><a href="../contact.html">Contact</a></li>
+                <li><a href="../contact-new.html" class="nav-cta-mobile">Start Here</a></li>
             </ul>
-            <a href="../pricing.html" class="nav-cta">Pricing</a>
+            <a href="../contact-new.html" class="nav-cta">Start Here</a>
             <div class="nav-toggle" id="navToggle">
                 <span></span>
                 <span></span>
@@ -228,7 +281,35 @@
         <div class="news-list">
             
 <article class="news-item">
-                <img src="https://chinahospitalsguide.com/og-image.jpg" alt="Thailand Aims for 4.72M Chinese Visitors and $7.3B Medical Tourism Revenue — How Does China Compare?">
+                <img src="https://chinahospitalsguide.com/og-image.webp" alt="Thailand Mandates Tourist Health Insurance — What It Means for China Medical Tourism">
+                <div class="news-content">
+                    <span class="news-date">May 5, 2026</span>
+                    <h2 class="news-title">
+                        <a href="2026-05-05-thailand-health-insurance-china-tourism-impact.html">
+                            Thailand Now Requires Health Insurance for All Visitors. What Does This Mean for Medical Tourism to China?
+                        </a>
+                    </h2>
+                    <p class="news-summary">Thailand's mandatory tourist health insurance takes effect in 2026, adding costs and complexity. China offers an alternative with no such entry requirement.</p>
+                    <a href="2026-05-05-thailand-health-insurance-china-tourism-impact.html" class="read-more">Read More →</a>
+                </div>
+            </article>
+
+<article class="news-item">
+                <img src="https://chinahospitalsguide.com/og-image.webp" alt="Spine Surgery in China (2026): Robot-Assisted Procedure Cuts Incision from 20cm to 1cm — What Patients Need to Know">
+                <div class="news-content">
+                    <span class="news-date">May 3, 2026</span>
+                    <h2 class="news-title">
+                        <a href="2026-05-03-spine-surgery-robot-china.html">
+                            Spine Surgery in China (2026): Robot-Assisted Procedure Cuts Incision from 20cm to 1cm — What Patients Need to Know
+                        </a>
+                    </h2>
+                    <p class="news-summary">Shanghai surgeons integrated surgical robots with spinal endoscopy, reducing incisions from 20cm to 1cm. Over 2,000 patients treated. Costs are 70% lower than the US.</p>
+                    <a href="2026-05-03-spine-surgery-robot-china.html" class="read-more">Read More →</a>
+                </div>
+            </article>
+
+<article class="news-item">
+                <img src="https://chinahospitalsguide.com/og-image.webp" alt="Thailand Aims for 4.72M Chinese Visitors and $7.3B Medical Tourism Revenue — How Does China Compare?">
                 <div class="news-content">
                     <span class="news-date">May 1, 2026</span>
                     <h2 class="news-title">
@@ -242,7 +323,7 @@
             </article>
 
 <article class="news-item">
-                <img src="https://chinahospitalsguide.com/og-image.jpg" alt="Pancreatic Cancer Breakthrough: Drug Nearly Doubles Survival — How Does China Compare?">
+                <img src="https://chinahospitalsguide.com/og-image.webp" alt="Pancreatic Cancer Breakthrough: Drug Nearly Doubles Survival — How Does China Compare?">
                 <div class="news-content">
                     <span class="news-date">April 27, 2026</span>
                     <h2 class="news-title">
@@ -256,7 +337,7 @@
             </article>
             
 <article class="news-item">
-                <img src="https://chinahospitalsguide.com/og-image.jpg" alt="South Korea's Medical Tourism Hits 2 Million Patients and $8.4B — How Does China Compare?">
+                <img src="https://chinahospitalsguide.com/og-image.webp" alt="South Korea's Medical Tourism Hits 2 Million Patients and $8.4B — How Does China Compare?">
                 <div class="news-content">
                     <span class="news-date">April 26, 2026</span>
                     <h2 class="news-title">
@@ -270,7 +351,7 @@
             </article>
             
 <article class="news-item">
-                <img src="https://chinahospitalsguide.com/og-image.jpg" alt="China's 24-Hour Spas Are Going Viral — And Rewriting the Rules of Wellness Tourism">
+                <img src="https://chinahospitalsguide.com/og-image.webp" alt="China's 24-Hour Spas Are Going Viral — And Rewriting the Rules of Wellness Tourism">
                 <div class="news-content">
                     <span class="news-date">April 26, 2026</span>
                     <h2 class="news-title">
@@ -298,7 +379,7 @@
             </article>
             
 <article class="news-item">
-                <img src="https://chinahospitalsguide.com/og-image.jpg" alt="Malaysia Launches First-Ever Medical Tourism Year — Can It Outcompete China?">
+                <img src="https://chinahospitalsguide.com/og-image.webp" alt="Malaysia Launches First-Ever Medical Tourism Year — Can It Outcompete China?">
                 <div class="news-content">
                     <span class="news-date">April 22, 2026</span>
                     <h2 class="news-title">
@@ -312,7 +393,7 @@
             </article>
             
 <article class="news-item">
-                <img src="https://chinahospitalsguide.com/og-image.jpg" alt="Hainan's Medical Tourism Zone Breaks Records: 865,000 Visitors in 2025">
+                <img src="https://chinahospitalsguide.com/og-image.webp" alt="Hainan's Medical Tourism Zone Breaks Records: 865,000 Visitors in 2025">
                 <div class="news-content">
                     <span class="news-date">April 21, 2026</span>
                     <h2 class="news-title">
@@ -326,7 +407,7 @@
             </article>
             
 <article class="news-item">
-                <img src="https://chinahospitalsguide.com/og-image.jpg" alt="Doctors Sound Alarm: Overseas Cosmetic Surgery Risks Are 'Devastating' — Where Does China Fit In?">
+                <img src="https://chinahospitalsguide.com/og-image.webp" alt="Doctors Sound Alarm: Overseas Cosmetic Surgery Risks Are 'Devastating' — Where Does China Fit In?">
                 <div class="news-content">
                     <span class="news-date">April 20, 2026</span>
                     <h2 class="news-title">
@@ -340,7 +421,7 @@
             </article>
             
 <article class="news-item">
-                <img src="https://chinahospitalsguide.com/og-image.jpg" alt="Bali's New Medical Zone Is Quietly Rewriting the Rules of Asian Health Tourism">
+                <img src="https://chinahospitalsguide.com/og-image.webp" alt="Bali's New Medical Zone Is Quietly Rewriting the Rules of Asian Health Tourism">
                 <div class="news-content">
                     <span class="news-date">April 19, 2026</span>
                     <h2 class="news-title">
@@ -354,7 +435,7 @@
             </article>
             
 <article class="news-item">
-                <img src="https://chinahospitalsguide.com/og-image.jpg" alt="China Emerges as Global Medical Tourism Hub: CAR-T Therapy Leading the Way">
+                <img src="https://chinahospitalsguide.com/og-image.webp" alt="China Emerges as Global Medical Tourism Hub: CAR-T Therapy Leading the Way">
                 <div class="news-content">
                     <span class="news-date">April 18, 2026</span>
                     <h2 class="news-title">
@@ -368,7 +449,7 @@
             </article>
             
 <article class="news-item">
-                <img src="https://chinahospitalsguide.com/og-image.jpg" alt="Revolution Medicines' Daraxonrasib: A Breakthrough in Pancreatic Cancer — How Does China Compare?">
+                <img src="https://chinahospitalsguide.com/og-image.webp" alt="Revolution Medicines' Daraxonrasib: A Breakthrough in Pancreatic Cancer — How Does China Compare?">
                 <div class="news-content">
                     <span class="news-date">April 17, 2026</span>
                     <h2 class="news-title">
@@ -382,7 +463,7 @@
             </article>
             
 <article class="news-item">
-                <img src="https://chinahospitalsguide.com/og-image.jpg" alt="Pakistan's New Medical Tourism Push: A Fresh Challenger to Asia's Healthcare Hub Race">
+                <img src="https://chinahospitalsguide.com/og-image.webp" alt="Pakistan's New Medical Tourism Push: A Fresh Challenger to Asia's Healthcare Hub Race">
                 <div class="news-content">
                     <span class="news-date">April 17, 2026</span>
                     <h2 class="news-title">
@@ -396,7 +477,7 @@
             </article>
             
 <article class="news-item">
-                <img src="https://chinahospitalsguide.com/og-image.jpg" alt="Thailand's New Tourist Health Insurance Mandate: How Does China Respond?">
+                <img src="https://chinahospitalsguide.com/og-image.webp" alt="Thailand's New Tourist Health Insurance Mandate: How Does China Respond?">
                 <div class="news-content">
                     <span class="news-date">April 16, 2026</span>
                     <h2 class="news-title">
@@ -410,7 +491,7 @@
             </article>
             
 <article class="news-item">
-                <img src="https://chinahospitalsguide.com/og-image.jpg" alt="Colombia's Antioquia Emerges as Latin America's Robotic Surgery Benchmark: How Does China Compare?">
+                <img src="https://chinahospitalsguide.com/og-image.webp" alt="Colombia's Antioquia Emerges as Latin America's Robotic Surgery Benchmark: How Does China Compare?">
                 <div class="news-content">
                     <span class="news-date">April 15, 2026</span>
                     <h2 class="news-title">
@@ -424,7 +505,7 @@
             </article>
             
 <article class="news-item">
-                <img src="https://chinahospitalsguide.com/og-image.jpg" alt="Macao's Health Tourism Expands with New Hospitals and TCM Routes: How Does Mainland China Compare?">
+                <img src="https://chinahospitalsguide.com/og-image.webp" alt="Macao's Health Tourism Expands with New Hospitals and TCM Routes: How Does Mainland China Compare?">
                 <div class="news-content">
                     <span class="news-date">April 14, 2026</span>
                     <h2 class="news-title">
@@ -438,7 +519,7 @@
             </article>
             
 <article class="news-item">
-                <img src="https://chinahospitalsguide.com/og-image.jpg" alt="Thailand's MedPark Hospital Courts Bangladeshi Patients: How Does China Compare?">
+                <img src="https://chinahospitalsguide.com/og-image.webp" alt="Thailand's MedPark Hospital Courts Bangladeshi Patients: How Does China Compare?">
                 <div class="news-content">
                     <span class="news-date">April 13, 2026</span>
                     <h2 class="news-title">
@@ -452,7 +533,7 @@
             </article>
             
 <article class="news-item">
-                <img src="https://chinahospitalsguide.com/og-image.jpg" alt="India's ISDE 2026 Breakthrough: Robotic Surgery & Organ-Preserving Care That Costs a Fraction of the West">
+                <img src="https://chinahospitalsguide.com/og-image.webp" alt="India's ISDE 2026 Breakthrough: Robotic Surgery & Organ-Preserving Care That Costs a Fraction of the West">
                 <div class="news-content">
                     <span class="news-date">April 12, 2026</span>
                     <h2 class="news-title">
@@ -494,7 +575,7 @@
             </article>
             
 <article class="news-item">
-                <img src="https://chinahospitalsguide.com/og-image.jpg" alt="China's Inbound Medical Tourism Hits 1.28 Million Patients in 2025 — And the Growth Is Just Getting Started">
+                <img src="https://chinahospitalsguide.com/og-image.webp" alt="China's Inbound Medical Tourism Hits 1.28 Million Patients in 2025 — And the Growth Is Just Getting Started">
                 <div class="news-content">
                     <span class="news-date">April 10, 2026</span>
                     <h2 class="news-title">
@@ -592,7 +673,7 @@
             </article>
             
 <article class="news-item">
-                <img src="https://chinahospitalsguide.com/og-image.jpg" alt="US Explores Subscription Pricing for Twice-Yearly HIV Prevention Shot: How Does China Compare?">
+                <img src="https://chinahospitalsguide.com/og-image.webp" alt="US Explores Subscription Pricing for Twice-Yearly HIV Prevention Shot: How Does China Compare?">
                 <div class="news-content">
                     <span class="news-date">April 04, 2026</span>
                     <h2 class="news-title">
@@ -606,7 +687,7 @@
             </article>
             
 <article class="news-item">
-                <img src="https://chinahospitalsguide.com/og-image.jpg" alt="China International Medical Tourism Expo 2026: What to Expect">
+                <img src="https://chinahospitalsguide.com/og-image.webp" alt="China International Medical Tourism Expo 2026: What to Expect">
                 <div class="news-content">
                     <span class="news-date">April 03, 2026</span>
                     <h2 class="news-title">
@@ -620,7 +701,7 @@
             </article>
             
 <article class="news-item">
-                <img src="https://chinahospitalsguide.com/og-image.jpg" alt="China's Space Hospital Research Takes Off: How Does It Compare to the US and Europe?">
+                <img src="https://chinahospitalsguide.com/og-image.webp" alt="China's Space Hospital Research Takes Off: How Does It Compare to the US and Europe?">
                 <div class="news-content">
                     <span class="news-date">April 03, 2026</span>
                     <h2 class="news-title">
@@ -634,7 +715,7 @@
             </article>
             
 <article class="news-item">
-                <img src="https://chinahospitalsguide.com/og-image.jpg" alt="Thailand's CAR-T Cell Therapy Breakthrough: How Does China Compare?">
+                <img src="https://chinahospitalsguide.com/og-image.webp" alt="Thailand's CAR-T Cell Therapy Breakthrough: How Does China Compare?">
                 <div class="news-content">
                     <span class="news-date">April 02, 2026</span>
                     <h2 class="news-title">
@@ -648,7 +729,7 @@
             </article>
             
 <article class="news-item">
-                <img src="https://chinahospitalsguide.com/og-image.jpg" alt="China's 9 Ministries Launch Medical Tourism Pilot Zones: What It Means for You">
+                <img src="https://chinahospitalsguide.com/og-image.webp" alt="China's 9 Ministries Launch Medical Tourism Pilot Zones: What It Means for You">
                 <div class="news-content">
                     <span class="news-date">April 02, 2026</span>
                     <h2 class="news-title">
@@ -662,7 +743,7 @@
             </article>
             
 <article class="news-item">
-                <img src="https://chinahospitalsguide.com/og-image.jpg" alt="Global Medical Tourism Boom: Turkey, Thailand, India Rise — Where Does China Stand?">
+                <img src="https://chinahospitalsguide.com/og-image.webp" alt="Global Medical Tourism Boom: Turkey, Thailand, India Rise — Where Does China Stand?">
                 <div class="news-content">
                     <span class="news-date">March 31, 2026</span>
                     <h2 class="news-title">
@@ -690,7 +771,7 @@
             </article>
             
 <article class="news-item">
-                <img src="https://chinahospitalsguide.com/og-image.jpg" alt="India's Medical Tourism Boom: $13 Billion and Counting — How Does China Compare?">
+                <img src="https://chinahospitalsguide.com/og-image.webp" alt="India's Medical Tourism Boom: $13 Billion and Counting — How Does China Compare?">
                 <div class="news-content">
                     <span class="news-date">March 30, 2026</span>
                     <h2 class="news-title">
@@ -704,7 +785,7 @@
             </article>
             
 <article class="news-item">
-                <img src="https://chinahospitalsguide.com/og-image.jpg" alt="GLP-1 Drugs Do More Than Weight Loss: What China Is Doing With Ozempic Alternatives">
+                <img src="https://chinahospitalsguide.com/og-image.webp" alt="GLP-1 Drugs Do More Than Weight Loss: What China Is Doing With Ozempic Alternatives">
                 <div class="news-content">
                     <span class="news-date">March 30, 2026</span>
                     <h2 class="news-title">
@@ -718,7 +799,7 @@
             </article>
             
 <article class="news-item">
-                <img src="https://chinahospitalsguide.com/og-image.jpg" alt="CRISPR Upgrade for Cancer-Fighting Cells: How Does China Compare?">
+                <img src="https://chinahospitalsguide.com/og-image.webp" alt="CRISPR Upgrade for Cancer-Fighting Cells: How Does China Compare?">
                 <div class="news-content">
                     <span class="news-date">March 29, 2026</span>
                     <h2 class="news-title">
@@ -732,7 +813,7 @@
             </article>
             
 <article class="news-item">
-                <img src="https://chinahospitalsguide.com/og-image.jpg" alt="US T-Cell CAR-T Gets FDA Breakthrough: How Does China Compare?">
+                <img src="https://chinahospitalsguide.com/og-image.webp" alt="US T-Cell CAR-T Gets FDA Breakthrough: How Does China Compare?">
                 <div class="news-content">
                     <span class="news-date">March 29, 2026</span>
                     <h2 class="news-title">
@@ -774,7 +855,7 @@
             </article>
             
 <article class="news-item">
-                <img src="https://chinahospitalsguide.com/og-image.jpg" alt="Trending Wellness Cities in China 2026: Hello! China Initiative & TCM Tourism Boom">
+                <img src="https://chinahospitalsguide.com/og-image.webp" alt="Trending Wellness Cities in China 2026: Hello! China Initiative & TCM Tourism Boom">
                 <div class="news-content">
                     <span class="news-date">March 27, 2026</span>
                     <h2 class="news-title">
@@ -788,7 +869,7 @@
             </article>
             
 <article class="news-item">
-                <img src="https://chinahospitalsguide.com/og-image.jpg" alt="Japan-China Travel Strain: Japanese Patients from Northern Japan Increasingly Choose Chinese Hospitals">
+                <img src="https://chinahospitalsguide.com/og-image.webp" alt="Japan-China Travel Strain: Japanese Patients from Northern Japan Increasingly Choose Chinese Hospitals">
                 <div class="news-content">
                     <span class="news-date">March 27, 2026</span>
                     <h2 class="news-title">
@@ -830,7 +911,7 @@
             </article>
             
 <article class="news-item">
-                <img src="https://chinahospitalsguide.com/og-image.jpg" alt="Singapore Becomes First Country to Achieve WHO's Highest Medical Device Certification: How Does China Compare?">
+                <img src="https://chinahospitalsguide.com/og-image.webp" alt="Singapore Becomes First Country to Achieve WHO's Highest Medical Device Certification: How Does China Compare?">
                 <div class="news-content">
                     <span class="news-date">March 24, 2026</span>
                     <h2 class="news-title">
@@ -844,7 +925,7 @@
             </article>
             
 <article class="news-item">
-                <img src="https://chinahospitalsguide.com/og-image.jpg" alt="日本质子治疗 vs 中国：8000例经验与技术普及的较量">
+                <img src="https://chinahospitalsguide.com/og-image.webp" alt="日本质子治疗 vs 中国：8000例经验与技术普及的较量">
                 <div class="news-content">
                     <span class="news-date">March 24, 2026</span>
                     <h2 class="news-title">
@@ -858,7 +939,7 @@
             </article>
             
 <article class="news-item">
-                <img src="https://chinahospitalsguide.com/og-image.jpg" alt="泰国康民国际医院全球百强蝉联六年，2026辅助生殖医疗旅游还有哪些新玩法">
+                <img src="https://chinahospitalsguide.com/og-image.webp" alt="泰国康民国际医院全球百强蝉联六年，2026辅助生殖医疗旅游还有哪些新玩法">
                 <div class="news-content">
                     <span class="news-date">March 24, 2026</span>
                     <h2 class="news-title">
@@ -1526,13 +1607,36 @@
     </footer>
 
     <script>
-        var navToggle = document.getElementById('navToggle');
-        var navLinks = document.getElementById('navLinks');
-        if (navToggle && navLinks) {
-            navToggle.addEventListener('click', function() {
-                navLinks.classList.toggle('active');
+        (function() {
+            var navToggle = document.getElementById('navToggle');
+            var navLinks = document.getElementById('navLinks');
+            var navOverlay = document.getElementById('navOverlay');
+            function closeMenu() {
+                if (navLinks) navLinks.classList.remove('active');
+                if (navOverlay) navOverlay.classList.remove('active');
+            }
+            if (navToggle && navLinks) {
+                navToggle.addEventListener('click', function() {
+                    navLinks.classList.toggle('active');
+                    if (navOverlay) navOverlay.classList.toggle('active');
+                });
+            }
+            if (navOverlay) {
+                navOverlay.addEventListener('click', closeMenu);
+            }
+            document.querySelectorAll('.nav-links a').forEach(function(link) {
+                link.addEventListener('click', closeMenu);
             });
-        }
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') closeMenu();
+            });
+        })();
     </script>
+    <div class="mobile-bottom-bar">
+        <a href="../index.html"><span>🏠</span>Home</a>
+        <a href="../services.html"><span>🩺</span>Services</a>
+        <a href="../hospitals.html"><span>🏥</span>Hospitals</a>
+        <a href="../contact-new.html"><span>✉️</span>Contact</a>
+    </div>
 </body>
 </html>

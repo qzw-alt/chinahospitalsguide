@@ -1,8 +1,8 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#1e3c72">
     <title>Hospitals in China for International Patients | China Hospitals Guide</title>
     <meta name="description" content="Compare hospitals in China for international patients. Explore hospitals by city and specialty, understand likely costs, and get support with records and appointments before you travel.">
@@ -209,11 +209,12 @@
         }
         @media (max-width: 768px) {
             .hero-home {
-                padding-top: 130px;
+                padding-top: 110px;
                 padding-bottom: 72px;
             }
             .hero-home h1 {
                 font-size: 2.1rem;
+                line-height: 1.15;
             }
             .hero-home p {
                 font-size: 1rem;
@@ -256,10 +257,34 @@
                 justify-self: center;
             }
         }
+        @media (max-width: 480px) {
+            .hero-home h1 {
+                font-size: 1.75rem;
+            }
+        }
     </style>
-</head>
+
+    <meta property="og:site_name" content="China Hospitals Guide">
+    <script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "WebSite",
+"headline": "Hospitals in China for International Patients | China Hospitals Guide",
+"description": "Compare hospitals in China for international patients. Explore hospitals by city and specialty, understand likely costs, and get support with records and appointments before you travel.",
+"author": { "@type": "Organization", "name": "China Hospitals Guide" },
+"publisher": {
+"@type": "Organization",
+"name": "China Hospitals Guide",
+"logo": { "@type": "ImageObject", "url": "https://chinahospitalsguide.com/images/logo.png" }
+},
+"dateModified": "2026-05-02",
+"url": "https://chinahospitalsguide.com/index.html"
+}
+</script>
+    </head>
 <body>
-    <nav class="navbar">
+    <div class="nav-overlay" id="navOverlay"></div>
+<nav class="navbar">
     <div class="nav-container">
         <a href="index.html" class="nav-logo">China Hospitals Guide</a>
         <ul class="nav-links" id="navLinks">
@@ -269,6 +294,7 @@
             <li><a href="pricing.html">Pricing</a></li>
             <li><a href="hospitals.html">Hospitals</a></li>
             <li><a href="contact.html">Contact</a></li>
+            <li><a href="contact-new.html" class="nav-cta-mobile">Start Here</a></li>
         </ul>
         <a href="contact-new.html" class="nav-cta">Start Here</a>
         <div class="nav-toggle" id="navToggle">
@@ -447,15 +473,37 @@
 </footer>
 
     <script>
-        document.getElementById('navToggle').addEventListener('click', function() {
-            document.getElementById('navLinks').classList.toggle('active');
-        });
-        document.querySelectorAll('.nav-links a').forEach(function(link) {
-            link.addEventListener('click', function() {
-                document.getElementById('navLinks').classList.remove('active');
+        (function() {
+            var navToggle = document.getElementById('navToggle');
+            var navLinks = document.getElementById('navLinks');
+            var navOverlay = document.getElementById('navOverlay');
+            function closeMenu() {
+                if (navLinks) navLinks.classList.remove('active');
+                if (navOverlay) navOverlay.classList.remove('active');
+            }
+            if (navToggle && navLinks) {
+                navToggle.addEventListener('click', function() {
+                    navLinks.classList.toggle('active');
+                    if (navOverlay) navOverlay.classList.toggle('active');
+                });
+            }
+            if (navOverlay) {
+                navOverlay.addEventListener('click', closeMenu);
+            }
+            document.querySelectorAll('.nav-links a').forEach(function(link) {
+                link.addEventListener('click', closeMenu);
             });
-        });
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') closeMenu();
+            });
+        })();
     </script>
+    <div class="mobile-bottom-bar">
+        <a href="index.html"><span>🏠</span>Home</a>
+        <a href="services.html"><span>🩺</span>Services</a>
+        <a href="hospitals.html"><span>🏥</span>Hospitals</a>
+        <a href="contact-new.html"><span>✉️</span>Contact</a>
+    </div>
 </body>
 </html>
 

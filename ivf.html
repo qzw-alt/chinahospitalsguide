@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -417,9 +417,12 @@
         ]
     }
     </script>
-</head>
+
+    <meta property="og:site_name" content="China Hospitals Guide">
+    </head>
 <body>
-        <nav class="navbar">
+        <div class="nav-overlay" id="navOverlay"></div>
+<nav class="navbar">
     <div class="nav-container">
         <a href="index.html" class="nav-logo">China Hospitals Guide</a>
         <ul class="nav-links" id="navLinks">
@@ -429,6 +432,7 @@
             <li><a href="pricing.html">Pricing</a></li>
             <li><a href="hospitals.html">Hospitals</a></li>
             <li><a href="contact.html">Contact</a></li>
+            <li><a href="contact-new.html" class="nav-cta-mobile">Start Here</a></li>
         </ul>
         <a href="contact-new.html" class="nav-cta">Start Here</a>
         <div class="nav-toggle" id="navToggle">
@@ -444,7 +448,7 @@
         <p class="subtitle">Access top fertility clinics with 60-70% success rates while saving 60-70% on IVF treatment costs</p>
         <div class="savings-badge">💰 Save $15,000 - $30,000 on IVF</div>
         <br>
-        <a href="../index.html#contact" class="cta-button">Get Free Consultation</a>
+        <a href="../contact-new.html" class="cta-button">Get Free Consultation</a>
     </section>
     
     <div class="breadcrumb">
@@ -671,7 +675,7 @@
     <section class="cta-section">
         <h2>Ready to Start Your Journey to Parenthood?</h2>
         <p style="font-size: 1.2rem; opacity: 0.95; margin-bottom: 30px; max-width: 600px; margin-left: auto; margin-right: auto;">Get your free IVF consultation and personalized treatment plan</p>
-        <a href="../index.html#contact" class="cta-button" style="background: white; color: var(--ivf-color);">Get Free Consultation</a>
+        <a href="../contact-new.html" class="cta-button" style="background: white; color: var(--ivf-color);">Get Free Consultation</a>
     </section>
     
     <footer class="site-footer" style="background:#f7f9fc;border-top:1px solid #e5eaf1;margin-top:48px;padding:40px 20px 32px;text-align:center;">
@@ -710,6 +714,38 @@
     </div>
 </footer>
 <div style="text-align:center;padding:30px 0;border-top:1px solid #eee;margin-top:40px;"><a href="index.html" style="color:#1e3c72;text-decoration:none;font-size:14px;">← Back to Home</a></div>
+    <div class="mobile-bottom-bar">
+        <a href="index.html"><span>🏠</span>Home</a>
+        <a href="services.html"><span>🩺</span>Services</a>
+        <a href="hospitals.html"><span>🏥</span>Hospitals</a>
+        <a href="contact-new.html"><span>✉️</span>Contact</a>
+    </div>
+    <script>
+        (function() {
+            var navToggle = document.getElementById('navToggle');
+            var navLinks = document.getElementById('navLinks');
+            var navOverlay = document.getElementById('navOverlay');
+            function closeMenu() {
+                if (navLinks) navLinks.classList.remove('active');
+                if (navOverlay) navOverlay.classList.remove('active');
+            }
+            if (navToggle && navLinks) {
+                navToggle.addEventListener('click', function() {
+                    navLinks.classList.toggle('active');
+                    if (navOverlay) navOverlay.classList.toggle('active');
+                });
+            }
+            if (navOverlay) {
+                navOverlay.addEventListener('click', closeMenu);
+            }
+            document.querySelectorAll('.nav-links a').forEach(function(link) {
+                link.addEventListener('click', closeMenu);
+            });
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') closeMenu();
+            });
+        })();
+    </script>
 </body>
 </html>
 

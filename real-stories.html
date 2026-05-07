@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -188,7 +188,10 @@
      crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="styles.css">
-</head>
+
+    <meta property="og:image" content="https://chinahospitalsguide.com/og-image.jpg">
+    <meta property="og:site_name" content="China Hospitals Guide">
+    </head>
 <body>
     <!-- BreadcrumbList Schema -->
     <script type="application/ld+json">
@@ -209,7 +212,7 @@
         "name": "China Hospitals Guide",
         "alternateName": "Medical Tourism China",
         "url": "https://chinahospitalsguide.com",
-        "logo": "https://chinahospitalsguide.com/logo.png",
+        "logo": "https://chinahospitalsguide.com/og-image.jpg",
         "description": "Independent medical tourism coordinator helping international patients access world-class healthcare in China",
         "foundingDate": "2026",
         "areaServed": {
@@ -221,16 +224,17 @@
             "contactType": "Customer Service",
             "availableLanguage": ["English", "Chinese"],
             "contactOption": ["WhatsApp", "WeChat"],
-            "telephone": "+44-7947-060056"
+            "telephone": "+86-157-6310-7083"
         },
         "sameAs": [
-            "https://wa.me/447947060056",
-            "weixin://dl/chat?+861****7083"
+            "https://wa.me/8615763107083",
+            "weixin://dl/chat?+8615763107083"
         ]
     }
     </script>
 
-    <nav class="navbar">
+    <div class="nav-overlay" id="navOverlay"></div>
+<nav class="navbar">
     <div class="nav-container">
         <a href="index.html" class="nav-logo">China Hospitals Guide</a>
         <ul class="nav-links" id="navLinks">
@@ -240,6 +244,7 @@
             <li><a href="pricing.html">Pricing</a></li>
             <li><a href="hospitals.html">Hospitals</a></li>
             <li><a href="contact.html">Contact</a></li>
+            <li><a href="contact-new.html" class="nav-cta-mobile">Start Here</a></li>
         </ul>
         <a href="contact-new.html" class="nav-cta">Start Here</a>
         <div class="nav-toggle" id="navToggle">
@@ -397,14 +402,30 @@
         </div>
     </div>
 <script>
-        document.getElementById('navToggle').addEventListener('click', function() {
-            document.getElementById('navLinks').classList.toggle('active');
-        });
-        document.querySelectorAll('.nav-links a').forEach(function(link) {
-            link.addEventListener('click', function() {
-                document.getElementById('navLinks').classList.remove('active');
+        (function() {
+            var navToggle = document.getElementById('navToggle');
+            var navLinks = document.getElementById('navLinks');
+            var navOverlay = document.getElementById('navOverlay');
+            function closeMenu() {
+                if (navLinks) navLinks.classList.remove('active');
+                if (navOverlay) navOverlay.classList.remove('active');
+            }
+            if (navToggle && navLinks) {
+                navToggle.addEventListener('click', function() {
+                    navLinks.classList.toggle('active');
+                    if (navOverlay) navOverlay.classList.toggle('active');
+                });
+            }
+            if (navOverlay) {
+                navOverlay.addEventListener('click', closeMenu);
+            }
+            document.querySelectorAll('.nav-links a').forEach(function(link) {
+                link.addEventListener('click', closeMenu);
             });
-        });
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') closeMenu();
+            });
+        })();
     </script>
 <footer class="site-footer" style="background:#f7f9fc;border-top:1px solid #e5eaf1;margin-top:48px;padding:40px 20px 32px;text-align:center;">
     <div style="max-width:1100px;margin:0 auto;">
@@ -441,6 +462,12 @@
         <p style="margin:0;color:#6b7280;font-size:0.9rem;">Independent medical travel coordination for international patients.</p>
     </div>
 </footer>
+    <div class="mobile-bottom-bar">
+        <a href="index.html"><span>🏠</span>Home</a>
+        <a href="services.html"><span>🩺</span>Services</a>
+        <a href="hospitals.html"><span>🏥</span>Hospitals</a>
+        <a href="contact-new.html"><span>✉️</span>Contact</a>
+    </div>
 </body>
 </html>
 

@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -60,17 +60,7 @@
             font-size: 0.88rem;
         }
             
-            .nav-links .nav-cta-mobile {
-                display: block;
-                margin: 10px 20px;
-                padding: 12px 25px;
-                background: #ff6b6b;
-                color: white;
-                border-radius: 25px;
-                text-align: center;
-                font-weight: bold;
-                text-decoration: none;
-            }
+            .nav-cta-mobile { display: none; }
         .nav-links a:hover { background: rgba(255,255,255,0.1); color: white; }
         .nav-links a.active { color: #ff6b6b; }
         .nav-links a.active::after { content: ''; position: absolute; bottom: 0; left: 18px; right: 18px; height: 3px; background: #ff6b6b; }
@@ -272,9 +262,37 @@
         gtag('js', new Date());
         gtag('config', 'G-RVYZENK472');
     </script>
-</head>
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Medical Tourism China Course | China Hospitals Guide">
+    <meta property="og:description" content="A comprehensive 11-chapter course on medical tourism to China. Learn how to navigate the healthcare system, choose hospitals, and plan your medical journey.">
+    <meta property="og:url" content="https://chinahospitalsguide.com/course.html">
+    <meta property="og:image" content="https://chinahospitalsguide.com/og-image.jpg">
+    <meta property="og:site_name" content="China Hospitals Guide">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Medical Tourism China Course | China Hospitals Guide">
+    <meta name="twitter:description" content="A comprehensive 11-chapter course on medical tourism to China. Learn how to navigate the healthcare system, choose hospitals, and plan your medical journey.">
+    <meta name="twitter:image" content="https://chinahospitalsguide.com/og-image.jpg">
+    <script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "WebPage",
+"headline": "Medical Tourism China Course | China Hospitals Guide",
+"description": "A comprehensive 11-chapter course on medical tourism to China. Learn how to navigate the healthcare system, choose hospitals, and plan your medical journey.",
+"author": { "@type": "Organization", "name": "China Hospitals Guide" },
+"publisher": {
+"@type": "Organization",
+"name": "China Hospitals Guide",
+"logo": { "@type": "ImageObject", "url": "https://chinahospitalsguide.com/images/logo.png" }
+},
+"dateModified": "2026-05-02",
+"url": "https://chinahospitalsguide.com/course.html"
+}
+</script>
+    </head>
 <body>
-    <nav class="navbar">
+    <div class="nav-overlay" id="navOverlay"></div>
+<nav class="navbar">
     <div class="nav-container">
         <a href="index.html" class="nav-logo">China Hospitals Guide</a>
         <ul class="nav-links" id="navLinks">
@@ -284,6 +302,7 @@
             <li><a href="pricing.html">Pricing</a></li>
             <li><a href="hospitals.html">Hospitals</a></li>
             <li><a href="contact.html">Contact</a></li>
+            <li><a href="contact-new.html" class="nav-cta-mobile">Start Here</a></li>
         </ul>
         <a href="contact-new.html" class="nav-cta">Start Here</a>
         <div class="nav-toggle" id="navToggle">
@@ -504,13 +523,30 @@
             }
         });
         // Mobile menu toggle
-        var navToggle = document.getElementById('navToggle');
-        var navLinks = document.getElementById('navLinks');
-        if (navToggle && navLinks) {
-            navToggle.addEventListener('click', function() {
-                navLinks.classList.toggle('active');
+        (function() {
+            var navToggle = document.getElementById('navToggle');
+            var navLinks = document.getElementById('navLinks');
+            var navOverlay = document.getElementById('navOverlay');
+            function closeMenu() {
+                if (navLinks) navLinks.classList.remove('active');
+                if (navOverlay) navOverlay.classList.remove('active');
+            }
+            if (navToggle && navLinks) {
+                navToggle.addEventListener('click', function() {
+                    navLinks.classList.toggle('active');
+                    if (navOverlay) navOverlay.classList.toggle('active');
+                });
+            }
+            if (navOverlay) {
+                navOverlay.addEventListener('click', closeMenu);
+            }
+            document.querySelectorAll('.nav-links a').forEach(function(link) {
+                link.addEventListener('click', closeMenu);
             });
-        }
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') closeMenu();
+            });
+        })();
     </script>
 <footer class="site-footer" style="background:#f7f9fc;border-top:1px solid #e5eaf1;margin-top:48px;padding:40px 20px 32px;text-align:center;">
     <div style="max-width:1100px;margin:0 auto;">
@@ -547,6 +583,12 @@
         <p style="margin:0;color:#6b7280;font-size:0.9rem;">Independent medical travel coordination for international patients.</p>
     </div>
 </footer>
+    <div class="mobile-bottom-bar">
+        <a href="index.html"><span>🏠</span>Home</a>
+        <a href="services.html"><span>🩺</span>Services</a>
+        <a href="hospitals.html"><span>🏥</span>Hospitals</a>
+        <a href="contact-new.html"><span>✉️</span>Contact</a>
+    </div>
 </body>
 </html>
 

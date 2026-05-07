@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,8 +7,14 @@
     <meta name="description" content="Start your case review and get guidance on the right service path for treatment in China.">
     <link rel="canonical" href="https://chinahospitalsguide.com/contact-new.html">
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script src="scripts/form-destinations.js"></script>
     <link rel="stylesheet" href="styles.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RVYZENK472"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-RVYZENK472');
+    </script>
     <style>
         .case-hero {
             padding: 150px 20px 80px;
@@ -123,9 +129,37 @@
             }
         }
     </style>
-</head>
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Start Your Case Review | China Hospitals Guide">
+    <meta property="og:description" content="Start your case review and get guidance on the right service path for treatment in China.">
+    <meta property="og:url" content="https://chinahospitalsguide.com/contact-new.html">
+    <meta property="og:image" content="https://chinahospitalsguide.com/og-image.jpg">
+    <meta property="og:site_name" content="China Hospitals Guide">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Start Your Case Review | China Hospitals Guide">
+    <meta name="twitter:description" content="Start your case review and get guidance on the right service path for treatment in China.">
+    <meta name="twitter:image" content="https://chinahospitalsguide.com/og-image.jpg">
+    <script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "ContactPage",
+"headline": "Start Your Case Review | China Hospitals Guide",
+"description": "Start your case review and get guidance on the right service path for treatment in China.",
+"author": { "@type": "Organization", "name": "China Hospitals Guide" },
+"publisher": {
+"@type": "Organization",
+"name": "China Hospitals Guide",
+"logo": { "@type": "ImageObject", "url": "https://chinahospitalsguide.com/images/logo.png" }
+},
+"dateModified": "2026-05-02",
+"url": "https://chinahospitalsguide.com/contact-new.html"
+}
+</script>
+    </head>
 <body>
-    <nav class="navbar">
+    <div class="nav-overlay" id="navOverlay"></div>
+<nav class="navbar">
     <div class="nav-container">
         <a href="index.html" class="nav-logo">China Hospitals Guide</a>
         <ul class="nav-links" id="navLinks">
@@ -135,6 +169,7 @@
             <li><a href="pricing.html">Pricing</a></li>
             <li><a href="hospitals.html">Hospitals</a></li>
             <li><a href="contact.html" class="active">Contact</a></li>
+            <li><a href="contact-new.html" class="nav-cta-mobile">Start Here</a></li>
         </ul>
         <a href="contact-new.html" class="nav-cta">Start Here</a>
         <div class="nav-toggle" id="navToggle">
@@ -160,10 +195,6 @@
             <div class="case-panel">
                 <h2>Case review form</h2>
                 <form id="consultForm">
-                    <input type="hidden" id="payment_status" name="payment_status" value="Not paid yet">
-                    <input type="hidden" id="lead_status" name="lead_status" value="New lead">
-                    <input type="hidden" id="follow_up_stage" name="follow_up_stage" value="Awaiting review">
-                    <input type="hidden" id="source_page" name="source_page" value="contact-new">
                     <div class="form-row">
                         <div class="form-group">
                             <label>First Name <span>*</span></label>
@@ -335,13 +366,14 @@
         const prefilledPackage = urlParams.get('package');
         const paidFlag = urlParams.get('paid');
         const sourceParam = urlParams.get('source');
-        const paymentStatusInput = document.getElementById('payment_status');
-        const sourcePageInput = document.getElementById('source_page');
-        const introBox = document.querySelector('.case-intro');
 
-        if (sourceParam) {
-            sourcePageInput.value = sourceParam;
-        }
+        // Internal CRM metadata (set client-side, sent to EmailJS / Sheets only)
+        const paymentStatus = paidFlag === '1' ? 'Paid - awaiting confirmation' : 'Not paid yet';
+        const leadStatus = 'New lead';
+        const followUpStage = 'Awaiting review';
+        const sourcePage = sourceParam || 'contact-new';
+
+        const introBox = document.querySelector('.case-intro');
 
         if (prefilledPackage) {
             const packageOptions = document.querySelectorAll('input[name="package"]');
@@ -353,7 +385,6 @@
         }
 
         if (paidFlag === '1') {
-            paymentStatusInput.value = 'Paid - awaiting confirmation';
             introBox.innerHTML = `
                 <p><strong class="note-pill">Payment flow detected</strong></p>
                 <p><strong>Use this form if:</strong> you already paid and want to hand off your case details, or you want us to begin the next step faster.</p>
@@ -378,11 +409,11 @@
                 medical_details: document.getElementById('medical_details').value,
                 source: document.getElementById('source').value || 'Not specified',
                 package: document.querySelector('input[name="package"]:checked')?.value || 'Not specified',
-                payment_status: document.getElementById('payment_status').value,
-                lead_status: document.getElementById('lead_status').value,
-                follow_up_stage: document.getElementById('follow_up_stage').value,
+                payment_status: paymentStatus,
+                lead_status: leadStatus,
+                follow_up_stage: followUpStage,
                 submit_time: new Date().toLocaleString(),
-                source_page: document.getElementById('source_page').value
+                source_page: sourcePage
             };
 
             try {
@@ -424,15 +455,37 @@
             }
         });
 
-        document.getElementById('navToggle').addEventListener('click', function() {
-            document.getElementById('navLinks').classList.toggle('active');
-        });
-        document.querySelectorAll('.nav-links a').forEach(function(link) {
-            link.addEventListener('click', function() {
-                document.getElementById('navLinks').classList.remove('active');
+        (function() {
+            var navToggle = document.getElementById('navToggle');
+            var navLinks = document.getElementById('navLinks');
+            var navOverlay = document.getElementById('navOverlay');
+            function closeMenu() {
+                if (navLinks) navLinks.classList.remove('active');
+                if (navOverlay) navOverlay.classList.remove('active');
+            }
+            if (navToggle && navLinks) {
+                navToggle.addEventListener('click', function() {
+                    navLinks.classList.toggle('active');
+                    if (navOverlay) navOverlay.classList.toggle('active');
+                });
+            }
+            if (navOverlay) {
+                navOverlay.addEventListener('click', closeMenu);
+            }
+            document.querySelectorAll('.nav-links a').forEach(function(link) {
+                link.addEventListener('click', closeMenu);
             });
-        });
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') closeMenu();
+            });
+        })();
     </script>
+    <div class="mobile-bottom-bar">
+        <a href="index.html"><span>🏠</span>Home</a>
+        <a href="services.html"><span>🩺</span>Services</a>
+        <a href="hospitals.html"><span>🏥</span>Hospitals</a>
+        <a href="contact-new.html"><span>✉️</span>Contact</a>
+    </div>
 </body>
 </html>
 

@@ -43,7 +43,7 @@
 |--------|--------|--------|---------|------|
 | knee replacement cost China | C | done | ⭐ | Blog已有 |
 | hip replacement cost China | C | done | ⭐ | Blog已有 |
-| spine surgery China cost | C | todo | ⭐⭐⭐ | Colombia脊柱新闻热点 |
+| spine surgery China cost | C | done | ⭐⭐⭐⭐ | 融合写作: 2026-05-03-spine-surgery-robot-china.html |
 | spinal fusion China cost | C | todo | ⭐⭐ | 与spine surgery重叠 |
 | ACL reconstruction China | C | todo | ⭐ | 运动损伤 |
 | orthopedic surgery China | C | partial | ⭐ | Blog有orthopedic链接 |
@@ -124,7 +124,7 @@
 |--------|--------|------------|------------|
 | P0 | CAR-T therapy China cost | 随时有CAR-T新闻 | 5月初 |
 | P0 | stem cell therapy China cost | 日本糖尿病突破后续 | 5月初 |
-| P1 | spine surgery China cost | Colombia机器人脊柱热点 | 5月中 |
+| P1 | spine surgery China cost | 已完成 — 2026-05-03 | 5月初 (提前) |
 | P1 | health screening China cost | 中国体检市场数据 | 5月中 |
 | P1 | IVF cost China | 生育率新闻 | 5月中 |
 | P2 | deep brain stimulation China | 帕金森相关新闻 | 5月下 |
@@ -148,7 +148,9 @@
 | Hip Replacement in China | /blog/hip-replacement-china.html | 2026-04 | hip replacement cost China |
 | Plastic Surgery in China | /blog/plastic-surgery-china.html | 2026-03 | plastic surgery China cost |
 | Heart Surgery in China | /blog/heart-surgery-china.html | 2026-03 | heart surgery cost China |
+| Spine Surgery in China (2026): Robot-Assisted Procedure Cuts Incision from 20cm to 1cm | /news/2026-05-03-spine-surgery-robot-china.html | 2026-05-03 | spine surgery China cost, robotic spine surgery China, spinal endoscopy China |
 | Thailand Medical Tourism vs China | /news/2026-05-01-thailand-medical-tourism-china-comparison.html | 2026-05-01 | Thailand medical tourism, China vs Thailand dental, China medical tourism competitive landscape |
+| Thailand Mandates Tourist Health Insurance — What It Means for China Medical Tourism | /news/2026-05-05-thailand-health-insurance-china-tourism-impact.html | 2026-05-05 | Thailand medical tourism policy 2026, China medical tourism competitive landscape, Thailand vs China healthcare |
 
 ---
 

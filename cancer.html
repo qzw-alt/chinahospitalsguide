@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -130,17 +130,7 @@
         .nav-links { display: flex; list-style: none; gap: 0; margin: 0; padding: 0; }
         .nav-links a { color: rgba(255,255,255,0.9); text-decoration: none; padding: 25px 20px; display: block; transition: all 0.3s; font-weight: 500; position: relative; }
             
-            .nav-links .nav-cta-mobile {
-                display: block;
-                margin: 10px 20px;
-                padding: 12px 25px;
-                background: #ff6b6b;
-                color: white;
-                border-radius: 25px;
-                text-align: center;
-                font-weight: bold;
-                text-decoration: none;
-            }
+            .nav-cta-mobile { display: none; }
         .nav-links a:hover { color: white; background: rgba(255,255,255,0.1); }
         .nav-links a.active { color: #ff6b6b; }
         .nav-links a.active::after { content: ''; position: absolute; bottom: 0; left: 20px; right: 20px; height: 3px; background: #ff6b6b; }
@@ -168,9 +158,17 @@
     <!-- Google AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2521119288266043"
      crossorigin="anonymous"></script>
-</head>
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Cancer Treatment in China 2026 | Top Oncology Hospitals | Save 60-80%">
+    <meta property="og:description" content="World-class cancer treatment in China at 60-80% lower cost. Top oncology hospitals: Fudan Cancer Center, Sun Yat-sen Cancer Center. Surgery, chemotherapy, immunotherapy, proton therapy. Free consultation.">
+    <meta property="og:url" content="https://chinahospitalsguide.com/cancer.html">
+    <meta property="og:image" content="https://chinahospitalsguide.com/og-image.jpg">
+    <meta property="og:site_name" content="China Hospitals Guide">
+    </head>
 <body>
-    <nav class="navbar">
+    <div class="nav-overlay" id="navOverlay"></div>
+<nav class="navbar">
     <div class="nav-container">
         <a href="index.html" class="nav-logo">China Hospitals Guide</a>
         <ul class="nav-links" id="navLinks">
@@ -180,6 +178,7 @@
             <li><a href="pricing.html">Pricing</a></li>
             <li><a href="hospitals.html">Hospitals</a></li>
             <li><a href="contact.html">Contact</a></li>
+            <li><a href="contact-new.html" class="nav-cta-mobile">Start Here</a></li>
         </ul>
         <a href="contact-new.html" class="nav-cta">Start Here</a>
         <div class="nav-toggle" id="navToggle">
@@ -202,7 +201,7 @@
     <div class="container">
         <h1>World-Class Cancer Treatment in China</h1>
         <p>Save 60-80% on cancer treatment costs at China's top-ranked oncology hospitals. Access cutting-edge treatments including immunotherapy, proton therapy, and precision medicine.</p>
-        <a href="#contact" class="cta-button">Get Free Consultation</a>
+        <a href="contact-new.html?source=cancer-page&intent=quote" class="cta-button">Get Free Consultation</a>
     </div>
 </header>
 
@@ -550,20 +549,36 @@
     <div class="container">
         <h2>Start Your Cancer Treatment Journey Today</h2>
         <p>Get a free consultation and personalized treatment plan from China's top cancer specialists. Save 60-80% on world-class care.</p>
-        <a href="../index.html#contact" class="cta-button">Get Free Consultation</a>
+        <a href="../contact-new.html" class="cta-button">Get Free Consultation</a>
     </div>
 </section>
 
 <div style="text-align:center;padding:30px 0;border-top:1px solid #eee;margin-top:40px;"><a href="index.html" style="color:#1e3c72;text-decoration:none;font-size:14px;">← Back to Home</a></div>
 <script>
-        document.getElementById('navToggle').addEventListener('click', function() {
-            document.getElementById('navLinks').classList.toggle('active');
-        });
-        document.querySelectorAll('.nav-links a').forEach(function(link) {
-            link.addEventListener('click', function() {
-                document.getElementById('navLinks').classList.remove('active');
+        (function() {
+            var navToggle = document.getElementById('navToggle');
+            var navLinks = document.getElementById('navLinks');
+            var navOverlay = document.getElementById('navOverlay');
+            function closeMenu() {
+                if (navLinks) navLinks.classList.remove('active');
+                if (navOverlay) navOverlay.classList.remove('active');
+            }
+            if (navToggle && navLinks) {
+                navToggle.addEventListener('click', function() {
+                    navLinks.classList.toggle('active');
+                    if (navOverlay) navOverlay.classList.toggle('active');
+                });
+            }
+            if (navOverlay) {
+                navOverlay.addEventListener('click', closeMenu);
+            }
+            document.querySelectorAll('.nav-links a').forEach(function(link) {
+                link.addEventListener('click', closeMenu);
             });
-        });
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') closeMenu();
+            });
+        })();
     </script>
 <footer class="site-footer" style="background:#f7f9fc;border-top:1px solid #e5eaf1;margin-top:48px;padding:40px 20px 32px;text-align:center;">
     <div style="max-width:1100px;margin:0 auto;">
@@ -600,6 +615,12 @@
         <p style="margin:0;color:#6b7280;font-size:0.9rem;">Independent medical travel coordination for international patients.</p>
     </div>
 </footer>
+    <div class="mobile-bottom-bar">
+        <a href="index.html"><span>🏠</span>Home</a>
+        <a href="services.html"><span>🩺</span>Services</a>
+        <a href="hospitals.html"><span>🏥</span>Hospitals</a>
+        <a href="contact-new.html"><span>✉️</span>Contact</a>
+    </div>
 </body>
 </html>
 
