@@ -15,7 +15,7 @@
     <meta name="twitter:title" content="Pricing | China Hospitals Guide">
     <meta name="twitter:description" content="Understand package fit, pay securely, and know exactly what happens after checkout.">
     <meta name="twitter:image" content="https://chinahospitalsguide.com/og-image.webp">
-    <script src="https://www.paypal.com/sdk/js?client-id=BAAuEJ4aj4Glmel3a35W5yg1QY9idTSZt5LkxbWG-z5pvfIMEyG8E6vnCCLJNynRoAVW6XjqCCtnSKBzEY&components=hosted-buttons&disable-funding=venmo&currency=USD"></script>
+    <script src="https://www.paypal.com/sdk/js?client-id=BAAuEJ4aj4Glmel3a35W5yg1QY9idTSZt5LkxbWG-z5pvfIMEyG8E6vnCCLJNynRoAVW6XjqCCtnSKBzEY&components=hosted-buttons&disable-funding=venmo&currency=USD&locale=en_US"></script>
     <link rel="stylesheet" href="styles.css">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-RVYZENK472"></script>
     <script>
@@ -127,6 +127,43 @@
             flex-wrap: wrap;
             gap: 16px;
             margin-top: 20px;
+        }
+        .collapse-toggle {
+            width: 100%;
+            background: none;
+            border: none;
+            padding: 0;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+            font-family: inherit;
+        }
+        .collapse-toggle h2 {
+            flex: 1;
+            text-align: left;
+            margin-bottom: 0;
+        }
+        .collapse-icon {
+            transition: transform 0.3s ease;
+            font-size: 1.1rem;
+            color: var(--primary);
+            flex-shrink: 0;
+        }
+        .collapse-section.open .collapse-icon {
+            transform: rotate(180deg);
+        }
+        .collapse-content {
+            display: none;
+        }
+        .collapse-section.open .collapse-content {
+            display: block;
+            animation: collapseIn 0.3s ease;
+        }
+        @keyframes collapseIn {
+            from { opacity: 0; transform: translateY(-8px); }
+            to { opacity: 1; transform: translateY(0); }
         }
         @media (max-width: 768px) {
             .pricing-hero {
@@ -281,61 +318,71 @@
         </div>
     </section>
 
-    <section class="pricing-shell">
-        <h2 class="section-title">How to decide between the two packages</h2>
-        <div class="compare-grid">
-            <div class="compare-card">
-                <h3>Choose Starter Guide if</h3>
-                <ul>
-                    <li>You are still researching hospitals or cities</li>
-                    <li>You want structure before committing to hands-on support</li>
-                    <li>You are comfortable doing more follow-through yourself</li>
-                </ul>
-            </div>
-            <div class="compare-card">
-                <h3>Choose Standard Package if</h3>
-                <ul>
-                    <li>You are ready to move from planning into action</li>
-                    <li>You need help with records and appointment setup</li>
-                    <li>You want a clearer handoff into pre-arrival coordination</li>
-                </ul>
-            </div>
-            <div class="compare-card">
-                <h3>Use free case review first if</h3>
-                <ul>
-                    <li>You are not sure whether China is the right option yet</li>
-                    <li>You want help selecting the right package</li>
-                    <li>You need a human answer before paying</li>
-                </ul>
+    <section class="pricing-shell collapse-section">
+        <button class="collapse-toggle" aria-expanded="false">
+            <h2 class="section-title">How to decide between the two packages</h2>
+            <span class="collapse-icon">▼</span>
+        </button>
+        <div class="collapse-content">
+            <div class="compare-grid">
+                <div class="compare-card">
+                    <h3>Choose Starter Guide if</h3>
+                    <ul>
+                        <li>You are still researching hospitals or cities</li>
+                        <li>You want structure before committing to hands-on support</li>
+                        <li>You are comfortable doing more follow-through yourself</li>
+                    </ul>
+                </div>
+                <div class="compare-card">
+                    <h3>Choose Standard Package if</h3>
+                    <ul>
+                        <li>You are ready to move from planning into action</li>
+                        <li>You need help with records and appointment setup</li>
+                        <li>You want a clearer handoff into pre-arrival coordination</li>
+                    </ul>
+                </div>
+                <div class="compare-card">
+                    <h3>Use free case review first if</h3>
+                    <ul>
+                        <li>You are not sure whether China is the right option yet</li>
+                        <li>You want help selecting the right package</li>
+                        <li>You need a human answer before paying</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="pricing-shell">
+    <section class="pricing-shell collapse-section">
         <div class="pricing-band">
-            <h2 class="section-title">Refund terms</h2>
-            <p class="section-copy">Visible refund language reduces hesitation and makes payment feel safer.</p>
-            <div class="compare-grid">
-                <div class="compare-card">
-                    <h3>Starter Guide</h3>
-                    <ul>
-                        <li>Non-refundable once delivery work begins</li>
-                        <li>Designed as a low-risk entry package</li>
-                    </ul>
-                </div>
-                <div class="compare-card">
-                    <h3>Standard Package</h3>
-                    <ul>
-                        <li>$269 refund if cancelled 72+ hours before service start</li>
-                        <li>The first $30 remains non-refundable as information work</li>
-                    </ul>
-                </div>
-                <div class="compare-card">
-                    <h3>Special situations</h3>
-                    <ul>
-                        <li>Medical or travel exceptions can be reviewed case by case</li>
-                        <li>Use contact to explain urgent circumstances directly</li>
-                    </ul>
+            <button class="collapse-toggle" aria-expanded="false">
+                <h2 class="section-title">Refund terms</h2>
+                <span class="collapse-icon">▼</span>
+            </button>
+            <div class="collapse-content">
+                <p class="section-copy">Visible refund language reduces hesitation and makes payment feel safer.</p>
+                <div class="compare-grid">
+                    <div class="compare-card">
+                        <h3>Starter Guide</h3>
+                        <ul>
+                            <li>Non-refundable once delivery work begins</li>
+                            <li>Designed as a low-risk entry package</li>
+                        </ul>
+                    </div>
+                    <div class="compare-card">
+                        <h3>Standard Package</h3>
+                        <ul>
+                            <li>$269 refund if cancelled 72+ hours before service start</li>
+                            <li>The first $30 remains non-refundable as information work</li>
+                        </ul>
+                    </div>
+                    <div class="compare-card">
+                        <h3>Special situations</h3>
+                        <ul>
+                            <li>Medical or travel exceptions can be reviewed case by case</li>
+                            <li>Use contact to explain urgent circumstances directly</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -402,12 +449,28 @@
                 if (e.key === 'Escape') closeMenu();
             });
         })();
+
+        (function() {
+            document.querySelectorAll('.collapse-toggle').forEach(function(btn) {
+                btn.addEventListener('click', function() {
+                    var section = this.closest('.collapse-section');
+                    var isOpen = section.classList.toggle('open');
+                    this.setAttribute('aria-expanded', isOpen);
+                });
+            });
+        })();
     </script>
     <div class="mobile-bottom-bar">
         <a href="index.html"><span>🏠</span>Home</a>
         <a href="services.html"><span>🩺</span>Services</a>
         <a href="hospitals.html"><span>🏥</span>Hospitals</a>
         <a href="contact-new.html"><span>✉️</span>Contact</a>
+    </div>
+    <div class="floating-buttons">
+        <a href="https://wa.me/8615763107083" class="floating-btn whatsapp-btn" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+            <span>💬</span>
+            <span class="chat-tooltip">Chat on WhatsApp</span>
+        </a>
     </div>
 </body>
 </html>

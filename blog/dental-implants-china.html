@@ -294,24 +294,24 @@
      crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
-        <nav style="background: white; padding: 15px 0; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-            <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
-                <div class="logo">
-                    <h2 style="color: #1e3c72; margin: 0;">China Hospitals Guide</h2>
-                </div>
-                <ul style="display: flex; list-style: none; gap: 25px; margin: 0;">
-                    <li><a href="../index.html" style="text-decoration: none; color: #333;">Home</a></li>
-                    <li><a href="../hospitals.html" style="text-decoration: none; color: #333;">Hospitals</a></li>
-                    <li><a href="../services.html" style="text-decoration: none; color: #333;">Services</a></li>
-                    <li><a href="index.html" style="text-decoration: none; color: #2a5298; font-weight: bold;">Blog</a></li>
-                    <li><a href="../contact.html" style="text-decoration: none; color: #333;">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-
-    <article>
+    <div class="nav-overlay" id="navOverlay"></div>
+<nav class="navbar">
+    <div class="nav-container">
+        <a href="../index.html" class="nav-logo">China Hospitals Guide</a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../services.html">Services</a></li>
+            <li><a href="../how-it-works.html">Process</a></li>
+            <li><a href="../pricing.html">Pricing</a></li>
+            <li><a href="../hospitals.html">Hospitals</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+            <li><a href="../contact-new.html" class="nav-cta-mobile">Start Here</a></li>
+        </ul>
+        <a href="../contact-new.html" class="nav-cta">Start Here</a>
+        <div class="nav-toggle" id="navToggle"><span></span><span></span><span></span></div>
+    </div>
+</nav>
+<article>
             <header class="post-header">
                 <h1>Dental Implant Cost in China 2026: Complete Price Guide for International Patients</h1>
                 <div class="post-meta">
@@ -611,7 +611,12 @@
                 <li><a href="china-hospital-rankings-2026.html">China Hospital Rankings 2026: Complete Guide</a></li>
                 <li><a href="cost-comparison-procedures.html">Medical Procedure Costs in China vs US/UK (2026)</a></li>
             </ul>
-        </article>
+            <div style="background: linear-gradient(135deg, #17345f 0%, #2a5298 100%); color: white; padding: 40px 30px; border-radius: 16px; text-align: center; margin: 40px 0;">
+        <h2 style="color: white; margin-bottom: 12px;">Planning treatment in China?</h2>
+        <p style="color: rgba(255,255,255,0.9); margin-bottom: 24px;">Start with a free case review and get guidance on the right hospital and package for your situation.</p>
+        <a href="../contact-new.html" style="display: inline-block; background: white; color: #1e3c72; padding: 14px 32px; border-radius: 30px; text-decoration: none; font-weight: 600;">Start Free Case Review</a>
+    </div>
+    </article>
 
     <footer style="background: #1e3c72; color: white; padding: 40px 0; margin-top: 60px;">
         <div class="container" style="text-align: center;">
@@ -620,5 +625,43 @@
         </div>
     </footer>
 <div style="text-align:center;padding:30px 0;border-top:1px solid #eee;margin-top:40px;"><a href="index.html" style="color:#1e3c72;text-decoration:none;font-size:14px;">← Back to Blog</a></div>
+    <script>
+        (function() {
+            var navToggle = document.getElementById('navToggle');
+            var navLinks = document.getElementById('navLinks');
+            var navOverlay = document.getElementById('navOverlay');
+            function closeMenu() {
+                if (navLinks) navLinks.classList.remove('active');
+                if (navOverlay) navOverlay.classList.remove('active');
+            }
+            if (navToggle && navLinks) {
+                navToggle.addEventListener('click', function() {
+                    navLinks.classList.toggle('active');
+                    if (navOverlay) navOverlay.classList.toggle('active');
+                });
+            }
+            if (navOverlay) {
+                navOverlay.addEventListener('click', closeMenu);
+            }
+            document.querySelectorAll('.nav-links a').forEach(function(link) {
+                link.addEventListener('click', closeMenu);
+            });
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') closeMenu();
+            });
+        })();
+    </script>
+    <div class="mobile-bottom-bar">
+        <a href="../index.html"><span>🏠</span>Home</a>
+        <a href="../services.html"><span>🩺</span>Services</a>
+        <a href="../hospitals.html"><span>🏥</span>Hospitals</a>
+        <a href="../contact-new.html"><span>✉️</span>Contact</a>
+    </div>
+    <div class="floating-buttons">
+        <a href="https://wa.me/8615763107083" class="floating-btn whatsapp-btn" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+            <span>💬</span>
+            <span class="chat-tooltip">Chat on WhatsApp</span>
+        </a>
+    </div>
 </body>
 </html>
