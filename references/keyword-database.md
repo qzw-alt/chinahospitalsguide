@@ -19,7 +19,7 @@
 ### 🔴 肿瘤 & 癌症 (Oncology / Cancer)
 | 关键词 | Intent | Status | News Fit | 备注 |
 |--------|--------|--------|---------|------|
-| CAR-T therapy China cost | C | todo | ⭐⭐⭐⭐⭐ | 商业价值最高，中国是全球CAR-T领导者 |
+| CAR-T therapy China cost | C | done | ⭐⭐⭐⭐⭐ | 商业价值最高，中国是全球CAR-T领导者 |
 | CAR-T therapy hospitals China | C | todo | ⭐⭐⭐⭐ | 对应Blog可做专题 |
 | CAR-T clinical trials China | C | todo | ⭐⭐⭐⭐ | 很强的商业意图 |
 | cancer treatment cost China | C | done | ⭐⭐⭐ | Blog已有cancer.html |
@@ -149,6 +149,7 @@
 | Plastic Surgery in China | /blog/plastic-surgery-china.html | 2026-03 | plastic surgery China cost |
 | Heart Surgery in China | /blog/heart-surgery-china.html | 2026-03 | heart surgery cost China |
 | Spine Surgery in China (2026): Robot-Assisted Procedure Cuts Incision from 20cm to 1cm | /news/2026-05-03-spine-surgery-robot-china.html | 2026-05-03 | spine surgery China cost, robotic spine surgery China, spinal endoscopy China |
+| CAR-T Therapy Cost in China (2026): World's First Solid-Tumor CAR-T Nears NMPA Approval | /news/2026-05-09-car-t-therapy-cost-china-solid-tumor-breakthrough.html | 2026-05-09 | CAR-T therapy China cost, CAR-T solid tumor China, NMPA CAR-T, gastric cancer CAR-T China, CAR-T vs US cost |
 | Thailand Medical Tourism vs China | /news/2026-05-01-thailand-medical-tourism-china-comparison.html | 2026-05-01 | Thailand medical tourism, China vs Thailand dental, China medical tourism competitive landscape |
 | Thailand Mandates Tourist Health Insurance — What It Means for China Medical Tourism | /news/2026-05-05-thailand-health-insurance-china-tourism-impact.html | 2026-05-05 | Thailand medical tourism policy 2026, China medical tourism competitive landscape, Thailand vs China healthcare |
 
