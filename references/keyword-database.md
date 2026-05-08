@@ -112,7 +112,7 @@
 | acupuncture treatment China cost | C | todo | ⭐⭐ | TCM政策新闻 |
 | TCM treatment international patients China | C | done | ⭐⭐ | Blog已有 |
 | robotic surgery China hospitals | C | partial | ⭐⭐ | Blog有提及 |
-| JCI accredited hospitals China | N | partial | ⭐ | 可深化 |
+| JCI accredited hospitals China | N | done | ⭐ | blog/jci-accredited-hospitals-china.html |
 
 ---
 
