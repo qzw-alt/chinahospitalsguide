@@ -96,7 +96,7 @@
 ### 🔴 前沿疗法 (Advanced / Experimental)
 | 关键词 | Intent | Status | News Fit | 备注 |
 |--------|--------|--------|---------|------|
-| stem cell therapy cost China | C | todo | ⭐⭐⭐⭐ | 日本糖尿病突破热点 |
+| stem cell therapy cost China | C | done | ⭐⭐⭐⭐⭐ | 日本糖尿病突破热点，文章已发布 2026-05-09 |
 | stem cell treatment hospitals China | C | todo | ⭐⭐⭐ | |
 | BCI neural implant China | C | todo | ⭐⭐⭐ | 中国BCI突破新闻 |
 | gene therapy China cost | C | todo | ⭐⭐ | |
