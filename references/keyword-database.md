@@ -107,7 +107,7 @@
 |--------|--------|--------|---------|------|
 | medical tourism China cost guide | C | done | ⭐⭐⭐ | Blog有综合文章 |
 | best hospitals China international patients | C | done | ⭐ | Blog有 |
-| health screening China cost | C | todo | ⭐⭐⭐ | 中国体检上市数据 |
+| health screening China cost | C | done | ⭐⭐⭐ | Blog文章已发布 2026-05-10 |
 | executive health checkup China | C | todo | ⭐⭐ | MyChinaMed有 |
 | acupuncture treatment China cost | C | todo | ⭐⭐ | TCM政策新闻 |
 | TCM treatment international patients China | C | done | ⭐⭐ | Blog已有 |
@@ -125,7 +125,7 @@
 | P0 | CAR-T therapy China cost | 随时有CAR-T新闻 | 5月初 |
 | P0 | stem cell therapy China cost | 日本糖尿病突破后续 | 5月初 |
 | P1 | spine surgery China cost | 已完成 — 2026-05-03 | 5月初 (提前) |
-| P1 | health screening China cost | 中国体检市场数据 | 5月中 |
+| P1 | health screening China cost | 中国体检市场数据 | ✅ 已发布 2026-05-10 |
 | P1 | IVF cost China | 生育率新闻 | 5月中 |
 | P2 | deep brain stimulation China | 帕金森相关新闻 | 5月下 |
 | P2 | proton therapy China cost | 质子治疗新闻 | 5月下 |
@@ -139,6 +139,7 @@
 | 文章 | 路径 | 发布日期 | 覆盖关键词 |
 |------|------|---------|---------|
 | Dental Implant Cost in China | /blog/dental-implants-china.html | 2026-04 | dental implants China cost |
+| Health Screening Cost in China 2026 | /blog/health-screening-china-cost-2026.html | 2026-05-10 | health screening China cost |
 | LASIK & SMILE Eye Surgery in China | /blog/lasik-smile-surgery-china.html | 2026-05-01 | LASIK cost China, SMILE surgery China |
 | Cataract Surgery in China | /blog/cataract-surgery-china.html | 2026-03 | cataract surgery cost China |
 | Cancer Treatment Cost in China | /blog/cancer-treatment-cost-china.html | 2026-04 | cancer treatment cost China |
