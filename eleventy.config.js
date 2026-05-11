@@ -23,9 +23,11 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("treatments/");
   eleventyConfig.addPassthroughCopy("services/");
 
-  // Preserve existing URL structure: file.html stays as file.html
-  // (prevents 11ty from converting to pretty URLs like file/index.html)
-  eleventyConfig.addGlobalData("permalink", "{{ page.filePathStem }}.html");
+  // Passthrough copy: root-level HTML files that should be served as-is
+  // (index.html, about.html, cancer.html, etc. — not processed by 11ty)
+  // Use glob to avoid copying the _site/ output directory itself
+  const glob = require("glob");
+  glob.sync("*.html").forEach(file => eleventyConfig.addPassthroughCopy(file));
 
   return {
     dir: {
@@ -35,7 +37,6 @@ module.exports = function(eleventyConfig) {
       layouts: "_layouts",
       data: "_data"
     },
-    // Preserve existing URL structure: file.html stays as file.html
     htmlTemplateEngine: "njk",
     markdownTemplateEngine: "njk",
     templateFormats: ["njk", "md"]
