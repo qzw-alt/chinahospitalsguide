@@ -181,6 +181,16 @@
 
 ---
 
+### 🦠 传染病 & 全球公共卫生 (Infectious Disease / Global Health)
+| 关键词 | Intent | Status | News Fit | 备注 |
+|--------|--------|--------|---------|------|
+| hantavirus symptoms | I | done | ⭐⭐⭐⭐⭐ | 2026-05-13 MV Hondius新闻蹭热点 |
+| hantavirus China | I | done | ⭐⭐⭐⭐⭐ | 2026-05-13 同上 |
+| hantavirus human-to-human transmission | I | done | ⭐⭐⭐⭐⭐ | 2026-05-13 同上，Andes病毒独有特性 |
+| Andes virus outbreak | I | done | ⭐⭐⭐⭐ | 2026-05-13 同上 |
+
+---
+
 ## ⚙️ 融合写作规则
 
 **核心原则：一篇两用 — 新闻热点 + 长尾指南融合**
