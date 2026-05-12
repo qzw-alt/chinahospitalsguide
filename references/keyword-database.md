@@ -89,7 +89,7 @@
 |--------|--------|--------|---------|------|
 | neurosurgery cost China | C | done | ⭐ | Blog已有 |
 | brain tumor surgery China | C | todo | ⭐⭐ | |
-| deep brain stimulation China | C | todo | ⭐⭐ | MyChinaMed有 |
+| deep brain stimulation China | C | done | ⭐⭐ | ✅ Published 2026-05-12 |
 | epilepsy treatment China cost | C | done | ⭐⭐ | Blog已有 |
 | Parkinson's treatment China | C | todo | ⭐⭐ | |
 

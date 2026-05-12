@@ -322,17 +322,17 @@
     <div class="nav-overlay" id="navOverlay"></div>
 <nav class="navbar">
     <div class="nav-container">
-        <a href="../index.html" class="nav-logo">China Hospitals Guide</a>
+        <a href="/index.html" class="nav-logo">China Hospitals Guide</a>
         <ul class="nav-links" id="navLinks">
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../services.html">Services</a></li>
-            <li><a href="../how-it-works.html">Process</a></li>
-            <li><a href="../pricing.html">Pricing</a></li>
-            <li><a href="../hospitals.html">Hospitals</a></li>
-            <li><a href="../contact.html">Contact</a></li>
-            <li><a href="../contact-new.html" class="nav-cta-mobile">Start Here</a></li>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/services.html">Services</a></li>
+            <li><a href="/how-it-works.html">Process</a></li>
+            <li><a href="/pricing.html">Pricing</a></li>
+            <li><a href="/hospitals.html">Hospitals</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+            <li><a href="/contact-new.html" class="nav-cta-mobile">Start Here</a></li>
         </ul>
-        <a href="../contact-new.html" class="nav-cta">Start Here</a>
+        <a href="/contact-new.html" class="nav-cta">Start Here</a>
         <div class="nav-toggle" id="navToggle"><span></span><span></span><span></span></div>
     </div>
 </nav>
@@ -575,7 +575,7 @@
             <div class="cta-box">
                 <h2>Ready to Schedule Your Health Screening in China?</h2>
                 <p style="margin-top: 10px; opacity: 0.9;">Get a personalized screening package recommendation based on your age, medical history, and budget. Our coordinators can compare quotes from PUMCH, Ruijin, and other top hospitals.</p>
-                <a href="../contact-new.html" class="btn">Get a Free Screening Quote</a>
+                <a href="/contact-new.html" class="btn">Get a Free Screening Quote</a>
             </div>
 
             <h2>Related Articles</h2>
@@ -587,7 +587,35 @@
             </ul>
 </article>
 <footer style="background: #1e3c72; color: white; text-align: center; padding: 30px; margin-top: 50px; border-radius: 15px;">
-    <p style="margin: 0;">© 2026 China Hospitals Guide | <a href="../index.html" style="color: white;">Home</a> | <a href="../contact.html" style="color: white;">Contact</a></p>
+    <p style="margin: 0;">© 2026 China Hospitals Guide | <a href="/index.html" style="color: white;">Home</a> | <a href="/contact.html" style="color: white;">Contact</a></p>
 </footer>
+
+    <div class="nav-overlay" id="navOverlay"></div>
+    <script>
+        (function() {
+            var navToggle = document.getElementById('navToggle');
+            var navLinks = document.getElementById('navLinks');
+            var navOverlay = document.getElementById('navOverlay');
+            function closeMenu() {
+                if (navLinks) navLinks.classList.remove('active');
+                if (navOverlay) navOverlay.classList.remove('active');
+            }
+            if (navToggle && navLinks) {
+                navToggle.addEventListener('click', function() {
+                    navLinks.classList.toggle('active');
+                    if (navOverlay) navOverlay.classList.toggle('active');
+                });
+            }
+            if (navOverlay) {
+                navOverlay.addEventListener('click', closeMenu);
+            }
+            document.querySelectorAll('.nav-links a').forEach(function(link) {
+                link.addEventListener('click', closeMenu);
+            });
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') closeMenu();
+            });
+        })();
+    </script>
 </body>
 </html>
