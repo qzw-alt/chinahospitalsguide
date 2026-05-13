@@ -53,7 +53,7 @@
 |--------|--------|--------|---------|------|
 | dental implants China cost | C | done | ⭐ | Blog已有 |
 | dental veneers China cost | C | todo | ⭐ | MyChinaMed有这篇文章 |
-| All-on-4 dental implants China | C | todo | ⭐ | 高客单价 |
+| All-on-4 dental implants China | C | done | ⭐ | 2026-05-13发布 article: all-on-four-dental-implants-china.html |
 | full mouth reconstruction China | C | todo | ⭐ | |
 | dental crowns China cost | C | todo | ⭐ | |
 
@@ -138,7 +138,7 @@
 
 | 文章 | 路径 | 发布日期 | 覆盖关键词 |
 |------|------|---------|---------|
-| Dental Implant Cost in China | /blog/dental-implants-china.html | 2026-04 | dental implants China cost |
+| All-on-4 Dental Implants in China 2026 | /blog/all-on-four-dental-implants-china.html | 2026-05-13 | All-on-4 dental implants China, full arch dental implants China cost, All-on-4 vs traditional implants |
 | IVF Cost in China 2026 | /blog/ivf-cost-china-2026.html | 2026-05-11 | IVF cost China, IVF cost comparison China US, cheap IVF abroad |
 | Health Screening Cost in China 2026 | /blog/health-screening-china-cost-2026.html | 2026-05-10 | health screening China cost |
 | LASIK & SMILE Eye Surgery in China | /blog/lasik-smile-surgery-china.html | 2026-05-01 | LASIK cost China, SMILE surgery China |
