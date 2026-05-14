@@ -109,7 +109,7 @@
 | best hospitals China international patients | C | done | ⭐ | Blog有 |
 | health screening China cost | C | done | ⭐⭐⭐ | Blog文章已发布 2026-05-10 |
 | executive health checkup China | C | todo | ⭐⭐ | MyChinaMed有 |
-| acupuncture treatment China cost | C | todo | ⭐⭐ | TCM政策新闻 |
+| acupuncture treatment China cost | C | done | ⭐⭐⭐ | 2026-05-14发布 article |
 | TCM treatment international patients China | C | done | ⭐⭐ | Blog已有 |
 | robotic surgery China hospitals | C | partial | ⭐⭐ | Blog有提及 |
 | JCI accredited hospitals China | N | done | ⭐ | blog/jci-accredited-hospitals-china.html |
