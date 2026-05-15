@@ -34,7 +34,7 @@
 | 关键词 | Intent | Status | News Fit | 备注 |
 |--------|--------|--------|---------|------|
 | heart surgery cost China | C | done | ⭐⭐ | Blog已有heart.html |
-| cardiac bypass surgery China | C | todo | ⭐⭐ | 可深化 |
+| cardiac bypass surgery China | C | done | ⭐⭐ | ✅ Published 2026-05-15 |
 | heart valve replacement China | C | todo | ⭐ | |
 | angioplasty China cost | C | todo | ⭐ | |
 
@@ -138,6 +138,7 @@
 
 | 文章 | 路径 | 发布日期 | 覆盖关键词 |
 |------|------|---------|---------|
+| Cardiac Bypass Surgery in China 2026 | /blog/cardiac-bypass-surgery-china-2026.html | 2026-05-15 | cardiac bypass surgery China, CABG cost China, heart bypass surgery China |
 | All-on-4 Dental Implants in China 2026 | /blog/all-on-four-dental-implants-china.html | 2026-05-13 | All-on-4 dental implants China, full arch dental implants China cost, All-on-4 vs traditional implants |
 | IVF Cost in China 2026 | /blog/ivf-cost-china-2026.html | 2026-05-11 | IVF cost China, IVF cost comparison China US, cheap IVF abroad |
 | Health Screening Cost in China 2026 | /blog/health-screening-china-cost-2026.html | 2026-05-10 | health screening China cost |
