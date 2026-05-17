@@ -437,25 +437,26 @@
         <!-- Browse by Topic - compact tags -->
         <div style="margin-bottom: 40px;">
             <h3 style="font-size:1em;color:#1e3c72;margin:0 0 12px;font-weight:600;">Browse by Topic</h3>
-            <div style="display:flex;flex-wrap:wrap;gap:8px;">
-                <a href="#cat-cancer-treatment" style="background:#8B000015;color:#8B0000;padding:6px 14px;border-radius:20px;font-size:0.85em;text-decoration:none;font-weight:500;">Cancer Treatment (9)</a>
-                <a href="#cat-cardiac-surgery" style="background:#dc143c15;color:#dc143c;padding:6px 14px;border-radius:20px;font-size:0.85em;text-decoration:none;font-weight:500;">Cardiac Surgery (2)</a>
-                <a href="#cat-city-guide" style="background:#1e3c7215;color:#1e3c72;padding:6px 14px;border-radius:20px;font-size:0.85em;text-decoration:none;font-weight:500;">City Guide (10)</a>
-                <a href="#cat-cost-guide" style="background:#2E7D3215;color:#2E7D32;padding:6px 14px;border-radius:20px;font-size:0.85em;text-decoration:none;font-weight:500;">Cost Guide (2)</a>
-                <a href="#cat-dental-care" style="background:#00b4db15;color:#00b4db;padding:6px 14px;border-radius:20px;font-size:0.85em;text-decoration:none;font-weight:500;">Dental Care (4)</a>
-                <a href="#cat-expat-guide" style="background:#00695c15;color:#00695c;padding:6px 14px;border-radius:20px;font-size:0.85em;text-decoration:none;font-weight:500;">Expat Guide (2)</a>
-                <a href="#cat-eye-care" style="background:#00640015;color:#006400;padding:6px 14px;border-radius:20px;font-size:0.85em;text-decoration:none;font-weight:500;">Eye Care (4)</a>
-                <a href="#cat-fertility" style="background:#c2185b15;color:#c2185b;padding:6px 14px;border-radius:20px;font-size:0.85em;text-decoration:none;font-weight:500;">Fertility (3)</a>
-                <a href="#cat-hospital-guide" style="background:#17345f15;color:#17345f;padding:6px 14px;border-radius:20px;font-size:0.85em;text-decoration:none;font-weight:500;">Hospital Guide (4)</a>
-                <a href="#cat-medical-guide" style="background:#1e3c7215;color:#1e3c72;padding:6px 14px;border-radius:20px;font-size:0.85em;text-decoration:none;font-weight:500;">Medical Guide (8)</a>
-                <a href="#cat-orthopedic" style="background:#455A6415;color:#455A64;padding:6px 14px;border-radius:20px;font-size:0.85em;text-decoration:none;font-weight:500;">Orthopedic (3)</a>
-                <a href="#cat-plastic-surgery" style="background:#c2185b15;color:#c2185b;padding:6px 14px;border-radius:20px;font-size:0.85em;text-decoration:none;font-weight:500;">Plastic Surgery (6)</a>
+            <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:8px;" id="filter-buttons">
+                <button onclick="filterArticles('all')" class="filter-btn active" data-filter="all" style="background:#1e3c72;color:white;padding:6px 14px;border-radius:20px;font-size:0.85em;font-weight:500;border:none;cursor:pointer;">All (79)</button>
+                <button onclick="filterArticles('Cancer Treatment')" class="filter-btn" data-filter="Cancer Treatment" style="background:#8B000015;color:#8B0000;padding:6px 14px;border-radius:20px;font-size:0.85em;font-weight:500;border:1px solid #8B000040;cursor:pointer;">Cancer Treatment (8)</button>
+                <button onclick="filterArticles('Cardiac Surgery')" class="filter-btn" data-filter="Cardiac Surgery" style="background:#dc143c15;color:#dc143c;padding:6px 14px;border-radius:20px;font-size:0.85em;font-weight:500;border:1px solid #dc143c40;cursor:pointer;">Cardiac Surgery (3)</button>
+                <button onclick="filterArticles('City Guide')" class="filter-btn" data-filter="City Guide" style="background:#1e3c7215;color:#1e3c72;padding:6px 14px;border-radius:20px;font-size:0.85em;font-weight:500;border:1px solid #1e3c7240;cursor:pointer;">City Guide (10)</button>
+                <button onclick="filterArticles('Dental Care')" class="filter-btn" data-filter="Dental Care" style="background:#00b4db15;color:#00b4db;padding:6px 14px;border-radius:20px;font-size:0.85em;font-weight:500;border:1px solid #00b4db40;cursor:pointer;">Dental Care (3)</button>
+                <button onclick="filterArticles('Eye Care')" class="filter-btn" data-filter="Eye Care" style="background:#00640015;color:#006400;padding:6px 14px;border-radius:20px;font-size:0.85em;font-weight:500;border:1px solid #00640040;cursor:pointer;">Eye Care (3)</button>
+                <button onclick="filterArticles('Fertility')" class="filter-btn" data-filter="Fertility" style="background:#c2185b15;color:#c2185b;padding:6px 14px;border-radius:20px;font-size:0.85em;font-weight:500;border:1px solid #c2185b40;cursor:pointer;">Fertility (2)</button>
+                <button onclick="filterArticles('Hospital Guide')" class="filter-btn" data-filter="Hospital Guide" style="background:#17345f15;color:#17345f;padding:6px 14px;border-radius:20px;font-size:0.85em;font-weight:500;border:1px solid #17345f40;cursor:pointer;">Hospital Guide (4)</button>
+                <button onclick="filterArticles('Medical Guide')" class="filter-btn" data-filter="Medical Guide" style="background:#1e3c7215;color:#1e3c72;padding:6px 14px;border-radius:20px;font-size:0.85em;font-weight:500;border:1px solid #1e3c7240;cursor:pointer;">Medical Guide (11)</button>
+                <button onclick="filterArticles('Neurosurgery')" class="filter-btn" data-filter="Neurosurgery" style="background:#4B008215;color:#4B0082;padding:6px 14px;border-radius:20px;font-size:0.85em;font-weight:500;border:1px solid #4B008240;cursor:pointer;">Neurosurgery (3)</button>
+                <button onclick="filterArticles('Orthopedics')" class="filter-btn" data-filter="Orthopedics" style="background:#8B451315;color:#8B4513;padding:6px 14px;border-radius:20px;font-size:0.85em;font-weight:500;border:1px solid #8B451340;cursor:pointer;">Orthopedics (7)</button>
+                <button onclick="filterArticles('Plastic Surgery')" class="filter-btn" data-filter="Plastic Surgery" style="background:#c2185b15;color:#c2185b;padding:6px 14px;border-radius:20px;font-size:0.85em;font-weight:500;border:1px solid #c2185b40;cursor:pointer;">Plastic Surgery (2)</button>
+                <button onclick="filterArticles('Regenerative Medicine')" class="filter-btn" data-filter="Regenerative Medicine" style="background:#1565C015;color:#1565C0;padding:6px 14px;border-radius:20px;font-size:0.85em;font-weight:500;border:1px solid #1565C040;cursor:pointer;">Regenerative Medicine (2)</button>
             </div>
-        </div>
+            <div id="filter-count" style="color:#888;font-size:0.85em;margin-top:8px;"></div>
 
         <h2 id="latest-articles" style="color: #1e3c72; margin-bottom: 30px; font-size: 2em;">Latest Articles</h2>
 
-        <div class="blog-grid">
+        <div class="blog-grid" id="blog-grid">
             <div class="blog-card"><div class="blog-image" style="background:linear-gradient(135deg,#8B0000 0%,#dc143c 100%);">CT</div><div class="blog-content"><div class="blog-category">Cancer Treatment</div><h3 class="blog-title"><a href="car-t-therapy-hospitals-china-2026.html">CAR-T Therapy Hospitals in China 2026: Top 10 Centers for International Patients</a></h3><p class="blog-excerpt">Find the best CAR-T therapy hospitals in China for international patients. Compare top 10 CAR-T centers in Beijing, Shanghai & Guangzhou — with treatment packages, English support,</p><div class="blog-meta"><span>May 2026</span><span>15 min read</span></div><a href="car-t-therapy-hospitals-china-2026.html" class="read-more">Read Article</a></div></div>
             <div class="blog-card"><div class="blog-image" style="background:linear-gradient(135deg,#1e3c72 0%,#6b8dd6 100%);">BA</div><div class="blog-content"><div class="blog-category">Medical Guide</div><h3 class="blog-title"><a href="breast-augmentation-china-2026.html">Breast Augmentation in China 2026: Cost, Top Hospitals & Complete Patient Guide</a></h3><p class="blog-excerpt">Breast augmentation in China costs $2,800–$8,300 (¥20,000–60,000) vs $6,000–$15,000 in the US. Top surgeons at Shanghai Ninth People</p><div class="blog-meta"><span>May 2026</span><span>14 min read</span></div><a href="breast-augmentation-china-2026.html" class="read-more">Read Article</a></div></div>
             <div class="blog-card"><div class="blog-image" style="background:linear-gradient(135deg,#dc143c 0%,#FF6347 100%);">CB</div><div class="blog-content"><div class="blog-category">Cardiac Surgery</div><h3 class="blog-title"><a href="cardiac-bypass-surgery-china-2026.html">Cardiac Bypass Surgery Cost in China 2026: $18,000–$45,000 vs $100,000–$200,000 in the US</a></h3><p class="blog-excerpt">Cardiac bypass surgery in China costs $18,000–$45,000 vs $100,000–$200,000 in the US. Top JCI-accredited heart hospitals in Beijing, Shanghai & Guangzhou. 2026 prices, surgeon cred</p><div class="blog-meta"><span>May 2026</span><span>15 min read</span></div><a href="cardiac-bypass-surgery-china-2026.html" class="read-more">Read Article</a></div></div>
@@ -583,5 +584,39 @@
             <span class="chat-tooltip">Chat on WhatsApp</span>
         </a>
     </div>
+    <script>
+    function filterArticles(category) {
+        var grid = document.getElementById('blog-grid');
+        var cards = grid.querySelectorAll('.blog-card');
+        var count = 0;
+        var buttons = document.querySelectorAll('.filter-btn');
+        buttons.forEach(function(btn) {
+            btn.style.background = '';
+            btn.style.color = '';
+            btn.style.border = '';
+            btn.style.fontWeight = '';
+            btn.classList.remove('active');
+        });
+        event.target.classList.add('active');
+        event.target.style.background = '#1e3c72';
+        event.target.style.color = 'white';
+        event.target.style.fontWeight = '600';
+        cards.forEach(function(card) {
+            var cat = card.querySelector('.blog-category').textContent;
+            if (category === 'all' || cat === category) {
+                card.style.display = '';
+                count++;
+            } else {
+                card.style.display = 'none';
+            }
+        });
+        var countDiv = document.getElementById('filter-count');
+        if (category === 'all') {
+            countDiv.textContent = '';
+        } else {
+            countDiv.textContent = count + ' article' + (count !== 1 ? 's' : '') + ' in ' + category;
+        }
+    }
+    </script>
 </body>
 </html>
