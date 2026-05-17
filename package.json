@@ -4,7 +4,7 @@
   "description": "China Hospitals Guide - Static site built with Eleventy",
   "scripts": {
     "optimize-images": "node scripts/convert-images.js",
-    "build": "npm run optimize-images && eleventy && node scripts/inject-hints.js && cleancss -o _site/styles.css _site/styles.css",
+    "build": "npm run optimize-images && eleventy && node scripts/generate-sitemap.js && node scripts/inject-hints.js && cleancss -o _site/styles.css _site/styles.css",
     "serve": "eleventy --serve --watch",
     "debug": "DEBUG=* eleventy"
   },
