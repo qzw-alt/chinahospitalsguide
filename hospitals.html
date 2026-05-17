@@ -815,7 +815,7 @@
                 }
                 
                 const imageHtml = imageUrl ? 
-                    `<img src="${imageUrl}" alt="${hospital.name}" class="hospital-image" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    `<img src="${imageUrl}" alt="${hospital.name}" class="hospital-image" width="800" height="544" loading="lazy" decoding="async" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                     <div class="hospital-image-placeholder" style="background: linear-gradient(135deg, ${getCityColor(hospital.city)} 0%, ${getCityColor(hospital.city, true)} 100%); display: none;">
                         <div style="text-align: center;">
                             <div style="font-size: 3rem; font-weight: bold; text-shadow: 0 2px 10px rgba(0,0,0,0.3);">${hospital.city.charAt(0)}</div>
