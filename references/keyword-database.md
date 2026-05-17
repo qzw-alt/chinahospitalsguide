@@ -20,7 +20,7 @@
 | 关键词 | Intent | Status | News Fit | 备注 |
 |--------|--------|--------|---------|------|
 | CAR-T therapy China cost | C | done | ⭐⭐⭐⭐⭐ | 商业价值最高，中国是全球CAR-T领导者 |
-| CAR-T therapy hospitals China | C | todo | ⭐⭐⭐⭐ | 对应Blog可做专题 |
+| CAR-T therapy hospitals China | C | done | ⭐⭐⭐⭐ | ✅ Published 2026-05-17 |
 | CAR-T clinical trials China | C | todo | ⭐⭐⭐⭐ | 很强的商业意图 |
 | cancer treatment cost China | C | done | ⭐⭐⭐ | Blog已有cancer.html |
 | Immunotherapy China cancer | C | todo | ⭐⭐⭐ | 与CAR-T重叠 |
