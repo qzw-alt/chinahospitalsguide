@@ -12,5 +12,8 @@ Disallow: /admin/
 Disallow: /private/
 Disallow: /cgi-bin/
 
+# Disallow API directory - internal data for AI agents only
+Disallow: /api/
+
 # Crawl-delay (optional, be nice to servers)
 Crawl-delay: 1
