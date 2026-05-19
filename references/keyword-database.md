@@ -70,7 +70,7 @@
 | 关键词 | Intent | Status | News Fit | 备注 |
 |--------|--------|--------|---------|------|
 | plastic surgery China cost | C | done | ⭐ | Blog已有 |
-| rhinoplasty China cost | C | todo | ⭐ | MyChinaMed有 |
+| rhinoplasty China cost | C | done | ⭐ | ✅ Published 2026-05-19 article: rhinoplasty-cost-china-2026.html |
 | facelift China cost | C | todo | ⭐ | |
 | breast augmentation China | C | done | ⭐ | ✅ Published 2026-05-16 article: breast-augmentation-china-2026.html |
 | gender reassignment surgery China | C | todo | ⭐⭐ | 泰国强项，中国也有 |
