@@ -15,6 +15,7 @@ module.exports = function(eleventyConfig) {
   // (e.g., blog/*.md when blog/*.html already exists)
   eleventyConfig.ignores.add("blog/*.md");
   eleventyConfig.ignores.add("news/*.md");
+  eleventyConfig.ignores.add(".agents/");
 
   // HTML files without frontmatter are auto-passthrough-copied (not skipped)
   eleventyConfig.addPassthroughCopy("news/");
