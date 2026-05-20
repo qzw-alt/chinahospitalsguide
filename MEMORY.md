@@ -1,6 +1,20 @@
 # MEMORY.md - 德米 long-term memory
 
-> 最后更新：2026-03-16
+> 最后更新：2026-05-20
+
+---
+
+## 📅 2026-05-20 每日日志
+
+### 商业长尾SEO文章发布
+- **文章**: Proton Therapy Cost in China 2026
+- **URL**: https://chinahospitalsguide.com/blog/proton-therapy-china-2026.html
+- **词数**: ~2,077 | 去AI评分: Clean (2 minor patterns fixed)
+- **内容**: SPHIC生存数据、5大质子中心、费用对比表、FAQ schema
+- **SEO审计**: Title✓ H1✓ MetaDesc✓ 200✓
+
+### 完成项目
+- proton therapy China cost → done (2026-05-20发布)
 
 ---
 
