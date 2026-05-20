@@ -24,7 +24,7 @@
 | CAR-T clinical trials China | C | todo | ⭐⭐⭐⭐ | 很强的商业意图 |
 | cancer treatment cost China | C | done | ⭐⭐⭐ | Blog已有cancer.html |
 | Immunotherapy China cancer | C | todo | ⭐⭐⭐ | 与CAR-T重叠 |
-| proton therapy China cost | C | todo | ⭐⭐⭐ | 有US数据对比 |
+| proton therapy China cost | C | done | ⭐⭐⭐ | 2026-05-20发布 article: proton-therapy-china-2026.html |
 | radiation therapy China cost | C | todo | ⭐ | |
 | liver cancer treatment China | C | todo | ⭐⭐ | |
 | lung cancer treatment China | C | todo | ⭐⭐ | Blog已有 David's Story |
