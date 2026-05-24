@@ -161,27 +161,27 @@ Thank you for providing your medical needs! Based on your requirements ({special
 
 📋 **Want More Details?**
 
-Get our **Starter Guide ($30)** which includes:
+Get our **Hospital Match & Plan ($49)** which includes:
 • Detailed hospital comparison charts
 • Doctor profiles and credentials
 • Step-by-step treatment process
 • Cost breakdown and payment options
 • Visa and travel requirements
 
-👉 [Purchase Starter Guide - $30]
+👉 [Get Hospital Match & Plan - $49]
 
 ---
 
 💼 **Need Full Support?**
 
-Our **Standard Package ($299)** includes everything in the Starter Guide PLUS:
+Our **Pre-Arrival Coordination ($399)** includes everything in Hospital Match & Plan PLUS:
 • Hospital appointment scheduling
-• Medical record translation
-• Pre-arrival consultation
-• Airport pickup coordination
-• 24/7 concierge support
+• Medical record preparation guidance
+• Pre-arrival planning
+• Airport pickup arrangement
+• Support until you reach the hospital door
 
-👉 [Purchase Standard Package - $299]
+👉 [Get Pre-Arrival Coordination - $399]
 
 ---
 

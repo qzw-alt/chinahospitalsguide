@@ -215,11 +215,11 @@ Here's your step-by-step checklist:
 
 **Need help?**
 
-Our Standard Package ($299) includes:
+Our Pre-Arrival Coordination ($399) includes:
 ✓ Hospital appointment booking
-✓ Medical record translation
+✓ Medical record preparation guidance
 ✓ Pre-arrival coordination
-✓ Invitation letter for visa
+✓ Airport pickup arrangement
 ✓ Dedicated case manager
 
 [Learn More About Our Packages]

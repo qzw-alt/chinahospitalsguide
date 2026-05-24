@@ -321,6 +321,27 @@
                     </div>
 
                     <div class="form-group">
+                        <label>What do you need help with? <span>*</span></label>
+                        <div class="checkbox-group" style="display:flex;flex-wrap:wrap;gap:12px;margin-top:4px;">
+                            <label style="display:flex;align-items:center;gap:6px;font-weight:400;cursor:pointer;font-size:0.93rem;color:var(--text);">
+                                <input type="checkbox" name="help_type" value="Hospital search / shortlist"> Hospital search / shortlist
+                            </label>
+                            <label style="display:flex;align-items:center;gap:6px;font-weight:400;cursor:pointer;font-size:0.93rem;color:var(--text);">
+                                <input type="checkbox" name="help_type" value="Appointment coordination"> Appointment coordination
+                            </label>
+                            <label style="display:flex;align-items:center;gap:6px;font-weight:400;cursor:pointer;font-size:0.93rem;color:var(--text);">
+                                <input type="checkbox" name="help_type" value="Airport pickup"> Airport pickup
+                            </label>
+                            <label style="display:flex;align-items:center;gap:6px;font-weight:400;cursor:pointer;font-size:0.93rem;color:var(--text);">
+                                <input type="checkbox" name="help_type" value="Travel / route planning"> Travel / route planning
+                            </label>
+                            <label style="display:flex;align-items:center;gap:6px;font-weight:400;cursor:pointer;font-size:0.93rem;color:var(--text);">
+                                <input type="checkbox" name="help_type" value="Not sure yet"> Not sure yet
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
                         <label>Preferred Service Path <span>*</span></label>
                         <div class="radio-group">
                             <label class="radio-item">
@@ -328,12 +349,12 @@
                                 <span><strong>Recommend a package for me</strong> - best for new visitors who have not paid yet</span>
                             </label>
                             <label class="radio-item">
-                                <input type="radio" name="package" value="Starter Guide ($30)">
-                                <span><strong>Starter Guide ($30)</strong> - research-oriented support</span>
+                                <input type="radio" name="package" value="Hospital Match &amp; Plan ($49)">
+                                <span><strong>Hospital Match &amp; Plan ($49)</strong> - hospital shortlist and cost guidance</span>
                             </label>
                             <label class="radio-item">
-                                <input type="radio" name="package" value="Standard Package ($299)">
-                                <span><strong>Standard Package ($299)</strong> - active coordination before hospital arrival</span>
+                                <input type="radio" name="package" value="Pre-Arrival Coordination ($399)">
+                                <span><strong>Pre-Arrival Coordination ($399)</strong> - full coordination including appointment setup and airport pickup</span>
                             </label>
                         </div>
                     </div>
@@ -451,6 +472,8 @@
             submitBtn.disabled = true;
             submitBtn.textContent = 'Submitting...';
 
+            var helpTypes = Array.from(document.querySelectorAll('input[name="help_type"]:checked')).map(function(el) { return el.value; }).join(', ') || 'Not specified';
+
             var formData = {
                 firstname: document.getElementById('firstname').value,
                 lastname: document.getElementById('lastname').value,
@@ -460,6 +483,7 @@
                 treatment_category: document.getElementById('treatment_category').value,
                 medical_details: document.getElementById('medical_details').value,
                 source: document.getElementById('source').value || 'Not specified',
+                help_type: helpTypes,
                 package: document.querySelector('input[name="package"]:checked')?.value || 'Not specified',
                 payment_status: paymentStatus,
                 lead_status: leadStatus,

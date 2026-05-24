@@ -2,10 +2,10 @@
 
 ## 套餐配置
 
-### Starter Guide - $30
+### Hospital Match & Plan - $49
 ```html
-<!-- PayPal Button for Starter Guide ($30) -->
-<div id="paypal-button-starter"></div>
+<!-- PayPal Button for Hospital Match & Plan ($49) -->
+<div id="paypal-button-match"></div>
 <script src="https://www.paypal.com/sdk/js?client-id=YOUR_CLIENT_ID&currency=USD"></script>
 <script>
   paypal.Buttons({
@@ -13,37 +13,37 @@
       return actions.order.create({
         purchase_units: [{
           amount: {
-            value: '30.00',
+            value: '49.00',
             currency_code: 'USD'
           },
-          description: 'Starter Guide - Complete hospital database and treatment guides'
+          description: 'Hospital Match & Plan - Hospital shortlist and cost guidance'
         }]
       });
     },
     onApprove: function(data, actions) {
       return actions.order.capture().then(function(details) {
-        alert('Thank you ' + details.payer.name.given_name + '! Your Starter Guide will be sent to your email within 24 hours.');
+        alert('Thank you ' + details.payer.name.given_name + '! Your Hospital Match & Plan will be sent to your email within 24 hours.');
         // TODO: Send confirmation email and deliver digital product
       });
     }
-  }).render('#paypal-button-starter');
+  }).render('#paypal-button-match');
 </script>
 ```
 
-### Standard Package - $299
+### Pre-Arrival Coordination - $399
 ```html
-<!-- PayPal Button for Standard Package ($299) -->
-<div id="paypal-button-standard"></div>
+<!-- PayPal Button for Pre-Arrival Coordination ($399) -->
+<div id="paypal-button-coordination"></div>
 <script>
   paypal.Buttons({
     createOrder: function(data, actions) {
       return actions.order.create({
         purchase_units: [{
           amount: {
-            value: '299.00',
+            value: '399.00',
             currency_code: 'USD'
           },
-          description: 'Standard Package - Hospital booking and medical record translation'
+          description: 'Pre-Arrival Coordination - Appointment setup and airport pickup'
         }]
       });
     },
@@ -53,7 +53,7 @@
         // TODO: Send confirmation email and assign case manager
       });
     }
-  }).render('#paypal-button-standard');
+  }).render('#paypal-button-coordination');
 </script>
 ```
 
@@ -196,7 +196,7 @@
                 <li>Dedicated case manager</li>
                 <li>Priority email support</li>
             </ul>
-            <div id="paypal-button-standard" class="paypal-button-container"></div>
+            <div id="paypal-button-coordination" class="paypal-button-container"></div>
         </div>
         
         <!-- Premium Package -->
@@ -249,7 +249,7 @@
                     window.location.href = '/thank-you.html?package=standard';
                 });
             }
-        }).render('#paypal-button-standard');
+        }).render('#paypal-button-coordination');
         
         paypal.Buttons({
             createOrder: function(data, actions) {
