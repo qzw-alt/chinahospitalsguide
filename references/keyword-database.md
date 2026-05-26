@@ -21,7 +21,7 @@
 |--------|--------|--------|---------|------|
 | CAR-T therapy China cost | C | done | ⭐⭐⭐⭐⭐ | 商业价值最高，中国是全球CAR-T领导者 |
 | CAR-T therapy hospitals China | C | done | ⭐⭐⭐⭐ | ✅ Published 2026-05-17 |
-| CAR-T clinical trials China | C | todo | ⭐⭐⭐⭐ | 很强的商业意图 |
+|| CAR-T clinical trials China | C | done | ⭐⭐⭐⭐ | ✅ Published 2026-05-25 article: car-t-clinical-trials-china-2026.html |
 | cancer treatment cost China | C | done | ⭐⭐⭐ | Blog已有cancer.html |
 | Immunotherapy China cancer | C | todo | ⭐⭐⭐ | 与CAR-T重叠 |
 | proton therapy China cost | C | done | ⭐⭐⭐ | 2026-05-20发布 article: proton-therapy-china-2026.html |
@@ -100,7 +100,7 @@
 | stem cell treatment hospitals China | C | todo | ⭐⭐⭐ | |
 | BCI neural implant China | C | todo | ⭐⭐⭐ | 中国BCI突破新闻 |
 | gene therapy China cost | C | todo | ⭐⭐ | |
-| immunotherapy treatment China | C | todo | ⭐⭐ | 与CAR-T重叠 |
+| immunotherapy treatment China | C | done | ⭐⭐⭐ | 融合写作: 2026-05-27 article: immunotherapy-treatment-china-ivonescimab-approval.html |
 
 ### 🏨 综合 (General / Cross-Cutting)
 | 关键词 | Intent | Status | News Fit | 备注 |
@@ -153,6 +153,7 @@
 | Heart Surgery in China | /blog/heart-surgery-china.html | 2026-03 | heart surgery cost China |
 | Spine Surgery in China (2026): Robot-Assisted Procedure Cuts Incision from 20cm to 1cm | /news/2026-05-03-spine-surgery-robot-china.html | 2026-05-03 | spine surgery China cost, robotic spine surgery China, spinal endoscopy China |
 | CAR-T Therapy Cost in China (2026): World's First Solid-Tumor CAR-T Nears NMPA Approval | /news/2026-05-09-car-t-therapy-cost-china-solid-tumor-breakthrough.html | 2026-05-09 | CAR-T therapy China cost, CAR-T solid tumor China, NMPA CAR-T, gastric cancer CAR-T China, CAR-T vs US cost |
+| Immunotherapy Treatment in China (2026): China Approves Drug That Beat Keytruda | /news/2026-05-27-immunotherapy-treatment-china-ivonescimab-approval.html | 2026-05-27 | immunotherapy treatment China, ivonescimab China, cancer immunotherapy China cost, China bispecific antibody, PD-1 VEGF China |
 | Thailand Medical Tourism vs China | /news/2026-05-01-thailand-medical-tourism-china-comparison.html | 2026-05-01 | Thailand medical tourism, China vs Thailand dental, China medical tourism competitive landscape |
 | Thailand Mandates Tourist Health Insurance — What It Means for China Medical Tourism | /news/2026-05-05-thailand-health-insurance-china-tourism-impact.html | 2026-05-05 | Thailand medical tourism policy 2026, China medical tourism competitive landscape, Thailand vs China healthcare |
 
