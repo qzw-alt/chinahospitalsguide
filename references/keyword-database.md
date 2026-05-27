@@ -98,7 +98,7 @@
 |--------|--------|--------|---------|------|
 | stem cell therapy cost China | C | done | ⭐⭐⭐⭐⭐ | 日本糖尿病突破热点，文章已发布 2026-05-09 |
 | stem cell treatment hospitals China | C | todo | ⭐⭐⭐ | |
-| BCI neural implant China | C | todo | ⭐⭐⭐ | 中国BCI突破新闻 |
+| BCI neural implant China | C | done | ⭐⭐⭐⭐ | ✅ Published 2026-05-28 |
 | gene therapy China cost | C | todo | ⭐⭐ | |
 | immunotherapy treatment China | C | done | ⭐⭐⭐ | 融合写作: 2026-05-27 article: immunotherapy-treatment-china-ivonescimab-approval.html |
 
@@ -154,6 +154,7 @@
 | Spine Surgery in China (2026): Robot-Assisted Procedure Cuts Incision from 20cm to 1cm | /news/2026-05-03-spine-surgery-robot-china.html | 2026-05-03 | spine surgery China cost, robotic spine surgery China, spinal endoscopy China |
 | CAR-T Therapy Cost in China (2026): World's First Solid-Tumor CAR-T Nears NMPA Approval | /news/2026-05-09-car-t-therapy-cost-china-solid-tumor-breakthrough.html | 2026-05-09 | CAR-T therapy China cost, CAR-T solid tumor China, NMPA CAR-T, gastric cancer CAR-T China, CAR-T vs US cost |
 | Immunotherapy Treatment in China (2026): China Approves Drug That Beat Keytruda | /news/2026-05-27-immunotherapy-treatment-china-ivonescimab-approval.html | 2026-05-27 | immunotherapy treatment China, ivonescimab China, cancer immunotherapy China cost, China bispecific antibody, PD-1 VEGF China |
+| BCI Neural Implant in China (2026): China's First Fully Implantable BCI Trial Begins | /news/2026-05-28-bci-neural-implant-china-2026.html | 2026-05-28 | BCI neural implant China, brain computer interface China cost, fully implantable BCI China, paralysis BCI treatment China, China BCI vs Neuralink |
 | Thailand Medical Tourism vs China | /news/2026-05-01-thailand-medical-tourism-china-comparison.html | 2026-05-01 | Thailand medical tourism, China vs Thailand dental, China medical tourism competitive landscape |
 | Thailand Mandates Tourist Health Insurance — What It Means for China Medical Tourism | /news/2026-05-05-thailand-health-insurance-china-tourism-impact.html | 2026-05-05 | Thailand medical tourism policy 2026, China medical tourism competitive landscape, Thailand vs China healthcare |
 
