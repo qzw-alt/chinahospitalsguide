@@ -22,8 +22,6 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("blog/");
   eleventyConfig.addPassthroughCopy("stories/");
   eleventyConfig.addPassthroughCopy("treatments/");
-  eleventyConfig.addPassthroughCopy("services/");
-
   // Passthrough copy: root-level HTML files that should be served as-is
   // (index.html, about.html, cancer.html, etc. — not processed by 11ty)
   // Use glob to avoid copying the _site/ output directory itself
