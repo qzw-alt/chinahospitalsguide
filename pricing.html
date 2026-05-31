@@ -68,6 +68,20 @@
         }
         .pricing-card-local.featured {
             border: 2px solid var(--primary);
+            position: relative;
+        }
+        .pricing-card-local.featured::before {
+            content: 'MOST POPULAR';
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--accent);
+            color: white;
+            padding: 5px 20px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
         }
         .pricing-card-local h3,
         .step-card h3,

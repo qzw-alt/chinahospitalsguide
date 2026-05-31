@@ -25,5 +25,21 @@ function injectHints(dir) {
   }
 }
 
+// Preload hero image only on homepage
+const indexPath = path.join('_site', 'index.html');
+if (fs.existsSync(indexPath)) {
+  let html = fs.readFileSync(indexPath, 'utf8');
+  if (!html.includes('china-hospital.webp') && !html.includes('china-hospital.jpg')) {
+    // Check which hero image is used
+  }
+  if (!html.includes('<link rel="preload" as="image"')) {
+    // Add hero image preload for images referenced in hero CSS
+    const heroPreload = '\n    <link rel="preload" as="image" href="/images/china-hospital.webp" fetchpriority="high">';
+    html = html.replace('</title>', '</title>' + heroPreload);
+    fs.writeFileSync(indexPath, html);
+    console.log('Injected hero preload:', indexPath);
+  }
+}
+
 injectHints('_site');
 console.log('Done.');

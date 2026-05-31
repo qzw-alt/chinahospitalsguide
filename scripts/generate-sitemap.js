@@ -2,19 +2,25 @@ const fs = require('fs');
 const path = require('path');
 
 const BASE = 'https://chinahospitalsguide.com';
-const TODAY = new Date().toISOString().slice(0, 10);
+
+// Directories to skip entirely (build artifacts, internal docs, duplicates)
+const SKIP_DIRS = new Set([
+  'blog-articles', 'blog-export', 'docs', '06-Local-Ops',
+  'references', 'course', '_', 'assets',
+]);
 
 function walk(dir, base = '') {
   const results = [];
   const entries = fs.readdirSync(dir, { withFileTypes: true });
   for (const e of entries) {
     if (e.name.startsWith('_') || e.name.startsWith('.')) continue;
+    if (SKIP_DIRS.has(e.name)) continue;
     const full = path.join(dir, e.name);
     const rel = base + '/' + e.name;
     if (e.isDirectory()) {
       results.push(...walk(full, rel));
     } else if (e.name.endsWith('.html')) {
-      results.push(rel);
+      results.push({ path: rel, mtime: fs.statSync(full).mtime });
     }
   }
   return results;
@@ -40,25 +46,22 @@ function getChangefreq(url) {
   return 'monthly';
 }
 
-// Collect all HTML pages
 const pages = walk('_site')
-  .filter(p => p !== '/404.html' && !p.includes('/references/') && p !== '/news/template-news-article.html');
+  .filter(p => p.path !== '/404.html' && !p.path.includes('/template-news-article.html'));
 
-// Normalize URLs
 const urls = pages.map(p => {
-  let url = p;
+  let url = p.path;
   if (url.endsWith('/index.html')) url = url.replace(/\/index\.html$/, '/');
-  return url;
-}).sort();
+  return { url, lastmod: p.mtime.toISOString().slice(0, 10) };
+}).sort((a, b) => a.url.localeCompare(b.url));
 
-// Generate sitemap
 let xml = '<?xml version="1.0" encoding="UTF-8"?>\n';
 xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
 
-for (const url of urls) {
+for (const { url, lastmod } of urls) {
   xml += '  <url>\n';
   xml += `    <loc>${BASE}${url}</loc>\n`;
-  xml += `    <lastmod>${TODAY}</lastmod>\n`;
+  xml += `    <lastmod>${lastmod}</lastmod>\n`;
   xml += `    <changefreq>${getChangefreq(url)}</changefreq>\n`;
   xml += `    <priority>${getPriority(url)}</priority>\n`;
   xml += '  </url>\n';
@@ -68,4 +71,6 @@ xml += '</urlset>\n';
 
 fs.writeFileSync('sitemap.xml', xml);
 fs.writeFileSync('_site/sitemap.xml', xml);
-console.log(`Generated sitemap.xml with ${urls.length} URLs (lastmod: ${TODAY})`);
+
+const duplicateCount = pages.filter(p => !SKIP_DIRS.has(p.path.split('/')[1])).length;
+console.log(`Generated sitemap.xml with ${urls.length} URLs`);
