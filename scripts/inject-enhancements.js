@@ -73,7 +73,21 @@ function processDir(dir) {
       let html = fs.readFileSync(full, 'utf8');
       let changed = false;
 
-      // 1. Inject GA4 events script before </body>
+      // 1a. Inject base GA4 tracking code in <head> if missing
+      if (!html.includes('googletagmanager.com/gtag') && html.includes('</head>')) {
+        const gaSnippet = `
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RVYZENK472"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-RVYZENK472');
+    </script>`;
+        html = html.replace('</head>', gaSnippet + '\n</head>');
+        changed = true;
+      }
+
+      // 1b. Inject GA4 events script before </body>
       if (!html.includes('ga-events.js') && html.includes('</body>')) {
         html = html.replace('</body>', '  <script src="/ga-events.js" defer></script>\n</body>');
         changed = true;
