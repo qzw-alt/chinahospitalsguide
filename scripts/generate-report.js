@@ -428,7 +428,7 @@ function generateHtmlReport(results, keywords, city, budget, opts) {
 <body>
 <div class="toolbar">
   <button onclick="window.print()">🖨️ Print / PDF</button>
-  <button class="btn-primary" onclick="document.getElementById('dloadBtn').click()">📥 Download Full Report</button>
+  <button class="btn-primary" onclick="downloadTxt()">📥 Download Full Report</button>
 </div>
 <div class="report">
   <div class="hero">
@@ -470,7 +470,7 @@ function generateHtmlReport(results, keywords, city, budget, opts) {
     <!-- Download section -->
     <div class="dload-section">
       <p>📥 <strong>Download the complete detailed report</strong> — includes all hospital information, pricing breakdown, step-by-step action plan, and everything you need to prepare for your medical trip to China.</p>
-      <a id="dloadBtn" class="btn-dload" download="report-${esc(safeTitle)}.txt" href="data:text/plain;charset=utf-8,${encodeURIComponent(textReport)}">⬇ Download Full Report (.txt)</a>
+      <a id="dloadBtn" class="btn-dload" href="#" onclick="downloadTxt();return false;">⬇ Download Full Report (.txt)</a>
     </div>
 
     <div class="disclaimer">
