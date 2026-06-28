@@ -267,7 +267,9 @@
   </div>
 </div>
 <script>
-function downloadTxt(){var c=document.querySelector('.content');if(!c)return;var t='';c.querySelectorAll('h1,h2,h3,h4,p,li,blockquote,div').forEach(function(e){if(e.closest('.toolbar'))return;var txt=e.textContent.trim();if(txt.length>3)t+=txt+'\n\n';});var b=new Blob([t.trim()],{type:'text/plain;charset=utf-8'});var u=URL.createObjectURL(b);var a=document.createElement('a');a.href=u;a.download=document.title.replace(/[^a-z0-9]/gi,'-')+'.txt';a.click();URL.revokeObjectURL(u);}
+function downloadTxt(){var c=document.querySelector('.content');if(!c)return;var t='';c.querySelectorAll('h1,h2,h3,h4,p,li,blockquote').forEach(function(e){if(e.closest('.toolbar')||e.closest('.footer'))return;var txt=e.textContent.trim();if(txt.length>4)t+=txt+'
+
+';});var b=new Blob([t.trim()],{type:'text/plain;charset=utf-8'});var u=URL.createObjectURL(b);var a=document.createElement('a');a.href=u;a.download='report-'+document.title.replace(/[^a-z0-9]/gi,'-').replace(/--+/g,'-').replace(/^-|-$/g,'')+'.txt';a.click();URL.revokeObjectURL(u);}
 </script>
 </body>
 </html>
