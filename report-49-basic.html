@@ -1,0 +1,243 @@
+<!DOCTYPE html><html lang="zh-CN">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Your Hospital Report — Carlos Mendoza — China Hospitals Guide</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Segoe UI','PingFang SC','Microsoft YaHei',system-ui,sans-serif;color:#1a1a2e;background:#f0f2f5;line-height:1.7;}
+  .report{max-width:960px;margin:0 auto;background:#fff;box-shadow:0 4px 30px rgba(0,0,0,0.08);}
+  .hero{background:linear-gradient(135deg,#0a1628 0%,#122647 40%,#1a3a6b 100%);color:#fff;padding:56px 56px 48px;position:relative;overflow:hidden;}
+  .hero::before{content:'';position:absolute;top:-80px;right:-80px;width:300px;height:300px;border:2px solid rgba(255,255,255,0.06);border-radius:50%;}
+  .hero::after{content:'';position:absolute;bottom:-60px;left:40%;width:200px;height:200px;border:2px solid rgba(255,255,255,0.04);border-radius:50%;}
+  .hero-badge{display:inline-block;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.18);padding:8px 20px;border-radius:24px;font-size:0.8rem;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:24px;}
+  .hero h1{font-size:2.2rem;font-weight:800;line-height:1.35;margin-bottom:12px;position:relative;z-index:1;}
+  .hero .hero-sub{font-size:1.05rem;opacity:0.7;font-weight:400;}
+  .hero .hero-meta{display:flex;gap:30px;margin-top:28px;flex-wrap:wrap;position:relative;z-index:1;}
+  .hero .hero-meta span{font-size:0.85rem;opacity:0.75;}
+  .content{padding:48px 56px;}
+  .price-section{display:flex;align-items:stretch;gap:0;border-radius:16px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,0.04);margin-bottom:48px;}
+  .price-card{flex:1;padding:36px 28px;text-align:center;}
+  .price-card.china{background:linear-gradient(135deg,#e8f5e9,#c8e6c9);}
+  .price-card.us{background:linear-gradient(135deg,#fff3e0,#ffe0b2);}
+  .price-flag{font-size:2rem;margin-bottom:8px;}
+  .price-label{font-size:0.78rem;text-transform:uppercase;letter-spacing:0.06em;font-weight:700;color:#666;margin-bottom:10px;}
+  .price-value{font-size:1.6rem;font-weight:800;color:#1a1a2e;margin-bottom:4px;}
+  .price-note{font-size:0.78rem;color:#888;}
+  .price-save{display:flex;align-items:center;justify-content:center;background:#fff;padding:0 16px;min-width:100px;}
+  .save-circle{width:80px;height:80px;border-radius:50%;background:linear-gradient(135deg,#e74c3c,#c0392b);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:0.7rem;line-height:1.3;text-align:center;}
+  .save-circle strong{font-size:1rem;}
+  .section{margin-bottom:48px;}
+  .section-title{font-size:1.25rem;font-weight:700;color:#1a3a6b;margin-bottom:24px;padding-bottom:14px;border-bottom:2px solid #e8ecf1;}
+  .hospital-card{background:#fff;border:1px solid #e8ecf1;border-radius:16px;padding:28px;margin-bottom:20px;position:relative;transition:box-shadow 0.2s;}
+  .hospital-card:hover{box-shadow:0 4px 20px rgba(0,0,0,0.06);}
+  .top-badge{position:absolute;top:-10px;right:24px;background:linear-gradient(135deg,#1a3a6b,#2a5a9b);color:#fff;padding:4px 16px;border-radius:12px;font-size:0.72rem;font-weight:700;letter-spacing:0.06em;}
+  .top-badge.alt{background:linear-gradient(135deg,#2d7d46,#3a9d5a);}
+  .top-badge.alt2{background:linear-gradient(135deg,#7f6c3d,#a68a4d);}
+  .card-header{margin-bottom:8px;}
+  .card-name{font-size:1.2rem;font-weight:700;color:#1a1a2e;}
+  .card-name-en{font-size:0.82rem;color:#888;margin-top:2px;}
+  .one-liner{font-style:italic;color:#666;font-size:0.88rem;margin-bottom:14px;padding-left:12px;border-left:3px solid #2a5a9b;}
+  .card-details{display:grid;grid-template-columns:auto 1fr;gap:6px 20px;font-size:0.9rem;}
+  .dl{display:contents;}
+  .dt{color:#888;white-space:nowrap;}
+  .dd{color:#1a1a2e;}
+  .dd a{color:#2a5a9b;text-decoration:none;}
+  .dd a:hover{text-decoration:underline;}
+  .cert{display:inline-block;padding:2px 8px;border-radius:4px;font-size:0.78rem;margin-right:4px;}
+  .cert.intl{background:#e3f2fd;color:#1565c0;}
+  .cert.jci{background:#e8f5e9;color:#2e7d32;}
+  .tags{margin-top:12px;display:flex;flex-wrap:wrap;gap:4px;}
+  .tag{background:#e8ecf1;color:#555;padding:2px 10px;border-radius:4px;font-size:0.78rem;}
+  .steps{counter-reset:step;}
+  .step{position:relative;padding:14px 16px 14px 52px;border-left:3px solid #d1d9e6;margin-bottom:0;}
+  .step:last-child{border-color:transparent;}
+  .step-num{position:absolute;left:12px;top:12px;width:28px;height:28px;background:#1a3a6b;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.8rem;font-weight:700;}
+  .faq-item{margin-bottom:20px;padding:16px;background:#f8faff;border-radius:10px;}
+  .faq-item h3{font-size:0.95rem;color:#1a3a6b;margin-bottom:6px;}
+  .faq-item p,.faq-item ul{color:#555;font-size:0.9rem;padding-left:0;}
+  .faq-item ul{padding-left:20px;margin-top:6px;}
+  .faq-item li{margin-bottom:4px;}
+  .tag-green{display:inline-block;background:#d1fae5;color:#065f46;padding:1px 8px;border-radius:4px;font-size:0.75rem;font-weight:600;}
+  .price-note-box{background:#f8faff;border-radius:10px;padding:16px;margin-top:16px;font-size:0.9rem;color:#555;}
+  .price-note-box p{margin-bottom:6px;}
+  .download-section{text-align:center;padding:32px 0 16px;}
+  .btn-download{display:inline-block;background:#1a3a6b;color:#fff;padding:12px 28px;border-radius:10px;text-decoration:none;font-weight:600;font-size:0.95rem;transition:background 0.2s;}
+  .btn-download:hover{background:#0a1628;}
+  .disclaimer{background:#fff8e1;border-left:4px solid #ffc107;padding:16px 20px;border-radius:0 8px 8px 0;font-size:0.82rem;color:#856404;margin-top:32px;}
+  .report-footer{text-align:center;padding:32px 56px;color:#888;font-size:0.85rem;border-top:1px solid #e8ecf1;}
+  .report-footer a{color:#1a3a6b;text-decoration:none;font-weight:600;}
+  .toolbar{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.92);backdrop-filter:blur(8px);border-bottom:1px solid #e5eaf1;padding:10px 20px;display:flex;justify-content:flex-end;gap:10px;}
+  .toolbar button{padding:8px 18px;border-radius:8px;border:1px solid #d1d9e6;background:white;cursor:pointer;font-size:0.85rem;font-weight:500;color:#1e3c72;transition:all 0.2s;}
+  .toolbar button:hover{background:#1a3a6b;color:#fff;border-color:#1a3a6b;}
+  .toolbar .btn-primary{background:#1a3a6b;color:#fff;border-color:#1a3a6b;}
+  .toolbar .btn-primary:hover{background:#0a1628;}
+  @media(max-width:640px){
+    .hero{padding:36px 24px 32px;}.hero h1{font-size:1.5rem;}
+    .content{padding:28px 20px;}
+    .price-section{flex-direction:column;}.price-save{padding:16px;}
+    .card-details{grid-template-columns:1fr;}
+    .report-footer{padding:20px;}
+  }
+  @media print{body{background:#fff;}.report{box-shadow:none;max-width:100%;}.hero{background:#1a3a6b!important;-webkit-print-color-adjust:exact;}.hospital-card{break-inside:avoid;}.toolbar{display:none;}}
+</style>
+</head>
+<body>
+<div class="toolbar" id="toolbar">
+  <button onclick="window.print()">🖨️ Print / PDF</button>
+  <button class="btn-primary" onclick="downloadTxt()">📥 Download Text Report</button>
+</div>
+<div class="report">
+  <div class="hero">
+    <span class="hero-badge">PERSONALIZED MEDICAL REPORT</span>
+    <h1>knee / replacement</h1>
+    <div class="hero-sub">Your trusted guide to world-class affordable healthcare in China</div>
+    <div class="hero-meta">
+      <span>📅 June 28, 2026</span>
+      <span>🔍 knee, replacement</span>
+      <span>📍 Beijing</span>
+      <span>🏥 2 hospitals matched</span>
+    </div>
+  </div>
+  <div class="content">
+    
+    <div class="section">
+      <h2 class="section-title">🌿 A Letter to You</h2>
+      <div style="background:#f8faff;border-radius:14px;padding:28px;border:1px solid #e0e8f2;">
+        <p>Dear Carlos Mendoza,</p>
+        <p style="margin-top:12px;">Thank you for choosing China Hospitals Guide.</p>
+        <p style="margin-top:12px;">We understand that by the time you're reading this, you've been carrying real concerns for months — not just about rankings and numbers, but the honest questions:</p>
+        <ul style="margin-top:12px;padding-left:20px;">
+          <li><strong>"When I arrive, will someone be there to meet me?"</strong></li>
+          <li><strong>"Can I communicate directly with the doctor?"</strong></li>
+          <li><strong>"If something goes wrong, who helps me sort it out?"</strong></li>
+          <li><strong>"How do I manage weeks in an unfamiliar country?"</strong></li>
+        </ul>
+        <p style="margin-top:12px;">This report is here to answer those real questions.</p>
+        <p style="margin-top:12px;">We've screened China's 51 top hospitals and selected the ones best suited for your condition. Each comes with honest guidance — not just their rank, but what they're like, what to expect, and how to take the next step.</p>
+        <p style="margin-top:12px;">If you have any remaining concerns — even small ones, like "is there halal food near the hospital" or "can I get tests done on weekends" — please reach out. We're here to help.</p>
+        <p style="margin-top:16px;">Wishing you a smooth recovery,</p>
+        <p><strong>China Hospitals Guide Team</strong></p>
+      </div>
+    </div>
+    <div class="section"><h2 class="section-title">💰 Cost Comparison</h2>
+    <div class="price-section">
+      <div class="price-card china">
+        <div class="price-flag">🇨🇳</div>
+        <div class="price-label">China Estimated Cost</div>
+        <div class="price-value">$8,000 - $12,000</div>
+        <div class="price-note">World-class hospitals</div>
+      </div>
+      <div class="price-save">
+        <div class="save-circle">Save<br><strong>70%</strong></div>
+      </div>
+      <div class="price-card us">
+        <div class="price-flag">🇺🇸</div>
+        <div class="price-label">US / UK Typical Cost</div>
+        <div class="price-value">$35,000 - $50,000</div>
+        <div class="price-note">Comparable quality</div>
+      </div>
+    </div></div>
+    <div class="section">
+      <h2 class="section-title">⭐ Top Recommendations</h2>
+      
+    <div class="hospital-card">
+      <span class="top-badge">TOP PICK</span>
+      <div class="card-header">
+        <div class="card-name">北京积水潭医院</div>
+        <div class="card-name-en">Jishuitan Hospital</div>
+      </div>
+      <div class="one-liner">Top-tier specialized hospital in China</div>
+      <div class="card-details">
+        <div class="dl"><span class="dt">Rank</span><span class="dd">#1 Orthopedics in China</span></div>
+        <div class="dl"><span class="dt">Location</span><span class="dd">Beijing · Xicheng</span></div>
+        <div class="dl"><span class="dt">Phone</span><span class="dd">010-58516688</span></div>
+        <div class="dl"><span class="dt">Website</span><span class="dd"><a href="http://www.jst-hosp.com" target="_blank" rel="noopener">http://www.jst-hosp.com</a></span></div>
+        <div class="dl"><span class="dt">Address</span><span class="dd">北京市西城区新街口东街31号</span></div>
+        <div class="dl"><span class="dt">Services</span><span class="dd"><span class="cert intl">🌐 International Dept</span> </span></div>
+        <div class="dl"><span class="dt">Airport</span><span class="dd">40-50min from Beijing Capital International Airport</span></div>
+        <div class="dl"><span class="dt">Trust Score</span><span class="dd"><span style="color:#27ae60;font-weight:700;">93%</span></span></div>
+      </div>
+      <div class="tags"><span class="tag">orthopedics</span><span class="tag">joint-replacement</span></div>
+    </div>
+    <div class="hospital-card">
+      <span class="top-badge alt">RECOMMENDED</span>
+      <div class="card-header">
+        <div class="card-name">北京大学第三医院</div>
+        <div class="card-name-en">Peking University Third Hospital</div>
+      </div>
+      <div class="one-liner">Top-tier specialized hospital in China</div>
+      <div class="card-details">
+        <div class="dl"><span class="dt">Rank</span><span class="dd">#4 Obstetrics, #1 Fertility, Top Orthopedics</span></div>
+        <div class="dl"><span class="dt">Location</span><span class="dd">Beijing · Haidian</span></div>
+        <div class="dl"><span class="dt">Phone</span><span class="dd">010-82266699</span></div>
+        <div class="dl"><span class="dt">Website</span><span class="dd"><a href="http://www.puh3.net.cn" target="_blank" rel="noopener">http://www.puh3.net.cn</a></span></div>
+        <div class="dl"><span class="dt">Address</span><span class="dd">北京市海淀区花园北路49号</span></div>
+        <div class="dl"><span class="dt">Services</span><span class="dd"><span class="cert intl">🌐 International Dept</span> </span></div>
+        <div class="dl"><span class="dt">Airport</span><span class="dd">45min from Beijing Capital International Airport</span></div>
+        <div class="dl"><span class="dt">Trust Score</span><span class="dd"><span style="color:#27ae60;font-weight:700;">91%</span></span></div>
+      </div>
+      <div class="tags"><span class="tag">orthopedics</span></div>
+    </div>
+      
+    </div>
+    
+    <div class="section">
+      <h2 class="section-title">📝 Your Action Plan</h2>
+      <div class="steps">
+        <div class="step"><span class="step-num">1</span><strong>Prepare your records</strong><br>Medical summary (1-2 pages), imaging (CT/MRI on USB), blood tests, passport copy</div>
+        <div class="step"><span class="step-num">2</span><strong>Contact the hospital</strong><br>Email is best — send records to the international department. Expect 3-7 business days for evaluation.</div>
+        <div class="step"><span class="step-num">3</span><strong>Confirm and travel</strong><br>Get the official invitation letter → apply for S-visa → book flights and accommodation</div>
+        <div class="step"><span class="step-num">4</span><strong>Arrive and get treated</strong><br>Meet the international coordinator, check in, sign consent forms, begin treatment</div>
+        <div class="step"><span class="step-num">5</span><strong>Discharge and follow up</strong><br>Receive bilingual medical summary, medication instructions, and follow-up plan</div>
+      </div>
+      <p style="margin-top:16px;padding:12px;background:#fef3c7;border-radius:8px;font-size:0.9rem;">💡 <strong>Need help with the above?</strong> Our Pre-Arrival Coordination service ($399) handles records, translation, appointments, airport pickup, treatment coordination, and discharge support. <a href="#pricing" style="color:#1a3a6b;">Learn more below</a>.</p>
+    </div>
+    
+    
+    <div class="section">
+      <h2 class="section-title">❓ Frequently Asked Questions</h2>
+      <div class="faq-item">
+        <h3>Q: I don't speak Chinese. How do I communicate at the hospital?</h3>
+        <p>Top Chinese hospitals have bilingual coordinators in their international departments. Many senior doctors have overseas training and speak English. Translation apps can help with day-to-day needs.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Q: How do the costs compare to my home country?</h3>
+        <p>See the price comparison section above. In general, patients save 60-80% compared to US/UK prices for equivalent quality at top-tier hospitals.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Q: What if I have complications after returning home?</h3>
+        <p>You receive a bilingual medical summary at discharge. Many hospitals offer remote follow-up via WeChat or email.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Q: Can I pay with credit card?</h3>
+        <p>Most international departments accept Visa/Mastercard. We also recommend downloading Alipay and binding your international card before arrival — China is largely cashless.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Q: Can my family come with me?</h3>
+        <p>Yes. 1-2 family members can accompany you. Hotels and short-term apartments are available near all major hospitals.</p>
+      </div>
+      
+      <div class="faq-item">
+        <h3>Q: What's the difference between this report and the Premium service?</h3>
+        <p>This auto-generated report gives you hospital matches, pricing, and key information — you handle the next steps yourself. The <strong>Pre-Arrival Coordination ($399)</strong> service handles everything: records submission, translation, appointments, airport pickup, treatment coordination, and discharge support.</p>
+      </div>
+      
+    </div>
+    <div class="download-section">
+      <p>📥 Download a plain text summary for offline reference</p>
+      <a class="btn-download" download="report-carlos-mendoza.txt" href="data:text/plain;charset=utf-8,%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%0A%20%20China%20Hospitals%20Guide%20%E2%80%94%20Personalized%20Hospital%20Report%0A%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%0A%20%20Generated%3A%202026-06-28%2003%3A50%0A%20%20Condition%3A%20knee%2C%20replacement%0A%20%20City%3A%20Beijing%0A%20%20Matched%3A%202%20hospitals%0A%0A%5BPRICE%20REFERENCE%5D%0A%20%20China%3A%20%248%2C000%20-%20%2412%2C000%0A%20%20US%2FUK%3A%20%2435%2C000%20-%20%2450%2C000%0A%20%20Save%3A%2070%25%0A%0A%5BRECOMMENDED%20HOSPITALS%5D%0A%0A1.%20%E5%8C%97%E4%BA%AC%E7%A7%AF%E6%B0%B4%E6%BD%AD%E5%8C%BB%E9%99%A2%20(Jishuitan%20Hospital)%0A%20%20%20City%3A%20Beijing%20%7C%20%231%20Orthopedics%20in%20China%0A%20%20%20Phone%3A%20010-58516688%0A%20%20%20Website%3A%20http%3A%2F%2Fwww.jst-hosp.com%0A%20%20%20Address%3A%20%E5%8C%97%E4%BA%AC%E5%B8%82%E8%A5%BF%E5%9F%8E%E5%8C%BA%E6%96%B0%E8%A1%97%E5%8F%A3%E4%B8%9C%E8%A1%9731%E5%8F%B7%0A%0A2.%20%E5%8C%97%E4%BA%AC%E5%A4%A7%E5%AD%A6%E7%AC%AC%E4%B8%89%E5%8C%BB%E9%99%A2%20(Peking%20University%20Third%20Hospital)%0A%20%20%20City%3A%20Beijing%20%7C%20%234%20Obstetrics%2C%20%231%20Fertility%2C%20Top%20Orthopedics%0A%20%20%20Phone%3A%20010-82266699%0A%20%20%20Website%3A%20http%3A%2F%2Fwww.puh3.net.cn%0A%20%20%20Address%3A%20%E5%8C%97%E4%BA%AC%E5%B8%82%E6%B5%B7%E6%B7%80%E5%8C%BA%E8%8A%B1%E5%9B%AD%E5%8C%97%E8%B7%AF49%E5%8F%B7%0A%0A%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%0A%20%20chinahospitalsguide.com%20%7C%20Prices%20are%20estimates%0A%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%0A">⬇ Download Text Report (.txt)</a>
+    </div>
+    <div class="disclaimer">
+      <strong>📋 Important:</strong> Prices are estimates based on typical cases and published data. Actual costs vary by diagnosis, hospital, and individual treatment plan. Contact the hospital directly for a personalized quote. This report is for informational purposes and does not constitute medical advice.
+    </div>
+  </div>
+  <div class="report-footer">
+    <p>Generated by <a href="https://chinahospitalsguide.com">ChinaHospitalsGuide.com</a> — Your Gateway to World-Class Affordable Healthcare</p>
+    <p style="margin-top:4px;">📧 contact@chinahospitalsguide.com | Data: 51 hospitals · 10 cities</p>
+  </div>
+</div>
+<script>
+function downloadTxt(){var c=document.querySelector('.content');var t=c?c.textContent.replace(/\s+/g,' ').replace(/(\S[。！?.!])\s*/g,'$1\n').trim().split('\n').filter(function(l){return l.trim().length>0}).map(function(l){return l.trim()}).join('\n\n'):'';var b=new Blob([t],{type:'text/plain;charset=utf-8'});var u=URL.createObjectURL(b);var a=document.createElement('a');a.href=u;a.download=document.title.replace(/[^a-z0-9]/gi,'-')+'.txt';a.click();URL.revokeObjectURL(u);}
+</script>
+</body>
+</html>
