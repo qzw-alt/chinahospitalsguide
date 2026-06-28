@@ -176,94 +176,143 @@ function generateCoverLetter(name) {
   if (!name) return '';
   return `
     <div class="card">
-      <div class="card-title">🌿 A Letter to You</div>
+      <div class="card-title">🌿 一封写给你的信</div>
       <div style="background:#f8faff;border-radius:14px;padding:28px;border:1px solid #e0e8f2;">
-        <p>Dear ${esc(name)},</p>
-        <p style="margin-top:12px;">Thank you for choosing China Hospitals Guide.</p>
-        <p style="margin-top:12px;">We understand that by the time you're reading this, you've been carrying real concerns for months — not just about rankings and numbers, but the honest questions:</p>
+        <p>你好，${esc(name)}，</p>
+        <p style="margin-top:12px;">感谢你选择 China Hospitals Guide。</p>
+        <p style="margin-top:12px;">我们知道，读到这份报告的时候，你心里装的不是"排名第几"的问题——而是更真实的那些：</p>
         <ul style="margin-top:12px;padding-left:20px;">
-          <li><strong>"When I arrive, will someone be there to meet me?"</strong></li>
-          <li><strong>"Can I communicate directly with the doctor?"</strong></li>
-          <li><strong>"If something goes wrong, who helps me sort it out?"</strong></li>
-          <li><strong>"How do I manage weeks in an unfamiliar country?"</strong></li>
+          <li><strong>"我去了中国，真的有人接我吗？"</strong></li>
+          <li><strong>"医生能跟我直接沟通吗？"</strong></li>
+          <li><strong>"如果出了问题，谁帮我协调？"</strong></li>
+          <li><strong>"在一个陌生的国家住院几周，我应付得来吗？"</strong></li>
         </ul>
-        <p style="margin-top:12px;">This report is here to answer those real questions.</p>
-        <p style="margin-top:12px;">We've screened China's 51 top hospitals and selected the ones best suited for your condition. Each comes with honest guidance — not just their rank, but what they're like, what to expect, and how to take the next step.</p>
-        <p style="margin-top:12px;">If you have any remaining concerns — even small ones, like "is there halal food near the hospital" or "can I get tests done on weekends" — please reach out. We're here to help.</p>
-        <p style="margin-top:16px;">Wishing you a smooth recovery,</p>
-        <p><strong>China Hospitals Guide Team</strong></p>
+        <p style="margin-top:12px;">这份报告，就是为了回答这些真实的问题而写的。</p>
+        <p style="margin-top:12px;">我们根据你的病情，从全国51家顶级医院中筛选出了最适合你的医院。每一家都附上了详细的信息和就诊指导。</p>
+        <p style="margin-top:12px;">如果你读完还有任何担心的问题——哪怕是很小的，"医院附近有没有清真餐厅"、"周末能不能做检查"——都欢迎随时问我们。</p>
+        <p style="margin-top:16px;">祝你早日康复。</p>
+        <p><strong>—— China Hospitals Guide 团队</strong></p>
       </div>
     </div>`;
 }
 
-function generateActionGuide(isPremium) {
+function generateHowToUse() {
   return `
     <div class="card">
-      <div class="card-title">📝 Your Action Plan</div>
-      <div class="steps">
-        <div class="step"><span class="step-num">1</span><strong>Prepare your records</strong><br>Medical summary (1-2 pages), imaging (CT/MRI on USB), blood tests, passport copy</div>
-        <div class="step"><span class="step-num">2</span><strong>Contact the hospital</strong><br>Email is best — send records to the international department. Expect 3-7 business days for evaluation.</div>
-        <div class="step"><span class="step-num">3</span><strong>Confirm and travel</strong><br>Get the official invitation letter → apply for S-visa → book flights and accommodation</div>
-        <div class="step"><span class="step-num">4</span><strong>Arrive and get treated</strong><br>Meet the international coordinator, check in, sign consent forms, begin treatment</div>
-        <div class="step"><span class="step-num">5</span><strong>Discharge and follow up</strong><br>Receive bilingual medical summary, medication instructions, and follow-up plan</div>
-      </div>
-      ${isPremium ? '' : '<p style="margin-top:16px;padding:12px;background:#fef3c7;border-radius:8px;font-size:0.9rem;">💡 <strong>Need help with the above?</strong> Our Pre-Arrival Coordination service ($399) handles records, translation, appointments, airport pickup, treatment coordination, and discharge support. <a href="#pricing" style="color:#1a3a6b;">Learn more below</a>.</p>'}
+      <div class="card-title">📖 如何使用这份报告</div>
+      <table style="width:100%;border-collapse:collapse;margin:12px 0;font-size:0.9rem;">
+        <tr><th style="padding:10px 12px;border:1px solid #e5eaf1;background:#f8faff;font-weight:600;color:#1e3c72;width:60px;">步骤</th><th style="padding:10px 12px;border:1px solid #e5eaf1;background:#f8faff;font-weight:600;color:#1e3c72;">做什么</th></tr>
+        <tr><td style="padding:10px 12px;border:1px solid #e5eaf1;">第1步</td><td style="padding:10px 12px;border:1px solid #e5eaf1;">下面是根据你的情况筛选的推荐医院</td></tr>
+        <tr><td style="padding:10px 12px;border:1px solid #e5eaf1;">第2步</td><td style="padding:10px 12px;border:1px solid #e5eaf1;">看看每家医院的"一句话性格"和关键信息</td></tr>
+        <tr><td style="padding:10px 12px;border:1px solid #e5eaf1;">第3步</td><td style="padding:10px 12px;border:1px solid #e5eaf1;">对照你的病情和预算，选择1-2家联系</td></tr>
+        <tr><td style="padding:10px 12px;border:1px solid #e5eaf1;">第4步</td><td style="padding:10px 12px;border:1px solid #e5eaf1;">参考交通指南，开始规划行程</td></tr>
+        <tr><td style="padding:10px 12px;border:1px solid #e5eaf1;">第5步</td><td style="padding:10px 12px;border:1px solid #e5eaf1;">如需深入帮助，查看升级服务</td></tr>
+      </table>
     </div>`;
 }
 
 function generateFAQ(isPremium) {
   return `
     <div class="card">
-      <div class="card-title">❓ Frequently Asked Questions</div>
+      <div class="card-title">❓ 常见问题</div>
       <div class="faq-item">
-        <h3>Q: I don't speak Chinese. How do I communicate at the hospital?</h3>
-        <p>Top Chinese hospitals have bilingual coordinators in their international departments. Many senior doctors have overseas training and speak English. Translation apps can help with day-to-day needs.</p>
+        <h3>Q: 我不会说中文，在医院怎么沟通？</h3>
+        <p>中国顶尖医院的国际部都配备双语协调员。许多资深医生有海外培训经历，能用英语交流。手机翻译app可辅助日常沟通。</p>
       </div>
       <div class="faq-item">
-        <h3>Q: How do the costs compare to my home country?</h3>
-        <p>See the price comparison section above. In general, patients save 60-80% compared to US/UK prices for equivalent quality at top-tier hospitals.</p>
+        <h3>Q: 费用和我的国家相比怎么样？</h3>
+        <p>详见上面的价格对比。总体而言，在中国顶级医院治疗的费用比美国/英国同等品质的服务节省 60-80%。</p>
       </div>
       <div class="faq-item">
-        <h3>Q: What if I have complications after returning home?</h3>
-        <p>You receive a bilingual medical summary at discharge. ${isPremium ? 'Our service includes remote follow-up coordination so you can stay in touch with your doctor.' : 'Many hospitals offer remote follow-up via WeChat or email.'}</p>
+        <h3>Q: 如果回国后出现并发症怎么办？</h3>
+        <p>出院时你会收到中英双语病历摘要。${isPremium ? '我们的服务包含远程随访协调，你可随时与主治医生保持联系。' : '许多医院支持通过微信或邮件进行远程随访。'}</p>
       </div>
       <div class="faq-item">
-        <h3>Q: Can I pay with credit card?</h3>
-        <p>Most international departments accept Visa/Mastercard. We also recommend downloading Alipay and binding your international card before arrival — China is largely cashless.</p>
+        <h3>Q: 我可以用信用卡支付吗？</h3>
+        <p>大多数医院的国际部接受 Visa/Mastercard。我们建议来中国前下载支付宝并绑定你的国际信用卡——中国基本已实现无现金化。</p>
       </div>
       <div class="faq-item">
-        <h3>Q: Can my family come with me?</h3>
-        <p>Yes. 1-2 family members can accompany you. Hotels and short-term apartments are available near all major hospitals.</p>
+        <h3>Q: 我的家人可以陪同吗？</h3>
+        <p>可以，1-2名家属可以陪同。所有主要医院附近都有酒店和短租公寓。</p>
       </div>
       ${isPremium ? '' : `
       <div class="faq-item">
-        <h3>Q: What's the difference between this report and the Premium service?</h3>
-        <p>This auto-generated report gives you hospital matches, pricing, and key information — you handle the next steps yourself. The <strong>Pre-Arrival Coordination ($399)</strong> service handles everything: records submission, translation, appointments, airport pickup, treatment coordination, and discharge support.</p>
+        <h3>Q: 这份报告和 ¥399 的升级版有什么区别？</h3>
+        <p>这份 ¥49 报告给你精准的医院推荐。¥399 升级版提供全程协调服务——代发病历、翻译、跟进、接机、治疗期间协调、出院文件整理、回国后随访衔接。</p>
       </div>
       `}
     </div>`;
 }
 
 function generateServiceFlow(isPremium) {
-  if (isPremium) {
-    return `
+  if (!isPremium) return '';
+  return `
     <div class="card" id="pricing">
-      <div class="card-title">🚀 What's Included (Pre-Arrival Coordination · $399)</div>
-      <p style="margin-bottom:20px;">This Premium service covers your entire journey — from matching to recovery. One flat fee, no surprises.</p>
-      <div class="steps">
-        <div class="step"><span class="step-num">1</span><strong>Needs Assessment</strong><br>One-on-one consultation + hospital matching + customization</div>
-        <div class="step"><span class="step-num">2</span><strong>Hospital Contact</strong><br>We send your records, follow up, translate, compare quotes across hospitals</div>
-        <div class="step"><span class="step-num">3</span><strong>Pre-Arrival Planning</strong><br>Visa guidance, appointment booking, accommodation tips<br><span class="tag-green">✅ Airport pickup included</span></div>
-        <div class="step"><span class="step-num">4</span><strong>Treatment Period</strong><br>Hospital communication coordination, emergency help<br><span class="tag-green">✅ 24/7 emergency line</span></div>
-        <div class="step"><span class="step-num">5</span><strong>Discharge & Follow-Up</strong><br>Medical summary, medication instructions, follow-up handover<br><span class="tag-green">✅ Included</span></div>
+      <div class="card-title">🚀 我们的服务流程</div>
+      <p style="margin-bottom:16px;">以下是购买升级版（¥399）后，我们将为你做的事情：</p>
+
+      <div style="margin:16px 0;padding:14px 18px;background:#f8faff;border-radius:10px;font-size:0.88rem;">
+        <p><strong>费用说明：</strong></p>
+        <p><span class="tag-inc" style="display:inline-block;background:#d1fae5;color:#065f46;padding:1px 8px;border-radius:4px;font-size:0.72rem;font-weight:600;">✅ ¥399 已包含</span> — 无需额外付费</p>
+        <p><span class="tag-ext" style="display:inline-block;background:#fef3c7;color:#92400e;padding:1px 8px;border-radius:4px;font-size:0.72rem;font-weight:600;">💰 需额外付费</span> — 按实际产生的服务收费</p>
+        <p style="margin-top:6px;"><strong>🏥 医院治疗费用直接付给医院，不经我们手。</strong></p>
       </div>
-      <div class="price-note-box">
-        <p><strong>💰 Extra services (optional):</strong> Family assistance during stay · Return travel help · Long-term remote follow-up (annual/monthly)</p>
-        <p><strong>🏥 Hospital treatment fees</strong> are paid directly to the hospital, not through us.</p>
-      </div>
+
+      <h3 style="font-size:1rem;color:var(--primary);margin:20px 0 10px;">第1步：需求确认（1-2天）</h3>
+      <p style="font-size:0.88rem;color:#555;"><strong>你做什么：</strong> 告诉我们病情和需求，提供已有病历资料。</p>
+      <p style="font-size:0.88rem;color:#555;"><strong>我们做什么：</strong></p>
+      <ul style="font-size:0.88rem;color:#555;padding-left:20px;margin-bottom:10px;">
+        <li><span class="tag-inc">✅ ¥399 已包含</span> 一对一顾问对接，了解你的具体情况</li>
+        <li><span class="tag-inc">✅ ¥399 已包含</span> 从51家医院中筛选最适合你的2-3家</li>
+        <li><span class="tag-inc">✅ ¥399 已包含</span> 如不满意，重新匹配</li>
+      </ul>
+      <p style="font-size:0.85rem;color:var(--text-light);padding:8px 12px;background:#f8faff;border-radius:8px;">📦 你拿到的：双方确认后的最终推荐方案</p>
+
+      <h3 style="font-size:1rem;color:var(--primary);margin:20px 0 10px;">第2步：医院对接（3-7天）</h3>
+      <p style="font-size:0.88rem;color:#555;"><strong>你做什么：</strong> 确认选择的医院，提供完整病历和影像资料。</p>
+      <p style="font-size:0.88rem;color:#555;"><strong>我们做什么：</strong></p>
+      <ul style="font-size:0.88rem;color:#555;padding-left:20px;margin-bottom:10px;">
+        <li><span class="tag-inc">✅ ¥399 已包含</span> 翻译整理病历，发送给医院国际部</li>
+        <li><span class="tag-inc">✅ ¥399 已包含</span> 跟进评估进度，确保3-7个工作日内拿到回复</li>
+        <li><span class="tag-inc">✅ ¥399 已包含</span> 中英文病历翻译协调</li>
+        <li><span class="tag-inc">✅ ¥399 已包含</span> 同时对接多家医院，对比评估结果和报价</li>
+      </ul>
+      <p style="font-size:0.85rem;color:var(--text-light);padding:8px 12px;background:#f8faff;border-radius:8px;">📦 你拿到的：正式收治确认 + 费用估算清单 + 建议治疗时间</p>
+
+      <h3 style="font-size:1rem;color:var(--primary);margin:20px 0 10px;">第3步：行前准备（1-4周）</h3>
+      <p style="font-size:0.88rem;color:#555;"><strong>我们做什么：</strong></p>
+      <ul style="font-size:0.88rem;color:#555;padding-left:20px;margin-bottom:10px;">
+        <li><span class="tag-inc">✅ ¥399 已包含</span> 协调医院出具医疗邀请函，指导签证材料</li>
+        <li><span class="tag-inc">✅ ¥399 已包含</span> 锁定具体入院日期</li>
+        <li><span class="tag-inc">✅ ¥399 已包含</span> 推荐合适住宿</li>
+        <li><span class="tag-inc">✅ ¥399 已包含</span> 行前清单（药品、证件、生活用品）</li>
+        <li><span class="tag-inc">✅ ¥399 已包含</span> 接机安排</li>
+      </ul>
+      <p style="font-size:0.85rem;color:var(--text-light);padding:8px 12px;background:#f8faff;border-radius:8px;">📦 你拿到的：医院邀请函 + 签证材料清单 + 行前准备清单 + 接机确认信息</p>
+
+      <h3 style="font-size:1rem;color:var(--primary);margin:20px 0 10px;">第4步：抵达中国（治疗期间）</h3>
+      <ul style="font-size:0.88rem;color:#555;padding-left:20px;margin-bottom:10px;">
+        <li><span class="tag-inc">✅ ¥399 已包含</span> 医院沟通衔接，确保治疗按计划进行</li>
+        <li><span class="tag-inc">✅ ¥399 已包含</span> 突发问题协调（7×24小时紧急联系电话）</li>
+        <li><span class="tag-ext">💰 需额外付费</span> 家属生活协助</li>
+      </ul>
+
+      <h3 style="font-size:1rem;color:var(--primary);margin:20px 0 10px;">第5步：出院与回国</h3>
+      <ul style="font-size:0.88rem;color:#555;padding-left:20px;margin-bottom:10px;">
+        <li><span class="tag-inc">✅ ¥399 已包含</span> 中英双语病历摘要整理</li>
+        <li><span class="tag-inc">✅ ¥399 已包含</span> 出院带药说明翻译</li>
+        <li><span class="tag-inc">✅ ¥399 已包含</span> 复查预约（如需）</li>
+        <li><span class="tag-inc">✅ ¥399 已包含</span> 远程随访衔接——回国后与主治医生保持联系</li>
+        <li><span class="tag-ext">💰 需额外付费</span> 回国航旅协助</li>
+      </ul>
+
+      <h3 style="font-size:1rem;color:var(--primary);margin:20px 0 10px;">第6步：回国后跟进</h3>
+      <ul style="font-size:0.88rem;color:#555;padding-left:20px;margin-bottom:10px;">
+        <li><span class="tag-ext">💰 需额外付费</span> 远程随访通道（按年/按次）</li>
+        <li><span class="tag-ext">💰 需额外付费</span> 复查资料传递</li>
+        <li><span class="tag-ext">💰 需额外付费</span> 长期健康档案</li>
+      </ul>
     </div>`;
-  }
-  return '';
 }
 
 function generateOneLiner(name_zh, rank) {
@@ -271,6 +320,121 @@ function generateOneLiner(name_zh, rank) {
   if (rank_lower.includes('#1') || rank_lower.includes('top 3')) return 'Top-tier specialized hospital in China';
   if (rank_lower.includes('top')) return 'Highly ranked, strong reputation in this field';
   return 'Well-regarded hospital with relevant expertise';
+}
+
+// ========== TRANSPORT GUIDE ==========
+const TRANSPORT_GUIDES = {
+  "Beijing": {
+    desc: "北京有两个国际机场。首都机场(PEK)在东边——多数医院靠近这个机场。大兴机场(PKX)在南边。预约时问清楚医生在哪个院区，再决定飞哪个。",
+    taxi: "PEK→市中心 ¥120-200，PKX→市中心 ¥200-350。建议用滴滴App（英文界面）。",
+    metro: "PEK机场线 ¥25 到东直门/三元桥。PKX机场线 ¥35 到草桥。",
+    tip: "如果是去协和（东单）、同仁（崇文门），PKX机场线到草桥后打车更近。"
+  },
+  "Shanghai": {
+    desc: "上海有两个机场。浦东(PVG)是主国际机场，距市中心50-70分钟。虹桥(SHA)距市中心20-30分钟。",
+    taxi: "PVG→市区 ¥150-250，SHA→市区 ¥50-100。",
+    metro: "PVG磁悬浮¥50到龙阳路（7分钟），换2号线到市区。SHA直接坐10号线。",
+    tip: "如果可选，优先选飞虹桥的航班。市区三甲医院分布在浦西为主。"
+  },
+  "Guangzhou": {
+    desc: "白云机场(CAN)是唯一主机场，距市中心40-60分钟。",
+    taxi: "CAN→市区 ¥120-200。",
+    metro: "3号线北延段从机场到体育西路约40分钟。",
+    tip: "广州地铁方便，如住宿可选地铁沿线。"
+  },
+  "Shenzhen": {
+    desc: "宝安机场(SZX)是主机场，距市中心35-50分钟。",
+    taxi: "SZX→市中心 ¥80-150。",
+    metro: "11号线从机场到福田站约30分钟。",
+    tip: "深圳地铁覆盖广，建议选地铁附近住宿。"
+  },
+  "Chengdu": {
+    desc: "成都用天府机场(TFU)和双流机场(CTU)。天府是主机场，距市区60-80分钟。双流距市区30-40分钟。",
+    taxi: "TFU→市区 ¥150-250，CTU→市区 ¥50-100。",
+    metro: "18号线从天府到火车南站约50分钟。双流直接坐10号线。",
+    tip: "如果可选，优先选飞双流的航班。华西医院靠近市区。"
+  },
+  "Xi'an": {
+    desc: "咸阳机场(XIY)是唯一机场，距市区50-65分钟。",
+    taxi: "XIY→市区 ¥100-150。",
+    metro: "14号线转2号线可达市区。",
+    tip: "唐都医院在东郊，机场→唐都约50-60分钟，比去市中心近。"
+  },
+  "Hangzhou": {
+    desc: "萧山机场(HGH)距市区40-50分钟。",
+    taxi: "HGH→市区 ¥100-180。",
+    metro: "1号线/7号线从机场到市区。",
+    tip: "杭州地铁方便，医院多在市区。"
+  },
+  "Tianjin": {
+    desc: "滨海机场(TSN)距市区30-50分钟。",
+    taxi: "TSN→市区 ¥60-120。",
+    metro: "2号线从机场到天津站。",
+    tip: "天津到北京高铁30分钟，可选其中任一城市主导治疗。"
+  },
+  "Nanjing": {
+    desc: "禄口机场(NKG)距市区45-60分钟。",
+    taxi: "NKG→市区 ¥120-200。",
+    metro: "S1号线从机场到南京南站约40分钟。",
+    tip: "南京地铁覆盖好，医院多在鼓楼区。"
+  },
+  "Jinan": {
+    desc: "遥墙机场(TNA)距市区40-50分钟。",
+    taxi: "TNA→市区 ¥80-120。",
+    metro: "无直达地铁。建议打车或预约接机。",
+    tip: "济南市内交通以打车为主。"
+  }
+};
+
+function generateTransportGuide(city) {
+  const guide = TRANSPORT_GUIDES[city];
+  if (!guide) return '';
+  return `
+    <div class="card">
+      <div class="card-title">✈️ ${esc(city)} 城市交通指南</div>
+      <p>${guide.desc}</p>
+      <p style="margin-top:8px;"><strong>🚕 出租车/网约车：</strong> ${guide.taxi}</p>
+      <p><strong>🚇 地铁：</strong> ${guide.metro}</p>
+      <p><strong>💡 提示：</strong> ${guide.tip}</p>
+    </div>`;
+}
+
+function generateChecklist() {
+  return `
+    <div class="card">
+      <div class="card-title">📋 行前准备清单</div>
+      <p style="margin-bottom:12px;">以下是基础清单。如需更详细的指南，可升级到完整协调服务。</p>
+      <div style="background:#f8faff;border-radius:10px;padding:16px;font-size:0.88rem;">
+        <p><strong>必带的材料：</strong></p>
+        <ul style="padding-left:20px;margin:6px 0 12px;">
+          <li>原始病历 + 影像资料（CT/MRI光盘或U盘，DICOM格式最佳）</li>
+          <li>正在服用的药物（带足量 + 英文说明书）</li>
+          <li>护照（有效期6个月以上）</li>
+          <li>医院邀请函（用于入境和签证）</li>
+          <li>信用卡（Visa/Mastercard）+ 少量人民币现金</li>
+          <li>手机开通国际漫游或到达后购买中国电话卡</li>
+          <li>转换插头（中国标准：两脚扁型，220V）</li>
+        </ul>
+        <p><strong>💡 提示：</strong>出发前下载支付宝App，绑定你的国际信用卡——到了中国后，从便利店到药店到餐厅都可以扫码支付，比现金方便百倍。</p>
+      </div>
+    </div>`;
+}
+
+function generateUpgradeSection() {
+  return `
+    <div class="card">
+      <div class="card-title">⭐ 升级服务</div>
+      <p style="margin-bottom:12px;">如果你看完上面的医院介绍，觉得"还是不知道怎么开始"，以下是我们的完整协调服务内容：</p>
+      <table style="width:100%;border-collapse:collapse;margin:12px 0;font-size:0.88rem;">
+        <tr><th style="padding:10px 12px;border:1px solid #e5eaf1;background:#f8faff;font-weight:600;color:#1e3c72;">阶段</th><th style="padding:10px 12px;border:1px solid #e5eaf1;background:#f8faff;font-weight:600;color:#1e3c72;">服务内容</th></tr>
+        <tr><td style="padding:10px 12px;border:1px solid #e5eaf1;font-weight:600;">需求确认</td><td style="padding:10px 12px;border:1px solid #e5eaf1;">一对一顾问对接、精准匹配、定制调整</td></tr>
+        <tr><td style="padding:10px 12px;border:1px solid #e5eaf1;font-weight:600;">医院对接</td><td style="padding:10px 12px;border:1px solid #e5eaf1;">代发病历、翻译协调、跟进回复、多院对比报价</td></tr>
+        <tr><td style="padding:10px 12px;border:1px solid #e5eaf1;font-weight:600;">行前准备</td><td style="padding:10px 12px;border:1px solid #e5eaf1;">签证材料指导、预约锁定、住宿建议、接机安排</td></tr>
+        <tr><td style="padding:10px 12px;border:1px solid #e5eaf1;font-weight:600;">治疗期间</td><td style="padding:10px 12px;border:1px solid #e5eaf1;">医院沟通衔接、突发问题协调、紧急联系电话</td></tr>
+        <tr><td style="padding:10px 12px;border:1px solid #e5eaf1;font-weight:600;">出院回国</td><td style="padding:10px 12px;border:1px solid #e5eaf1;">中英文病历整理、用药说明、复查预约、远程随访衔接</td></tr>
+      </table>
+      <p style="font-size:0.88rem;color:var(--primary);font-weight:600;margin-top:8px;">如果你已经确定要来中国治病，希望有人全程帮你搞定——请考虑升级到「Pre-Arrival Coordination（¥399）」。</p>
+    </div>`;
 }
 
 // ========== INTEGRATED HTML REPORT ==========
@@ -287,43 +451,53 @@ function generateHtmlReport(results, keywords, city, budget, opts) {
     <div class="price-section">
       <div class="price-card china">
         <div class="price-flag">🇨🇳</div>
-        <div class="price-label">China Estimated Cost</div>
+        <div class="price-label">中国预计成本</div>
         <div class="price-value">${esc(priceInfo.cn)}</div>
-        <div class="price-note">World-class hospitals</div>
+        <div class="price-note">世界一流医院</div>
       </div>
       <div class="price-save">
-        <div class="save-circle">Save<br><strong>${esc(priceInfo.save)}</strong></div>
+        <div class="save-circle">节省<br><strong>${esc(priceInfo.save)}</strong></div>
       </div>
       <div class="price-card us">
         <div class="price-flag">🇺🇸</div>
-        <div class="price-label">US / UK Typical Cost</div>
+        <div class="price-label">美国/英国典型成本</div>
         <div class="price-value">${esc(priceInfo.us)}</div>
-        <div class="price-note">Comparable quality</div>
+        <div class="price-note">质量相当</div>
       </div>
     </div>` : "";
 
-  const cardsHtml = results.slice(0,5).map((r,i)=>{
+  const cardsHtml = results.slice(0,3).map((r,i)=>{
     const h=r.hospital;
     const trust=Math.round(h.Trust_Score*100);
     const tc=trust>=90?"#27ae60":trust>=80?"#f39c12":"#e74c3c";
-    const badge=i===0?'<span class="top-badge">TOP PICK</span>':i===1?'<span class="top-badge alt">RECOMMENDED</span>':i===2?'<span class="top-badge alt2">ALSO RECOMMENDED</span>':'';
-    const intl=h.International==="True"?'<span class="cert intl">🌐 International Dept</span>':'';
-    const jci=h.JCI==="True"?'<span class="cert jci">✅ JCI Accredited</span>':'';
+    const badgeLabels = ["🥇 首选推荐","🥈 备选推荐","🥉 第三选择"];
+    const badge=i<3?`<div style="display:inline-block;background:linear-gradient(135deg,var(--primary),var(--secondary));color:#fff;padding:4px 14px;border-radius:12px;font-size:0.7rem;font-weight:700;letter-spacing:0.04em;margin-bottom:12px;">${badgeLabels[i]}</div>`:'';
+    const intl=h.International==="True"?'<span class="cert intl">🌐 国际部</span>':'';
+    const jci=h.JCI==="True"?'<span class="cert jci">✅ JCI 认证</span>':'';
     const oneLiner = generateOneLiner(h.Name_ZH, h.Rank);
+    const priceInfo = findPrice(keywords);
+    const airportInfo = h.Airport_Info || '暂无数据';
     return `
-    <div class="h-card">
+    <div class="h-card" style="margin-bottom:24px;">
       ${badge}
-      <div class="h-name">${esc(h.Name_ZH)}</div>
-      <div class="h-name-en">${esc(h.Name_EN)}</div>
-      <div class="one-liner">${esc(oneLiner)}</div>
-      <div class="dl-grid">
-        <span class="dl-key">Rank</span><span class="dl-val">${esc(h.Rank||'N/A')}</span>
-        <span class="dl-key">Location</span><span class="dl-val">${esc(h.City)}${h.District?' · '+esc(h.District):''}</span>
-        <span class="dl-key">Phone</span><span class="dl-val">${esc(h.Phone||'N/A')}</span>
-        <span class="dl-key">Services</span><span class="dl-val">${intl} ${jci}</span>
-        <span class="dl-key">Trust Score</span><span class="dl-val"><span style="color:${tc};font-weight:700;">${trust}%</span></span>
-      </div>
-      ${r.matched_tags.length ? `<div class="h-tags"><span class="h-tag">${r.matched_tags.join('</span><span class="h-tag">')}</span></div>` : ''}
+      <div class="h-name" style="font-size:1.2rem;font-weight:700;color:var(--primary);">${esc(h.Name_ZH)}</div>
+      <div class="h-name-en" style="font-size:0.88rem;color:var(--text-light);margin-bottom:8px;">${esc(h.Name_EN)}</div>
+      <div style="margin-bottom:14px;padding-left:12px;border-left:3px solid var(--secondary);font-style:italic;color:#555;font-size:0.9rem;">💬 ${esc(oneLiner)}</div>
+
+      <table style="width:100%;border-collapse:collapse;margin:8px 0;font-size:0.88rem;">
+        <tr><td style="padding:6px 10px;border:1px solid #e5eaf1;background:#f8faff;font-weight:600;color:#555;width:90px;">排名/评级</td><td style="padding:6px 10px;border:1px solid #e5eaf1;">${esc(h.Rank||'N/A')}</td></tr>
+        <tr><td style="padding:6px 10px;border:1px solid #e5eaf1;background:#f8faff;font-weight:600;color:#555;">地址</td><td style="padding:6px 10px;border:1px solid #e5eaf1;">${esc(h.Address||'')}</td></tr>
+        <tr><td style="padding:6px 10px;border:1px solid #e5eaf1;background:#f8faff;font-weight:600;color:#555;">电话</td><td style="padding:6px 10px;border:1px solid #e5eaf1;">📞 ${esc(h.Phone||'')}</td></tr>
+        <tr><td style="padding:6px 10px;border:1px solid #e5eaf1;background:#f8faff;font-weight:600;color:#555;">网站</td><td style="padding:6px 10px;border:1px solid #e5eaf1;"><a href="${esc(h.Website||'')}" style="color:var(--secondary);">${esc(h.Website||'')}</a></td></tr>
+        <tr><td style="padding:6px 10px;border:1px solid #e5eaf1;background:#f8faff;font-weight:600;color:#555;">国际部</td><td style="padding:6px 10px;border:1px solid #e5eaf1;">${intl} ${jci}</td></tr>
+        <tr><td style="padding:6px 10px;border:1px solid #e5eaf1;background:#f8faff;font-weight:600;color:#555;">机场交通</td><td style="padding:6px 10px;border:1px solid #e5eaf1;">✈️ ${esc(airportInfo)}</td></tr>
+      </table>
+
+      ${priceInfo ? `<div style="margin-top:12px;padding:12px;background:#e8f5e9;border-radius:8px;">
+        <p style="font-size:0.9rem;"><strong>💰 费用参考：</strong> 中国约 ${priceInfo.cn} · 美国约 ${priceInfo.us} · 节省 ${priceInfo.save}</p>
+      </div>` : ''}
+
+      ${r.matched_tags.length ? `<div style="margin-top:10px;"><span class="h-tag">${r.matched_tags.join('</span><span class="h-tag">')}</span></div>` : ''}
     </div>`;}).join("");
 
   const extraHtml = results.length > 5 ? `<p style="margin-top:12px;color:#666;">+ ${results.length - 5} more hospitals matched. <a href="#full-list" onclick="document.getElementById('fullList').style.display='block';return false;">Show all</a></p><div id="fullList" style="display:none;">${results.slice(5).map((r,i)=>{const h=r.hospital;return `<p style="padding:4px 0;">${i+6}. ${esc(h.Name_ZH)} — ${esc(h.Rank||'')}</p>`;}).join("")}</div>` : '';
@@ -331,7 +505,10 @@ function generateHtmlReport(results, keywords, city, budget, opts) {
   const textReport = generateTextReport(results, keywords, city);
 
   const coverHtml = generateCoverLetter(customerName);
-  const actionHtml = generateActionGuide(isPremium);
+  const howToUseHtml = generateHowToUse();
+  const transportHtml = generateTransportGuide(city);
+  const checklistHtml = generateChecklist();
+  const upgradeHtml = isPremium ? '' : generateUpgradeSection();
   const serviceHtml = generateServiceFlow(isPremium);
   const faqHtml = generateFAQ(isPremium);
 
@@ -457,19 +634,27 @@ function generateHtmlReport(results, keywords, city, budget, opts) {
     <!-- Cover letter -->
     ${coverHtml}
 
-    <!-- Price comparison -->
-    ${priceHtml ? `<div class="card"><div class="card-title">💰 Cost Comparison</div>${priceHtml}</div>` : ''}
+    <!-- How to use -->
+    ${howToUseHtml}
 
-    <!-- Hospital cards (concise) -->
+    <!-- Price comparison -->
+    ${priceHtml ? `<div class="card"><div class="card-title">💰 费用对比</div>${priceHtml}</div>` : ''}
+
+    <!-- Hospital cards -->
     <div class="card">
-      <div class="card-title">⭐ Top ${Math.min(results.length, 3)} Hospital${results.length !== 1 ? 's' : ''} for Your Condition</div>
+      <div class="card-title">🏆 推荐医院（共${results.length}家）</div>
       ${cardsHtml}
       ${extraHtml}
-      <p style="margin-top:12px;font-size:0.82rem;color:var(--text-light);">📄 <strong>Full details in the downloaded text report</strong> — address, phone, website, airport info for each hospital.</p>
     </div>
 
-    <!-- Action guide -->
-    ${actionHtml}
+    <!-- Transport guide -->
+    ${transportHtml}
+
+    <!-- Pre-departure checklist -->
+    ${checklistHtml}
+
+    <!-- Upgrade section (basic only) -->
+    ${upgradeHtml}
 
     <!-- Service flow (premium only) -->
     ${serviceHtml}
@@ -479,17 +664,17 @@ function generateHtmlReport(results, keywords, city, budget, opts) {
 
     <!-- Download section -->
     <div class="dload-section">
-      <p>📥 <strong>Download the complete detailed report</strong> — includes all hospital information, pricing breakdown, step-by-step action plan, and everything you need to prepare for your medical trip to China.</p>
-      <a id="dloadBtn" class="btn-dload" href="#" onclick="downloadTxt();return false;">⬇ Download Full Report (.txt)</a>
+      <p>📥 <strong>下载完整报告</strong> — 包含所有医院信息、费用明细、行动指南和行前准备清单。</p>
+      <a id="dloadBtn" class="btn-dload" href="#" onclick="downloadTxt();return false;">⬇ 下载完整报告 (.txt)</a>
     </div>
 
     <div class="disclaimer">
-      <strong>📋 Important:</strong> Prices are estimates based on typical cases and published data. Actual costs vary by diagnosis, hospital, and treatment plan. Contact the hospital directly for a personalized quote. This report is for informational purposes and does not constitute medical advice.
+      <strong>📋 重要提示：</strong> 价格为基于典型病例和已公布数据的估算值。实际费用因诊断、医院和治疗方案而异。请直接联系医院获取个性化报价。本报告仅供参考，不构成医疗建议。
     </div>
   </div>
   <div class="footer">
-    <p>Generated by <a href="https://chinahospitalsguide.com">ChinaHospitalsGuide.com</a> — Your Gateway to World-Class Affordable Healthcare</p>
-    <p style="margin-top:4px;">📧 contact@chinahospitalsguide.com | Data: 51 hospitals · 10 cities</p>
+    <p>由 <a href="https://chinahospitalsguide.com">ChinaHospitalsGuide.com</a> 生成 — 为中国医疗旅游提供一站式支持</p>
+    <p style="margin-top:4px;">📧 contact@chinahospitalsguide.com | 数据覆盖：51家医院 · 10个城市</p>
   </div>
 </div>
 <script>
