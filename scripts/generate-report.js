@@ -175,8 +175,8 @@ function generateTextReport(results, keywords, city, budget) {
 function generateCoverLetter(name) {
   if (!name) return '';
   return `
-    <div class="section">
-      <h2 class="section-title">🌿 A Letter to You</h2>
+    <div class="card">
+      <div class="card-title">🌿 A Letter to You</div>
       <div style="background:#f8faff;border-radius:14px;padding:28px;border:1px solid #e0e8f2;">
         <p>Dear ${esc(name)},</p>
         <p style="margin-top:12px;">Thank you for choosing China Hospitals Guide.</p>
@@ -198,8 +198,8 @@ function generateCoverLetter(name) {
 
 function generateActionGuide(isPremium) {
   return `
-    <div class="section">
-      <h2 class="section-title">📝 Your Action Plan</h2>
+    <div class="card">
+      <div class="card-title">📝 Your Action Plan</div>
       <div class="steps">
         <div class="step"><span class="step-num">1</span><strong>Prepare your records</strong><br>Medical summary (1-2 pages), imaging (CT/MRI on USB), blood tests, passport copy</div>
         <div class="step"><span class="step-num">2</span><strong>Contact the hospital</strong><br>Email is best — send records to the international department. Expect 3-7 business days for evaluation.</div>
@@ -213,8 +213,8 @@ function generateActionGuide(isPremium) {
 
 function generateFAQ(isPremium) {
   return `
-    <div class="section">
-      <h2 class="section-title">❓ Frequently Asked Questions</h2>
+    <div class="card">
+      <div class="card-title">❓ Frequently Asked Questions</div>
       <div class="faq-item">
         <h3>Q: I don't speak Chinese. How do I communicate at the hospital?</h3>
         <p>Top Chinese hospitals have bilingual coordinators in their international departments. Many senior doctors have overseas training and speak English. Translation apps can help with day-to-day needs.</p>
@@ -247,8 +247,8 @@ function generateFAQ(isPremium) {
 function generateServiceFlow(isPremium) {
   if (isPremium) {
     return `
-    <div class="section" id="pricing">
-      <h2 class="section-title">🚀 What's Included (Pre-Arrival Coordination · $399)</h2>
+    <div class="card" id="pricing">
+      <div class="card-title">🚀 What's Included (Pre-Arrival Coordination · $399)</div>
       <p style="margin-bottom:20px;">This Premium service covers your entire journey — from matching to recovery. One flat fee, no surprises.</p>
       <div class="steps">
         <div class="step"><span class="step-num">1</span><strong>Needs Assessment</strong><br>One-on-one consultation + hospital matching + customization</div>
@@ -311,24 +311,19 @@ function generateHtmlReport(results, keywords, city, budget, opts) {
     const jci=h.JCI==="True"?'<span class="cert jci">✅ JCI Accredited</span>':'';
     const oneLiner = generateOneLiner(h.Name_ZH, h.Rank);
     return `
-    <div class="hospital-card">
+    <div class="h-card">
       ${badge}
-      <div class="card-header">
-        <div class="card-name">${esc(h.Name_ZH)}</div>
-        <div class="card-name-en">${esc(h.Name_EN)}</div>
-      </div>
+      <div class="h-name">${esc(h.Name_ZH)}</div>
+      <div class="h-name-en">${esc(h.Name_EN)}</div>
       <div class="one-liner">${esc(oneLiner)}</div>
-      <div class="card-details">
-        <div class="dl"><span class="dt">Rank</span><span class="dd">${esc(h.Rank||'N/A')}</span></div>
-        <div class="dl"><span class="dt">Location</span><span class="dd">${esc(h.City)}${h.District?' · '+esc(h.District):''}</span></div>
-        <div class="dl"><span class="dt">Phone</span><span class="dd">${esc(h.Phone||'N/A')}</span></div>
-        <div class="dl"><span class="dt">Website</span><span class="dd"><a href="${esc(h.Website)}" target="_blank" rel="noopener">${esc(h.Website)}</a></span></div>
-        <div class="dl"><span class="dt">Address</span><span class="dd">${esc(h.Address||'N/A')}</span></div>
-        <div class="dl"><span class="dt">Services</span><span class="dd">${intl} ${jci}</span></div>
-        <div class="dl"><span class="dt">Airport</span><span class="dd">${esc(h.Airport_Info||'N/A')}</span></div>
-        <div class="dl"><span class="dt">Trust Score</span><span class="dd"><span style="color:${tc};font-weight:700;">${trust}%</span></span></div>
+      <div class="dl-grid">
+        <span class="dl-key">Rank</span><span class="dl-val">${esc(h.Rank||'N/A')}</span>
+        <span class="dl-key">Location</span><span class="dl-val">${esc(h.City)}${h.District?' · '+esc(h.District):''}</span>
+        <span class="dl-key">Phone</span><span class="dl-val">${esc(h.Phone||'N/A')}</span>
+        <span class="dl-key">Services</span><span class="dl-val">${intl} ${jci}</span>
+        <span class="dl-key">Trust Score</span><span class="dl-val"><span style="color:${tc};font-weight:700;">${trust}%</span></span>
       </div>
-      ${r.matched_tags.length ? `<div class="tags"><span class="tag">${r.matched_tags.join('</span><span class="tag">')}</span></div>` : ''}
+      ${r.matched_tags.length ? `<div class="h-tags"><span class="h-tag">${r.matched_tags.join('</span><span class="h-tag">')}</span></div>` : ''}
     </div>`;}).join("");
 
   const extraHtml = results.length > 5 ? `<p style="margin-top:12px;color:#666;">+ ${results.length - 5} more hospitals matched. <a href="#full-list" onclick="document.getElementById('fullList').style.display='block';return false;">Show all</a></p><div id="fullList" style="display:none;">${results.slice(5).map((r,i)=>{const h=r.hospital;return `<p style="padding:4px 0;">${i+6}. ${esc(h.Name_ZH)} — ${esc(h.Rank||'')}</p>`;}).join("")}</div>` : '';
@@ -347,128 +342,148 @@ function generateHtmlReport(results, keywords, city, budget, opts) {
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>${esc(titlePrefix)} — China Hospitals Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 <style>
+  :root{--primary:#1a3a6b;--secondary:#2a5298;--accent:#e85d5d;--accent-light:#ff8e8e;--text:#2d3748;--text-light:#718096;--bg:#f7fafc;}
   *{margin:0;padding:0;box-sizing:border-box;}
-  body{font-family:'Segoe UI','PingFang SC','Microsoft YaHei',system-ui,sans-serif;color:#1a1a2e;background:#f0f2f5;line-height:1.7;}
-  .report{max-width:960px;margin:0 auto;background:#fff;box-shadow:0 4px 30px rgba(0,0,0,0.08);}
-  .hero{background:linear-gradient(135deg,#0a1628 0%,#122647 40%,#1a3a6b 100%);color:#fff;padding:56px 56px 48px;position:relative;overflow:hidden;}
-  .hero::before{content:'';position:absolute;top:-80px;right:-80px;width:300px;height:300px;border:2px solid rgba(255,255,255,0.06);border-radius:50%;}
-  .hero::after{content:'';position:absolute;bottom:-60px;left:40%;width:200px;height:200px;border:2px solid rgba(255,255,255,0.04);border-radius:50%;}
-  .hero-badge{display:inline-block;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.18);padding:8px 20px;border-radius:24px;font-size:0.8rem;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:24px;}
-  .hero h1{font-size:2.2rem;font-weight:800;line-height:1.35;margin-bottom:12px;position:relative;z-index:1;}
-  .hero .hero-sub{font-size:1.05rem;opacity:0.7;font-weight:400;}
-  .hero .hero-meta{display:flex;gap:30px;margin-top:28px;flex-wrap:wrap;position:relative;z-index:1;}
-  .hero .hero-meta span{font-size:0.85rem;opacity:0.75;}
-  .content{padding:48px 56px;}
-  .price-section{display:flex;align-items:stretch;gap:0;border-radius:16px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,0.04);margin-bottom:48px;}
-  .price-card{flex:1;padding:36px 28px;text-align:center;}
-  .price-card.china{background:linear-gradient(135deg,#e8f5e9,#c8e6c9);}
-  .price-card.us{background:linear-gradient(135deg,#fff3e0,#ffe0b2);}
-  .price-flag{font-size:2rem;margin-bottom:8px;}
-  .price-label{font-size:0.78rem;text-transform:uppercase;letter-spacing:0.06em;font-weight:700;color:#666;margin-bottom:10px;}
-  .price-value{font-size:1.6rem;font-weight:800;color:#1a1a2e;margin-bottom:4px;}
-  .price-note{font-size:0.78rem;color:#888;}
-  .price-save{display:flex;align-items:center;justify-content:center;background:#fff;padding:0 16px;min-width:100px;}
-  .save-circle{width:80px;height:80px;border-radius:50%;background:linear-gradient(135deg,#e74c3c,#c0392b);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:0.7rem;line-height:1.3;text-align:center;}
-  .save-circle strong{font-size:1rem;}
-  .section{margin-bottom:48px;}
-  .section-title{font-size:1.25rem;font-weight:700;color:#1a3a6b;margin-bottom:24px;padding-bottom:14px;border-bottom:2px solid #e8ecf1;}
-  .hospital-card{background:#fff;border:1px solid #e8ecf1;border-radius:16px;padding:28px;margin-bottom:20px;position:relative;transition:box-shadow 0.2s;}
-  .hospital-card:hover{box-shadow:0 4px 20px rgba(0,0,0,0.06);}
-  .top-badge{position:absolute;top:-10px;right:24px;background:linear-gradient(135deg,#1a3a6b,#2a5a9b);color:#fff;padding:4px 16px;border-radius:12px;font-size:0.72rem;font-weight:700;letter-spacing:0.06em;}
-  .top-badge.alt{background:linear-gradient(135deg,#2d7d46,#3a9d5a);}
-  .top-badge.alt2{background:linear-gradient(135deg,#7f6c3d,#a68a4d);}
-  .card-header{margin-bottom:8px;}
-  .card-name{font-size:1.2rem;font-weight:700;color:#1a1a2e;}
-  .card-name-en{font-size:0.82rem;color:#888;margin-top:2px;}
-  .one-liner{font-style:italic;color:#666;font-size:0.88rem;margin-bottom:14px;padding-left:12px;border-left:3px solid #2a5a9b;}
-  .card-details{display:grid;grid-template-columns:auto 1fr;gap:6px 20px;font-size:0.9rem;}
-  .dl{display:contents;}
-  .dt{color:#888;white-space:nowrap;}
-  .dd{color:#1a1a2e;}
-  .dd a{color:#2a5a9b;text-decoration:none;}
-  .dd a:hover{text-decoration:underline;}
-  .cert{display:inline-block;padding:2px 8px;border-radius:4px;font-size:0.78rem;margin-right:4px;}
-  .cert.intl{background:#e3f2fd;color:#1565c0;}
-  .cert.jci{background:#e8f5e9;color:#2e7d32;}
-  .tags{margin-top:12px;display:flex;flex-wrap:wrap;gap:4px;}
-  .tag{background:#e8ecf1;color:#555;padding:2px 10px;border-radius:4px;font-size:0.78rem;}
+  body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:var(--text);background:var(--bg);line-height:1.7;}
+  .report{max-width:960px;margin:0 auto;}
+  .hero{padding:140px 24px 64px;background:linear-gradient(135deg,var(--primary) 0%,var(--secondary) 60%,#3a6bc0 100%);color:#fff;text-align:center;position:relative;overflow:hidden;}
+  .hero h1{font-family:'Playfair Display',Georgia,serif;font-size:clamp(1.6rem,4vw,2.8rem);font-weight:700;line-height:1.3;margin-bottom:10px;position:relative;z-index:1;}
+  .hero-sub{font-size:1rem;color:rgba(255,255,255,0.78);margin-bottom:24px;}
+  .hero-meta{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;font-size:0.85rem;color:rgba(255,255,255,0.7);}
+  .hero-meta span{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);padding:3px 12px;border-radius:999px;}
+  .hero-badge{display:inline-block;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.18);padding:6px 18px;border-radius:999px;font-size:0.75rem;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:20px;color:rgba(255,255,255,0.9);}
+  .content{max-width:820px;margin:-32px auto 0;padding:0 16px 48px;}
+  .card{background:#fff;border-radius:18px;padding:32px 28px;margin-bottom:20px;box-shadow:0 4px 16px rgba(15,23,42,0.06);border:1px solid rgba(30,60,114,0.07);}
+  .card-title{font-family:'Playfair Display',Georgia,serif;font-size:1.15rem;color:var(--primary);margin-bottom:16px;padding-bottom:10px;border-bottom:2px solid #eef2f7;}
+  .price-row{display:flex;gap:0;border-radius:14px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,0.04);}
+  .price-box{flex:1;padding:28px 20px;text-align:center;}
+  .price-box.cn{background:linear-gradient(135deg,#e8f5e9,#c8e6c9);}
+  .price-box.us{background:linear-gradient(135deg,#fff3e0,#ffe0b2);}
+  .price-flag{font-size:1.8rem;margin-bottom:4px;}
+  .price-label{font-size:0.72rem;text-transform:uppercase;letter-spacing:0.06em;font-weight:700;color:#888;margin-bottom:6px;}
+  .price-value{font-size:1.4rem;font-weight:800;color:var(--primary);}
+  .price-save-wrap{display:flex;align-items:center;justify-content:center;background:#fff;padding:0 12px;min-width:80px;}
+  .save-badge{width:68px;height:68px;border-radius:50%;background:linear-gradient(135deg,var(--accent),#c0392b);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:0.65rem;line-height:1.2;text-align:center;}
+  .save-badge strong{font-size:0.9rem;display:block;}
+  .h-card{background:#fff;border:1px solid #eef2f7;border-radius:16px;padding:24px;margin-bottom:16px;position:relative;transition:box-shadow .15s;}
+  .h-card:hover{box-shadow:0 4px 20px rgba(0,0,0,0.04);}
+  .top-pick{position:absolute;top:-10px;right:20px;background:linear-gradient(135deg,var(--primary),var(--secondary));color:#fff;padding:4px 14px;border-radius:12px;font-size:0.7rem;font-weight:700;letter-spacing:0.04em;}
+  .top-pick.alt{background:linear-gradient(135deg,#2d7d46,#3a9d5a);}
+  .h-name{font-size:1.05rem;font-weight:700;color:var(--primary);}
+  .h-name-en{font-size:0.8rem;color:var(--text-light);margin-bottom:10px;}
+  .h-tags{margin:10px 0 0;display:flex;flex-wrap:wrap;gap:4px;}
+  .h-tag{background:#eef2f7;color:#555;padding:2px 10px;border-radius:4px;font-size:0.76rem;}
+  .badge{display:inline-block;padding:2px 10px;border-radius:4px;font-size:0.76rem;margin:0 2px 2px 0;}
+  .badge-intl,.cert.intl{background:#e3f2fd;color:#1565c0;}
+  .badge-jci,.cert.jci{background:#e8f5e9;color:#2e7d32;}
   .steps{counter-reset:step;}
   .step{position:relative;padding:14px 16px 14px 52px;border-left:3px solid #d1d9e6;margin-bottom:0;}
   .step:last-child{border-color:transparent;}
-  .step-num{position:absolute;left:12px;top:12px;width:28px;height:28px;background:#1a3a6b;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.8rem;font-weight:700;}
-  .faq-item{margin-bottom:20px;padding:16px;background:#f8faff;border-radius:10px;}
-  .faq-item h3{font-size:0.95rem;color:#1a3a6b;margin-bottom:6px;}
-  .faq-item p,.faq-item ul{color:#555;font-size:0.9rem;padding-left:0;}
-  .faq-item ul{padding-left:20px;margin-top:6px;}
-  .faq-item li{margin-bottom:4px;}
-  .tag-green{display:inline-block;background:#d1fae5;color:#065f46;padding:1px 8px;border-radius:4px;font-size:0.75rem;font-weight:600;}
-  .price-note-box{background:#f8faff;border-radius:10px;padding:16px;margin-top:16px;font-size:0.9rem;color:#555;}
-  .price-note-box p{margin-bottom:6px;}
-  .download-section{text-align:center;padding:32px 0 16px;}
-  .btn-download{display:inline-block;background:#1a3a6b;color:#fff;padding:12px 28px;border-radius:10px;text-decoration:none;font-weight:600;font-size:0.95rem;transition:background 0.2s;}
-  .btn-download:hover{background:#0a1628;}
-  .disclaimer{background:#fff8e1;border-left:4px solid #ffc107;padding:16px 20px;border-radius:0 8px 8px 0;font-size:0.82rem;color:#856404;margin-top:32px;}
-  .report-footer{text-align:center;padding:32px 56px;color:#888;font-size:0.85rem;border-top:1px solid #e8ecf1;}
-  .report-footer a{color:#1a3a6b;text-decoration:none;font-weight:600;}
-  .toolbar{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.92);backdrop-filter:blur(8px);border-bottom:1px solid #e5eaf1;padding:10px 20px;display:flex;justify-content:flex-end;gap:10px;}
-  .toolbar button{padding:8px 18px;border-radius:8px;border:1px solid #d1d9e6;background:white;cursor:pointer;font-size:0.85rem;font-weight:500;color:#1e3c72;transition:all 0.2s;}
-  .toolbar button:hover{background:#1a3a6b;color:#fff;border-color:#1a3a6b;}
-  .toolbar .btn-primary{background:#1a3a6b;color:#fff;border-color:#1a3a6b;}
-  .toolbar .btn-primary:hover{background:#0a1628;}
+  .step-num{position:absolute;left:12px;top:12px;width:28px;height:28px;background:var(--primary);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.8rem;font-weight:700;}
+  .faq-item{padding:16px;margin-bottom:12px;background:#f8faff;border-radius:10px;}
+  .faq-item h4{font-size:0.9rem;color:var(--primary);margin-bottom:4px;}
+  .faq-item p,.faq-item ul{font-size:0.85rem;color:#555;margin:0;}
+  .faq-item ul{padding-left:18px;margin-top:4px;}
+  .faq-item li{margin-bottom:2px;}
+  .dl-grid{display:grid;grid-template-columns:auto 1fr;gap:4px 18px;font-size:0.88rem;}
+  .dl-key{color:var(--text-light);}
+  .dl-val{color:var(--text);}
+  .dl-val a{color:var(--secondary);text-decoration:none;}
+  .tag-inc{display:inline-block;background:#d1fae5;color:#065f46;padding:1px 8px;border-radius:4px;font-size:0.72rem;font-weight:600;}
+  .tag-ext{display:inline-block;background:#fef3c7;color:#92400e;padding:1px 8px;border-radius:4px;font-size:0.72rem;font-weight:600;}
+  .dl-box{background:#f8faff;border-radius:10px;padding:16px;margin-top:14px;font-size:0.88rem;color:#555;}
+  .dl-box p{margin-bottom:6px;}
+  .toolbar{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid #e5eaf1;padding:10px 20px;display:flex;justify-content:flex-end;gap:10px;}
+  .toolbar button{padding:8px 18px;border-radius:8px;border:1px solid #d1d9e6;background:#fff;cursor:pointer;font-size:0.82rem;font-weight:500;color:var(--primary);transition:all .15s;}
+  .toolbar button:hover{background:var(--primary);color:#fff;border-color:var(--primary);}
+  .toolbar .btn-primary{background:var(--primary);color:#fff;border-color:var(--primary);}
+  .toolbar .btn-primary:hover{background:#0f2a4f;}
+  .dload-section{text-align:center;padding:32px 20px 24px;background:#fff;border-radius:18px;box-shadow:0 4px 16px rgba(15,23,42,0.06);border:1px solid rgba(30,60,114,0.07);}
+  .dload-section p{color:var(--text-light);font-size:0.88rem;margin-bottom:12px;}
+  .btn-dload{display:inline-block;background:var(--primary);color:#fff;padding:14px 32px;border-radius:10px;text-decoration:none;font-weight:600;font-size:0.95rem;transition:background .15s;}
+  .btn-dload:hover{background:#0f2a4f;}
+  .disclaimer{background:#fff8e1;border-left:4px solid #f5a623;padding:14px 18px;border-radius:0 8px 8px 0;font-size:0.8rem;color:#856404;margin-top:20px;}
+  .footer{text-align:center;padding:32px 20px;color:var(--text-light);font-size:0.82rem;}
+  .footer a{color:var(--primary);text-decoration:none;font-weight:600;}
+  .p{margin-bottom:10px;color:var(--text);font-size:0.92rem;}
+  .p:last-child{margin-bottom:0;}
+  .quote{border-left:3px solid var(--secondary);padding:12px 16px;margin:12px 0;background:#f8faff;border-radius:0 8px 8px 0;font-style:italic;color:#555;font-size:0.9rem;}
+  hr{border:none;border-top:1px solid #eef2f7;margin:20px 0;}
   @media(max-width:640px){
-    .hero{padding:36px 24px 32px;}.hero h1{font-size:1.5rem;}
-    .content{padding:28px 20px;}
-    .price-section{flex-direction:column;}.price-save{padding:16px;}
-    .card-details{grid-template-columns:1fr;}
-    .report-footer{padding:20px;}
+    .hero{padding:120px 20px 48px;}
+    .content{padding:0 12px 36px;}
+    .card{padding:24px 18px;border-radius:14px;}
+    .price-row{flex-direction:column;}
+    .price-save-wrap{padding:12px;}
+    .dl-grid{grid-template-columns:1fr;}
+    .toolbar{justify-content:center;flex-wrap:wrap;}
   }
-  @media print{body{background:#fff;}.report{box-shadow:none;max-width:100%;}.hero{background:#1a3a6b!important;-webkit-print-color-adjust:exact;}.hospital-card{break-inside:avoid;}.toolbar{display:none;}}
+  @media print{body{background:#fff;}.toolbar{display:none!important;}.hero{-webkit-print-color-adjust:exact;}.h-card{break-inside:avoid;}}
 </style>
 </head>
 <body>
-<div class="toolbar" id="toolbar">
+<div class="toolbar">
   <button onclick="window.print()">🖨️ Print / PDF</button>
-  <button class="btn-primary" onclick="downloadTxt()">📥 Download Text Report</button>
+  <button class="btn-primary" onclick="document.getElementById('dloadBtn').click()">📥 Download Full Report</button>
 </div>
 <div class="report">
   <div class="hero">
     ${badgeText}
-    <h1>${esc(title)}</h1>
-    <div class="hero-sub">Your trusted guide to world-class affordable healthcare in China</div>
+    <h1>${esc(customerName ? `Your Medical Travel Report` : `Medical Travel Report: ${esc(title)}`)}</h1>
+    <p class="hero-sub">${customerName ? `Personalized report for ${esc(customerName)}` : 'Hospital matching and cost comparison for your condition'}</p>
     <div class="hero-meta">
-      <span>📅 ${dateStr}</span>
-      <span>🔍 ${esc(keywords.join(", "))}</span>
-      <span>📍 ${esc(city)}</span>
+      ${customerName ? `<span>👤 ${esc(customerName)}</span>` : ''}
+      <span>🔍 ${esc(keywords.join(', '))}</span>
+      ${city && city !== 'No limit' ? `<span>📍 ${esc(city)}</span>` : ''}
       <span>🏥 ${results.length} hospitals matched</span>
+      <span>📅 ${dateStr}</span>
     </div>
   </div>
   <div class="content">
+    <!-- Cover letter -->
     ${coverHtml}
-    ${priceHtml ? '<div class="section"><h2 class="section-title">💰 Cost Comparison</h2>'+priceHtml+'</div>' : ''}
-    <div class="section">
-      <h2 class="section-title">⭐ Top Recommendations</h2>
+
+    <!-- Price comparison -->
+    ${priceHtml ? `<div class="card"><div class="card-title">💰 Cost Comparison</div>${priceHtml}</div>` : ''}
+
+    <!-- Hospital cards (concise) -->
+    <div class="card">
+      <div class="card-title">⭐ Top ${Math.min(results.length, 3)} Hospital${results.length !== 1 ? 's' : ''} for Your Condition</div>
       ${cardsHtml}
       ${extraHtml}
+      <p style="margin-top:12px;font-size:0.82rem;color:var(--text-light);">📄 <strong>Full details in the downloaded text report</strong> — address, phone, website, airport info for each hospital.</p>
     </div>
+
+    <!-- Action guide -->
     ${actionHtml}
+
+    <!-- Service flow (premium only) -->
     ${serviceHtml}
+
+    <!-- FAQ -->
     ${faqHtml}
-    <div class="download-section">
-      <p>📥 Download a plain text summary for offline reference</p>
-      <a class="btn-download" download="report-${esc(safeTitle)}.txt" href="data:text/plain;charset=utf-8,${encodeURIComponent(textReport)}">⬇ Download Text Report (.txt)</a>
+
+    <!-- Download section -->
+    <div class="dload-section">
+      <p>📥 <strong>Download the complete detailed report</strong> — includes all hospital information, pricing breakdown, step-by-step action plan, and everything you need to prepare for your medical trip to China.</p>
+      <a id="dloadBtn" class="btn-dload" download="report-${esc(safeTitle)}.txt" href="data:text/plain;charset=utf-8,${encodeURIComponent(textReport)}">⬇ Download Full Report (.txt)</a>
     </div>
+
     <div class="disclaimer">
-      <strong>📋 Important:</strong> Prices are estimates based on typical cases and published data. Actual costs vary by diagnosis, hospital, and individual treatment plan. Contact the hospital directly for a personalized quote. This report is for informational purposes and does not constitute medical advice.
+      <strong>📋 Important:</strong> Prices are estimates based on typical cases and published data. Actual costs vary by diagnosis, hospital, and treatment plan. Contact the hospital directly for a personalized quote. This report is for informational purposes and does not constitute medical advice.
     </div>
   </div>
-  <div class="report-footer">
+  <div class="footer">
     <p>Generated by <a href="https://chinahospitalsguide.com">ChinaHospitalsGuide.com</a> — Your Gateway to World-Class Affordable Healthcare</p>
     <p style="margin-top:4px;">📧 contact@chinahospitalsguide.com | Data: 51 hospitals · 10 cities</p>
   </div>
 </div>
 <script>
-function downloadTxt(){var c=document.querySelector('.content');var t=c?c.textContent.replace(/\\s+/g,' ').replace(/(\\S[。！?.!])\\s*/g,'$1\\n').trim().split('\\n').filter(function(l){return l.trim().length>0}).map(function(l){return l.trim()}).join('\\n\\n'):'';var b=new Blob([t],{type:'text/plain;charset=utf-8'});var u=URL.createObjectURL(b);var a=document.createElement('a');a.href=u;a.download=document.title.replace(/[^a-z0-9]/gi,'-')+'.txt';a.click();URL.revokeObjectURL(u);}
+function downloadTxt(){var c=document.querySelector('.content');if(!c)return;var t='';c.querySelectorAll('h1,h2,h3,h4,p,li,blockquote,div').forEach(function(e){if(e.closest('.toolbar'))return;var txt=e.textContent.trim();if(txt.length>3)t+=txt+'\\n\\n';});var b=new Blob([t.trim()],{type:'text/plain;charset=utf-8'});var u=URL.createObjectURL(b);var a=document.createElement('a');a.href=u;a.download=document.title.replace(/[^a-z0-9]/gi,'-')+'.txt';a.click();URL.revokeObjectURL(u);}
 </script>
 </body>
 </html>`;
