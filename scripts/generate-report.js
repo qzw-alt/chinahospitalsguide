@@ -448,21 +448,26 @@ function generateHtmlReport(results, keywords, city, budget, opts) {
   const safeTitle = (opts.name || keywords.slice(0,3).join("-")).toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/-+/g,'-').replace(/^-|-$/g,'');
 
   const priceHtml = priceInfo ? `
-    <div class="price-section">
-      <div class="price-card china">
-        <div class="price-flag">🇨🇳</div>
-        <div class="price-label">中国预计成本</div>
-        <div class="price-value">${esc(priceInfo.cn)}</div>
-        <div class="price-note">世界一流医院</div>
-      </div>
-      <div class="price-save">
-        <div class="save-circle">节省<br><strong>${esc(priceInfo.save)}</strong></div>
-      </div>
-      <div class="price-card us">
-        <div class="price-flag">🇺🇸</div>
-        <div class="price-label">美国/英国典型成本</div>
-        <div class="price-value">${esc(priceInfo.us)}</div>
-        <div class="price-note">质量相当</div>
+    <div class="card">
+      <div class="card-title">💰 费用对比</div>
+      <div style="display:flex;gap:0;border-radius:14px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,0.04);">
+        <div style="flex:1;padding:28px 20px;text-align:center;background:linear-gradient(135deg,#e8f5e9,#c8e6c9);">
+          <div style="font-size:1.8rem;margin-bottom:4px;">🇨🇳</div>
+          <div style="font-size:0.72rem;text-transform:uppercase;letter-spacing:0.06em;font-weight:700;color:#888;margin-bottom:6px;">中国预计成本</div>
+          <div style="font-size:1.4rem;font-weight:800;color:var(--primary);">${esc(priceInfo.cn)}</div>
+          <div style="font-size:0.78rem;color:#888;margin-top:4px;">世界一流医院</div>
+        </div>
+        <div style="display:flex;align-items:center;justify-content:center;background:#fff;padding:0 12px;min-width:80px;">
+          <div style="width:68px;height:68px;border-radius:50%;background:linear-gradient(135deg,var(--accent),#c0392b);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:0.65rem;line-height:1.2;text-align:center;">
+            节省<br><strong style="font-size:0.9rem;display:block;">${esc(priceInfo.save)}</strong>
+          </div>
+        </div>
+        <div style="flex:1;padding:28px 20px;text-align:center;background:linear-gradient(135deg,#fff3e0,#ffe0b2);">
+          <div style="font-size:1.8rem;margin-bottom:4px;">🇺🇸</div>
+          <div style="font-size:0.72rem;text-transform:uppercase;letter-spacing:0.06em;font-weight:700;color:#888;margin-bottom:6px;">美国/英国典型成本</div>
+          <div style="font-size:1.4rem;font-weight:800;color:var(--primary);">${esc(priceInfo.us)}</div>
+          <div style="font-size:0.78rem;color:#888;margin-top:4px;">质量相当</div>
+        </div>
       </div>
     </div>` : "";
 
@@ -638,7 +643,7 @@ function generateHtmlReport(results, keywords, city, budget, opts) {
     ${howToUseHtml}
 
     <!-- Price comparison -->
-    ${priceHtml ? `<div class="card"><div class="card-title">💰 费用对比</div>${priceHtml}</div>` : ''}
+    ${priceHtml ? `${priceHtml}` : ''}
 
     <!-- Hospital cards -->
     <div class="card">
@@ -678,7 +683,7 @@ function generateHtmlReport(results, keywords, city, budget, opts) {
   </div>
 </div>
 <script>
-function downloadTxt(){var c=document.querySelector('.content');if(!c)return;var t='';c.querySelectorAll('h1,h2,h3,h4,p,li,blockquote').forEach(function(e){if(e.closest('.toolbar')||e.closest('.footer'))return;var txt=e.textContent.trim();if(txt.length>4)t+=txt+'\n\n';});var b=new Blob([t.trim()],{type:'text/plain;charset=utf-8'});var u=URL.createObjectURL(b);var a=document.createElement('a');a.href=u;a.download='report-'+document.title.replace(/[^a-z0-9]/gi,'-').replace(/--+/g,'-').replace(/^-|-$/g,'')+'.txt';a.click();URL.revokeObjectURL(u);}
+function downloadTxt(){var c=document.querySelector('.content');if(!c)return;var t='';c.querySelectorAll('h1,h2,h3,h4,p,li,blockquote').forEach(function(e){if(e.closest('.toolbar')||e.closest('.footer'))return;var txt=e.textContent.trim();if(txt.length>4)t+=txt+'\n\n';});var b=new Blob([t.trim()],{type:'text/plain;charset=utf-8'});var u=URL.createObjectURL(b);var a=document.createElement('a');a.href=u;a.download='report-'+document.title.replace(/[^a-z0-9]/gi,'-').replace(/--+/g,'-').replace(/^-|-$/g,'')+'.txt';document.body.appendChild(a);a.click();document.body.removeChild(a);URL.revokeObjectURL(u);}
 </script>
 </body>
 </html>`;
