@@ -116,6 +116,38 @@
 
 ---
 
+## 续作进度 (2026-07-02)
+
+**会话**: Hermes 代德米执行
+**commit**: `1c03aab` "90-day plan: P0 SEO overhaul for 4 ranking pages + GA4 event tracking"
+
+### 完成的工作 (8 项 → 11/15)
+
+**A. 排名页改造（4 个，全部 P0 模板套用）**:
+1. ✅ best-cancer-hospitals-china-2026.html — 4 schema + 8 癌症分流卡片 + 5 QA
+2. ✅ best-cardiac-surgery-hospitals-china-2026.html — 3 schema + 8 心脏病情卡片 + 5 QA
+3. ✅ china-hospital-rankings-2026.html (Fudan Top 100) — 3 schema + 8 导航卡片 + 5 QA
+4. ✅ china-orthopedic-hospital-rankings-2026.html — 4 schema + 8 骨科分流卡片 + 5 QA
+
+每页同套模板（验证通过）: 
+- 深蓝渐变 #1e3c72→#2a5298 Quick Decision 区块 + 8 个专科/病情卡片
+- 浅灰背景 #f8f9fa Quick Answers 区块 + 5 个 Q&A（"X is Y" Featured Snippet 格式）
+- MedicalWebPage schema (specialty/lastReviewed/about/citation) + BreadcrumbList schema
+
+**B. 数据基础设施**:
+5. ✅ GSC 周报 cron **已存在** — `16a08d0ea83d` 已配置（周一 7:00 CST, no_agent 模式, 跑 gsc-weekly-report.sh, deliver=feishu），无需新创建
+6. ✅ GA4 事件追踪部署 (scroll_depth 25/50/75/100% + cta_click + outbound_click) — index.html + blog/index.html
+7. ⏸ MS Clarity — 占位注释已部署 (`CLARITY_PROJECT_ID_HERE`)，等伟烨提供 10 位 Project ID 后一键启用
+
+### 部署
+- 6 个文件改动 +1 commit (`1c03aab`), push `a75b61f..1c03aab`
+- Cloudflare 验证 (HTTP 200, schema 数对, QD/QA 文案出现): 6/6 通过
+
+### 伟烨待做
+- **MS Clarity**: 5 分钟 (注册 https://clarity.microsoft.com → 拿 Project ID → 全局替换 `CLARITY_PROJECT_ID_HERE` → 取消 `<script>` 注释)
+- **Formspree** (剩余): 同上次通知
+---
+
 ## 90 天方案剩余项（按优先级）
 
 ### P0（全部完成）✅
