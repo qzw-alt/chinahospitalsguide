@@ -1,0 +1,18 @@
+fix: 全站优化 - 修复子目录页面显示问题
+
+
+**子目录页面 (news/treatments/stories) 修复：**
+- 8 个原本无导航的子目录页面添加标准 7 链接导航
+- 4 个自定义导航升级到标准格式（移除 3 个死链 services.html / how-it-works.html / resources.html）
+- 3 个页面修复指向不存在页面的引用（替换为 pricing.html / cost-comparison.html / blog/index.html）
+
+**关键内容修复：**
+- treatments/cancer.html 从 14 行空壳重写为完整页面（含医院、费用、疗法）
+- stories/index.html 添加缺失的 canonical / OG meta
+
+**SEO / 性能：**
+- sitemap.xml: 从 156 → 163 入口（+7 个缺失子目录页）
+- index.html / hospitals.html: 12 张图片加 loading="lazy"
+
+**导航一致性：**
+- 全站 23 个 HTML 页面均使用统一 7 链接导航：Home / Hospitals / Costs / Blog / Stories / About / Contact
