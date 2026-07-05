@@ -269,15 +269,9 @@
             <div class="case-panel">
                 <h2>Case review form</h2>
                 <form id="consultForm">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label>First Name <span>*</span></label>
-                            <input type="text" id="firstname" name="firstname" required placeholder="John">
-                        </div>
-                        <div class="form-group">
-                            <label>Last Name <span>*</span></label>
-                            <input type="text" id="lastname" name="lastname" required placeholder="Smith">
-                        </div>
+                    <div class="form-group">
+                        <label>Full Name <span>*</span></label>
+                        <input type="text" id="firstname" name="firstname" required placeholder="John Smith">
                     </div>
 
                     <div class="form-row">
@@ -400,14 +394,22 @@
                     <p>We have received your details and will review your case shortly.</p>
                     <ul class="success-next">
                         <li>Check your email for a confirmation message.</li>
-                        <li>We usually reply within 1 business day.</li>
-                        <li>If urgent, message us on WhatsApp.</li>
+                        <li>We usually reply within 4 business hours.</li>
+                        <li>For faster response, message us on WhatsApp or WeChat.</li>
                     </ul>
+                    <div style="background:#f0f6ff;border-radius:16px;padding:20px;margin:24px auto;max-width:480px;text-align:center;">
+                        <p style="font-weight:700;color:#1e3c72;margin:0 0 8px;">💬 Want a faster response?</p>
+                        <p style="font-size:0.9rem;color:#4b5565;margin:0 0 16px;">Message us directly — we typically reply within minutes during business hours.</p>
+                        <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+                            <a href="https://wa.me/8615763107083" class="cta-button" style="background:linear-gradient(135deg,#25D366 0%,#128C7E 100%);font-size:0.9rem;padding:12px 20px;" target="_blank" rel="noopener">💬 WhatsApp</a>
+                            <a href="https://weixin.qq.com" class="cta-button" style="background:linear-gradient(135deg,#07C160 0%,#06AD56 100%);font-size:0.9rem;padding:12px 20px;" target="_blank" rel="noopener">💬 WeChat</a>
+                        </div>
+                        <p style="font-size:0.75rem;color:#999;margin:12px 0 0;">WeChat ID available upon request — or we'll share it when we reply to your email.</p>
+                    </div>
                     <p style="margin:20px 0 12px;font-weight:700;color:#1e3c72;">Already know which package you need?</p>
                     <div class="success-actions">
                         <a href="pricing.html" class="cta-button" style="background:linear-gradient(135deg,#b78a42 0%,#d4a84b 100%);">Choose Package &amp; Pay →</a>
                         <a href="index.html" class="cta-button" style="background:transparent;color:#1e3c72;border:2px solid #1e3c72;">Back to Home</a>
-                        <a href="https://wa.me/8615763107083" class="cta-button" style="background:linear-gradient(135deg,#25D366 0%,#128C7E 100%);" target="_blank" rel="noopener">Message on WhatsApp</a>
                     </div>
                 </div>
             </div>
@@ -422,6 +424,15 @@
                     <p style="margin:0 0 8px;font-weight:700;color:#b78a42;">💰 Already know which package you need — Pay directly</p>
                     <p style="margin:0 0 12px;font-size:0.95rem;color:#4b5565;">Go straight to pricing, choose your package, and pay with PayPal. Return here after payment if needed.</p>
                     <a href="pricing.html" style="display:inline-block;background:linear-gradient(135deg,#b78a42 0%,#d4a84b 100%);color:white;padding:10px 24px;border-radius:8px;text-decoration:none;font-weight:700;">Pay Now →</a>
+                </div>
+                <div style="background:#e8f5e9;border:1px solid #a5d6a7;border-radius:16px;padding:20px;margin-bottom:20px;">
+                    <p style="margin:0 0 8px;font-weight:700;color:#2e7d32;">💬 Prefer to chat first?</p>
+                    <p style="margin:0 0 12px;font-size:0.95rem;color:#4b5565;">Message us on WhatsApp or WeChat. We typically reply within minutes during business hours.</p>
+                    <div style="display:flex;gap:10px;flex-wrap:wrap;">
+                        <a href="https://wa.me/8615763107083" style="display:inline-block;background:#25D366;color:white;padding:10px 20px;border-radius:8px;text-decoration:none;font-weight:700;font-size:0.9rem;" target="_blank" rel="noopener">💬 WhatsApp</a>
+                        <span style="display:inline-flex;align-items:center;gap:4px;background:#07C160;color:white;padding:10px 20px;border-radius:8px;font-weight:700;font-size:0.9rem;">💬 WeChat: <code style="background:rgba(255,255,255,0.2);padding:2px 8px;border-radius:4px;">Available via WhatsApp request</code></span>
+                    </div>
+                    <p style="margin:12px 0 0;font-size:0.85rem;color:#666;">📱 +86 157-6310-7083 · Mon-Fri 9:00-18:00 GMT+8</p>
                 </div>
                 <div class="link-actions" style="margin-top:24px; display:flex; flex-wrap:wrap; gap:16px;">
                     <a href="contact.html" class="cta-button">Other Contact Options</a>
@@ -510,7 +521,7 @@
 
             var formData = {
                 firstname: document.getElementById('firstname').value,
-                lastname: document.getElementById('lastname').value,
+                lastname: '',
                 email: document.getElementById('email').value,
                 phone: document.getElementById('phone').value || 'Not provided',
                 country: document.getElementById('country').value,

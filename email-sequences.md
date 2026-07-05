@@ -302,20 +302,20 @@ Over the past 10 days, we've shared:
 
 If you're considering medical treatment in China, here's how we can help:
 
-**Option 1: Starter Guide - $30**
-Perfect if you're in research mode. Get our complete hospital database, cost guides, and visa information.
+**Option 1: Hospital Match & Plan — $49**
+Perfect if you're in research mode. Get 2-3 personalized hospital recommendations, cost comparisons, transport guidance, and a travel preparation checklist.
 
-[Get Starter Guide]
+[Learn More](https://chinahospitalsguide.com/pricing.html)
 
-**Option 2: Standard Package - $299**
-Our most popular choice. We handle hospital booking, medical record translation, and pre-arrival coordination.
+**Option 2: Pre-Arrival Coordination — $399**
+Our most popular choice. We handle hospital matching, record preparation, appointment coordination, visa guidance, airport pickup, and support through discharge.
 
-[Get Standard Package]
+[Learn More](https://chinahospitalsguide.com/pricing.html)
 
-**Option 3: Free Consultation**
-Not sure yet? Let's talk. We'll review your case and recommend the best options - no obligation.
+**Option 3: Free Case Review**
+Not sure yet? Submit your case details and we'll recommend the right path — no obligation.
 
-[Book Free Consultation]
+[Start Free Case Review](https://chinahospitalsguide.com/contact-new.html)
 
 **What our patients say:**
 

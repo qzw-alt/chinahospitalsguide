@@ -16,7 +16,7 @@ function medicalBusinessSchema() {
     "logo": `${BASE}/og-image.webp`,
     "image": `${BASE}/og-image.webp`,
     "description": "Independent medical travel coordination for international patients seeking hospital treatment in China. Hospital matching, cost comparison, and pre-arrival planning.",
-    "telephone": "+86-135-2200-5627",
+    "telephone": "+86-157-6310-7083",
     "email": "contact@chinahospitalsguide.com",
     "areaServed": {
       "@type": "Country",

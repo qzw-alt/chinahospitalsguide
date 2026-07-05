@@ -71,23 +71,23 @@ Would you like us to arrange a video consultation with their specialists?
 ```
 Our service packages:
 
-📘 Starter Guide - $30
-• Complete hospital database
-• Treatment cost guides
-• Visa information
+📋 Hospital Match & Plan - $49
+• 2-3 hospitals matched to your case and budget
+• Cost comparison across cities
+• Transport guidance (airport to hospital)
+• Travel preparation checklist
+• Best if you want to manage follow-through yourself
 
-🤝 Standard Package - $299
-• Hospital appointment booking
-• Medical record translation
-• Pre-arrival coordination
+🎯 Pre-Arrival Coordination - $399
+• Personalized hospital matching + contact with quotes
+• Medical record preparation and translation support
+• Pre-arrival planning (visa, booking, accommodation, airport pickup)
+• Treatment period hospital communication
+• Discharge support (medical summary, medication help, follow-up handover)
 
-🏆 Premium Package - $899
-• Full concierge service
-• Airport pickup
-• On-site assistance
-• 5-day coordination
+Not sure which fits? Start with a free case review — no commitment.
 
-Which package interests you? We can schedule a free consultation to discuss your needs.
+Which package interests you?
 ```
 
 ### 3.4 安排咨询
