@@ -28,3 +28,6 @@
 /index.html / 301
 # 2026-07-01: removed duplicate pillar page (duplicate content risk)
 /blog/china-unique-medical-procedures.html /blog/china-unique-medical-procedures-guide.html 301
+# 2026-07-06: English language path never existed — redirect to homepage
+/en  /  301
+/en/ /  301
