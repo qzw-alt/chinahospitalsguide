@@ -15,5 +15,10 @@ Disallow: /cgi-bin/
 # Disallow API directory - internal data for AI agents only
 Disallow: /api/
 
+# Disallow duplicate content directories (canonical content is in /blog/)
+Disallow: /blog-articles/
+Disallow: /blog-export/
+Disallow: /docs/
+
 # Crawl-delay (optional, be nice to servers)
 Crawl-delay: 1
