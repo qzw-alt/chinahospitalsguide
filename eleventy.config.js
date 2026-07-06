@@ -18,6 +18,11 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.ignores.add("news/*.md");
   eleventyConfig.ignores.add(".agents/");
 
+  // Ignore duplicate content directories (canonical versions are in /blog/)
+  eleventyConfig.ignores.add("blog-articles/");
+  eleventyConfig.ignores.add("blog-export/");
+  eleventyConfig.ignores.add("docs/");
+
   // HTML files without frontmatter are auto-passthrough-copied (not skipped)
   eleventyConfig.addPassthroughCopy("news/");
   eleventyConfig.addPassthroughCopy("blog/");
