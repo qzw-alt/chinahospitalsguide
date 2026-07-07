@@ -71,11 +71,15 @@ curl -O -J -A 'Mozilla/5.0' --max-time 7200 '复制的链接'
 
 | 字段 | 值 |
 |------|------|
-| TO | tangdu_foreign@fmmu.edu.cn |
-| CC | Maria 的邮箱（你邮件里找） |
+| TO | `tdcenter@fmmu.edu.cn` |
+| CC | `tangdugcp@126.com` + `riosale625@gmail.com` |
 | From | 434338480@qq.com |
 | 主题 | `International Inquiry – Nutcracker + May Thurner, Remote Review Request` |
 | 附件 | Maria 的 PDF 摘要 + 双语放射学报告 |
+
+> ⚠️ **2026-07-07 教训**：历史上用的 `tangdu_foreign@fmmu.edu.cn` 是空地址，**已退回**。改用 `tdcenter@fmmu.edu.cn` 主投递 + `tangdugcp@126.com` 抄送。这是双通道策略。
+>
+> 还可以**打电话激活邮件**：029-84777777（总机），要求转涉外接待岗。
 
 **DICOM 影像不要挂**——邮件内承诺"按医院偏好方式单独发"。
 
