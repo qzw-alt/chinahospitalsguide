@@ -8,7 +8,7 @@
 
 ## 一、模板选择
 
-所有新文章**必须**使用 `_layouts/blog-post.html` 模板，禁止手写完整 HTML。
+所有新文章**必须**使用 `_layouts/blog-post.njk` 模板（继承 `_layouts/base.njk`），禁止手写完整 HTML。用 `.md` 后缀创建文章。
 
 ### 新文章文件格式
 
@@ -16,7 +16,7 @@
 
 ```markdown
 ---
-layout: blog-post.html
+layout: blog-post.njk
 title: "LASIK Eye Surgery in China 2026: Costs, Best Hospitals & Complete Guide"
 description: "LASIK surgery costs $800-$1,500 per eye in China vs $3,000+ in the US. Top 10 eye hospitals, full cost breakdown, and how to arrange treatment."
 kicker: "Eye Surgery Guide"
@@ -44,7 +44,7 @@ Your article content in Markdown or HTML goes here.
 
 | Field | 必填 | 说明 |
 |-------|------|------|
-| `layout` | ✅ | 固定 `blog-post.html` |
+| `layout` | ✅ | 固定 `blog-post.njk` |
 | `title` | ✅ | `<title>` 和 `<h1>`，**必须包含费用数字** |
 | `description` | ✅ | `<meta description>`，160 字以内，含价格范围 |
 | `kicker` | ✅ | 文章页 hero 区顶部的分类标签（如 "Oncology Guide"） |
@@ -223,7 +223,8 @@ Your article content in Markdown or HTML goes here.
 
 | 手术 | 中国 | 美国 | 新加坡 | 泰国 |
 |------|------|------|--------|------|
-| CAR-T | $30K-$80K | $300K-$500K | $200K-$400K | N/A |
+| CAR-T (listed products) | $89K-$151K | $300K-$500K | N/A | N/A |
+| CAR-T (clinical trial/compassionate) | $30K-$80K | $100K-$200K | N/A | N/A |
 | 心脏搭桥 | $15K-$45K | $100K-$200K | $40K-$70K | $15K-$35K |
 | 膝关节置换 | $8K-$15K | $35K-$60K | $20K-$35K | $8K-$18K |
 | IVF | $3K-$8K | $12K-$25K | $8K-$15K | $4K-$10K |
@@ -258,7 +259,7 @@ Your article content in Markdown or HTML goes here.
 
 发布前逐项确认：
 
-- [ ] 使用 `_layouts/blog-post.html` 模板（不是手写 HTML）
+- [ ] 使用 `_layouts/blog-post.njk` 模板（.md 文件 + frontmatter）
 - [ ] Title 含费用数字
 - [ ] Meta description < 160 字，含价格范围
 - [ ] Article Schema ✅ FAQPage Schema ✅

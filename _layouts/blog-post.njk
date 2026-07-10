@@ -1,0 +1,28 @@
+---
+layout: base.njk
+---
+
+<main class="article-shell">
+<article class="article-card">
+<header class="article-hero">
+    <div class="kicker">{{ kicker or 'Medical Tourism Guide' }}</div>
+    <h1>{{ title }}</h1>
+    {%- if subtitle %}
+    <p>{{ subtitle }}</p>
+    {%- endif %}
+</header>
+<div class="article-body">
+{{ content | safe }}
+</div>
+<footer class="article-footer">
+    <p>Last updated: {{ date or '2026' }}. China Hospitals Guide provides independent coordination for international patients seeking treatment in China.</p>
+    <p><a href="{{ '/blog/' | url }}">Back to Blog</a> | <a href="{{ '/contact-new.html' | url }}">Start Free Case Review</a></p>
+</footer>
+<div class="lead-magnet">
+    <div class="lead-magnet-icon">📋</div>
+    <h3 class="lead-magnet-title">Planning treatment in China?</h3>
+    <p class="lead-magnet-desc">We'll match you with 2-3 hospitals for your procedure — free, no commitment.</p>
+    <a href="{{ '/contact-new.html' | url }}" class="lead-magnet-btn">Start Free Case Review</a>
+</div>
+</article>
+</main>

@@ -14,7 +14,9 @@ module.exports = function(eleventyConfig) {
 
   // Ignore markdown source files that conflict with existing HTML
   // (e.g., blog/*.md when blog/*.html already exists)
-  eleventyConfig.ignores.add("blog/*.md");
+  // 2026-07-10: REMOVED blog/*.md ignore — new articles are .md with frontmatter.
+  // Old .html files in blog/ are still passthrough-copied (below).
+  // .md files render via blog-post.njk layout and output as .html.
   eleventyConfig.ignores.add("news/*.md");
   eleventyConfig.ignores.add(".agents/");
 
