@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ title }}</title>
+<meta name="description" content="{{ description }}">
+<link rel="canonical" href="{{ canonical or (site.url + page.url) }}">
+<meta property="og:title" content="{{ ogTitle or title }}">
+<meta property="og:description" content="{{ ogDescription or description }}">
+<meta property="og:type" content="article">
+<meta property="og:url" content="{{ canonical or (site.url + page.url) }}">
+<meta property="og:image" content="{{ ogImage or (site.url + '/og-image.webp') }}">
+<meta property="og:site_name" content="{{ site.name }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ twitterTitle or ogTitle or title }}">
+<meta name="twitter:description" content="{{ twitterDescription or ogDescription or description }}">
+<meta name="twitter:image" content="{{ twitterImage or ogImage or (site.url + '/og-image.webp') }}">
+<link rel="stylesheet" href="{{ '/styles.css' | url }}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap">
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.gaId }}"></script>
+<script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","{{ site.gaId }}")</script>
+<script src="{{ '/ga4-events.js' | url }}" defer></script>
+{%- if pageStyle %}<style>{{ pageStyle | safe }}</style>{%- endif %}
+{%- if schema %}<script type="application/ld+json">{{ schema | safe }}</script>{%- endif %}
+</head>
+<body>
+<div class="nav-overlay" id="navOverlay"></div>
+<nav class="navbar">
+    <div class="nav-container">
+        <a href="{{ '/index.html' | url }}" class="nav-logo">{{ site.name }}</a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="{{ '/index.html' | url }}">Home</a></li>
+            <li><a href="{{ '/services.html' | url }}">Services</a></li>
+            <li><a href="{{ '/how-it-works.html' | url }}">Process</a></li>
+            <li><a href="{{ '/pricing.html' | url }}">Pricing</a></li>
+            <li><a href="{{ '/hospitals.html' | url }}">Hospitals</a></li>
+            <li><a href="{{ '/blog/' | url }}">Blog</a></li>
+            <li><a href="{{ '/contact.html' | url }}">Contact</a></li>
+            <li><a href="{{ '/contact-new.html' | url }}" class="nav-cta-mobile">Start Here</a></li>
+        </ul>
+        <a href="{{ '/contact-new.html' | url }}" class="nav-cta">Start Here</a>
+        <div class="nav-toggle" id="navToggle"><span></span><span></span><span></span></div>
+    </div>
+</nav>
+
+<main class="article-shell">
+<article class="article-card">
+<header class="article-hero">
+    <div class="kicker">{{ kicker or 'Medical Tourism Guide' }}</div>
+    <h1>{{ title }}</h1>
+    <p>{{ subtitle or '' }}</p>
+</header>
+<div class="article-body">
+{{ content | safe }}
+</div>
+<footer class="article-footer">
+    <p>Last updated: {{ date or '2026' }}. China Hospitals Guide provides independent coordination for international patients seeking treatment in China.</p>
+    <p><a href="{{ '/blog/' | url }}">Back to Blog</a> | <a href="{{ '/contact-new.html' | url }}">Start Free Case Review</a></p>
+</footer>
+<div class="lead-magnet">
+    <div class="lead-magnet-icon">📋</div>
+    <h3 class="lead-magnet-title">Planning treatment in China?</h3>
+    <p class="lead-magnet-desc">We'll match you with 2-3 hospitals for your procedure — free, no commitment.</p>
+    <a href="{{ '/contact-new.html' | url }}" class="lead-magnet-btn">Start Free Case Review</a>
+</div>
+</article>
+</main>
+
+<footer class="site-footer" style="background:#f7f9fc;border-top:1px solid #e5eaf1;padding:40px 20px 32px;text-align:center;">
+    <div style="max-width:1100px;margin:0 auto;">
+        <p style="margin:0 0 14px;line-height:1.8;">
+            <a href="{{ '/index.html' | url }}" style="color:#1e3c72;text-decoration:none;margin:0 10px;">Home</a>
+            <a href="{{ '/services.html' | url }}" style="color:#1e3c72;text-decoration:none;margin:0 10px;">Services</a>
+            <a href="{{ '/how-it-works.html' | url }}" style="color:#1e3c72;text-decoration:none;margin:0 10px;">Process</a>
+            <a href="{{ '/pricing.html' | url }}" style="color:#1e3c72;text-decoration:none;margin:0 10px;">Pricing</a>
+            <a href="{{ '/hospitals.html' | url }}" style="color:#1e3c72;text-decoration:none;margin:0 10px;">Hospitals</a>
+            <a href="{{ '/contact-new.html' | url }}" style="color:#1e3c72;text-decoration:none;margin:0 10px;">Start Here</a>
+        </p>
+        <p style="margin:0;color:#6b7280;font-size:.9rem;">{{ site.tagline }}</p>
+    </div>
+</footer>
+
+{% include "scripts.njk" %}
+{% include "mobile-bottom-bar.njk" %}
+{% include "floating-elements.njk" %}
+</body>
+</html>
