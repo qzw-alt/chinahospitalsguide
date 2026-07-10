@@ -1,0 +1,23 @@
+<div class="floating-buttons">
+    <a href="https://wa.me/8615763107083" class="floating-btn whatsapp-btn" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+        <span>💬</span>
+        <span class="chat-tooltip">Chat on WhatsApp</span>
+    </a>
+    <a href="https://t.me/chinahospitalsguide" class="floating-btn telegram-btn" target="_blank" rel="noopener" aria-label="Chat on Telegram">
+        <span>📨</span>
+        <span class="chat-tooltip">Русский / العربية</span>
+    </a>
+</div>
+
+<div id="exitPopup">
+    <div class="exit-popup-content">
+        <div class="exit-popup-icon">🏥</div>
+        <h3 class="exit-popup-title">Before You Go...</h3>
+        <p class="exit-popup-text">Finding the right hospital in China can be overwhelming. Let us help — free, no commitment.</p>
+        <div class="exit-popup-urgency"><p>⏳ Most cases get a hospital match within 24 hours</p></div>
+        <a href="/contact-new.html" class="exit-popup-cta">Start Free Case Review</a><br>
+        <a href="#" class="exit-popup-dismiss" onclick="document.getElementById('exitPopup').style.display='none';return!1">No thanks, I'll keep searching</a>
+    </div>
+</div>
+
+<script>(function(){var e=document.getElementById("exitPopup");if(!e||sessionStorage.getItem("exitPopupShown"))return;var t=!1;document.addEventListener("mouseout",function(n){t||n.clientY>0||n.clientX<=0||(t=!0,sessionStorage.setItem("exitPopupShown","1"),e.style.display="flex")})})()</script>

@@ -24,15 +24,22 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.ignores.add("docs/");
 
   // HTML files without frontmatter are auto-passthrough-copied (not skipped)
+  // 2026-07-10: Blog/news/stories/treatments stay as passthrough for now.
+  // Core pages are converted to .njk (Eleventy outputs them as .html).
+  // New blog posts should use blog-post.njk layout via frontmatter.
   eleventyConfig.addPassthroughCopy("news/");
   eleventyConfig.addPassthroughCopy("blog/");
   eleventyConfig.addPassthroughCopy("stories/");
   eleventyConfig.addPassthroughCopy("treatments/");
-  // Passthrough copy: root-level HTML files that should be served as-is
-  // (index.html, about.html, cancer.html, etc. — not processed by 11ty)
-  // Use glob to avoid copying the _site/ output directory itself
+  // Root HTML files — only passthrough the ones we haven't converted to .njk yet
   const glob = require("glob");
-  glob.sync("*.html").forEach(file => eleventyConfig.addPassthroughCopy(file));
+  glob.sync("*.html").forEach(file => {
+    // Skip files that have a .njk counterpart (template takes precedence)
+    const njkPath = file.replace(/\.html$/, '.njk');
+    if (!require('fs').existsSync(njkPath)) {
+      eleventyConfig.addPassthroughCopy(file);
+    }
+  });
 
   return {
     dir: {
