@@ -21,7 +21,8 @@
     <link rel="dns-prefetch" href="//pagead2.googlesyndication.com">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap">
-    <script src="https://www.paypal.com/sdk/js?client-id=BAAuEJ4aj4Glmel3a35W5yg1QY9idTSZt5LkxbWG-z5pvfIMEyG8E6vnCCLJNynRoAVW6XjqCCtnSKBzEY&components=hosted-buttons&disable-funding=venmo&currency=USD&locale=en_US"></script>
+    <script src="https://www.paypal.com/sdk/js?client-id=BAAuEJ4aj4Glmel3a35W5yg1QY9idTSZt5LkxbWG-z5pvfIMEyG8E6vnCCLJNynRoAVW6XjqCCtnSKBzEY&components=hosted-buttons&disable-funding=venmo&currency=USD&locale=en_US" async onload="window._ppLoaded=1;document.dispatchEvent(new Event('pp:loaded'))" onerror="window._ppFailed=1;document.dispatchEvent(new Event('pp:failed'))"></script>
+    <script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-RVYZENK472"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -328,9 +329,18 @@
                 </ul>
                 <div id="paypal-container-K4HNCDD7GDS5C" style="margin-top:24px;"></div>
                 <script>
-                    paypal.HostedButtons({
-                        hostedButtonId: "K4HNCDD7GDS5C"
-                    }).render("#paypal-container-K4HNCDD7GDS5C");
+                (function renderPP49() {
+                    if (window._ppLoaded) {
+                        paypal.HostedButtons({hostedButtonId:"K4HNCDD7GDS5C"}).render("#paypal-container-K4HNCDD7GDS5C");
+                    } else if (window._ppFailed) {
+                        document.getElementById('paypal-container-K4HNCDD7GDS5C').innerHTML =
+                            '<a href="https://www.paypal.com/ncp/payment/K4HNCDD7GDS5C" target="_blank" rel="noopener" style="display:inline-block;background:#0070ba;color:#fff;padding:12px 28px;border-radius:8px;text-decoration:none;font-weight:700;font-size:0.95em;">Pay $49 with PayPal →</a>';
+                    } else {
+                        document.addEventListener('pp:loaded', renderPP49, {once:true});
+                        document.addEventListener('pp:failed', renderPP49, {once:true});
+                        setTimeout(function(){ if(!window._ppLoaded&&!window._ppFailed){window._ppFailed=1;renderPP49();} }, 10000);
+                    }
+                })();
                 </script>
                 <p class="payment-note">After payment: <a href="thank-you.html" style="color:#dc143c;font-weight:700;">Go to next steps →</a></p>
             </div>
@@ -352,9 +362,18 @@
                 </ul>
                 <div id="paypal-container-ZBY36JV2X5A3U" style="margin-top:24px;"></div>
                 <script>
-                    paypal.HostedButtons({
-                        hostedButtonId: "ZBY36JV2X5A3U"
-                    }).render("#paypal-container-ZBY36JV2X5A3U");
+                (function renderPP399() {
+                    if (window._ppLoaded) {
+                        paypal.HostedButtons({hostedButtonId:"ZBY36JV2X5A3U"}).render("#paypal-container-ZBY36JV2X5A3U");
+                    } else if (window._ppFailed) {
+                        document.getElementById('paypal-container-ZBY36JV2X5A3U').innerHTML =
+                            '<a href="https://www.paypal.com/ncp/payment/ZBY36JV2X5A3U" target="_blank" rel="noopener" style="display:inline-block;background:#0070ba;color:#fff;padding:12px 28px;border-radius:8px;text-decoration:none;font-weight:700;font-size:0.95em;">Pay $399 with PayPal →</a>';
+                    } else {
+                        document.addEventListener('pp:loaded', renderPP399, {once:true});
+                        document.addEventListener('pp:failed', renderPP399, {once:true});
+                        setTimeout(function(){ if(!window._ppLoaded&&!window._ppFailed){window._ppFailed=1;renderPP399();} }, 10000);
+                    }
+                })();
                 </script>
                 <p class="payment-note">After payment: <a href="thank-you.html" style="color:#dc143c;font-weight:700;">Go to next steps →</a></p>
             </div>
