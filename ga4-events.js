@@ -185,18 +185,4 @@
         });
     })();
 
-    // -------- 7. MOBILE NAV LANGUAGE INJECTION --------
-    (function injectMobileLang() {
-        var navLinks = document.getElementById('navLinks');
-        if (!navLinks) return;
-        var langItem = document.createElement('li');
-        langItem.style.cssText = 'display:flex;justify-content:center;gap:8px;padding:12px 0;border-top:1px solid rgba(255,255,255,0.1);margin-top:8px';
-        langItem.innerHTML =
-            '<a href="/index.html" class="lang-flag" style="color:rgba(255,255,255,0.7);padding:6px 10px;">EN</a>' +
-            '<a href="/ru.html" class="lang-flag" style="color:rgba(255,255,255,0.7);padding:6px 10px;">RU</a>' +
-            '<a href="/ar.html" class="lang-flag" style="color:rgba(255,255,255,0.7);padding:6px 10px;">AR</a>' +
-            '<a href="/id.html" class="lang-flag" style="color:rgba(255,255,255,0.7);padding:6px 10px;">ID</a>';
-        navLinks.appendChild(langItem);
-    })();
-
 })();

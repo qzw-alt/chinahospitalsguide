@@ -121,9 +121,10 @@ p {
             color: #fff;
             background: rgba(255,255,255,0.12);
         }
-        /* Mobile: hide inline lang flags, show inside hamburger via JS injection */
+        /* Mobile: shrink lang flags slightly to fit alongside hamburger */
         @media (max-width: 768px) {
-            .nav-lang { display: none; }
+            .nav-lang { gap: 2px; margin-left: 6px; }
+            .lang-flag { font-size: 0.6rem; padding: 2px 4px; }
         }
         
         .nav-links {
