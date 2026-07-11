@@ -7,8 +7,7 @@ module.exports = function() {
     .filter(f => /^\d{4}-\d{2}-\d{2}-.+\.html$/.test(f))
     .map(f => {
       const fullPath = path.join(newsDir, f);
-      const stat = fs.statSync(fullPath);
-      // Parse date from filename
+      // Parse date from filename prefix (YYYY-MM-DD)
       const dateMatch = f.match(/^(\d{4}-\d{2}-\d{2})/);
       const date = dateMatch ? dateMatch[1] : '';
       // Read title from file
@@ -19,10 +18,11 @@ module.exports = function() {
         if (titleMatch) {
           title = titleMatch[1].replace(/ \| China Hospitals Guide$/, '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
         }
-      } catch(e) { title = f; }
-      return { file: f, date, title, mtime: stat.mtime };
+      } catch(e) { title = f.replace(/\.html$/, ''); }
+      return { file: f, date, title, sortKey: date || '0000-00-00' };
     })
-    .sort((a, b) => b.mtime - a.mtime)
+    // Sort by filename date descending (not mtime — unreliable on CI clones)
+    .sort((a, b) => b.sortKey.localeCompare(a.sortKey))
     .slice(0, 3);
 
   return files.map(f => ({
