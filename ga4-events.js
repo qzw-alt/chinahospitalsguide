@@ -10,6 +10,7 @@
 //   - outbound_click (external links) - engagement
 //   - internal_click (internal navigation) - engagement
 //   - newsletter_submit (Formspree forms) - conversion
+//   - paypal_sdk_loaded (PayPal buttons rendered) - conversion
 //   - file_download (PDFs, docs) - engagement
 
 (function() {
@@ -169,7 +170,27 @@
         }
     }, true);
 
-    // -------- 6. COOKIE CONSENT BANNER --------
+    // -------- 6. PAYPAL SDK LOAD TRACKING --------
+    if (typeof gtag === 'function') {
+        document.addEventListener('pp:loaded', function() {
+            gtag('event', 'paypal_sdk_loaded', {
+                'event_category': 'conversion',
+                'event_label': 'PayPal buttons rendered',
+                'page_path': location.pathname,
+                'value': 1
+            });
+        }, { once: true });
+        document.addEventListener('pp:failed', function() {
+            gtag('event', 'paypal_sdk_failed', {
+                'event_category': 'error',
+                'event_label': 'PayPal SDK load failure',
+                'page_path': location.pathname,
+                'value': 1
+            });
+        }, { once: true });
+    }
+
+    // -------- 7. COOKIE CONSENT BANNER --------
     (function initCookieConsent() {
         if (localStorage.getItem('chg_cookie_consent')) return;
         var bar = document.createElement('div');

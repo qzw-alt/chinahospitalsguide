@@ -33,6 +33,9 @@
     {{ schema | safe }}
     </script>
     {%- endif %}
+    {%- if pagePaypal %}
+    <script src="https://www.paypal.com/sdk/js?client-id={{ site.paypalClientId }}&components=hosted-buttons&disable-funding=venmo&currency=USD&locale=en_US" async onload="window._ppLoaded=1;document.dispatchEvent(new Event('pp:loaded'))" onerror="window._ppFailed=1;document.dispatchEvent(new Event('pp:failed'))"></script>
+    {%- endif %}
     {%- if extraHead %}
     {{ extraHead | safe }}
     {%- endif %}
