@@ -116,6 +116,7 @@ p {
             letter-spacing: 0.3px;
             transition: all 0.2s;
         }
+        .lang-flag.active { color: #fff; background: rgba(255,255,255,0.22); font-weight: 700; }
         .lang-flag:hover {
             color: #fff;
             background: rgba(255,255,255,0.12);
