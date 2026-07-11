@@ -2,5 +2,11 @@
   "name": "China Hospitals Guide",
   "url": "https://chinahospitalsguide.com",
   "tagline": "Find and prepare for hospital treatment in China — independent guidance for international patients.",
-  "gaId": "G-RVYZENK472"
+  "gaId": "G-RVYZENK472",
+  "paypalClientId": "BAAuEJ4aj4Glmel3a35W5yg1QY9idTSZt5LkxbWG-z5pvfIMEyG8E6vnCCLJNynRoAVW6XjqCCtnSKBzEY",
+  "whatsapp": "+86-157-6310-7083",
+  "paypalButtons": {
+    "match": "K4HNCDD7GDS5C",
+    "coordination": "ZBY36JV2X5A3U"
+  }
 }
