@@ -13,7 +13,10 @@
 /blog/ivf-fertility-treatment-china.html /blog/ivf-cost-china-2026.html 301
 /blog/dental-tourism-china-guide.html /blog/dental-tourism-china-2026.html 301
 /blog/plastic-surgery-china.html /blog/plastic-surgery-china-guide-2026.html 301
-/blog/lasik-eye-surgery-china-2026.html /blog/lasik-smile-surgery-china.html 301
+# LASIK page is the primary page for general LASIK queries (22K+ impressions).
+# lasik-smile-surgery-china.html is for SMILE-specific queries.
+# Do NOT redirect — these serve different keyword clusters.
+# /blog/lasik-eye-surgery-china-2026.html /blog/lasik-smile-surgery-china.html 301
 /blog/how-to-choose-best-plastic-surgeon.html /blog/plastic-surgery-china-guide-2026.html 301
 /blog/recovery-tips-after-surgery-in-china.html /contact-new.html 301
 /treatments/endoscopy.html /how-it-works.html 301
@@ -29,5 +32,23 @@
 # 2026-07-01: removed duplicate pillar page (duplicate content risk)
 /blog/china-unique-medical-procedures.html /blog/china-unique-medical-procedures-guide.html 301
 # 2026-07-06: English language path never existed — redirect to homepage
-/en  /  301
+/en /  301
 /en/ /  301
+# Draft/testing pages — redirect to homepage to avoid 404s
+/MARIA-RIOS-PIPELINE-CHECKLIST /  301
+/MARIA-RIOS-PIPELINE-CHECKLIST/ /  301
+/draft-final-round-maria-and-tangdu /  301
+/draft-final-round-maria-and-tangdu/ /  301
+/draft-inquiry-tangdu-maria-rios /  301
+/draft-inquiry-tangdu-maria-rios/ /  301
+/draft-followup-maria-sinosend-link /  301
+/draft-followup-maria-sinosend-link/ /  301
+/hospital-directory-comparison /hospitals.html  301
+/hospital-directory-comparison/ /hospitals.html  301
+/hospital-directory-premium-399 /pricing.html  301
+/hospital-directory-premium-399/ /pricing.html  301
+# Trailing slash redirects for high-traffic blog pages
+/blog/china-hospital-rankings-2026/ /blog/china-hospital-rankings-2026.html 301
+/blog/lasik-eye-surgery-china-2026/ /blog/lasik-eye-surgery-china-2026.html 301
+/blog/plastic-surgery-china-guide-2026/ /blog/plastic-surgery-china-guide-2026.html 301
+/blog/fuzhou-orthopedic-hospital-rankings-2026/ /blog/fuzhou-orthopedic-hospital-rankings-2026.html 301
