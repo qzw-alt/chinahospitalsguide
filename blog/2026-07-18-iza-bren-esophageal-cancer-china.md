@@ -1,6 +1,6 @@
 ---
 layout: blog-post.njk
-title: "China Approves Iza-bren for Esophageal Cancer: $3K-$8K Chemo Cycles vs $15K-$30K US"
+title: "China Approves Iza-bren for ESCC: $3K-$8K Chemo Benchmark, ADC Price Pending"
 description: "China approves iza-bren for advanced esophageal cancer. Phase 3 survival endpoints, access route, hospitals, and $3K-$8K chemo cost benchmark."
 kicker: "NMPA Oncology Approval"
 subtitle: "A first-in-class EGFR x HER3 bispecific ADC now has a second Chinese indication. Its own hospital price is not yet public."
@@ -17,7 +17,7 @@ schema: |
     {
       "@context": "https://schema.org",
       "@type": "Article",
-      "headline": "China Approves Iza-bren for Esophageal Cancer: $3K-$8K Chemo Cycles vs $15K-$30K US",
+      "headline": "China Approves Iza-bren for ESCC: $3K-$8K Chemo Benchmark, ADC Price Pending",
       "description": "China approves iza-bren for advanced esophageal cancer. Phase 3 survival endpoints, access route, hospitals, and $3K-$8K chemo cost benchmark.",
       "image": "https://chinahospitalsguide.com/og-image.webp",
       "author": { "@type": "Organization", "name": "China Hospitals Guide" },
