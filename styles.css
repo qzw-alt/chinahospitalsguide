@@ -315,24 +315,26 @@ p {
 
     .site-footer > div > p:first-of-type a {
         margin: 0 !important;
-        padding: 6px 10px;
+        padding: 5px 8px;
         border-radius: 999px;
         background: white;
         box-shadow: var(--shadow-sm);
+        font-size: 0.82rem;
     }
 
     .site-footer [style*='display:grid'] {
-        grid-template-columns: 1fr !important;
-        gap: 18px !important;
-        text-align: center !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 12px !important;
+        text-align: left !important;
     }
 
     .site-footer [style*='display:grid'] p {
-        line-height: 1.7 !important;
+        line-height: 1.6 !important;
+        font-size: 0.88rem !important;
     }
 
     .site-footer [style*='display:grid'] a {
-        margin: 4px 6px !important;
+        margin: 2px 4px !important;
     }
 }
         
@@ -2875,4 +2877,50 @@ disabled {
 ins.adsbygoogle {
     display: block;
     min-height: 100px;
+}
+
+/* ============================================
+   Mobile table & content overflow fixes
+   ============================================ */
+@media (max-width: 768px) {
+    /* Make tables scrollable instead of overflowing */
+    table,
+    .table-wrap {
+        display: block;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        max-width: 100%;
+    }
+    .table-wrap table {
+        display: table;
+        min-width: 100%;
+    }
+
+    /* Make pre/code blocks scrollable */
+    pre {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        white-space: pre;
+        word-wrap: normal;
+        max-width: 100%;
+    }
+
+    /* Ensure images don't overflow */
+    img {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+
+    /* Ensure iframes (maps, videos) don't overflow */
+    iframe {
+        max-width: 100% !important;
+    }
+
+    /* Fix embedded content width */
+    .article-body img,
+    .article-body iframe,
+    .article-body video {
+        max-width: 100% !important;
+        height: auto !important;
+    }
 }
