@@ -82,6 +82,7 @@
             "/en": "/",
             "/en/": "/"
         };
+        if (path==="/blog/2/"||path==="/blog/3/") { window.location.replace("/blog/"); return; }
         if (exact[path]) { window.location.replace(exact[path]); return; }
 
         // Pattern redirects
