@@ -52,3 +52,25 @@
 /blog/lasik-eye-surgery-china-2026/ /blog/lasik-eye-surgery-china-2026.html 301
 /blog/plastic-surgery-china-guide-2026/ /blog/plastic-surgery-china-guide-2026.html 301
 /blog/fuzhou-orthopedic-hospital-rankings-2026/ /blog/fuzhou-orthopedic-hospital-rankings-2026.html 301
+# Additional trailing-slash redirects for all blog posts
+/blog/china-vs-usa-medical-costs-2026/ /blog/china-vs-usa-medical-costs-2026.html 301
+/blog/ivf-cost-china-2026/ /blog/ivf-cost-china-2026.html 301
+/blog/dental-tourism-china-2026/ /blog/dental-tourism-china-2026.html 301
+/blog/stem-cell-therapy-china-2026/ /blog/stem-cell-therapy-china-2026.html 301
+/blog/car-t-therapy-china-2026/ /blog/car-t-therapy-china-2026.html 301
+/blog/best-cancer-hospitals-china-2026/ /blog/best-cancer-hospitals-china-2026.html 301
+/blog/china-medical-visa-guide-2026/ /blog/china-medical-visa-guide-2026.html 301
+/blog/heart-surgery-cost-china/ /blog/heart-surgery-cost-china.html 301
+/blog/knee-replacement-cost-china/ /blog/knee-replacement-cost-china.html 301
+/blog/hip-replacement-cost-china/ /blog/hip-replacement-cost-china.html 301
+/blog/neurosurgery-cost-china/ /blog/neurosurgery-cost-china.html 301
+# Remove trailing slashes from core pages
+/about/ /about.html 301
+/pricing/ /pricing.html 301
+/contact/ /contact-new.html 301
+/hospitals/ /hospitals.html 301
+/services/ /services.html 301
+/resources/ /resources.html 301
+/how-it-works/ /how-it-works.html 301
+# blog-articles/ redirects (if previously indexed)
+/blog-articles/ /blog/ 301
