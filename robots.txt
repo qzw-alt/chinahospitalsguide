@@ -2,12 +2,11 @@
 # https://chinahospitalsguide.com
 
 User-agent: *
-Allow: /
 
 # Sitemap
 Sitemap: https://chinahospitalsguide.com/sitemap.xml
 
-# Disallow admin/private areas (if any)
+# Disallow admin/private areas
 Disallow: /admin/
 Disallow: /private/
 Disallow: /cgi-bin/
@@ -19,6 +18,12 @@ Disallow: /api/
 Disallow: /blog-articles/
 Disallow: /blog-export/
 Disallow: /docs/
+
+# Disallow internal data and non-website directories
+Disallow: /reports/
+Disallow: /data/
+Disallow: /templates/
+Disallow: /config/
 
 # Crawl-delay (optional, be nice to servers)
 Crawl-delay: 1

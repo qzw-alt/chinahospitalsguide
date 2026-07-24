@@ -6,7 +6,12 @@ const BASE = 'https://chinahospitalsguide.com';
 // Directories to skip entirely (build artifacts, internal docs, duplicates)
 const SKIP_DIRS = new Set([
   'blog-articles', 'blog-export', 'docs', '06-Local-Ops',
-  'references', 'course', '_', 'assets',
+  'references', 'course', '_', 'assets', 'reports', 'data', 'templates',
+]);
+
+// Files to skip by name pattern (non-website files that shouldn't be in sitemap)
+const SKIP_FILES = new Set([
+  'report-carlos-mendoza',  // customer reports
 ]);
 
 function walk(dir, base = '') {
@@ -46,8 +51,17 @@ function getChangefreq(url) {
   return 'monthly';
 }
 
+function skipFile(filePath) {
+  const basename = path.basename(filePath);
+  for (const pattern of SKIP_FILES) {
+    if (basename.includes(pattern)) return true;
+  }
+  return false;
+}
+
 const pages = walk('_site')
-  .filter(p => p.path !== '/404.html' && !p.path.includes('/template-news-article.html'));
+  .filter(p => p.path !== '/404.html' && !p.path.includes('/template-news-article.html'))
+  .filter(p => !skipFile(p.path));
 
 const urls = pages.map(p => {
   let url = p.path;

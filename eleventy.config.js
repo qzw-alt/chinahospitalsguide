@@ -26,6 +26,11 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.ignores.add("blog-export/");
   eleventyConfig.ignores.add("docs/");
 
+  // Ignore non-website files that could be deployed as passthrough copies
+  eleventyConfig.ignores.add("report-carlos-mendoza-*.html");
+  eleventyConfig.ignores.add("templates/report-page.html");
+  eleventyConfig.ignores.add("references/");
+
   // HTML files without frontmatter are auto-passthrough-copied (not skipped)
   // 2026-07-10: Blog/news/stories/treatments stay as passthrough for now.
   // Core pages are converted to .njk (Eleventy outputs them as .html).

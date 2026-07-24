@@ -19,48 +19,52 @@ Thumbs.db
 2026-03-14*.md
 AGENTS.md
 BOOTSTRAP.md
+CONTENT_GUIDE.md
 ENDHTML
 ENDOFFILE
 EOF
 HEARTBEAT.md
 IDENTITY.md
+MARIA-RIOS-PIPELINE-CHECKLIST.md
 MEMORY.md
 PROJECT_INDEX.md
 PYEOF
 README.md
 RECOVERY_GUIDE.md
 RELEASE_v1.0.0.md
+REPORT-GENERATOR-SPEC.md
 SOUL.md
 TOOLS.md
 USER.md
 VERSION.md
+chg-*.md
 06-Local-Ops/
 
-# Python scripts
-auto_reply_bot.py
-fix_form.py
-regen_blog.py
-send_recovery_emails.py
-smart_recommendation.py
-test_auto_reply.py
-test_kimi.py
+# Shell/Python scripts (root-level, not in scripts/)
+/*.py
+/*.sh
+/*.bat
 
 # Markdown docs (not website files)
 automation-workflows-medical-tourism.md
 claude-skills-resources.md
-competitor-keyword-research.md
-competitor-research-report-2026.md
+competitor-*.md
 content-style-guide.md
 dademi-*.md
 dgm-research-notes.md
+draft-*.md
 email-sequences.md
 guide-sample-dental-shenzhen.md
 humanizer-demo.md
+hospital-directory-*.md
+hospital-directory-*.csv
+internal-contact-cards-*.md
 jiandaoyun-form-design.md
 mobile-optimization-report.md
 paypal_business_declaration.md
 paypal-buttons.md
 recommendation_email_template.txt
+sample-customer-report-redesign.md
 self-improving-agent-rules.md
 seo-audit-report.md
 sop-inquiry-response.md
@@ -68,6 +72,7 @@ template-*.md
 tomorrow-tasks-prep.md
 visa-l-to-s2-guide.md
 website_verification_*.md
+wechat-sales-playbook.md
 whatsapp-templates.md
 小红书_笔记素材.md
 强制自检清单.md
@@ -85,6 +90,14 @@ whatsapp-templates.md
 auto_reply_template.txt
 build.txt
 
+# Non-website HTML artifacts
+report-carlos-mendoza-*.html
+templates/report-page.html
+robots.txt.new
+sitemap.xml.new
+.cdn_refresh
+.deploy_trigger
+
 # Non-website directories
 blog-articles/
 blog-export/
@@ -101,5 +114,7 @@ memory-system/
 memory-toolkit/
 memory/
 releases/
+data/
+config/
 # Customer reports (generated)
 reports/
