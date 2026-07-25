@@ -62,7 +62,9 @@
         .refund-card h4 { color:#1e3c72;margin-bottom:8px; }
         .refund-card ul { list-style:none;padding:0;margin:0; }
         .refund-card li { padding:4px 0;font-size:.9rem;color:#4a5568; }
+        .mobile-bottom-bar{display:none;position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid #e5eaf1;z-index:1001;justify-content:space-around;padding:8px 0;box-shadow:0 -2px 10px rgba(0,0,0,.05)}.mobile-bottom-bar a{display:flex;flex-direction:column;align-items:center;text-decoration:none;color:#4b5565;font-size:.75rem;gap:3px}.mobile-bottom-bar a span{font-size:1.3rem}
         @media (max-width:768px) {
+            body{padding-bottom:calc(90px + env(safe-area-inset-bottom))!important}.mobile-bottom-bar{display:flex}
             .pkg-grid { grid-template-columns:1fr; }
             .compare-table { font-size:.78rem; }
             .compare-table thead th, .compare-table tbody td { padding:8px 10px; }
@@ -207,5 +209,6 @@
         <a href="/pricing.html">English pricing</a> | <strong>Русский</strong>
     </div>
 </main>
+<div class="mobile-bottom-bar"><a href="/index.html"><span>🏠</span>Главная</a> <a href="/services.html"><span>🩺</span>Услуги</a> <a href="/hospitals.html"><span>🏥</span>Больницы</a> <a href="/ru-contact.html"><span>✉️</span>Консультация</a></div>
 </body>
 </html>
