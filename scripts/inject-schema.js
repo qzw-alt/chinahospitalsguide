@@ -15,7 +15,7 @@ function medicalBusinessSchema() {
     "url": BASE,
     "logo": `${BASE}/og-image.webp`,
     "image": `${BASE}/og-image.webp`,
-    "description": "Independent medical travel coordination for international patients seeking hospital treatment in China. Hospital matching, cost comparison, and pre-arrival planning.",
+    "description": "Independent medical travel coordination for international patients seeking hospital treatment in China. Hospital shortlisting, cost comparison, and pre-travel planning.",
     "telephone": "+86-157-6310-7083",
     "email": "contact@chinahospitalsguide.com",
     "areaServed": {
@@ -150,14 +150,19 @@ function processDir(dir, baseDir) {
         case 'pricing':
           if (!hasOffer) {
             schemas.push(offerSchema(
-              'Hospital Match & Plan',
+              'L1 Hospital Shortlist',
               '49',
-              '3-5 hospital options matched to your case and budget, with cost range and city comparison.'
+              '2-3 hospitals matched to your case and budget, with cost comparison, transport guidance, and travel checklist.'
             ));
             schemas.push(offerSchema(
-              'Pre-Arrival Coordination',
+              'L2 Hospital Verification',
+              '149',
+              'We send your case to 2-3 hospitals in Chinese, translate their responses, and connect you directly with the best fit.'
+            ));
+            schemas.push(offerSchema(
+              'L3 Full Journey Management',
               '399',
-              'Hospital phone contact, appointment coordination, medical record preparation, and airport pickup arrangement.'
+              'Includes L2 plus medical record translation, visa invitation letter, appointment booking, airport pickup, and ongoing coordination through treatment and discharge.'
             ));
           }
           if (!hasWebPage) schemas.push(webPageSchema(pageUrl, pageTitle, pageDesc));
