@@ -1,10 +1,10 @@
 ---
 permalink: pricing.html
 layout: base.njk
-title: "China Hospital Match Pricing 2026 | $49 & $399 Packages | PayPal Secure"
-description: "Two simple packages: $49 Hospital Match &amp; Plan (personalized shortlist in 24h) or $399 Pre-Arrival Coordination (appointment booking, visa letter, airport pickup). No hidden fees, 7-day refund policy. Secure PayPal checkout."
+title: "China Hospital Pricing 2026 | $49 Shortlist · $149 Verification · $399 Full Journey"
+description: "Three tiers: $49 Hospital Shortlist (get matched), $149 Hospital Verification (we contact 2-3 hospitals for you), $399 Full Journey Management (end-to-end). No hidden fees. PayPal secure."
 canonical: "https://chinahospitalsguide.com/pricing.html"
-ogDescription: "Simple package pricing, PayPal checkout, refund terms, and clear post-payment next steps."
+ogDescription: "$49 Hospital Shortlist · $149 Hospital Verification · $399 Full Journey Management. We contact hospitals on your behalf. Any tier upgrades — only pay the difference."
 pagePaypal: true
 pageStyle: |
   .pricing-hero {
@@ -21,6 +21,22 @@ pageStyle: |
           .pricing-hero h1 {
               color: white;
           }
+          .why-this-exists {
+              max-width: 800px;
+              margin: 0 auto 48px;
+              padding: 40px 36px;
+              background: #fff;
+              border-radius: 22px;
+              border: 1px solid rgba(30,60,114,0.08);
+              box-shadow: 0 12px 30px rgba(15,23,42,0.07);
+              font-size: 1.05rem;
+              line-height: 1.85;
+              color: #3a4556;
+          }
+          .why-this-exists p { margin-bottom: 14px; }
+          .why-this-exists p:last-child { margin-bottom: 0; }
+          .why-this-exists .highlight { color: var(--primary); font-weight: 600; }
+          .why-this-exists .tagline { font-weight: 700; font-size: 1.1rem; color: #1e3c72; margin-bottom: 20px; }
           .pricing-shell,
           .pricing-band {
               max-width: 1120px;
@@ -31,8 +47,14 @@ pageStyle: |
           .steps-grid,
           .compare-grid {
               display: grid;
-              grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
               gap: 24px;
+          }
+          .pricing-grid-local {
+              grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+          }
+          .steps-grid,
+          .compare-grid {
+              grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
           }
           .pricing-card-local,
           .step-card,
@@ -44,16 +66,16 @@ pageStyle: |
               box-shadow: 0 12px 30px rgba(15, 23, 42, 0.07);
           }
           .pricing-card-local.featured {
-              border: 2px solid var(--primary);
+              border: 2px solid var(--accent, #b78a42);
               position: relative;
           }
           .pricing-card-local.featured::before {
-              content: 'MOST POPULAR';
+              content: 'BEST VALUE';
               position: absolute;
               top: -12px;
               left: 50%;
               transform: translateX(-50%);
-              background: var(--accent);
+              background: #b78a42;
               color: white;
               padding: 5px 20px;
               border-radius: 20px;
@@ -88,6 +110,30 @@ pageStyle: |
           .compare-card li:last-child {
               border-bottom: 0;
           }
+          .not-included {
+              margin-top: 16px;
+              padding: 14px 16px;
+              background: #fafafa;
+              border-radius: 10px;
+              font-size: 0.88rem;
+              color: #999;
+          }
+          .not-included strong { display: block; margin-bottom: 6px; color: #888; font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.5px; }
+          .not-included p { margin: 0; color: #aaa; }
+          .upgrade-note {
+              margin-top: 16px;
+              padding: 12px 16px;
+              background: #fef9f0;
+              border: 1px solid #e8d5a8;
+              border-radius: 10px;
+              font-size: 0.9rem;
+              color: #8b6914;
+          }
+          .delivery-label {
+              font-size: 0.88rem;
+              color: #888;
+              margin-top: 10px;
+          }
           .payment-note {
               margin-top: 14px;
               font-size: 0.92rem;
@@ -108,6 +154,37 @@ pageStyle: |
               text-align: center;
               color: #5f6b7b;
           }
+          .comparison-table-wrap {
+              overflow-x: auto;
+              margin-top: 24px;
+          }
+          .comparison-table {
+              width: 100%;
+              border-collapse: collapse;
+              background: white;
+              border-radius: 18px;
+              overflow: hidden;
+              box-shadow: 0 8px 24px rgba(15,23,42,0.06);
+          }
+          .comparison-table thead th {
+              background: #1e3c72;
+              color: white;
+              padding: 16px 18px;
+              text-align: left;
+              font-weight: 600;
+              font-size: 0.95rem;
+          }
+          .comparison-table thead th:first-child { border-radius: 18px 0 0 0; }
+          .comparison-table thead th:last-child { border-radius: 0 18px 0 0; }
+          .comparison-table tbody td {
+              padding: 14px 18px;
+              border-bottom: 1px solid #edf1f7;
+              font-size: 0.93rem;
+              color: #4a5568;
+          }
+          .comparison-table tbody tr:last-child td { border-bottom: none; }
+          .comparison-table .check { color: #22c55e; font-weight: 700; }
+          .comparison-table .cross { color: #cbd5e0; }
           .after-pay-box {
               margin-top: 34px;
               padding: 28px;
@@ -124,6 +201,19 @@ pageStyle: |
               gap: 16px;
               margin-top: 20px;
           }
+          .guidance-box {
+              max-width: 760px;
+              margin: 48px auto 0;
+              padding: 36px;
+              background: white;
+              border-radius: 22px;
+              border: 1px solid rgba(30,60,114,0.08);
+              box-shadow: 0 8px 24px rgba(15,23,42,0.05);
+              text-align: center;
+          }
+          .guidance-box h3 { color: var(--primary); margin-bottom: 16px; }
+          .guidance-box p { color: #4a5568; margin-bottom: 10px; }
+          .guidance-box .cta-button { margin-top: 10px; }
           .collapse-toggle {
               width: 100%;
               background: none;
@@ -161,6 +251,10 @@ pageStyle: |
               from { opacity: 0; transform: translateY(-8px); }
               to { opacity: 1; transform: translateY(0); }
           }
+          @media (max-width: 900px) {
+              .comparison-table thead th,
+              .comparison-table tbody td { padding: 10px 12px; font-size: 0.82rem; }
+          }
           @media (max-width: 768px) {
               .pricing-hero {
                   padding: 130px 20px 64px;
@@ -178,7 +272,9 @@ pageStyle: |
               .pricing-card-local,
               .step-card,
               .compare-card,
-              .after-pay-box {
+              .after-pay-box,
+              .why-this-exists,
+              .guidance-box {
                   padding: 24px;
                   border-radius: 18px;
               }
@@ -193,37 +289,48 @@ pageStyle: |
                   width: 100%;
                   text-align: center;
               }
+              .comparison-table-wrap { margin-left: -16px; margin-right: -16px; }
           }
 schema: |
   {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "headline": "China Hospital Match Pricing 2026 — $49 & $399 Packages",
-  "description": "Two simple packages: $49 Hospital Match & Plan or $399 Pre-Arrival Coordination. No hidden fees, 7-day refund. Secure PayPal checkout.",
+  "headline": "China Hospital Pricing 2026 — $49 Shortlist · $149 Verification · $399 Full Journey",
+  "description": "Three tiers: $49 Hospital Shortlist, $149 Hospital Verification (we contact 2-3 hospitals for you), $399 Full Journey Management. Upgrade anytime — only pay the difference.",
   "author": { "@type": "Organization", "name": "China Hospitals Guide" },
   "publisher": {
   "@type": "Organization",
   "name": "China Hospitals Guide",
   "logo": { "@type": "ImageObject", "url": "https://chinahospitalsguide.com/og-image.webp" }
   },
-  "dateModified": "2026-07-23",
+  "dateModified": "2026-07-25",
   "url": "https://chinahospitalsguide.com/pricing.html"
   }
   {
   "@context": "https://schema.org",
   "@type": "Offer",
-  "name": "Hospital Match & Plan",
+  "name": "Hospital Shortlist",
   "price": "49",
   "priceCurrency": "USD",
-  "description": "2–3 hospitals matched to your case and budget within 24 hours. Includes transport guidance, cost comparison, and clinic shortlist.",
+  "description": "2-3 hospitals matched to your case and budget. Includes cost comparison and travel checklist. No hospital contact — information only. Upgrade credit toward L2 or L3.",
+  "url": "https://chinahospitalsguide.com/pricing.html",
+  "seller": { "@type": "Organization", "name": "China Hospitals Guide", "url": "https://chinahospitalsguide.com" }
+  }
+  {
+  "@context": "https://schema.org",
+  "@type": "Offer",
+  "name": "Hospital Verification",
+  "price": "149",
+  "priceCurrency": "USD",
+  "description": "We send your case to 2-3 hospitals in Chinese, translate their responses, and connect you directly. Upgrade credit toward L3 within 30 days.",
   "url": "https://chinahospitalsguide.com/pricing.html",
   "seller": { "@type": "Organization", "name": "China Hospitals Guide", "url": "https://chinahospitalsguide.com" }
   }
   {
           "@context": "https://schema.org",
           "@type": "Article",
-          "headline": "China Hospital Match Pricing 2026",
-          "description": "$49 Hospital Match & Plan or $399 Pre-Arrival Coordination. PayPal secure checkout, 7-day refund. Full pricing guide for China Hospitals Guide 2026.",
+          "headline": "China Hospital Pricing 2026",
+          "description": "$49 Hospital Shortlist, $149 Hospital Verification, or $399 Full Journey Management. PayPal secure. Upgrade anytime — only pay the difference.",
           "image": "https://chinahospitalsguide.com/og-image.webp",
           "author": { "@type": "Organization", "name": "China Hospitals Guide" },
           "publisher": {
@@ -243,173 +350,292 @@ schema: |
       }
 ---
 <section class="pricing-hero">
-        <h1>Simple pricing &mdash; pay for what you need before you travel</h1>
-        <p>Two packages. Both focus on getting you to the right hospital door. No hidden fees, no surprise charges.</p>
-    </section>
+    <h1>Three steps to the right hospital &mdash; pick where you are</h1>
+    <p>Shortlist. Verify. Go. Every tier upgrades &mdash; you only ever pay the difference.</p>
+</section>
 
-    <main class="pricing-shell">
-        <h2 class="section-title">Choose the support that fits your case</h2>
-        <p class="section-copy">Not sure which one fits? Start with a free case review and we will recommend the right path.</p>
-        <div class="pricing-grid-local">
-            <div class="pricing-card-local">
-                <h3>Hospital Match &amp; Plan</h3>
-                <p>For patients still researching — get 2-3 personalized hospital recommendations, clear transport guidance, and cost expectations so you can plan with confidence.</p>
-                <div class="pricing-price">$49</div>
-                <ul>
-                    <li>2-3 hospitals matched to your case and budget</li>
-                    <li>Cost comparison across cities</li>
-                    <li>Transport guidance — airport to hospital route, time and cost</li>
-                    <li>Travel preparation checklist</li>
-                    <li>Best if you want to manage follow-through yourself</li>
-                </ul>
-                <div id="paypal-container-K4HNCDD7GDS5C" style="margin-top:24px;"></div>
-                <script>
-                (function renderPP49() {
-                    if (window._ppLoaded) {
-                        paypal.HostedButtons({hostedButtonId:"K4HNCDD7GDS5C"}).render("#paypal-container-K4HNCDD7GDS5C");
-                    } else if (window._ppFailed) {
-                        document.getElementById('paypal-container-K4HNCDD7GDS5C').innerHTML =
-                            '<a href="https://www.paypal.com/ncp/payment/K4HNCDD7GDS5C" target="_blank" rel="noopener" style="display:inline-block;background:#0070ba;color:#fff;padding:12px 28px;border-radius:8px;text-decoration:none;font-weight:700;font-size:0.95em;">Pay $49 with PayPal →</a>';
-                    } else {
-                        document.addEventListener('pp:loaded', renderPP49, {once:true});
-                        document.addEventListener('pp:failed', renderPP49, {once:true});
-                        setTimeout(function(){ if(!window._ppLoaded&&!window._ppFailed){window._ppFailed=1;renderPP49();} }, 10000);
-                    }
-                })();
-                </script>
-                <p class="payment-note">After payment: <a href="thank-you.html" style="color:#dc143c;font-weight:700;">Go to next steps →</a></p>
+<main class="pricing-shell">
+
+    <!-- Why This Exists -->
+    <div class="why-this-exists">
+        <p class="tagline">Why this exists</p>
+        <p>You've tried calling hospitals in China. <span class="highlight">They didn't answer.</span></p>
+        <p>You've searched "best hospital in China for my condition" and got nothing you can act on.</p>
+        <p>You've asked around &mdash; nobody you know has done this before.</p>
+        <p>We're not a directory. We're a <span class="highlight">Chinese speaker with a phone</span>, and we know which department picks up and which one doesn't. We are the person you wish you had.</p>
+        <p><span class="highlight">$49</span> &mdash; get a shortlist of hospitals matched to your case.<br>
+        <span class="highlight">$149</span> &mdash; we send your case to 2&ndash;3 hospitals, translate what they say, and connect you.<br>
+        <span class="highlight">$399</span> &mdash; we run the entire journey, from matching to discharge.</p>
+        <p>Start at any tier. Upgrade anytime &mdash; you only pay the difference.</p>
+    </div>
+
+    <!-- Three Pricing Cards -->
+    <h2 class="section-title">Pick where you are</h2>
+    <p class="section-copy">Not sure? We'll tell you honestly which one fits &mdash; we won't push you higher.</p>
+    <div class="pricing-grid-local">
+
+        <!-- L1: $49 -->
+        <div class="pricing-card-local">
+            <h3>L1 &mdash; Hospital Shortlist</h3>
+            <p><strong>"Which hospitals should I be looking at?"</strong></p>
+            <p>For patients still exploring. Get a clear shortlist matched to your condition and budget &mdash; information only, no hospital contact.</p>
+            <div class="pricing-price">$49</div>
+            <ul>
+                <li>2&ndash;3 hospitals matched to your case and budget</li>
+                <li>Cost comparison across cities</li>
+                <li>Transport guidance &mdash; airport to hospital</li>
+                <li>Travel preparation checklist</li>
+            </ul>
+            <div class="not-included">
+                <strong>What's not included</strong>
+                <p>We don't contact hospitals. No personalized medical advice. This is a research report &mdash; the information you need to plan your next step.</p>
             </div>
+            <div class="upgrade-note">
+                <strong>&#128161; Upgrade anytime:</strong> your $49 is credited toward L2 (+$100) or L3 (+$350).
+            </div>
+            <p class="delivery-label">&#9201; Delivered immediately</p>
+            <div id="paypal-container-K4HNCDD7GDS5C" style="margin-top:24px;"></div>
+            <script>
+            (function renderPP49() {
+                if (window._ppLoaded) {
+                    paypal.HostedButtons({hostedButtonId:"K4HNCDD7GDS5C"}).render("#paypal-container-K4HNCDD7GDS5C");
+                } else if (window._ppFailed) {
+                    document.getElementById('paypal-container-K4HNCDD7GDS5C').innerHTML =
+                        '<a href="https://www.paypal.com/ncp/payment/K4HNCDD7GDS5C" target="_blank" rel="noopener" style="display:inline-block;background:#0070ba;color:#fff;padding:12px 28px;border-radius:8px;text-decoration:none;font-weight:700;font-size:0.95em;">Pay $49 with PayPal &#8594;</a>';
+                } else {
+                    document.addEventListener('pp:loaded', renderPP49, {once:true});
+                    document.addEventListener('pp:failed', renderPP49, {once:true});
+                    setTimeout(function(){ if(!window._ppLoaded&&!window._ppFailed){window._ppFailed=1;renderPP49();} }, 10000);
+                }
+            })();
+            </script>
+            <p class="payment-note">After payment: <a href="thank-you.html" style="color:#dc143c;font-weight:700;">Go to next steps &#8594;</a></p>
+        </div>
 
-            <div class="pricing-card-local featured">
-                <h3>Pre-Arrival Coordination</h3>
-                <p>For patients ready to move — we handle everything from matching you to the right hospital, to arranging your treatment, discharge, and follow-up. One flat fee, full coverage.</p>
-                <div class="pricing-price">$399</div>
-                <ul>
-                    <li>Personalized case review — 2-3 hospitals matched to your condition</li>
-                    <li>Hospital contact — we send your records, follow up, compare quotes</li>
-                    <li>Translation support — medical record preparation and clarification
- </li>
-                    <li>Pre-arrival planning — visa guidance, appointment booking, accommodation tips, airport pickup arrangement</li>
-                    <li>Treatment period — hospital communication and emergency coordination</li>
-                    <li>Discharge support — medical summary, medication instructions, follow-up handover
- </li>
-                    <li>All-inclusive — no hidden fees, no per-item charges for coordination</li>
-                </ul>
-                <div id="paypal-container-ZBY36JV2X5A3U" style="margin-top:24px;"></div>
-                <script>
-                (function renderPP399() {
-                    if (window._ppLoaded) {
-                        paypal.HostedButtons({hostedButtonId:"ZBY36JV2X5A3U"}).render("#paypal-container-ZBY36JV2X5A3U");
-                    } else if (window._ppFailed) {
-                        document.getElementById('paypal-container-ZBY36JV2X5A3U').innerHTML =
-                            '<a href="https://www.paypal.com/ncp/payment/ZBY36JV2X5A3U" target="_blank" rel="noopener" style="display:inline-block;background:#0070ba;color:#fff;padding:12px 28px;border-radius:8px;text-decoration:none;font-weight:700;font-size:0.95em;">Pay $399 with PayPal →</a>';
-                    } else {
-                        document.addEventListener('pp:loaded', renderPP399, {once:true});
-                        document.addEventListener('pp:failed', renderPP399, {once:true});
-                        setTimeout(function(){ if(!window._ppLoaded&&!window._ppFailed){window._ppFailed=1;renderPP399();} }, 10000);
-                    }
-                })();
-                </script>
-                <p class="payment-note">After payment: <a href="thank-you.html" style="color:#dc143c;font-weight:700;">Go to next steps →</a></p>
+        <!-- L2: $149 -->
+        <div class="pricing-card-local featured">
+            <h3>L2 &mdash; Hospital Verification</h3>
+            <p><strong>"Will these hospitals actually accept my case?"</strong></p>
+            <p>For patients with a specific condition. We send your case to 2&ndash;3 hospitals, translate their responses, and connect you with the best fit.</p>
+            <div class="pricing-price">$149</div>
+            <ul>
+                <li>We send your case summary in Chinese to <strong>2&ndash;3 hospitals</strong> &mdash; the right departments for your condition</li>
+                <li>We translate each hospital's response into English</li>
+                <li><strong>We connect you directly</strong> with the best-fit hospital &mdash; once you're in touch, our work is done</li>
+                <li>Delivered in 4&ndash;7 business days</li>
+            </ul>
+            <div class="upgrade-note">
+                <strong>&#128161; Upgrade anytime within 30 days:</strong> your $149 is fully credited toward L3 (+$250). Coming from L1? Only pay +$100 more.
+            </div>
+            <p class="delivery-label">&#9201; Delivered in 4&ndash;7 business days</p>
+            <div id="paypal-container-WGZ9FPKYZ6X3Y" style="margin-top:24px;"></div>
+            <script>
+            (function renderPP149() {
+                if (window._ppLoaded) {
+                    paypal.HostedButtons({hostedButtonId:"WGZ9FPKYZ6X3Y"}).render("#paypal-container-WGZ9FPKYZ6X3Y");
+                } else if (window._ppFailed) {
+                    document.getElementById('paypal-container-WGZ9FPKYZ6X3Y').innerHTML =
+                        '<a href="https://www.paypal.com/ncp/payment/WGZ9FPKYZ6X3Y" target="_blank" rel="noopener" style="display:inline-block;background:#0070ba;color:#fff;padding:12px 28px;border-radius:8px;text-decoration:none;font-weight:700;font-size:0.95em;">Pay $149 with PayPal &#8594;</a>';
+                } else {
+                    document.addEventListener('pp:loaded', renderPP149, {once:true});
+                    document.addEventListener('pp:failed', renderPP149, {once:true});
+                    setTimeout(function(){ if(!window._ppLoaded&&!window._ppFailed){window._ppFailed=1;renderPP149();} }, 10000);
+                }
+            })();
+            </script>
+            <p class="payment-note">After payment: <a href="thank-you.html" style="color:#dc143c;font-weight:700;">Go to next steps &#8594;</a></p>
+        </div>
+
+        <!-- L3: $399 -->
+        <div class="pricing-card-local">
+            <h3>L3 &mdash; Full Journey Management</h3>
+            <p><strong>"I'm ready to go. Handle everything."</strong></p>
+            <p>For patients ready to travel. We manage the entire journey &mdash; from hospital matching to discharge and follow-up.</p>
+            <div class="pricing-price">$399</div>
+            <ul>
+                <li><strong>Includes everything in L2</strong> &mdash; hospital verification + direct connection</li>
+                <li>Medical record translation and preparation</li>
+                <li>Visa invitation letter</li>
+                <li>Appointment booking + airport pickup arrangement</li>
+                <li>Ongoing communication and coordination during treatment</li>
+                <li>Discharge summary + follow-up handover</li>
+                <li>All-inclusive &mdash; no hidden fees</li>
+            </ul>
+            <div class="upgrade-note">
+                <strong>&#128161; Coming from L2?</strong> Pay only +$250. <strong>Coming from L1?</strong> Pay only +$350.
+            </div>
+            <div id="paypal-container-ZBY36JV2X5A3U" style="margin-top:24px;"></div>
+            <script>
+            (function renderPP399() {
+                if (window._ppLoaded) {
+                    paypal.HostedButtons({hostedButtonId:"ZBY36JV2X5A3U"}).render("#paypal-container-ZBY36JV2X5A3U");
+                } else if (window._ppFailed) {
+                    document.getElementById('paypal-container-ZBY36JV2X5A3U').innerHTML =
+                        '<a href="https://www.paypal.com/ncp/payment/ZBY36JV2X5A3U" target="_blank" rel="noopener" style="display:inline-block;background:#0070ba;color:#fff;padding:12px 28px;border-radius:8px;text-decoration:none;font-weight:700;font-size:0.95em;">Pay $399 with PayPal &#8594;</a>';
+                } else {
+                    document.addEventListener('pp:loaded', renderPP399, {once:true});
+                    document.addEventListener('pp:failed', renderPP399, {once:true});
+                    setTimeout(function(){ if(!window._ppLoaded&&!window._ppFailed){window._ppFailed=1;renderPP399();} }, 10000);
+                }
+            })();
+            </script>
+            <p class="payment-note">After payment: <a href="thank-you.html" style="color:#dc143c;font-weight:700;">Go to next steps &#8594;</a></p>
+        </div>
+
+    </div>
+
+    <!-- Comparison Table -->
+    <div class="comparison-table-wrap">
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>L1 &mdash; $49<br>Hospital Shortlist</th>
+                    <th>L2 &mdash; $149<br>Hospital Verification</th>
+                    <th>L3 &mdash; $399<br>Full Journey</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>What you get</strong></td>
+                    <td>2&ndash;3 hospital names + cost data</td>
+                    <td>Real responses from 2&ndash;3 hospitals + direct connection</td>
+                    <td>Everything in L2 + end-to-end journey management</td>
+                </tr>
+                <tr>
+                    <td><strong>Hospital contact</strong></td>
+                    <td><span class="cross">&#10005;</span> None</td>
+                    <td><span class="check">&#10003;</span> 2&ndash;3 hospitals contacted</td>
+                    <td><span class="check">&#10003;</span> 2&ndash;3 hospitals + MDT</td>
+                </tr>
+                <tr>
+                    <td><strong>Personalized to your case</strong></td>
+                    <td><span class="cross">&#10005;</span></td>
+                    <td><span class="check">&#10003;</span> Your case sent to hospitals</td>
+                    <td><span class="check">&#10003;</span> Full case preparation</td>
+                </tr>
+                <tr>
+                    <td><strong>Translation</strong></td>
+                    <td><span class="cross">&#10005;</span></td>
+                    <td>Hospital replies to English</td>
+                    <td><span class="check">&#10003;</span> All medical records + replies</td>
+                </tr>
+                <tr>
+                    <td><strong>Response SLA</strong></td>
+                    <td>Immediate</td>
+                    <td>4&ndash;7 business days</td>
+                    <td>4 hours on business days</td>
+                </tr>
+                <tr>
+                    <td><strong>Direct hospital connection</strong></td>
+                    <td><span class="cross">&#10005;</span></td>
+                    <td><span class="check">&#10003;</span> Best-fit hospital intro</td>
+                    <td><span class="check">&#10003;</span> Fully managed introductions</td>
+                </tr>
+                <tr>
+                    <td><strong>Visa support</strong></td>
+                    <td><span class="cross">&#10005;</span></td>
+                    <td><span class="cross">&#10005;</span></td>
+                    <td><span class="check">&#10003;</span> Invitation letter</td>
+                </tr>
+                <tr>
+                    <td><strong>Arrival support</strong></td>
+                    <td><span class="cross">&#10005;</span></td>
+                    <td><span class="cross">&#10005;</span></td>
+                    <td><span class="check">&#10003;</span> Airport pickup + logistics</td>
+                </tr>
+                <tr>
+                    <td><strong>Upgrade policy</strong></td>
+                    <td>Credited toward L2 or L3</td>
+                    <td>$149 credited toward L3</td>
+                    <td>&mdash;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Not sure which to pick? -->
+    <div class="guidance-box">
+        <h3>Not sure where to start?</h3>
+        <p><strong>Start with $49</strong> if you're still researching &mdash; get a shortlist, zero commitment. Upgrade later and your $49 counts.</p>
+        <p><strong>Start with $149</strong> if you have a specific condition &mdash; find out if Chinese hospitals will actually accept your case.</p>
+        <p><strong>Start with $399</strong> if you're ready to travel &mdash; we handle everything from match to discharge.</p>
+        <p style="margin-top:16px;color:#888;">Unsure? Message us. We'll tell you honestly which tier fits your situation &mdash; no upselling.</p>
+        <a href="contact-new.html" class="cta-button">Message Us &#8594;</a>
+    </div>
+
+</main>
+
+<!-- What happens after payment -->
+<section class="pricing-shell">
+    <div class="pricing-band">
+        <h2 class="section-title">What happens after payment</h2>
+        <p class="section-copy">After payment, we guide you into the next step so your case moves forward without guesswork.</p>
+        <div class="steps-grid">
+            <div class="step-card">
+                <h3>1. Confirmation</h3>
+                <p>Once payment is complete, we confirm your package and guide you into case intake &mdash; what we need to get started.</p>
+            </div>
+            <div class="step-card">
+                <h3>2. Case materials</h3>
+                <p>You send the information we need: medical reports, treatment history, your timeline, and what matters most to you.</p>
+            </div>
+            <div class="step-card">
+                <h3>3. Service begins</h3>
+                <p>We begin the work included in your package &mdash; whether that's research, hospital verification, or full journey management.</p>
             </div>
         </div>
-    </main>
-
-    <section class="pricing-shell">
-        <div class="pricing-band">
-            <h2 class="section-title">What happens after payment</h2>
-            <p class="section-copy">After payment, we guide you into the next step so your case can move forward clearly and without guesswork.</p>
-            <div class="steps-grid">
-                <div class="step-card">
-                    <h3>1. Confirmation</h3>
-                    <p>Once payment is complete, we confirm your package and guide you into case intake.</p>
-                </div>
-                <div class="step-card">
-                    <h3>2. Case materials</h3>
-                    <p>You send the information we need, such as medical reports, treatment history, and timing.</p>
-                </div>
-                <div class="step-card">
-                    <h3>3. Service begins</h3>
-                    <p>We begin the research or coordination work included in the package you purchased.</p>
-                </div>
-            </div>
-            <div class="after-pay-box">
-                <h3>⚡ Just Completed Payment?</h3>
-                <p><strong>DO NOT WAIT for us to contact you.</strong> Go straight to the next steps page — we'll guide you through submitting your case details so work can begin immediately.</p>
-                <div class="next-actions">
-                    <a href="thank-you.html" class="cta-button" style="background:#dc143c;font-weight:700;font-size:1.05em;">Go to Next Steps →</a>
-                    <a href="contact-new.html?paid=1&source=pricing" class="cta-button">Or Open Intake Form</a>
-                </div>
+        <div class="after-pay-box">
+            <h3>&#9889; Just Completed Payment?</h3>
+            <p><strong>Go straight to the next steps page</strong> &mdash; we'll guide you through submitting your case details so work begins immediately.</p>
+            <div class="next-actions">
+                <a href="thank-you.html" class="cta-button" style="background:#dc143c;font-weight:700;font-size:1.05em;">Go to Next Steps &#8594;</a>
+                <a href="contact-new.html?paid=1&source=pricing" class="cta-button">Or Open Intake Form</a>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section class="pricing-shell collapse-section">
+<!-- Refund Terms -->
+<section class="pricing-shell collapse-section">
+    <div class="pricing-band">
         <button class="collapse-toggle" aria-expanded="false">
-            <h2 class="section-title">How to decide between the two packages</h2>
+            <h2 class="section-title">Refund terms</h2>
             <span class="collapse-icon">&#9660;</span>
         </button>
         <div class="collapse-content">
+            <p class="section-copy">Clear refund language so you know exactly where you stand.</p>
             <div class="compare-grid">
                 <div class="compare-card">
-                    <h3>Choose Hospital Match &amp; Plan if</h3>
+                    <h3>L1 &mdash; $49 Hospital Shortlist</h3>
                     <ul>
-                        <li>You are still researching hospitals or cities</li>
-                        <li>You want 2-3 targeted recommendations with transport guidance</li>
-                        <li>You are comfortable doing more follow-through yourself</li>
+                        <li>Non-refundable once the shortlist is delivered</li>
+                        <li>Designed as a low-risk entry point &mdash; and your $49 is always credited if you upgrade</li>
                     </ul>
                 </div>
                 <div class="compare-card">
-                    <h3>Choose Pre-Arrival Coordination if</h3>
+                    <h3>L2 &mdash; $149 Hospital Verification</h3>
                     <ul>
-                        <li>You are ready to move from planning into action</li>
-                        <li>You want full coordination — from matching and hospital contact to discharge and follow-up</li>
-                        <li>You prefer a single flat fee with no per-item surprises</li>
+                        <li>Full refund if cancelled before we contact hospitals</li>
+                        <li>Non-refundable once hospitals have been contacted &mdash; our labor has been performed</li>
+                        <li>If no hospital responds, we'll offer to contact alternatives or issue a full refund</li>
                     </ul>
                 </div>
                 <div class="compare-card">
-                    <h3>Use free case review first if</h3>
+                    <h3>L3 &mdash; $399 Full Journey Management</h3>
                     <ul>
-                        <li>You are not sure whether China is the right option yet</li>
-                        <li>You want help selecting the right package</li>
-                        <li>You need a human answer before paying</li>
+                        <li>$369 refund if cancelled 72+ hours before service start</li>
+                        <li>The first $30 remains non-refundable as information processing work</li>
+                    </ul>
+                </div>
+                <div class="compare-card">
+                    <h3>Special situations</h3>
+                    <ul>
+                        <li>Medical or travel emergencies reviewed case by case</li>
+                        <li>Contact us directly to explain urgent circumstances</li>
                     </ul>
                 </div>
             </div>
         </div>
-    </section>
-
-    <section class="pricing-shell collapse-section">
-        <div class="pricing-band">
-            <button class="collapse-toggle" aria-expanded="false">
-                <h2 class="section-title">Refund terms</h2>
-                <span class="collapse-icon">&#9660;</span>
-            </button>
-            <div class="collapse-content">
-                <p class="section-copy">Visible refund language reduces hesitation and makes payment feel safer.</p>
-                <div class="compare-grid">
-                    <div class="compare-card">
-                        <h3>Hospital Match &amp; Plan</h3>
-                        <ul>
-                            <li>Non-refundable once delivery work begins</li>
-                            <li>Designed as a low-risk entry package</li>
-                        </ul>
-                    </div>
-                    <div class="compare-card">
-                        <h3>Pre-Arrival Coordination</h3>
-                        <ul>
-                            <li>$369 refund if cancelled 72+ hours before service start</li>
-                            <li>The first $30 remains non-refundable as information work</li>
-                        </ul>
-                    </div>
-                    <div class="compare-card">
-                        <h3>Special situations</h3>
-                        <ul>
-                            <li>Medical or travel exceptions can be reviewed case by case</li>
-                            <li>Use contact to explain urgent circumstances directly</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    </div>
+</section>
