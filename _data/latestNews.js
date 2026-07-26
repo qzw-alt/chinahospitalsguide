@@ -3,6 +3,8 @@ const path = require('path');
 
 module.exports = function() {
   const newsDir = path.join(__dirname, '..', 'news');
+  if (!fs.existsSync(newsDir)) return [];
+
   const files = fs.readdirSync(newsDir)
     .filter(f => /^\d{4}-\d{2}-\d{2}-.+\.html$/.test(f))
     .map(f => {
