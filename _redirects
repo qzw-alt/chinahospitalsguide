@@ -66,3 +66,51 @@
 # blog-articles/ redirects (if previously indexed)
 /blog-articles/ /blog/ 301
 # Removed stale course, news, and treatments redirects
+# Additional trailing-slash redirects for blog posts with traffic
+/blog/china-orthopedic-hospital-rankings-2026/ /blog/china-orthopedic-hospital-rankings-2026.html 301
+/blog/hair-transplant-china-2026/ /blog/hair-transplant-china-2026.html 301
+/blog/best-cancer-hospitals-china-2026/ /blog/best-cancer-hospitals-china-2026.html 301
+/blog/hospitals-in-chengdu-for-international-patients/ /blog/hospitals-in-chengdu-for-international-patients.html 301
+/blog/hospitals-in-guangzhou-for-international-patients/ /blog/hospitals-in-guangzhou-for-international-patients.html 301
+/blog/hospitals-in-beijing-for-international-patients/ /blog/hospitals-in-beijing-for-international-patients.html 301
+/blog/hospitals-in-shanghai-for-international-patients/ /blog/hospitals-in-shanghai-for-international-patients.html 301
+/blog/hospitals-in-xian-for-international-patients/ /blog/hospitals-in-xian-for-international-patients.html 301
+/blog/solid-tumor-car-t-china/ /blog/solid-tumor-car-t-china.html 301
+/blog/hainan-tcm-wellness-tourism-2026/ /blog/hainan-tcm-wellness-tourism-2026.html 301
+/blog/how-to-see-a-doctor-in-guangzhou-as-a-foreigner/ /blog/how-to-see-a-doctor-in-guangzhou-as-a-foreigner.html 301
+/blog/rhinoplasty-china-2026/ /blog/rhinoplasty-china-2026.html 301
+/blog/guangzhou-medical-tourism-guide/ /blog/guangzhou-medical-tourism-guide.html 301
+/blog/cancer-treatment-cost-china/ /blog/cancer-treatment-cost-china.html 301
+/blog/baduanjin-eight-brocade-complete-guide/ /blog/baduanjin-eight-brocade-complete-guide.html 301
+/news/2026-04-17-revolution-medicines-pancreatic-cancer/ /news/2026-04-17-revolution-medicines-pancreatic-cancer-daraxonrasib-china-compare.html 301
+/news/2026-04-26-china-24-hour-spa-viral-wellness/ /news/2026-04-26-china-24-hour-spa-viral-wellness.html 301
+/news/2026-06-30-china-order-818/ /news/2026-06-30-china-order-818-advanced-therapeutic-clinical-translation-cell-gene-therapy-regulation.html 301
+/news/2026-06-28-tangdu-hospital-3d-printed-peek/ /news/2026-06-28-tangdu-hospital-3d-printed-peek-extravascular-stent-nutcracker-syndrome.html 301
+/news/stem-cell-therapy-china-2026-guide/ /news/stem-cell-therapy-china-2026-guide.html 301
+/blog/bone-marrow-transplant-china/ /blog/bone-marrow-transplant-china.html 301
+/blog/proton-therapy-china-2026/ /blog/proton-therapy-china-2026.html 301
+/blog/neurosurgery-brain-tumor-china-2026/ /blog/neurosurgery-brain-tumor-china-2026.html 301
+/blog/integrated-chinese-western-medicine-china/ /blog/integrated-chinese-western-medicine-china.html 301
+/blog/china-vs-usa-medical-costs-2026/ /blog/china-vs-usa-medical-costs-2026.html 301
+# Hospital directory pages redirect to pricing
+/hospital-directory-basic-49/ /pricing.html 301
+/hospital-directory-basic-49 /pricing.html 301
+# Draft pages that still show in GSC
+/draft-final-round-maria-and-tangdu/ / 301
+/draft-final-round-maria-and-tangdu / 301
+/draft-inquiry-tangdu-maria-rios/ / 301
+/draft-inquiry-tangdu-maria-rios / 301
+/draft-followup-maria-sinosend-link/ / 301
+/draft-followup-maria-sinosend-link / 301
+# Panel page
+/panel.html / 301
+# checklist
+/MARIA-RIOS-PIPELINE-CHECKLIST / 301
+# Stories trailing slashes
+/stories /stories.html 301
+/stories/ /stories.html 301
+# Blog listing pages
+/blog/2/ /blog/ 301
+/blog/3/ /blog/ 301
+# Treatment pages trailing slash
+/treatments/ /treatments/index.html 301
