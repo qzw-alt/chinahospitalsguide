@@ -30,8 +30,6 @@
       ctaType = 'hospital_detail';
     } else if (classes.includes('lead-magnet-btn') || classes.includes('download-btn')) {
       ctaType = 'lead_magnet';
-    } else if (href.includes('wa.me') || href.includes('api.whatsapp.com')) {
-      ctaType = 'whatsapp';
     } else if (href.includes('t.me')) {
       ctaType = 'telegram';
     } else if (href.includes('paypal.com')) {
