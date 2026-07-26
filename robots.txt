@@ -2,6 +2,7 @@
 # https://chinahospitalsguide.com
 
 User-agent: *
+Allow: /
 
 # Sitemap
 Sitemap: https://chinahospitalsguide.com/sitemap.xml
@@ -13,6 +14,15 @@ Disallow: /cgi-bin/
 
 # Disallow API directory - internal data for AI agents only
 Disallow: /api/
+
+# Block auto-generated news — destroys CTR via query-language mismatch
+Disallow: /news/
+
+# Block course directory — thin content
+Disallow: /course/
+
+# Block treatments directory — duplicate/template content
+Disallow: /treatments/
 
 # Disallow duplicate content directories (canonical content is in /blog/)
 Disallow: /blog-articles/
