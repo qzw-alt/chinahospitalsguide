@@ -67,7 +67,7 @@ function getBlogTitle(filePath) {
 
 function makeTreatmentLinkHTML(treatmentFile, prefix) {
   const name = treatmentNames[treatmentFile] || treatmentFile;
-  const href = `/treatments/${treatmentFile}`;
+  const href = `/${treatmentFile}`;
   return `\n<li><a href="${href}">${prefix} ${name}</a> — save 70-85% at JCI-accredited hospitals</li>`;
 }
 
@@ -154,8 +154,8 @@ function processDir(dir, baseDir) {
         }
       }
 
-      // Check if treatment page
-      if (relPath.startsWith('treatments/') && e.name !== 'index.html') {
+      // Check if treatment page (now at root level)
+      if (!relPath.includes('/') && treatmentToBlogs[e.name]) {
         const treatmentFile = e.name;
         const blogs = treatmentToBlogs[treatmentFile];
         if (blogs && blogs.length > 0) {

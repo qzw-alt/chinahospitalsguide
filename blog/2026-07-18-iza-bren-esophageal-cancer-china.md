@@ -137,7 +137,7 @@ SYSUCC is a high-volume comprehensive cancer center with established care for pa
 
 Fudan's cancer center offers multidisciplinary gastrointestinal and thoracic oncology review, molecular pathology and access to clinical studies. Shanghai is often the easiest entry point for families that need English-language private-hospital support alongside specialist public-center care.
 
-Before travel, send the pathology report, immunohistochemistry, molecular testing if available, CT/PET imaging, discharge summaries and a dated list of prior drugs. Ask the hospital to confirm whether iza-bren is on formulary, the expected start date and the full self-pay estimate. The [cancer treatment in China guide](/treatments/cancer.html) covers the document and visa process. Russian-speaking families can also use our [Russian patient page](/ru.html); Arabic-speaking families can use the [Arabic patient page](/ar.html).
+Before travel, send the pathology report, immunohistochemistry, molecular testing if available, CT/PET imaging, discharge summaries and a dated list of prior drugs. Ask the hospital to confirm whether iza-bren is on formulary, the expected start date and the full self-pay estimate. The [cancer treatment in China guide](/cancer.html) covers the document and visa process. Russian-speaking families can also use our [Russian patient page](/ru.html); Arabic-speaking families can use the [Arabic patient page](/ar.html).
 
 ## 5. Where integrated Chinese-Western medicine fits
 

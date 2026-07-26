@@ -38,7 +38,7 @@ function getPriority(url) {
   if (url === '/services.html' || url === '/contact.html' || url === '/how-it-works.html') return '0.85';
   if (url.startsWith('/blog/') && url !== '/blog/') return '0.7';
   if (url.startsWith('/news/') && url !== '/news/') return '0.6';
-  if (url.startsWith('/treatments/')) return '0.75';
+
   if (url.startsWith('/stories/') && url !== '/stories/') return '0.5';
   return '0.8';
 }

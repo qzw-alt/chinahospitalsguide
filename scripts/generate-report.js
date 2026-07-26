@@ -433,7 +433,7 @@ function generateUpgradeSection() {
         <tr><td style="padding:10px 12px;border:1px solid #e5eaf1;font-weight:600;">治疗期间</td><td style="padding:10px 12px;border:1px solid #e5eaf1;">医院沟通衔接、突发问题协调、紧急联系电话</td></tr>
         <tr><td style="padding:10px 12px;border:1px solid #e5eaf1;font-weight:600;">出院回国</td><td style="padding:10px 12px;border:1px solid #e5eaf1;">中英文病历整理、用药说明、复查预约、远程随访衔接</td></tr>
       </table>
-      <p style="font-size:0.88rem;color:var(--primary);font-weight:600;margin-top:8px;">如果你已经确定要来中国治病，希望有人全程帮你搞定——请考虑升级到「Pre-Arrival Coordination（¥399）」。</p>
+      <p style="font-size:0.88rem;color:var(--primary);font-weight:600;margin-top:8px;">如果你已经确定要来中国治病，希望有人全程帮你搞定——请考虑升级到「Full Journey Management (L3, ¥399)」。</p>
     </div>`;
 }
 
