@@ -209,6 +209,11 @@
         <a href="/pricing.html">English pricing</a> | <strong>Русский</strong>
     </div>
 </main>
-<div class="mobile-bottom-bar"><a href="/index.html"><span>🏠</span>Главная</a> <a href="/services.html"><span>🩺</span>Услуги</a> <a href="/hospitals.html"><span>🏥</span>Больницы</a> <a href="/ru-contact.html"><span>✉️</span>Консультация</a></div>
+    <div class="mobile-bottom-bar">
+        <a href="/index.html"><span>🏠</span>Home</a>
+        <a href="/pricing.html"><span>💰</span>Pricing</a>
+        <a href="https://t.me/chinahospitalsguide" target="_blank" rel="noopener"><span>📨</span>Telegram</a>
+        <a href="#" onclick="event.preventDefault();navigator.clipboard.writeText('chinahospitalguide').then(()=>{this.querySelector('span').textContent='✅';this.querySelector('.bb-label').textContent='Copied!';setTimeout(()=>{this.querySelector('span').textContent='💬';this.querySelector('.bb-label').textContent='WeChat'},2000)}).catch(()=>alert('WeChat ID: chinahospitalguide'))"><span>💬</span><span class="bb-label">WeChat</span></a>
+    </div>
 </body>
 </html>
