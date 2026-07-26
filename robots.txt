@@ -3,14 +3,35 @@
 
 User-agent: *
 Allow: /
-
-# Sitemap
 Sitemap: https://chinahospitalsguide.com/sitemap.xml
 
-# Disallow admin/private areas (if any)
-Disallow: /admin/
-Disallow: /private/
-Disallow: /cgi-bin/
+# Block auto-generated low-quality content that destroys CTR
+Disallow: /news/
+Disallow: /course/
+Disallow: /treatments/
+Disallow: /blog-articles/
+Disallow: /blog-export/
+Disallow: /docs/
 
-# Crawl-delay (optional, be nice to servers)
+# Block internal/dev directories
+Disallow: /backup/
+Disallow: /config/
+Disallow: /scripts/
+Disallow: /references/
+Disallow: /reports/
+Disallow: /skills/
+Disallow: /memory/
+Disallow: /memory-*/
+Disallow: /.agents/
+Disallow: /.clawhub/
+Disallow: /.openclaw/
+Disallow: /.screenshots/
+Disallow: /.learnings/
+Disallow: /06-Local-Ops/
+Disallow: /CLI-Anything/
+
+# Block draft and internal pages
+Disallow: /draft-*
+Disallow: /hospital-directory-*
+
 Crawl-delay: 1
