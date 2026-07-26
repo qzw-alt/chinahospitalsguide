@@ -10,19 +10,11 @@
     (function() {
         var path = window.location.pathname;
         var exact = {
-            // Course sub-pages
-            "/course/services.html":     "/services.html",
-            "/course/resources.html":    "/resources.html",
-            "/course/news/":             "/news/",
-            "/course/blog/":             "/blog/",
-            "/course/how-it-works.html": "/how-it-works.html",
-            "/course.html":              "/course.html",
-            // Legacy treatment paths
-            "/services/oncology.html":    "/treatments/cancer.html",
-            "/services/cardiac.html":     "/treatments/cardiac.html",
-            "/services/orthopedics.html": "/treatments/orthopedics.html",
-            "/services/ivf.html":         "/treatments/ivf.html",
-            "/treatments/endoscopy.html": "/how-it-works.html",
+            // Legacy treatment paths — redirect to new standalone pages
+            "/services/oncology.html":    "/cancer.html",
+            "/services/cardiac.html":     "/",
+            "/services/orthopedics.html": "/orthopedics.html",
+            "/services/ivf.html":         "/ivf.html",
             // Known blog renames
             "/blog/why-medical-tourism-coordinator-china.html": "/contact-new.html",
             "/blog/spinal-surgery-cost-china.html":            "/blog/spine-surgery-cost-china.html",
@@ -37,7 +29,8 @@
             "/stories/james-thompson.html":                    "/stories/james-wilson.html",
             // Legacy landing pages
             "/blog.html": "/blog/",
-            "/news.html": "/news/",
+            "/news.html": "/",
+            "/course.html": "/",
             // Common misspellings / alternate paths
             "/hospital.html":        "/hospitals.html",
             "/service.html":         "/services.html",
@@ -97,12 +90,16 @@
             return;
         }
         if (/^\/news\/\d{4}-\d{2}-\d{2}-.+/.test(path)) {
-            window.location.replace('/news/');
+            window.location.replace('/');
+            return;
+        }
+        if (/^\/course\//.test(path)) {
+            window.location.replace('/');
             return;
         }
         var treatMatch = path.match(/^\/treatments\/([a-z-]+)$/);
         if (treatMatch) {
-            window.location.replace('/treatments/' + treatMatch[1] + '.html');
+            window.location.replace('/' + treatMatch[1] + '.html');
             return;
         }
         var storyMatch = path.match(/^\/stories\/([a-z-]+)$/);
@@ -115,7 +112,7 @@
             if (exact[clean]) { window.location.replace(exact[clean]); return; }
         }
         var rootMatch = path.match(/^\/([a-z-]+)$/);
-        if (rootMatch && rootMatch[1] !== 'blog' && rootMatch[1] !== 'news' && rootMatch[1] !== 'stories' && rootMatch[1] !== 'treatments') {
+        if (rootMatch && rootMatch[1] !== 'blog' && rootMatch[1] !== 'news' && rootMatch[1] !== 'stories') {
             window.location.replace('/' + rootMatch[1] + '.html');
             return;
         }
