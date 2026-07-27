@@ -639,3 +639,18 @@ schema: |
         </div>
     </div>
 </section>
+
+<script>
+(function() {
+    document.querySelectorAll('.collapse-toggle').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            var section = this.closest('.collapse-section');
+            if (section) {
+                section.classList.toggle('open');
+                var expanded = section.classList.contains('open');
+                this.setAttribute('aria-expanded', expanded);
+            }
+        });
+    });
+})();
+</script>
