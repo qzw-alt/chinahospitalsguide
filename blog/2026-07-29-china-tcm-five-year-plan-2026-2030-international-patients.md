@@ -127,7 +127,7 @@ This matters for international patients because the plan is not abstract. It bui
 
 ---
 
-## What the 2025 Baseline Actually Looks Like
+## What the 2025 Baseline Looks Like in Numbers
 
 Before the 2030 targets, the plan benchmarks against the 14th Five-Year Plan period (2021-2025). The data is concrete:
 
