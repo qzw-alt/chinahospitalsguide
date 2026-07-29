@@ -42,7 +42,7 @@ The article uses the two-meta-analysis contrast as the framing device (Lancet me
 - No pending files remaining under `references/` (only the 06-30 and 07-01 shipped notes which are reference material, not actual pending state)
 - Article is live at the URL above, HTTP 200 verified
 
-## Tool call budget for this run (chinahospitalsguide reference)
+## Tool call budget for this run (chinahospitalguide reference)
 Total ~15 tool calls:
 1. `terminal` — pre-flight (ls news/, git status, git remote -v, ls references/pending-*) + AGENTS.md read
 2. `terminal` — Bing News search "acupuncture IVF pregnancy rate 2026"
@@ -65,7 +65,7 @@ Total ~15 tool calls:
 - **Bing News still working (6th consecutive run)** — single fetch returned 5+ valid external URLs including the ABC News piece that became the primary source. The 06-16 transient regression is now confirmed fully recovered and stable across 2026-06-23, 06-24, 06-25, 06-26, 06-29, 07-01, and 07-02 (7 runs in 10 days).
 - **CrossRef as primary source for journal-meta-analysis abstract** — the Frontiers paper's full abstract was available via `curl https://api.crossref.org/works/DOI` even when the journal's full HTML returned a Cloudflare / JS-buried payload; combined with the Frontiers open-access HTML for the published date, the two-source pattern worked cleanly in 2 calls (no third call needed for the Frontiers HTML body).
 - **`actually` H2 removal = 16 points** — confirms the 06-22 + 06-25 + 06-29 rule. Single `actually` H2 = 8 points, two `actually` H2 = 16 points. Always grep headings before scoring.
-- **Remote advanced between cron runs AGAIN** — 2nd occurrence (1st was 06-21). The SEO/UX overhaul team on the chinahospitalsguide project pushed a 9-commit batch (217-page GA4 deployment + 4 SEO-optimized pages + 49 TCM-section injections) between the 07-01 ship and the 07-02 run. The clean rebase recipe (`git fetch + git pull --rebase + git push`) worked in 2 calls. **The 06-21 finding still holds: a 1-day gap between cron runs is enough time for the remote to advance, and the recipe should be budgeted as standard practice, not a recovery edge case.**
+- **Remote advanced between cron runs AGAIN** — 2nd occurrence (1st was 06-21). The SEO/UX overhaul team on the chinahospitalguide project pushed a 9-commit batch (217-page GA4 deployment + 4 SEO-optimized pages + 49 TCM-section injections) between the 07-01 ship and the 07-02 run. The clean rebase recipe (`git fetch + git pull --rebase + git push`) worked in 2 calls. **The 06-21 finding still holds: a 1-day gap between cron runs is enough time for the remote to advance, and the recipe should be budgeted as standard practice, not a recovery edge case.**
 
 ## Recommended action for 2026-07-03 cron run
 No recovery state, fresh research. The TCM series is on its 8th day. Candidates to consider:

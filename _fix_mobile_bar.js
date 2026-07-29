@@ -10,7 +10,7 @@ function makeBar(rootRelative) {
   return '    <div class="mobile-bottom-bar">\n' +
     '        <a href="' + pre + 'index.html"><span>🏠</span>Home</a>\n' +
     '        <a href="' + pre + 'pricing.html"><span>💰</span>Pricing</a>\n' +
-    '        <a href="https://t.me/chinahospitalsguide" target="_blank" rel="noopener"><span>📨</span>Telegram</a>\n' +
+    '        <a href="https://t.me/chinahospitalguide" target="_blank" rel="noopener"><span>📨</span>Telegram</a>\n' +
     '        <a href="#" onclick="event.preventDefault();navigator.clipboard.writeText(\'chinahospitalguide\').then(()=>{this.querySelector(\'span\').textContent=\'✅\';this.querySelector(\'.bb-label\').textContent=\'Copied!\';setTimeout(()=>{this.querySelector(\'span\').textContent=\'💬\';this.querySelector(\'.bb-label\').textContent=\'WeChat\'},2000)}).catch(()=>alert(\'WeChat ID: chinahospitalguide\'))"><span>💬</span><span class="bb-label">WeChat</span></a>\n' +
     '    </div>';
 }

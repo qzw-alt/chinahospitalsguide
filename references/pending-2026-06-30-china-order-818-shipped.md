@@ -9,7 +9,7 @@
 - **Live URL:** https://chinahospitalsguide.com/news/2026-06-30-china-order-818-advanced-therapeutic-clinical-translation-cell-gene-therapy-regulation.html
 - **HTTP status:** 200 (verified)
 - **Word count:** 4,422 (per `humanize_score.py` body extraction) / 4,912 (per the regex word counter that includes `<title>`/`<meta>`/`<style>`)
-- **Em-dash density:** 65 em-dashes for 4,422 article-body words = **17.6 per 1200 words** (within the 17-23 baseline for chinahospitalsguide; the 4,900+ total-words density of 16.4/1200 is per the 06-14 finding that long articles can ship at lower density)
+- **Em-dash density:** 65 em-dashes for 4,422 article-body words = **17.6 per 1200 words** (within the 17-23 baseline for chinahospitalguide; the 4,900+ total-words density of 16.4/1200 is per the 06-14 finding that long articles can ship at lower density)
 - **Humanize score:** 69/100 (passes 60 threshold)
 - **Banned-vocab hits remaining:** 3 — all in verbatim source quotes from GEN (Boyang Wang "leverage international capital" pullquote, Todd Liao "landscape" pullquote, Todd Liao "actually loosening" pullquote). Per the 2026-06-25 "banned-vocab hits inside source-quote attributions are FALSE POSITIVES" pitfall, these are left verbatim.
 - **Article archetype:** 7-part regulatory/structural-policy deep-dive (similar to the 06-26 UCB Tellier China-drug-innovation article archetype). Sections: (1) lead, (2) what Order 818 actually says, (3) May 8 NHC consultation draft on data exports, (4) personalization vs. mass-market split, (5) free trade zone wrinkle, (6) what this means for international patients, (7) contract-law ripple effect, (8) what to watch 12-18 months. ~4,500 words.

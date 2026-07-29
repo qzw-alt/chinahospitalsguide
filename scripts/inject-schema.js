@@ -23,7 +23,7 @@ function medicalBusinessSchema() {
       "name": "China"
     },
     "sameAs": [
-      "https://www.facebook.com/chinahospitalsguide",
+      "https://www.facebook.com/chinahospitalguide",
       "https://twitter.com/chinahospitals"
     ]
   };
