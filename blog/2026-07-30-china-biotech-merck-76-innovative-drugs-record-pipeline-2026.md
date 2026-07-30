@@ -148,7 +148,7 @@ For an international patient, this means a Chinese clinical-trial site can deliv
 
 Musto called this "China speed" — the pace of development visible across the entire pharmaceutical value chain, from early-stage research and clinical development to regulatory approvals and commercialization. The $130 billion USD in outbound licensing deals during 2025 — Chinese biotechs selling development and commercialization rights to Western pharma companies — is the external market validation of that speed.
 
-## What the Pipeline Actually Looks Like — And What This Means for Cancer Patients
+## What the Pipeline Looks Like — And What This Means for Cancer Patients
 
 The 30 percent pipeline share is not a count of mostly-me-too drugs. China is producing a disproportionate share of the most innovative oncology modalities globally:
 
@@ -187,7 +187,7 @@ The 30 percent pipeline share is not a count of mostly-me-too drugs. China is pr
 
 For an Indonesian, Vietnamese, or Kazakhstani cancer patient, this table is the answer to a question that US/EU hospitals often cannot solve: "Where do I find a clinical trial that is still open, has a slot I can reach, and treats my exact cancer subtype?" The answer in 2026 is increasingly Shanghai, Beijing, or Wuhan — not Houston, Boston, or London.
 
-## How an International Patient Actually Accesses This Pipeline
+## How an International Patient Accesses This Pipeline
 
 There are two paths, and the cost difference is enormous. Both run through Chinese hospitals.
 
