@@ -1,6 +1,70 @@
 # Robots.txt for China Hospitals Guide
 # https://chinahospitalsguide.com
 
+# ============================================
+# AI Search & LLM Crawlers — Explicitly Allow
+# ============================================
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# OpenAI
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# Anthropic / Claude
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+# Google AI
+User-agent: Google-Extended
+Allow: /
+
+# Meta
+User-agent: Meta-ExternalAgent
+Allow: /
+
+# Apple
+User-agent: Applebot-Extended
+Allow: /
+
+# Other AI crawlers
+User-agent: DuckAssistBot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+# ============================================
+# Traditional Search Engines
+# ============================================
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# ============================================
+# Default — Allow All
+# ============================================
+
 User-agent: *
 Allow: /
 

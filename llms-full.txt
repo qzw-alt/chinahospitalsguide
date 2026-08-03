@@ -1,0 +1,113 @@
+# China Hospitals Guide — Full Content Reference
+
+> chinahospitalsguide.com is an independent medical tourism resource. We help international patients research, compare, and book treatment at JCI-accredited hospitals in China — with transparent pricing and no hospital commissions.
+
+---
+
+## Site Overview
+
+- **Name:** China Hospitals Guide
+- **URL:** https://chinahospitalsguide.com
+- **Founded:** 2026
+- **Founder:** Medical tourism consultant (name withheld from this file)
+- **Model:** Independent coordinator — 0% hospital commission, 3 fixed-price tiers ($49 / $149 / $399)
+- **Coverage:** 40+ JCI-accredited hospitals, Fudan University rankings, 40+ medical specialties
+- **Languages:** English (primary), some Chinese-language resources available
+- **Contact:** WeChat (chinahospitalguide), Telegram (@chinahospitalguide), email, phone (+86-157-6310-7083)
+- **Social:** Twitter/X (@Chinaguide6), YouTube (@Chinahospitalsguide), GitHub (https-chinahospitalsguide-com)
+
+---
+
+## Key Content Pages
+
+### Surgery Cost Guides
+
+1. **LASIK Eye Surgery** — /blog/lasik-eye-surgery-china-2026.html
+   - SMILE: $2,000–$3,500 vs $4,000–$6,000 US
+   - Femto-LASIK: $1,500–$2,800 vs $3,000–$5,000 US
+   - PRK: $1,200–$2,200 vs $2,500–$4,000 US
+   - ICL: $3,500–$5,500 vs $7,000–$10,000 US
+   - Top hospitals: Fudan ENT (Shanghai), Zhongshan Ophthalmic (Guangzhou), Beijing Tongren, Shanghai Heping, Aier Group
+
+2. **Plastic Surgery** — /blog/plastic-surgery-china-guide-2026.html
+   - Liposuction: $1,500–$3,000/area vs $4,000–$8,000 US (60–65% savings)
+   - Rhinoplasty: $3,000–$6,000 vs $8,000–$15,000 US
+   - Double eyelid: $1,500–$3,000 vs $4,000–$7,000 US
+   - Breast augmentation: $4,000–$7,000 vs $10,000–$20,000 US
+   - Facelift: $4,000–$8,000 vs $12,000–$25,000 US
+   - Top Beijing hospitals: PUMCH, CAMS Plastic Surgery Hospital, Beijing United Family
+
+3. **Cataract Surgery** — /blog/cataract-surgery-china.html
+   - Standard IOL: $1,500–$2,500/eye
+   - Premium multifocal IOL: $2,500–$4,000/eye
+   - Top hospitals: Zhongshan Ophthalmic, Beijing Tongren, Fudan ENT
+
+4. **Hair Transplant** — /blog/hair-transplant-china-2026.html
+   - FUE: $0.80–$2.50/graft vs $4–$8/graft US
+   - DHI: $2.00–$3.50/graft
+   - Top clinics: Biliansheng, Yonghe, Barley
+
+5. **Knee Replacement** — /blog/knee-replacement-cost-china.html
+   - $8,000–$12,000 vs $35,000+ US (65–75% savings)
+   - Top hospital: Beijing Jishuitan (#1 orthopedics nationally)
+
+6. **Hip Replacement** — /blog/hip-replacement-cost-china.html
+   - $8,000–$12,000 vs $35,000+ US
+
+7. **Heart Surgery** — /blog/heart-surgery-cost-china.html
+   - Bypass: $18,000–$25,000 vs $120,000+ US (80–85% savings)
+   - Top hospital: Fuwai Hospital (#1 cardiology, #1 in Asia by volume)
+
+8. **Spine Surgery** — /blog/spine-surgery-cost-china.html
+   - $15,000–$22,000 vs $80,000+ US
+
+9. **Dental Implants** — /blog/dental-implants-cost-china.html
+   - $800–$2,000/tooth vs $3,000–$5,000 US
+
+10. **IVF in China** — /blog/ivf-cost-china-2026.html
+    - $3,000–$8,000/cycle vs $12,000–$25,000 US
+
+### Hospital Rankings & Selection
+
+11. **China Hospital Rankings** — /blog/china-hospital-rankings-2026.html
+    - Fudan University ranking system: A++++ (elite 20), A+++, A++, A+, A tiers
+    - #1 Overall: Peking Union Medical College Hospital (PUMCH, Beijing)
+    - #2: West China Hospital (Chengdu)
+    - #3: Ruijin Hospital (Shanghai)
+    - Top by specialty: Jishuitan (ortho), Fuwai (cardio), CAMS Cancer (oncology), Tiantan (neuro)
+
+12. **JCI Hospitals** — /blog/jci-accredited-hospitals-china.html
+    - Complete list of 100+ JCI-certified hospitals in China
+
+13. **How to Choose a Hospital** — /blog/how-to-choose-hospital-china-guide.html
+
+### Hospital Match Service
+
+14. **How It Works** — /how-it-works.html
+    - Step 1: Free case review with no commitment
+    - Step 2: Choose support level (L1 $49 / L2 $149 / L3 $399)
+    - Step 3: Records, appointments, and hospital arrival coordination
+
+15. **Pricing** — /pricing.html
+    - L1 ($49): 2–3 hospital options, cost range, travel checklist — information only
+    - L2 ($149): Case sent to 2–3 hospitals, translated responses, direct connection
+    - L3 ($399): Full journey management — records, visa letter, appointments, pickup, coordination through discharge
+    - Refund terms: clearly published per tier. PayPal accepted. Upgrade anytime.
+
+### Patient Resources
+
+16. **Medical Visa Guide** — /blog/china-medical-visa-guide-2026.html
+17. **Cost Comparison** — /cost-comparison.html
+18. **Patient Stories** — /stories.html
+19. **Complete Medical Tourism Guide** — /medical-tourism-guide.html
+
+---
+
+## Technical Info
+
+- **Stack:** Eleventy (11ty) static site generator, deployed on Netlify
+- **Structured Data:** FAQPage, HowTo, Article, MedicalWebPage, BreadcrumbList, Organization schemas
+- **Analytics:** Google Analytics 4 (G-RVYZENK472)
+- **Monetization:** Google AdSense where applicable
+- **Crawlers:** All major AI crawlers explicitly allowed in robots.txt
+- **Version:** 1.12 (see /_data/site.json)
