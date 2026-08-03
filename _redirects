@@ -88,6 +88,8 @@
 /news/2026-06-28-tangdu-hospital-3d-printed-peek/ /news/2026-06-28-tangdu-hospital-3d-printed-peek-extravascular-stent-nutcracker-syndrome.html 301
 # Redirect old Singapore device certification article to correct blog location
 /news/2026-03-24-singapore-who-medical-device-certification-china-compare.html /blog/medical-device-certification-singapore-vs-china-2026.html 301
+# 2026-08-03: news/ 版面已删除 — 07-28 TCM article relocated to blog/ (canonical move)
+/news/2026-07-28-tcm-going-global-shufeng-jiedu-germany-ai-workflow.html /blog/2026-07-28-tcm-going-global-shufeng-jiedu-germany-ai-workflow.html 301
 /news/stem-cell-therapy-china-2026-guide/ /news/stem-cell-therapy-china-2026-guide.html 301
 /blog/bone-marrow-transplant-china/ /blog/bone-marrow-transplant-china.html 301
 /blog/proton-therapy-china-2026/ /blog/proton-therapy-china-2026.html 301
