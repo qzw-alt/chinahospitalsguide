@@ -354,10 +354,67 @@ schema: |
               "telephone": "+86-157-6310-7083"
           },
           "sameAs": [
-              "https://t.me/chinahospitalguide"
+              "https://t.me/chinahospitalguide",
+              "https://x.com/Chinaguide6",
+              "https://youtube.com/@Chinahospitalsguide",
+              "https://github.com/https-chinahospitalsguide-com"
           ]
       }
 ---
+
+<!-- HowTo Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        "name": "How to Get Medical Treatment in China — 3-Step Coordination Process",
+        "description": "A 3-step process for international patients to find and book treatment at China's JCI-accredited hospitals: free case review, choose support level ($49/$149/$399), and arrive at the hospital with records and appointments ready.",
+        "estimatedCost": {
+            "@type": "MonetaryAmount",
+            "currency": "USD",
+            "minValue": "49",
+            "maxValue": "399"
+        },
+        "step": [
+            {
+                "@type": "HowToStep",
+                "position": 1,
+                "name": "Submit Your Case (Free)",
+                "text": "Tell us about your medical condition, preferred city (Beijing/Shanghai/Guangzhou), and timeline. We review your case and recommend whether a hospital shortlist, cost guidance, or full coordination is the right next step. No commitment required.",
+                "url": "https://chinahospitalsguide.com/contact-new.html"
+            },
+            {
+                "@type": "HowToStep",
+                "position": 2,
+                "name": "Choose Your Support Level ($49–$399)",
+                "text": "Pick from three packages based on your needs. L1 Hospital Shortlist ($49): 2–3 hospital options, cost range, travel checklist — information only. L2 Hospital Verification ($149): we send your case to 2–3 hospitals, translate responses, and connect you to the best fit. L3 Full Journey Management ($399): medical record translation, visa invitation letter, appointment booking, airport pickup, and ongoing coordination through treatment and discharge.",
+                "url": "https://chinahospitalsguide.com/pricing.html"
+            },
+            {
+                "@type": "HowToStep",
+                "position": 3,
+                "name": "Records, Appointments & Hospital Arrival",
+                "text": "L1 clients receive hospital shortlist and cost data for self-directed travel. L2 clients get translated hospital responses and direct connection to the chosen hospital. L3 clients receive full coordination: medical records prepared in Chinese, appointments booked, visa invitation letter, airport pickup arranged, and support through treatment and discharge. Hospital treatment costs are paid directly to the hospital — we take no commissions.",
+                "url": "https://chinahospitalsguide.com/how-it-works.html"
+            }
+        ],
+        "totalTime": "P3D",
+        "tool": [
+            {
+                "@type": "HowToTool",
+                "name": "Hospital Shortlist & Cost Comparison ($49)"
+            },
+            {
+                "@type": "HowToTool",
+                "name": "Hospital Verification & English Translation ($149)"
+            },
+            {
+                "@type": "HowToTool",
+                "name": "Full Journey Coordination ($399)"
+            }
+        ]
+    }
+    </script>
 <!-- BreadcrumbList Schema -->
     <script type="application/ld+json">
     {
@@ -391,7 +448,10 @@ schema: |
             "contactOption": ["WeChat", "Telegram"]
         },
         "sameAs": [
-            "https://t.me/chinahospitalguide"
+            "https://t.me/chinahospitalguide",
+              "https://x.com/Chinaguide6",
+              "https://youtube.com/@Chinahospitalsguide",
+              "https://github.com/https-chinahospitalsguide-com"
         ]
     }
     </script>
