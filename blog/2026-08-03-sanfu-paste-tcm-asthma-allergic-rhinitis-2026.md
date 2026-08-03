@@ -162,7 +162,7 @@ The modern formulation is standardized from a classical recipe. The 2024 review 
 </tbody>
 </table>
 
-The review's pharmacokinetic finding is the part that separates this therapy from folklore: the parent compounds that actually cross the skin barrier — sinapine thiocyanate, asarinin, and tetrahydropalmatine — are the same molecules whose anti-inflammatory, antitussive, and analgesic activities are documented in the pharmacology literature. In other words, the patch is not a placebo delivery system; it is a transdermal formulation whose active constituents are measurable in circulation after application.
+The review's pharmacokinetic finding is the part that separates this therapy from folklore: the parent compounds that demonstrably cross the skin barrier — sinapine thiocyanate, asarinin, and tetrahydropalmatine — are the same molecules whose anti-inflammatory, antitussive, and analgesic activities are documented in the pharmacology literature. In other words, the patch is not a placebo delivery system; it is a transdermal formulation whose active constituents are measurable in circulation after application.
 
 ## The 2024-2025 Evidence Base
 
