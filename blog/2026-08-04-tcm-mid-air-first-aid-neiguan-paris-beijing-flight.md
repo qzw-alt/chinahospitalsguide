@@ -3,7 +3,7 @@ layout: blog-post.njk
 title: "Mid-Air TCM Rescue on a Paris–Beijing Flight: What Neiguan (PC6) Acupressure Evidence Says and How to Access It in China"
 description: "TCM professors treated a child's mid-air chest pain on a Paris–Beijing flight. The Neiguan (PC6) acupressure evidence, Chinese hospital access, and costs for international patients."
 kicker: "TCM in Practice & International Access"
-subtitle: "On July 20, 2026, four faculty members of the Beijing University of Chinese Medicine responded to a medical call for a child with chest pain on an overnight Air China flight from Paris to Beijing. The China Daily report — published August 3 — is a rare window into how TCM is actually practiced in acute moments, and it centers on the acupoint Western research knows best: Neiguan (PC6)."
+subtitle: "On July 20, 2026, four faculty members of the Beijing University of Chinese Medicine responded to a medical call for a child with chest pain on an overnight Air China flight from Paris to Beijing. The China Daily report — published August 3 — is a rare window into how TCM is practiced in acute moments, and it centers on the acupoint Western research knows best: Neiguan (PC6)."
 date: 2026-08-04
 
 schema: |
