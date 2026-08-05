@@ -106,6 +106,9 @@
 /draft-inquiry-tangdu-maria-rios / 301
 /draft-followup-maria-sinosend-link/ / 301
 /draft-followup-maria-sinosend-link / 301
+# Fix sitemap URL format mismatch — July 29-30 posts built as directories, not .html
+/blog/2026-07-29-china-tcm-five-year-plan-2026-2030-international-patients.html /blog/2026-07-29-china-tcm-five-year-plan-2026-2030-international-patients/ 301
+/blog/2026-07-30-china-biotech-merck-76-innovative-drugs-record-pipeline-2026.html /blog/2026-07-30-china-biotech-merck-76-innovative-drugs-record-pipeline-2026/ 301
 # Panel page
 /panel.html / 301
 # checklist
