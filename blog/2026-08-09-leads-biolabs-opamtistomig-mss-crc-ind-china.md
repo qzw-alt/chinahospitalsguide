@@ -118,7 +118,7 @@ The target population is the reason this clearance matters beyond China. Metasta
 
 </div>
 
-## What Opamtistomig Actually Does — and Why the Design Matters
+## What Opamtistomig Does — and Why the Design Matters
 
 Opamtistomig is built on Leads Biolabs' proprietary **X-Body bispecific platform**. Its mechanism is a two-handed grip on the immune system: one arm blocks **PD-L1**-mediated immunosuppression (removing the brake), and the other **conditionally activates 4-1BB**, a co-stimulatory receptor on T cells (pressing the accelerator). The conditional activation is the design detail that separates it from first-generation 4-1BB agonists, which struggled with liver toxicity when stimulated systemically. By linking 4-1BB activation to PD-L1 engagement — meaning the signal fires where the tumor is — the molecule aims to restore exhausted T-cell function, promote T-cell proliferation, and build long-term memory responses with a safety profile comparable to PD-1/PD-L1 inhibitors.
 
