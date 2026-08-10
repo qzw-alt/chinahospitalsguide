@@ -10,6 +10,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("sitemap.xml");
   eleventyConfig.addPassthroughCopy("llms.txt");
   eleventyConfig.addPassthroughCopy("llms-full.txt");
+  eleventyConfig.addPassthroughCopy("api/");
 
   // Watch targets for live reload during development
   eleventyConfig.addWatchTarget("styles.css");

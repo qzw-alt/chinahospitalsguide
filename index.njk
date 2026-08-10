@@ -188,6 +188,18 @@ pageStyle: |
               color: white;
               box-shadow: none;
           }
+          .region-compare { border-radius:16px;overflow:hidden;border:1px solid rgba(30,60,114,.1);box-shadow:0 8px 28px rgba(15,23,42,.08);margin-top:24px; }
+          .rc-header, .rc-row { display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr 1fr;align-items:center; }
+          .rc-header { background:#1e3c72;color:#fff;font-weight:700;font-size:.88rem; }
+          .rc-header .rc-country, .rc-header .rc-label { padding:14px 10px; }
+          .rc-row { font-size:.92rem; }
+          .rc-row:nth-child(even) { background:#f8fafc; }
+          .rc-row:nth-child(odd) { background:#fff; }
+          .rc-label { padding:12px 14px;font-weight:600;color:#1e3c72; }
+          .rc-val { padding:12px 10px;text-align:center;color:#4a5568; }
+          .rc-val.best { background:#e8f5e9;font-weight:700;color:#2e7d32; }
+          .rc-country { padding:14px 10px;text-align:center; }
+          .rc-country.best { background:rgba(255,255,255,.12); }
           @media (max-width: 768px) {
               .hero-home {
                   padding-top: 110px;
@@ -334,6 +346,50 @@ schema: |
                 </div>
             </div>
         </div>
+    </section>
+
+    <!-- REGIONAL VALUE COMPARISON STRIP -->
+    <section class="section-shell" style="padding-bottom:20px">
+        <h2 class="section-title">China vs The Rest of Asia — Cost Comparison</h2>
+        <p class="section-lead">Over <strong>5.5 million international patients</strong> travel to Asia each year for surgery. Here's how China stacks up against the other major destinations for the procedures that matter most.</p>
+        <div class="region-compare">
+            <div class="rc-header">
+                <div class="rc-label">Procedure</div>
+                <div class="rc-country best">🇨🇳 China</div>
+                <div class="rc-country">🇹🇭 Thailand</div>
+                <div class="rc-country">🇲🇾 Malaysia</div>
+                <div class="rc-country">🇸🇬 Singapore</div>
+            </div>
+            <div class="rc-row">
+                <div class="rc-label">Heart Bypass (CABG)</div>
+                <div class="rc-val best">$10K–$16K</div>
+                <div class="rc-val">$18K–$25K</div>
+                <div class="rc-val">$14K–$20K</div>
+                <div class="rc-val">$28K–$42K</div>
+            </div>
+            <div class="rc-row">
+                <div class="rc-label">Knee Replacement</div>
+                <div class="rc-val best">$5.5K–$9K</div>
+                <div class="rc-val">$12K–$18K</div>
+                <div class="rc-val">$9K–$15K</div>
+                <div class="rc-val">$18K–$28K</div>
+            </div>
+            <div class="rc-row">
+                <div class="rc-label">Spinal Fusion (1–2 lvls)</div>
+                <div class="rc-val best">$8K–$14K</div>
+                <div class="rc-val">$16K–$25K</div>
+                <div class="rc-val">$12K–$20K</div>
+                <div class="rc-val">$25K–$38K</div>
+            </div>
+            <div class="rc-row">
+                <div class="rc-label">CAR-T Therapy</div>
+                <div class="rc-val best">$30K–$89K</div>
+                <div class="rc-val">Limited</div>
+                <div class="rc-val">Limited</div>
+                <div class="rc-val">$250K–$375K</div>
+            </div>
+        </div>
+        <p style="text-align:center;margin-top:10px;color:#888;font-size:.88rem">China: <strong style="color:#2e7d32">30–60% cheaper</strong> than Thailand for major surgery · 1.28M international patients (2025) · 40+ JCI hospitals · <a href="/compare/" style="color:#1e3c72;font-weight:600">Full comparison with 15+ procedures →</a></p>
     </section>
 
     <section class="band">
