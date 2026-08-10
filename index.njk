@@ -221,6 +221,9 @@ pageStyle: |
               .how-select-grid {
                   grid-template-columns: 1fr !important;
               }
+              .journey-grid[style*="repeat(3,1fr)"] {
+                  grid-template-columns: 1fr !important;
+              }
               .hero-metric {
                   padding: 16px;
               }
@@ -329,7 +332,7 @@ schema: |
         <div class="section-shell">
             <h2 class="section-title">Why China Leads in Medicine</h2>
             <p class="section-lead">Independent evidence — not marketing. Here's what sets China's top hospitals apart from anywhere else in the world.</p>
-            <div class="journey-grid">
+            <div class="journey-grid" style="grid-template-columns:repeat(3,1fr)">
                 <div class="journey-card">
                     <div style="font-size:2em;margin-bottom:12px">🏆</div>
                     <h3>Proven Clinical Excellence</h3>
