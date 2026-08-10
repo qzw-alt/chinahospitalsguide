@@ -2,8 +2,8 @@
   "meta": {
     "version": "1.1",
     "generated": "2026-04-06",
-    "updated": "2026-04-06",
-    "note": "Expanded from 34 to 50 hospitals - added tier-2 cities (Chengdu, Xi'an, Jinan, Nanjing, Tianjin) and specialty hospitals (eye, dental, TCM)",
+    "updated": "2026-08-10",
+    "note": "Expanded from 50 to 51 hospitals — added Foshan Fosun Chancheng Hospital (Fosun Health Group, JCI + Grade 3A, oncology/orthopedics/urology/gynecology)",
     "description": "China Hospitals Guide - Hospital Directory API",
     "contact": "https://chinahospitalsguide.com/contact"
   },
@@ -2065,6 +2065,108 @@
         ]
       },
       "address": "广州市越秀区东风西路195号"
+    },
+    {
+      "id": "fosun-chancheng-hospital",
+      "name": "Foshan Fosun Chancheng Hospital",
+      "name_zh": "佛山复星禅诚医院",
+      "city": "Foshan",
+      "district": "Chancheng",
+      "airport_info": "50-70min from Guangzhou Baiyun International Airport",
+      "tags": [
+        "oncology",
+        "orthopedics",
+        "urology",
+        "gynecology",
+        "pediatrics",
+        "tcm",
+        "general"
+      ],
+      "rank": "Grade III Class A General Hospital, JCI Accredited, #1 Non-Public Hospital in China (Ailibi)",
+      "phone": "0757-82162888",
+      "international_phone": "+86 18022258600",
+      "email": "imcinfo@fsccyy.com",
+      "website": "https://www.fsccyy.com",
+      "international": true,
+      "international_dept": {
+        "name": "Fosun International Medical Center (FIMC)",
+        "phone": "+86 18022258600",
+        "email": "imcinfo@fsccyy.com",
+        "languages": ["English", "Arabic", "Bengali", "Japanese", "Vietnamese"],
+        "services": "Medical interpretation, visa invitation letters, airport pickup, hotel booking, prayer rooms, halal meals, dedicated international patient floors"
+      },
+      "jci": true,
+      "jci_details": "6th Edition JCI (2018-2021)",
+      "equipment": [
+        "Da Vinci Surgical Robot",
+        "CyberKnife Radiosurgery System",
+        "TINAVI II Orthopedic Surgical Robot",
+        "Varian Linear Accelerator",
+        "PET-CT",
+        "Dual-Source CT",
+        "3.0T MRI",
+        "Siemens DSA"
+      ],
+      "beds": 2000,
+      "staff": 2900,
+      "founded": 1958,
+      "group": "Fosun Health Group (Fosun Pharma)",
+      "key_specialties": {
+        "oncology": "CAR-T therapy, CyberKnife radiosurgery, precision oncology, MDT consultation",
+        "orthopedics": "Spinal surgery, joint replacement, sports medicine",
+        "urology": "Nationally recognized department",
+        "gynecology": "Chinese-Western integrated gynecology, uterine fibroid treatment",
+        "pediatrics": "Women & Children Center"
+      },
+      "payment_methods": ["WeChat", "Alipay", "Cash (RMB)", "Visa", "MasterCard", "American Express", "JCB", "Direct billing (select insurers)"],
+      "trust": {
+        "score": 0.92,
+        "level": "high",
+        "verified_fields": [
+          "name",
+          "name_zh",
+          "city",
+          "district",
+          "airport_info",
+          "tags",
+          "rank",
+          "phone",
+          "international_phone",
+          "email",
+          "website",
+          "international",
+          "international_dept",
+          "jci",
+          "equipment",
+          "beds",
+          "staff",
+          "founded",
+          "group",
+          "address",
+          "key_specialties",
+          "payment_methods"
+        ],
+        "data_source": "multi_source",
+        "cross_validated": [
+          "official_website",
+          "direct_channel_partner_documents",
+          "pricing_manual",
+          "hospital_brochure"
+        ],
+        "last_verified": "2026-08-10",
+        "notes": [
+          "Verified via official channel cooperation documents, pricing manual, and hospital brochure received directly from Fosun Health International Business Development",
+          "JCI accredited (6th edition). Grade III Class A (三甲) general hospital",
+          "Part of Fosun Health Group, a Fosun Pharma subsidiary — publicly listed, financially stable",
+          "International medical center serves 124+ countries and regions",
+          "Strong in oncology — one of few hospitals in China offering both CAR-T and CyberKnife",
+          "Integrated Chinese-Western medicine available, including TCM departments",
+          "Pricing transparent — detailed package pricing manual with inclusions/exclusions provided to channel partners",
+          "Dedicated international patient floors with private rooms, prayer rooms, halal meals available",
+          "Channel partnership documents indicate professional, standardized international patient workflow"
+        ]
+      },
+      "address": "广东省佛山市禅城区石湾三友南路3号"
     }
   ]
 }
