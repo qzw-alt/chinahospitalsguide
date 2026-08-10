@@ -472,6 +472,210 @@ schema: |
         <div class="hospital-grid" id="hospitalGrid"></div>
     </main>
 
+    <script>
+    (function() {
+        var allHospitals = [];
+        var activeRegion = 'all';
+        var activeSearch = '';
+        var activeSpecialty = '';
+
+        var grid = document.getElementById('hospitalGrid');
+        var searchInput = document.getElementById('searchInput');
+        var regionTabs = document.getElementById('regionTabs');
+        var specialtyTags = document.getElementById('specialtyTags');
+        var resultsCount = document.getElementById('resultsCount');
+
+        function fetchHospitals() {
+            grid.innerHTML = '<p style="text-align:center;color:#888;padding:2rem;grid-column:1/-1">Loading hospitals...</p>';
+            fetch('/api/v1/hospitals.json')
+                .then(function(r) { return r.json(); })
+                .then(function(data) {
+                    allHospitals = data.hospitals || [];
+                    buildSpecialtyTags();
+                    render();
+                })
+                .catch(function(e) {
+                    grid.innerHTML = '<p style="text-align:center;color:#c00;padding:2rem;grid-column:1/-1">Failed to load hospital data. Please try again later.</p>';
+                    console.error(e);
+                });
+        }
+
+        var REGION_MAP = {
+            'all': [],
+            'beijing': ['Beijing'],
+            'shanghai': ['Shanghai'],
+            'guangzhou': ['Guangzhou'],
+            'prd': ['Guangzhou', 'Shenzhen', 'Foshan', 'Zhuhai', 'Dongguan']
+        };
+
+        function getSpecialties() {
+            var set = {};
+            allHospitals.forEach(function(h) {
+                (h.tags || []).forEach(function(t) {
+                    set[t] = (set[t] || 0) + 1;
+                });
+            });
+            return Object.keys(set).sort();
+        }
+
+        function buildSpecialtyTags() {
+            var specs = getSpecialties();
+            var html = '<button class="specialty-tag active" data-specialty="">All Specialties</button>';
+            specs.forEach(function(s) {
+                html += '<button class="specialty-tag" data-specialty="' + s + '">' + formatTag(s) + '</button>';
+            });
+            specialtyTags.innerHTML = html;
+        }
+
+        function formatTag(t) {
+            return t.replace(/-/g, ' ').replace(/\b\w/g, function(c) { return c.toUpperCase(); });
+        }
+
+        function filterHospitals() {
+            return allHospitals.filter(function(h) {
+                if (activeRegion === 'all') { /* pass */ }
+                else {
+                    var cities = REGION_MAP[activeRegion] || [];
+                    if (cities.length && cities.indexOf(h.city) === -1) return false;
+                }
+                if (activeSpecialty && h.tags.indexOf(activeSpecialty) === -1) return false;
+                if (activeSearch) {
+                    var q = activeSearch.toLowerCase();
+                    var haystack = (h.name + ' ' + h.name_zh + ' ' + h.city + ' ' + (h.tags||[]).join(' ') + ' ' + (h.rank||'')).toLowerCase();
+                    if (haystack.indexOf(q) === -1) return false;
+                }
+                return true;
+            });
+        }
+
+        function render() {
+            var filtered = filterHospitals();
+            resultsCount.textContent = 'Showing ' + filtered.length + ' of ' + allHospitals.length + ' hospitals';
+
+            if (filtered.length === 0) {
+                grid.innerHTML = '<p style="text-align:center;color:#888;padding:3rem;grid-column:1/-1">No hospitals match your filters. Try a different search or region.</p>';
+                return;
+            }
+
+            var cityImages = {
+                'Beijing': 'images/hospitals/beijing-city.jpg',
+                'Shanghai': 'images/hospitals/shanghai-city.jpg',
+                'Guangzhou': 'images/hospitals/guangzhou-city.jpg'
+            };
+
+            grid.innerHTML = filtered.map(function(h) {
+                var imageHtml = '';
+                if (cityImages[h.city]) {
+                    imageHtml = '<img class="hospital-image" src="' + cityImages[h.city] + '" alt="' + h.city + '" loading="lazy">';
+                } else {
+                    var colors = ['#1e3c72','#2a5298','#17345f','#345d9e','#4169b6'];
+                    var color = colors[Math.abs(hashCode(h.id || h.name)) % colors.length];
+                    imageHtml = '<div class="hospital-image-placeholder" style="background:' + color + '">🏥 ' + h.city + '</div>';
+                }
+
+                var badges = '';
+                if (h.jci) badges += '<span class="badge badge-jci">JCI Accredited</span>';
+                if (h.international) badges += '<span class="badge badge-intl">🌐 Intl. Dept.</span>';
+                if (h.international_dept && h.international_dept.languages) {
+                    badges += '<span class="badge badge-intl">🗣 ' + h.international_dept.languages.slice(0,3).join('/') + '</span>';
+                }
+
+                var tagHtml = (h.tags || []).slice(0, 6).map(function(t) {
+                    return '<span class="hospital-tag">' + formatTag(t) + '</span>';
+                }).join('');
+
+                var phoneHtml = '';
+                if (h.international_phone) {
+                    phoneHtml = '<div class="hospital-info">📞 <strong>Intl:</strong> ' + h.international_phone;
+                    if (h.phone) phoneHtml += ' | <strong>CN:</strong> ' + h.phone;
+                    phoneHtml += '</div>';
+                } else if (h.phone) {
+                    phoneHtml = '<div class="hospital-info">📞 ' + h.phone + '</div>';
+                }
+
+                var airportHtml = '';
+                if (h.airport_info) {
+                    airportHtml = '<div class="hospital-info">✈️ ' + h.airport_info + '</div>';
+                }
+
+                return '<div class="hospital-card">' +
+                    imageHtml +
+                    '<div class="hospital-content">' +
+                        '<div class="hospital-name">' + h.name + '</div>' +
+                        '<div class="hospital-location">📍 ' + h.city + (h.district ? ', ' + h.district : '') + '</div>' +
+                        (badges ? '<div class="badge-row">' + badges + '</div>' : '') +
+                        '<div class="hospital-info"><strong>' + (h.rank || '') + '</strong></div>' +
+                        airportHtml +
+                        phoneHtml +
+                        (h.address ? '<div class="hospital-info" style="font-size:0.82rem;color:#8893a0">' + (h.name_zh || '') + ' — ' + h.address + '</div>' : '') +
+                        (tagHtml ? '<div class="hospital-tags">' + tagHtml + '</div>' : '') +
+                        '<div class="hospital-actions">' +
+                            (h.website ? '<a href="' + h.website + '" target="_blank" rel="noopener" class="view-details-btn">🌐 Website</a>' : '') +
+                            '<a href="contact-new.html" class="view-details-btn">📋 Get Matched</a>' +
+                        '</div>' +
+                    '</div>' +
+                '</div>';
+            }).join('');
+        }
+
+        function hashCode(str) {
+            var hash = 0, i, chr;
+            for (i = 0; i < str.length; i++) {
+                chr = str.charCodeAt(i);
+                hash = ((hash << 5) - hash) + chr;
+                hash |= 0;
+            }
+            return Math.abs(hash);
+        }
+
+        function setFilter(kind, value) {
+            if (kind === 'region') activeRegion = value;
+            if (kind === 'specialty') activeSpecialty = value;
+            render();
+        }
+
+        searchInput.addEventListener('input', function() {
+            activeSearch = this.value;
+            render();
+        });
+
+        regionTabs.addEventListener('click', function(e) {
+            var btn = e.target.closest('.region-tab');
+            if (!btn) return;
+            regionTabs.querySelectorAll('.region-tab').forEach(function(b) { b.classList.remove('active'); });
+            btn.classList.add('active');
+            setFilter('region', btn.dataset.region);
+        });
+
+        specialtyTags.addEventListener('click', function(e) {
+            var btn = e.target.closest('.specialty-tag');
+            if (!btn) return;
+            specialtyTags.querySelectorAll('.specialty-tag').forEach(function(b) { b.classList.remove('active'); });
+            btn.classList.add('active');
+            setFilter('specialty', btn.dataset.specialty || '');
+        });
+
+        grid.addEventListener('click', function(e) {
+            var tag = e.target.closest('.hospital-tag');
+            if (!tag) return;
+            activeSpecialty = tag.textContent.replace(/\s+/g, '-').toLowerCase();
+            var tags = specialtyTags.querySelectorAll('.specialty-tag');
+            tags.forEach(function(b) { b.classList.remove('active'); });
+            var match = specialtyTags.querySelector('[data-specialty="' + activeSpecialty + '"]');
+            if (match) match.classList.add('active');
+            searchInput.value = '';
+            activeSearch = '';
+            activeRegion = 'all';
+            regionTabs.querySelectorAll('.region-tab').forEach(function(b) { b.classList.remove('active'); });
+            var allTab = regionTabs.querySelector('[data-region="all"]');
+            if (allTab) allTab.classList.add('active');
+            render();
+        });
+
+        fetchHospitals();
+    })();
+    </script>
+
     <section class="popular-guides" style="max-width:1160px;margin:0 auto;padding:40px 20px;">
         <h2 style="color:#1e3c72;margin-bottom:20px;font-size:1.5em;text-align:center;">Popular Treatment Guides</h2>
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;">
