@@ -200,13 +200,17 @@ pageStyle: |
           .rc-val.best { background:#e8f5e9;font-weight:700;color:#2e7d32; }
           .rc-country { padding:14px 10px;text-align:center; }
           .rc-country.best { background:rgba(255,255,255,.12); }
+          .faq-grid { display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:20px; }
+          .faq-card { background:#fff;border-radius:14px;padding:24px 26px;border:1px solid rgba(30,60,114,.08);box-shadow:0 6px 18px rgba(15,23,42,.05); }
+          .faq-card h3 { color:#1e3c72;font-size:1.05rem;margin-bottom:8px; }
+          .faq-card p { color:#4a5568;line-height:1.7;font-size:.95rem;margin:0; }
           @media (max-width: 768px) {
               .region-compare { overflow-x:auto;-webkit-overflow-scrolling:touch;font-size:.82rem; }
               .rc-header, .rc-row { grid-template-columns:1.2fr 1fr 1fr 1fr 1fr;min-width:520px; }
               .rc-header .rc-label, .rc-header .rc-country, .rc-row .rc-label, .rc-row .rc-val { padding:8px 6px; }
               .hero-home {
-                  padding-top: 110px;
-                  padding-bottom: 72px;
+                  padding-top: 50px;
+                  padding-bottom: 60px;
               }
               .hero-home h1 {
                   font-size: 2.1rem;
@@ -222,6 +226,9 @@ pageStyle: |
                   grid-template-columns: 1fr !important;
               }
               .journey-grid[style*="repeat(3,1fr)"] {
+                  grid-template-columns: 1fr !important;
+              }
+              .faq-grid {
                   grid-template-columns: 1fr !important;
               }
               .hero-metric {
@@ -518,21 +525,34 @@ schema: |
         </div>
     </section>
 
-    <!-- NEWSLETTER SUBSCRIPTION -->
-    <section style="padding:60px 0;background:linear-gradient(135deg,#1e3c72 0%,#2a5298 100%);color:white">
-        <div style="max-width:900px;margin:0 auto;padding:0 24px;text-align:center">
-            <div style="font-size:3em;margin-bottom:12px">📬</div>
-            <h2 style="color:white;font-size:2em;margin:0 0 12px;font-weight:700">Get the China Medical Tourism Briefing</h2>
-            <p style="color:rgba(255,255,255,0.92);font-size:1.1em;margin:0 0 8px;line-height:1.5">A free monthly email with the most important China healthcare updates, cost changes, and patient stories.</p>
-            <p style="color:rgba(255,255,255,0.7);font-size:0.9em;margin:0 0 28px">No spam. Unsubscribe anytime. ~2,000 words, first Friday of each month.</p>
-            <form action="https://formspree.io/f/xwvavoqz" method="POST" style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center;max-width:560px;margin:0 auto">
-                <input type="email" name="email" required placeholder="your.email@example.com" style="flex:1;min-width:240px;padding:14px 20px;border-radius:8px;border:none;font-size:1em;color:#333;outline:none">
-                <input type="hidden" name="_subject" value="New China Hospitals Guide newsletter subscriber">
-                <input type="hidden" name="_next" value="https://chinahospitalsguide.com/?subscribed=1">
-                <input type="text" name="_gotcha" style="display:none">
-                <button type="submit" style="background:#ff6b6b;color:white;border:none;padding:14px 32px;border-radius:8px;font-size:1.05em;font-weight:600;cursor:pointer;white-space:nowrap;transition:background 0.2s" onmouseover="this.style.background='#ff5252'" onmouseout="this.style.background='#ff6b6b'">Subscribe Free →</button>
-            </form>
-            <p style="color:rgba(255,255,255,0.7);font-size:0.8em;margin:18px 0 0">What you'll get: NMPA approvals · cost changes · top hospital moves · exclusive case studies.</p>
+    <!-- FAQ: Top patient concerns -->
+    <section class="band">
+        <div class="section-shell">
+            <h2 class="section-title">Questions International Patients Ask</h2>
+            <p class="section-lead">Real questions we answer every day — with honest, no-fluff answers.</p>
+            <div class="faq-grid">
+                <div class="faq-card">
+                    <h3>🇨🇳 Is it safe to have surgery in China?</h3>
+                    <p>Yes — at China's top hospitals, safety standards are on par with the best hospitals globally. The institutions we work with are <strong>JCI-accredited</strong> and hold the national <strong>Grade 3A</strong> classification, China's highest hospital tier. Surgeons at hospitals like Fuwai perform <strong>15,000+ cardiac surgeries a year</strong> — volume that drives outcomes better than most Western centers. That said, we only recommend hospitals we've verified ourselves — we don't send patients anywhere we wouldn't send our own family.</p>
+                </div>
+                <div class="faq-card">
+                    <h3>🗣️ Do Chinese hospital staff speak English?</h3>
+                    <p>The hospitals we recommend have <strong>dedicated international departments</strong> with English-speaking coordinators, translators, and doctors. Many top surgeons trained in the US, UK, or Germany and speak fluent English. Outside the international department, English is limited — which is why we match you to hospitals that are set up for foreign patients.</p>
+                </div>
+                <div class="faq-card">
+                    <h3>💰 How much does surgery cost, and how do I pay?</h3>
+                    <p>Major surgery in China typically costs <strong>50–80% less</strong> than US private care: knee replacement <strong>$5,500–$9,000</strong>, heart bypass <strong>$10,000–$16,000</strong>, CAR-T therapy from <strong>$30,000</strong>. Hospitals accept <strong>cash, WeChat/Alipay, and major credit cards</strong> (Visa, Mastercard, Amex). Some accept international insurance with direct billing. We give you a clear cost estimate before you travel — no surprise bills.</p>
+                </div>
+                <div class="faq-card">
+                    <h3>🛂 How do I get a medical visa for China?</h3>
+                    <p>Most patients apply for an <strong>S2 (short-term private visit) visa</strong> or an <strong>L (tourist) visa</strong>. Once you have a hospital appointment confirmation, the hospital can provide an <strong>invitation letter</strong> to support your application. For many nationalities, <strong>eVisa or Visa-on-Arrival</strong> options are available — and we guide you through which one applies to your passport.</p>
+                </div>
+                <div class="faq-card">
+                    <h3>🏠 What happens after surgery — follow-up care?</h3>
+                    <p>Before you leave China, the hospital provides a <strong>discharge summary in English</strong> and a follow-up plan your doctor back home can follow. Many hospitals offer <strong>telemedicine follow-ups</strong> post-discharge. For complex recovery, we can coordinate a stay at a nearby serviced apartment before you fly home.</p>
+                </div>
+            </div>
+            <p style="text-align:center;margin-top:12px;color:#888;font-size:.92rem">Have a different question? <a href="/contact-new.html" style="color:#1e3c72;font-weight:700">Ask us directly →</a></p>
         </div>
     </section>
 

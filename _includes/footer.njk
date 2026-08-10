@@ -37,6 +37,17 @@
                     </p>
                 </div>
             </div>
+            <!-- Compact newsletter -->
+            <div style="max-width:480px;margin:0 auto 20px;padding:16px 0;border-top:1px solid #e5eaf1;">
+                <p style="margin:0 0 8px;font-size:.88rem;color:#6b7280;">📬 Monthly briefing: NMPA approvals, cost changes, top hospital moves. No spam.</p>
+                <form action="https://formspree.io/f/xwvavoqz" method="POST" style="display:flex;gap:8px;max-width:400px;margin:0 auto">
+                    <input type="email" name="email" required placeholder="your.email@example.com" style="flex:1;padding:8px 14px;border-radius:6px;border:1px solid #d1d5db;font-size:.9em;color:#333;outline:none">
+                    <input type="hidden" name="_subject" value="New CHG newsletter subscriber">
+                    <input type="hidden" name="_next" value="https://chinahospitalsguide.com/?subscribed=1">
+                    <input type="text" name="_gotcha" style="display:none">
+                    <button type="submit" style="background:#1e3c72;color:#fff;border:none;padding:8px 18px;border-radius:6px;font-size:.9em;font-weight:600;cursor:pointer;white-space:nowrap">Subscribe</button>
+                </form>
+            </div>
             <p style="margin:0;color:#6b7280;font-size:0.9rem;">{{ site.tagline }}</p>
             <p style="margin:8px 0 0;color:#9ca3af;font-size:0.7rem;">v{{ site.version }}</p>
         </div>
