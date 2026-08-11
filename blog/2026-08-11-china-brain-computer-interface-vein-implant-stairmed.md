@@ -118,7 +118,7 @@ The 10-minute figure matters for a structural reason, not just for spectacle. BC
 
 </div>
 
-## What StairMed Actually Announced
+## What StairMed Announced
 
 StairMed's design follows the same "endovascular" logic as Synchron's Stentrode, the US device that has been implanted in ten patients in the US and Australia since 2023. But there is a difference in the anchor point: Synchron's device settles inside a blood vessel near the brain's motor cortex and reads signals through the vessel wall, while StairMed says its device **exits the vessel and anchors just outside it** — closer to the neural tissue it needs to listen to, without the trauma of a craniotomy.
 
@@ -138,7 +138,7 @@ The state backing is equally concrete. Beyond the policy target of 2-3 globally 
 
 ## Where This Plugs Into Chinese Hospitals Today
 
-For international patients, the practical question is not "when will the vein implant exist" but "what BCI care can I actually get in China now." The answer, as of August 2026:
+For international patients, the practical question is not "when will the vein implant exist" but "what BCI care can I get in China now." The answer, as of August 2026:
 
 - **Approved BCI motor rehabilitation** is running at Chinese neuroscience centers using the NMPA-cleared implant, typically for patients with paralysis following spinal cord injury or stroke.
 - **BCI rehabilitation is usually combined with the hospital's standard rehab program**, which at Chinese centers routinely layers in traditional Chinese medicine — acupuncture for nerve and muscle activation, tuina (推拿) for limb circulation, and qigong-based movement therapy for coordination. This integrated Chinese-Western medicine (中西医结合) rehab model is one of the things that makes Chinese rehabilitation stays different from Western ones: the BCI hardware does the neural retraining, and the TCM therapies support the recovery around it.
