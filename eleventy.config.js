@@ -41,6 +41,7 @@ module.exports = function(eleventyConfig) {
   // New blog posts should use blog-post.njk layout via frontmatter.
   eleventyConfig.addPassthroughCopy("blog/");
   eleventyConfig.addPassthroughCopy("stories/");
+  eleventyConfig.addPassthroughCopy("zh/");
   // Root HTML files — only passthrough the ones we haven't converted to .njk yet
   const glob = require("glob");
   glob.sync("*.html").forEach(file => {
