@@ -571,8 +571,8 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://chinahospitalsguide.com/blog/knee-replacement-cost-china.html</loc>
-    <lastmod>2026-07-29</lastmod>
+    <loc>https://chinahospitalsguide.com/blog/knee-replacement-cost-china/</loc>
+    <lastmod>2026-08-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1044,4 +1044,11 @@
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://chinahospitalsguide.com/blog/lung-cancer-treatment-china-2026/</loc>
+    <lastmod>2026-08-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
 </urlset>
