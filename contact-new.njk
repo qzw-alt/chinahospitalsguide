@@ -77,6 +77,14 @@ pageStyle: |
           .case-panel li:last-child {
               border-bottom: 0;
           }
+          .lead-row {
+              grid-template-columns: repeat(3, 1fr);
+          }
+          @media (max-width: 600px) {
+              .lead-row {
+                  grid-template-columns: 1fr;
+              }
+          }
           @media (max-width: 900px) {
               .case-grid {
                   grid-template-columns: 1fr;
@@ -213,7 +221,9 @@ schema: |
         <div class="case-grid">
             <div class="case-panel">
                 <h2>Case review form</h2>
-                <form id="consultForm">
+                <form id="consultForm" action="https://formspree.io/f/xwvavoqz" method="POST">
+                    <input type="hidden" name="_subject" value="New Case Review — China Hospitals Guide">
+                    <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
                     <div class="form-group">
                         <label>Full Name <span>*</span></label>
                         <input type="text" id="firstname" name="firstname" required placeholder="John Smith">
@@ -271,6 +281,41 @@ schema: |
                             <option value="General Health Checkup">General Health Checkup</option>
                             <option value="Other">Other</option>
                         </select>
+                    </div>
+
+                    <div class="form-row lead-row">
+                        <div class="form-group">
+                            <label>Budget Range</label>
+                            <select id="budget" name="budget">
+                                <option value="">Select budget...</option>
+                                <option value="Under $5k">Under $5k</option>
+                                <option value="$5k–$15k">$5k–$15k</option>
+                                <option value="$15k–$50k">$15k–$50k</option>
+                                <option value="$50k+">$50k+</option>
+                                <option value="Not sure">Not sure</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Expected Timeline</label>
+                            <select id="timeline" name="timeline">
+                                <option value="">Select timeline...</option>
+                                <option value="ASAP">ASAP</option>
+                                <option value="Within 1 month">Within 1 month</option>
+                                <option value="1–3 months">1–3 months</option>
+                                <option value="3+ months">3+ months</option>
+                                <option value="Not sure">Not sure</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Diagnosis Status</label>
+                            <select id="diagnosis_status" name="diagnosis_status">
+                                <option value="">Select status...</option>
+                                <option value="Diagnosed">Diagnosed</option>
+                                <option value="Suspected">Suspected</option>
+                                <option value="Not diagnosed">Not diagnosed</option>
+                                <option value="Seeking second opinion">Seeking second opinion</option>
+                            </select>
+                        </div>
                     </div>
 
                     <div class="form-group">
@@ -335,6 +380,15 @@ schema: |
 
                     <button type="submit" class="submit-btn" id="submitBtn">Submit Case Review</button>
                     <p class="privacy-note">Your information is used only to review your case and recommend or deliver the correct service path.</p>
+                    <div id="formError" role="alert" style="display:none;margin-top:16px;padding:16px 18px;background:#fdecea;border:1px solid #f5c6c0;border-radius:10px;color:#b3261e;font-size:0.95rem;">
+                        <p style="margin:0 0 8px;font-weight:700;">Something went wrong submitting your case.</p>
+                        <p style="margin:0;">Please try again, or contact us directly so we don't miss your case:</p>
+                        <p style="margin:10px 0 0;">
+                            <a href="https://t.me/chinahospitalguide" style="color:#0088cc;font-weight:600;" target="_blank" rel="noopener">Telegram @chinahospitalguide</a>
+                            &nbsp;·&nbsp; WeChat: <strong>chinahospitalguide</strong>
+                            &nbsp;·&nbsp; <a href="mailto:contact@chinahospitalsguide.com" style="color:#0088cc;font-weight:600;">contact@chinahospitalsguide.com</a>
+                        </p>
+                    </div>
                 </form>
 
                 <div class="success-message" id="successMessage">
@@ -389,3 +443,60 @@ schema: |
             </div>
         </div>
     </main>
+
+    <script>
+    (function() {
+        var form = document.getElementById('consultForm');
+        if (!form) return;
+        var submitBtn = document.getElementById('submitBtn');
+        var success = document.getElementById('successMessage');
+        var errorBox = document.getElementById('formError');
+
+        // Single source of truth: the form's action URL carries the Formspree form id.
+        // Replace with a dedicated case-review form id if you create one (currently reuses
+        // the newsletter endpoint so submissions work immediately).
+        var action = form.getAttribute('action') || '';
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            if (submitBtn) {
+                submitBtn.disabled = true;
+                submitBtn.textContent = 'Submitting...';
+            }
+            if (errorBox) errorBox.style.display = 'none';
+
+            var data = new FormData(form);
+            var name = (data.get('firstname') || '').trim();
+            var treatment = data.get('treatment_category') || '';
+            data.set('_subject', 'New Case Review' + (name ? ' — ' + name : '') + (treatment ? ' (' + treatment + ')' : ''));
+
+            fetch(action, {
+                method: 'POST',
+                body: data,
+                headers: { 'Accept': 'application/json' }
+            }).then(function(res) {
+                if (!res.ok) throw new Error('Formspree error ' + res.status);
+                if (typeof gtag === 'function') {
+                    gtag('event', 'generate_lead', { page_location: location.pathname });
+                    gtag('event', 'conversion', {
+                        send_to: 'G-RVYZENK472',
+                        event_category: 'form',
+                        event_label: 'case_review_submitted',
+                        page_location: location.pathname
+                    });
+                }
+                form.style.display = 'none';
+                if (success) {
+                    success.classList.add('visible');
+                    success.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            }).catch(function() {
+                if (submitBtn) {
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = 'Submit Case Review';
+                }
+                if (errorBox) errorBox.style.display = 'block';
+            });
+        });
+    })();
+    </script>

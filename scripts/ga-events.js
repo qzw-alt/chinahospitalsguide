@@ -1,5 +1,10 @@
 // GA4 Custom Events — China Hospitals Guide
 // Tracks: CTA clicks, form interactions, scroll depth, outbound links
+//
+// DEPRECATED (2026-08-14): This script is no longer loaded by any page. It references
+// an old #formSuccess element and an EmailJS integration that no longer exist in
+// contact-new.njk. The active analytics is /ga4-events.js (loaded site-wide via
+// _includes/scripts.njk). Do not build new tracking on this file.
 (function() {
   if (typeof gtag !== 'function') return;
 
