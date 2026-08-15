@@ -238,7 +238,7 @@ Send us the latest pathology report — we'll check eligibility across commercia
 
 - [CAR-T Therapy Cost in China 2026 (Full Price Guide)](/blog/car-t-cost-china-2026/)
 - [Solid Tumor CAR-T in China — Satri-cel Guide](/blog/solid-tumor-car-t-china.html)
-- [CAR-T Therapy Hospitals in China](/blog/car-t-therapy-hospitals-china-2026.html)
+- [CAR-T Therapy Hospitals in China](/blog/car-t-therapy-hospitals-china-2026/)
 - [Cancer Treatment Cost in China 2026](/blog/cancer-treatment-cost-china.html)
 - [For Russian-speaking patients: лечение рака в Китае](/ru.html)
 - [For Arabic-speaking patients: العلاج في الصين](/ar.html)

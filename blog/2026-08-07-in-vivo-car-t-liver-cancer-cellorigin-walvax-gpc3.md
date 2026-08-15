@@ -145,7 +145,7 @@ For a patient with advanced HCC, the realistic options in China right now are:
 
 1. **Trial enrollment** — the GPC3 in vivo CAR IIT and the ex vivo GPC3 CAR-T programs (Oricell and others) enroll through major Chinese liver cancer centers. IITs are coordinated directly with the study team and the hospital's international department; pharma-sponsored trials are listed on [clinicaltrials.gov](https://clinicaltrials.gov/search?cond=Liver+Cancer&intr=GPC3). This is the only route to the in vivo program today.
 2. **Approved cell therapy** — for patients whose cancer fits the label, satri-cel is commercially available in China for Claudin18.2-positive, HER2-negative advanced gastric or gastroesophageal junction cancer after two prior lines — the world's first approved solid-tumor CAR-T, at $89,000-$170,000.
-3. **Standard liver cancer care** — surgery, ablation, TACE, and systemic therapy at Chinese hepatobiliary centers, with the [liver treatment guide](https://chinahospitalsguide.com/blog/liver-treatment-china.html) covering the hospital options and the [CAR-T hospital guide](https://chinahospitalsguide.com/blog/car-t-therapy-hospitals-china-2026.html) explaining how cell therapy is delivered and coordinated.
+3. **Standard liver cancer care** — surgery, ablation, TACE, and systemic therapy at Chinese hepatobiliary centers, with the [liver treatment guide](https://chinahospitalsguide.com/blog/liver-treatment-china.html) covering the hospital options and the [CAR-T hospital guide](https://chinahospitalsguide.com/blog/car-t-therapy-hospitals-china-2026/) explaining how cell therapy is delivered and coordinated.
 
 Patients from Southeast Asia, Russia and Central Asia, and the Middle East — the site's core audiences — are already the majority of international CAR-T patients at Chinese centers, and the pathway is the same one used for the approved products: a referral through an international department, a review of records and pathology, and a treatment plan with an itemized cost estimate before travel. Our [cancer treatment guide](https://chinahospitalsguide.com/blog/cancer-treatment-china-2026.html) walks through the full pathway.
 
@@ -168,5 +168,5 @@ Three signals over the next 12-18 months: the first readouts from the CAR-Mix II
 - [Solid Tumor CAR-T in China: The New Frontier](/blog/solid-tumor-car-t-china.html)
 - [CAR-T Clinical Trials in China: How to Enroll](/blog/car-t-clinical-trials-china-2026.html)
 - [Liver Cancer Treatment in China: Hospitals and Options](/blog/liver-treatment-china.html)
-- [CAR-T Therapy Hospitals in China: Where Treatment Happens](/blog/car-t-therapy-hospitals-china-2026.html)
+- [CAR-T Therapy Hospitals in China: Where Treatment Happens](/blog/car-t-therapy-hospitals-china-2026/)
 - [Cancer Treatment in China: A Guide for International Patients](/blog/cancer-treatment-china-2026.html)
