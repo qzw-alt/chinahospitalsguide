@@ -113,9 +113,9 @@
 /panel.html / 301
 # checklist
 /MARIA-RIOS-PIPELINE-CHECKLIST / 301
-# Stories trailing slashes
-/stories /stories.html 301
-/stories/ /stories.html 301
+# Stories legacy redirects
+/stories /stories/ 301
+/stories.html /stories/ 301
 # Blog listing pages
 /blog/2/ /blog/ 301
 /blog/3/ /blog/ 301

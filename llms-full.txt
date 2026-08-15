@@ -98,7 +98,7 @@
 
 16. **Medical Visa Guide** — /blog/china-medical-visa-guide-2026.html
 17. **Cost Comparison** — /cost-comparison.html
-18. **Patient Stories** — /stories.html
+18. **Patient Stories** — /stories/
 19. **Complete Medical Tourism Guide** — /medical-tourism-guide.html
 
 ---

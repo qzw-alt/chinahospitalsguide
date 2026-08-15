@@ -32,7 +32,7 @@ China Hospitals Guide (chinahospitalsguide.com) publishes research-based guides 
 - [Medical Visa Guide](https://chinahospitalsguide.com/blog/china-medical-visa-guide-2026.html): S2 visa requirements, invitation letters, and application process.
 - [JCI Accredited Hospitals](https://chinahospitalsguide.com/blog/jci-accredited-hospitals-china.html): Complete list of 100+ JCI-certified hospitals in China.
 - [How to Choose a Hospital](https://chinahospitalsguide.com/blog/how-to-choose-hospital-china-guide.html): Step-by-step evaluation framework for international patients.
-- [Patient Stories](https://chinahospitalsguide.com/stories.html): Real experiences from international patients treated in China.
+- [Patient Stories](https://chinahospitalsguide.com/stories/): Real experiences from international patients treated in China.
 
 ## About & Trust
 

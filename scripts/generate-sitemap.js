@@ -61,6 +61,7 @@ function skipFile(filePath) {
 
 const pages = walk('_site')
   .filter(p => p.path !== '/404.html' && !p.path.includes('/template-news-article.html'))
+  .filter(p => p.path !== '/stories.html') // stories.html is a meta-refresh redirect to /stories/
   .filter(p => !skipFile(p.path));
 
 const urls = pages.map(p => {
