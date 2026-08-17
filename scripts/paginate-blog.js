@@ -23,8 +23,7 @@ function paginateBlog(dir) {
 
   const totalCards = cards.length;
   if (totalCards === 0) {
-    console.log('Paginate: No blog cards found, skipping.');
-    return;
+    throw new Error('Paginate: no blog cards found — refusing to emit broken pages');
   }
 
   const totalPages = Math.ceil(totalCards / ARTICLES_PER_PAGE);
@@ -35,9 +34,22 @@ function paginateBlog(dir) {
 
   console.log(`Paginate: ${totalCards} articles → ${totalPages} pages (${ARTICLES_PER_PAGE}/page)`);
 
-  // Extract page boilerplate: everything before blog-grid and after blog-grid
-  const gridStart = html.indexOf('<div class="blog-grid">');
-  const gridEnd = html.lastIndexOf('</div>', html.indexOf('<a href="/" class="back-link">'));
+  // Extract page boilerplate: everything before blog-grid and after blog-grid.
+  // The grid div carries an id attribute (id="blog-grid", used by the category
+  // filter JS), so match the opening tag with a regex that tolerates attributes
+  // instead of an exact indexOf that silently returns -1.
+  const gridMatch = html.match(/<div\b[^>]*class="blog-grid"[^>]*>/);
+  if (!gridMatch) {
+    throw new Error('Paginate: <div class="blog-grid"> not found — refusing to emit broken pages');
+  }
+  const gridStart = gridMatch.index;
+  const gridOpenTag = gridMatch[0];
+
+  const backLinkIdx = html.indexOf('<a href="/" class="back-link">');
+  if (backLinkIdx === -1) {
+    throw new Error('Paginate: <a href="/" class="back-link"> not found — refusing to emit broken pages');
+  }
+  const gridEnd = html.lastIndexOf('</div>', backLinkIdx);
 
   const beforeGrid = html.substring(0, gridStart);
   const afterGrid = html.substring(gridEnd + '</div>'.length);
@@ -122,7 +134,7 @@ function paginateBlog(dir) {
     const startIdx = (p - 1) * ARTICLES_PER_PAGE;
     const pageCards = cards.slice(startIdx, startIdx + ARTICLES_PER_PAGE);
 
-    let pageHtml = beforeGrid + '<div class="blog-grid">\n';
+    let pageHtml = beforeGrid + gridOpenTag + '\n';
     pageHtml += pageCards.join('\n');
     pageHtml += '\n</div>';
     pageHtml += paginationNav(p);

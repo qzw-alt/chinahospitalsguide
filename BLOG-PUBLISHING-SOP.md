@@ -100,10 +100,15 @@ schema: |
 
 ### 第 5 步：构建 + 自检（不能跳过）
 
-在项目根目录（`temp_repo`）运行：
+在项目根目录（`temp_repo`）运行（**禁止 `npm run build`**——它内含 `generate-sitemap.js`，会把 `sitemap.xml` 重新生成成 ~287 条死链的污染版）：
 
 ```bash
-npm run build
+rm -rf _site && npx @11ty/eleventy --quiet && \
+node scripts/inject-hints.js && node scripts/fix-webp.js && \
+node scripts/inject-enhancements.js && node scripts/inject-robots-meta.js && \
+node scripts/fix-duplicate-schema.js && node scripts/inject-schema.js && \
+node scripts/inject-crosslinks.js && node scripts/paginate-blog.js && \
+npx cleancss -o _site/styles.css _site/styles.css && node scripts/minify-html.js
 ```
 
 构建完成后，**必须**执行这 3 项检查：
@@ -155,9 +160,10 @@ git commit -m "article: [slug]"
 | href 写成 `.html` | 新文章 404 | 新 `.md` 文章 href 一律尾斜杠 `slug/` |
 | 卡片里换行 | 分页脚本正则抓错，分页错乱 | 卡片严格单行 |
 | 新卡片插到列表中间/末尾 | 顺序乱，最新文章不显示在第一页 | 统一插在 `blog-grid` 后第一位 |
+| `paginate-blog.js` 用 `indexOf('<div class="blog-grid">')` 找网格，但源码是 `<div class="blog-grid" id="blog-grid">`（带 id） | 匹配返回 -1，每个分页页丢失 `<!DOCTYPE>`/`<head>`/CSS/导航/页头，整页无样式（2026-08-17 修复） | 已改为正则匹配并保留 id；找不到网格/卡片时直接抛错让 CI 失败 |
 
 ---
 
 ## 一句话总结
 
-**发文章 = 写 `.md` + 往 `blog/index.html` 顶部插一张「单行、5 开 5 闭 div、尾斜杠 URL」的卡片 + 更新 `sitemap.xml`，然后 `npm run build` 自检通过再提交。**
+**发文章 = 写 `.md` + 往 `blog/index.html` 顶部插一张「单行、5 开 5 闭 div、尾斜杠 URL」的卡片 + 更新 `sitemap.xml`，然后用第 5 步的 Eleventy 构建链自检通过再提交（禁止 `npm run build`）。**
