@@ -2924,3 +2924,169 @@ ins.adsbygoogle {
         height: auto !important;
     }
 }
+
+/* ============================================
+   Blog Article Typography & Layout
+   ============================================ */
+.article-shell {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 120px 20px 60px;
+    background: var(--bg);
+}
+.article-card {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow);
+    padding: 48px 56px;
+}
+.article-hero {
+    margin-bottom: 32px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--border);
+}
+.article-hero .kicker {
+    display: inline-block;
+    background: rgba(26, 58, 107, 0.08);
+    color: var(--primary);
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+.article-hero h1 {
+    font-size: 2.15rem;
+    line-height: 1.2;
+    margin-bottom: 14px;
+    color: var(--dark);
+}
+.article-hero p {
+    color: var(--text-light);
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+.article-body {
+    font-size: 1.02rem;
+    line-height: 1.75;
+    color: var(--text);
+}
+.article-body h2 {
+    font-size: 1.5rem;
+    margin: 2.1em 0 0.8em;
+    padding-bottom: 0.45em;
+    border-bottom: 2px solid var(--border);
+    color: var(--primary);
+}
+.article-body h3 {
+    font-size: 1.24rem;
+    margin: 1.7em 0 0.6em;
+    color: var(--primary);
+}
+.article-body p {
+    margin: 0 0 1.2em;
+}
+.article-body ul,
+.article-body ol {
+    margin: 0 0 1.4em;
+    padding-left: 1.5em;
+}
+.article-body li {
+    margin-bottom: 0.5em;
+}
+.article-body a {
+    color: var(--secondary);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+.article-body table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5em 0;
+    font-size: 0.95rem;
+    line-height: 1.55;
+}
+.article-body thead th {
+    background: var(--primary);
+    color: #ffffff;
+    text-align: left;
+    font-weight: 600;
+    padding: 12px 16px;
+}
+.article-body tbody td {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+}
+.article-body tbody tr:nth-child(even) {
+    background: #f6f9fc;
+}
+.article-body tbody tr:hover {
+    background: #edf2f8;
+}
+.article-body blockquote {
+    margin: 1.6em 0;
+    padding: 16px 20px;
+    border-left: 4px solid var(--secondary);
+    background: #f4f7fa;
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    color: var(--text);
+}
+.article-body blockquote p {
+    margin: 0 0 0.6em;
+}
+.article-body blockquote p:last-child {
+    margin: 0;
+}
+.article-body figure {
+    margin: 1.8em 0;
+    text-align: center;
+}
+.article-body figcaption {
+    margin-top: 8px;
+    font-size: 0.85rem;
+    color: var(--text-light);
+    line-height: 1.5;
+}
+.article-body hr {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 2.4em 0;
+}
+.article-footer {
+    margin-top: 32px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    color: var(--text-light);
+    font-size: 0.85rem;
+    line-height: 1.7;
+}
+.article-footer a {
+    color: var(--secondary);
+}
+@media (max-width: 768px) {
+    .article-shell {
+        padding: 100px 14px 48px;
+    }
+    .article-card {
+        padding: 28px 20px;
+    }
+    .article-hero h1 {
+        font-size: 1.65rem;
+    }
+    .article-body {
+        font-size: 0.98rem;
+    }
+    .article-body table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+        font-size: 0.88rem;
+    }
+    .article-body thead th,
+    .article-body tbody td {
+        padding: 9px 12px;
+    }
+}
