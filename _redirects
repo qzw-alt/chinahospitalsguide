@@ -133,3 +133,14 @@
 
 # 2026-08-18: removed duplicate Chinese rankings .md (cannibalizing zh/ page)
 /blog/china-hospital-rankings-2026/ /zh/hospital-rankings-2026.html 301
+
+# 2026-08-18: reverted "procedure x city" decision pages + html→md upgrades (were 404ing)
+/blog/cataract-surgery-guangzhou-2026.html /blog/cataract-surgery-china.html 301
+/blog/ivf-shenzhen-2026.html /blog/ivf-cost-china-2026.html 301
+/blog/knee-replacement-chengdu-2026.html /blog/knee-replacement-surgery-china-2026.html 301
+/blog/lasik-shanghai-2026.html /blog/lasik-eye-surgery-china-2026.html 301
+/blog/liposuction-beijing-2026.html /blog/beijing-liposuction-hospitals-2026.html 301
+/blog/best-cardiac-surgery-hospitals-china-2026.html /blog/cardiac-bypass-surgery-china-2026.html 301
+/blog/car-t-therapy-hospitals-china-2026.html /blog/car-t-therapy-china-2026.html 301
+/blog/rhinoplasty-china-2026.html /blog/plastic-surgery-china-guide-2026.html 301
+/blog/rhinoplasty-cost-china-2026.html /blog/plastic-surgery-china-guide-2026.html 301
