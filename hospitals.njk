@@ -238,6 +238,10 @@ pageStyle: |
               background: #fff2de;
               color: #d2691e;
           }
+          .badge-3a {
+              background: #e8eef9;
+              color: #1e3c72;
+          }
           .hospital-tags {
               display: flex;
               flex-wrap: wrap;
@@ -407,8 +411,8 @@ schema: |
   {
           "@context": "https://schema.org",
           "@type": "Article",
-          "headline": "100+ Best Hospitals in China for International Patients 2026 | JCI-Accredited",
-          "description": "100+ Best Hospitals in China for International Patients 2026 | JCI-Accredited - China Hospitals Guide 2026",
+          "headline": "50+ Hospitals in China for International Patients 2026 | JCI-Accredited",
+          "description": "50+ Hospitals in China for International Patients 2026 | JCI-Accredited - China Hospitals Guide 2026",
           "image": "https://chinahospitalsguide.com/og-image.webp",
           "author": { "@type": "Organization", "name": "China Hospitals Guide" },
           "publisher": {
@@ -448,6 +452,7 @@ schema: |
     </section>
 
     <div class="results-count" id="resultsCount">Showing all 52 hospitals</div>
+    <div style="max-width:1160px;margin:4px auto 0;padding:0 20px;text-align:center;color:#8a94a3;font-size:0.8rem">Each hospital shows when its data was last verified.</div>
 
     <div class="disclaimer">
         <div class="disclaimer-box">
@@ -574,6 +579,7 @@ schema: |
                 }
 
                 var badges = '';
+                if (h.grade_3a) badges += '<span class="badge badge-3a">🏥 Grade 3A</span>';
                 if (h.jci) badges += '<span class="badge badge-jci">JCI Accredited</span>';
                 if (h.international) badges += '<span class="badge badge-intl">🌐 Intl. Dept.</span>';
                 if (h.international_dept && h.international_dept.languages) {
@@ -604,7 +610,9 @@ schema: |
                         '<div class="hospital-name">' + h.name + '</div>' +
                         '<div class="hospital-location">📍 ' + h.city + (h.district ? ', ' + h.district : '') + '</div>' +
                         (badges ? '<div class="badge-row">' + badges + '</div>' : '') +
+                        (h.trust && h.trust.last_verified ? '<div class="hospital-info" style="font-size:0.82rem;color:#207948">✓ Data verified ' + formatVerified(h.trust.last_verified) + '</div>' : '') +
                         '<div class="hospital-info"><strong>' + (h.rank || '') + '</strong></div>' +
+                        (h.estimated_wait_weeks ? '<div class="hospital-info">⏱ Est. wait: ' + h.estimated_wait_weeks + '</div>' : '') +
                         airportHtml +
                         phoneHtml +
                         (h.address ? '<div class="hospital-info" style="font-size:0.82rem;color:#8893a0">' + (h.name_zh || '') + ' — ' + h.address + '</div>' : '') +
@@ -616,6 +624,14 @@ schema: |
                     '</div>' +
                 '</div>';
             }).join('');
+        }
+
+        function formatVerified(dateStr) {
+            if (!dateStr) return '';
+            var d = new Date(dateStr);
+            if (isNaN(d.getTime())) return dateStr;
+            var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+            return months[d.getMonth()] + ' ' + d.getFullYear();
         }
 
         function hashCode(str) {
