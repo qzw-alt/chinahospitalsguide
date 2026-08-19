@@ -15,7 +15,26 @@ layout: base.njk
 {{ content | safe }}
 </div>
 <footer class="article-footer">
-    <p>Last updated: {{ date or '2026' }}. China Hospitals Guide provides independent coordination for international patients seeking treatment in China.</p>
+    {%- if updated %}
+    <p>Last verified: {{ updated | dateDisplay }}. First published: {{ date | dateDisplay }}.</p>
+    {%- else %}
+    <p>Last updated: {{ date | dateDisplay }}.</p>
+    {%- endif %}
+    {%- if sources %}
+    <div class="article-sources">
+        <p style="font-weight:700;margin:14px 0 6px;">Sources</p>
+        <ol style="margin:0 0 6px;padding-left:20px;font-size:0.9rem;color:#4b5565;">
+        {%- for s in sources %}
+            <li>{{ s }}</li>
+        {%- endfor %}
+        </ol>
+    </div>
+    {%- endif %}
+    {%- if reviewed %}
+    <p>Reviewed for medical accuracy: {{ reviewed }}.</p>
+    {%- endif %}
+    <p>China Hospitals Guide provides independent coordination for international patients seeking treatment in China. We are not a hospital, doctor, or medical provider — we do not diagnose, guarantee treatment outcomes, or replace professional medical advice. Prices are estimates; final quotes come from hospitals.</p>
+    <p><a href="{{ '/about.html' | url }}">Editorial policy</a></p>
     <p><a href="{{ '/blog/' | url }}">Back to Blog</a> | <a href="{{ '/contact-new.html' | url }}">Start Free Case Review</a></p>
 </footer>
 <div class="lead-magnet">

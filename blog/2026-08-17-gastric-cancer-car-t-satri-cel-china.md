@@ -5,6 +5,10 @@ description: "Satri-cel, the world's first CAR-T for gastric cancer (CLDN18.2), 
 kicker: "Gastric Cancer CAR-T"
 subtitle: "The world's first CAR-T cell therapy for a solid tumor — targeting CLDN18.2 in advanced gastric cancer — was developed and approved in China. Here are the Lancet CT041-ST-01 data, who qualifies, the real risks, and how international patients apply."
 date: 2026-08-17
+updated: 2026-08-17
+sources:
+  - "NMPA approval announcement for satri-cel (satricabtagene autoleucel), June 2026"
+  - "Qi et al., The Lancet — CT041-ST-01 phase II trial data"
 
 schema: |
   [

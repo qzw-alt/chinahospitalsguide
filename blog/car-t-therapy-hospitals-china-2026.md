@@ -5,6 +5,11 @@ description: "CAR-T in China: $89K-$151K commercial, $30K-$80K trials. Top 5 hos
 kicker: "CAR-T Cell Therapy Decision Guide"
 subtitle: "China has more NMPA-approved CAR-T products than any other country. Commercial CAR-T: $89K-$151K; trial access: $30K-$80K. Top 5 hospitals for international patients, wait times, and the full pathway from records review to infusion."
 date: 2026-08-15
+updated: 2026-08-15
+sources:
+  - "National Medical Products Administration (NMPA) — approved CAR-T product database"
+  - "Official hospital websites for top CAR-T centers with international departments"
+  - "Published 2026 pricing reports for commercial and clinical CAR-T in China"
 
 schema: |
   [

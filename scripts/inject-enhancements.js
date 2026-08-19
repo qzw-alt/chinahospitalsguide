@@ -2,9 +2,7 @@
 const fs = require('fs');
 const path = require('path');
 
-// Copy ga-events.js to _site/
-fs.copyFileSync('scripts/ga-events.js', '_site/ga-events.js');
-console.log('Copied ga-events.js to _site/');
+// ga4-events.js is copied to _site by eleventy passthrough-copy (see eleventy.config.js)
 
 // ── Exit Popup HTML + JS ──
 const exitPopupHTML = `
@@ -88,8 +86,8 @@ function processDir(dir) {
       }
 
       // 1b. Inject GA4 events script before </body>
-      if (!html.includes('ga-events.js') && html.includes('</body>')) {
-        html = html.replace('</body>', '  <script src="/ga-events.js" defer></script>\n</body>');
+      if (!html.includes('ga4-events.js') && html.includes('</body>')) {
+        html = html.replace('</body>', '  <script src="/ga4-events.js" defer></script>\n</body>');
         changed = true;
       }
 

@@ -226,8 +226,9 @@ schema: |
         <div class="case-grid">
             <div class="case-panel">
                 <h2>Case review form</h2>
-                <form id="consultForm" action="https://formspree.io/f/xwvavoqz" method="POST">
+                <form id="consultForm" action="https://formspree.io/{{ site.formspree.caseReview }}" method="POST">
                     <input type="hidden" name="_subject" value="New Case Review — China Hospitals Guide">
+                    <input type="hidden" name="form_type" value="case_review">
                     <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
                     <div class="form-group">
                         <label>Full Name <span>*</span></label>
@@ -482,6 +483,31 @@ schema: |
         // Replace with a dedicated case-review form id if you create one (currently reuses
         // the newsletter endpoint so submissions work immediately).
         var action = form.getAttribute('action') || '';
+
+        // Prefill from URL query params (?treatment=...&country=...&budget=...&source=...)
+        function prefillFromQuery() {
+            var params = new URLSearchParams(window.location.search);
+            var selMap = { treatment: 'treatment_category', country: 'country', budget: 'budget', timeline: 'timeline', source: 'source' };
+            Object.keys(selMap).forEach(function(key) {
+                var val = params.get(key);
+                if (!val) return;
+                var sel = document.getElementById(selMap[key]);
+                if (!sel) return;
+                for (var i = 0; i < sel.options.length; i++) {
+                    if (sel.options[i].value === val) { sel.selectedIndex = i; return; }
+                }
+                for (var j = 0; j < sel.options.length; j++) {
+                    if (sel.options[j].value && val.toLowerCase().indexOf(sel.options[j].value.toLowerCase()) !== -1) { sel.selectedIndex = j; return; }
+                }
+            });
+            var pkg = params.get('package');
+            if (pkg) {
+                document.querySelectorAll('input[name="package"]').forEach(function(r) {
+                    if (r.value && r.value.toLowerCase().indexOf(pkg.toLowerCase()) !== -1) r.checked = true;
+                });
+            }
+        }
+        prefillFromQuery();
 
         form.addEventListener('submit', function(e) {
             e.preventDefault();

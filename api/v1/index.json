@@ -14,6 +14,13 @@
         "jci_only": "Show only JCI-accredited hospitals (true/false)"
       },
       "example": "/api/v1/hospitals.json?city=Beijing&specialty=cardiology"
+    },
+    "procedures": {
+      "path": "/api/v1/procedures.json",
+      "method": "GET",
+      "description": "Procedure-level data: cost ranges, departments, and associated hospitals (hospital_id references hospitals.json)",
+      "note": "Prices are reference ranges from published 2026 cost comparisons; final quotes come from each hospital",
+      "example": "/api/v1/procedures.json"
     }
   },
   "trust_levels": {

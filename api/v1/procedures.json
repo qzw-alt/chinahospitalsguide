@@ -1,0 +1,244 @@
+{
+  "meta": {
+    "note": "Procedure-level data (batch 1). Prices are reference ranges from published 2026 cost comparisons; final quotes come from each hospital. hospital_id references /api/v1/hospitals.json.",
+    "last_updated": "2026-08-19",
+    "version": 1
+  },
+  "procedures": [
+    {
+      "id": "knee-replacement",
+      "name": "Knee Replacement",
+      "category": "orthopedics",
+      "description": "Total knee arthroplasty (TKA). China's top joint surgery centers perform high volumes with imported implant brands at a fraction of US pricing.",
+      "recovery_time": "7-10 day hospital stay; several weeks of assisted recovery",
+      "overall_price_range_usd": { "low": 8000, "high": 12000 },
+      "hospitals": [
+        {
+          "hospital_id": "jishuitan-hospital",
+          "department": "Joint Surgery",
+          "price_range_usd": { "low": 8000, "high": 12000 },
+          "notes": "Leading joint replacement center; price depends on implant brand (domestic vs import)",
+          "source": "Published 2026 cost comparison; hospital official site",
+          "last_verified": "2026-08-19"
+        },
+        {
+          "hospital_id": "shanghai-sixth-hospital",
+          "department": "Orthopedics",
+          "price_range_usd": { "low": 8000, "high": 12000 },
+          "notes": "Major orthopedics volume center in Shanghai",
+          "source": "Published 2026 cost comparison",
+          "last_verified": "2026-08-19"
+        },
+        {
+          "hospital_id": "huashan-hospital",
+          "department": "Orthopedics / Sports Medicine",
+          "notes": "Referral hospital; final cost hospital-specific",
+          "source": "Hospital official site",
+          "last_verified": "2026-08-19"
+        },
+        {
+          "hospital_id": "tangdu-hospital",
+          "department": "Orthopedics",
+          "notes": "Referral hospital; final cost hospital-specific",
+          "source": "Hospital official site",
+          "last_verified": "2026-08-19"
+        }
+      ]
+    },
+    {
+      "id": "hip-replacement",
+      "name": "Hip Replacement",
+      "category": "orthopedics",
+      "description": "Total hip arthroplasty (THA). Implant brand choice and hospital level are the main cost drivers.",
+      "recovery_time": "7-10 day hospital stay; several weeks of assisted recovery",
+      "overall_price_range_usd": { "low": 8000, "high": 12000 },
+      "hospitals": [
+        {
+          "hospital_id": "jishuitan-hospital",
+          "department": "Joint Surgery",
+          "price_range_usd": { "low": 8000, "high": 12000 },
+          "notes": "Leading hip replacement center in China",
+          "source": "Published 2026 cost comparison; hospital official site",
+          "last_verified": "2026-08-19"
+        },
+        {
+          "hospital_id": "shanghai-sixth-hospital",
+          "department": "Orthopedics",
+          "price_range_usd": { "low": 8000, "high": 12000 },
+          "notes": "High-volume orthopedics center",
+          "source": "Published 2026 cost comparison",
+          "last_verified": "2026-08-19"
+        },
+        {
+          "hospital_id": "pku-third-hospital",
+          "department": "Orthopedics",
+          "notes": "Referral hospital; final cost hospital-specific",
+          "source": "Hospital official site",
+          "last_verified": "2026-08-19"
+        },
+        {
+          "hospital_id": "west-china-hospital",
+          "department": "Orthopedics",
+          "notes": "Leading center in western China",
+          "source": "Hospital official site",
+          "last_verified": "2026-08-19"
+        }
+      ]
+    },
+    {
+      "id": "coronary-artery-bypass",
+      "name": "Coronary Artery Bypass Grafting (CABG)",
+      "category": "cardiology",
+      "description": "Open-heart bypass surgery. China's top cardiac centers perform among the highest CABG volumes worldwide.",
+      "recovery_time": "7-10 day hospital stay; 6-8 weeks full recovery",
+      "overall_price_range_usd": { "low": 12000, "high": 18000 },
+      "hospitals": [
+        {
+          "hospital_id": "fuwai-hospital",
+          "department": "Cardiovascular Surgery",
+          "price_range_usd": { "low": 12000, "high": 18000 },
+          "notes": "China's #1 cardiology hospital; ~18,000+ cardiac surgeries per year",
+          "source": "Published 2026 cost comparison; hospital official site",
+          "last_verified": "2026-08-19"
+        },
+        {
+          "hospital_id": "anzhen-hospital",
+          "department": "Cardiovascular Surgery",
+          "price_range_usd": { "low": 12000, "high": 18000 },
+          "notes": "Top-tier cardiac surgery center in Beijing",
+          "source": "Published 2026 cost comparison",
+          "last_verified": "2026-08-19"
+        },
+        {
+          "hospital_id": "zhongshan-hospital-shanghai",
+          "department": "Cardiovascular Surgery",
+          "notes": "Referral hospital; final cost hospital-specific",
+          "source": "Hospital official site",
+          "last_verified": "2026-08-19"
+        },
+        {
+          "hospital_id": "ruijin-hospital",
+          "department": "Cardiovascular Surgery",
+          "notes": "Referral hospital; final cost hospital-specific",
+          "source": "Hospital official site",
+          "last_verified": "2026-08-19"
+        }
+      ]
+    },
+    {
+      "id": "spine-surgery",
+      "name": "Spine Surgery",
+      "category": "orthopedics",
+      "description": "Includes lumbar fusion, decompression and spinal deformity surgery. Cost varies widely by procedure type and implant hardware.",
+      "recovery_time": "5-10 day hospital stay; recovery depends on procedure",
+      "overall_price_range_usd": { "low": 10000, "high": 18000 },
+      "hospitals": [
+        {
+          "hospital_id": "jishuitan-hospital",
+          "department": "Spine Surgery",
+          "price_range_usd": { "low": 10000, "high": 18000 },
+          "notes": "Nationally recognized spine center",
+          "source": "Published 2026 cost comparison; hospital official site",
+          "last_verified": "2026-08-19"
+        },
+        {
+          "hospital_id": "pku-third-hospital",
+          "department": "Orthopedics / Spine",
+          "price_range_usd": { "low": 10000, "high": 18000 },
+          "notes": "Referral spine surgery center",
+          "source": "Published 2026 cost comparison",
+          "last_verified": "2026-08-19"
+        },
+        {
+          "hospital_id": "shanghai-changhai-hospital",
+          "department": "Orthopedics / Spine",
+          "notes": "Referral hospital; final cost hospital-specific",
+          "source": "Hospital official site",
+          "last_verified": "2026-08-19"
+        },
+        {
+          "hospital_id": "west-china-hospital",
+          "department": "Orthopedics / Spine",
+          "notes": "Referral hospital; final cost hospital-specific",
+          "source": "Hospital official site",
+          "last_verified": "2026-08-19"
+        }
+      ]
+    },
+    {
+      "id": "lasik",
+      "name": "LASIK Eye Surgery",
+      "category": "ophthalmology",
+      "description": "Laser vision correction. Prices reflect the hospital level, laser platform and refractive surgeon experience.",
+      "recovery_time": "Same-day outpatient procedure; vision stabilizes over 1-3 months",
+      "overall_price_range_usd": { "low": 1200, "high": 2800 },
+      "hospitals": [
+        {
+          "hospital_id": "beijing-tongren-hospital",
+          "department": "Ophthalmology / Refractive Surgery",
+          "price_range_usd": { "low": 1200, "high": 2800 },
+          "notes": "Top-ranked ophthalmology hospital",
+          "source": "Published 2026 LASIK cost guide",
+          "last_verified": "2026-08-19"
+        },
+        {
+          "hospital_id": "zhongshan-sixth-hospital",
+          "department": "Ophthalmology / Refractive Surgery",
+          "price_range_usd": { "low": 1200, "high": 2800 },
+          "notes": "Zhongshan Ophthalmic Center — 20,000+ refractive surgeries per year",
+          "source": "Published 2026 LASIK cost guide",
+          "last_verified": "2026-08-19"
+        },
+        {
+          "hospital_id": "tianjin-eye-hospital",
+          "department": "Ophthalmology",
+          "price_range_usd": { "low": 1200, "high": 2800 },
+          "notes": "Specialist eye hospital in Tianjin",
+          "source": "Published 2026 LASIK cost guide",
+          "last_verified": "2026-08-19"
+        },
+        {
+          "hospital_id": "aier-eye-hospital",
+          "department": "Refractive Surgery",
+          "notes": "Private eye care group; final cost depends on procedure type",
+          "source": "Hospital official site",
+          "last_verified": "2026-08-19"
+        }
+      ]
+    },
+    {
+      "id": "cataract-surgery",
+      "name": "Cataract Surgery",
+      "category": "ophthalmology",
+      "description": "Phacoemulsification with intraocular lens implant. Lens type (monofocal vs multifocal/toric) drives the final price.",
+      "recovery_time": "Same-day or 1-2 day outpatient procedure; quick visual recovery",
+      "overall_price_range_usd": { "low": 800, "high": 1500 },
+      "hospitals": [
+        {
+          "hospital_id": "beijing-tongren-hospital",
+          "department": "Ophthalmology",
+          "price_range_usd": { "low": 800, "high": 1500 },
+          "notes": "Base cataract surgery price; premium IOLs cost more",
+          "source": "Published 2026 cost comparison",
+          "last_verified": "2026-08-19"
+        },
+        {
+          "hospital_id": "zhongshan-sixth-hospital",
+          "department": "Ophthalmology",
+          "price_range_usd": { "low": 800, "high": 1500 },
+          "notes": "High-volume cataract center",
+          "source": "Published 2026 cost comparison",
+          "last_verified": "2026-08-19"
+        },
+        {
+          "hospital_id": "tianjin-eye-hospital",
+          "department": "Ophthalmology",
+          "price_range_usd": { "low": 800, "high": 1500 },
+          "notes": "Specialist eye hospital",
+          "source": "Published 2026 cost comparison",
+          "last_verified": "2026-08-19"
+        }
+      ]
+    }
+  ]
+}

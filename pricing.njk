@@ -403,7 +403,7 @@ schema: |
             <script>
             (function renderPP49() {
                 if (window._ppLoaded) {
-                    paypal.HostedButtons({hostedButtonId:"K4HNCDD7GDS5C"}).render("#paypal-container-K4HNCDD7GDS5C");
+                    paypal.HostedButtons({hostedButtonId:"K4HNCDD7GDS5C",onApprove:function(data){if(typeof gtag==='function'){gtag('event','purchase',{send_to:'G-RVYZENK472',currency:'USD',value:49,transaction_id:data.orderID,items:[{item_id:'L1',item_name:'Hospital Shortlist',quantity:1,price:49,currency:'USD'}]});}}}).render("#paypal-container-K4HNCDD7GDS5C");
                 } else if (window._ppFailed) {
                     document.getElementById('paypal-container-K4HNCDD7GDS5C').innerHTML =
                         '<a href="https://www.paypal.com/ncp/payment/K4HNCDD7GDS5C" target="_blank" rel="noopener" style="display:inline-block;background:#0070ba;color:#fff;padding:12px 28px;border-radius:8px;text-decoration:none;font-weight:700;font-size:0.95em;">Pay $49 with PayPal &#8594;</a>';
@@ -437,7 +437,7 @@ schema: |
             <script>
             (function renderPP149() {
                 if (window._ppLoaded) {
-                    paypal.HostedButtons({hostedButtonId:"WGZ9FPKYZ6X3Y"}).render("#paypal-container-WGZ9FPKYZ6X3Y");
+                    paypal.HostedButtons({hostedButtonId:"WGZ9FPKYZ6X3Y",onApprove:function(data){if(typeof gtag==='function'){gtag('event','purchase',{send_to:'G-RVYZENK472',currency:'USD',value:149,transaction_id:data.orderID,items:[{item_id:'L2',item_name:'Hospital Verification',quantity:1,price:149,currency:'USD'}]});}}}).render("#paypal-container-WGZ9FPKYZ6X3Y");
                 } else if (window._ppFailed) {
                     document.getElementById('paypal-container-WGZ9FPKYZ6X3Y').innerHTML =
                         '<a href="https://www.paypal.com/ncp/payment/WGZ9FPKYZ6X3Y" target="_blank" rel="noopener" style="display:inline-block;background:#0070ba;color:#fff;padding:12px 28px;border-radius:8px;text-decoration:none;font-weight:700;font-size:0.95em;">Pay $149 with PayPal &#8594;</a>';
@@ -473,7 +473,7 @@ schema: |
             <script>
             (function renderPP399() {
                 if (window._ppLoaded) {
-                    paypal.HostedButtons({hostedButtonId:"ZBY36JV2X5A3U"}).render("#paypal-container-ZBY36JV2X5A3U");
+                    paypal.HostedButtons({hostedButtonId:"ZBY36JV2X5A3U",onApprove:function(data){if(typeof gtag==='function'){gtag('event','purchase',{send_to:'G-RVYZENK472',currency:'USD',value:399,transaction_id:data.orderID,items:[{item_id:'L3',item_name:'Full Journey Management',quantity:1,price:399,currency:'USD'}]});}}}).render("#paypal-container-ZBY36JV2X5A3U");
                 } else if (window._ppFailed) {
                     document.getElementById('paypal-container-ZBY36JV2X5A3U').innerHTML =
                         '<a href="https://www.paypal.com/ncp/payment/ZBY36JV2X5A3U" target="_blank" rel="noopener" style="display:inline-block;background:#0070ba;color:#fff;padding:12px 28px;border-radius:8px;text-decoration:none;font-weight:700;font-size:0.95em;">Pay $399 with PayPal &#8594;</a>';

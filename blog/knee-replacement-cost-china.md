@@ -5,6 +5,10 @@ description: "Knee replacement in China costs $8,000-$12,000 vs $35,000-$50,000 
 kicker: "Knee Replacement Surgery"
 subtitle: "Total knee replacement in China costs $8,000-$12,000 — 70% below US pricing and roughly half of Singapore — with surgery available 1-2 weeks after arrival. Top hospitals, what's included in the price, and the step-by-step path from records review to flying home."
 date: 2026-08-14
+updated: 2026-08-14
+sources:
+  - "Beijing Jishuitan Hospital (北京积水潭医院) — official website"
+  - "Published 2026 cost comparisons for total knee replacement in China vs US/UK/Singapore"
 
 schema: |
   [

@@ -5,6 +5,10 @@ description: "Lung cancer treatment in China: lobectomy $15K-$30K, full course $
 kicker: "Lung Cancer Treatment"
 subtitle: "Lung cancer treatment in China costs $15,000-$30,000 for lobectomy and $30,000-$60,000 for a full course (surgery plus chemo or immunotherapy) — 75-80% below US pricing. Top hospitals, waiting times, and the exact pathway from pathology review to treatment."
 date: 2026-08-14
+updated: 2026-08-14
+sources:
+  - "National Cancer Center of China (国家癌症中心) — lung cancer treatment guidelines"
+  - "Published 2026 cost data for lobectomy and immunotherapy in China vs US"
 
 schema: |
   [

@@ -39,6 +39,10 @@ description: "150 字以内的描述，用于 SEO 和列表摘要"
 kicker: "分类标签，如 China's 3D-Printed Implant Technology"
 subtitle: "1-3 句副标题，介绍文章讲什么"
 date: 2026-08-13
+updated: 2026-08-13
+sources:
+  - "来源 1（医院官网 / 政府来源 / 期刊，含 URL）"
+  - "来源 2"
 schema: |
   [ { "@context": "https://schema.org", "@type": "Article", ... } ]
 ---
@@ -49,6 +53,8 @@ schema: |
 关键点：
 - `layout` 固定写 `blog-post.njk`，**不要改**。
 - `date` 必须和文件名里的日期**完全一致**。
+- `updated` **必填**，是独立复核/核对日期（通常 = 发布日期；后续复核改动时更新为复核日）。
+- `sources` **必填，至少 2 条**：医院官网、政府来源、公开排名、期刊/权威媒体。无来源的数字（价格/成功率/排名）一律改用 "may vary" 或 "hospital-specific"。
 - `title` / `description` 里不要放未转义的 `"`（英文引号）以外的双引号，避免破坏 frontmatter。
 
 ### 第 2 步：往 `blog/index.html` 加卡片（最易错，重点看）

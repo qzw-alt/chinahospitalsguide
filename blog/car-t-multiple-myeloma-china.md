@@ -5,6 +5,12 @@ description: "BCMA CAR-T for multiple myeloma in China: $89K-$151K commercial, $
 kicker: "BCMA CAR-T for Multiple Myeloma"
 subtitle: "Relapsed/refractory multiple myeloma is treated with BCMA-targeted CAR-T in China — home to the world's first approved BCMA products. Commercial $89K-$151K, trial $30K-$80K. Approved products, top hospitals, and the full pathway explained."
 date: 2026-08-17
+updated: 2026-08-17
+sources:
+  - "National Medical Products Administration (NMPA) — approved CAR-T product database"
+  - "U.S. FDA — BCMA CAR-T product labeling (Abecma, Carvykti)"
+  - "Published 2026 pricing reports for commercial BCMA CAR-T in China"
+  - "Official hospital websites for top CAR-T centers"
 
 schema: |
   [

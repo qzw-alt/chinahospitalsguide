@@ -5,6 +5,11 @@ description: "CAR-T in China: $30K-$151K vs $300K-$500K US. 7 approved products,
 kicker: "CAR-T Cell Therapy Guide"
 subtitle: "Complete 2026 cost guide: commercial vs clinical pricing, top hospitals, full travel budget, and how international patients arrange CAR-T in China."
 date: 2026-07-10
+updated: 2026-08-15
+sources:
+  - "National Medical Products Administration (NMPA) — approved CAR-T product database"
+  - "U.S. FDA — approved CAR-T product labeling"
+  - "Published 2026 CAR-T pricing reports in China"
 
 schema: |
   [

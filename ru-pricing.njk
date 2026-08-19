@@ -6,6 +6,7 @@ description: "Три уровня: шорт-лист больниц $49, вер�
 canonical: "https://chinahospitalsguide.com/ru-pricing.html"
 ogTitle: "Цены — $49 / $149 / $399 | Koординация лечения в Китае"
 ogDescription: "Шорт-лист $49. Верификация $149. Полное сопровождение $399. Апгрейд — платите только разницу."
+pagePaypal: true
 pageStyle: |
   body { background: #f8f9fa; color: #243044; padding-top: 70px; }
           .ru-shell { max-width: 960px; margin: 0 auto; padding: 40px 20px 60px; }
@@ -152,6 +153,50 @@ schema: |
                 <strong>💡 С L2?</strong> Доплатите +$250. <strong>С L1?</strong> Доплатите +$350.
             </div>
         </div>
+        <div id="paypal-container-K4HNCDD7GDS5C" style="margin:12px auto;max-width:340px;"></div>
+        <div id="paypal-container-WGZ9FPKYZ6X3Y" style="margin:12px auto;max-width:340px;"></div>
+        <div id="paypal-container-ZBY36JV2X5A3U" style="margin:12px auto;max-width:340px;"></div>
+        <script>
+        (function renderPaypalButtons() {
+            var buttons = [
+                { id: "K4HNCDD7GDS5C", value: 49, item: "L1" },
+                { id: "WGZ9FPKYZ6X3Y", value: 149, item: "L2" },
+                { id: "ZBY36JV2X5A3U", value: 399, item: "L3" }
+            ];
+            function render() {
+                buttons.forEach(function(b) {
+                    var el = document.getElementById('paypal-container-' + b.id);
+                    if (!el) return;
+                    if (window._ppLoaded) {
+                        paypal.HostedButtons({
+                            hostedButtonId: b.id,
+                            onApprove: function(data) {
+                                if (typeof gtag === 'function') {
+                                    gtag('event', 'purchase', {
+                                        send_to: 'G-RVYZENK472',
+                                        currency: 'USD',
+                                        value: b.value,
+                                        transaction_id: data.orderID,
+                                        items: [{ item_id: b.item, item_name: b.item, quantity: 1, price: b.value, currency: 'USD' }]
+                                    });
+                                }
+                            }
+                        }).render('#' + el.id);
+                    } else if (window._ppFailed) {
+                        el.innerHTML = '<a href="https://www.paypal.com/ncp/payment/' + b.id + '" target="_blank" rel="noopener" style="display:inline-block;background:#0070ba;color:#fff;padding:12px 28px;border-radius:8px;text-decoration:none;font-weight:700;font-size:0.95em;">Pay $' + b.value + ' with PayPal &#8594;</a>';
+                    }
+                });
+                if (!window._ppLoaded && !window._ppFailed) {
+                    setTimeout(function() {
+                        if (!window._ppLoaded && !window._ppFailed) { window._ppFailed = 1; render(); }
+                    }, 10000);
+                }
+            }
+            document.addEventListener('pp:loaded', render, { once: true });
+            document.addEventListener('pp:failed', render, { once: true });
+            render();
+        })();
+        </script>
     </div>
 
     <!-- Comparison Table -->

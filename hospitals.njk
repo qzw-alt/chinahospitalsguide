@@ -586,6 +586,18 @@ schema: |
                     badges += '<span class="badge badge-intl">🗣 ' + h.international_dept.languages.slice(0,3).join('/') + '</span>';
                 }
 
+                var trustHtml = '';
+                if (h.trust) {
+                    trustHtml += '<div class="hospital-info" style="font-size:0.82rem;color:#207948">✓ Data verified ' + formatVerified(h.trust.last_verified) + (h.trust.data_source ? ' · ' + formatSource(h.trust.data_source) : '') + '</div>';
+                    var evidence = formatEvidence(h.trust.cross_validated);
+                    if (evidence.length) {
+                        trustHtml += '<div class="hospital-info" style="margin-top:4px;line-height:1.6;">' + evidence.join('') + '</div>';
+                    }
+                    if (h.trust.level) {
+                        trustHtml += '<div class="hospital-info" style="font-size:0.78rem;color:#4b5565;margin-top:4px;"><strong>Trust:</strong> ' + formatLevel(h.trust.level) + ' — <a href="how-we-choose-hospitals.html" style="color:#1e3c72;text-decoration:underline;">How we verify →</a></div>';
+                    }
+                }
+
                 var tagHtml = (h.tags || []).slice(0, 6).map(function(t) {
                     return '<span class="hospital-tag">' + formatTag(t) + '</span>';
                 }).join('');
@@ -610,7 +622,7 @@ schema: |
                         '<div class="hospital-name">' + h.name + '</div>' +
                         '<div class="hospital-location">📍 ' + h.city + (h.district ? ', ' + h.district : '') + '</div>' +
                         (badges ? '<div class="badge-row">' + badges + '</div>' : '') +
-                        (h.trust && h.trust.last_verified ? '<div class="hospital-info" style="font-size:0.82rem;color:#207948">✓ Data verified ' + formatVerified(h.trust.last_verified) + '</div>' : '') +
+                        trustHtml +
                         '<div class="hospital-info"><strong>' + (h.rank || '') + '</strong></div>' +
                         (h.estimated_wait_weeks ? '<div class="hospital-info">⏱ Est. wait: ' + h.estimated_wait_weeks + '</div>' : '') +
                         airportHtml +
@@ -624,6 +636,30 @@ schema: |
                     '</div>' +
                 '</div>';
             }).join('');
+        }
+
+        var EVIDENCE_LABELS = {
+            'official_website': 'Official site',
+            'public_ranking': 'Public ranking',
+            'jci_verified': 'JCI verified',
+            'who_reference': 'WHO reference',
+            'direct_contact': 'Direct contact',
+            'direct_channel_partner_documents': 'Channel docs',
+            'pricing_manual': 'Pricing manual',
+            'hospital_brochure': 'Hospital brochure'
+        };
+        function formatEvidence(list) {
+            if (!list || !list.length) return [];
+            return list.map(function(e) {
+                var label = EVIDENCE_LABELS[e] || e.replace(/_/g, ' ');
+                return '<span style="display:inline-block;background:#eef6ef;color:#2e7d32;border:1px solid #c8e6c9;border-radius:999px;padding:1px 8px;font-size:0.72rem;font-weight:600;margin:2px 4px 2px 0;">' + label + ' ✓</span>';
+            });
+        }
+        function formatSource(s) {
+            return { official: 'Official source', multi_source: 'Multi-source', dual_source: 'Dual-source', single_source: 'Single-source' }[s] || s;
+        }
+        function formatLevel(l) {
+            return { very_high: 'Very High', high: 'High', medium_high: 'Medium-High', medium: 'Medium' }[l] || l;
         }
 
         function formatVerified(dateStr) {

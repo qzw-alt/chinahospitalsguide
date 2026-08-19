@@ -1,4 +1,15 @@
 module.exports = function(eleventyConfig) {
+  // Format YAML dates (parsed as Date objects) as YYYY-MM-DD
+  eleventyConfig.addFilter('dateDisplay', function(d) {
+    if (!d) return '';
+    const dt = d instanceof Date ? d : new Date(d);
+    if (isNaN(dt.getTime())) return String(d).slice(0, 10);
+    const y = dt.getUTCFullYear();
+    const m = String(dt.getUTCMonth() + 1).padStart(2, '0');
+    const day = String(dt.getUTCDate()).padStart(2, '0');
+    return y + '-' + m + '-' + day;
+  });
+
   // Passthrough copy: static assets that don't need processing
   eleventyConfig.addPassthroughCopy("styles.css");
   eleventyConfig.addPassthroughCopy("ga4-events.js");
