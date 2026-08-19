@@ -2,7 +2,7 @@
 /blog/why-medical-tourism-coordinator-china.html /contact-new.html 301
 /blog/spinal-surgery-cost-china.html /blog/spine-surgery-cost-china.html 301
 /blog/china-medical-visa-guide.html /blog/china-medical-visa-guide-2026.html 301
-/stories/james-thompson.html /stories/james-wilson.html 301
+/stories/james-thompson.html /stories/ 301
 /blog/ivf-fertility-treatment-china-2026.html /blog/ivf-cost-china-2026.html 301
 /blog/ivf-fertility-treatment-china.html /blog/ivf-cost-china-2026.html 301
 /blog/dental-tourism-china-guide.html /blog/dental-tourism-china-2026.html 301
@@ -52,7 +52,6 @@
 /blog/best-cancer-hospitals-china-2026/ /blog/best-cancer-hospitals-china-2026.html 301
 /blog/china-medical-visa-guide-2026/ /blog/china-medical-visa-guide-2026.html 301
 /blog/heart-surgery-cost-china/ /blog/heart-surgery-cost-china.html 301
-/blog/knee-replacement-cost-china/ /blog/knee-replacement-cost-china.html 301
 /blog/hip-replacement-cost-china/ /blog/hip-replacement-cost-china.html 301
 /blog/neurosurgery-cost-china/ /blog/neurosurgery-cost-china.html 301
 # Remove trailing slashes from core pages
@@ -82,15 +81,15 @@
 /blog/guangzhou-medical-tourism-guide/ /blog/guangzhou-medical-tourism-guide.html 301
 /blog/cancer-treatment-cost-china/ /blog/cancer-treatment-cost-china.html 301
 /blog/baduanjin-eight-brocade-complete-guide/ /blog/baduanjin-eight-brocade-complete-guide.html 301
-/news/2026-04-17-revolution-medicines-pancreatic-cancer/ /news/2026-04-17-revolution-medicines-pancreatic-cancer-daraxonrasib-china-compare.html 301
-/news/2026-04-26-china-24-hour-spa-viral-wellness/ /news/2026-04-26-china-24-hour-spa-viral-wellness.html 301
-/news/2026-06-30-china-order-818/ /news/2026-06-30-china-order-818-advanced-therapeutic-clinical-translation-cell-gene-therapy-regulation.html 301
-/news/2026-06-28-tangdu-hospital-3d-printed-peek/ /news/2026-06-28-tangdu-hospital-3d-printed-peek-extravascular-stent-nutcracker-syndrome.html 301
+/news/2026-04-17-revolution-medicines-pancreatic-cancer/ /blog/ 301
+/news/2026-04-26-china-24-hour-spa-viral-wellness/ /blog/ 301
+/news/2026-06-30-china-order-818/ /blog/ 301
+/news/2026-06-28-tangdu-hospital-3d-printed-peek/ /blog/ 301
 # Redirect old Singapore device certification article to correct blog location
 /news/2026-03-24-singapore-who-medical-device-certification-china-compare.html /blog/medical-device-certification-singapore-vs-china-2026.html 301
 # 2026-08-03: news/ 版面已删除 — 07-28 TCM article relocated to blog/ (canonical move)
 /news/2026-07-28-tcm-going-global-shufeng-jiedu-germany-ai-workflow.html /blog/2026-07-28-tcm-going-global-shufeng-jiedu-germany-ai-workflow.html 301
-/news/stem-cell-therapy-china-2026-guide/ /news/stem-cell-therapy-china-2026-guide.html 301
+/news/stem-cell-therapy-china-2026-guide/ /blog/stem-cell-therapy-china-cost-2026.html 301
 /blog/bone-marrow-transplant-china/ /blog/bone-marrow-transplant-china.html 301
 /blog/proton-therapy-china-2026/ /blog/proton-therapy-china-2026.html 301
 /blog/neurosurgery-brain-tumor-china-2026/ /blog/neurosurgery-brain-tumor-china-2026.html 301
@@ -278,3 +277,14 @@
 /stories/maria-garcia.html /stories/ 301
 /stories/robert-chen.html /stories/ 301
 /stories/sophie-b.html /stories/ 301
+
+# 2026-08-19: GSC 残留 404 补漏（news 死链目标 .html + services/treatments 已删子页）
+/news/2026-04-17-revolution-medicines-pancreatic-cancer-daraxonrasib-china-compare.html /blog/ 301
+/news/2026-06-30-china-order-818-advanced-therapeutic-clinical-translation-cell-gene-therapy-regulation.html /blog/ 301
+/news/2026-04-26-china-24-hour-spa-viral-wellness.html /blog/ 301
+/news/2026-06-28-tangdu-hospital-3d-printed-peek-extravascular-stent-nutcracker-syndrome.html /blog/ 301
+/news/stem-cell-therapy-china-2026-guide.html /blog/stem-cell-therapy-china-cost-2026.html 301
+/news/index.html /blog/ 301
+/services/oncology.html /cancer.html 301
+/treatments/endoscopy.html /blog/china-unique-medical-procedures-guide.html 301
+/blog/knee-replacement-cost-china.html /blog/knee-replacement-cost-china/ 301
