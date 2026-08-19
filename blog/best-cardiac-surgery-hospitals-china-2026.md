@@ -215,7 +215,9 @@ Yes. Zhongshan specializes in keyhole bypass and valve surgery; Anzhen uses Da V
 Tell us your condition — we'll match you with 2-3 suitable cardiac centers, get written quotes, and handle visa letters, airport pickup, and English-speaking coordination. **No obligation, 100% confidential, we reply within 24 hours.**
 
 - 📧 Email: contact@chinahospitalsguide.com
-- 💬 WeChat / Telegram: +86 157 6310 7083
+- 💬 WhatsApp: +86 157 6310 7083
+- 📨 Telegram: @chinahospitalguide
+- 💬 WeChat: chinahospitalguide
 - 🌐 [Start Free Case Review](/contact-new.html)
 
 ## Related Reading

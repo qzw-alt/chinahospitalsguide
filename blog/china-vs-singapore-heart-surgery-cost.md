@@ -192,7 +192,9 @@ Neither choice is wrong — they fit different budgets and preferences. A case r
 Tell us your diagnosis, current scans, and treatment history — we'll get written quotes from top cardiac centers in **both China and Singapore** so you can compare apples to apples. **Free, no obligation, 100% confidential, we reply within 24 hours.**
 
 - 📧 Email: contact@chinahospitalsguide.com
-- 💬 WeChat / Telegram: +86 157 6310 7083
+- 💬 WhatsApp: +86 157 6310 7083
+- 📨 Telegram: @chinahospitalguide
+- 💬 WeChat: chinahospitalguide
 - 🌐 [Start Free Case Review](/contact-new.html)
 
 ## Related Reading

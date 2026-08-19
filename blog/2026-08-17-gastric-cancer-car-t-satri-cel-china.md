@@ -271,7 +271,9 @@ Roughly **6-8 weeks total**: records review, testing, 2-3 weeks of manufacturing
 Tell us your diagnosis, CLDN18.2 status, and treatment history — we'll check eligibility, match you with suitable oncology centers running CLDN18.2 CAR-T programs, and get written assessments. **No obligation, 100% confidential, we reply within 24 hours.**
 
 - 📧 Email: contact@chinahospitalsguide.com
-- 💬 WeChat / Telegram: +86 157 6310 7083
+- 💬 WhatsApp: +86 157 6310 7083
+- 📨 Telegram: @chinahospitalguide
+- 💬 WeChat: chinahospitalguide
 - 🌐 [Start Free Case Review](/contact-new.html)
 
 ---

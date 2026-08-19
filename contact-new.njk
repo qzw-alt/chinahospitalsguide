@@ -240,7 +240,7 @@ schema: |
                             <input type="email" id="email" name="email" required placeholder="john@example.com">
                         </div>
                         <div class="form-group">
-                            <label>Phone / WeChat / Telegram</label>
+                            <label>Email / Phone / WhatsApp / Telegram</label>
                             <input type="tel" id="phone" name="phone" placeholder="+1 234 567 8900">
                         </div>
                     </div>
@@ -341,7 +341,7 @@ schema: |
                                 <input type="checkbox" name="has_records" value="No - not yet"> No — not yet
                             </label>
                         </div>
-                        <p style="font-size:0.82rem;color:#66758a;margin-top:8px;">For privacy, please don't attach sensitive files to this form. After submitting, send records directly via <a href="https://wa.me/{{ site.whatsapp }}" target="_blank" rel="noopener" style="color:#25D366;font-weight:600;">WhatsApp</a>, <a href="https://t.me/chinahospitalguide" target="_blank" rel="noopener" style="color:#0088cc;font-weight:600;">Telegram</a>, or email: <a href="mailto:contact@chinahospitalsguide.com" style="color:#1e3c72;font-weight:600;">contact@chinahospitalsguide.com</a>.</p>
+                        <p style="font-size:0.82rem;color:#66758a;margin-top:8px;">For privacy, please don't attach sensitive files to this form. After submitting, send records directly by email (<a href="mailto:contact@chinahospitalsguide.com" style="color:#1e3c72;font-weight:600;">contact@chinahospitalsguide.com</a>), <a href="https://wa.me/{{ site.whatsapp }}" target="_blank" rel="noopener" style="color:#25D366;font-weight:600;">WhatsApp</a>, or <a href="https://t.me/chinahospitalguide" target="_blank" rel="noopener" style="color:#0088cc;font-weight:600;">Telegram</a>.</p>
                     </div>
 
                     <div class="form-group">
@@ -405,10 +405,10 @@ schema: |
                         <p style="margin:0 0 8px;font-weight:700;">Something went wrong submitting your case.</p>
                         <p style="margin:0;">Please try again, or contact us directly so we don't miss your case:</p>
                         <p style="margin:10px 0 0;">
-                            <a href="https://wa.me/{{ site.whatsapp }}" style="color:#25D366;font-weight:600;" target="_blank" rel="noopener">WhatsApp</a>
+                            <a href="mailto:contact@chinahospitalsguide.com" style="color:#0088cc;font-weight:600;">Email</a>
+                            &nbsp;·&nbsp; <a href="https://wa.me/{{ site.whatsapp }}" style="color:#25D366;font-weight:600;" target="_blank" rel="noopener">WhatsApp</a>
                             &nbsp;·&nbsp; <a href="https://t.me/chinahospitalguide" style="color:#0088cc;font-weight:600;" target="_blank" rel="noopener">Telegram @chinahospitalguide</a>
                             &nbsp;·&nbsp; WeChat: <strong>chinahospitalguide</strong>
-                            &nbsp;·&nbsp; <a href="mailto:contact@chinahospitalsguide.com" style="color:#0088cc;font-weight:600;">contact@chinahospitalsguide.com</a>
                         </p>
                     </div>
                 </form>
@@ -420,13 +420,14 @@ schema: |
                     <ul class="success-next">
                         <li>Check your email for a confirmation message.</li>
                         <li>We usually reply within 4 business hours.</li>
-                        <li>For faster response, message us on WhatsApp, Telegram (@chinahospitalguide) or WeChat (chinahospitalguide).</li>
-                        <li>If you have medical records, send them to us on WhatsApp, Telegram, or email — we'll review your case faster.</li>
+                        <li>For faster response, email us or message us on WhatsApp, Telegram (@chinahospitalguide) or WeChat (chinahospitalguide).</li>
+                        <li>If you have medical records, send them to us by email, WhatsApp, or Telegram — we'll review your case faster.</li>
                     </ul>
                     <div style="background:#f0f6ff;border-radius:16px;padding:20px;margin:24px auto;max-width:480px;text-align:center;">
                         <p style="font-weight:700;color:#1e3c72;margin:0 0 8px;">💬 Want a faster response?</p>
                         <p style="font-size:0.9rem;color:#4b5565;margin:0 0 16px;">Message us directly — we typically reply within minutes during business hours.</p>
                         <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+                            <a href="mailto:contact@chinahospitalsguide.com" class="cta-button" style="background:linear-gradient(135deg,#1e3c72 0%,#2a4f8f 100%);font-size:0.9rem;padding:12px 20px;" target="_blank" rel="noopener">📧 Email</a>
                             <a href="https://wa.me/{{ site.whatsapp }}" class="cta-button" style="background:linear-gradient(135deg,#25D366 0%,#1DA851 100%);font-size:0.9rem;padding:12px 20px;" target="_blank" rel="noopener">💬 WhatsApp</a>
                             <a href="https://t.me/chinahospitalguide" class="cta-button" style="background:linear-gradient(135deg,#0088cc 0%,#006699 100%);font-size:0.9rem;padding:12px 20px;" target="_blank" rel="noopener">📨 Telegram</a>
                             <span class="cta-button" style="background:linear-gradient(135deg,#07C160 0%,#06AD56 100%);font-size:0.9rem;padding:12px 20px;cursor:default;">💬 WeChat: chinahospitalguide</span>

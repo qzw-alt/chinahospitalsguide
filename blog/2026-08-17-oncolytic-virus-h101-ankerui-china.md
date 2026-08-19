@@ -267,7 +267,9 @@ Published data describe it as generally tolerable. The most common side effects 
 Tell us your diagnosis and treatment history — we'll check eligibility for immunotherapy and interventional oncology programs, match you with 2-3 suitable centers, and get written assessments. **No obligation, 100% confidential, we reply within 24 hours.**
 
 - 📧 Email: contact@chinahospitalsguide.com
-- 💬 WeChat / Telegram: +86 157 6310 7083
+- 💬 WhatsApp: +86 157 6310 7083
+- 📨 Telegram: @chinahospitalguide
+- 💬 WeChat: chinahospitalguide
 - 🌐 [Start Free Case Review](/contact-new.html)
 
 ---

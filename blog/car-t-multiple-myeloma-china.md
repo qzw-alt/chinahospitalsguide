@@ -232,7 +232,9 @@ Most programs target **relapsed or refractory myeloma** after at least three pri
 Send us your latest bone marrow biopsy and treatment history — we'll check eligibility across commercial and trial routes, match you with 2-3 suitable hematology centers, and get written quotes. **No obligation, 100% confidential, we reply within 24 hours.**
 
 - 📧 Email: contact@chinahospitalsguide.com
-- 💬 WeChat / Telegram: +86 157 6310 7083
+- 💬 WhatsApp: +86 157 6310 7083
+- 📨 Telegram: @chinahospitalguide
+- 💬 WeChat: chinahospitalguide
 - 🌐 [Start Free Case Review](/contact-new.html)
 
 ## Related Reading

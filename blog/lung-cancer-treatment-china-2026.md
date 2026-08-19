@@ -205,7 +205,9 @@ The latest **pathology report, CT/PET imaging, prior treatment records, and mole
 Send your pathology report and imaging — we'll match you with 2-3 suitable oncology centers, get written treatment plans and quotes, and handle visa invitations and booking. **No obligation, 100% confidential, we reply within 24 hours.**
 
 - 📧 Email: contact@chinahospitalsguide.com
-- 💬 WeChat / Telegram: +86 157 6310 7083
+- 💬 WhatsApp: +86 157 6310 7083
+- 📨 Telegram: @chinahospitalguide
+- 💬 WeChat: chinahospitalguide
 - 🌐 [Start Free Case Review](/contact-new.html)
 
 ## Related Reading

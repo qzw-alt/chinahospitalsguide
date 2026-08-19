@@ -211,7 +211,9 @@ Hospitals provide physical therapy guidance, a rehab plan for your home doctor, 
 Send your X-rays and MRI scans — we'll match you with 2-3 top-tier orthopedic hospitals, get written quotes, and handle visa invitations and appointment booking. **No obligation, 100% confidential, we reply within 24 hours.**
 
 - 📧 Email: contact@chinahospitalsguide.com
-- 💬 WeChat / Telegram: +86 157 6310 7083
+- 💬 WhatsApp: +86 157 6310 7083
+- 📨 Telegram: @chinahospitalguide
+- 💬 WeChat: chinahospitalguide
 - 🌐 [Start Free Case Review](/contact-new.html)
 
 ## Related Reading

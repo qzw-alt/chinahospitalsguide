@@ -236,7 +236,9 @@ Commercial products are **NMPA-approved**, and top centers manage CRS and neurot
 Tell us your diagnosis and treatment history — we'll match you with 2-3 suitable CAR-T centers, get written commercial and trial quotes, and handle visa letters, airport pickup, and English-speaking coordination. **No obligation, 100% confidential, we reply within 24 hours.**
 
 - 📧 Email: contact@chinahospitalsguide.com
-- 💬 WeChat / Telegram: +86 157 6310 7083
+- 💬 WhatsApp: +86 157 6310 7083
+- 📨 Telegram: @chinahospitalguide
+- 💬 WeChat: chinahospitalguide
 - 🌐 [Start Free Case Review](/contact-new.html)
 
 ## Related Reading

@@ -1584,6 +1584,14 @@ footer p {
             background: #0088cc;
             color: white;
         }
+        .email-btn {
+            background: #1e3c72;
+            color: white;
+        }
+        .wechat-btn {
+            background: #07C160;
+            color: white;
+        }
         .chat-tooltip {
             position: absolute;
             right: 70px;
