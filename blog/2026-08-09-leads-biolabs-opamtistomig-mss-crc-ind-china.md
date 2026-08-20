@@ -5,6 +5,7 @@ description: "China approved Leads Biolabs' Opamtistomig (LBL-024) PD-L1 × 4-1B
 kicker: "China Immuno-Oncology & Clinical Trials"
 subtitle: "In early August 2026, China-based Leads Biolabs received NMPA clearance to study its PD-L1 × 4-1BB bispecific antibody Opamtistomig (LBL-024) in combination regimens for metastatic colorectal cancer — a move aimed at the roughly 95% of mCRC patients whose tumors are microsatellite stable and largely invisible to today's checkpoint inhibitors."
 date: 2026-08-09
+updated: 2026-08-09
 
 schema: |
   [

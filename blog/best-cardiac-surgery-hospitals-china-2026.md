@@ -5,6 +5,7 @@ description: "Heart bypass (CABG) in China costs $15K-$30K vs $30K-$60K Singapor
 kicker: "Cardiac Surgery Decision Guide"
 subtitle: "CABG in China: $15K-$30K, wait 2-4 weeks, top hospitals with international departments. Fuwai, Anzhen, Zhongshan — costs, safety data, and the full patient pathway from first contact to discharge."
 date: 2026-08-14
+updated: 2026-08-14
 
 schema: |
   [

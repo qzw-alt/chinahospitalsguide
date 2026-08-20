@@ -5,6 +5,7 @@ description: "China approves iza-bren for advanced esophageal cancer. Phase 3 su
 kicker: "NMPA Oncology Approval"
 subtitle: "A first-in-class EGFR x HER3 bispecific ADC now has a second Chinese indication. Its own hospital price is not yet public."
 date: 2026-07-18
+updated: 2026-07-18
 permalink: "/blog/2026-07-18-iza-bren-esophageal-cancer-china.html"
 canonical: "https://chinahospitalsguide.com/blog/2026-07-18-iza-bren-esophageal-cancer-china.html"
 ogType: "article"

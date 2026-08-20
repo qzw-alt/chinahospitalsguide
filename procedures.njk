@@ -1,0 +1,93 @@
+---
+permalink: procedures.html
+layout: base.njk
+title: "Procedure Prices in China 2026: Knee, Hip, Heart Bypass, Spine, LASIK & Cataract"
+description: "Procedure-level costs in China: knee replacement $8K-12K, heart bypass $12K-18K, spine $10K-18K, LASIK $1.2K-2.8K, cataract $0.8K-1.5K. Top hospitals, departments, and how to get matched."
+canonical: "https://chinahospitalsguide.com/procedures.html"
+ogTitle: "Procedure Prices in China 2026"
+ogDescription: "Knee $8-12K · Heart bypass $12-18K · LASIK $1.2-2.8K · Cataract $0.8-1.5K. Verified hospitals and how to get matched."
+activeNav: procedures
+pageStyle: |
+  .hero-home { padding: 120px 20px 70px; background: linear-gradient(135deg, rgba(12,24,48,0.9), rgba(30,60,114,0.9)), url('images/china-hospital.jpg') center/cover no-repeat; color: white; }
+  .hero-copy { max-width: 720px; }
+  .hero-kicker { display: inline-block; margin-bottom: 16px; padding: 8px 14px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.28); background: rgba(255,255,255,0.08); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.06em; }
+  .hero-home h1 { color: white; }
+  .hero-home p { color: rgba(255,255,255,0.88); max-width: 640px; }
+---
+<section class="hero-home">
+    <div class="hero-panel">
+        <div class="hero-copy">
+            <span class="hero-kicker">Procedure-level pricing</span>
+            <h1>What Procedures Cost in China</h1>
+            <p>Reference prices for common procedures at verified hospitals — knee &amp; hip replacement, heart bypass, spine surgery, LASIK and cataract. Prices are estimates; final quotes come from each hospital.</p>
+        </div>
+    </div>
+</section>
+
+<main class="hospitals-section" style="max-width:1180px;margin:0 auto;padding:44px 20px 70px;">
+    <p style="max-width:820px;margin:0 auto 28px;text-align:center;color:#4b5565;font-size:0.97rem;">Each card shows the typical total cost in China (including hospital stay), the departments and hospitals that perform it, and a direct path to get matched for your case.</p>
+    <div class="procedure-grid" id="procedureGrid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:24px;">
+        <p style="grid-column:1/-1;text-align:center;color:#888;padding:2rem;">Loading procedures...</p>
+    </div>
+    <p id="procedureFoot" style="margin:28px auto 0;text-align:center;font-size:0.82rem;color:#8893a0;"></p>
+</main>
+
+<script>
+(function() {
+    var grid = document.getElementById('procedureGrid');
+    var foot = document.getElementById('procedureFoot');
+    var TREATMENT_MAP = {
+        orthopedics: 'Orthopedics / Joint Replacement',
+        cardiology: 'Cardiac Surgery / Cardiology',
+        ophthalmology: 'Eye Surgery / LASIK'
+    };
+    function fmtUsd(r) {
+        if (!r) return '';
+        var lo = r.low ? '$' + Number(r.low).toLocaleString() : '';
+        var hi = r.high ? '$' + Number(r.high).toLocaleString() : '';
+        if (lo && hi && hi !== lo) return lo + '–' + hi;
+        return hi || lo;
+    }
+    Promise.all([
+        fetch('/api/v1/procedures.json').then(function(r) { return r.json(); }),
+        fetch('/api/v1/hospitals.json').then(function(r) { return r.json(); })
+    ]).then(function(results) {
+        var procs = results[0].procedures || [];
+        var hospitals = results[1].hospitals || [];
+        var hmap = {};
+        hospitals.forEach(function(h) { hmap[h.id] = h; });
+        if (foot && results[0].meta && results[0].meta.last_updated) {
+            foot.textContent = 'Data last updated: ' + results[0].meta.last_updated + '. Prices are reference ranges; final quotes come from each hospital.';
+        }
+        if (!procs.length) { grid.innerHTML = '<p style="grid-column:1/-1;text-align:center;color:#888;">No procedure data yet.</p>'; return; }
+        grid.innerHTML = procs.map(function(p) {
+            var treat = TREATMENT_MAP[p.category] || p.category || '';
+            var hospHtml = (p.hospitals || []).map(function(hp) {
+                var h = hmap[hp.hospital_id];
+                var name = h ? h.name : hp.hospital_id;
+                var city = h ? (' · ' + h.city) : '';
+                var pr = hp.price_range_usd ? ' <strong style="color:#1e3c72;">' + fmtUsd(hp.price_range_usd) + '</strong>' : '';
+                var dept = hp.department ? ' <span style="color:#66758a;font-size:0.82rem;">(' + hp.department + ')</span>' : '';
+                return '<div style="padding:7px 0;border-bottom:1px solid #edf1f7;font-size:0.92rem;color:#3a4556;">' + name + dept + city + pr + '</div>';
+            }).join('');
+            return '<div class="procedure-card" style="background:#fff;border:1px solid #e0e7ef;border-radius:18px;padding:24px;box-shadow:0 8px 24px rgba(15,23,42,.07);display:flex;flex-direction:column;">' +
+                '<div style="display:flex;justify-content:space-between;align-items:flex-start;gap:10px;">' +
+                    '<h2 style="margin:0;color:#1e3c72;font-size:1.25rem;line-height:1.3;">' + p.name + '</h2>' +
+                    '<span style="background:#eef6ef;color:#2e7d32;border-radius:999px;padding:3px 10px;font-size:0.72rem;font-weight:700;white-space:nowrap;text-transform:capitalize;">' + p.category + '</span>' +
+                '</div>' +
+                '<div style="margin:14px 0 8px;font-size:1.7rem;font-weight:700;color:#1e3c72;">' + fmtUsd(p.overall_price_range_usd) + '</div>' +
+                '<div style="font-size:0.9rem;color:#4b5565;line-height:1.6;margin-bottom:10px;">' + (p.description || '') + '</div>' +
+                (p.recovery_time ? '<div style="font-size:0.85rem;color:#66758a;margin-bottom:12px;">⏱ ' + p.recovery_time + '</div>' : '') +
+                (hospHtml ? '<div style="font-size:0.8rem;font-weight:700;color:#1e3c72;text-transform:uppercase;letter-spacing:.04em;margin-bottom:2px;">Representative hospitals</div>' + hospHtml : '') +
+                '<div style="margin-top:auto;padding-top:16px;display:flex;gap:10px;flex-wrap:wrap;align-items:center;">' +
+                    '<a href="contact-new.html' + (treat ? '?treatment=' + encodeURIComponent(treat) : '') + '" class="cta-button" style="font-size:0.9rem;padding:11px 18px;">Get Matched →</a>' +
+                    '<a href="hospitals.html" class="cta-button alt" style="font-size:0.9rem;padding:11px 18px;">Browse Hospitals</a>' +
+                '</div>' +
+            '</div>';
+        }).join('');
+    }).catch(function(e) {
+        grid.innerHTML = '<p style="grid-column:1/-1;text-align:center;color:#c00;">Failed to load procedure data. Please try again later.</p>';
+        console.error(e);
+    });
+})();
+</script>

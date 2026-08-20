@@ -230,6 +230,11 @@ schema: |
                     <input type="hidden" name="_subject" value="New Case Review — China Hospitals Guide">
                     <input type="hidden" name="form_type" value="case_review">
                     <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+                    <div style="display:flex;gap:8px;margin-bottom:20px;align-items:center;flex-wrap:wrap;">
+                        <span id="stepNum" style="font-weight:700;color:#1e3c72;font-size:0.85rem;background:#eef4fb;padding:6px 12px;border-radius:999px;">Step 1 of 3</span>
+                        <span id="stepLabel" style="font-size:0.9rem;color:#4b5565;">Your basics</span>
+                    </div>
+                    <div class="form-step" data-step="1">
                     <div class="form-group">
                         <label>Full Name <span>*</span></label>
                         <input type="text" id="firstname" name="firstname" required placeholder="John Smith">
@@ -288,7 +293,9 @@ schema: |
                             <option value="Other">Other</option>
                         </select>
                     </div>
+                    </div>
 
+                    <div class="form-step" data-step="2">
                     <div class="form-row lead-row">
                         <div class="form-group">
                             <label>Budget Range</label>
@@ -328,7 +335,9 @@ schema: |
                         <label>Describe Your Medical Situation <span>*</span></label>
                         <textarea id="medical_details" name="medical_details" required placeholder="Describe your condition, what you need, your timeline, and whether you already paid for a package."></textarea>
                     </div>
+                    </div>
 
+                    <div class="form-step" data-step="3">
                     <div class="form-group">
                         <label>Do you have medical records (reports, imaging, pathology)?</label>
                         <div class="checkbox-group" style="display:flex;flex-wrap:wrap;gap:12px;margin-top:4px;">
@@ -399,8 +408,13 @@ schema: |
                             </label>
                         </div>
                     </div>
+                    </div>
 
-                    <button type="submit" class="submit-btn" id="submitBtn">Submit Case Review</button>
+                    <div style="display:flex;gap:12px;align-items:center;margin-top:24px;flex-wrap:wrap;">
+                        <button type="button" id="stepBack" class="submit-btn" style="background:#fff;color:#1e3c72;border:2px solid #1e3c72;display:none;">← Back</button>
+                        <button type="button" id="stepNext" class="submit-btn">Continue →</button>
+                        <button type="submit" class="submit-btn" id="submitBtn" style="display:none;">Submit Case Review</button>
+                    </div>
                     <p class="privacy-note">Your information is used only to review your case and recommend or deliver the correct service path.</p>
                     <div id="formError" role="alert" style="display:none;margin-top:16px;padding:16px 18px;background:#fdecea;border:1px solid #f5c6c0;border-radius:10px;color:#b3261e;font-size:0.95rem;">
                         <p style="margin:0 0 8px;font-weight:700;">Something went wrong submitting your case.</p>
@@ -508,6 +522,42 @@ schema: |
             }
         }
         prefillFromQuery();
+
+        // Multi-step form: split into 3 visible steps, single <form> submit
+        var steps = Array.prototype.slice.call(document.querySelectorAll('.form-step'));
+        var stepIdx = 0;
+        var stepBack = document.getElementById('stepBack');
+        var stepNext = document.getElementById('stepNext');
+        var stepNum = document.getElementById('stepNum');
+        var stepLabel = document.getElementById('stepLabel');
+        var STEP_LABELS = ['Your basics', 'Your case details', 'Records & how we can help'];
+        function showStep(i) {
+            stepIdx = i;
+            steps.forEach(function(s, k) { s.style.display = k === i ? 'block' : 'none'; });
+            if (stepNum) stepNum.textContent = 'Step ' + (i + 1) + ' of ' + steps.length;
+            if (stepLabel) stepLabel.textContent = STEP_LABELS[i] || '';
+            if (stepBack) stepBack.style.display = i === 0 ? 'none' : 'inline-block';
+            if (stepNext) stepNext.style.display = i === steps.length - 1 ? 'none' : 'inline-block';
+            if (submitBtn) submitBtn.style.display = i === steps.length - 1 ? 'inline-block' : 'none';
+        }
+        function validateStep(i) {
+            var els = steps[i].querySelectorAll('[required]');
+            for (var k = 0; k < els.length; k++) {
+                if (!els[k].checkValidity()) { els[k].reportValidity(); return false; }
+            }
+            return true;
+        }
+        if (stepNext) stepNext.addEventListener('click', function() {
+            if (validateStep(stepIdx)) showStep(stepIdx + 1);
+        });
+        if (stepBack) stepBack.addEventListener('click', function() { showStep(stepIdx - 1); });
+        form.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' && stepNext && stepNext.style.display !== 'none') {
+                var t = e.target;
+                if (t && t.tagName !== 'TEXTAREA' && t.type !== 'submit') { e.preventDefault(); stepNext.click(); }
+            }
+        });
+        showStep(0);
 
         form.addEventListener('submit', function(e) {
             e.preventDefault();

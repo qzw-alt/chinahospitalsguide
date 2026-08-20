@@ -5,6 +5,7 @@ description: "Hainan's Boao Lecheng pilot zone now offers 600+ drugs, devices an
 kicker: "Hainan Boao Lecheng & Medical Tourism Policy"
 subtitle: "On August 7, 2026, a media tour of Hainan's Boao Lecheng International Medical Tourism Pilot Zone highlighted the zone's latest additions: more than 600 drugs, medical devices and special food products available for the first time in China, the settlement of South Korea's JK Medical Aesthetic & Plastic Surgery Hospital, and traditional Chinese medicine wellness programs at the Boao Yiling Life-Care Center — the clearest picture yet of what the zone now offers foreign patients."
 date: 2026-08-08
+updated: 2026-08-08
 
 schema: |
   [

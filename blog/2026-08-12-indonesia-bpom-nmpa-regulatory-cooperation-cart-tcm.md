@@ -5,6 +5,7 @@ description: "Indonesia's BPOM and China's NMPA are renewing their drug-regulati
 kicker: "Indonesia–China Regulatory Cooperation & Medical Tourism"
 subtitle: "On August 7, 2026, Indonesia's food and drug authority (BPOM) met China's ambassador in Jakarta to rebuild a regulatory pact that lapsed in June 2024. The renewed MoU covers medicines, vaccines, advanced therapy products like CAR-T, and the natural medicines China already supplies about 30 percent of — with direct consequences for the roughly one in five international patients who now come to China from Southeast Asia."
 date: 2026-08-12
+updated: 2026-08-12
 
 schema: |
   [

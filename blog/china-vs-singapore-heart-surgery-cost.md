@@ -5,6 +5,7 @@ description: "Heart surgery in China costs 50% less than Singapore with comparab
 kicker: "Heart Surgery Comparison Guide"
 subtitle: "For heart bypass, valve replacement, or TAVR, China costs roughly 50% less than Singapore with comparable surgical outcomes. A full dimension-by-dimension comparison — cost, wait time, hospital quality, language, visa, and travel — so you can decide where to go."
 date: 2026-08-15
+updated: 2026-08-15
 
 schema: |
   [

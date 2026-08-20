@@ -5,6 +5,7 @@ description: "TCM professors treated a child's mid-air chest pain on a Paris–B
 kicker: "TCM in Practice & International Access"
 subtitle: "On July 20, 2026, four faculty members of the Beijing University of Chinese Medicine responded to a medical call for a child with chest pain on an overnight Air China flight from Paris to Beijing. The China Daily report — published August 3 — is a rare window into how TCM is practiced in acute moments, and it centers on the acupoint Western research knows best: Neiguan (PC6)."
 date: 2026-08-04
+updated: 2026-08-04
 
 schema: |
   [

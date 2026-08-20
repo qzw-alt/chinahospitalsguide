@@ -5,6 +5,7 @@ description: "CellOrigin is testing mRNA-LNP 'in vivo CAR' therapy for liver can
 kicker: "China Cell Therapy Innovation & Liver Cancer"
 subtitle: "On August 2, 2026, China-based CellOrigin announced solid-tumor cell therapy data from the ASCO 2026 Annual Meeting and a co-development agreement with Walvax Biotechnology to run an investigator-initiated trial of mRNA-LNP in vivo GPC3-CAR therapy for hepatocellular carcinoma — a next-generation approach that programs a patient's T cells inside the body instead of manufacturing them in a laboratory."
 date: 2026-08-07
+updated: 2026-08-07
 
 schema: |
   [

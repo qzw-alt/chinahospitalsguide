@@ -5,6 +5,7 @@ description: "China's PARP inhibitor senaparib was licensed to Pharmanovia for 6
 kicker: "China Drug Innovation & International Access"
 subtitle: "On July 31, 2026, IMPACT Therapeutics (07630.HK) signed an exclusive partnership with Pharmanovia covering senaparib — the PARP inhibitor China's NMPA approved in January 2025 — across 66 countries in Europe, the Middle East, North Africa, and Oceania. The deal, worth up to EUR 423.5 million, is the clearest sign yet that China-developed oncology drugs are moving from the domestic market to the world."
 date: 2026-08-05
+updated: 2026-08-05
 
 schema: |
   [

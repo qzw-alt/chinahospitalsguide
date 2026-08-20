@@ -5,6 +5,7 @@ description: "China's only NMPA-approved oncolytic virus, H101 (Ankerui), fights
 kicker: "Oncolytic Virus Therapy in China"
 subtitle: "Many solid tumors are 'cold' — few immune cells inside, so checkpoint inhibitors underperform. H101 (Ankerui), China's only NMPA-approved oncolytic virus, is engineered to break that stalemate. Here is how it works, what the 2024 ASCO and Chinese guideline evidence says, and how international patients can access it."
 date: 2026-08-17
+updated: 2026-08-17
 
 schema: |
   [

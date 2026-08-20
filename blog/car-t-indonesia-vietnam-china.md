@@ -5,6 +5,7 @@ description: "CAR-T from Indonesia & Vietnam to China: visa rules, top hospitals
 kicker: "CAR-T for Southeast Asian Patients"
 subtitle: "Step-by-step 2026 guide for Indonesian and Vietnamese patients: visa, hospital selection, costs, language support, and what to expect at each stage."
 date: 2026-07-10
+updated: 2026-07-10
 
 schema: |
   [
