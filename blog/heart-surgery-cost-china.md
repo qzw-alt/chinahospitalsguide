@@ -1,8 +1,15 @@
-Heart Surgery Cost in China: Complete Guide 2026
-
-Everything You Need to Know About Affordable Cardiac Surgery in China
-
-Updated: March 2026
+---
+layout: blog-post.njk
+title: "Heart Surgery Cost in China 2026: CABG $12K-18K, Valve $10K-15K & How to Get Treatment"
+description: "Heart surgery in China: CABG $12K-18K, heart valve $10K-15K vs $100K+ in the US. Fuwai and top cardiac centers, wait times, and how international patients book."
+kicker: "Cardiac Surgery Cost Guide"
+subtitle: "Heart bypass and valve surgery in China cost a fraction of US prices. Top hospitals, wait times, and the full patient pathway from first contact to discharge."
+date: 2026-03-01
+updated: 2026-03-01
+sources:
+  - "Beijing Fuwai Hospital (中国医学科学院阜外医院) — official website"
+  - "Published 2026 heart surgery cost comparisons (China vs US/UK)"
+---
 
 💡 Quick Answer: Heart bypass surgery in China costs $12,000-18,000—85% less than the US ($120,000+)—with surgery available within 1-2 weeks at world-renowned Beijing Fuwai Hospital.
 

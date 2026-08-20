@@ -6,6 +6,10 @@ kicker: "China Drug Innovation & Lung Cancer"
 subtitle: "On August 5, 2026, Summit Therapeutics reported the updated analysis of HARMONi — the global Phase III trial of ivonescimab, the PD-1/VEGF bispecific developed by China's Akeso — showing a 24 percent reduction in the risk of death versus chemotherapy alone in EGFR-mutant lung cancer, with the benefit now consistent in Western patients. The results have been submitted to the FDA, with a decision expected by November 14, 2026."
 date: 2026-08-06
 updated: 2026-08-06
+sources:
+  - "U.S. FDA — regulatory decision"
+  - "NMPA — existing approval in China"
+  - "ClinicalTrials.gov — HARMONi trial data"
 
 schema: |
   [

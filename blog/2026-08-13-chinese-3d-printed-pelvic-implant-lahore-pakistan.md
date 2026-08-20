@@ -6,6 +6,10 @@ kicker: "China's 3D-Printed Implant Technology & Orthopedic Oncology"
 subtitle: "On August 8, 2026, surgeons at Ghurki Trust Teaching Hospital in Lahore removed a bone tumor from a 26-year-old patient's left hip socket and rebuilt the joint with a custom 3D-printed partial pelvic implant manufactured in China by Farshine Medical. It was the hospital's first use of patient-specific 3D printing in orthopedic cancer surgery — and a working demonstration of the custom-implant capability international patients can now reach directly in China."
 date: 2026-08-13
 updated: 2026-08-13
+sources:
+  - "NMPA — 3D-printed implant approval"
+  - "Chinese hospital — case announcement"
+  - "Pakistan media coverage"
 
 schema: |
   [

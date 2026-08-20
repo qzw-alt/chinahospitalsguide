@@ -6,6 +6,10 @@ kicker: "Brain-Computer Interfaces & China's Neuro-Tech Lead"
 subtitle: "On August 9-10, 2026, Shanghai-based StairMed Technology presented a brain-computer interface (BCI) that enters through a neck vein instead of opening the skull, with a 10-minute placement target — while China's NMPA, five months earlier, granted the world's first market approval for an invasive BCI implant for paralyzed patients."
 date: 2026-08-11
 updated: 2026-08-11
+sources:
+  - "NMPA — device approval record"
+  - "Nature — brain-computer interface research"
+  - "StairMed — company announcement"
 
 schema: |
   [

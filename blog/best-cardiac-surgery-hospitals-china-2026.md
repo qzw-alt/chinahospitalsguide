@@ -6,6 +6,10 @@ kicker: "Cardiac Surgery Decision Guide"
 subtitle: "CABG in China: $15K-$30K, wait 2-4 weeks, top hospitals with international departments. Fuwai, Anzhen, Zhongshan — costs, safety data, and the full patient pathway from first contact to discharge."
 date: 2026-08-14
 updated: 2026-08-14
+sources:
+  - "Hospital official websites"
+  - "Fudan University hospital rankings"
+  - "Published 2026 cardiac surgery cost data"
 
 schema: |
   [

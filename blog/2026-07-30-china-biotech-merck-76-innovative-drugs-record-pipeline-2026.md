@@ -6,6 +6,10 @@ kicker: "China Biopharma & Drug Access"
 subtitle: "Merck Healthcare China's managing director explains why China is now the world's fastest drug-development market — and what this means for international patients looking for clinical-trial access, faster regulatory approval, and 60-85% lower cost than Singapore, Korea, or the US."
 date: 2026-07-30
 updated: 2026-07-30
+sources:
+  - "NMPA — innovative drug approval and pipeline data"
+  - "Merck — licensing announcement"
+  - "U.S. FDA — regulatory filings"
 
 schema: |
   [

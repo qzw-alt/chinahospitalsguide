@@ -6,6 +6,9 @@ kicker: "TCM Seasonal Therapy & Access"
 subtitle: "The 2026 sanfu season is in its final stretch — 末伏 (the third dog-day period) starts around August 15, and major Chinese TCM hospitals are taking bookings now. Here is what the therapy is, what the 2024-2025 evidence shows, and how international patients can access it."
 date: 2026-08-03
 updated: 2026-08-03
+sources:
+  - "WHO — Traditional Chinese Medicine references"
+  - "Published TCM clinical literature on sanfu paste (三伏贴)"
 
 schema: |
   [

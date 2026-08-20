@@ -6,6 +6,10 @@ kicker: "CAR-T Cell Therapy for Lymphoma"
 subtitle: "Relapsed or refractory lymphoma is the most common indication for CAR-T in China. CD19 CAR-T: $89K-$151K commercial, $30K-$80K trial access. Top hospitals, eligibility, and the full patient pathway explained."
 date: 2026-08-14
 updated: 2026-08-14
+sources:
+  - "NMPA — approved CAR-T products"
+  - "Official hospital websites"
+  - "Published 2026 CAR-T pricing reports"
 
 schema: |
   [

@@ -6,6 +6,9 @@ kicker: "TCM Policy & Access"
 subtitle: "The State Council's 2026-30 TCM plan sets concrete 2030 targets — breakthroughs in cancer, cardiovascular, kidney and infectious disease care, plus geriatric and pediatric capacity. What it means for foreign patients today."
 date: 2026-07-29
 updated: 2026-07-29
+sources:
+  - "Xinhua — coverage of China’s TCM five-year plan"
+  - "National Administration of Traditional Chinese Medicine (NATCM) — plan documents"
 
 schema: |
   [

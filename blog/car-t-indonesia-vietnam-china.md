@@ -6,6 +6,10 @@ kicker: "CAR-T for Southeast Asian Patients"
 subtitle: "Step-by-step 2026 guide for Indonesian and Vietnamese patients: visa, hospital selection, costs, language support, and what to expect at each stage."
 date: 2026-07-10
 updated: 2026-07-10
+sources:
+  - "NMPA — approved CAR-T products"
+  - "Hospital official websites with international departments"
+  - "Regulatory approvals in Indonesia and Vietnam"
 
 schema: |
   [

@@ -6,6 +6,10 @@ kicker: "China Drug Approvals & Biliary Cancer"
 subtitle: "On August 7, 2026, China's NMPA approved Yochanra (tinengotinib), a multikinase inhibitor from Nanjing-based TransThera, for advanced bile duct cancer that has developed resistance to FGFR inhibitors — the first drug approved anywhere for this exact clinical setting."
 date: 2026-08-10
 updated: 2026-08-10
+sources:
+  - "NMPA — approval record"
+  - "Innovent Biologics — announcement"
+  - "Published clinical data on tinengotinib"
 
 schema: |
   [

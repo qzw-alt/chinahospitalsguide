@@ -6,6 +6,9 @@ kicker: "TCM Evidence Update"
 subtitle: "A 66-patient randomised trial from the Second Affiliated Hospital of Guangzhou University of Chinese Medicine (GZUCM) shows that barely perceptible current helps long-term facial paralysis as much as visible muscle twitching. Comfort may matter more than needle sensation."
 date: 2026-07-27
 updated: 2026-07-27
+sources:
+  - "WHO — Traditional Medicine and acupuncture references"
+  - "Published randomized controlled trial on electroacupuncture for facial paralysis"
 permalink: "/blog/2026-07-27-electroacupuncture-facial-paralysis-gentle-current-china-rct-2026.html"
 canonical: "https://chinahospitalsguide.com/blog/2026-07-27-electroacupuncture-facial-paralysis-gentle-current-china-rct-2026.html"
 ogType: "article"
