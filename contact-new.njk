@@ -493,9 +493,7 @@ schema: |
         var success = document.getElementById('successMessage');
         var errorBox = document.getElementById('formError');
 
-        // Single source of truth: the form's action URL carries the Formspree form id.
-        // Replace with a dedicated case-review form id if you create one (currently reuses
-        // the newsletter endpoint so submissions work immediately).
+        // Formspree endpoint is configured in _data/site.json (formspree.caseReview).
         var action = form.getAttribute('action') || '';
 
         // Prefill from URL query params (?treatment=...&country=...&budget=...&source=...)
