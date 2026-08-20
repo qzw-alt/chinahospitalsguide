@@ -668,6 +668,7 @@ schema: |
                         (tagHtml ? '<div class="hospital-tags">' + tagHtml + '</div>' : '') +
                         '<div class="hospital-actions">' +
                             (h.website ? '<a href="' + h.website + '" target="_blank" rel="noopener" class="view-details-btn">🌐 Website</a>' : '') +
+                            '<a href="/hospitals/' + h.id + '/" class="view-details-btn">📄 View Details</a>' +
                             '<a href="contact-new.html" class="view-details-btn">📋 Get Matched</a>' +
                         '</div>' +
                     '</div>' +
