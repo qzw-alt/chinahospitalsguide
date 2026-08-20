@@ -490,19 +490,43 @@ schema: |
         var specialtyTags = document.getElementById('specialtyTags');
         var resultsCount = document.getElementById('resultsCount');
 
+        var procedureByHospital = {};
+        function buildProcedureMap(procs) {
+            procedureByHospital = {};
+            (procs || []).forEach(function(p) {
+                (p.hospitals || []).forEach(function(hp) {
+                    if (!procedureByHospital[hp.hospital_id]) procedureByHospital[hp.hospital_id] = [];
+                    procedureByHospital[hp.hospital_id].push({
+                        name: p.name,
+                        price: fmtPrice(hp.price_range_usd),
+                        dept: hp.department || ''
+                    });
+                });
+            });
+        }
+        function fmtPrice(r) {
+            if (!r) return '';
+            var lo = r.low ? '$' + Number(r.low).toLocaleString() : '';
+            var hi = r.high ? '$' + Number(r.high).toLocaleString() : '';
+            if (lo && hi && hi !== lo) return lo + '–' + hi;
+            return hi || lo;
+        }
+
         function fetchHospitals() {
             grid.innerHTML = '<p style="text-align:center;color:#888;padding:2rem;grid-column:1/-1">Loading hospitals...</p>';
-            fetch('/api/v1/hospitals.json')
-                .then(function(r) { return r.json(); })
-                .then(function(data) {
-                    allHospitals = data.hospitals || [];
-                    buildSpecialtyTags();
-                    render();
-                })
-                .catch(function(e) {
-                    grid.innerHTML = '<p style="text-align:center;color:#c00;padding:2rem;grid-column:1/-1">Failed to load hospital data. Please try again later.</p>';
-                    console.error(e);
-                });
+            Promise.all([
+                fetch('/api/v1/hospitals.json').then(function(r) { return r.json(); }),
+                fetch('/api/v1/procedures.json').then(function(r) { return r.json(); }).catch(function() { return { procedures: [] }; })
+            ]).then(function(results) {
+                allHospitals = results[0].hospitals || [];
+                buildProcedureMap(results[1].procedures || []);
+                buildSpecialtyTags();
+                render();
+            })
+            .catch(function(e) {
+                grid.innerHTML = '<p style="text-align:center;color:#c00;padding:2rem;grid-column:1/-1">Failed to load hospital data. Please try again later.</p>';
+                console.error(e);
+            });
         }
 
         var REGION_MAP = {
@@ -598,6 +622,18 @@ schema: |
                     }
                 }
 
+                var procHtml = '';
+                var procList = procedureByHospital[h.id] || [];
+                if (procList.length) {
+                    procHtml = '<div class="hospital-procs" style="margin-top:8px;border-top:1px dashed #d9e2ec;padding-top:8px;">' +
+                        '<div style="font-size:0.76rem;font-weight:700;color:#1e3c72;text-transform:uppercase;letter-spacing:.05em;margin-bottom:3px;">Representative procedures</div>' +
+                        procList.slice(0, 3).map(function(pr) {
+                            return '<div style="font-size:0.84rem;padding:2px 0;display:flex;justify-content:space-between;align-items:center;gap:8px;"><a href="procedures.html" style="color:#1e3c72;text-decoration:none;font-weight:600;">🩺 ' + pr.name + '</a><span style="color:#2e7d32;white-space:nowrap;font-weight:600;font-size:0.8rem;">' + (pr.price || '—') + '</span></div>';
+                        }).join('') +
+                        (procList.length > 3 ? '<div style="font-size:0.74rem;color:#8893a0;margin-top:3px;">+' + (procList.length - 3) + ' more — <a href="procedures.html" style="color:#1e3c72;">view all procedures</a></div>' : '') +
+                    '</div>';
+                }
+
                 var tagHtml = (h.tags || []).slice(0, 6).map(function(t) {
                     return '<span class="hospital-tag">' + formatTag(t) + '</span>';
                 }).join('');
@@ -624,6 +660,7 @@ schema: |
                         (badges ? '<div class="badge-row">' + badges + '</div>' : '') +
                         trustHtml +
                         '<div class="hospital-info"><strong>' + (h.rank || '') + '</strong></div>' +
+                        procHtml +
                         (h.estimated_wait_weeks ? '<div class="hospital-info">⏱ Est. wait: ' + h.estimated_wait_weeks + '</div>' : '') +
                         airportHtml +
                         phoneHtml +
