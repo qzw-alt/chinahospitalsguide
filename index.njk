@@ -286,29 +286,85 @@ extraHead: "<link rel=\"alternate\" hreflang=\"en\" href=\"https://chinahospital
 schema: |
   {
   "@context": "https://schema.org",
-  "@type": "MedicalBusiness",
-  "name": "China Hospitals Guide",
-  "url": "https://chinahospitalsguide.com",
-  "logo": "https://chinahospitalsguide.com/og-image.webp",
-  "image": "https://chinahospitalsguide.com/og-image.webp",
-  "description": "Independent medical travel coordination for international patients seeking hospital treatment in China. Hospital matching, cost comparison, and pre-travel planning.",
-  "telephone": "+86-157-6310-7083",
-  "email": "contact@chinahospitalsguide.com",
-  "areaServed": { "@type": "Country", "name": "China" }
-  }
-  {
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "China Hospitals Guide",
-  "url": "https://chinahospitalsguide.com",
-  "potentialAction": {
-  "@type": "SearchAction",
-  "target": {
-  "@type": "EntryPoint",
-  "urlTemplate": "https://chinahospitalsguide.com/hospitals.html?search={search_term_string}"
-  },
-  "query-input": "required name=search_term_string"
-  }
+  "@graph": [
+    {
+      "@type": "MedicalBusiness",
+      "@id": "https://chinahospitalsguide.com/#organization",
+      "name": "China Hospitals Guide",
+      "url": "https://chinahospitalsguide.com",
+      "logo": "https://chinahospitalsguide.com/og-image.webp",
+      "image": "https://chinahospitalsguide.com/og-image.webp",
+      "description": "Independent medical travel coordination for international patients seeking hospital treatment in China. Hospital matching, cost comparison, and pre-travel planning.",
+      "telephone": "+86-157-6310-7083",
+      "email": "contact@chinahospitalsguide.com",
+      "areaServed": { "@type": "Country", "name": "China" },
+      "medicalSpecialty": ["Oncology", "Cardiology", "Orthopedics", "Neurology", "Ophthalmology", "IVF & Fertility", "Dental", "Traditional Chinese Medicine"],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "availableLanguage": ["English", "Russian", "Arabic", "Indonesian", "Chinese"]
+      },
+      "sameAs": [
+        "https://www.facebook.com/chinahospitalguide",
+        "https://twitter.com/chinahospitals"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://chinahospitalsguide.com/#website",
+      "name": "China Hospitals Guide",
+      "url": "https://chinahospitalsguide.com",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://chinahospitalsguide.com/hospitals.html?search={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://chinahospitalsguide.com/#webpage",
+      "url": "https://chinahospitalsguide.com",
+      "name": "Medical Treatment in China 2026 | Save 50–80% vs US Prices | Free Case Review",
+      "isPartOf": { "@id": "https://chinahospitalsguide.com/#website" },
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": ["h1", ".hero-copy p"]
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is it safe to have surgery in China?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes, at the hospitals we recommend. Safety is anchored to JCI accreditation and the national Grade 3A classification — China's highest hospital tier. We only recommend hospitals we've verified ourselves." }
+        },
+        {
+          "@type": "Question",
+          "name": "Do Chinese hospital staff speak English?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The hospitals we recommend have dedicated international departments with English-speaking coordinators, translators, and doctors. Many top surgeons trained in the US, UK, or Germany." }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does surgery cost, and how do I pay?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Major surgery in China typically costs 50–80% less than US private care: knee replacement $5,500–$9,000, heart bypass $10,000–$16,000. Hospitals accept cash, WeChat/Alipay, and major credit cards." }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I get a medical visa for China?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Most patients apply for an S2 (short-term private visit) or L (tourist) visa. Once you have an appointment confirmation, the hospital can provide an invitation letter to support your application." }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens after surgery — follow-up care?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Before you leave China, the hospital provides a discharge summary in English and a follow-up plan your doctor back home can follow. Many hospitals offer telemedicine follow-ups post-discharge." }
+        }
+      ]
+    }
+  ]
   }
 ---
 <section class="hero-home">

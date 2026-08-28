@@ -22,6 +22,21 @@ function medicalBusinessSchema() {
       "@type": "Country",
       "name": "China"
     },
+    "medicalSpecialty": [
+      "Oncology",
+      "Cardiology",
+      "Orthopedics",
+      "Neurology",
+      "Ophthalmology",
+      "IVF & Fertility",
+      "Dental",
+      "Traditional Chinese Medicine"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer service",
+      "availableLanguage": ["English", "Russian", "Arabic", "Indonesian", "Chinese"]
+    },
     "sameAs": [
       "https://www.facebook.com/chinahospitalguide",
       "https://twitter.com/chinahospitals"
