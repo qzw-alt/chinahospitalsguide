@@ -130,8 +130,6 @@
 /treatments/nutcracker-syndrome.html /blog/china-unique-medical-procedures-guide.html 301
 /treatments/ /index.html 301
 
-# 2026-08-18: removed duplicate Chinese rankings .md (cannibalizing zh/ page)
-/blog/china-hospital-rankings-2026/ /zh/hospital-rankings-2026.html 301
 
 # 2026-08-18: reverted "procedure x city" decision pages + html→md upgrades (were 404ing)
 /blog/cataract-surgery-guangzhou-2026.html /blog/cataract-surgery-china.html 301
