@@ -512,6 +512,32 @@ schema: |
                     if (sel.options[j].value && val.toLowerCase().indexOf(sel.options[j].value.toLowerCase()) !== -1) { sel.selectedIndex = j; return; }
                 }
             });
+            var proc = params.get('proc');
+            if (proc) {
+                var procMap = {
+                    'knee': 'Orthopedics / Joint Replacement',
+                    'hip': 'Orthopedics / Joint Replacement',
+                    'spine': 'Orthopedics / Joint Replacement',
+                    'bypass': 'Cardiac Surgery / Cardiology',
+                    'valve': 'Cardiac Surgery / Cardiology',
+                    'cancer': 'Cancer Treatment / Oncology',
+                    'ivf': 'IVF / Fertility Treatment',
+                    'cataract': 'Eye Surgery / LASIK',
+                    'lasik': 'Eye Surgery / LASIK'
+                };
+                var pl = proc.toLowerCase();
+                var tsel = document.getElementById('treatment_category');
+                if (tsel) {
+                    for (var k in procMap) {
+                        if (pl.indexOf(k) !== -1) {
+                            for (var m = 0; m < tsel.options.length; m++) {
+                                if (tsel.options[m].value === procMap[k]) { tsel.selectedIndex = m; break; }
+                            }
+                            break;
+                        }
+                    }
+                }
+            }
             var pkg = params.get('package');
             if (pkg) {
                 document.querySelectorAll('input[name="package"]').forEach(function(r) {
