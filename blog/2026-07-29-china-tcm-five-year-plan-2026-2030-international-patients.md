@@ -278,7 +278,7 @@ China Hospitals Guide provides independent coordination for international patien
 - [TCM Traditional Chinese Medicine Guide for International Patients](/blog/tcm-traditional-chinese-medicine-guide.html)
 - [Why International Patients Choose China for Medical Treatment in 2026](/blog/why-international-patients-choose-china-medical-treatment-2026.html)
 - [TCM Going Global: How Shufeng Jiedu, Suxiao Jiuxin Pills and AI Workflows Reached 196 Countries](/blog/2026-07-28-tcm-going-global-shufeng-jiedu-germany-ai-workflow.html)
-- [Hong Kong Chinese Medicine Hospital: Stroke and Back Pain Programmes Launch](/news/2026-07-23-hong-kong-chinese-medicine-hospital-stroke-back-pain-launch-2026.html)
+- [Sanfu Paste 2026: China's Dog-Day Herbal Patch for Asthma and Allergic Rhinitis](/blog/2026-08-03-sanfu-paste-tcm-asthma-allergic-rhinitis-2026/)
 
 ---
 
