@@ -1686,6 +1686,60 @@ footer p {
         font-size: 1.4rem;
         margin-bottom: 2px;
     }
+    .mobile-bottom-bar .mbb-contact {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: var(--text-light);
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 0.7rem;
+        font-weight: 500;
+        padding: 6px 12px;
+        font-family: inherit;
+        line-height: 1;
+        border-radius: 8px;
+        transition: all 0.2s ease;
+    }
+    .mobile-bottom-bar .mbb-contact span:first-child {
+        font-size: 1.4rem;
+        margin-bottom: 2px;
+    }
+    .mobile-bottom-bar .mbb-contact:active {
+        background: var(--bg);
+        transform: scale(0.95);
+    }
+    .mbb-menu {
+        position: fixed;
+        bottom: calc(94px + env(safe-area-inset-bottom));
+        right: 12px;
+        background: #fff;
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        box-shadow: 0 -4px 24px rgba(0,0,0,0.16);
+        padding: 6px;
+        display: none;
+        flex-direction: column;
+        min-width: 168px;
+        z-index: 9999;
+    }
+    .mbb-menu.open {
+        display: flex;
+    }
+    .mobile-bottom-bar .mbb-menu a {
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 10px;
+        padding: 11px 14px;
+        font-size: 0.85rem;
+        text-align: left;
+    }
+    .mobile-bottom-bar .mbb-menu a span:first-child {
+        font-size: 1.15rem;
+        margin-bottom: 0;
+    }
     /* Add padding to body to prevent content from being hidden behind the bar */
     body {
         padding-bottom: calc(90px + env(safe-area-inset-bottom));

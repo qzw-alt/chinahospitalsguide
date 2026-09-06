@@ -2,7 +2,28 @@
         <a href="{{ '/index.html' | url }}"><span>🏠</span>Home</a>
         <a href="{{ '/pricing.html' | url }}"><span>💰</span>Pricing</a>
         <a href="{{ '/contact-new.html' | url }}"><span>📋</span>Start</a>
-        <a href="mailto:{{ site.email }}"><span>📧</span>Email</a>
-        <a href="https://wa.me/{{ site.whatsapp }}" target="_blank" rel="noopener"><span>💬</span>WhatsApp</a>
-        <a href="https://t.me/chinahospitalguide" target="_blank" rel="noopener"><span>📨</span>Telegram</a>
+        <button type="button" class="mbb-contact" id="mbbContact" aria-expanded="false" aria-haspopup="true"><span>💬</span>Contact</button>
+        <div class="mbb-menu" id="mbbMenu">
+            <a href="mailto:{{ site.email }}"><span>📧</span>Email</a>
+            <a href="https://wa.me/{{ site.whatsapp }}" target="_blank" rel="noopener"><span>💬</span>WhatsApp</a>
+            <a href="https://t.me/chinahospitalguide" target="_blank" rel="noopener"><span>📨</span>Telegram</a>
+        </div>
     </div>
+    <script>
+    (function () {
+        var btn = document.getElementById('mbbContact');
+        var menu = document.getElementById('mbbMenu');
+        if (!btn || !menu) return;
+        btn.addEventListener('click', function (e) {
+            e.stopPropagation();
+            var open = menu.classList.toggle('open');
+            btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        });
+        document.addEventListener('click', function (e) {
+            if (!menu.contains(e.target) && e.target !== btn && !btn.contains(e.target)) {
+                menu.classList.remove('open');
+                btn.setAttribute('aria-expanded', 'false');
+            }
+        });
+    })();
+    </script>
