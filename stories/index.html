@@ -116,7 +116,22 @@
         .footer-bottom { text-align: center; padding-top: 20px; border-top: 1px solid #333; max-width: 1000px; margin: 0 auto; font-size: 0.9em; }
         .back-link { display: inline-block; margin-top: 30px; color: #2a5298; text-decoration: none; font-weight: 500; }
         .back-link:hover { color: #1e3c72; }
-        
+
+        /* Video Stories (external patient videos) */
+        .video-stories { background: #f5f7fb; padding: 70px 0; margin: 40px 0; }
+        .video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
+        .video-card { background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 6px 20px rgba(0,0,0,0.07); }
+        .video-frame { position: relative; width: 100%; padding-top: 56.25%; background: #000; cursor: pointer; }
+        .video-frame img.thumb { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+        .video-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+        .video-frame .play { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 64px; height: 64px; border-radius: 50%; background: rgba(0,0,0,0.72); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 1.6em; transition: background 0.2s; pointer-events: none; }
+        .video-frame:hover .play { background: #cc0000; }
+        .video-body { padding: 16px 18px; }
+        .video-body h4 { color: #1e3c72; font-size: 1.05em; margin-bottom: 6px; line-height: 1.35; }
+        .video-body .src { color: #888; font-size: 0.82em; }
+        .video-body .src a { color: #2a5298; text-decoration: none; }
+        .video-body .src a:hover { text-decoration: underline; }
+
         /* Responsive */
         @media (max-width: 768px) {
             .header h1 { font-size: 2em; }
@@ -221,6 +236,97 @@
             </div>
         </section>
         
+        <!-- Video Stories Section -->
+        <section class="video-stories">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Watch Real Patient Stories</h2>
+                    <p>Independent creators share first-hand experiences in Chinese hospitals — fast, affordable, and professional care. External videos from public YouTube channels; tap to play.</p>
+                </div>
+                <div class="video-grid">
+                    <div class="video-card">
+                        <div class="video-frame" data-id="moEcVc_xT6I">
+                            <img class="thumb" src="https://img.youtube.com/vi/moEcVc_xT6I/hqdefault.jpg" alt="Andre Hospital Visit in China" loading="lazy">
+                            <span class="play">▶</span>
+                        </div>
+                        <div class="video-body">
+                            <h4>Andre Hospital Visit in China — Impressed by the System</h4>
+                            <p class="src">External video · <a href="https://www.youtube.com/watch?v=moEcVc_xT6I" target="_blank" rel="noopener">watch on YouTube ↗</a></p>
+                        </div>
+                    </div>
+                    <div class="video-card">
+                        <div class="video-frame" data-id="P-hkfZadSeQ">
+                            <img class="thumb" src="https://img.youtube.com/vi/P-hkfZadSeQ/hqdefault.jpg" alt="Experiencing China's Efficient Healthcare" loading="lazy">
+                            <span class="play">▶</span>
+                        </div>
+                        <div class="video-body">
+                            <h4>Experiencing China's Efficient Healthcare as a Foreigner</h4>
+                            <p class="src">External video · <a href="https://www.youtube.com/watch?v=P-hkfZadSeQ" target="_blank" rel="noopener">watch on YouTube ↗</a></p>
+                        </div>
+                    </div>
+                    <div class="video-card">
+                        <div class="video-frame" data-id="Jm7qp-ZtJjU">
+                            <img class="thumb" src="https://img.youtube.com/vi/Jm7qp-ZtJjU/hqdefault.jpg" alt="My Experience at Huaxi Hospital" loading="lazy">
+                            <span class="play">▶</span>
+                        </div>
+                        <div class="video-body">
+                            <h4>My Experience at Huaxi Hospital — The Biggest Public Hospital in China</h4>
+                            <p class="src">External video · <a href="https://www.youtube.com/watch?v=Jm7qp-ZtJjU" target="_blank" rel="noopener">watch on YouTube ↗</a></p>
+                        </div>
+                    </div>
+                    <div class="video-card">
+                        <div class="video-frame" data-id="Ko7wU0R8Rbk">
+                            <img class="thumb" src="https://img.youtube.com/vi/Ko7wU0R8Rbk/hqdefault.jpg" alt="Life Abroad - Getting Medical Care in China" loading="lazy">
+                            <span class="play">▶</span>
+                        </div>
+                        <div class="video-body">
+                            <h4>Life Abroad — Getting Medical Care in China</h4>
+                            <p class="src">External video · <a href="https://www.youtube.com/watch?v=Ko7wU0R8Rbk" target="_blank" rel="noopener">watch on YouTube ↗</a></p>
+                        </div>
+                    </div>
+                    <div class="video-card">
+                        <div class="video-frame" data-id="qsCydTdE40M">
+                            <img class="thumb" src="https://img.youtube.com/vi/qsCydTdE40M/hqdefault.jpg" alt="Chinese Public Hospital - Real Experience" loading="lazy">
+                            <span class="play">▶</span>
+                        </div>
+                        <div class="video-body">
+                            <h4>Chinese Public Hospital — Real Experience</h4>
+                            <p class="src">External video · <a href="https://www.youtube.com/watch?v=qsCydTdE40M" target="_blank" rel="noopener">watch on YouTube ↗</a></p>
+                        </div>
+                    </div>
+                    <div class="video-card">
+                        <div class="video-frame" data-id="047LPv_hQrQ">
+                            <img class="thumb" src="https://img.youtube.com/vi/047LPv_hQrQ/hqdefault.jpg" alt="GigaQian - Hospital Visit Vlog in China" loading="lazy">
+                            <span class="play">▶</span>
+                        </div>
+                        <div class="video-body">
+                            <h4>GigaQian — Hospital Visit Vlog in China</h4>
+                            <p class="src">External video · <a href="https://www.youtube.com/watch?v=047LPv_hQrQ" target="_blank" rel="noopener">watch on YouTube ↗</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script>
+        (function(){
+            document.querySelectorAll('.video-frame').forEach(function(f){
+                f.addEventListener('click', function(){
+                    if (f.querySelector('iframe')) return;
+                    var id = f.getAttribute('data-id');
+                    var iframe = document.createElement('iframe');
+                    iframe.src = 'https://www.youtube.com/embed/' + id + '?autoplay=1&rel=0';
+                    iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+                    iframe.allowFullscreen = true;
+                    f.appendChild(iframe);
+                    var play = f.querySelector('.play');
+                    if (play) play.remove();
+                    var img = f.querySelector('img.thumb');
+                    if (img) img.style.display = 'none';
+                });
+            });
+        })();
+        </script>
+
         <!-- Process Section -->
         <section class="process">
             <div class="section-title">

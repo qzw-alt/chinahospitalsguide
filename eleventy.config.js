@@ -10,6 +10,16 @@ module.exports = function(eleventyConfig) {
     return y + '-' + m + '-' + day;
   });
 
+  // Convert Chinese landline format to E.164 international format for schema.org
+  // "010-88398866" -> "+86-10-88398866", "021-64041990" -> "+86-21-64041990"
+  eleventyConfig.addFilter('intlPhone', function(p) {
+    if (!p) return '';
+    p = String(p).trim();
+    if (/^\+/.test(p)) return p;
+    if (/^0/.test(p)) return '+86-' + p.slice(1);
+    return '+86-' + p;
+  });
+
   // Passthrough copy: static assets that don't need processing
   eleventyConfig.addPassthroughCopy("styles.css");
   eleventyConfig.addPassthroughCopy("ga4-events.js");

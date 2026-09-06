@@ -197,6 +197,12 @@ pageStyle: |
               color: var(--primary);
               font-size: 1.22rem;
               font-weight: 700;
+              margin-bottom: 0.3rem;
+          }
+          .hospital-name-zh {
+              color: #66758a;
+              font-size: 0.95rem;
+              font-weight: 500;
               margin-bottom: 0.45rem;
           }
           .hospital-location {
@@ -408,21 +414,34 @@ schema: |
               }
           ]
       }
-  {
-          "@context": "https://schema.org",
-          "@type": "Article",
-          "headline": "50+ Hospitals in China for International Patients 2026 | JCI-Accredited",
-          "description": "50+ Hospitals in China for International Patients 2026 | JCI-Accredited - China Hospitals Guide 2026",
-          "image": "https://chinahospitalsguide.com/og-image.webp",
-          "author": { "@type": "Organization", "name": "China Hospitals Guide" },
-          "publisher": {
-              "@type": "Organization",
-              "name": "China Hospitals Guide",
-              "logo": { "@type": "ImageObject", "url": "https://chinahospitalsguide.com/og-image.webp" }
-          },
-          "mainEntityOfPage": { "@type": "WebPage", "@id": "https://chinahospitalsguide.com/hospitals.html" }
-      }
 ---
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Hospitals in China for International Patients",
+  "numberOfItems": {{ hospitals | length }},
+  "itemListElement": [
+    {%- for h in hospitals %}
+    {
+      "@type": "Hospital",
+      "name": {{ h.name | dump | safe }},
+      "alternateName": {{ h.name_zh | dump | safe }},
+      "medicalSpecialty": {{ (h.tags or []) | dump | safe }},
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": {{ (h.address or '') | dump | safe }},
+        "addressLocality": {{ h.city | dump | safe }},
+        "addressCountry": "CN"
+      },
+      "telephone": {{ (h.phone | intlPhone) | dump | safe }},
+      "url": {{ (h.website or '') | dump | safe }},
+      "position": {{ loop.index }}
+    }{%- if not loop.last %},{% endif %}
+    {%- endfor %}
+  ]
+}
+</script>
 <header class="page-header">
         <span class="hero-kicker">Hospitals in China for international patients</span>
         <h1>50+ Hospitals in China for Foreigners &amp; International Patients</h1>
@@ -603,12 +622,9 @@ schema: |
                 }
 
                 var badges = '';
-                if (h.grade_3a) badges += '<span class="badge badge-3a">🏥 Grade 3A</span>';
-                if (h.jci) badges += '<span class="badge badge-jci">JCI Accredited</span>';
-                if (h.international) badges += '<span class="badge badge-intl">🌐 Intl. Dept.</span>';
-                if (h.international_dept && h.international_dept.languages) {
-                    badges += '<span class="badge badge-intl">🗣 ' + h.international_dept.languages.slice(0,3).join('/') + '</span>';
-                }
+                if (h.international) badges += '<span class="badge badge-intl">🌐 International Dept</span>';
+                var rankCore = shortRank(h.rank);
+                if (rankCore) badges += '<span class="badge badge-3a">🏆 ' + rankCore + '</span>';
 
                 var trustHtml = '';
                 if (h.trust) {
@@ -656,15 +672,15 @@ schema: |
                     imageHtml +
                     '<div class="hospital-content">' +
                         '<div class="hospital-name">' + h.name + '</div>' +
+                        (h.name_zh ? '<div class="hospital-name-zh">' + h.name_zh + '</div>' : '') +
                         '<div class="hospital-location">📍 ' + h.city + (h.district ? ', ' + h.district : '') + '</div>' +
                         (badges ? '<div class="badge-row">' + badges + '</div>' : '') +
                         trustHtml +
-                        '<div class="hospital-info"><strong>' + (h.rank || '') + '</strong></div>' +
                         procHtml +
                         (h.estimated_wait_weeks ? '<div class="hospital-info">⏱ Est. wait: ' + h.estimated_wait_weeks + '</div>' : '') +
                         airportHtml +
                         phoneHtml +
-                        (h.address ? '<div class="hospital-info" style="font-size:0.82rem;color:#8893a0">' + (h.name_zh || '') + ' — ' + h.address + '</div>' : '') +
+                        (h.address ? '<div class="hospital-info" style="font-size:0.82rem;color:#8893a0">' + h.address + '</div>' : '') +
                         (tagHtml ? '<div class="hospital-tags">' + tagHtml + '</div>' : '') +
                         '<div class="hospital-actions">' +
                             (h.website ? '<a href="' + h.website + '" target="_blank" rel="noopener" class="view-details-btn">🌐 Website</a>' : '') +
@@ -706,6 +722,15 @@ schema: |
             if (isNaN(d.getTime())) return dateStr;
             var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
             return months[d.getMonth()] + ' ' + d.getFullYear();
+        }
+
+        // Shorten a rank string to its core claim for the badge, e.g.
+        // "#1 Thoracic Surgery (#6 nationally), Top Military Hospital" -> "#1 Thoracic Surgery"
+        function shortRank(r) {
+            if (!r) return '';
+            var core = String(r).split(',')[0].replace(/\(.*\)/, '').trim();
+            if (core.length > 46) core = core.slice(0, 43) + '…';
+            return core;
         }
 
         function hashCode(str) {
