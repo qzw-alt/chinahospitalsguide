@@ -298,61 +298,61 @@ pageStyle: |
           }
 schema: |
   {
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  "headline": "China Hospital Pricing 2026 — $49 Shortlist · $149 Verification · $399 Full Journey",
-  "description": "Three tiers: $49 Hospital Shortlist, $149 Hospital Verification (we contact 2-3 hospitals for you), $399 Full Journey Management. Upgrade anytime — only pay the difference.",
-  "author": { "@type": "Organization", "name": "China Hospitals Guide" },
-  "publisher": {
-  "@type": "Organization",
-  "name": "China Hospitals Guide",
-  "logo": { "@type": "ImageObject", "url": "https://chinahospitalsguide.com/og-image.webp" }
-  },
-  "dateModified": "2026-07-25",
-  "url": "https://chinahospitalsguide.com/pricing.html"
-  }
-  {
-  "@context": "https://schema.org",
-  "@type": "Offer",
-  "name": "Hospital Shortlist",
-  "price": "49",
-  "priceCurrency": "USD",
-  "description": "2-3 hospitals matched to your case and budget. Includes cost comparison and travel checklist. No hospital contact — information only. Upgrade credit toward L2 or L3.",
-  "url": "https://chinahospitalsguide.com/pricing.html",
-  "seller": { "@type": "Organization", "name": "China Hospitals Guide", "url": "https://chinahospitalsguide.com" }
-  }
-  {
-  "@context": "https://schema.org",
-  "@type": "Offer",
-  "name": "Hospital Verification",
-  "price": "149",
-  "priceCurrency": "USD",
-  "description": "We send your case to 2-3 hospitals in Chinese, translate their responses, and connect you directly. Upgrade credit toward L3 within 30 days.",
-  "url": "https://chinahospitalsguide.com/pricing.html",
-  "seller": { "@type": "Organization", "name": "China Hospitals Guide", "url": "https://chinahospitalsguide.com" }
-  }
-  {
-          "@context": "https://schema.org",
-          "@type": "Article",
-          "headline": "China Hospital Pricing 2026",
-          "description": "$49 Hospital Shortlist, $149 Hospital Verification, or $399 Full Journey Management. PayPal secure. Upgrade anytime — only pay the difference.",
-          "image": "https://chinahospitalsguide.com/og-image.webp",
-          "author": { "@type": "Organization", "name": "China Hospitals Guide" },
-          "publisher": {
-              "@type": "Organization",
-              "name": "China Hospitals Guide",
-              "logo": { "@type": "ImageObject", "url": "https://chinahospitalsguide.com/og-image.webp" }
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://chinahospitalsguide.com/pricing.html#webpage",
+        "url": "https://chinahospitalsguide.com/pricing.html",
+        "headline": "China Hospital Pricing 2026 — $49 Shortlist · $149 Verification · $399 Full Journey",
+        "description": "Three tiers: $49 Hospital Shortlist, $149 Hospital Verification (we contact 2-3 hospitals for you), $399 Full Journey Management. Upgrade anytime — only pay the difference.",
+        "publisher": { "@type": "Organization", "name": "China Hospitals Guide", "url": "https://chinahospitalsguide.com" }
+      },
+      {
+        "@type": "OfferCatalog",
+        "name": "China Hospitals Guide Coordination Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": { "@type": "Service", "name": "Hospital Shortlist", "description": "2-3 hospitals matched to your case. Includes cost comparison and travel checklist. Information only — no hospital contact." },
+            "price": "49", "priceCurrency": "USD",
+            "priceSpecification": { "@type": "PriceSpecification", "price": "49", "priceCurrency": "USD" },
+            "url": "https://chinahospitalsguide.com/pricing.html"
           },
-          "mainEntityOfPage": { "@type": "WebPage", "@id": "https://chinahospitalsguide.com/pricing.html" }
+          {
+            "@type": "Offer",
+            "itemOffered": { "@type": "Service", "name": "Hospital Verification", "description": "We send your case to 2-3 hospitals in Chinese, translate their responses, and connect you directly." },
+            "price": "149", "priceCurrency": "USD",
+            "priceSpecification": { "@type": "PriceSpecification", "price": "149", "priceCurrency": "USD" },
+            "url": "https://chinahospitalsguide.com/pricing.html"
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": { "@type": "Service", "name": "Full Journey Management", "description": "End-to-end coordination from matching to discharge and follow-up." },
+            "price": "399", "priceCurrency": "USD",
+            "priceSpecification": { "@type": "PriceSpecification", "price": "399", "priceCurrency": "USD" },
+            "url": "https://chinahospitalsguide.com/pricing.html"
+          }
+        ]
+      },
+      {
+        "@type": "Article",
+        "headline": "China Hospital Pricing 2026",
+        "description": "$49 Hospital Shortlist, $149 Hospital Verification, or $399 Full Journey Management. PayPal secure. Upgrade anytime — only pay the difference.",
+        "image": "https://chinahospitalsguide.com/og-image.webp",
+        "author": { "@type": "Organization", "name": "China Hospitals Guide" },
+        "publisher": { "@type": "Organization", "name": "China Hospitals Guide", "logo": { "@type": "ImageObject", "url": "https://chinahospitalsguide.com/og-image.webp" } },
+        "mainEntityOfPage": { "@type": "WebPage", "@id": "https://chinahospitalsguide.com/pricing.html" }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://chinahospitalsguide.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Pricing" }
+        ]
       }
-  {
-          "@context": "https://schema.org",
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://chinahospitalsguide.com/" },
-              { "@type": "ListItem", "position": 2, "name": "Pricing" }
-          ]
-      }
+    ]
+  }
 ---
 <section class="pricing-hero">
     <h1>Three steps to the right hospital &mdash; pick where you are</h1>
@@ -383,10 +383,10 @@ schema: |
         <div class="pricing-card-local">
             <h3>L1 &mdash; Hospital Shortlist</h3>
             <p><strong>"Which hospitals should I be looking at?"</strong></p>
-            <p>For patients still exploring. Get a clear shortlist matched to your condition and budget &mdash; information only, no hospital contact.</p>
+            <p>For patients still exploring. Get a clear shortlist matched to your condition and timing &mdash; information only, no hospital contact.</p>
             <div class="pricing-price">$49</div>
             <ul>
-                <li>2&ndash;3 hospitals matched to your case and budget</li>
+                <li>2&ndash;3 hospitals matched to your case</li>
                 <li>Cost comparison across cities</li>
                 <li>Transport guidance &mdash; airport to hospital</li>
                 <li>Travel preparation checklist</li>
