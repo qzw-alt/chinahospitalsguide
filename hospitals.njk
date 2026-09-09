@@ -481,6 +481,12 @@ schema: |
         <a href="/specialties/{{ s.slug }}/">{{ s.name }}</a>
         {%- endfor %}
     </nav>
+    <div style="max-width:1160px;margin:16px auto 0;padding:0 20px;text-align:center;color:#8893a0;font-size:0.82rem;">Or browse by condition:</div>
+    <nav class="specialty-nav" aria-label="Browse by condition" style="margin-top:10px;">
+        {%- for c in conditions %}
+        <a href="/conditions/{{ c.slug }}/">{{ c.name }}</a>
+        {%- endfor %}
+    </nav>
 
     <section class="filter-section">
         <div class="filter-container">
