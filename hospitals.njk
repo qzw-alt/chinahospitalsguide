@@ -1,11 +1,11 @@
 ---
 permalink: hospitals.html
 layout: base.njk
-title: "50+ Top Hospitals in China for International Patients 2026 | JCI-Accredited Directory | Save 50–80%"
-description: "Browse 50+ best hospitals in China 2026 for international patients: JCI-accredited, Grade 3A, ranked by specialty (orthopedic, oncology, cardiology, neurology). English-speaking departments. Knee replacement from $8,000, heart surgery from $15,000. Filter by specialty, city & international services. Free hospital match."
+title: "52 Hospitals in China for International Patients 2026 | Ranked by Specialty"
+description: "Browse 52 best hospitals in China 2026 for international patients: JCI-accredited, Grade 3A, ranked by specialty (cardiology, oncology, orthopedics, neurosurgery, OB-GYN). English-speaking departments. Knee replacement from $8,000, heart surgery from $15,000. Filter by specialty, city & international services. Free hospital match."
 canonical: "https://chinahospitalsguide.com/hospitals.html"
-ogTitle: "50+ Top Hospitals in China for International Patients (2026) | Save 50–80% on Surgery"
-ogDescription: "Browse 50+ JCI-accredited, nationally ranked hospitals in China for international patients. Filter by specialty, city & English services. Knee replacement $8K, heart surgery $15K. Updated 2026."
+ogTitle: "52 Hospitals in China for International Patients (2026) | Ranked by Specialty"
+ogDescription: "Browse 52 JCI-accredited, nationally ranked hospitals in China for international patients, by specialty and city. Knee replacement $8K, heart surgery $15K. Updated 2026."
 pageStyle: |
   body {
               background: var(--bg);
@@ -63,6 +63,30 @@ pageStyle: |
               display: block;
               font-size: 1.35rem;
               margin-bottom: 6px;
+              color: white;
+          }
+          .specialty-nav {
+              max-width: 1160px;
+              margin: 26px auto 0;
+              padding: 0 20px;
+              display: flex;
+              flex-wrap: wrap;
+              gap: 8px;
+              justify-content: center;
+          }
+          .specialty-nav a {
+              padding: 7px 14px;
+              background: white;
+              border: 1px solid rgba(42, 82, 152, 0.22);
+              color: var(--secondary);
+              border-radius: 999px;
+              text-decoration: none;
+              font-size: 0.85rem;
+              font-weight: 600;
+              transition: all 0.2s ease;
+          }
+          .specialty-nav a:hover {
+              background: var(--secondary);
               color: white;
           }
           .filter-section {
@@ -444,13 +468,19 @@ schema: |
 </script>
 <header class="page-header">
         <span class="hero-kicker">Hospitals in China for international patients</span>
-        <h1>50+ Hospitals in China for Foreigners &amp; International Patients</h1>
+        <h1>52 Hospitals in China for Foreigners &amp; International Patients</h1>
         <p>Compare hospitals in Beijing, Shanghai, Guangzhou, Shenzhen, Foshan, and other major cities by specialty, international support, and practical planning details.</p>
         <div class="hero-metrics">
             <div class="hero-metric"><strong>52 hospitals</strong><span>Across major cities and specialties</span></div>
             <div class="hero-metric"><strong>City + specialty view</strong><span>Built for faster shortlisting before you travel</span></div>
         </div>
     </header>
+
+    <nav class="specialty-nav" aria-label="Browse hospitals by specialty">
+        {%- for s in specialties %}
+        <a href="/specialties/{{ s.slug }}/">{{ s.name }}</a>
+        {%- endfor %}
+    </nav>
 
     <section class="filter-section">
         <div class="filter-container">

@@ -1,0 +1,138 @@
+---
+layout: base.njk
+pagination:
+  data: specialties
+  size: 1
+  alias: specialty
+permalink: "specialties/{{ specialty.slug }}/index.html"
+eleventyComputed:
+  title: "Best {{ specialty.name }} Hospitals in China 2026 | Prices & Rankings"
+  description: "{{ specialty.name }} in China: top-ranked hospitals, prices and wait times for international patients. {{ specialty.priceNote }}."
+  canonical: "https://chinahospitalsguide.com/specialties/{{ specialty.slug }}/"
+pageStyle: |
+  body { background: #f8f9fa; color: #243044; }
+  .sp-hero {
+      padding: 150px 20px 64px;
+      background: linear-gradient(135deg, #17345f 0%, #2a5298 100%);
+      color: white;
+      text-align: center;
+  }
+  .sp-hero h1 { color: white; font-size: clamp(1.7rem, 4vw, 2.7rem); line-height: 1.15; max-width: 860px; margin: 0 auto 16px; }
+  .sp-hero p { color: rgba(255,255,255,.88); max-width: 760px; margin: 0 auto 18px; font-size: 1.05rem; line-height: 1.65; }
+  .sp-hero .sp-price { display: inline-block; background: rgba(255,255,255,.14); border: 1px solid rgba(255,255,255,.28); border-radius: 999px; padding: 9px 18px; font-size: .92rem; font-weight: 600; color: white; }
+  .sp-shell { max-width: 1120px; margin: 0 auto; padding: 48px 20px 64px; }
+  .sp-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(330px, 1fr)); gap: 22px; }
+  .sp-card { background: #fff; border-radius: 18px; padding: 24px; border: 1px solid rgba(30,60,114,.08); box-shadow: 0 10px 26px rgba(15,23,42,.06); transition: transform .2s ease, box-shadow .2s ease; display: flex; flex-direction: column; }
+  .sp-card:hover { transform: translateY(-4px); box-shadow: 0 16px 32px rgba(15,23,42,.12); }
+  .sp-card .hname { color: #1e3c72; font-size: 1.15rem; font-weight: 700; margin-bottom: 4px; }
+  .sp-card .hzh { color: #8893a0; font-size: .85rem; margin-bottom: 8px; }
+  .sp-card .hrank { color: #2a5298; font-size: .88rem; font-weight: 600; margin-bottom: 8px; }
+  .sp-card .hloc { color: #66758a; font-size: .88rem; margin-bottom: 14px; }
+  .sp-card .hlink { margin-top: auto; display: inline-block; background: #1e3c72; color: white; padding: 10px 16px; border-radius: 999px; text-decoration: none; font-size: .85rem; font-weight: 600; text-align: center; transition: all .2s ease; }
+  .sp-card .hlink:hover { background: #2a5298; }
+  .sp-section-title { color: #1e3c72; font-size: 1.5rem; margin: 48px 0 20px; }
+  .sp-faq { max-width: 860px; margin: 0 auto; }
+  .sp-faq-item { background: #fff; border-radius: 16px; padding: 24px 26px; border: 1px solid rgba(30,60,114,.08); box-shadow: 0 8px 20px rgba(15,23,42,.05); margin-bottom: 16px; }
+  .sp-faq-item h3 { color: #1e3c72; font-size: 1.05rem; margin-bottom: 10px; }
+  .sp-faq-item p { color: #4a5568; line-height: 1.7; margin: 0; }
+  .sp-cta { background: linear-gradient(135deg, #18345f 0%, #2a5298 100%); color: white; border-radius: 22px; padding: 44px 32px; text-align: center; margin-top: 48px; }
+  .sp-cta h2 { color: white; margin-bottom: 12px; }
+  .sp-cta p { color: rgba(255,255,255,.88); max-width: 620px; margin: 0 auto 22px; }
+  .sp-cta a { display: inline-block; background: #ff6b6b; color: white; padding: 14px 32px; border-radius: 10px; text-decoration: none; font-weight: 700; }
+  .sp-crumb { max-width: 1120px; margin: 0 auto; padding: 24px 20px 0; font-size: .86rem; color: #8893a0; }
+  .sp-crumb a { color: #2a5298; text-decoration: none; }
+  .sp-all { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-top: 40px; }
+  .sp-all a { color: #2a5298; text-decoration: none; font-size: .86rem; padding: 5px 12px; border: 1px solid rgba(42,82,152,.2); border-radius: 999px; }
+  .sp-all a:hover { background: #2a5298; color: white; }
+  @media (max-width: 768px) {
+      .sp-hero { padding: 128px 20px 52px; }
+  }
+---
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "MedicalWebPage",
+      "name": {{ ("Best " + specialty.name + " Hospitals in China") | dump | safe }},
+      "url": {{ ("https://chinahospitalsguide.com/specialties/" + specialty.slug + "/") | dump | safe }},
+      "headline": {{ ("Best " + specialty.name + " Hospitals in China 2026") | dump | safe }},
+      "description": {{ (specialty.intro + ' ' + specialty.priceNote) | dump | safe }},
+      "publisher": { "@type": "Organization", "name": "China Hospitals Guide", "url": "https://chinahospitalsguide.com" },
+      "mainEntityOfPage": { "@type": "WebPage", "@id": {{ ("https://chinahospitalsguide.com/specialties/" + specialty.slug + "/") | dump | safe }} }
+    },
+    {
+      "@type": "ItemList",
+      "name": {{ ("Top " + specialty.name + " Hospitals in China") | dump | safe }},
+      "numberOfItems": {{ specialty.hospitals | length }},
+      "itemListElement": [
+        {%- for h in specialty.hospitals %}
+        {
+          "@type": "Hospital",
+          "name": {{ h.name | dump | safe }},
+          "alternateName": {{ h.name_zh | dump | safe }},
+          "medicalSpecialty": {{ (h.tags or []) | dump | safe }},
+          "address": { "@type": "PostalAddress", "streetAddress": {{ (h.address or '') | dump | safe }}, "addressLocality": {{ h.city | dump | safe }}, "addressCountry": "CN" },
+          "telephone": {{ (h.phone | intlPhone) | dump | safe }},
+          "url": {{ ("https://chinahospitalsguide.com/hospitals/" + h.id + "/") | dump | safe }},
+          "position": {{ loop.index }}
+        }{%- if not loop.last %},{% endif %}
+        {%- endfor %}
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {%- for f in specialty.faq %}
+        { "@type": "Question", "name": {{ f.q | dump | safe }}, "acceptedAnswer": { "@type": "Answer", "text": {{ f.a | dump | safe }} } }{%- if not loop.last %},{% endif %}
+        {%- endfor %}
+      ]
+    }
+  ]
+}
+</script>
+
+<header class="sp-hero">
+    <h1>Best {{ specialty.name }} Hospitals in China</h1>
+    <p>{{ specialty.intro }}</p>
+    <span class="sp-price">{{ specialty.priceNote }}</span>
+</header>
+
+<div class="sp-crumb"><a href="/">Home</a> › <a href="/hospitals.html">Hospitals</a> › {{ specialty.name }}</div>
+
+<main class="sp-shell">
+    <h2 class="sp-section-title" style="margin-top:0">Top Hospitals for {{ specialty.name }}</h2>
+    <div class="sp-grid">
+        {% for h in specialty.hospitals %}
+        <div class="sp-card">
+            <div class="hname">{{ h.name }}</div>
+            {% if h.name_zh %}<div class="hzh">{{ h.name_zh }}</div>{% endif %}
+            <div class="hrank">🏆 {{ h.rank }}</div>
+            <div class="hloc">📍 {{ h.city }}{% if h.district %}, {{ h.district }}{% endif %}</div>
+            <a class="hlink" href="/hospitals/{{ h.id }}/">View Details →</a>
+        </div>
+        {% endfor %}
+    </div>
+
+    {% if specialty.faq.length %}
+    <h2 class="sp-section-title">Frequently Asked Questions</h2>
+    <div class="sp-faq">
+        {% for f in specialty.faq %}
+        <div class="sp-faq-item"><h3>{{ f.q }}</h3><p>{{ f.a }}</p></div>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    <div class="sp-cta">
+        <h2>Not sure which hospital is right for you?</h2>
+        <p>Tell us your condition and timing. We'll match you with 2–3 hospitals in this specialty, compare likely costs, and outline the next practical step — free, no commitment.</p>
+        <a href="/contact-new.html?source=specialty-{{ specialty.slug }}">Start Free Case Review →</a>
+    </div>
+
+    <div class="sp-all">
+        <span style="color:#8893a0;font-size:.86rem;padding:5px 0">All specialties:</span>
+        {% for s in specialties %}
+        <a href="/specialties/{{ s.slug }}/">{{ s.name }}</a>
+        {% endfor %}
+    </div>
+</main>

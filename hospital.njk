@@ -6,11 +6,11 @@ pagination:
   alias: hospital
 permalink: "/hospitals/{{ hospital.id }}/index.html"
 eleventyComputed:
-  title: "{{ hospital.name }} | China Hospitals Guide"
-  description: "{{ hospital.name }} in {{ hospital.city }} — international patient services, procedures, costs and contact. Independent, verified information for treatment in China."
+  title: "{{ hospital.name }} in {{ hospital.city }}, China | Prices, Rank & Contact 2026"
+  description: "{{ hospital.name }} ({{ hospital.name_zh }}) in {{ hospital.city }}, China — rank, specialties, procedures, prices and contact for international patients. {{ hospital.rank }}."
   canonical: "https://chinahospitalsguide.com/hospitals/{{ hospital.id }}/"
-  ogTitle: "{{ hospital.name }} | China Hospitals Guide"
-  ogDescription: "{{ hospital.city }} hospital for international patients: services, procedures, costs and contact."
+  ogTitle: "{{ hospital.name }} in {{ hospital.city }}, China | 2026"
+  ogDescription: "{{ hospital.city }} hospital for international patients: rank, procedures, prices and contact."
 activeNav: hospitals
 pageStyle: |
   .h-hero { padding:120px 20px 70px; background:linear-gradient(135deg, rgba(12,24,48,.92), rgba(30,60,114,.92)), url('/images/china-hospital.jpg') center/cover no-repeat; color:#fff; }
@@ -65,6 +65,10 @@ pageStyle: |
           <div class="h-row"><b>Rank</b><span>{{ hospital.rank }}</span></div>
           {% if hospital.tags %}<div class="h-row"><b>Specialties</b><span>{% for t in hospital.tags %}{{ t | replace('-',' ') | capitalize }}{% if not loop.last %}, {% endif %}{% endfor %}</span></div>{% endif %}
           {% if hospital.estimated_wait_weeks %}<div class="h-row"><b>Est. wait</b><span>{{ hospital.estimated_wait_weeks }}</span></div>{% endif %}
+          {% set mySpecs = [] %}{% for s in specialties %}{% for h in s.hospitals %}{% if h.id == hospital.id %}{% set mySpecs = (mySpecs.push(s), mySpecs) %}{% endif %}{% endfor %}{% endfor %}
+          {% if mySpecs.length %}
+          <div class="h-row"><b>Guides</b><span>{% for s in mySpecs %}<a href="/specialties/{{ s.slug }}/" style="color:#1e3c72;font-weight:600;">{{ s.name }}</a>{% if not loop.last %} · {% endif %}{% endfor %}</span></div>
+          {% endif %}
         </div>
         {% endif %}
 
@@ -162,10 +166,21 @@ pageStyle: |
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "{{ hospital.name | e }}",
+  "@type": "MedicalClinic",
+  "name": "{% if hospital.international_dept and hospital.international_dept.name %}{{ hospital.international_dept.name | e }}{% else %}{{ hospital.name | e }} International Department{% endif %}",
+  "medicalSpecialty": {{ hospital.tags | dump | safe }},
+  {% if hospital.international_phone %}"telephone": "{{ hospital.international_phone | e }}",{% elif hospital.phone %}"telephone": "{{ hospital.phone | e }}",{% endif %}
+  "url": "https://chinahospitalsguide.com/hospitals/{{ hospital.id }}/"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalWebPage",
+  "name": "{{ hospital.name | e }} — {{ hospital.city | e }}, China",
   "url": "https://chinahospitalsguide.com/hospitals/{{ hospital.id }}/",
-  "isPartOf": { "@type": "WebSite", "name": "China Hospitals Guide", "url": "https://chinahospitalsguide.com" }
+  "publisher": { "@type": "Organization", "name": "China Hospitals Guide", "url": "https://chinahospitalsguide.com" },
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://chinahospitalsguide.com/hospitals/{{ hospital.id }}/" }
 }
 </script>
 <script type="application/ld+json">
