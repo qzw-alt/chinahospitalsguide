@@ -4,6 +4,8 @@
 
 China Hospitals Guide (chinahospitalsguide.com) publishes research-based guides on medical treatment costs, hospital rankings, and practical advice for international patients seeking affordable healthcare in China. All content is written and updated by the founder, a medical tourism consultant with deep knowledge of China's Fudan University hospital ranking system, JCI accreditation, medical visa processes, and real surgery pricing across 40+ specialties. We are not affiliated with any hospital and take 0% commission — our recommendations are based on your medical needs, not kickbacks. Data is refreshed as new Fudan rankings and pricing surveys are released.
 
+> **Disclaimer:** China Hospitals Guide is an independent coordination service — not a hospital or medical provider. We do not give medical advice or guarantee treatment outcomes. Prices, wait times, and visa rules change; confirm with the hospital and relevant authorities before acting.
+
 ## Structured Directories — Conditions, Treatments & Imaging Costs
 
 ### Conditions (17) — disease pages with cost ranges, top hospitals & FAQ
@@ -72,6 +74,13 @@ China Hospitals Guide (chinahospitalsguide.com) publishes research-based guides 
 - [JCI Accredited Hospitals](https://chinahospitalsguide.com/blog/jci-accredited-hospitals-china.html): Complete list of 100+ JCI-certified hospitals in China.
 - [How to Choose a Hospital](https://chinahospitalsguide.com/blog/how-to-choose-hospital-china-guide.html): Step-by-step evaluation framework for international patients.
 - [Patient Stories](https://chinahospitalsguide.com/stories/): Real experiences from international patients treated in China.
+
+## Practical Guides — Visa, Payment, Insurance & Apps
+
+- [Visa Guide](https://chinahospitalsguide.com/visa-guide.html): 240-hour (10-day) transit visa-free (54 countries), 30-day unilateral visa-free, S2 and L visas, and hospital invitation letters.
+- [Payment Guide](https://chinahospitalsguide.com/payment-guide.html): WeChat Pay and Alipay with a foreign card, cash, and how hospital billing works.
+- [Insurance Guide](https://chinahospitalsguide.com/insurance-guide.html): Bupa/MSH/Allianz direct billing vs reimbursement, pre-authorisation, and reimbursement documents.
+- [Apps & Booking Guide](https://chinahospitalsguide.com/apps-guide.html): Essential apps for foreigners and how to book an appointment at a Chinese public hospital.
 
 ## About & Trust
 

@@ -148,6 +148,19 @@
 18. **Patient Stories** — /stories/
 19. **Complete Medical Tourism Guide** — /medical-tourism-guide.html
 
+### Practical Guides
+
+20. **Visa Guide** — /visa-guide.html (240-hour transit visa-free, 30-day visa-free, S2/L visas)
+21. **Payment Guide** — /payment-guide.html (WeChat Pay/Alipay with foreign card, cash, billing)
+22. **Insurance Guide** — /insurance-guide.html (direct billing vs reimbursement, pre-authorisation)
+23. **Apps & Booking Guide** — /apps-guide.html (essential apps, booking a public hospital)
+
+---
+
+## Compliance & Disclaimer
+
+China Hospitals Guide is an independent medical-tourism coordination service — **not a hospital or medical provider**. We do **not give medical advice or guarantee treatment outcomes**. Prices, wait times, and visa rules shown are reference figures that change; confirm with the hospital and relevant authorities before acting. Always consult a licensed physician for medical decisions.
+
 ---
 
 ## Technical Info
@@ -157,4 +170,4 @@
 - **Analytics:** Google Analytics 4 (G-RVYZENK472)
 - **Monetization:** Google AdSense where applicable
 - **Crawlers:** All major AI crawlers explicitly allowed in robots.txt
-- **Version:** 1.82 (see /_data/site.json)
+- **Version:** 1.83 (see /_data/site.json)
