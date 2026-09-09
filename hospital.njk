@@ -77,7 +77,7 @@ pageStyle: |
         <div class="h-card" style="margin-bottom:24px;">
           <h2>Procedures &amp; Estimated Costs</h2>
           {% for p in hp %}
-          <div class="h-proc"><span class="pprice">{{ p.priceText }}</span><span class="pname">{{ p.name }}</span>{% if p.dept %}<div style="font-size:.82rem;color:#66758a;">{{ p.dept }}</div>{% endif %}</div>
+          <div class="h-proc"><span class="pprice">{{ p.priceText }}</span><span class="pname"><a href="/treatments/{{ p.id }}/" style="color:#1e3c72;font-weight:600;text-decoration:none;">{{ p.name }}</a></span>{% if p.dept %}<div style="font-size:.82rem;color:#66758a;">{{ p.dept }}</div>{% endif %}</div>
           {% endfor %}
           <p style="font-size:.78rem;color:#8893a0;margin:10px 0 0;">Prices are reference ranges; final quotes come from the hospital.</p>
         </div>

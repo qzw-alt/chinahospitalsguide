@@ -13,7 +13,7 @@ const SKIP_DIRS = new Set([
   // internal & planning docs that must never be indexed
   'planning', 'internal-research-notes', 'BLOG-PUBLISHING-SOP', 'templates', 'api',
   // dead/legacy: deleted from source (CTR cleanup); only stale HTML remains
-  'news', 'treatments',
+  'news',
 ]);
 
 // Files to skip by exact name (404, noindex/utility pages)

@@ -18,6 +18,53 @@
 
 ---
 
+## Structured Directory Pages (Conditions, Treatments & Imaging)
+
+### Conditions — /conditions/{slug}/ (17 pages, each with cost ranges, top hospitals & FAQ)
+
+| Condition | URL | Typical cost |
+|---|---|---|
+| Coronary Artery Disease (CABG) | /conditions/coronary-artery-disease/ | $12,000–$18,000 |
+| Heart Valve Disease | /conditions/heart-valve-disease/ | $18,000–$40,000 |
+| Lung Cancer | /conditions/lung-cancer/ | $8,000–$20,000 |
+| Breast Cancer | /conditions/breast-cancer/ | $8,000–$20,000 |
+| Liver Cancer | /conditions/liver-cancer/ | $8,000–$20,000 |
+| Stomach (Gastric) Cancer | /conditions/stomach-cancer/ | $8,000–$20,000 |
+| Brain Tumor | /conditions/brain-tumor/ | — |
+| Knee Replacement | /conditions/knee-replacement/ | $8,000–$12,000 |
+| Hip Replacement | /conditions/hip-replacement/ | $8,000–$12,000 |
+| Spine Surgery & Disc Herniation | /conditions/spine-surgery/ | $10,000–$18,000 |
+| Parkinson's Disease & DBS | /conditions/parkinsons-disease/ | — |
+| Epilepsy | /conditions/epilepsy/ | — |
+| IVF & Fertility Treatment | /conditions/ivf/ | $3,000–$8,000 |
+| LASIK & Vision Correction | /conditions/lasik/ | $1,200–$2,800 |
+| Cataract Surgery | /conditions/cataract/ | $800–$1,500 |
+| Dental Implants | /conditions/dental-implants/ | $800–$2,500 |
+| CAR-T Cell Therapy | /conditions/car-t-therapy/ | $30,000–$89,000 |
+
+### Treatments — /treatments/{id}/ (6 procedure-level pages)
+
+| Treatment | URL | Typical cost |
+|---|---|---|
+| Knee Replacement | /treatments/knee-replacement/ | $8,000–$12,000 |
+| Hip Replacement | /treatments/hip-replacement/ | $8,000–$12,000 |
+| Coronary Artery Bypass (CABG) | /treatments/coronary-artery-bypass/ | $12,000–$18,000 |
+| Spine Surgery | /treatments/spine-surgery/ | $10,000–$18,000 |
+| LASIK Eye Surgery | /treatments/lasik/ | $1,200–$2,800 |
+| Cataract Surgery | /treatments/cataract-surgery/ | $800–$1,500 |
+
+### Imaging Cost Guides — /cost-guides/{slug}/ (5 pages, public fee vs coordinated vs Western)
+
+| Guide | URL | Public fee | Coordinated |
+|---|---|---|---|
+| MRI Scan | /cost-guides/mri-scan-china-cost/ | $70–110 | from $150 |
+| CT Scan | /cost-guides/ct-scan-china-cost/ | $35–55 | from $180 |
+| PET-CT Scan | /cost-guides/pet-ct-china-cost/ | $345–485 | from $650 |
+| Spine MRI | /cost-guides/spine-mri-china-cost/ | $80–120 | from $150 |
+| Brain MRI | /cost-guides/brain-mri-china-cost/ | $80–120 | from $150 |
+
+---
+
 ## Key Content Pages
 
 ### Surgery Cost Guides
@@ -105,9 +152,9 @@
 
 ## Technical Info
 
-- **Stack:** Eleventy (11ty) static site generator, deployed on Netlify
-- **Structured Data:** FAQPage, HowTo, Article, MedicalWebPage, BreadcrumbList, Organization schemas
+- **Stack:** Eleventy (11ty) static site generator, deployed on GitHub Pages
+- **Structured Data:** FAQPage, HowTo, Article, MedicalWebPage, MedicalCondition, MedicalProcedure, MedicalTest, ItemList, BreadcrumbList, Organization schemas
 - **Analytics:** Google Analytics 4 (G-RVYZENK472)
 - **Monetization:** Google AdSense where applicable
 - **Crawlers:** All major AI crawlers explicitly allowed in robots.txt
-- **Version:** 1.12 (see /_data/site.json)
+- **Version:** 1.82 (see /_data/site.json)

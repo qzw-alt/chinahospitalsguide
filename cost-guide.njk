@@ -1,0 +1,168 @@
+---
+layout: base.njk
+pagination:
+  data: costGuides
+  size: 1
+  alias: guide
+permalink: "cost-guides/{{ guide.slug }}/index.html"
+eleventyComputed:
+  title: "{{ guide.name }} 2026 | Public vs Coordinated Price"
+  description: "{{ guide.name }} — public hospital fee {{ guide.publicFee }}, coordinated from {{ guide.coordinatedFee }} vs {{ guide.western.us }} in the US. English report, DICOM files, days-not-months scheduling."
+  canonical: "https://chinahospitalsguide.com/cost-guides/{{ guide.slug }}/"
+pageStyle: |
+  body { background: #f8f9fa; color: #243044; }
+  .sp-hero {
+      padding: 150px 20px 64px;
+      background: linear-gradient(135deg, #17345f 0%, #2a5298 100%);
+      color: white;
+      text-align: center;
+  }
+  .sp-hero h1 { color: white; font-size: clamp(1.7rem, 4vw, 2.6rem); line-height: 1.15; max-width: 880px; margin: 0 auto 16px; }
+  .sp-hero p { color: rgba(255,255,255,.88); max-width: 800px; margin: 0 auto 18px; font-size: 1.02rem; line-height: 1.7; }
+  .sp-hero .sp-price { display: inline-block; background: rgba(255,255,255,.14); border: 1px solid rgba(255,255,255,.28); border-radius: 999px; padding: 9px 18px; font-size: .92rem; font-weight: 600; color: white; }
+  .sp-shell { max-width: 1120px; margin: 0 auto; padding: 48px 20px 64px; }
+  .sp-section-title { color: #1e3c72; font-size: 1.5rem; margin: 48px 0 20px; }
+  .cd-sec { background: #fff; border-radius: 16px; padding: 28px 30px; border: 1px solid rgba(30,60,114,.08); box-shadow: 0 8px 20px rgba(15,23,42,.05); margin-bottom: 20px; }
+  .cd-sec h2 { color: #1e3c72; font-size: 1.2rem; margin: 0 0 12px; }
+  .cd-sec p { color: #4a5568; line-height: 1.75; margin: 0; font-size: .98rem; }
+  .cg-table-wrap { overflow-x: auto; margin: 8px 0 4px; }
+  .cg-table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 14px; overflow: hidden; box-shadow: 0 8px 24px rgba(15,23,42,.06); }
+  .cg-table thead th { background: #1e3c72; color: #fff; padding: 14px 14px; text-align: left; font-size: .9rem; }
+  .cg-table tbody td { padding: 13px 14px; border-bottom: 1px solid #edf1f7; color: #4a5568; font-size: .92rem; }
+  .cg-table tbody tr:last-child td { border-bottom: none; }
+  .cg-table .best { background: #e8f5e9; font-weight: 700; color: #2e7d32; }
+  .cg-table .cn { font-weight: 700; color: #1e3c72; }
+  .cg-hosp { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+  .cg-hosp-card { background: #fff; border: 1px solid rgba(30,60,114,.08); border-radius: 14px; padding: 22px; box-shadow: 0 6px 18px rgba(15,23,42,.05); }
+  .cg-hosp-card strong { display: block; color: #1e3c72; margin-bottom: 6px; }
+  .cg-hosp-card span { color: #64748b; font-size: .9rem; line-height: 1.6; }
+  .sp-faq { max-width: 860px; margin: 0 auto; }
+  .sp-faq-item { background: #fff; border-radius: 16px; padding: 24px 26px; border: 1px solid rgba(30,60,114,.08); box-shadow: 0 8px 20px rgba(15,23,42,.05); margin-bottom: 16px; }
+  .sp-faq-item h3 { color: #1e3c72; font-size: 1.05rem; margin-bottom: 10px; }
+  .sp-faq-item p { color: #4a5568; line-height: 1.7; margin: 0; }
+  .sp-cta { background: linear-gradient(135deg, #18345f 0%, #2a5298 100%); color: white; border-radius: 22px; padding: 44px 32px; text-align: center; margin-top: 48px; }
+  .sp-cta h2 { color: white; margin-bottom: 12px; }
+  .sp-cta p { color: rgba(255,255,255,.88); max-width: 620px; margin: 0 auto 22px; }
+  .sp-cta a { display: inline-block; background: #ff6b6b; color: white; padding: 14px 32px; border-radius: 10px; text-decoration: none; font-weight: 700; }
+  .sp-crumb { max-width: 1120px; margin: 0 auto; padding: 24px 20px 0; font-size: .86rem; color: #8893a0; }
+  .sp-crumb a { color: #2a5298; text-decoration: none; }
+  .sp-all { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-top: 40px; }
+  .sp-all a { color: #2a5298; text-decoration: none; font-size: .86rem; padding: 5px 12px; border: 1px solid rgba(42,82,152,.2); border-radius: 999px; }
+  .sp-all a:hover { background: #2a5298; color: white; }
+  @media (max-width: 768px) {
+      .sp-hero { padding: 128px 20px 52px; }
+  }
+---
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "MedicalWebPage",
+      "name": {{ (guide.name + " 2026") | dump | safe }},
+      "url": {{ ("https://chinahospitalsguide.com/cost-guides/" + guide.slug + "/") | dump | safe }},
+      "headline": {{ (guide.name + " 2026 | Public vs Coordinated Price") | dump | safe }},
+      "description": {{ guide.intro | dump | safe }},
+      "publisher": { "@type": "Organization", "name": "China Hospitals Guide", "url": "https://chinahospitalsguide.com" },
+      "mainEntityOfPage": { "@type": "WebPage", "@id": {{ ("https://chinahospitalsguide.com/cost-guides/" + guide.slug + "/") | dump | safe }} }
+    },
+    {
+      "@type": "Article",
+      "headline": {{ (guide.name + " 2026: Public Hospital Fee vs Coordinated vs Western Price") | dump | safe }},
+      "description": {{ guide.intro | dump | safe }},
+      "author": { "@type": "Organization", "name": "China Hospitals Guide" },
+      "publisher": { "@type": "Organization", "name": "China Hospitals Guide", "logo": { "@type": "ImageObject", "url": "https://chinahospitalsguide.com/og-image.webp" } },
+      "mainEntityOfPage": { "@type": "WebPage", "@id": {{ ("https://chinahospitalsguide.com/cost-guides/" + guide.slug + "/") | dump | safe }} }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {%- for f in guide.faq %}
+        { "@type": "Question", "name": {{ f.q | dump | safe }}, "acceptedAnswer": { "@type": "Answer", "text": {{ f.a | dump | safe }} } }{%- if not loop.last %},{% endif %}
+        {%- endfor %}
+      ]
+    }
+  ]
+}
+</script>
+
+<header class="sp-hero">
+    <h1>{{ guide.name }}</h1>
+    <p>{{ guide.intro }}</p>
+    <span class="sp-price">{{ guide.modality }} · coordinated {{ guide.coordinatedFee }} · scheduled {{ guide.waitTime.china }}</span>
+</header>
+
+<div class="sp-crumb"><a href="/">Home</a> › <a href="/medical-imaging.html">Medical Imaging</a> › <a href="/cost-guides/{{ guide.slug }}/">{{ guide.name }}</a></div>
+
+<main class="sp-shell">
+    <div class="cg-table-wrap">
+        <table class="cg-table">
+            <thead>
+                <tr>
+                    <th>{{ guide.modality }} pricing</th>
+                    <th>🇨🇳 Public hospital (self-pay)</th>
+                    <th>🇨🇳 Coordinated (with English report)</th>
+                    <th>🇺🇸 US self-pay</th>
+                    <th>🇬🇧 UK private</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>{{ guide.modality }} (one region)</strong></td>
+                    <td class="cn">{{ guide.publicFee }}</td>
+                    <td class="best">{{ guide.coordinatedFee }}</td>
+                    <td>{{ guide.western.us }}</td>
+                    <td>{{ guide.western.uk }}</td>
+                </tr>
+            </tbody>
+        </table>
+        <p style="color:#94a3b8;font-size:.8em;margin:10px 0 0">China figures are 2026 reference ranges (hospital fee paid directly to the hospital, plus coordination where noted). Western figures are commonly quoted self-pay/private ranges. Final quotes are confirmed per case.</p>
+    </div>
+
+    <section class="cd-sec">
+        <h2>What is a {{ guide.modality }}?</h2>
+        <p>{{ guide.overview }}</p>
+    </section>
+
+    <section class="cd-sec">
+        <h2>Why do patients get a {{ guide.modality }} in China?</h2>
+        <p>{{ guide.whyChina }}</p>
+    </section>
+
+    <section class="cd-sec">
+        <h2>What the coordinated price includes</h2>
+        <p>{{ guide.coordinatedIncludes }}</p>
+        <p style="margin-top:10px;font-size:.85rem;color:#8893a0;">Public hospital fee ({{ guide.publicFee }}) — {{ guide.publicFeeNote }}</p>
+    </section>
+
+    {% if guide.hospitals.length %}
+    <h2 class="sp-section-title">Where you get scanned</h2>
+    <div class="cg-hosp">
+        {% for h in guide.hospitals %}
+        <div class="cg-hosp-card"><strong>{{ h.name }}</strong><span>{{ h.note }}</span></div>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    {% if guide.faq.length %}
+    <h2 class="sp-section-title">Frequently Asked Questions</h2>
+    <div class="sp-faq">
+        {% for f in guide.faq %}
+        <div class="sp-faq-item"><h3>{{ f.q }}</h3><p>{{ f.a }}</p></div>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    <div class="sp-cta">
+        <h2>Need a {{ guide.modality }} in China?</h2>
+        <p>Tell us your condition and any existing scans. We'll confirm a Grade 3A hospital, the exact price for your region, and the schedule — free, no commitment.</p>
+        <a href="/contact-new.html?source={{ guide.ctaSource }}">Get a Free Quote →</a>
+    </div>
+
+    <div class="sp-all">
+        <span style="color:#8893a0;font-size:.86rem;padding:5px 0">More imaging cost guides:</span>
+        {% for g in costGuides %}
+        <a href="/cost-guides/{{ g.slug }}/">{{ g.name }}</a>
+        {% endfor %}
+    </div>
+</main>

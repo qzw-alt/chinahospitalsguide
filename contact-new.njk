@@ -344,6 +344,37 @@ schema: |
                     </div>
 
                     <div class="form-group">
+                        <label>Which scans or reports do you already have?</label>
+                        <div class="checkbox-group" style="display:flex;flex-wrap:wrap;gap:12px;margin-top:4px;">
+                            <label style="display:flex;align-items:center;gap:6px;font-weight:400;cursor:pointer;font-size:0.93rem;color:var(--text);">
+                                <input type="checkbox" name="existing_scans" value="CT scan"> CT scan
+                            </label>
+                            <label style="display:flex;align-items:center;gap:6px;font-weight:400;cursor:pointer;font-size:0.93rem;color:var(--text);">
+                                <input type="checkbox" name="existing_scans" value="MRI"> MRI
+                            </label>
+                            <label style="display:flex;align-items:center;gap:6px;font-weight:400;cursor:pointer;font-size:0.93rem;color:var(--text);">
+                                <input type="checkbox" name="existing_scans" value="PET-CT"> PET-CT
+                            </label>
+                            <label style="display:flex;align-items:center;gap:6px;font-weight:400;cursor:pointer;font-size:0.93rem;color:var(--text);">
+                                <input type="checkbox" name="existing_scans" value="X-ray"> X-ray
+                            </label>
+                            <label style="display:flex;align-items:center;gap:6px;font-weight:400;cursor:pointer;font-size:0.93rem;color:var(--text);">
+                                <input type="checkbox" name="existing_scans" value="Ultrasound"> Ultrasound
+                            </label>
+                            <label style="display:flex;align-items:center;gap:6px;font-weight:400;cursor:pointer;font-size:0.93rem;color:var(--text);">
+                                <input type="checkbox" name="existing_scans" value="Pathology / biopsy report"> Pathology / biopsy report
+                            </label>
+                            <label style="display:flex;align-items:center;gap:6px;font-weight:400;cursor:pointer;font-size:0.93rem;color:var(--text);">
+                                <input type="checkbox" name="existing_scans" value="Blood test results"> Blood test results
+                            </label>
+                            <label style="display:flex;align-items:center;gap:6px;font-weight:400;cursor:pointer;font-size:0.93rem;color:var(--text);">
+                                <input type="checkbox" name="existing_scans" value="None yet"> None yet
+                            </label>
+                        </div>
+                        <p style="font-size:0.82rem;color:#66758a;margin-top:8px;">This helps us tell you faster whether a scan in China — or a second opinion on scans you already have — is the right next step.</p>
+                    </div>
+
+                    <div class="form-group">
                         <label>How did you hear about us?</label>
                         <select id="source" name="source">
                             <option value="">Select...</option>
