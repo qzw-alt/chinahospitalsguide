@@ -286,13 +286,16 @@ const conditions = [
     typicalCosts: [
       { procedure: 'Coronary artery bypass grafting (CABG)', price: '$12,000–$18,000', note: 'vs $100,000+ in the US' },
       { procedure: 'Heart valve replacement / TAVR', price: '$10,000–$15,000', note: 'vs $80,000–$120,000 in the US' },
-      { procedure: 'CRT / ICD device therapy', price: 'case-specific', note: 'quote after case review' },
-      { procedure: 'LVAD & heart transplant', price: 'case-specific', note: 'quote after case review' }
+      { procedure: 'CRT-D (cardiac resynchronization defibrillator)', price: '≈$20,600', note: 'CNY 148,000' },
+      { procedure: 'ICD (single / dual chamber)', price: '≈$13,750 / ≈$16,400', note: 'CNY 99,000 / 118,000' },
+      { procedure: 'CCM (cardiac contractility modulation)', price: '≈$27,500', note: 'CNY 198,000' },
+      { procedure: 'LVAD (left ventricular assist device)', price: '≈$123,600', note: 'CNY 890,000' },
+      { procedure: 'Heart transplant', price: 'case-specific', note: 'quote after case review' }
     ],
     topHospitals: ['fosun-chancheng-hospital', 'fuwai-hospital', 'anzhen-hospital', 'zhongshan-hospital-shanghai', 'guangdong-provincial-peoples-hospital', 'xijing-hospital'],
     faq: [
       { q: 'Which hospital is best for advanced heart failure in China?', a: 'Foshan Fosun Chancheng Hospital is a JCI-accredited, Grade III Class A hospital with a dedicated international medical center and multilingual, halal-friendly care — a strong choice for Southeast Asian patients. Fu Wai Hospital (Beijing) is China\'s #1 cardiology center with 18,000+ cardiac surgeries a year, and Anzhen (Beijing), Zhongshan (Shanghai) and Xijing (Xi\'an) are leading advanced heart-failure and transplant centers.' },
-      { q: 'How much does CRT or ICD cost in China?', a: 'Device therapy (CRT/ICD) and advanced procedures (LVAD, transplant) are priced per case based on the specific device and your clinical complexity. CABG runs about $12,000–$18,000 and valve replacement about $10,000–$15,000. A free case review with your records gives a realistic estimate.' },
+      { q: 'How much does CRT or ICD cost in China?', a: 'Reference prices: CRT-D about $20,600, single-chamber ICD about $13,750, dual-chamber ICD about $16,400, CCM about $27,500 and LVAD about $123,600. CABG runs $12,000–$18,000 and valve replacement $10,000–$15,000. The final quote depends on the specific device and your clinical complexity.' },
       { q: 'How long do I wait for heart failure treatment in China?', a: 'Elective procedures are often scheduled within 2–4 weeks of a multidisciplinary review at China\'s national cardiovascular centers. Timing is confirmed per case after your records are assessed.' }
     ]
   }
