@@ -2133,6 +2133,7 @@
         "gynecology",
         "pediatrics",
         "tcm",
+        "cardiology",
         "general"
       ],
       "rank": "Grade III Class A General Hospital, JCI Accredited, #1 Non-Public Hospital in China (Ailibi)",
@@ -2171,6 +2172,7 @@
       "founded": 1958,
       "group": "Fosun Health Group (Fosun Pharma)",
       "key_specialties": {
+        "cardiology": "Cardiovascular medicine, atrial fibrillation center, heart center",
         "oncology": "CAR-T therapy, CyberKnife radiosurgery, precision oncology, MDT consultation",
         "orthopedics": "Spinal surgery, joint replacement, sports medicine",
         "urology": "Nationally recognized department",
@@ -2221,7 +2223,7 @@
           "pricing_manual",
           "hospital_brochure"
         ],
-        "last_verified": "2026-08-10",
+        "last_verified": "2026-09-10",
         "notes": [
           "Verified via official channel cooperation documents, pricing manual, and hospital brochure received directly from Fosun Health International Business Development",
           "JCI accredited (6th edition). Grade III Class A (三甲) general hospital",
@@ -2231,7 +2233,8 @@
           "Integrated Chinese-Western medicine available, including TCM departments",
           "Pricing transparent — detailed package pricing manual with inclusions/exclusions provided to channel partners",
           "Dedicated international patient floors with private rooms, prayer rooms, halal meals available",
-          "Channel partnership documents indicate professional, standardized international patient workflow"
+          "Channel partnership documents indicate professional, standardized international patient workflow",
+          "Cardiology verified via official website — cardiovascular medicine department, atrial fibrillation center and heart center"
         ]
       },
       "address": "广东省佛山市禅城区石湾三友南路3号",

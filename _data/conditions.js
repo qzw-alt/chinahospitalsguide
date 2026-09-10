@@ -275,6 +275,26 @@ const conditions = [
       { q: 'Which hospital offers CAR-T therapy in China?', a: 'The Cancer Hospital of CAMS, Sun Yat-sen University Cancer Center and Fosun Chancheng Hospital (which offers CAR-T alongside CyberKnife) are leading CAR-T centers.' },
       { q: 'How much does CAR-T therapy cost in China?', a: 'CAR-T in China is priced per case and is substantially lower than US list prices (often $300,000+). A case review with your records confirms eligibility and cost.' }
     ]
+  },
+  {
+    slug: 'heart-failure',
+    name: 'Advanced Heart Failure',
+    category: 'cardiology',
+    overview: "Advanced and refractory heart failure — low ejection fraction (EF ≤ 35%) with symptoms that persist despite optimal medication — can be treated with device therapy, structural and coronary correction, and mechanical support. China's national cardiovascular centers offer the full pathway: CRT, ICD, CCM, CABG and valve intervention, LVAD and heart transplant, typically scheduled within 2–4 weeks.",
+    diagnosis: "Diagnosis begins with a multidisciplinary (MDT) review of the underlying cause — ischaemic, valvular, electrical dyssynchrony (LBBB or widened QRS), congenital, or cardiomyopathy. ECG, echocardiography, cardiac MRI and coronary angiography are used to determine the cause before a treatment path is chosen.",
+    treatment: "Treatment spans the full advanced heart-failure pathway: cardiac resynchronization therapy (CRT-P/CRT-D) and ICD (single, dual or subcutaneous), cardiac contractility modulation (CCM), coronary stenting or bypass, valve repair and replacement (TAVR/TEER), and for refractory cases, LVAD and heart transplant.",
+    typicalCosts: [
+      { procedure: 'Coronary artery bypass grafting (CABG)', price: '$12,000–$18,000', note: 'vs $100,000+ in the US' },
+      { procedure: 'Heart valve replacement / TAVR', price: '$10,000–$15,000', note: 'vs $80,000–$120,000 in the US' },
+      { procedure: 'CRT / ICD device therapy', price: 'case-specific', note: 'quote after case review' },
+      { procedure: 'LVAD & heart transplant', price: 'case-specific', note: 'quote after case review' }
+    ],
+    topHospitals: ['fosun-chancheng-hospital', 'fuwai-hospital', 'anzhen-hospital', 'zhongshan-hospital-shanghai', 'guangdong-provincial-peoples-hospital', 'xijing-hospital'],
+    faq: [
+      { q: 'Which hospital is best for advanced heart failure in China?', a: 'Foshan Fosun Chancheng Hospital is a JCI-accredited, Grade III Class A hospital with a dedicated international medical center and multilingual, halal-friendly care — a strong choice for Southeast Asian patients. Fu Wai Hospital (Beijing) is China\'s #1 cardiology center with 18,000+ cardiac surgeries a year, and Anzhen (Beijing), Zhongshan (Shanghai) and Xijing (Xi\'an) are leading advanced heart-failure and transplant centers.' },
+      { q: 'How much does CRT or ICD cost in China?', a: 'Device therapy (CRT/ICD) and advanced procedures (LVAD, transplant) are priced per case based on the specific device and your clinical complexity. CABG runs about $12,000–$18,000 and valve replacement about $10,000–$15,000. A free case review with your records gives a realistic estimate.' },
+      { q: 'How long do I wait for heart failure treatment in China?', a: 'Elective procedures are often scheduled within 2–4 weeks of a multidisciplinary review at China\'s national cardiovascular centers. Timing is confirmed per case after your records are assessed.' }
+    ]
   }
 ];
 

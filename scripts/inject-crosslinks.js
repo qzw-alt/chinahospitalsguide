@@ -132,18 +132,24 @@ const blogToTreatments = {
   'ivf-cost-china-2026': 'ivf.html',
   'ivf-fertility-treatment-china-2026': 'ivf.html',
   'ivf-fertility-treatment-china': 'ivf.html',
+  'cardiac-bypass-surgery-china-2026': 'heart-failure.html',
+  'heart-surgery-cost-china': 'heart-failure.html',
+  'best-cardiac-surgery-hospitals-china-2026': 'heart-failure.html',
+  'china-vs-singapore-heart-surgery-cost': 'heart-failure.html',
 };
 
 const treatmentToBlogs = {
   'cancer.html': ['cancer-treatment-cost-china', 'best-cancer-hospitals-china-2026', 'car-t-therapy-china-2026', 'proton-therapy-china-2026'],
   'orthopedics.html': ['knee-replacement-surgery-china-2026', 'hip-replacement-cost-china', 'spine-surgery-cost-china'],
   'ivf.html': ['ivf-cost-china-2026', 'ivf-fertility-treatment-china-2026'],
+  'heart-failure.html': ['cardiac-bypass-surgery-china-2026', 'heart-surgery-cost-china', 'best-cardiac-surgery-hospitals-china-2026', 'china-vs-singapore-heart-surgery-cost'],
 };
 
 const treatmentNames = {
   'cancer.html': 'Cancer Treatment in China',
   'orthopedics.html': 'Orthopedic Surgery in China',
   'ivf.html': 'IVF & Fertility in China',
+  'heart-failure.html': 'Advanced Heart Failure Treatment in China',
 };
 
 // ── Helpers ──
@@ -185,9 +191,17 @@ function makeRelatedLinkHTML(slug, blogDir) {
   return `\n<li><a href="${href}">${getTitle(fp)}</a></li>`;
 }
 
+const treatmentTaglines = {
+  'cancer.html': 'save 70-85% at JCI-accredited hospitals',
+  'orthopedics.html': 'save 70-85% at JCI-accredited hospitals',
+  'ivf.html': 'save 70-85% at JCI-accredited hospitals',
+  'heart-failure.html': "CRT, ICD, LVAD & transplant at China's top cardiac centers",
+};
+
 function makeTreatmentLinkHTML(treatmentFile) {
   const name = treatmentNames[treatmentFile] || treatmentFile;
-  return `\n<li><a href="/${treatmentFile}">🎯 ${name}</a> — save 70-85% at JCI-accredited hospitals</li>`;
+  const tagline = treatmentTaglines[treatmentFile] || '';
+  return `\n<li><a href="/${treatmentFile}">🎯 ${name}</a>${tagline ? ' — ' + tagline : ''}</li>`;
 }
 
 // Pick 3 related articles (next 2 + previous 1, wrapped) so links distribute evenly
