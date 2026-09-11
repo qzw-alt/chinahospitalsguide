@@ -65,6 +65,16 @@ const faqMap = {
     { q: "How fast is recovery from cataract surgery?", a: "It is a same-day or 1–2 day outpatient procedure with quick visual recovery; most patients return to normal activities within days." }
   ]
 };
+// SEO titles: match "X Cost in China" phrases patients search (autocomplete).
+const seoTitleMap = {
+  'knee-replacement': 'Knee Replacement Cost in China 2026',
+  'hip-replacement': 'Hip Replacement Cost in China 2026',
+  'coronary-artery-bypass': 'Heart Bypass (CABG) Cost in China 2026',
+  'spine-surgery': 'Spine Surgery Cost in China 2026',
+  'lasik': 'LASIK Eye Surgery Cost in China 2026',
+  'cataract-surgery': 'Cataract Surgery Cost in China 2026'
+};
+procedures.forEach(function (p) { p.seoTitle = seoTitleMap[p.id] || (p.name + ' Cost in China 2026'); });
 procedures.forEach(function (p) { p.faq = faqMap[p.id] || []; });
 
 module.exports = procedures;

@@ -303,10 +303,36 @@ const conditions = [
 
 // Pre-compute matching hospital objects for each condition (from topHospitals ids),
 // so the template can iterate condition.hospitals directly (same pattern as specialties.js).
+// SEO titles: match the exact "X Cost in China" phrases patients actually search
+// (Google autocomplete), rather than deriving from `name` — which can be verbose
+// ("Coronary Artery Disease (CABG)", "IVF & Fertility Treatment") or awkward as a
+// "… Cost in China" phrase ("Epilepsy Cost in China").
+const seoTitleMap = {
+  'coronary-artery-disease': 'Heart Bypass Surgery (CABG) Cost in China 2026',
+  'heart-valve-disease': 'Heart Valve Replacement Cost in China 2026',
+  'lung-cancer': 'Lung Cancer Treatment Cost in China 2026',
+  'breast-cancer': 'Breast Cancer Treatment Cost in China 2026',
+  'liver-cancer': 'Liver Cancer Treatment Cost in China 2026',
+  'stomach-cancer': 'Stomach Cancer Treatment Cost in China 2026',
+  'brain-tumor': 'Brain Tumor Surgery in China 2026',
+  'knee-replacement': 'Knee Replacement Cost in China 2026',
+  'hip-replacement': 'Hip Replacement Cost in China 2026',
+  'spine-surgery': 'Spine Surgery Cost in China 2026',
+  'parkinsons-disease': "Parkinson's Disease Treatment & DBS in China 2026",
+  'epilepsy': 'Epilepsy Surgery in China 2026',
+  'ivf': 'IVF Cost in China 2026',
+  'lasik': 'LASIK Eye Surgery Cost in China 2026',
+  'cataract': 'Cataract Surgery Cost in China 2026',
+  'dental-implants': 'Dental Implants Cost in China 2026',
+  'car-t-therapy': 'CAR-T Cell Therapy Cost in China 2026',
+  'heart-failure': 'Advanced Heart Failure Treatment in China 2026'
+};
+
 const hospitals = require('./hospitals.js');
 const byId = {};
 hospitals.forEach(function (h) { byId[h.id] = h; });
 conditions.forEach(function (c) {
+  c.seoTitle = seoTitleMap[c.slug] || (c.name + ' Cost in China 2026');
   c.hospitals = (c.topHospitals || []).map(function (id) { return byId[id]; }).filter(Boolean);
 });
 
