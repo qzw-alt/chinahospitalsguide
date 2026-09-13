@@ -152,6 +152,23 @@ const treatmentNames = {
   'heart-failure.html': 'Advanced Heart Failure Treatment in China',
 };
 
+// ── Pillar page: every article links up to the "start here" guide ──
+// Anchor text is rotated by slug so ~100 inbound links don't all match verbatim.
+const PILLAR_HREF = '/medical-tourism-guide.html';
+const PILLAR_ANCHORS = [
+  'Start Here: The Complete Guide to Medical Tourism in China (2026)',
+  'New to this? Read the Complete Medical Tourism in China Guide',
+  'Full Guide: Medical Tourism in China — Costs, Visas, Hospitals & Recovery',
+  'Complete Guide to Getting Treatment in China as a Foreigner',
+];
+
+function pillarLinkHTML(slug) {
+  let h = 0;
+  for (let i = 0; i < slug.length; i++) h = (h * 31 + slug.charCodeAt(i)) >>> 0;
+  const anchor = PILLAR_ANCHORS[h % PILLAR_ANCHORS.length];
+  return `\n<li><a href="${PILLAR_HREF}" style="font-weight:700;color:#1e3c72">📖 ${anchor}</a></li>`;
+}
+
 // ── Helpers ──
 
 function getTitle(filePath) {
@@ -275,7 +292,7 @@ function processBlog(slug) {
   const fp = href.endsWith('/') ? path.join(blogDir, slug, 'index.html') : path.join(blogDir, slug + '.html');
   if (!fs.existsSync(fp)) return;
 
-  const items = [];
+  const items = [pillarLinkHTML(slug)];
   const group = blogToGroup[slug];
   if (group) {
     for (const r of getRelatedBlogs(slug, group)) {
@@ -284,7 +301,6 @@ function processBlog(slug) {
   }
   const treat = blogToTreatments[slug];
   if (treat) items.push(makeTreatmentLinkHTML(treat));
-  if (!items.length) return;
 
   const ok = injectRelatedBlock(fp, items.join(''));
   if (ok) console.log(`Crosslinks: /blog/${slug} → ${items.length} related links`);
@@ -295,7 +311,7 @@ function processTreatment(name) {
   if (!fs.existsSync(fp)) return;
   const blogs = treatmentToBlogs[name];
   if (!blogs || !blogs.length) return;
-  const items = blogs.map((b) => makeRelatedLinkHTML(b, blogDir)).join('');
+  const items = pillarLinkHTML(name) + blogs.map((b) => makeRelatedLinkHTML(b, blogDir)).join('');
   const ok = injectRelatedBlock(fp, items);
   if (ok) console.log(`Crosslinks: /${name} → ${blogs.length} related links`);
 }

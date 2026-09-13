@@ -12,13 +12,13 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Medical Tourism in China: The Complete 2026 Guide — From First Search to Full Recovery</title>
-    <meta name="description" content="Everything international patients need to know about medical tourism in China: hospital selection, costs (save 50-85%), visas, appointments, treatments, TCM, payments, and follow-up care. Free PDF guide included.">
+    <title>Medical Tourism in China: Costs, Hospitals &amp; Visas (2026)</title>
+    <meta name="description" content="What medical treatment in China actually costs, how to pick the right hospital, and the visa steps for international patients — in one free 18-page guide. Save 50-85% vs US/UK.">
     <link rel="canonical" href="https://chinahospitalsguide.com/medical-tourism-guide.html">
     <link rel="stylesheet" href="styles.css">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Medical Tourism in China: The Complete 2026 Guide — From First Search to Full Recovery">
+    <meta property="og:title" content="Medical Tourism in China: Costs, Hospitals &amp; Visas (2026)">
     <meta property="og:description" content="Everything international patients need to know: hospital rankings, real costs, visa process, top treatments, TCM, and follow-up care. Save 50-85% on world-class healthcare.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://chinahospitalsguide.com/medical-tourism-guide.html">
@@ -204,6 +204,43 @@
             margin-bottom: 24px;
             box-shadow: 0 1px 3px rgba(0,0,0,0.06);
         }
+
+        /* PDF download strip */
+        .pdf-download-strip {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 18px;
+            flex-wrap: wrap;
+            background: linear-gradient(135deg, #fff7f7, #fdeaea);
+            border: 1px solid #f4c9c9;
+            border-left: 4px solid var(--accent);
+            border-radius: 12px;
+            padding: 18px 22px;
+            margin-bottom: 28px;
+        }
+        .pdf-download-strip strong {
+            display: block;
+            color: var(--primary);
+            font-size: 1.02rem;
+        }
+        .pdf-download-strip span {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+        .pdf-download-strip a {
+            flex: 0 0 auto;
+            background: var(--accent);
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.92rem;
+            padding: 12px 22px;
+            border-radius: 50px;
+            box-shadow: 0 4px 12px rgba(232,93,93,.3);
+            transition: all 0.2s;
+        }
+        .pdf-download-strip a:hover { transform: translateY(-1px); }
 
         /* Info boxes */
         .info-box {
@@ -454,7 +491,7 @@
         "headline": "Medical Tourism in China: The Complete 2026 Guide — From First Search to Full Recovery",
         "description": "A comprehensive 9-chapter guide covering everything international patients need to know about seeking medical treatment in China: hospital selection, costs, visas, appointments, treatment options, TCM, payments, and follow-up care.",
         "datePublished": "2026-07-26",
-        "dateModified": "2026-07-26",
+        "dateModified": "2026-09-13",
         "author": {"@type": "Organization", "name": "China Hospitals Guide"},
         "publisher": {"@type": "Organization", "name": "China Hospitals Guide", "url": "https://chinahospitalsguide.com"}
     }
@@ -571,7 +608,7 @@
             <a href="#ch7">7. Payment & Insurance</a>
             <a href="#ch8">8. Traditional Chinese Medicine</a>
             <a href="#ch9">9. Follow-Up & Recovery</a>
-            <a href="#cta-section" style="background:var(--accent);color:white;font-weight:700;margin-top:8px;">📥 Download Complete Guide (PDF)</a>
+            <a href="guide-download.html" style="background:var(--accent);color:white;font-weight:700;margin-top:8px;">📥 Download Complete Guide (PDF)</a>
         </aside>
 
         <!-- MOBILE TOC -->
@@ -590,6 +627,14 @@
 
         <!-- MAIN CONTENT -->
         <main class="guide-content">
+
+            <div class="pdf-download-strip">
+                <div>
+                    <strong>📥 Prefer to read offline?</strong>
+                    <span>Get the full 9-chapter guide as a free 18-page PDF — take it with you.</span>
+                </div>
+                <a href="guide-download.html">Download the free PDF →</a>
+            </div>
 
             <!-- CH1 -->
             <h2 id="ch1">1. China's Healthcare System — What International Patients Need to Know</h2>
@@ -986,6 +1031,7 @@
                     <a href="contact.html" class="cta-primary">Get Your Free Hospital Recommendation →</a>
                     <a href="cost-comparison.html" class="cta-secondary">Compare Procedure Costs</a>
                 </div>
+                <p class="pdf-hide" style="margin:22px 0 0;font-size:0.95rem;opacity:0.9">Reading offline? <a href="guide-download.html" style="color:#fff;font-weight:700;text-decoration:underline">Download the full guide as a free PDF →</a></p>
             </div>
 
         </main>

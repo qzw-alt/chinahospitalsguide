@@ -32,6 +32,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("llms.txt");
   eleventyConfig.addPassthroughCopy("llms-full.txt");
   eleventyConfig.addPassthroughCopy("api/");
+  eleventyConfig.addPassthroughCopy("downloads/");
 
   // Watch targets for live reload during development
   eleventyConfig.addWatchTarget("styles.css");
