@@ -30,7 +30,10 @@ INLINE_PATTERN = re.compile(
 )
 
 # External script to inject AFTER the gtag config
-SCRIPT_TAG = '\n    <script src="ga4-events.js" defer></script>'
+# NOTE: must be root-absolute. A bare "ga4-events.js" resolves relative to the
+# page's own directory, so pages in /blog/ requested /blog/ga4-events.js (404)
+# and silently lost all event tracking.
+SCRIPT_TAG = '\n    <script src="/ga4-events.js" defer></script>'
 
 
 def should_process(path: Path) -> bool:
