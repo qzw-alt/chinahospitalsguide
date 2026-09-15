@@ -56,7 +56,7 @@ schema: |
           "name": "How do I know a hospital is actually good?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "We apply a documented selection method — covering accreditation such as JCI or Grade 3A status, specialist volume, and international-patient capability — and publish 52 hospital pages with verified data. The $149 tier goes further by sending your case to 2-3 hospitals and translating their actual responses."
+            "text": "We apply a documented selection method — covering accreditation such as JCI or Grade 3A status, specialist volume, and international-patient capability — and publish 53 hospital pages with verified data. The $149 tier goes further by sending your case to 2-3 hospitals and translating their actual responses."
           }
         },
         {
@@ -86,7 +86,7 @@ Planning a hospital visit in China from another country tends to stall on two qu
 
 When you search for the best hospital in China for your condition, what you mostly get back is marketing. Ranking pages are assembled for search traffic, not for your diagnosis, and a hospital's own website will never tell you it is the wrong fit. From another country, the usual vetting tools — reputation, referrals, a first-hand visit — are out of reach.
 
-We approach this the way a local would. Our [hospital directory](/hospitals.html) holds **52 hospital pages**, each built around verifiable facts rather than slogans: JCI accreditation or China's Grade 3A rating, the specialties the hospital is known for, and whether it runs an international department with English-speaking staff and a track record for overseas patients. The full selection logic is written out on our [methodology page](/how-we-choose-hospitals.html), so you can see the criteria instead of taking our word for it.
+We approach this the way a local would. Our [hospital directory](/hospitals.html) holds **53 hospital pages**, each built around verifiable facts rather than slogans: JCI accreditation or China's Grade 3A rating, the specialties the hospital is known for, and whether it runs an international department with English-speaking staff and a track record for overseas patients. The full selection logic is written out on our [methodology page](/how-we-choose-hospitals.html), so you can see the criteria instead of taking our word for it.
 
 The deeper answer is that a shortlist is only as good as the follow-up. A hospital that looks excellent on paper may not accept your specific case, or may not answer at all. That is why our paid tiers do the part you cannot do from abroad: actually contacting the right department and getting a response.
 
@@ -115,7 +115,7 @@ The full breakdown, including refund terms, is on the [pricing page](/pricing.ht
 The site has moved well beyond a static list this year. The pieces that matter most if you are planning a trip now:
 
 - **The cost calculator**, described above, turns an opaque process into a number you can share with your family before you spend anything.
-- **52 hospital detail pages** replace a thin directory with structured, fact-based profiles you can compare side by side.
+- **53 hospital detail pages** replace a thin directory with structured, fact-based profiles you can compare side by side.
 - **Country landing pages** in English, Russian, Arabic, and Indonesian, plus a Singapore page, speak to patients in their own language about the routes and costs that apply to them.
 - **A dedicated [heart-failure entry point](/heart-failure.html)** covers a condition where China's treatment options, including newer device and surgical routes, differ enough from Western defaults to matter.
 - **A [transit visa guide](/visa-guide.html)** and an [imaging fast-track](/medical-imaging.html) — an MRI or CT booked within a day or two — remove the two most common logistical blockers.
@@ -143,7 +143,7 @@ The [hospital directory](/hospitals.html), the [cost calculator](/calculator.htm
 No. We charge patients a flat fee and take no commission from hospitals. That keeps the recommendation independent of any hospital's marketing budget.
 
 ### How do I know a hospital is actually good?
-We apply a [documented selection method](/how-we-choose-hospitals.html) — accreditation (JCI or Grade 3A), specialist volume, and international-patient capability — and publish 52 hospital pages with verified data. The $149 tier goes further by getting real answers from two to three hospitals about your case.
+We apply a [documented selection method](/how-we-choose-hospitals.html) — accreditation (JCI or Grade 3A), specialist volume, and international-patient capability — and publish 53 hospital pages with verified data. The $149 tier goes further by getting real answers from two to three hospitals about your case.
 
 ### How much will treatment cost in China?
 Start with the [free calculator](/calculator.html) for an estimate across nine common procedures. A written quote needs a hospital to review your records, which the $149 and $399 tiers arrange on your behalf.

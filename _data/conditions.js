@@ -1,7 +1,7 @@
 // Condition directory data (batch 3, trimmed).
-// 17 high-intent conditions that international patients actually travel to China for —
+// 19 high-intent conditions that international patients actually travel to China for —
 // chosen by real cross-border demand + China's strengths, not for long-tail SEO coverage.
-// Each condition maps to the 52-hospital directory via topHospitals (hospital ids).
+// Each condition maps to the 53-hospital directory via topHospitals (hospital ids).
 const conditions = [
   {
     slug: 'coronary-artery-disease',
@@ -46,7 +46,7 @@ const conditions = [
     typicalCosts: [
       { procedure: 'Lung cancer treatment', price: '$8,000–$20,000', note: 'varies by stage and protocol' }
     ],
-    topHospitals: ['cams-cancer-hospital', 'sun-yat-sen-cancer-hospital', 'tianjin-medical-university-cancer', 'first-affiliated-guangzhou-medical'],
+    topHospitals: ['cams-cancer-hospital', 'sun-yat-sen-cancer-hospital', 'fudan-university-shanghai-cancer-center', 'tianjin-medical-university-cancer', 'first-affiliated-guangzhou-medical'],
     faq: [
       { q: 'Which hospital is best for lung cancer in China?', a: 'The Cancer Hospital of CAMS in Beijing is China\'s #1 oncology center, and Sun Yat-sen University Cancer Center in Guangzhou is a top-3 national cancer hospital. Both offer surgery, radiotherapy and targeted therapy.' },
       { q: 'How much does lung cancer treatment cost in China?', a: 'Treatment typically ranges $8,000–$20,000 depending on stage, surgery vs systemic therapy, and drug choice. A case review with your pathology report gives a realistic estimate.' }
@@ -62,7 +62,7 @@ const conditions = [
     typicalCosts: [
       { procedure: 'Breast cancer treatment', price: '$8,000–$20,000', note: 'varies by stage' }
     ],
-    topHospitals: ['cams-cancer-hospital', 'sun-yat-sen-cancer-hospital', 'fudan-womens-hospital'],
+    topHospitals: ['cams-cancer-hospital', 'sun-yat-sen-cancer-hospital', 'fudan-university-shanghai-cancer-center', 'fudan-womens-hospital'],
     faq: [
       { q: 'Which hospital is best for breast cancer in China?', a: 'The Cancer Hospital of CAMS (Beijing) and Sun Yat-sen University Cancer Center (Guangzhou) are China\'s leading oncology centers for breast cancer, with Fudan Women\'s Hospital a strong specialist option in Shanghai.' },
       { q: 'How much does breast cancer treatment cost in China?', a: 'Treatment typically ranges $8,000–$20,000 depending on stage, surgery type and whether chemotherapy or targeted therapy is needed. Final quotes are confirmed per case.' }
@@ -78,7 +78,7 @@ const conditions = [
     typicalCosts: [
       { procedure: 'Liver cancer treatment', price: '$8,000–$20,000', note: 'varies by stage' }
     ],
-    topHospitals: ['zhongshan-hospital-shanghai', 'sun-yat-sen-cancer-hospital', 'fuda-cancer-hospital'],
+    topHospitals: ['zhongshan-hospital-shanghai', 'sun-yat-sen-cancer-hospital', 'fudan-university-shanghai-cancer-center', 'fuda-cancer-hospital'],
     faq: [
       { q: 'Which hospital is best for liver cancer in China?', a: 'Zhongshan Hospital in Shanghai and Sun Yat-sen University Cancer Center in Guangzhou are top centers for liver cancer surgery, while Fuda Cancer Hospital offers advanced ablation such as NanoKnife.' },
       { q: 'What treatments are available for liver cancer in China?', a: 'China offers the full range — resection, ablation, TACE, targeted therapy, immunotherapy and liver transplant — often at a fraction of Western self-pay cost.' }
@@ -94,10 +94,27 @@ const conditions = [
     typicalCosts: [
       { procedure: 'Stomach cancer treatment', price: '$8,000–$20,000', note: 'varies by stage' }
     ],
-    topHospitals: ['cams-cancer-hospital', 'sun-yat-sen-cancer-hospital', 'renji-hospital'],
+    topHospitals: ['cams-cancer-hospital', 'sun-yat-sen-cancer-hospital', 'fudan-university-shanghai-cancer-center', 'renji-hospital'],
     faq: [
       { q: 'Which hospital is best for stomach cancer in China?', a: 'The Cancer Hospital of CAMS and Sun Yat-sen University Cancer Center lead gastric cancer surgery in China, and Renji Hospital in Shanghai is a strong digestive-disease center.' },
       { q: 'How much does stomach cancer surgery cost in China?', a: 'Gastric cancer surgery and treatment typically range $8,000–$20,000 depending on stage and approach. A case review with your endoscopy and pathology report gives a realistic estimate.' }
+    ]
+  },
+  {
+    slug: 'colorectal-cancer',
+    name: 'Colorectal Cancer',
+    category: 'oncology',
+    overview: "Colorectal cancer is one of China's most commonly diagnosed cancers, and its high-volume centres have refined both colon and rectal surgery accordingly. For locally advanced rectal cancer, neoadjuvant chemoradiotherapy followed by surgery is standard, and specialist centres assess whether the sphincter can be preserved or whether an abdominoperineal resection with a permanent stoma is required.",
+    diagnosis: "Diagnosis uses colonoscopy with biopsy, staging by CT of the chest, abdomen and pelvis, pelvic MRI for rectal tumours, and PET-CT when indicated. Molecular testing covers MMR/MSI status and RAS/BRAF mutations, which guide targeted and immunotherapy decisions.",
+    treatment: "Treatment depends on the site and stage. Colon cancer is usually treated with colectomy; rectal cancer commonly receives neoadjuvant chemoradiotherapy before surgery. Very low tumours may need abdominoperineal resection with a permanent stoma, while sphincter-preserving resection is possible in selected cases. Systemic options include FOLFOX or FOLFIRI chemotherapy, anti-EGFR agents such as cetuximab for RAS wild-type tumours, bevacizumab, and immunotherapy for MSI-high or dMMR disease.",
+    typicalCosts: [
+      { procedure: 'Colorectal cancer treatment', price: '$8,000–$20,000', note: 'varies by stage and protocol' }
+    ],
+    topHospitals: ['cams-cancer-hospital', 'sun-yat-sen-cancer-hospital', 'fudan-university-shanghai-cancer-center', 'zhongshan-hospital-shanghai'],
+    faq: [
+      { q: 'Which hospitals are best for colorectal cancer in China?', a: 'The Cancer Hospital of CAMS (Beijing) and Sun Yat-sen University Cancer Center (Guangzhou) are China\'s leading oncology centres, and Fudan University Shanghai Cancer Center has one of the country\'s strongest colorectal surgery departments. Zhongshan Hospital in Shanghai is a leading digestive-disease centre.' },
+      { q: 'Can rectal cancer be treated without a permanent stoma in China?', a: 'Sometimes. Whether the sphincter can be preserved depends on tumour height, how the tumour responded to chemoradiotherapy, and pelvic anatomy — assessed from your MRI and endoscopy by a high-volume centre. Where preservation is not possible, a permanent stoma (abdominoperineal resection) may be required for a curative operation. The decision is made per patient after specialist review.' },
+      { q: 'How much does colorectal cancer treatment cost in China?', a: 'Colorectal cancer treatment typically ranges $8,000–$20,000 depending on stage, whether surgery, chemoradiotherapy or systemic therapy is needed, and drug choice. A case review with your pathology and imaging gives a realistic estimate.' }
     ]
   },
   {
@@ -325,7 +342,8 @@ const seoTitleMap = {
   'cataract': 'Cataract Surgery Cost in China 2026',
   'dental-implants': 'Dental Implants Cost in China 2026',
   'car-t-therapy': 'CAR-T Cell Therapy Cost in China 2026',
-  'heart-failure': 'Advanced Heart Failure Treatment in China 2026'
+  'heart-failure': 'Advanced Heart Failure Treatment in China 2026',
+  'colorectal-cancer': 'Colorectal Cancer Treatment Cost in China 2026'
 };
 
 const hospitals = require('./hospitals.js');
