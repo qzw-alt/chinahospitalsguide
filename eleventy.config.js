@@ -24,6 +24,10 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("styles.css");
   eleventyConfig.addPassthroughCopy("ga4-events.js");
   eleventyConfig.addPassthroughCopy("images");
+  // Referenced as og:image and as schema logo/image by ~280 pages. Never copied before,
+  // so every social preview and AI crawler fetched a 404 for the site's share image.
+  eleventyConfig.addPassthroughCopy("og-image.webp");
+  eleventyConfig.addPassthroughCopy("og-image.jpg");
   eleventyConfig.addPassthroughCopy("CNAME");
   eleventyConfig.addPassthroughCopy(".nojekyll");
   eleventyConfig.addPassthroughCopy("robots.txt");
