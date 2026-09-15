@@ -1,7 +1,7 @@
 // Condition directory data (batch 3, trimmed).
 // 19 high-intent conditions that international patients actually travel to China for —
 // chosen by real cross-border demand + China's strengths, not for long-tail SEO coverage.
-// Each condition maps to the 53-hospital directory via topHospitals (hospital ids).
+// Each condition maps to the 56-hospital directory via topHospitals (hospital ids).
 const conditions = [
   {
     slug: 'coronary-artery-disease',
