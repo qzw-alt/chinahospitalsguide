@@ -219,7 +219,7 @@ schema: |
 
     <main class="case-shell">
         <div class="case-intro">
-            <p><strong>Use this form if:</strong> you are a new patient, want guidance before choosing a package, or already paid and need to hand off your case details.</p>
+            <p><strong>Use this form if:</strong> you are a new patient, want us to look at your case before you commit to anything, or already paid and need to hand off your case details.</p>
             <p><strong>Tip:</strong> If you already paid, mention the package in your message so we can move faster.</p>
         </div>
 
@@ -388,19 +388,22 @@ schema: |
                     </div>
 
                     <div class="form-group">
-                        <label>What do you need help with? <span>*</span></label>
+                        <label>What are you trying to solve? <span>*</span></label>
                         <div class="checkbox-group" style="display:flex;flex-wrap:wrap;gap:12px;margin-top:4px;">
                             <label style="display:flex;align-items:center;gap:6px;font-weight:400;cursor:pointer;font-size:0.93rem;color:var(--text);">
-                                <input type="checkbox" name="help_type" value="Hospital search / shortlist"> Hospital search / shortlist
+                                <input type="checkbox" name="help_type" value="A second opinion on my diagnosis"> A second opinion on my diagnosis
                             </label>
                             <label style="display:flex;align-items:center;gap:6px;font-weight:400;cursor:pointer;font-size:0.93rem;color:var(--text);">
-                                <input type="checkbox" name="help_type" value="Appointment coordination"> Appointment coordination
+                                <input type="checkbox" name="help_type" value="A treatment not available in my country"> A treatment not available in my country
                             </label>
                             <label style="display:flex;align-items:center;gap:6px;font-weight:400;cursor:pointer;font-size:0.93rem;color:var(--text);">
-                                <input type="checkbox" name="help_type" value="Airport pickup"> Airport pickup
+                                <input type="checkbox" name="help_type" value="Whether a Chinese hospital can treat my case"> Whether a Chinese hospital can treat my case
                             </label>
                             <label style="display:flex;align-items:center;gap:6px;font-weight:400;cursor:pointer;font-size:0.93rem;color:var(--text);">
-                                <input type="checkbox" name="help_type" value="Travel / route planning"> Travel / route planning
+                                <input type="checkbox" name="help_type" value="Help choosing between hospitals"> Help choosing between hospitals
+                            </label>
+                            <label style="display:flex;align-items:center;gap:6px;font-weight:400;cursor:pointer;font-size:0.93rem;color:var(--text);">
+                                <input type="checkbox" name="help_type" value="Full coordination for my trip"> Full coordination for my trip
                             </label>
                             <label style="display:flex;align-items:center;gap:6px;font-weight:400;cursor:pointer;font-size:0.93rem;color:var(--text);">
                                 <input type="checkbox" name="help_type" value="Not sure yet"> Not sure yet
@@ -409,23 +412,23 @@ schema: |
                     </div>
 
                     <div class="form-group">
-                        <label>Preferred Service Path <span>*</span></label>
+                        <label>How would you like us to help? <span>*</span></label>
                         <div class="radio-group">
                             <label class="radio-item">
-                                <input type="radio" name="package" value="Not sure yet - recommend a package" required>
-                                <span><strong>Recommend a package for me</strong> - best for new visitors who have not paid yet</span>
+                                <input type="radio" name="package" value="Find out whether a Chinese hospital can treat my case" required>
+                                <span><strong>Find out whether a Chinese hospital can treat my case</strong> — we put your case in front of the most relevant hospital and bring back their answer</span>
                             </label>
                             <label class="radio-item">
-                                <input type="radio" name="package" value="L1 — Hospital Shortlist ($49)">
-                                <span><strong>L1 — Hospital Shortlist ($49)</strong> — 2-3 hospital matches + cost comparison + transport guidance</span>
+                                <input type="radio" name="package" value="I'm ready to travel — coordinate the whole thing">
+                                <span><strong>I'm ready to travel — coordinate the whole thing</strong> — records, appointments, visa letter, and support through treatment</span>
                             </label>
                             <label class="radio-item">
-                                <input type="radio" name="package" value="L2 — Hospital Verification ($149)">
-                                <span><strong>L2 — Hospital Verification ($149)</strong> — send your case to 2-3 hospitals, translate responses, connect you directly</span>
+                                <input type="radio" name="package" value="Just give me a shortlist to research myself">
+                                <span><strong>Just give me a shortlist to research myself</strong> — hospital matches and cost comparison, no hospital contact</span>
                             </label>
                             <label class="radio-item">
-                                <input type="radio" name="package" value="L3 — Full Journey Management ($399)">
-                                <span><strong>L3 — Full Journey Management ($399)</strong> — includes L2 + records, visa letter, appointments, airport pickup, ongoing coordination</span>
+                                <input type="radio" name="package" value="Not sure — recommend one for me">
+                                <span><strong>Not sure — recommend one for me</strong> — we'll tell you honestly which fits</span>
                             </label>
                         </div>
                     </div>
@@ -567,6 +570,16 @@ schema: |
             }
         }
         prefillFromQuery();
+
+        // Fires once on first edit — separates "never started" from "started then abandoned".
+        var formStarted = false;
+        function trackFormStart() {
+            if (formStarted) return;
+            formStarted = true;
+            if (typeof gtag === 'function') gtag('event', 'form_start', { page_location: location.pathname });
+        }
+        form.addEventListener('input', trackFormStart);
+        form.addEventListener('change', trackFormStart);
 
         // Multi-step form: split into 3 visible steps, single <form> submit
         var steps = Array.prototype.slice.call(document.querySelectorAll('.form-step'));

@@ -184,6 +184,10 @@ schema: |
                         }).render('#' + el.id);
                     } else if (window._ppFailed) {
                         el.innerHTML = '<a href="https://www.paypal.com/ncp/payment/' + b.id + '" target="_blank" rel="noopener" style="display:inline-block;background:#0070ba;color:#fff;padding:12px 28px;border-radius:8px;text-decoration:none;font-weight:700;font-size:0.95em;">Pay $' + b.value + ' with PayPal &#8594;</a>';
+                        var fb = el.querySelector('a');
+                        if (fb) fb.addEventListener('click', function () {
+                            if (typeof gtag === 'function') { gtag('event', 'payment_fallback_click', { send_to: 'G-RVYZENK472', currency: 'USD', value: b.value, item_id: b.item, item_name: b.item }); }
+                        });
                     }
                 });
                 if (!window._ppLoaded && !window._ppFailed) {

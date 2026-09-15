@@ -170,9 +170,9 @@ function processDir(dir, baseDir) {
               '2-3 hospitals matched to your case and budget, with cost comparison, transport guidance, and travel checklist.'
             ));
             schemas.push(offerSchema(
-              'L2 Hospital Verification',
+              'L2 Hospital Acceptance Check',
               '149',
-              'We send your case to 2-3 hospitals in Chinese, translate their responses, and connect you directly with the best fit.'
+              'We take your case to the most relevant Chinese hospital, translate their response, and connect you directly with the best fit.'
             ));
             schemas.push(offerSchema(
               'L3 Full Journey Management',

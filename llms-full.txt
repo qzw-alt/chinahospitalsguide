@@ -137,7 +137,7 @@
 
 15. **Pricing** — /pricing.html
     - L1 ($49): 2–3 hospital options, cost range, travel checklist — information only
-    - L2 ($149): Case sent to 2–3 hospitals, translated responses, direct connection
+    - L2 ($149): Case sent to the most relevant hospital, translated response, direct connection
     - L3 ($399): Full journey management — records, visa letter, appointments, pickup, coordination through discharge
     - Refund terms: clearly published per tier. PayPal accepted. Upgrade anytime.
 

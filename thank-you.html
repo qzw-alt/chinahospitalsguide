@@ -14,6 +14,28 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-RVYZENK472"></script>
     <script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-RVYZENK472")</script>
     <script src="/ga4-events.js" defer></script>
+    <script>
+    // Gated on ?paid=1 so the pricing page's manual "After payment" link (no params) doesn't inflate revenue.
+    (function () {
+        var p = new URLSearchParams(location.search);
+        if (p.get('paid') !== '1' || typeof gtag !== 'function') return;
+        var tiers = {
+            L1: { value: 49, name: 'Hospital Shortlist' },
+            L2: { value: 149, name: 'Hospital Acceptance Check' },
+            L3: { value: 399, name: 'Full Journey Management' }
+        };
+        var id = (p.get('tier') || '').toUpperCase();
+        var t = tiers[id];
+        if (!t) return;
+        gtag('event', 'purchase', {
+            send_to: 'G-RVYZENK472',
+            currency: 'USD',
+            value: t.value,
+            transaction_id: p.get('tx') || ('paypal_' + id + '_' + Date.now()),
+            items: [{ item_id: id, item_name: t.name, quantity: 1, price: t.value, currency: 'USD' }]
+        });
+    })();
+    </script>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -169,7 +191,7 @@
         <h2>We Deliver Your Service</h2>
         <p>Depending on your package:</p>
         <p><strong>L1 — Hospital Shortlist ($49):</strong> You receive 2&ndash;3 hospital recommendations with cost comparisons, transport guidance, and a preparation checklist &mdash; usually within 24 hours. Information only — no hospital contact. Ready for you to plan independently.</p>
-        <p><strong>L2 — Hospital Verification ($149):</strong> We send your case summary in Chinese to 2&ndash;3 hospitals, translate their responses into English, and <strong>connect you directly with the best-fit hospital</strong>. Delivered within 4&ndash;7 business days. Once you and the hospital are in touch, this phase is complete.</p>
+        <p><strong>L2 — Hospital Acceptance Check ($149):</strong> We prepare your case summary in Chinese and send it to the <strong>most relevant hospital and department</strong>. If they can't evaluate your case, we approach the next best match. We translate their response into English and <strong>connect you directly with the hospital</strong>. Delivered within 4&ndash;7 business days — once you and the hospital are in touch, this phase is complete.</p>
         <p><strong>L3 — Full Journey Management ($399):</strong> Includes everything in L2, plus medical record translation, visa invitation letter, appointment booking, airport pickup, and ongoing coordination throughout your treatment &mdash; from matching to discharge.</p>
     </div>
 
@@ -177,7 +199,7 @@
     <div class="next-step-card" style="background:#fef9f0;border:1px solid #e8d5a8;">
         <div style="text-align:center;font-size:2em;margin-bottom:8px;">💡</div>
         <h2 style="text-align:center;">Upgrade Anytime — Only Pay the Difference</h2>
-        <p style="text-align:center;"><strong>L1 → L2:</strong> Your $49 is credited toward Hospital Verification ($149) &mdash; you pay <strong>+$100 more</strong>.</p>
+        <p style="text-align:center;"><strong>L1 → L2:</strong> Your $49 is credited toward the Hospital Acceptance Check ($149) &mdash; you pay <strong>+$100 more</strong>.</p>
         <p style="text-align:center;"><strong>L1 → L3:</strong> Your $49 is credited toward Full Journey Management ($399) &mdash; you pay <strong>+$350 more</strong>.</p>
         <p style="text-align:center;"><strong>L2 → L3:</strong> Your $149 is fully credited toward Full Journey Management ($399) &mdash; you pay <strong>+$250 more</strong>. Valid for 30 days.</p>
         <p style="text-align:center;font-size:0.9rem;color:#888;">Just message us and mention you want to upgrade. We'll handle the rest.</p>

@@ -40,7 +40,7 @@ schema: |
           "name": "Is China Hospitals Guide free to use?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Browsing the hospital directory, the cost calculator, and the guides are free. The matching service starts at $49 for a hospital shortlist, with higher tiers for hospital verification ($149) and full journey management ($399)."
+            "text": "Browsing the hospital directory, the cost calculator, and the guides are free. The matching service starts at $49 for a hospital shortlist, with higher tiers for a hospital acceptance check ($149) and full journey management ($399)."
           }
         },
         {
@@ -56,7 +56,7 @@ schema: |
           "name": "How do I know a hospital is actually good?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "We apply a documented selection method — covering accreditation such as JCI or Grade 3A status, specialist volume, and international-patient capability — and publish 56 hospital pages with verified data. The $149 tier goes further by sending your case to 2-3 hospitals and translating their actual responses."
+            "text": "We apply a documented selection method — covering accreditation such as JCI or Grade 3A status, specialist volume, and international-patient capability — and publish 56 hospital pages with verified data. The $149 tier goes further by putting your case in front of the most relevant hospital and translating their actual response."
           }
         },
         {
@@ -105,7 +105,7 @@ We are not a directory and not a booking agent taking a cut from hospitals. We a
 The service runs in three tiers, each building on the one before it, and you can upgrade at any time and only pay the difference:
 
 - **$49 — Hospital Shortlist.** You tell us your condition and timeline; we return two to three hospitals matched to your case, with cost comparison across cities and travel guidance. Information only, no hospital contact.
-- **$149 — Hospital Verification.** We send your case summary in Chinese to two or three hospitals, translate their responses into English, and connect you directly with the best fit. Delivered in four to seven business days.
+- **$149 — Hospital Acceptance Check.** We prepare your case summary in Chinese and put it in front of the most relevant hospital and department; if they can't evaluate your case, we approach the next best match. We translate their response into English and connect you directly with them. Delivered in four to seven business days.
 - **$399 — Full Journey Management.** Everything in the $149 tier, plus medical record translation, a visa invitation letter, appointment booking, airport pickup, and coordination through discharge and follow-up.
 
 The full breakdown, including refund terms, is on the [pricing page](/pricing.html). The free starting point — browsing hospitals, running the calculator, reading the guides — is genuinely free.
@@ -137,13 +137,13 @@ The honest frame is not "China is better." It is "for a specific set of patients
 ## 6. Frequently Asked Questions
 
 ### Is China Hospitals Guide free to use?
-The [hospital directory](/hospitals.html), the [cost calculator](/calculator.html), and the guides are free. The matching service starts at $49 for a shortlist, with $149 for hospital verification and $399 for full journey management — and any tier upgrades, you only pay the difference.
+The [hospital directory](/hospitals.html), the [cost calculator](/calculator.html), and the guides are free. The matching service starts at $49 for a shortlist, with $149 for a hospital acceptance check and $399 for full journey management — and any tier upgrades, you only pay the difference.
 
 ### Do you take commissions from hospitals?
 No. We charge patients a flat fee and take no commission from hospitals. That keeps the recommendation independent of any hospital's marketing budget.
 
 ### How do I know a hospital is actually good?
-We apply a [documented selection method](/how-we-choose-hospitals.html) — accreditation (JCI or Grade 3A), specialist volume, and international-patient capability — and publish 56 hospital pages with verified data. The $149 tier goes further by getting real answers from two to three hospitals about your case.
+We apply a [documented selection method](/how-we-choose-hospitals.html) — accreditation (JCI or Grade 3A), specialist volume, and international-patient capability — and publish 56 hospital pages with verified data. The $149 tier goes further by getting a real answer from the most relevant hospital about your case.
 
 ### How much will treatment cost in China?
 Start with the [free calculator](/calculator.html) for an estimate across nine common procedures. A written quote needs a hospital to review your records, which the $149 and $399 tiers arrange on your behalf.

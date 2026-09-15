@@ -1,10 +1,10 @@
 ---
 permalink: pricing.html
 layout: base.njk
-title: "China Hospital Pricing 2026 | $49 Shortlist · $149 Verification · $399 Full Journey"
-description: "Three tiers: $49 Hospital Shortlist (get matched), $149 Hospital Verification (we contact 2-3 hospitals for you), $399 Full Journey Management (end-to-end). No hidden fees. PayPal secure."
+title: "China Hospital Pricing 2026 | $49 Shortlist · $149 Acceptance Check · $399 Full Journey"
+description: "Three tiers: $49 Hospital Shortlist (get matched), $149 Hospital Acceptance Check (we take your case to the most relevant hospital), $399 Full Journey Management (end-to-end). No hidden fees. PayPal secure."
 canonical: "https://chinahospitalsguide.com/pricing.html"
-ogDescription: "$49 Hospital Shortlist · $149 Hospital Verification · $399 Full Journey Management. We contact hospitals on your behalf. Any tier upgrades — only pay the difference."
+ogDescription: "$49 Hospital Shortlist · $149 Hospital Acceptance Check · $399 Full Journey Management. We contact hospitals on your behalf. Any tier upgrades — only pay the difference."
 extraHead: "<link rel=\"alternate\" hreflang=\"en\" href=\"https://chinahospitalsguide.com/pricing.html\">
 <link rel=\"alternate\" hreflang=\"ru\" href=\"https://chinahospitalsguide.com/ru-pricing.html\">
 <link rel=\"alternate\" hreflang=\"ar\" href=\"https://chinahospitalsguide.com/ar-pricing.html\">
@@ -304,8 +304,8 @@ schema: |
         "@type": "WebPage",
         "@id": "https://chinahospitalsguide.com/pricing.html#webpage",
         "url": "https://chinahospitalsguide.com/pricing.html",
-        "headline": "China Hospital Pricing 2026 — $49 Shortlist · $149 Verification · $399 Full Journey",
-        "description": "Three tiers: $49 Hospital Shortlist, $149 Hospital Verification (we contact 2-3 hospitals for you), $399 Full Journey Management. Upgrade anytime — only pay the difference.",
+        "headline": "China Hospital Pricing 2026 — $49 Shortlist · $149 Acceptance Check · $399 Full Journey",
+        "description": "Three tiers: $49 Hospital Shortlist, $149 Hospital Acceptance Check (we take your case to the most relevant hospital), $399 Full Journey Management. Upgrade anytime — only pay the difference.",
         "publisher": { "@type": "Organization", "name": "China Hospitals Guide", "url": "https://chinahospitalsguide.com" }
       },
       {
@@ -321,7 +321,7 @@ schema: |
           },
           {
             "@type": "Offer",
-            "itemOffered": { "@type": "Service", "name": "Hospital Verification", "description": "We send your case to 2-3 hospitals in Chinese, translate their responses, and connect you directly." },
+            "itemOffered": { "@type": "Service", "name": "Hospital Acceptance Check", "description": "We take your case to the most relevant Chinese hospital, translate their response, and connect you directly." },
             "price": "149", "priceCurrency": "USD",
             "priceSpecification": { "@type": "PriceSpecification", "price": "149", "priceCurrency": "USD" },
             "url": "https://chinahospitalsguide.com/pricing.html"
@@ -338,7 +338,7 @@ schema: |
       {
         "@type": "Article",
         "headline": "China Hospital Pricing 2026",
-        "description": "$49 Hospital Shortlist, $149 Hospital Verification, or $399 Full Journey Management. PayPal secure. Upgrade anytime — only pay the difference.",
+        "description": "$49 Hospital Shortlist, $149 Hospital Acceptance Check, or $399 Full Journey Management. PayPal secure. Upgrade anytime — only pay the difference.",
         "image": "https://chinahospitalsguide.com/og-image.webp",
         "author": { "@type": "Organization", "name": "China Hospitals Guide" },
         "publisher": { "@type": "Organization", "name": "China Hospitals Guide", "logo": { "@type": "ImageObject", "url": "https://chinahospitalsguide.com/og-image.webp" } },
@@ -369,7 +369,7 @@ schema: |
         <p>You've asked around &mdash; nobody you know has done this before.</p>
         <p>We're not a directory. We're a <span class="highlight">Chinese speaker with a phone</span>, and we know which department picks up and which one doesn't. We are the person you wish you had.</p>
         <p><span class="highlight">$49</span> &mdash; get a shortlist of hospitals matched to your case.<br>
-        <span class="highlight">$149</span> &mdash; we send your case to 2&ndash;3 hospitals, translate what they say, and connect you.<br>
+        <span class="highlight">$149</span> &mdash; we take your case to the most relevant hospital, translate what they say, and connect you.<br>
         <span class="highlight">$399</span> &mdash; we run the entire journey, from matching to discharge.</p>
         <p>Start at any tier. Upgrade anytime &mdash; you only pay the difference.</p>
     </div>
@@ -405,8 +405,12 @@ schema: |
                 if (window._ppLoaded) {
                     paypal.HostedButtons({hostedButtonId:"K4HNCDD7GDS5C",onApprove:function(data){if(typeof gtag==='function'){gtag('event','purchase',{send_to:'G-RVYZENK472',currency:'USD',value:49,transaction_id:data.orderID,items:[{item_id:'L1',item_name:'Hospital Shortlist',quantity:1,price:49,currency:'USD'}]});}}}).render("#paypal-container-K4HNCDD7GDS5C");
                 } else if (window._ppFailed) {
-                    document.getElementById('paypal-container-K4HNCDD7GDS5C').innerHTML =
+                    var ppHost1 = document.getElementById('paypal-container-K4HNCDD7GDS5C');
+                    ppHost1.innerHTML =
                         '<a href="https://www.paypal.com/ncp/payment/K4HNCDD7GDS5C" target="_blank" rel="noopener" style="display:inline-block;background:#0070ba;color:#fff;padding:12px 28px;border-radius:8px;text-decoration:none;font-weight:700;font-size:0.95em;">Pay $49 with PayPal &#8594;</a>';
+                    ppHost1.querySelector('a').addEventListener('click', function () {
+                        if (typeof gtag === 'function') { gtag('event', 'payment_fallback_click', { send_to: 'G-RVYZENK472', currency: 'USD', value: 49, item_id: 'L1', item_name: 'Hospital Shortlist' }); }
+                    });
                 } else {
                     document.addEventListener('pp:loaded', renderPP49, {once:true});
                     document.addEventListener('pp:failed', renderPP49, {once:true});
@@ -419,14 +423,15 @@ schema: |
 
         <!-- L2: $149 -->
         <div class="pricing-card-local featured">
-            <h3>L2 &mdash; Hospital Verification</h3>
-            <p><strong>"Will these hospitals actually accept my case?"</strong></p>
-            <p>For patients with a specific condition. We send your case to 2&ndash;3 hospitals, translate their responses, and connect you with the best fit.</p>
+            <h3>L2 &mdash; Hospital Acceptance Check</h3>
+            <p><strong>"Will a Chinese hospital actually accept my case?"</strong></p>
+            <p>For patients with a specific condition. We put your case in front of the most relevant hospital and bring back their answer in writing.</p>
             <div class="pricing-price">$149</div>
             <ul>
-                <li>We send your case summary in Chinese to <strong>2&ndash;3 hospitals</strong> &mdash; the right departments for your condition</li>
-                <li>We translate each hospital's response into English</li>
-                <li><strong>We connect you directly</strong> with the best-fit hospital &mdash; once you're in touch, our work is done</li>
+                <li>We prepare your case summary in Chinese and send it to the <strong>most relevant hospital and department</strong> for your condition</li>
+                <li>If that hospital can't evaluate your case, we approach the next best match &mdash; you don't end up at a dead end</li>
+                <li>We translate the hospital's response into English and summarize what it means for your next step</li>
+                <li><strong>We connect you directly</strong> with the hospital &mdash; once you're in touch, our work is done</li>
                 <li>Delivered in 4&ndash;7 business days</li>
             </ul>
             <div class="upgrade-note">
@@ -437,10 +442,14 @@ schema: |
             <script>
             (function renderPP149() {
                 if (window._ppLoaded) {
-                    paypal.HostedButtons({hostedButtonId:"WGZ9FPKYZ6X3Y",onApprove:function(data){if(typeof gtag==='function'){gtag('event','purchase',{send_to:'G-RVYZENK472',currency:'USD',value:149,transaction_id:data.orderID,items:[{item_id:'L2',item_name:'Hospital Verification',quantity:1,price:149,currency:'USD'}]});}}}).render("#paypal-container-WGZ9FPKYZ6X3Y");
+                    paypal.HostedButtons({hostedButtonId:"WGZ9FPKYZ6X3Y",onApprove:function(data){if(typeof gtag==='function'){gtag('event','purchase',{send_to:'G-RVYZENK472',currency:'USD',value:149,transaction_id:data.orderID,items:[{item_id:'L2',item_name:'Hospital Acceptance Check',quantity:1,price:149,currency:'USD'}]});}}}).render("#paypal-container-WGZ9FPKYZ6X3Y");
                 } else if (window._ppFailed) {
-                    document.getElementById('paypal-container-WGZ9FPKYZ6X3Y').innerHTML =
+                    var ppHost2 = document.getElementById('paypal-container-WGZ9FPKYZ6X3Y');
+                    ppHost2.innerHTML =
                         '<a href="https://www.paypal.com/ncp/payment/WGZ9FPKYZ6X3Y" target="_blank" rel="noopener" style="display:inline-block;background:#0070ba;color:#fff;padding:12px 28px;border-radius:8px;text-decoration:none;font-weight:700;font-size:0.95em;">Pay $149 with PayPal &#8594;</a>';
+                    ppHost2.querySelector('a').addEventListener('click', function () {
+                        if (typeof gtag === 'function') { gtag('event', 'payment_fallback_click', { send_to: 'G-RVYZENK472', currency: 'USD', value: 149, item_id: 'L2', item_name: 'Hospital Acceptance Check' }); }
+                    });
                 } else {
                     document.addEventListener('pp:loaded', renderPP149, {once:true});
                     document.addEventListener('pp:failed', renderPP149, {once:true});
@@ -458,7 +467,7 @@ schema: |
             <p>For patients ready to travel. We manage the entire journey &mdash; from hospital matching to discharge and follow-up.</p>
             <div class="pricing-price">$399</div>
             <ul>
-                <li><strong>Includes everything in L2</strong> &mdash; hospital verification + direct connection</li>
+                <li><strong>Includes everything in L2</strong> &mdash; hospital acceptance check + direct connection</li>
                 <li>Medical record translation and preparation</li>
                 <li>Visa invitation letter</li>
                 <li>Appointment booking + airport pickup arrangement</li>
@@ -475,8 +484,12 @@ schema: |
                 if (window._ppLoaded) {
                     paypal.HostedButtons({hostedButtonId:"ZBY36JV2X5A3U",onApprove:function(data){if(typeof gtag==='function'){gtag('event','purchase',{send_to:'G-RVYZENK472',currency:'USD',value:399,transaction_id:data.orderID,items:[{item_id:'L3',item_name:'Full Journey Management',quantity:1,price:399,currency:'USD'}]});}}}).render("#paypal-container-ZBY36JV2X5A3U");
                 } else if (window._ppFailed) {
-                    document.getElementById('paypal-container-ZBY36JV2X5A3U').innerHTML =
+                    var ppHost3 = document.getElementById('paypal-container-ZBY36JV2X5A3U');
+                    ppHost3.innerHTML =
                         '<a href="https://www.paypal.com/ncp/payment/ZBY36JV2X5A3U" target="_blank" rel="noopener" style="display:inline-block;background:#0070ba;color:#fff;padding:12px 28px;border-radius:8px;text-decoration:none;font-weight:700;font-size:0.95em;">Pay $399 with PayPal &#8594;</a>';
+                    ppHost3.querySelector('a').addEventListener('click', function () {
+                        if (typeof gtag === 'function') { gtag('event', 'payment_fallback_click', { send_to: 'G-RVYZENK472', currency: 'USD', value: 399, item_id: 'L3', item_name: 'Full Journey Management' }); }
+                    });
                 } else {
                     document.addEventListener('pp:loaded', renderPP399, {once:true});
                     document.addEventListener('pp:failed', renderPP399, {once:true});
@@ -489,6 +502,8 @@ schema: |
 
     </div>
 
+    <p style="text-align:center;margin-top:18px;font-size:0.9rem;color:#66758a;">Can't use PayPal from your country? <a href="contact-new.html" style="color:#1e3c72;font-weight:700;">Message us</a> &mdash; we'll arrange another way to pay.</p>
+
     <!-- Comparison Table -->
     <div class="comparison-table-wrap">
         <table class="comparison-table">
@@ -496,7 +511,7 @@ schema: |
                 <tr>
                     <th></th>
                     <th>L1 &mdash; $49<br>Hospital Shortlist</th>
-                    <th>L2 &mdash; $149<br>Hospital Verification</th>
+                    <th>L2 &mdash; $149<br>Hospital Acceptance Check</th>
                     <th>L3 &mdash; $399<br>Full Journey</th>
                 </tr>
             </thead>
@@ -504,13 +519,13 @@ schema: |
                 <tr>
                     <td><strong>What you get</strong></td>
                     <td>2&ndash;3 hospital names + cost data</td>
-                    <td>Real responses from 2&ndash;3 hospitals + direct connection</td>
+                    <td>A real hospital response + direct connection</td>
                     <td>Everything in L2 + end-to-end journey management</td>
                 </tr>
                 <tr>
                     <td><strong>Hospital contact</strong></td>
                     <td><span class="cross">&#10005;</span> None</td>
-                    <td><span class="check">&#10003;</span> 2&ndash;3 hospitals contacted</td>
+                    <td><span class="check">&#10003;</span> Most relevant hospital contacted</td>
                     <td><span class="check">&#10003;</span> 2&ndash;3 hospitals + MDT</td>
                 </tr>
                 <tr>
@@ -587,7 +602,7 @@ schema: |
             </div>
             <div class="step-card">
                 <h3>3. Service begins</h3>
-                <p>We begin the work included in your package &mdash; whether that's research, hospital verification, or full journey management.</p>
+                <p>We begin the work included in your package &mdash; whether that's research, a hospital acceptance check, or full journey management.</p>
             </div>
         </div>
         <div class="after-pay-box">
@@ -619,10 +634,10 @@ schema: |
                     </ul>
                 </div>
                 <div class="compare-card">
-                    <h3>L2 &mdash; $149 Hospital Verification</h3>
+                    <h3>L2 &mdash; $149 Hospital Acceptance Check</h3>
                     <ul>
-                        <li>Full refund if cancelled before we contact hospitals</li>
-                        <li>Non-refundable once hospitals have been contacted &mdash; our labor has been performed</li>
+                        <li>Full refund if cancelled before we contact the hospital</li>
+                        <li>Non-refundable once the hospital has been contacted &mdash; our labor has been performed</li>
                         <li>If no hospital responds, we'll offer to contact alternatives or issue a full refund</li>
                     </ul>
                 </div>
