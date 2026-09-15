@@ -49,8 +49,8 @@ pageStyle: |
       {% if hospital.trust %}<div class="h-metric"><strong>Verified</strong><span>Data checked {{ hospital.trust.last_verified }}</span></div>{% endif %}
     </div>
     <div class="h-actions">
-      <a href="contact-new.html" class="cta-button">Get Matched — Free Case Review</a>
-      <a href="hospitals.html" class="cta-button alt">All Hospitals</a>
+      <a href="/contact-new.html" class="cta-button">Get Matched — Free Case Review</a>
+      <a href="/hospitals.html" class="cta-button alt">All Hospitals</a>
     </div>
   </div>
 </section>
@@ -106,7 +106,7 @@ pageStyle: |
           <div class="h-row"><b>Verified</b><span>✓ {{ hospital.trust.last_verified }}{% if hospital.trust.data_source %} · {{ hospital.trust.data_source | replace('_',' ') | capitalize }}{% endif %}</span></div>
           {% if hospital.trust.cross_validated %}<div class="h-row"><b>Evidence</b><span>{% for e in hospital.trust.cross_validated %}<span class="h-evidence">{{ evLabels[e] or (e | replace('_',' ') | capitalize) }} ✓</span>{% endfor %}</span></div>{% endif %}
           {% if hospital.trust.level %}<div class="h-row"><b>Trust</b><span>{{ hospital.trust.level | replace('_',' ') | capitalize }}</span></div>{% endif %}
-          <p style="font-size:.8rem;margin:12px 0 0;"><a href="how-we-choose-hospitals.html" style="color:#1e3c72;font-weight:600;">How we verify →</a></p>
+          <p style="font-size:.8rem;margin:12px 0 0;"><a href="/how-we-choose-hospitals.html" style="color:#1e3c72;font-weight:600;">How we verify →</a></p>
         </div>
         {% endif %}
 
@@ -144,8 +144,8 @@ pageStyle: |
       <h2>Planning treatment at {{ hospital.name }}?</h2>
       <p style="color:#4b5565;">Get matched to this hospital and 1–2 others selected for your case — free case review, response within 24 hours.</p>
       <div class="h-actions" style="justify-content:center;">
-        <a href="contact-new.html" class="cta-button">Start Free Case Review</a>
-        <a href="pricing.html" class="cta-button alt">View Pricing</a>
+        <a href="/contact-new.html" class="cta-button">Start Free Case Review</a>
+        <a href="/pricing.html" class="cta-button alt">View Pricing</a>
       </div>
     </div>
   </section>

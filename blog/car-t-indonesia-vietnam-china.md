@@ -250,7 +250,7 @@ Yes — clinical trial access can drop the CAR-T product cost to **$30,000 – $
 
 ## Related Reading
 
-- [CAR-T Cost in China 2026: Complete Price Guide](/blog/car-t-cost-china-2026.html)
+- [CAR-T Cost in China 2026: Complete Price Guide](/blog/car-t-cost-china-2026/)
 - [Solid Tumor CAR-T in China — Satri-cel Guide](/blog/solid-tumor-car-t-china.html)
 - [How to Apply for China Medical Visa (M Visa)](/blog/china-medical-visa-guide-2026.html)
 - [Cancer Treatment Cost in China 2026](/blog/cancer-treatment-cost-china.html)

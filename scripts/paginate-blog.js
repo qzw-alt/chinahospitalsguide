@@ -87,6 +87,16 @@ function paginateBlog(dir) {
     return `Latest Articles — Page ${page}`;
   }
 
+  // Pages 2+ are written to /blog/N/, one directory deeper than /blog/. Every
+  // relative URL copied from the source page therefore resolves inside /blog/N/
+  // and 404s — card links, the stylesheet, everything. Push each one down a level.
+  function rebaseRelativeUrls(html) {
+    return html.replace(/\b(href|src)="([^"]*)"/g, function (whole, attr, url) {
+      if (!url || /^(?:[a-z][a-z0-9+.-]*:|\/\/|\/|#)/i.test(url)) return whole;
+      return attr + '="../' + url + '"';
+    });
+  }
+
   // Helper: add page-specific SEO tags to head
   function updateHeadMeta(html, page) {
     const pageUrl = page === 1 ? `${BASE}/blog/` : `${BASE}/blog/${page}/`;
@@ -160,6 +170,7 @@ function paginateBlog(dir) {
       // Create blog/N/index.html for pages 2+
       const pageDir = path.join(blogDir, String(p));
       if (!fs.existsSync(pageDir)) fs.mkdirSync(pageDir, { recursive: true });
+      pageHtml = rebaseRelativeUrls(pageHtml);
       fs.writeFileSync(path.join(pageDir, 'index.html'), pageHtml);
       console.log(`Paginate: blog/${p}/index.html (page ${p}, ${pageCards.length} cards)`);
     }

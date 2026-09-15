@@ -188,4 +188,4 @@ No. Acupuncture or Chinese herbal medicine may support symptom control when coor
 - [Best Cancer Hospitals in China 2026](/blog/best-cancer-hospitals-china-2026.html)
 - [Cancer Treatment Costs in China](/blog/cancer-treatment-cost-china.html)
 - [Hospitals in Guangzhou for International Patients](/blog/hospitals-in-guangzhou-for-international-patients.html)
-- [Traditional Chinese Medicine Cancer Support](/blog/tcm-cancer-support-china.html)
+- [Traditional Chinese Medicine Cancer Support](/blog/tcm-traditional-chinese-medicine-guide.html)

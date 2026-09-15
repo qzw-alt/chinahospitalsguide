@@ -235,7 +235,7 @@ The pipeline is not slowing down. Several signals to watch:
 1. **More NMPA approvals of Chinese-developed bispecifics and ADCs.** The first wave of Akeso ivonescimab indications, Hansoh HS-20089, and RemeGen disitamab vedotin expansions will land in 2026-2027.
 2. **Outbound licensing deals crossing $200 billion in cumulative value.** The 2025 number ($130B) was already a record. The pipeline of deals through 2027 suggests this trend will continue, which means more Western pharma validating Chinese assets.
 3. **First FDA approvals of Chinese-developed oncology drugs.** Several Chinese-discovered assets (Akeso ivonescimab via Summit, Hansoh HS-20089 via GSK, BeiGene tislelizumab) are in late-stage global trials. First FDA approvals could land in 2027-2028.
-4. **Hainan Boao Lecheng access expansion.** New cell and gene therapies approved under the Hainan pilot reach international patients 1-2 years ahead of national NMPA approval. Watch the Lecheng [allowance list](https://www.chinahospitalsguide.com/blog/hainan-boao-lecheng-medical-tourism.html) for additions.
+4. **Hainan Boao Lecheng access expansion.** New cell and gene therapies approved under the Hainan pilot reach international patients 1-2 years ahead of national NMPA approval. Watch the Lecheng [allowance list](https://www.chinahospitalsguide.com/hainan-boao-lecheng.html) for additions.
 5. **AI-augmented clinical-trial matching.** Several Chinese hospitals are piloting AI tools that match an international patient's biomarker profile to open trials across all of China in under 10 minutes. This is real infrastructure, not marketing.
 
 For an international cancer patient planning a medical trip in 2026 or 2027, none of these are abstract. They translate to faster trial access, more approved drug options, and meaningfully lower cost than the same trip would have cost two years ago.
@@ -259,6 +259,6 @@ China Hospitals Guide provides independent coordination for international patien
 - [Solid Tumor CAR-T in China: Satri-cel and the Claudin18.2 Frontier](/blog/solid-tumor-car-t-china.html)
 - [CAR-T Therapy Cost in China: $89K-$151K vs $300K-$500K US (2026)](/blog/car-t-therapy-china-2026.html)
 - [Best Cancer Hospitals in China for International Patients 2026](/blog/best-cancer-hospitals-china-2026.html)
-- [Hainan Boao Lecheng Medical Tourism: International Patient Access](/blog/hainan-boao-lecheng-medical-tourism.html)
+- [Hainan Boao Lecheng Medical Tourism: International Patient Access](/hainan-boao-lecheng.html)
 - [Why International Patients Choose China for Medical Treatment in 2026](/blog/why-international-patients-choose-china-medical-treatment-2026.html)
 - [Integrated Chinese-Western Medicine in China: How It Works in Practice](/blog/integrated-chinese-western-medicine-china.html)
