@@ -1,8 +1,9 @@
 // Minimal static file server for local preview (used by .claude/launch.json)
+// Optional first arg overrides the docroot, e.g. `node scripts/serve.js _site` to preview built output.
 const http = require('http');
 const fs = require('fs');
 const path = require('path');
-const root = path.resolve(__dirname, '..');
+const root = path.resolve(__dirname, '..', process.argv[2] || '.');
 const port = process.env.PORT || 8081;
 const mime = {
   '.html': 'text/html; charset=utf-8',

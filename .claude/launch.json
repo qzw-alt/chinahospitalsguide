@@ -1,11 +1,18 @@
 {
   "version": "0.0.1",
+  "autoPort": true,
   "configurations": [
     {
       "name": "china-hospitals-guide",
       "runtimeExecutable": "node",
       "runtimeArgs": ["scripts/serve.js"],
-      "port": 8081
+      "autoPort": true
+    },
+    {
+      "name": "china-hospitals-guide-built",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["scripts/serve.js", "_site"],
+      "autoPort": true
     }
   ]
 }

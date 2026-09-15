@@ -53,8 +53,15 @@ module.exports = function(eleventyConfig) {
 
   // Ignore non-website files that could be deployed as passthrough copies
   eleventyConfig.ignores.add("report-carlos-mendoza-*.html");
-  eleventyConfig.ignores.add("templates/report-page.html");
   eleventyConfig.ignores.add("references/");
+
+  // 2026-09-15: internal working folders were shipping to the live site with their full
+  // content and no noindex — build scripts, pricing strategy docs, patient outreach
+  // scripts, and research notes. Keep them out of the output entirely.
+  eleventyConfig.ignores.add("planning/");
+  eleventyConfig.ignores.add("templates/");
+  eleventyConfig.ignores.add("internal-research-notes/");
+  eleventyConfig.ignores.add("scripts/");
 
   // HTML files without frontmatter are auto-passthrough-copied (not skipped)
   // 2026-07-26: news/ and treatments/ deleted (CTR destruction, duplicate content).
