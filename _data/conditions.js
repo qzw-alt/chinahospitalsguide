@@ -281,16 +281,19 @@ const conditions = [
     slug: 'car-t-therapy',
     name: 'CAR-T Cell Therapy',
     category: 'oncology',
-    overview: "China is a global leader in CAR-T cell therapy for blood cancers, with multiple approved products and active trials. Leading centers offer CAR-T for lymphoma, leukemia and multiple myeloma.",
-    diagnosis: "Candidacy is confirmed with disease staging, prior-treatment history and, for some, biomarker testing.",
-    treatment: "CAR-T involves leukapheresis, cell engineering and infusion, with a monitored hospital stay. China offers both approved products and clinical-trial access.",
+    overview: "China's NMPA has approved seven CAR-T therapies — more than the United States or Europe — including satri-cel, the world's first CAR-T approved for a solid tumor. Approved products cover lymphoma, leukemia and multiple myeloma, with active trial access for other targets.",
+    diagnosis: "Eligibility depends on the cancer type, how many prior lines of treatment have failed, organ function and the target antigen on the tumor. CD19, BCMA and Claudin18.2 status are confirmed by pathology review before anything else.",
+    treatment: "CAR-T involves leukapheresis, a two-to-four-week manufacturing window, lymphodepleting chemotherapy and infusion, followed by roughly ten to fourteen days of inpatient monitoring. China offers both approved products and clinical-trial access to experimental targets.",
     typicalCosts: [
-      { procedure: 'CAR-T therapy', price: 'case-specific', note: 'substantially lower than US list prices' }
+      { procedure: 'Approved CD19 or BCMA CAR-T', price: '$89,000–$170,000', note: 'drug plus the full treatment course; quoted per case' },
+      { procedure: 'Satri-cel (Claudin18.2, gastric / GEJ)', price: '$89,000–$170,000', note: "world's first approved solid-tumor CAR-T" },
+      { procedure: 'Clinical trial participation', price: '≈$30,000–$80,000', note: 'varies by trial; some costs covered' }
     ],
-    topHospitals: ['cams-cancer-hospital', 'sun-yat-sen-cancer-hospital', 'fuda-cancer-hospital', 'fosun-chancheng-hospital'],
+    topHospitals: ['cams-cancer-hospital', 'fudan-university-shanghai-cancer-center', 'sun-yat-sen-cancer-hospital', 'pku-peoples-hospital', 'fosun-chancheng-hospital', 'west-china-lecheng-hospital'],
     faq: [
-      { q: 'Which hospital offers CAR-T therapy in China?', a: 'The Cancer Hospital of CAMS, Sun Yat-sen University Cancer Center and Fosun Chancheng Hospital (which offers CAR-T alongside CyberKnife) are leading CAR-T centers.' },
-      { q: 'How much does CAR-T therapy cost in China?', a: 'CAR-T in China is priced per case and is substantially lower than US list prices (often $300,000+). A case review with your records confirms eligibility and cost.' }
+      { q: 'Which hospital offers CAR-T therapy in China?', a: 'Leading centres include the Cancer Hospital of CAMS and Peking University People\'s Hospital (Beijing), Fudan University Shanghai Cancer Center, Sun Yat-sen University Cancer Center (Guangzhou), and West China Lecheng Hospital in the Hainan Lecheng zone. Foshan Fosun Chancheng Hospital lists CAR-T among its oncology services. A case review confirms which of these can take your case.' },
+      { q: 'How much does CAR-T therapy cost in China?', a: 'Reference ranges: approved CD19 or BCMA CAR-T runs roughly $89,000–$170,000 for the drug plus the full course, and clinical trial participation typically $30,000–$80,000. Confirm whether a quote includes tocilizumab, ICU standby and the full monitoring period, which are sometimes billed separately.' },
+      { q: 'Is CAR-T a cure?', a: 'No. CAR-T has produced durable remissions in some blood cancers, but it is not a cure and it is not suitable for everyone. Response figures are reported at group level, and the treatment carries real risks including cytokine release syndrome and neurological toxicity.' }
     ]
   },
   {

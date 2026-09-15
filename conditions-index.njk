@@ -1,0 +1,65 @@
+---
+layout: base.njk
+permalink: "conditions/index.html"
+title: "Conditions We Help With | Treatment in China for International Patients"
+description: "Browse the conditions international patients most often come to China for — cancer and CAR-T, cardiac, orthopedic, neurosurgery, fertility, eye and dental — with top hospitals and reference costs."
+canonical: "https://chinahospitalsguide.com/conditions/"
+ogTitle: "Medical Conditions We Help With"
+ogDescription: "Cancer and CAR-T, cardiac, orthopedic, neurosurgery, fertility, eye and dental care in China — top hospitals, reference costs and a free case review."
+landingPages:
+  heart-failure: /heart-failure.html
+  car-t-therapy: /car-t-therapy.html
+pageStyle: |
+  body { background: #f8f9fa; color: #243044; }
+  .cx-hero { padding: 150px 20px 64px; background: linear-gradient(135deg, #17345f 0%, #2a5298 100%); color: white; text-align: center; }
+  .cx-hero h1 { color: white; font-size: clamp(1.7rem, 4vw, 2.6rem); line-height: 1.15; max-width: 880px; margin: 0 auto 16px; }
+  .cx-hero p { color: rgba(255,255,255,.88); max-width: 800px; margin: 0 auto 18px; font-size: 1.02rem; line-height: 1.7; }
+  .cx-shell { max-width: 1120px; margin: 0 auto; padding: 44px 20px 64px; }
+  .cx-crumb { max-width: 1120px; margin: 0 auto; padding: 24px 20px 0; font-size: .86rem; color: #8893a0; }
+  .cx-crumb a { color: #2a5298; text-decoration: none; }
+  .cx-cat { color: #1e3c72; font-size: 1.4rem; margin: 44px 0 18px; }
+  .cx-cat:first-of-type { margin-top: 0; }
+  .cx-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 20px; }
+  .cx-card { background: #fff; border-radius: 16px; padding: 24px; border: 1px solid rgba(30,60,114,.08); box-shadow: 0 10px 26px rgba(15,23,42,.06); display: flex; flex-direction: column; text-decoration: none; transition: transform .2s ease, box-shadow .2s ease; }
+  .cx-card:hover { transform: translateY(-4px); box-shadow: 0 16px 32px rgba(15,23,42,.12); }
+  .cx-card .cname { color: #1e3c72; font-size: 1.12rem; font-weight: 700; margin-bottom: 8px; }
+  .cx-card .cdesc { color: #4a5568; font-size: .9rem; line-height: 1.6; margin-bottom: 16px; flex: 1; }
+  .cx-card .clink { margin-top: auto; color: #2a5298; font-size: .88rem; font-weight: 700; }
+  .cx-card .cflag { display: inline-block; background: #eef6ef; color: #2e7d32; border-radius: 999px; padding: 3px 10px; font-size: .72rem; font-weight: 700; margin-bottom: 10px; align-self: flex-start; }
+  .cx-cta { background: linear-gradient(135deg, #18345f 0%, #2a5298 100%); color: white; border-radius: 22px; padding: 44px 32px; text-align: center; margin-top: 48px; }
+  .cx-cta h2 { color: white; margin-bottom: 12px; }
+  .cx-cta p { color: rgba(255,255,255,.88); max-width: 620px; margin: 0 auto 22px; line-height: 1.7; }
+  .cx-cta a { display: inline-block; background: #ff6b6b; color: white; padding: 14px 32px; border-radius: 10px; text-decoration: none; font-weight: 700; }
+  @media (max-width: 768px) {
+      .cx-hero { padding: 128px 20px 52px; }
+  }
+---
+<header class="cx-hero">
+    <h1>Conditions We Help With</h1>
+    <p>International patients come to China for these conditions most often. Each page covers how it is diagnosed here, the treatment options at Grade 3A hospitals, reference costs, and the hospitals we would look at first for your case.</p>
+</header>
+
+<div class="cx-crumb"><a href="/">Home</a> › Conditions</div>
+
+<main class="cx-shell">
+    {% for group in conditionGroups %}
+    <h2 class="cx-cat">{{ group.label }}</h2>
+    <div class="cx-grid">
+        {% for c in group.items %}
+        {% set href = landingPages[c.slug] or ("/conditions/" + c.slug + "/") %}
+        <a class="cx-card" href="{{ href }}">
+            {% if landingPages[c.slug] %}<span class="cflag">Full programme page</span>{% endif %}
+            <div class="cname">{{ c.name }}</div>
+            <div class="cdesc">{{ c.overview | truncate(150) }}</div>
+            <span class="clink">See hospitals &amp; costs →</span>
+        </a>
+        {% endfor %}
+    </div>
+    {% endfor %}
+
+    <div class="cx-cta">
+        <h2>Not sure whether China is the right option?</h2>
+        <p>Tell us your diagnosis, the treatment you've already had, and your timeline. We'll tell you honestly whether a Chinese hospital is worth considering for your case — free, and with no obligation to go further.</p>
+        <a href="/contact-new.html?source=conditions-index">Start Free Case Review →</a>
+    </div>
+</main>

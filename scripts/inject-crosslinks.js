@@ -136,6 +136,17 @@ const blogToTreatments = {
   'heart-surgery-cost-china': 'heart-failure.html',
   'best-cardiac-surgery-hospitals-china-2026': 'heart-failure.html',
   'china-vs-singapore-heart-surgery-cost': 'heart-failure.html',
+  'car-t-therapy-china-2026': 'car-t-therapy.html',
+  'car-t-therapy-hospitals-china-2026': 'car-t-therapy.html',
+  'car-t-clinical-trials-china-2026': 'car-t-therapy.html',
+  'car-t-cost-china-2026': 'car-t-therapy.html',
+  'car-t-lymphoma-china-cost': 'car-t-therapy.html',
+  'car-t-multiple-myeloma-china': 'car-t-therapy.html',
+  'solid-tumor-car-t-china': 'car-t-therapy.html',
+  '2026-08-07-in-vivo-car-t-liver-cancer-cellorigin-walvax-gpc3': 'car-t-therapy.html',
+  '2026-08-17-gastric-cancer-car-t-satri-cel-china': 'car-t-therapy.html',
+  '2026-08-31-solid-tumor-car-t-first-international-patient-china': 'car-t-therapy.html',
+  'car-t-indonesia-vietnam-china': 'car-t-therapy.html',
 };
 
 const treatmentToBlogs = {
@@ -143,6 +154,7 @@ const treatmentToBlogs = {
   'orthopedics.html': ['knee-replacement-surgery-china-2026', 'hip-replacement-cost-china', 'spine-surgery-cost-china'],
   'ivf.html': ['ivf-cost-china-2026', 'ivf-fertility-treatment-china-2026'],
   'heart-failure.html': ['cardiac-bypass-surgery-china-2026', 'heart-surgery-cost-china', 'best-cardiac-surgery-hospitals-china-2026', 'china-vs-singapore-heart-surgery-cost'],
+  'car-t-therapy.html': ['car-t-therapy-china-2026', 'car-t-cost-china-2026', 'car-t-therapy-hospitals-china-2026', 'car-t-clinical-trials-china-2026', 'solid-tumor-car-t-china', 'car-t-multiple-myeloma-china', 'car-t-lymphoma-china-cost'],
 };
 
 const treatmentNames = {
@@ -150,6 +162,7 @@ const treatmentNames = {
   'orthopedics.html': 'Orthopedic Surgery in China',
   'ivf.html': 'IVF & Fertility in China',
   'heart-failure.html': 'Advanced Heart Failure Treatment in China',
+  'car-t-therapy.html': 'CAR-T Cell Therapy in China',
 };
 
 // ── Pillar page: every article links up to the "start here" guide ──
@@ -213,6 +226,7 @@ const treatmentTaglines = {
   'orthopedics.html': 'save 70-85% at JCI-accredited hospitals',
   'ivf.html': 'save 70-85% at JCI-accredited hospitals',
   'heart-failure.html': "CRT, ICD, LVAD & transplant at China's top cardiac centers",
+  'car-t-therapy.html': 'approved CAR-T, satri-cel & trial access',
 };
 
 function makeTreatmentLinkHTML(treatmentFile) {

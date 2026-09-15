@@ -319,11 +319,11 @@ pageStyle: |
         it.addEventListener('change', update);
         // also allow clicking the whole card to toggle
         it.addEventListener('click', function (e) {
-            if (e.target.tagName !== 'INPUT') {
-                var box = it.querySelector('input');
-                box.checked = !box.checked;
-                update();
-            }
+            // The label already toggles the checkbox natively; toggling again here cancelled it out.
+            if (e.target.tagName === 'INPUT' || e.target.closest('label')) return;
+            var box = it.querySelector('input');
+            box.checked = !box.checked;
+            update();
         });
     });
 })();
