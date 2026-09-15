@@ -45,6 +45,9 @@ chg-*.md
 /*.sh
 /*.bat
 
+# Ad-hoc one-off scripts (root-level, already applied to content)
+/_*.js
+
 # Markdown docs (not website files)
 automation-workflows-medical-tourism.md
 claude-skills-resources.md
