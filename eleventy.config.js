@@ -20,6 +20,26 @@ module.exports = function(eleventyConfig) {
     return '+86-' + p;
   });
 
+  // Group hospitals by city for the build-time directory index.
+  // /hospitals.html renders its grid client-side from api/v1/hospitals.json, so the
+  // served HTML contained no <a href> to any hospital page — Google could only find
+  // them via the sitemap and left 27 of 56 stuck at "Discovered - currently not indexed".
+  eleventyConfig.addFilter('hospitalsByCity', function(hospitals) {
+    if (!Array.isArray(hospitals)) return [];
+    const byCity = new Map();
+    for (const h of hospitals) {
+      const city = h.city || 'Other';
+      if (!byCity.has(city)) byCity.set(city, []);
+      byCity.get(city).push(h);
+    }
+    return [...byCity.entries()]
+      .map(([city, items]) => ({
+        city,
+        items: items.slice().sort((a, b) => a.name.localeCompare(b.name)),
+      }))
+      .sort((a, b) => a.city.localeCompare(b.city));
+  });
+
   // Passthrough copy: static assets that don't need processing
   eleventyConfig.addPassthroughCopy("styles.css");
   eleventyConfig.addPassthroughCopy("ga4-events.js");
