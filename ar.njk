@@ -9,6 +9,7 @@ ogTitle: "السياحة الطبية في الصين 2026 — علاج CAR-T و
 ogDescription: "علاج CAR-T من $30,000. أورام، جراحة قلب، عظام في أفضل مستشفيات الصين. دعم بالعربية. استشارة مجانية."
 pageStyle: |
   body { background: #f8f9fa; color: #243044; padding-top: 70px; direction: rtl; text-align: right; }
+  .navbar, .nav-overlay { direction: ltr; }
           .ar-shell { max-width: 860px; margin: 0 auto; padding: 40px 20px 60px; }
           .ar-hero { background: linear-gradient(135deg,#17345f,#2a5298); color:#fff; border-radius:22px; padding:50px 36px; text-align:center; margin-bottom:30px; }
           .ar-hero h1 { color:#fff; font-size:clamp(1.6rem,3vw,2.2rem); line-height:1.5; margin-bottom:14px; }
@@ -45,12 +46,7 @@ extraHead: |
 </style>
 </head>
 <body>
-<nav style="background:rgba(26,58,107,.96);position:fixed;top:0;left:0;right:0;z-index:1000;padding:0 20px;display:flex;align-items:center;height:70px;justify-content:space-between;max-width:1200px;margin:0 auto;direction:ltr;">
-    <a href="/" style="color:#fff;font-size:1.1rem;font-weight:700;text-decoration:none;">China Hospitals Guide</a>
-    <a href="/contact-new.html" style="background:#ff6b6b;color:#fff;padding:10px 22px;border-radius:25px;text-decoration:none;font-weight:700;">استشارة مجانية</a>
-    <div class="nav-lang"><a href="/index.html" class="lang-flag">EN</a><a href="/ru.html" class="lang-flag">RU</a><a href="/ar.html" class="lang-flag active">AR</a><a href="/id.html" class="lang-flag">ID</a><a href="/zh/hospital-rankings-2026.html" class="lang-flag">ZH</a><a href="/sg.html" class="lang-flag">SG</a></div>
-</nav>
-
+{% include "nav.njk" %}
 <main class="ar-shell">
     <div class="ar-hero">
         <h1>العلاج في الصين: CAR-T بتكلفة أقل بخمس مرات، أفضل مراكز الأورام والقلب</h1>
