@@ -109,6 +109,12 @@ module.exports = function(eleventyConfig) {
     }
   });
 
+  // Markdown at the repo root is internal documentation, never site content.
+  // Rendered, BLOG-PUBLISHING-SOP.md published the blog publishing SOP in full at
+  // /BLOG-PUBLISHING-SOP/ and MARIA-RIOS-PIPELINE-CHECKLIST.md published a client
+  // pipeline checklist; a noindex tag was the only thing hiding them.
+  glob.sync("*.md").forEach(file => eleventyConfig.ignores.add(file));
+
   return {
     dir: {
       input: ".",
