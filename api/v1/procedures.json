@@ -1,87 +1,78 @@
 {
   "meta": {
-    "note": "Procedure-level data (batch 1). Prices are reference ranges from published 2026 cost comparisons; final quotes come from each hospital. hospital_id references /api/v1/hospitals.json.",
-    "last_updated": "2026-08-19",
-    "version": 1
+    "note": "Procedure-level data (batch 2). Prices are reference ranges from published 2026 cost comparisons; final quotes come from each hospital. hospital_id references /api/v1/hospitals.json. `link` points to the full detail page for that procedure.",
+    "last_updated": "2026-09-18",
+    "version": 2
   },
   "procedures": [
     {
-      "id": "knee-replacement",
-      "name": "Knee Replacement",
-      "category": "orthopedics",
-      "description": "Total knee arthroplasty (TKA). China's top joint surgery centers perform high volumes with imported implant brands at a fraction of US pricing.",
-      "recovery_time": "7-10 day hospital stay; several weeks of assisted recovery",
-      "overall_price_range_usd": { "low": 8000, "high": 12000 },
+      "id": "cancer-treatment",
+      "name": "Cancer Treatment (Comprehensive)",
+      "category": "oncology",
+      "description": "Surgery, radiotherapy, chemotherapy, targeted therapy and immunotherapy delivered as a coordinated plan. Cost varies widely by cancer type and stage.",
+      "recovery_time": "Depends on protocol — surgery 5-14 day stay; systemic therapy is given in cycles",
+      "overall_price_range_usd": {
+        "low": 8000,
+        "high": 20000
+      },
+      "usComparison": "$50,000–$100,000+ in the US",
+      "link": "/treatments/cancer-treatment/",
       "hospitals": [
         {
-          "hospital_id": "jishuitan-hospital",
-          "department": "Joint Surgery",
-          "price_range_usd": { "low": 8000, "high": 12000 },
-          "notes": "Leading joint replacement center; price depends on implant brand (domestic vs import)",
-          "source": "Published 2026 cost comparison; hospital official site",
-          "last_verified": "2026-08-19"
-        },
-        {
-          "hospital_id": "shanghai-sixth-hospital",
-          "department": "Orthopedics",
-          "price_range_usd": { "low": 8000, "high": 12000 },
-          "notes": "Major orthopedics volume center in Shanghai",
+          "hospital_id": "cams-cancer-hospital",
+          "department": "Oncology",
           "source": "Published 2026 cost comparison",
-          "last_verified": "2026-08-19"
+          "last_verified": "2026-09-18"
         },
         {
-          "hospital_id": "huashan-hospital",
-          "department": "Orthopedics / Sports Medicine",
-          "notes": "Referral hospital; final cost hospital-specific",
-          "source": "Hospital official site",
-          "last_verified": "2026-08-19"
+          "hospital_id": "sun-yat-sen-cancer-hospital",
+          "department": "Oncology",
+          "source": "Published 2026 cost comparison",
+          "last_verified": "2026-09-18"
         },
         {
-          "hospital_id": "tangdu-hospital",
-          "department": "Orthopedics",
-          "notes": "Referral hospital; final cost hospital-specific",
-          "source": "Hospital official site",
-          "last_verified": "2026-08-19"
+          "hospital_id": "fudan-university-shanghai-cancer-center",
+          "department": "Oncology",
+          "source": "Published 2026 cost comparison",
+          "last_verified": "2026-09-18"
         }
       ]
     },
     {
-      "id": "hip-replacement",
-      "name": "Hip Replacement",
-      "category": "orthopedics",
-      "description": "Total hip arthroplasty (THA). Implant brand choice and hospital level are the main cost drivers.",
-      "recovery_time": "7-10 day hospital stay; several weeks of assisted recovery",
-      "overall_price_range_usd": { "low": 8000, "high": 12000 },
+      "id": "car-t-therapy",
+      "name": "CAR-T Cell Therapy",
+      "category": "oncology",
+      "description": "China's NMPA has approved seven CAR-T therapies — more than the US or Europe — including the world's first CAR-T approved for a solid tumour. Quoted per case: drug plus the full treatment course.",
+      "recovery_time": "Leukapheresis, 2-4 week manufacturing, then 10-14 days inpatient monitoring",
+      "overall_price_range_usd": {
+        "low": 89000,
+        "high": 170000
+      },
+      "link": "/car-t-therapy.html",
       "hospitals": [
         {
-          "hospital_id": "jishuitan-hospital",
-          "department": "Joint Surgery",
-          "price_range_usd": { "low": 8000, "high": 12000 },
-          "notes": "Leading hip replacement center in China",
-          "source": "Published 2026 cost comparison; hospital official site",
-          "last_verified": "2026-08-19"
+          "hospital_id": "cams-cancer-hospital",
+          "department": "Oncology",
+          "source": "Conditions dataset 2026",
+          "last_verified": "2026-09-18"
         },
         {
-          "hospital_id": "shanghai-sixth-hospital",
-          "department": "Orthopedics",
-          "price_range_usd": { "low": 8000, "high": 12000 },
-          "notes": "High-volume orthopedics center",
-          "source": "Published 2026 cost comparison",
-          "last_verified": "2026-08-19"
+          "hospital_id": "fudan-university-shanghai-cancer-center",
+          "department": "Oncology",
+          "source": "Conditions dataset 2026",
+          "last_verified": "2026-09-18"
         },
         {
-          "hospital_id": "pku-third-hospital",
-          "department": "Orthopedics",
-          "notes": "Referral hospital; final cost hospital-specific",
-          "source": "Hospital official site",
-          "last_verified": "2026-08-19"
+          "hospital_id": "pku-peoples-hospital",
+          "department": "Haematology",
+          "source": "Conditions dataset 2026",
+          "last_verified": "2026-09-18"
         },
         {
-          "hospital_id": "west-china-hospital",
-          "department": "Orthopedics",
-          "notes": "Leading center in western China",
-          "source": "Hospital official site",
-          "last_verified": "2026-08-19"
+          "hospital_id": "west-china-lecheng-hospital",
+          "department": "Oncology",
+          "source": "Conditions dataset 2026",
+          "last_verified": "2026-09-18"
         }
       ]
     },
@@ -91,37 +82,195 @@
       "category": "cardiology",
       "description": "Open-heart bypass surgery. China's top cardiac centers perform among the highest CABG volumes worldwide.",
       "recovery_time": "7-10 day hospital stay; 6-8 weeks full recovery",
-      "overall_price_range_usd": { "low": 12000, "high": 18000 },
+      "overall_price_range_usd": {
+        "low": 12000,
+        "high": 18000
+      },
+      "usComparison": "$100,000–$150,000 in the US",
+      "link": "/treatments/coronary-artery-bypass/",
       "hospitals": [
         {
           "hospital_id": "fuwai-hospital",
           "department": "Cardiovascular Surgery",
-          "price_range_usd": { "low": 12000, "high": 18000 },
+          "price_range_usd": {
+            "low": 12000,
+            "high": 18000
+          },
           "notes": "China's #1 cardiology hospital; ~18,000+ cardiac surgeries per year",
           "source": "Published 2026 cost comparison; hospital official site",
-          "last_verified": "2026-08-19"
+          "last_verified": "2026-09-18"
         },
         {
           "hospital_id": "anzhen-hospital",
           "department": "Cardiovascular Surgery",
-          "price_range_usd": { "low": 12000, "high": 18000 },
+          "price_range_usd": {
+            "low": 12000,
+            "high": 18000
+          },
           "notes": "Top-tier cardiac surgery center in Beijing",
           "source": "Published 2026 cost comparison",
-          "last_verified": "2026-08-19"
+          "last_verified": "2026-09-18"
         },
         {
           "hospital_id": "zhongshan-hospital-shanghai",
           "department": "Cardiovascular Surgery",
           "notes": "Referral hospital; final cost hospital-specific",
           "source": "Hospital official site",
-          "last_verified": "2026-08-19"
+          "last_verified": "2026-09-18"
+        }
+      ]
+    },
+    {
+      "id": "heart-valve-replacement",
+      "name": "Heart Valve Replacement / TAVR",
+      "category": "cardiology",
+      "description": "Valve repair, mechanical or biological replacement, and transcatheter (TAVR) approaches at national cardiovascular centers.",
+      "recovery_time": "5-10 day hospital stay; TAVR typically shorter than open surgery",
+      "overall_price_range_usd": {
+        "low": 10000,
+        "high": 15000
+      },
+      "usComparison": "$80,000–$120,000 in the US",
+      "link": "/treatments/heart-valve-replacement/",
+      "hospitals": [
+        {
+          "hospital_id": "fuwai-hospital",
+          "department": "Cardiovascular Surgery",
+          "source": "Conditions dataset 2026",
+          "last_verified": "2026-09-18"
         },
         {
-          "hospital_id": "ruijin-hospital",
+          "hospital_id": "anzhen-hospital",
           "department": "Cardiovascular Surgery",
+          "source": "Conditions dataset 2026",
+          "last_verified": "2026-09-18"
+        },
+        {
+          "hospital_id": "zhongshan-hospital-shanghai",
+          "department": "Cardiovascular Surgery",
+          "source": "Conditions dataset 2026",
+          "last_verified": "2026-09-18"
+        }
+      ]
+    },
+    {
+      "id": "heart-failure-devices",
+      "name": "Heart Failure Devices (CRT / ICD / LVAD)",
+      "category": "cardiology",
+      "description": "Device and mechanical-support therapy for advanced heart failure — cardiac resynchronization (CRT-D), defibrillators (ICD), contractility modulation (CCM) and left ventricular assist devices (LVAD). Priced per device.",
+      "recovery_time": "CRT/ICD: 2-4 day stay. LVAD: 2-4 weeks inpatient.",
+      "overall_price_range_usd": {
+        "low": 13750,
+        "high": 123600
+      },
+      "usComparison": "LVAD and CRT-D cost 2-3x more in the US",
+      "link": "/heart-failure.html",
+      "hospitals": [
+        {
+          "hospital_id": "fuwai-hospital",
+          "department": "Cardiology / Heart Failure",
+          "source": "Conditions dataset 2026 (CNY list prices converted)",
+          "last_verified": "2026-09-18"
+        },
+        {
+          "hospital_id": "anzhen-hospital",
+          "department": "Cardiology / Heart Failure",
+          "source": "Conditions dataset 2026",
+          "last_verified": "2026-09-18"
+        },
+        {
+          "hospital_id": "fosun-chancheng-hospital",
+          "department": "Cardiology / International Center",
+          "source": "Conditions dataset 2026",
+          "last_verified": "2026-09-18"
+        }
+      ]
+    },
+    {
+      "id": "knee-replacement",
+      "name": "Knee Replacement",
+      "category": "orthopedics",
+      "description": "Total knee arthroplasty (TKA). China's top joint surgery centers perform high volumes with imported implant brands at a fraction of US pricing.",
+      "recovery_time": "7-10 day hospital stay; several weeks of assisted recovery",
+      "overall_price_range_usd": {
+        "low": 8000,
+        "high": 12000
+      },
+      "usComparison": "$35,000–$50,000 in the US",
+      "link": "/treatments/knee-replacement/",
+      "hospitals": [
+        {
+          "hospital_id": "jishuitan-hospital",
+          "department": "Joint Surgery",
+          "price_range_usd": {
+            "low": 8000,
+            "high": 12000
+          },
+          "notes": "Leading joint replacement center; price depends on implant brand (domestic vs import)",
+          "source": "Published 2026 cost comparison; hospital official site",
+          "last_verified": "2026-09-18"
+        },
+        {
+          "hospital_id": "shanghai-sixth-hospital",
+          "department": "Orthopedics",
+          "price_range_usd": {
+            "low": 8000,
+            "high": 12000
+          },
+          "notes": "Major orthopedics volume center in Shanghai",
+          "source": "Published 2026 cost comparison",
+          "last_verified": "2026-09-18"
+        },
+        {
+          "hospital_id": "pku-third-hospital",
+          "department": "Orthopedics",
           "notes": "Referral hospital; final cost hospital-specific",
           "source": "Hospital official site",
-          "last_verified": "2026-08-19"
+          "last_verified": "2026-09-18"
+        }
+      ]
+    },
+    {
+      "id": "hip-replacement",
+      "name": "Hip Replacement",
+      "category": "orthopedics",
+      "description": "Total hip arthroplasty (THA). Implant brand choice and hospital level are the main cost drivers.",
+      "recovery_time": "7-10 day hospital stay; several weeks of assisted recovery",
+      "overall_price_range_usd": {
+        "low": 8000,
+        "high": 12000
+      },
+      "usComparison": "$35,000–$50,000 in the US",
+      "link": "/treatments/hip-replacement/",
+      "hospitals": [
+        {
+          "hospital_id": "jishuitan-hospital",
+          "department": "Joint Surgery",
+          "price_range_usd": {
+            "low": 8000,
+            "high": 12000
+          },
+          "notes": "Leading hip replacement center in China",
+          "source": "Published 2026 cost comparison; hospital official site",
+          "last_verified": "2026-09-18"
+        },
+        {
+          "hospital_id": "shanghai-sixth-hospital",
+          "department": "Orthopedics",
+          "price_range_usd": {
+            "low": 8000,
+            "high": 12000
+          },
+          "notes": "High-volume orthopedics center",
+          "source": "Published 2026 cost comparison",
+          "last_verified": "2026-09-18"
+        },
+        {
+          "hospital_id": "west-china-hospital",
+          "department": "Orthopedics",
+          "notes": "Leading center in western China",
+          "source": "Hospital official site",
+          "last_verified": "2026-09-18"
         }
       ]
     },
@@ -131,37 +280,41 @@
       "category": "orthopedics",
       "description": "Includes lumbar fusion, decompression and spinal deformity surgery. Cost varies widely by procedure type and implant hardware.",
       "recovery_time": "5-10 day hospital stay; recovery depends on procedure",
-      "overall_price_range_usd": { "low": 10000, "high": 18000 },
+      "overall_price_range_usd": {
+        "low": 10000,
+        "high": 18000
+      },
+      "usComparison": "$40,000–$80,000 in the US",
+      "link": "/treatments/spine-surgery/",
       "hospitals": [
         {
           "hospital_id": "jishuitan-hospital",
           "department": "Spine Surgery",
-          "price_range_usd": { "low": 10000, "high": 18000 },
+          "price_range_usd": {
+            "low": 10000,
+            "high": 18000
+          },
           "notes": "Nationally recognized spine center",
           "source": "Published 2026 cost comparison; hospital official site",
-          "last_verified": "2026-08-19"
+          "last_verified": "2026-09-18"
         },
         {
           "hospital_id": "pku-third-hospital",
           "department": "Orthopedics / Spine",
-          "price_range_usd": { "low": 10000, "high": 18000 },
+          "price_range_usd": {
+            "low": 10000,
+            "high": 18000
+          },
           "notes": "Referral spine surgery center",
           "source": "Published 2026 cost comparison",
-          "last_verified": "2026-08-19"
+          "last_verified": "2026-09-18"
         },
         {
           "hospital_id": "shanghai-changhai-hospital",
           "department": "Orthopedics / Spine",
           "notes": "Referral hospital; final cost hospital-specific",
           "source": "Hospital official site",
-          "last_verified": "2026-08-19"
-        },
-        {
-          "hospital_id": "west-china-hospital",
-          "department": "Orthopedics / Spine",
-          "notes": "Referral hospital; final cost hospital-specific",
-          "source": "Hospital official site",
-          "last_verified": "2026-08-19"
+          "last_verified": "2026-09-18"
         }
       ]
     },
@@ -171,38 +324,45 @@
       "category": "ophthalmology",
       "description": "Laser vision correction. Prices reflect the hospital level, laser platform and refractive surgeon experience.",
       "recovery_time": "Same-day outpatient procedure; vision stabilizes over 1-3 months",
-      "overall_price_range_usd": { "low": 1200, "high": 2800 },
+      "overall_price_range_usd": {
+        "low": 1200,
+        "high": 2800
+      },
+      "usComparison": "$4,000+ in the US",
+      "link": "/treatments/lasik/",
       "hospitals": [
         {
           "hospital_id": "beijing-tongren-hospital",
           "department": "Ophthalmology / Refractive Surgery",
-          "price_range_usd": { "low": 1200, "high": 2800 },
+          "price_range_usd": {
+            "low": 1200,
+            "high": 2800
+          },
           "notes": "Top-ranked ophthalmology hospital",
           "source": "Published 2026 LASIK cost guide",
-          "last_verified": "2026-08-19"
+          "last_verified": "2026-09-18"
         },
         {
           "hospital_id": "zhongshan-sixth-hospital",
           "department": "Ophthalmology / Refractive Surgery",
-          "price_range_usd": { "low": 1200, "high": 2800 },
+          "price_range_usd": {
+            "low": 1200,
+            "high": 2800
+          },
           "notes": "Zhongshan Ophthalmic Center — 20,000+ refractive surgeries per year",
           "source": "Published 2026 LASIK cost guide",
-          "last_verified": "2026-08-19"
+          "last_verified": "2026-09-18"
         },
         {
           "hospital_id": "tianjin-eye-hospital",
           "department": "Ophthalmology",
-          "price_range_usd": { "low": 1200, "high": 2800 },
+          "price_range_usd": {
+            "low": 1200,
+            "high": 2800
+          },
           "notes": "Specialist eye hospital in Tianjin",
           "source": "Published 2026 LASIK cost guide",
-          "last_verified": "2026-08-19"
-        },
-        {
-          "hospital_id": "aier-eye-hospital",
-          "department": "Refractive Surgery",
-          "notes": "Private eye care group; final cost depends on procedure type",
-          "source": "Hospital official site",
-          "last_verified": "2026-08-19"
+          "last_verified": "2026-09-18"
         }
       ]
     },
@@ -212,31 +372,247 @@
       "category": "ophthalmology",
       "description": "Phacoemulsification with intraocular lens implant. Lens type (monofocal vs multifocal/toric) drives the final price.",
       "recovery_time": "Same-day or 1-2 day outpatient procedure; quick visual recovery",
-      "overall_price_range_usd": { "low": 800, "high": 1500 },
+      "overall_price_range_usd": {
+        "low": 800,
+        "high": 1500
+      },
+      "usComparison": "$3,000–$6,000 per eye in the US",
+      "link": "/treatments/cataract-surgery/",
       "hospitals": [
         {
           "hospital_id": "beijing-tongren-hospital",
           "department": "Ophthalmology",
-          "price_range_usd": { "low": 800, "high": 1500 },
+          "price_range_usd": {
+            "low": 800,
+            "high": 1500
+          },
           "notes": "Base cataract surgery price; premium IOLs cost more",
           "source": "Published 2026 cost comparison",
-          "last_verified": "2026-08-19"
+          "last_verified": "2026-09-18"
         },
         {
           "hospital_id": "zhongshan-sixth-hospital",
           "department": "Ophthalmology",
-          "price_range_usd": { "low": 800, "high": 1500 },
+          "price_range_usd": {
+            "low": 800,
+            "high": 1500
+          },
           "notes": "High-volume cataract center",
           "source": "Published 2026 cost comparison",
-          "last_verified": "2026-08-19"
+          "last_verified": "2026-09-18"
         },
         {
           "hospital_id": "tianjin-eye-hospital",
           "department": "Ophthalmology",
-          "price_range_usd": { "low": 800, "high": 1500 },
+          "price_range_usd": {
+            "low": 800,
+            "high": 1500
+          },
           "notes": "Specialist eye hospital",
           "source": "Published 2026 cost comparison",
-          "last_verified": "2026-08-19"
+          "last_verified": "2026-09-18"
+        }
+      ]
+    },
+    {
+      "id": "ivf",
+      "name": "IVF Cycle",
+      "category": "obgyn",
+      "description": "Full IVF/ICSI cycle including medication. Peking University Third Hospital performs among the highest IVF volumes in Asia. Final cost depends on protocol.",
+      "recovery_time": "Outpatient cycle; roughly 4-6 weeks per attempt",
+      "overall_price_range_usd": {
+        "low": 3000,
+        "high": 8000
+      },
+      "usComparison": "$15,000–$25,000 per cycle in the US",
+      "link": "/treatments/ivf/",
+      "hospitals": [
+        {
+          "hospital_id": "pku-third-hospital",
+          "department": "Reproductive Medicine",
+          "price_range_usd": {
+            "low": 3000,
+            "high": 8000
+          },
+          "notes": "China's #1 fertility center",
+          "source": "Conditions dataset 2026",
+          "last_verified": "2026-09-18"
+        },
+        {
+          "hospital_id": "fudan-womens-hospital",
+          "department": "Reproductive Medicine",
+          "source": "Conditions dataset 2026",
+          "last_verified": "2026-09-18"
+        },
+        {
+          "hospital_id": "zhejiang-womens-hospital",
+          "department": "Reproductive Medicine",
+          "source": "Conditions dataset 2026",
+          "last_verified": "2026-09-18"
+        }
+      ]
+    },
+    {
+      "id": "dental-implants",
+      "name": "Dental Implants",
+      "category": "dental",
+      "description": "Implant placement, abutment and crown, with imported implant brands. Price depends on implant brand and whether bone grafting is needed.",
+      "recovery_time": "Implant placement is a day procedure; full restoration over 3-6 months",
+      "overall_price_range_usd": {
+        "low": 800,
+        "high": 2500
+      },
+      "usComparison": "$3,000–$6,000 per implant in the US",
+      "link": "/treatments/dental-implants/",
+      "hospitals": [
+        {
+          "hospital_id": "shanghai-dental-hospital",
+          "department": "Oral Implantology",
+          "source": "Conditions dataset 2026",
+          "last_verified": "2026-09-18"
+        },
+        {
+          "hospital_id": "guangzhou-dental-hospital",
+          "department": "Oral Implantology",
+          "source": "Conditions dataset 2026",
+          "last_verified": "2026-09-18"
+        }
+      ]
+    },
+    {
+      "id": "all-on-4",
+      "name": "All-on-4 Full-Arch Implants",
+      "category": "dental",
+      "description": "Full-arch restoration on four implants, per arch. Uses Nobel Biocare, Straumann and other imported systems at JCI-accredited hospitals.",
+      "recovery_time": "Surgery is a day procedure; temporary teeth fitted within days, final prosthesis after healing",
+      "overall_price_range_usd": {
+        "low": 8000,
+        "high": 15000
+      },
+      "usComparison": "$24,000–$50,000 per arch in the US",
+      "link": "/treatments/all-on-4/",
+      "hospitals": [
+        {
+          "hospital_id": "shanghai-dental-hospital",
+          "department": "Oral Implantology",
+          "source": "Published 2026 All-on-4 cost breakdown",
+          "last_verified": "2026-09-18"
+        },
+        {
+          "hospital_id": "guangzhou-dental-hospital",
+          "department": "Oral Implantology",
+          "source": "Published 2026 All-on-4 cost breakdown",
+          "last_verified": "2026-09-18"
+        }
+      ]
+    },
+    {
+      "id": "brain-tumor-surgery",
+      "name": "Brain Tumor Surgery",
+      "category": "neurosurgery",
+      "description": "Microsurgical resection, awake craniotomy and intraoperative MRI at China's highest-volume neurosurgery centers. Priced per case by tumour location and complexity.",
+      "recovery_time": "7-14 day hospital stay depending on approach and tumour site",
+      "overall_price_range_usd": null,
+      "priceNote": "case-specific — quote after case review",
+      "link": "/treatments/brain-tumor-surgery/",
+      "hospitals": [
+        {
+          "hospital_id": "tiantan-hospital",
+          "department": "Neurosurgery",
+          "notes": "China's #1 neurosurgery center",
+          "source": "Hospital official site",
+          "last_verified": "2026-09-18"
+        },
+        {
+          "hospital_id": "huashan-hospital",
+          "department": "Neurosurgery",
+          "notes": "#2 nationally; strong in skull-base and vascular cases",
+          "source": "Hospital official site",
+          "last_verified": "2026-09-18"
+        }
+      ]
+    },
+    {
+      "id": "deep-brain-stimulation",
+      "name": "Deep Brain Stimulation (DBS)",
+      "category": "neurosurgery",
+      "description": "Device plus implantation surgery for Parkinson's disease and other movement disorders. Priced per case; China's top centers perform high DBS volumes.",
+      "recovery_time": "Device implantation over 1-2 sessions; programming continues as an outpatient",
+      "overall_price_range_usd": null,
+      "priceNote": "case-specific — device plus surgery, quote after review",
+      "link": "/treatments/deep-brain-stimulation/",
+      "hospitals": [
+        {
+          "hospital_id": "tiantan-hospital",
+          "department": "Functional Neurosurgery",
+          "source": "Conditions dataset 2026",
+          "last_verified": "2026-09-18"
+        },
+        {
+          "hospital_id": "huashan-hospital",
+          "department": "Functional Neurosurgery",
+          "source": "Conditions dataset 2026",
+          "last_verified": "2026-09-18"
+        },
+        {
+          "hospital_id": "xijing-hospital",
+          "department": "Neurosurgery",
+          "source": "Conditions dataset 2026",
+          "last_verified": "2026-09-18"
+        }
+      ]
+    },
+    {
+      "id": "plastic-surgery",
+      "name": "Plastic & Aesthetic Surgery",
+      "category": "plastic",
+      "description": "Facial procedures typically run $1,500–$3,000 per area; body contouring is priced per procedure. Compare against Korea and the US before deciding.",
+      "recovery_time": "Varies from a few days (injectables, eyelid) to 2-3 weeks (body contouring)",
+      "overall_price_range_usd": {
+        "low": 1500,
+        "high": 3000
+      },
+      "usComparison": "60–65% lower than US prices",
+      "link": "/treatments/plastic-surgery/",
+      "hospitals": [
+        {
+          "hospital_id": "shanghai-ninth-hospital",
+          "department": "Plastic & Reconstructive Surgery",
+          "source": "Published 2026 plastic surgery guide",
+          "last_verified": "2026-09-18"
+        },
+        {
+          "hospital_id": "pumch",
+          "department": "Plastic Surgery",
+          "source": "Published 2026 plastic surgery guide",
+          "last_verified": "2026-09-18"
+        }
+      ]
+    },
+    {
+      "id": "hair-transplant",
+      "name": "Hair Transplant",
+      "category": "plastic",
+      "description": "FUE procedures priced per graft count. China sits between Turkey and Western pricing, with hospital-grade surgical standards. Compare all three markets first.",
+      "recovery_time": "Day procedure; donor area heals in about a week, growth visible from 3-4 months",
+      "overall_price_range_usd": {
+        "low": 2400,
+        "high": 5400
+      },
+      "usComparison": "$15,000–$24,000 in the US",
+      "link": "/treatments/hair-transplant/",
+      "hospitals": [
+        {
+          "hospital_id": "pumch",
+          "department": "Plastic Surgery",
+          "source": "Published 2026 hair transplant comparison",
+          "last_verified": "2026-09-18"
+        },
+        {
+          "hospital_id": "shanghai-ninth-hospital",
+          "department": "Plastic & Reconstructive Surgery",
+          "source": "Published 2026 hair transplant comparison",
+          "last_verified": "2026-09-18"
         }
       ]
     }

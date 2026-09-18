@@ -20,6 +20,12 @@ const byId = {};
 hospitals.forEach(function (h) { byId[h.id] = h; });
 procedures.forEach(function (p) {
   p.priceText = fmt(p.overall_price_range_usd);
+  // Display fallback for procedures priced per case (no published range) — used in
+  // templates that print a price inline, so they never render a dangling "from ".
+  p.priceDisplay = p.priceText || p.priceNote || 'Priced per case';
+  p.href = p.link || '';
+  p.usNote = p.usComparison || '';
+  p.costNote = p.priceNote || '';
   p.hospitalObjects = (p.hospitals || []).map(function (hp) {
     const h = byId[hp.hospital_id];
     if (!h) return null;

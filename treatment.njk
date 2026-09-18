@@ -7,7 +7,7 @@ pagination:
 permalink: "treatments/{{ procedure.id }}/index.html"
 eleventyComputed:
   title: "{{ procedure.seoTitle }} | Hospitals, Recovery & Prices"
-  description: "{{ procedure.name }} in China — from {{ procedure.priceText }}. Top hospitals, recovery time and costs for international patients. Verified Grade 3A hospitals."
+  description: "{{ procedure.name }} in China — {{ procedure.priceDisplay }}. Top hospitals, recovery time and costs for international patients. Verified Grade 3A hospitals."
   canonical: "https://chinahospitalsguide.com/treatments/{{ procedure.id }}/"
 pageStyle: |
   body { background: #f8f9fa; color: #243044; }
@@ -91,7 +91,7 @@ pageStyle: |
         }{%- if not loop.last %},{% endif %}
         {%- endfor %}
       ]
-    },
+    }{% if procedure.faq.length %},
     {
       "@type": "FAQPage",
       "mainEntity": [
@@ -99,7 +99,7 @@ pageStyle: |
         { "@type": "Question", "name": {{ f.q | dump | safe }}, "acceptedAnswer": { "@type": "Answer", "text": {{ f.a | dump | safe }} } }{%- if not loop.last %},{% endif %}
         {%- endfor %}
       ]
-    }
+    }{% endif %}
   ]
 }
 </script>
@@ -107,7 +107,7 @@ pageStyle: |
 <header class="sp-hero">
     <h1>{{ procedure.name }} in China</h1>
     <p>{{ procedure.description }}</p>
-    <span class="sp-price">from {{ procedure.priceText }} · {{ procedure.recovery_time }}</span>
+    <span class="sp-price">{{ procedure.priceDisplay }} · {{ procedure.recovery_time }}</span>
 </header>
 
 <div class="sp-crumb"><a href="/">Home</a> › <a href="/hospitals.html">Hospitals</a> › <a href="/treatments/{{ procedure.id }}/">{{ procedure.name }}</a></div>
@@ -116,7 +116,7 @@ pageStyle: |
     <section class="cd-sec">
         <h2>About {{ procedure.name }}</h2>
         <p>{{ procedure.description }}</p>
-        <p style="margin-top:10px;color:#2e7d32;font-weight:600;">Typical cost in China: {{ procedure.priceText }}</p>
+        <p style="margin-top:10px;color:#2e7d32;font-weight:600;">Typical cost in China: {{ procedure.priceDisplay }}</p>
     </section>
 
     <section class="cd-sec">

@@ -1,94 +1,98 @@
 ---
 permalink: procedures.html
 layout: base.njk
-title: "Procedure Prices in China 2026: Knee, Hip, Heart Bypass, Spine, LASIK & Cataract"
-description: "Procedure-level costs in China: knee replacement $8K-12K, heart bypass $12K-18K, spine $10K-18K, LASIK $1.2K-2.8K, cataract $0.8K-1.5K. Top hospitals, departments, and how to get matched."
+title: "Procedure Prices in China 2026: Cancer, CAR-T, Heart, Joint, IVF, Dental & Eye Surgery"
+description: "Procedure-level costs in China: knee replacement $8K-12K, CABG $12K-18K, spine $10K-18K, LASIK $1.2K-2.8K, cataract $0.8K-1.5K, IVF $3K-8K, dental implants $800-2.5K. Cancer and CAR-T treatment quoted per case. Top hospitals and how to get matched."
 canonical: "https://chinahospitalsguide.com/procedures.html"
 ogTitle: "Procedure Prices in China 2026"
-ogDescription: "Knee $8-12K · Heart bypass $12-18K · LASIK $1.2-2.8K · Cataract $0.8-1.5K. Verified hospitals and how to get matched."
+ogDescription: "Know the procedure you need? Compare reference prices and top hospitals in China — cancer and CAR-T, cardiac, orthopedic, IVF, dental and eye surgery."
 activeNav: procedures
 pageStyle: |
-  .hero-home { padding: 120px 20px 70px; background: linear-gradient(135deg, rgba(12,24,48,0.9), rgba(30,60,114,0.9)), url('images/china-hospital.jpg') center/cover no-repeat; color: white; }
-  .hero-copy { max-width: 720px; }
-  .hero-kicker { display: inline-block; margin-bottom: 16px; padding: 8px 14px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.28); background: rgba(255,255,255,0.08); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.06em; }
-  .hero-home h1 { color: white; }
-  .hero-home p { color: rgba(255,255,255,0.88); max-width: 640px; }
+  body { background: #f8f9fa; color: #243044; }
+  .cx-hero { padding: 150px 20px 64px; background: linear-gradient(135deg, #17345f 0%, #2a5298 100%); color: white; text-align: center; }
+  .cx-hero h1 { color: white; font-size: clamp(1.7rem, 4vw, 2.6rem); line-height: 1.15; max-width: 880px; margin: 0 auto 16px; }
+  .cx-hero p { color: rgba(255,255,255,.88); max-width: 820px; margin: 0 auto 18px; font-size: 1.02rem; line-height: 1.7; }
+  .cx-hero .cx-cross { display: inline-block; margin-top: 6px; font-size: .9rem; color: rgba(255,255,255,.82); }
+  .cx-hero .cx-cross a { color: #ffd479; font-weight: 600; text-decoration: none; }
+  .cx-shell { max-width: 1120px; margin: 0 auto; padding: 44px 20px 64px; }
+  .cx-crumb { max-width: 1120px; margin: 0 auto; padding: 24px 20px 0; font-size: .86rem; color: #8893a0; }
+  .cx-crumb a { color: #2a5298; text-decoration: none; }
+  .cx-cat { color: #1e3c72; font-size: 1.4rem; margin: 44px 0 18px; }
+  .cx-cat:first-of-type { margin-top: 0; }
+  .cx-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(330px, 1fr)); gap: 20px; }
+  .cx-card { background: #fff; border-radius: 16px; padding: 24px; border: 1px solid rgba(30,60,114,.08); box-shadow: 0 10px 26px rgba(15,23,42,.06); display: flex; flex-direction: column; }
+  .cx-card .cname { color: #1e3c72; font-size: 1.12rem; font-weight: 700; margin-bottom: 10px; line-height: 1.3; }
+  .cx-card .cprice { font-size: 1.6rem; font-weight: 700; color: #1e3c72; line-height: 1.15; }
+  .cx-card .cprice.case { font-size: 1.05rem; font-weight: 600; color: #66758a; }
+  .cx-card .cus { display: inline-block; margin: 8px 0 0; background: #eef6ef; color: #2e7d32; border-radius: 999px; padding: 3px 10px; font-size: .74rem; font-weight: 700; align-self: flex-start; }
+  .cx-card .cdesc { color: #4a5568; font-size: .9rem; line-height: 1.6; margin: 12px 0 16px; }
+  .cx-card .chosp { border-top: 1px solid #edf1f7; padding-top: 12px; margin-bottom: 16px; }
+  .cx-card .chosp .chlabel { font-size: .72rem; font-weight: 700; color: #8893a0; text-transform: uppercase; letter-spacing: .05em; margin-bottom: 6px; }
+  .cx-card .chosp .chrow { font-size: .87rem; color: #3a4556; padding: 3px 0; }
+  .cx-card .chosp .chrow span { color: #8893a0; }
+  .cx-actions { margin-top: auto; display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+  .cx-btn { display: inline-block; background: #1e3c72; color: white; padding: 11px 18px; border-radius: 999px; text-decoration: none; font-size: .88rem; font-weight: 700; }
+  .cx-btn:hover { background: #2a5298; }
+  .cx-det { color: #2a5298; font-size: .88rem; font-weight: 700; text-decoration: none; }
+  .cx-cta { background: linear-gradient(135deg, #18345f 0%, #2a5298 100%); color: white; border-radius: 22px; padding: 44px 32px; text-align: center; margin-top: 48px; }
+  .cx-cta h2 { color: white; margin-bottom: 12px; }
+  .cx-cta p { color: rgba(255,255,255,.88); max-width: 620px; margin: 0 auto 22px; line-height: 1.7; }
+  .cx-cta a { display: inline-block; background: #ff6b6b; color: white; padding: 14px 32px; border-radius: 10px; text-decoration: none; font-weight: 700; }
+  @media (max-width: 768px) {
+      .cx-hero { padding: 128px 20px 52px; }
+  }
 ---
-<section class="hero-home">
-    <div class="hero-panel">
-        <div class="hero-copy">
-            <span class="hero-kicker">Procedure-level pricing</span>
-            <h1>What Procedures Cost in China</h1>
-            <p>Reference prices for common procedures at verified hospitals — knee &amp; hip replacement, heart bypass, spine surgery, LASIK and cataract. Prices are estimates; final quotes come from each hospital.</p>
+{% set treatmentLabels = {
+    "oncology": "Cancer Treatment / Oncology",
+    "cardiology": "Cardiac Surgery / Cardiology",
+    "orthopedics": "Orthopedics / Joint Replacement",
+    "ophthalmology": "Eye Surgery / LASIK",
+    "obgyn": "IVF / Fertility Treatment",
+    "dental": "Dental Treatment",
+    "neurosurgery": "Neurology / Neurosurgery",
+    "plastic": "Plastic / Cosmetic Surgery"
+} %}
+<header class="cx-hero">
+    <h1>What Procedures Cost in China</h1>
+    <p>If you already know which procedure you need, start here. Each card shows the typical total cost in China, how that compares abroad, and the hospitals that perform it — with a direct path to a case review.</p>
+    <span class="cx-cross">Still working out what you need? <a href="/conditions/">Browse conditions by diagnosis →</a></span>
+</header>
+
+<div class="cx-crumb"><a href="/">Home</a> › Procedures</div>
+
+<main class="cx-shell">
+    {% for group in procedureGroups %}
+    <h2 class="cx-cat">{{ group.label }}</h2>
+    <div class="cx-grid">
+        {% for p in group.items %}
+        {% set treat = treatmentLabels[p.category] or "Other" %}
+        <div class="cx-card">
+            <div class="cname">{{ p.name }}</div>
+            <div class="cprice{% if not p.priceText %} case{% endif %}">{{ p.priceDisplay }}</div>
+            {% if p.usNote %}<div class="cus">{{ p.usNote }}</div>{% endif %}
+            <div class="cdesc">{{ p.description }}</div>
+            {% if p.hospitalObjects | length %}
+            <div class="chosp">
+                <div class="chlabel">Representative hospitals</div>
+                {% for h in p.hospitalObjects %}{% if loop.index <= 3 %}
+                <div class="chrow">{{ h.name }} <span>· {{ h.city }}</span></div>
+                {% endif %}{% endfor %}
+            </div>
+            {% endif %}
+            <div class="cx-actions">
+                <a class="cx-btn" href="/contact-new.html?treatment={{ treat | urlencode }}">Get Matched →</a>
+                {% if p.href %}<a class="cx-det" href="{{ p.href }}">Full details →</a>{% endif %}
+            </div>
         </div>
+        {% endfor %}
     </div>
-</section>
+    {% endfor %}
 
-<main class="hospitals-section" style="max-width:1180px;margin:0 auto;padding:44px 20px 70px;">
-    <p style="max-width:820px;margin:0 auto 28px;text-align:center;color:#4b5565;font-size:0.97rem;">Each card shows the typical total cost in China (including hospital stay), the departments and hospitals that perform it, and a direct path to get matched for your case.</p>
-    <div class="procedure-grid" id="procedureGrid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:24px;">
-        <p style="grid-column:1/-1;text-align:center;color:#888;padding:2rem;">Loading procedures...</p>
+    <p style="margin:32px auto 0;text-align:center;font-size:0.86rem;color:#8893a0;">Prices are reference ranges for the total procedure in China, including hospital stay where applicable. They are not quotes — the final cost comes from the hospital after your records are reviewed.</p>
+
+    <div class="cx-cta">
+        <h2>Not sure which hospital is right for your case?</h2>
+        <p>Send us your diagnosis or the procedure you've been advised to have, plus any scans or reports you already have. We'll tell you which Grade 3A hospitals handle your case, what it realistically costs, and whether China is worth considering at all — free, and with no obligation to go further.</p>
+        <a href="/contact-new.html?source=procedures">Start Free Case Review →</a>
     </div>
-    <p id="procedureFoot" style="margin:28px auto 0;text-align:center;font-size:0.82rem;color:#8893a0;"></p>
-    <p style="margin:20px auto 0;text-align:center;font-size:0.95rem;color:#4b5565;">Looking for a condition rather than a single procedure? <a href="/conditions/" style="color:#1e3c72;font-weight:600;">Browse conditions we help with →</a></p>
 </main>
-
-<script>
-(function() {
-    var grid = document.getElementById('procedureGrid');
-    var foot = document.getElementById('procedureFoot');
-    var TREATMENT_MAP = {
-        orthopedics: 'Orthopedics / Joint Replacement',
-        cardiology: 'Cardiac Surgery / Cardiology',
-        ophthalmology: 'Eye Surgery / LASIK'
-    };
-    function fmtUsd(r) {
-        if (!r) return '';
-        var lo = r.low ? '$' + Number(r.low).toLocaleString() : '';
-        var hi = r.high ? '$' + Number(r.high).toLocaleString() : '';
-        if (lo && hi && hi !== lo) return lo + '–' + hi;
-        return hi || lo;
-    }
-    Promise.all([
-        fetch('/api/v1/procedures.json').then(function(r) { return r.json(); }),
-        fetch('/api/v1/hospitals.json').then(function(r) { return r.json(); })
-    ]).then(function(results) {
-        var procs = results[0].procedures || [];
-        var hospitals = results[1].hospitals || [];
-        var hmap = {};
-        hospitals.forEach(function(h) { hmap[h.id] = h; });
-        if (foot && results[0].meta && results[0].meta.last_updated) {
-            foot.textContent = 'Data last updated: ' + results[0].meta.last_updated + '. Prices are reference ranges; final quotes come from each hospital.';
-        }
-        if (!procs.length) { grid.innerHTML = '<p style="grid-column:1/-1;text-align:center;color:#888;">No procedure data yet.</p>'; return; }
-        grid.innerHTML = procs.map(function(p) {
-            var treat = TREATMENT_MAP[p.category] || p.category || '';
-            var hospHtml = (p.hospitals || []).map(function(hp) {
-                var h = hmap[hp.hospital_id];
-                var name = h ? h.name : hp.hospital_id;
-                var city = h ? (' · ' + h.city) : '';
-                var pr = hp.price_range_usd ? ' <strong style="color:#1e3c72;">' + fmtUsd(hp.price_range_usd) + '</strong>' : '';
-                var dept = hp.department ? ' <span style="color:#66758a;font-size:0.82rem;">(' + hp.department + ')</span>' : '';
-                return '<div style="padding:7px 0;border-bottom:1px solid #edf1f7;font-size:0.92rem;color:#3a4556;">' + name + dept + city + pr + '</div>';
-            }).join('');
-            return '<div class="procedure-card" style="background:#fff;border:1px solid #e0e7ef;border-radius:18px;padding:24px;box-shadow:0 8px 24px rgba(15,23,42,.07);display:flex;flex-direction:column;">' +
-                '<div style="display:flex;justify-content:space-between;align-items:flex-start;gap:10px;">' +
-                    '<h2 style="margin:0;color:#1e3c72;font-size:1.25rem;line-height:1.3;">' + p.name + '</h2>' +
-                    '<span style="background:#eef6ef;color:#2e7d32;border-radius:999px;padding:3px 10px;font-size:0.72rem;font-weight:700;white-space:nowrap;text-transform:capitalize;">' + p.category + '</span>' +
-                '</div>' +
-                '<div style="margin:14px 0 8px;font-size:1.7rem;font-weight:700;color:#1e3c72;">' + fmtUsd(p.overall_price_range_usd) + '</div>' +
-                '<div style="font-size:0.9rem;color:#4b5565;line-height:1.6;margin-bottom:10px;">' + (p.description || '') + '</div>' +
-                (p.recovery_time ? '<div style="font-size:0.85rem;color:#66758a;margin-bottom:12px;">⏱ ' + p.recovery_time + '</div>' : '') +
-                (hospHtml ? '<div style="font-size:0.8rem;font-weight:700;color:#1e3c72;text-transform:uppercase;letter-spacing:.04em;margin-bottom:2px;">Representative hospitals</div>' + hospHtml : '') +
-                '<div style="margin-top:auto;padding-top:16px;display:flex;gap:10px;flex-wrap:wrap;align-items:center;">' +
-                    '<a href="contact-new.html' + (treat ? '?treatment=' + encodeURIComponent(treat) : '') + '" class="cta-button" style="font-size:0.9rem;padding:11px 18px;">Get Matched →</a>' +
-                    '<a href="hospitals.html" class="cta-button alt" style="font-size:0.9rem;padding:11px 18px;">Browse Hospitals</a>' +
-                '</div>' +
-            '</div>';
-        }).join('');
-    }).catch(function(e) {
-        grid.innerHTML = '<p style="grid-column:1/-1;text-align:center;color:#c00;">Failed to load procedure data. Please try again later.</p>';
-        console.error(e);
-    });
-})();
-</script>
