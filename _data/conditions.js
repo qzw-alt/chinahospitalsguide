@@ -318,6 +318,46 @@ const conditions = [
       { q: 'How much does CRT or ICD cost in China?', a: 'Reference prices: CRT-D about $20,600, single-chamber ICD about $13,750, dual-chamber ICD about $16,400, CCM about $27,500 and LVAD about $123,600. CABG runs $12,000–$18,000 and valve replacement $10,000–$15,000. The final quote depends on the specific device and your clinical complexity.' },
       { q: 'How long do I wait for heart failure treatment in China?', a: 'Elective procedures are often scheduled within 2–4 weeks of a multidisciplinary review at China\'s national cardiovascular centers. Timing is confirmed per case after your records are assessed.' }
     ]
+  },
+  {
+    slug: 'cervical-cancer',
+    name: 'Cervical Cancer',
+    category: 'oncology',
+    overview: "Cervical cancer treatment in China is delivered at high volume, with radiotherapy and image-guided brachytherapy planned as a scheduled course rather than a waiting list. Early-stage disease is treated surgically; locally advanced disease follows the international standard of concurrent chemoradiation. International departments at China's national cancer centres review records and quote per case.",
+    diagnosis: "Staging uses pelvic examination, colposcopy and biopsy, followed by MRI of the pelvis and PET-CT to assess tumour size and parametrial or lymph-node involvement. The stage at diagnosis determines whether surgery or chemoradiation is the right first treatment.",
+    treatment: "Early-stage disease is treated with radical hysterectomy with lymph-node assessment, or fertility-sparing trachelectomy in selected cases. Locally advanced disease follows concurrent chemoradiation — external-beam radiotherapy with weekly cisplatin, followed by image-guided brachytherapy. Recurrent or metastatic disease is treated with systemic therapy: chemotherapy, bevacizumab, or immunotherapy.",
+    typicalCosts: [
+      { procedure: 'Staging workup (pelvic MRI + PET-CT)', price: '$1,200–$2,200', note: 'before a treatment plan is set' },
+      { procedure: 'Radical hysterectomy (early stage)', price: '$6,000–$12,000', note: 'vs $30,000+ in the US' },
+      { procedure: 'Concurrent chemoradiation + brachytherapy (full course)', price: '$12,000–$20,000', note: 'standard for locally advanced disease' },
+      { procedure: 'Systemic therapy (chemotherapy / bevacizumab / immunotherapy)', price: '$1,000–$3,000', note: 'per cycle; varies by regimen' }
+    ],
+    topHospitals: ['cams-cancer-hospital', 'sun-yat-sen-cancer-hospital', 'fudan-university-shanghai-cancer-center', 'tianjin-medical-university-cancer', 'fudan-womens-hospital'],
+    faq: [
+      { q: 'Which hospital is best for cervical cancer in China?', a: "The Cancer Hospital of CAMS (Beijing), Sun Yat-sen University Cancer Center (Guangzhou), Fudan University Shanghai Cancer Center and Tianjin Medical University Cancer Institute all provide external-beam radiotherapy and image-guided brachytherapy as part of a planned course. Fudan University Women's Hospital is a dedicated women's centre in Shanghai. A case review confirms which of these fits your stage and timing." },
+      { q: 'How much does cervical cancer treatment cost in China?', a: 'Reference ranges: staging workup $1,200–$2,200, radical hysterectomy $6,000–$12,000 for early-stage disease, and a full course of concurrent chemoradiation with brachytherapy $12,000–$20,000. Systemic therapy runs $1,000–$3,000 per cycle depending on the regimen. Your final quote depends on stage and the plan chosen.' },
+      { q: 'How quickly can cervical cancer treatment start in China?', a: 'Records can be reviewed before you travel, and treatment is typically scheduled within 2–4 weeks once a plan is agreed. For locally advanced disease the chemoradiation course itself runs about 5–6 weeks. Timing is confirmed for your case after the records are assessed.' }
+    ]
+  },
+  {
+    slug: 'stroke-rehab',
+    name: 'Stroke Rehabilitation',
+    category: 'neurology',
+    overview: "Stroke care in China covers both ends of the pathway: acute intervention at national neurology and neurosurgery centres, and the rehabilitation phase at hospitals that combine modern physiotherapy with traditional Chinese medicine. Patients who travel after the acute event are usually seeking the second half — a structured rehabilitation programme with functional goals, which is where the TCM-integrated model differs from what most Western programmes offer.",
+    diagnosis: "Acute assessment uses CT and CT angiography to exclude haemorrhage and locate the blocked vessel, with MRI and diffusion-weighted imaging for smaller or posterior-circulation strokes. Severity is scored on the NIH Stroke Scale. Rehabilitation assessment maps motor function, swallowing, speech and independence in daily activities.",
+    treatment: "Acute treatment includes intravenous thrombolysis and mechanical thrombectomy within the treatment window, aneurysm clipping or coiling for haemorrhagic stroke, decompressive surgery where swelling is life-threatening, and revascularisation such as extracranial-intracranial bypass in selected cases. The rehabilitation phase combines physiotherapy, occupational and speech therapy with acupuncture and Chinese herbal medicine, delivered as an inpatient programme with measurable function goals.",
+    typicalCosts: [
+      { procedure: 'Mechanical thrombectomy (acute)', price: '$10,000–$20,000', note: 'within the treatment window' },
+      { procedure: 'Aneurysm clipping or coiling', price: '$12,000–$25,000', note: 'haemorrhagic stroke' },
+      { procedure: 'Extracranial-intracranial (EC-IC) bypass', price: '$15,000–$25,000', note: 'selected cases only' },
+      { procedure: 'Inpatient rehabilitation programme', price: '$3,000–$7,000', note: 'per month, including therapy and TCM' }
+    ],
+    topHospitals: ['tiantan-hospital', 'huashan-hospital', 'xijing-hospital', 'zhujiang-hospital', 'dongzhimen-hospital', 'shanghai-shuguang-hospital', 'first-affiliated-guangzhou-tcm'],
+    faq: [
+      { q: 'Which hospitals in China treat stroke?', a: "For acute intervention, Tiantan Hospital (Beijing) and Huashan Hospital (Shanghai) are China's leading neurology and neurosurgery centres, with Xijing (Xi'an) and Zhujiang (Guangzhou) also performing high-volume neurovascular work. For the rehabilitation phase, Dongzhimen Hospital (Beijing) combines a neurology department with traditional Chinese medicine, and Shuguang Hospital (Shanghai) and the First Affiliated Hospital of Guangzhou University of Chinese Medicine are established TCM centres." },
+      { q: 'How much does stroke rehabilitation cost in China?', a: 'Reference ranges: mechanical thrombectomy $10,000–$20,000 in the acute phase, aneurysm clipping or coiling $12,000–$25,000, and an inpatient rehabilitation programme about $3,000–$7,000 per month including therapy. Your final quote depends on the intervention needed and how long you stay.' },
+      { q: 'How long should rehabilitation continue?', a: 'Most functional recovery happens in the first three to six months after a stroke, which is why starting early matters. Rehabilitation is planned as a block of weeks with a function goal attached, and the length of stay is set per case after assessment. We confirm the recommended duration for your case before you travel.' }
+    ]
   }
 ];
 
@@ -346,7 +386,9 @@ const seoTitleMap = {
   'dental-implants': 'Dental Implants Cost in China 2026',
   'car-t-therapy': 'CAR-T Cell Therapy Cost in China 2026',
   'heart-failure': 'Advanced Heart Failure Treatment in China 2026',
-  'colorectal-cancer': 'Colorectal Cancer Treatment Cost in China 2026'
+  'colorectal-cancer': 'Colorectal Cancer Treatment Cost in China 2026',
+  'cervical-cancer': 'Cervical Cancer Treatment Cost in China 2026',
+  'stroke-rehab': 'Stroke Treatment & Rehabilitation in China 2026'
 };
 
 const hospitals = require('./hospitals.js');
