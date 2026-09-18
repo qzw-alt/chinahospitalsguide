@@ -19,12 +19,14 @@
     (function () {
         var p = new URLSearchParams(location.search);
         if (p.get('paid') !== '1' || typeof gtag !== 'function') return;
+        // Keys match the itemId the payButton macro reports for the same product, so the
+        // in-page and return-trip paths attribute to one GA4 item instead of two.
         var tiers = {
-            'ACCEPTANCE-CHECK': { value: 199, name: 'Hospital Acceptance Check' },
-            'MDT-REVIEW': { value: 499, name: 'MDT Review' },
-            'FULL-JOURNEY': { value: 649, name: 'Full Journey Management' }
+            'acceptance-check': { value: 199, name: 'Hospital Acceptance Check' },
+            'mdt-review': { value: 499, name: 'MDT Review' },
+            'full-journey': { value: 649, name: 'Full Journey Management' }
         };
-        var id = (p.get('tier') || '').toUpperCase();
+        var id = (p.get('tier') || '').trim().toLowerCase();
         var t = tiers[id];
         if (!t) return;
         gtag('event', 'purchase', {
