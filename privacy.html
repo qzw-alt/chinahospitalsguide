@@ -13,13 +13,15 @@
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            padding-top: 120px;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: #333;
             max-width: 800px;
             margin: 0 auto;
             padding: 40px 20px;
+            /* clears the fixed navbar; !important because styles.css sets
+               body{padding-top:0} and is linked after this block */
+            padding-top: 70px !important;
         }
         h1 { color: #1e3c72; margin-bottom: 20px; }
         h2 { color: #2a5298; margin: 30px 0 15px; }
@@ -45,8 +47,7 @@
         .nav-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 10px; }
         .nav-toggle span { width: 25px; height: 3px; background: white; transition: all 0.3s; }
         @media (max-width: 768px) { .nav-toggle { display: flex; } .nav-links { position: absolute; top: 70px; left: 0; right: 0; background: rgba(30, 60, 114, 0.98); flex-direction: column; max-height: 0; overflow: hidden; transition: max-height 0.3s; padding: 0; } .nav-links.active { max-height: 400px; padding: 10px 0; } .nav-links li { width: 100%; } .nav-links a { padding: 15px 20px; border-bottom: 1px solid rgba(255,255,255,0.1); display: block; text-align: center; } .nav-cta { display: none; } }
-        .page-header { padding-top: 130px !important; }
-      
+
     </style>
 <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-RVYZENK472"></script>
@@ -140,30 +141,7 @@
             "https://t.me/chinahospitalguide"
         ]
     }
-    </script>
-
-    <div class="nav-overlay" id="navOverlay"></div>
-<nav class="navbar">
-    <div class="nav-container">
-        <a href="index.html" class="nav-logo">China Hospitals Guide</a>
-        <ul class="nav-links" id="navLinks">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="how-it-works.html">Process</a></li>
-            <li><a href="pricing.html">Pricing</a></li>
-            <li><a href="hospitals.html">Hospitals</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="contact-new.html" class="nav-cta-mobile">Start Here</a></li>
-        </ul>
-        <a href="contact-new.html" class="nav-cta">Start Here</a>
-        <div class="nav-toggle" id="navToggle">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-    </div>
-</nav>
-    <h1>Privacy Policy</h1>
+    </script><h1>Privacy Policy</h1>
     <p><strong>Last Updated:</strong> March 5, 2026</p>
     
     <h2>1. Introduction</h2>

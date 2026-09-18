@@ -214,6 +214,15 @@ function hasNavCssCollision(html) {
   return false;
 }
 
+// A rel="preload" of styles.css is not a stylesheet — inject-hints.js adds one to
+// pages that lack it, which would otherwise look like the page links the CSS.
+function linksStylesheet(html) {
+  for (const tag of html.match(/<link[^>]*>/gi) || []) {
+    if (/stylesheet/i.test(tag) && /styles\.css/i.test(tag)) return true;
+  }
+  return false;
+}
+
 function processFile(file, navPayload, navGuard) {
   const rel = path.relative(SITE, file).split(path.sep).join('/');
   if (SKIP_PATH.test(rel)) return null;
@@ -225,10 +234,10 @@ function processFile(file, navPayload, navGuard) {
   if (!bodyOpen) return null;
   const bodyIdx = html.indexOf(bodyOpen[0]) + bodyOpen[0].length;
 
-  // A navbar counts only when it sits in the body. 33 posts carry a stranded copy
-  // in <head> (inside a JSON-LD script) that renders nothing, so those pages must
-  // still be treated as missing one.
-  if (html.slice(bodyIdx).includes('class="nav-toggle"')) return null;
+  // Only nav.njk renders the language switcher, so that is what marks a page as
+  // already carrying the shared navbar. `nav-toggle` would not do: 42 pages have an
+  // older navbar that also has a hamburger, and those must still be replaced.
+  if (html.slice(bodyIdx).includes('class="nav-lang"')) return null;
 
   const stale = stripStaleNav(html);
   const own = stripOwnNav(stale.html);
@@ -245,8 +254,10 @@ function processFile(file, navPayload, navGuard) {
     html = html.replace(/<\/head>/i, OFFSET_STYLE + '</head>');
     notes.push('added offset');
   }
-  // only worth carrying where the page brings its own stylesheet that collides
-  if (hasNavCssCollision(html)) {
+  // The guard is needed when the page restyles the navbar's class names, or when it
+  // never linked styles.css at all — a few legacy posts carry all their CSS inline,
+  // and without either the links render as bare blue text stacked 285px tall.
+  if (hasNavCssCollision(html) || !linksStylesheet(html)) {
     html = html.replace(/<\/head>/i, navGuard + '</head>');
     notes.push('added nav guard');
   }
