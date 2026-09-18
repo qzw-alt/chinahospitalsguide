@@ -20,9 +20,9 @@
         var p = new URLSearchParams(location.search);
         if (p.get('paid') !== '1' || typeof gtag !== 'function') return;
         var tiers = {
-            L1: { value: 49, name: 'Hospital Shortlist' },
-            L2: { value: 149, name: 'Hospital Acceptance Check' },
-            L3: { value: 399, name: 'Full Journey Management' }
+            'ACCEPTANCE-CHECK': { value: 199, name: 'Hospital Acceptance Check' },
+            'MDT-REVIEW': { value: 499, name: 'MDT Review' },
+            'FULL-JOURNEY': { value: 649, name: 'Full Journey Management' }
         };
         var id = (p.get('tier') || '').toUpperCase();
         var t = tiers[id];
@@ -190,18 +190,17 @@
         <div class="step-number">3</div>
         <h2>We Deliver Your Service</h2>
         <p>Depending on your package:</p>
-        <p><strong>L1 — Hospital Shortlist ($49):</strong> You receive 2&ndash;3 hospital recommendations with cost comparisons, transport guidance, and a preparation checklist &mdash; usually within 24 hours. Information only — no hospital contact. Ready for you to plan independently.</p>
-        <p><strong>L2 — Hospital Acceptance Check ($149):</strong> We prepare your case summary in Chinese and send it to the <strong>most relevant hospital and department</strong>. If they can't evaluate your case, we approach the next best match. We translate their response into English and <strong>connect you directly with the hospital</strong>. Delivered within 4&ndash;7 business days — once you and the hospital are in touch, this phase is complete.</p>
-        <p><strong>L3 — Full Journey Management ($399):</strong> Includes everything in L2, plus medical record translation, visa invitation letter, appointment booking, airport pickup, and ongoing coordination throughout your treatment &mdash; from matching to discharge.</p>
+        <p><strong>Hospital Acceptance Check ($199):</strong> We contact two hospitals with your case summary in Chinese, put your questions to them, and deliver <strong>both hospitals' written answers in English</strong> &mdash; acceptance, cost range, treatment duration, earliest available date, and what they need from you first. Delivered within 4&ndash;7 business days.</p>
+        <p><strong>Full Journey Management ($649):</strong> Includes everything in the Acceptance Check, plus your case file prepared to the hospital's required format, visa invitation letter, appointment booked with a specific specialist, airport pickup, a named coordinator during your stay, and an English discharge summary with records handover.</p>
+        <p><strong>MDT Review ($499):</strong> An independent service. Several specialists from the relevant departments review your case together. You receive a written English MDT report, a video consultation with the panel through medical interpretation, and a walkthrough call. Delivered within 5&ndash;10 business days.</p>
     </div>
 
     <!-- Upgrade Paths -->
     <div class="next-step-card" style="background:#fef9f0;border:1px solid #e8d5a8;">
         <div style="text-align:center;font-size:2em;margin-bottom:8px;">💡</div>
         <h2 style="text-align:center;">Upgrade Anytime — Only Pay the Difference</h2>
-        <p style="text-align:center;"><strong>L1 → L2:</strong> Your $49 is credited toward the Hospital Acceptance Check ($149) &mdash; you pay <strong>+$100 more</strong>.</p>
-        <p style="text-align:center;"><strong>L1 → L3:</strong> Your $49 is credited toward Full Journey Management ($399) &mdash; you pay <strong>+$350 more</strong>.</p>
-        <p style="text-align:center;"><strong>L2 → L3:</strong> Your $149 is fully credited toward Full Journey Management ($399) &mdash; you pay <strong>+$250 more</strong>. Valid for 30 days.</p>
+        <p style="text-align:center;"><strong>Acceptance Check → Full Journey:</strong> Your $199 is credited toward Full Journey Management ($649) &mdash; you pay <strong>+$450 more</strong>. Valid for 30 days.</p>
+        <p style="text-align:center;"><strong>MDT Review + Full Journey Management:</strong> Bought together the two cost <strong>$1,099</strong> instead of $1,148. An MDT Review on its own does not credit toward coordination.</p>
         <p style="text-align:center;font-size:0.9rem;color:#888;">Just message us and mention you want to upgrade. We'll handle the rest.</p>
     </div>
 

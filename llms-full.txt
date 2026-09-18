@@ -10,7 +10,7 @@
 - **URL:** https://chinahospitalsguide.com
 - **Founded:** 2026
 - **Founder:** Medical tourism consultant (name withheld from this file)
-- **Model:** Independent coordinator — 0% hospital commission, 3 fixed-price tiers ($49 / $149 / $399)
+- **Model:** Independent coordinator — 0% hospital commission, free case review, then fixed prices ($199 acceptance check / $499 MDT review / $649 full journey)
 - **Coverage:** 40+ JCI-accredited hospitals, Fudan University rankings, 40+ medical specialties
 - **Languages:** English (primary), some Chinese-language resources available
 - **Contact:** WeChat (chinahospitalguide), Telegram (@chinahospitalguide), email, phone (+86-157-6310-7083)
@@ -132,13 +132,14 @@
 
 14. **How It Works** — /how-it-works.html
     - Step 1: Free case review with no commitment
-    - Step 2: Choose support level (L1 $49 / L2 $149 / L3 $399)
+    - Step 2: Choose a support level — free case review, Hospital Acceptance Check ($199), Full Journey Management ($649), or an independent MDT Review ($499)
     - Step 3: Records, appointments, and hospital arrival coordination
 
 15. **Pricing** — /pricing.html
-    - L1 ($49): 2–3 hospital options, cost range, travel checklist — information only
-    - L2 ($149): Case sent to the most relevant hospital, translated response, direct connection
-    - L3 ($399): Full journey management — records, visa letter, appointments, pickup, coordination through discharge
+    - Free case review: we read your records, say honestly whether China fits, and name one hospital we would point you to
+    - Hospital Acceptance Check ($199): we contact two hospitals with your case and deliver both written answers in English
+    - Full Journey Management ($649): case file preparation, visa letter, appointment booking, airport pickup, named coordinator, English discharge summary
+    - MDT Review ($499): an independent multidisciplinary panel review, with a written English report and a panel video consultation
     - Refund terms: clearly published per tier. PayPal accepted. Upgrade anytime.
 
 ### Patient Resources

@@ -1,0 +1,62 @@
+{#
+  Renders a PayPal Hosted Button for a paid service.
+
+  If `buttonId` is falsy the service has no live PayPal button yet, and we render
+  a contact-form CTA instead. This is deliberate: a Hosted Button has its price
+  baked in server-side, so pairing an old button ID with a new price would charge
+  the wrong amount. Never render a stale ID against a new price.
+
+  Args:
+    buttonId    PayPal Hosted Button ID, or null/false for the fallback CTA
+    amount      price in whole USD (number, unquoted in JS)
+    itemId      stable analytics id, e.g. 'mdt-review'
+    itemName    human-readable name for GA4
+    reserveText button label used in fallback mode
+
+  Usage:
+    {% from "pay-button.njk" import payButton %}
+    {{ payButton(site.paypalButtons.mdtReview, 499, "mdt-review", "MDT Review", "Reserve at $499 &#8594;") }}
+#}
+{% macro payButton(buttonId, amount, itemId, itemName, reserveText) %}
+{% if buttonId %}
+<div id="paypal-container-{{ buttonId }}" style="margin-top:24px;"></div>
+<script>
+(function () {
+    var hostId = "paypal-container-{{ buttonId }}";
+    function render() {
+        var el = document.getElementById(hostId);
+        if (!el) return;
+        if (window._ppLoaded) {
+            paypal.HostedButtons({ hostedButtonId: "{{ buttonId }}", onApprove: function (data) {
+                if (typeof gtag === 'function') {
+                    gtag('event', 'purchase', { send_to: 'G-RVYZENK472', currency: 'USD', value: {{ amount }}, transaction_id: data.orderID, items: [{ item_id: '{{ itemId }}', item_name: '{{ itemName }}', quantity: 1, price: {{ amount }}, currency: 'USD' }] });
+                }
+            } }).render("#" + hostId);
+        } else if (window._ppFailed) {
+            el.innerHTML = '<a href="https://www.paypal.com/ncp/payment/{{ buttonId }}" target="_blank" rel="noopener" style="display:inline-block;background:#0070ba;color:#fff;padding:12px 28px;border-radius:8px;text-decoration:none;font-weight:700;font-size:0.95em;">Pay ${{ amount }} with PayPal &#8594;</a>';
+            el.querySelector('a').addEventListener('click', function () {
+                if (typeof gtag === 'function') { gtag('event', 'payment_fallback_click', { send_to: 'G-RVYZENK472', currency: 'USD', value: {{ amount }}, item_id: '{{ itemId }}', item_name: '{{ itemName }}' }); }
+            });
+        } else {
+            document.addEventListener('pp:loaded', render, {once:true});
+            document.addEventListener('pp:failed', render, {once:true});
+            setTimeout(function () { if (!window._ppLoaded && !window._ppFailed) { window._ppFailed = 1; render(); } }, 10000);
+        }
+    }
+    render();
+})();
+</script>
+{% else %}
+<a id="reserve-{{ itemId }}" href="contact-new.html?paid=1&amp;source=pricing&amp;plan={{ itemId }}" class="cta-button">{{ reserveText | safe }}</a>
+<script>
+(function () {
+    var el = document.getElementById('reserve-{{ itemId }}');
+    if (el) {
+        el.addEventListener('click', function () {
+            if (typeof gtag === 'function') { gtag('event', 'payment_fallback_click', { send_to: 'G-RVYZENK472', currency: 'USD', value: {{ amount }}, item_id: '{{ itemId }}', item_name: '{{ itemName }}' }); }
+        });
+    }
+})();
+</script>
+{% endif %}
+{% endmacro %}

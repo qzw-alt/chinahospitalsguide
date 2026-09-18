@@ -104,6 +104,7 @@ function classifyPage(filePath) {
 
   if (name === 'index.html') return 'homepage';
   if (name === 'pricing.html') return 'pricing';
+  if (/^(ru|ar|id)-pricing\.html$/.test(name)) return 'pricing';
   if (name === 'hospitals.html') return 'hospitals';
   if (name === 'services.html') return 'services';
   if (name === 'contact.html' || name === 'contact-new.html') return 'contact';
@@ -165,19 +166,19 @@ function processDir(dir, baseDir) {
         case 'pricing':
           if (!hasOffer) {
             schemas.push(offerSchema(
-              'L1 Hospital Shortlist',
-              '49',
-              '2-3 hospitals matched to your case and budget, with cost comparison, transport guidance, and travel checklist.'
+              'Hospital Acceptance Check',
+              '199',
+              'We contact two Chinese hospitals on your behalf with your case file, and deliver their written answers in English: whether they will accept your case, cost range, treatment duration, earliest available date, and prerequisites.'
             ));
             schemas.push(offerSchema(
-              'L2 Hospital Acceptance Check',
-              '149',
-              'We take your case to the most relevant Chinese hospital, translate their response, and connect you directly with the best fit.'
+              'MDT Review',
+              '499',
+              'An independent multidisciplinary team review: several specialists from the relevant departments jointly assess your case. You receive a written English MDT report, a video consultation with the panel, and a report walkthrough call.'
             ));
             schemas.push(offerSchema(
-              'L3 Full Journey Management',
-              '399',
-              'Includes L2 plus medical record translation, visa invitation letter, appointment booking, airport pickup, and ongoing coordination through treatment and discharge.'
+              'Full Journey Management',
+              '649',
+              'End-to-end coordination: full case file preparation, visa invitation letter, appointment booking, airport pickup, a written pre-departure brief, a named coordinator during your stay, and an English discharge summary handover.'
             ));
           }
           if (!hasWebPage) schemas.push(webPageSchema(pageUrl, pageTitle, pageDesc));

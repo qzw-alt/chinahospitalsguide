@@ -1,11 +1,11 @@
 ---
 permalink: ru-pricing.html
 lang: ru
-title: "Цены — $49 / $149 / $399 | Koординация лечения в Китае | China Hospitals Guide"
-description: "Три уровня: шорт-лист больниц $49, верификация $149 (отправляем ваш случай в 2-3 больницы), полное сопровождение $399. Апгрейд — платите только разницу."
+title: "Цены — Бесплатно / $199 / $649 / $499 | Координация лечения в Китае | China Hospitals Guide"
+description: "Первичная оценка случая бесплатно. $199 Проверка приёма в больнице — обращаемся в две больницы и передаём их письменные ответы на английском. $649 Полное сопровождение. $499 Независимый консилиум специалистов. Без скрытых платежей."
 canonical: "https://chinahospitalsguide.com/ru-pricing.html"
-ogTitle: "Цены — $49 / $149 / $399 | Koординация лечения в Китае"
-ogDescription: "Шорт-лист $49. Верификация $149. Полное сопровождение $399. Апгрейд — платите только разницу."
+ogTitle: "Цены — Бесплатно / $199 / $649 / $499 | Координация лечения в Китае"
+ogDescription: "Первичная оценка бесплатно. $199 Проверка приёма, $649 Полное сопровождение, $499 Консилиум MDT. Апгрейд — платите только разницу."
 pagePaypal: true
 pageStyle: |
   body { background: #f8f9fa; color: #243044; padding-top: 70px; }
@@ -64,6 +64,7 @@ extraHead: |
 schema: |
   [{"@context":"https://schema.org","@type":"MedicalBusiness","name":"China Hospitals Guide","url":"https://chinahospitalsguide.com","logo":"https://chinahospitalsguide.com/og-image.webp","image":"https://chinahospitalsguide.com/og-image.webp","description":"Independent medical travel coordination for international patients seeking hospital treatment in China.","telephone":"+86-157-6310-7083","email":"contact@chinahospitalsguide.com","areaServed":{"@type":"Country","name":"China"}},{"@context":"https://schema.org","@type":"WebSite","name":"China Hospitals Guide","url":"https://chinahospitalsguide.com"}]
 ---
+{% from "pay-button.njk" import payButton %}
 <html lang="{{ lang }}">
 <head>
 {% include "head.njk" %}
@@ -76,8 +77,8 @@ schema: |
 
 <main class="ru-shell">
     <div class="ru-hero">
-        <h1>Три шага к правильной больнице — начните с того, где вы сейчас</h1>
-        <p>Шорт-лист. Верификация. Полное сопровождение. Апгрейд в любое время — платите только разницу.</p>
+        <h1>Начните бесплатно. Платите только когда мы начинаем работу.</h1>
+        <p>Мы читаем ваш случай бесплатно. Дальше вы выбираете, насколько далеко нам идти — и при апгрейде платите только разницу.</p>
     </div>
 
     <!-- Why This Exists -->
@@ -86,139 +87,102 @@ schema: |
         <p>Вы пробовали звонить в больницы Китая. <span class="hl">Они не ответили.</span></p>
         <p>Вы искали "лучшая больница в Китае для моего случая" — и не нашли ничего полезного.</p>
         <p>Мы не справочник. Мы — <span class="hl">китаеязычный специалист с телефоном</span>, который знает, в какое отделение звонить.</p>
-        <p><span class="hl">$49</span> — получите шорт-лист больниц под ваш случай.<br>
-        <span class="hl">$149</span> — отправляем ваш случай в 2-3 больницы, переводим ответы, соединяем вас.<br>
-        <span class="hl">$399</span> — ведём весь процесс, от подбора до выписки.</p>
-        <p>Начните с любого уровня. Апгрейд в любое время — платите только разницу.</p>
+        <p><span class="hl">Бесплатно</span> — читаем ваш случай и честно говорим, подходит ли Китай, и в какую больницу мы бы вас направили.<br>
+        <span class="hl">$199</span> — отправляем ваш случай в две больницы и приносим их письменные ответы.<br>
+        <span class="hl">$649</span> — ведём весь процесс, от подготовки документов до передачи при выписке.</p>
+        <p>Или <span class="hl">$499</span> за независимый <strong>консилиум MDT</strong> — несколько специалистов разбирают ваш случай вместе.</p>
+        <p>Начните с любого шага. Апгрейд в любое время — платите только разницу.</p>
     </div>
 
-    <!-- Three Pricing Cards -->
+    <!-- Pricing Cards -->
     <div class="pkg-grid">
-        <!-- L1: $49 -->
-        <div class="pkg">
-            <h3>L1 — Шорт-лист</h3>
-            <p class="q">"Какие больницы мне рассматривать?"</p>
-            <p style="color:#4a5568;">Для пациентов на этапе исследования. Информация без контакта с больницами.</p>
-            <div class="price">$49</div>
+        <div class="pkg featured">
+            <h3>Проверка приёма в больнице</h3>
+            <p class="q">"Примут ли китайские больницы мой случай?"</p>
+            <p style="color:#4a5568;">Для пациентов с конкретным диагнозом, которым нужен реальный письменный ответ от самой больницы.</p>
+            <div class="price">$199</div>
             <ul>
-                <li>2–3 больницы под ваш случай и бюджет</li>
-                <li>Сравнение стоимости по городам</li>
-                <li>Транспорт: аэропорт — больница</li>
-                <li>Чек-лист подготовки к поездке</li>
+                <li>Отправляем ваш случай на китайском в <strong>две больницы</strong> — в нужные отделения</li>
+                <li>Задаём им ваши конкретные вопросы, чтобы получить именно то, что вы хотели узнать</li>
+                <li>Вы получаете <strong>письменные ответы обеих больниц на английском</strong>: примут ли случай, диапазон стоимости, длительность лечения, ближайшая доступная дата и что нужно подготовить заранее</li>
+                <li>Проверяем, <strong>доступна ли поддержка на английском</strong> в каждой больнице на время вашего пребывания</li>
+                <li>Говорим, какую больницу мы бы выбрали и почему, и даём конкретный контакт в отделении для иностранных пациентов</li>
             </ul>
             <div class="not-inc">
                 <strong>Что не включено</strong>
-                Мы не связываемся с больницами. Это исследовательский отчёт — информация для планирования.
+                Запись на приём, визовая поддержка, трансфер из аэропорта и координация во время пребывания.
             </div>
             <div class="upgrade">
-                <strong>💡 Апгрейд:</strong> $49 засчитываются в L2 (+$100) или L3 (+$350).
-            </div>
-            <p class="delivery">⏱ Доставка мгновенно</p>
-        </div>
-
-        <!-- L2: $149 -->
-        <div class="pkg featured">
-            <h3>L2 — Верификация</h3>
-            <p class="q">"Примут ли эти больницы мой случай?"</p>
-            <p style="color:#4a5568;">Для пациентов с конкретным диагнозом. Отправляем ваш случай в больницы и получаем реальные ответы.</p>
-            <div class="price">$149</div>
-            <ul>
-                <li>Отправляем ваш случай на китайском в <strong>2–3 больницы</strong> — в нужные отделения</li>
-                <li>Переводим каждый ответ на русский / английский</li>
-                <li><strong>Соединяем вас напрямую</strong> с лучшей больницей — как только вы на связи, работа завершена</li>
-                <li>Доставка: 4–7 рабочих дней</li>
-            </ul>
-            <div class="upgrade">
-                <strong>💡 Апгрейд в течение 30 дней:</strong> $149 засчитываются в L3 (+$250). С L1? Доплатите +$100.
+                <strong>💡 Апгрейд в течение 30 дней:</strong> $199 полностью засчитываются в Полное сопровождение — доплата +$450.
             </div>
             <p class="delivery">⏱ Доставка: 4–7 рабочих дней</p>
+            {{ payButton(site.paypalButtons.acceptanceCheck, 199, "acceptance-check", "Hospital Acceptance Check", "Забронировать за $199 — пришлём ссылку на оплату &#8594;") }}
         </div>
 
-        <!-- L3: $399 -->
         <div class="pkg">
-            <h3>L3 — Полное Сопровождение</h3>
+            <h3>Полное сопровождение</h3>
             <p class="q">"Я готов ехать. Сделайте всё."</p>
-            <p style="color:#4a5568;">Для пациентов, готовых к поездке. Полное ведение — от подбора до выписки.</p>
-            <div class="price">$399</div>
+            <p style="color:#4a5568;">Для тех, кто уже решил ехать. Основная работа идёт до вашего прилёта — чтобы на месте ничего не оставалось на волю случая.</p>
+            <div class="price">$649</div>
             <ul>
-                <li><strong>Включает всё из L2</strong> — верификация + соединение с больницей</li>
-                <li>Перевод и подготовка медицинских документов</li>
+                <li><strong>Включает всё из Проверки приёма в больнице</strong></li>
+                <li>Документы готовятся точно в том формате, который требует больница</li>
                 <li>Пригласительное письмо для визы</li>
-                <li>Запись на приём + организация трансфера из аэропорта</li>
-                <li>Коммуникация и координация во время лечения</li>
-                <li>Выписное резюме + передача на последующее наблюдение</li>
-                <li>Всё включено — без скрытых платежей</li>
+                <li>Запись к конкретному специалисту на нужные вам даты</li>
+                <li>Трансфер из аэропорта</li>
+                <li>Персональный координатор на время пребывания — ответ в течение 4 часов в рабочие дни</li>
+                <li>Выписное резюме на английском и передача документов вашему врачу дома</li>
             </ul>
-            <div class="upgrade">
-                <strong>💡 С L2?</strong> Доплатите +$250. <strong>С L1?</strong> Доплатите +$350.
+            <div class="not-inc">
+                <strong>Что не включено</strong>
+                Консилиум MDT — отдельная служба. Мы не гарантируем медицинский результат и не ограничиваем стоимость больницы. Поддержку на английском обеспечивает больница — мы проверяем, что она есть, до вашей поездки.
             </div>
+            <div class="upgrade">
+                <strong>💡 Пришли из Проверки приёма?</strong> $199 засчитываются — доплата +$450.
+            </div>
+            {{ payButton(site.paypalButtons.fullJourney, 649, "full-journey", "Full Journey Management", "Забронировать за $649 — пришлём ссылку на оплату &#8594;") }}
         </div>
-        <div id="paypal-container-K4HNCDD7GDS5C" style="margin:12px auto;max-width:340px;"></div>
-        <div id="paypal-container-WGZ9FPKYZ6X3Y" style="margin:12px auto;max-width:340px;"></div>
-        <div id="paypal-container-ZBY36JV2X5A3U" style="margin:12px auto;max-width:340px;"></div>
-        <script>
-        (function renderPaypalButtons() {
-            var buttons = [
-                { id: "K4HNCDD7GDS5C", value: 49, item: "L1" },
-                { id: "WGZ9FPKYZ6X3Y", value: 149, item: "L2" },
-                { id: "ZBY36JV2X5A3U", value: 399, item: "L3" }
-            ];
-            function render() {
-                buttons.forEach(function(b) {
-                    var el = document.getElementById('paypal-container-' + b.id);
-                    if (!el) return;
-                    if (window._ppLoaded) {
-                        paypal.HostedButtons({
-                            hostedButtonId: b.id,
-                            onApprove: function(data) {
-                                if (typeof gtag === 'function') {
-                                    gtag('event', 'purchase', {
-                                        send_to: 'G-RVYZENK472',
-                                        currency: 'USD',
-                                        value: b.value,
-                                        transaction_id: data.orderID,
-                                        items: [{ item_id: b.item, item_name: b.item, quantity: 1, price: b.value, currency: 'USD' }]
-                                    });
-                                }
-                            }
-                        }).render('#' + el.id);
-                    } else if (window._ppFailed) {
-                        el.innerHTML = '<a href="https://www.paypal.com/ncp/payment/' + b.id + '" target="_blank" rel="noopener" style="display:inline-block;background:#0070ba;color:#fff;padding:12px 28px;border-radius:8px;text-decoration:none;font-weight:700;font-size:0.95em;">Pay $' + b.value + ' with PayPal &#8594;</a>';
-                        var fb = el.querySelector('a');
-                        if (fb) fb.addEventListener('click', function () {
-                            if (typeof gtag === 'function') { gtag('event', 'payment_fallback_click', { send_to: 'G-RVYZENK472', currency: 'USD', value: b.value, item_id: b.item, item_name: b.item }); }
-                        });
-                    }
-                });
-                if (!window._ppLoaded && !window._ppFailed) {
-                    setTimeout(function() {
-                        if (!window._ppLoaded && !window._ppFailed) { window._ppFailed = 1; render(); }
-                    }, 10000);
-                }
-            }
-            document.addEventListener('pp:loaded', render, { once: true });
-            document.addEventListener('pp:failed', render, { once: true });
-            render();
-        })();
-        </script>
+
+        <div class="pkg">
+            <h3>Консилиум MDT</h3>
+            <p class="q">Отдельная служба — не уровень сопровождения</p>
+            <p style="color:#4a5568;">Мультидисциплинарная команда разбирает ваш случай вместе, а не один врач. Отвечает на вопрос «какое лечение правильное» — и не включает никакой координации.</p>
+            <div class="price">$499</div>
+            <ul>
+                <li>Ваш случай превращается в китайское резюме со структурированным списком вопросов</li>
+                <li>Пул из 3–5 консультантов из профильных отделений</li>
+                <li><strong>Письменный отчёт MDT на английском</strong>: оценка, рекомендованное лечение, альтернативы и их компромиссы</li>
+                <li>Видеоконсультация с пулом с медицинским переводом</li>
+                <li>Звонок с нами для разбора отчёта</li>
+                <li>Доставка: 5–10 рабочих дней</li>
+            </ul>
+            <div class="not-inc">
+                <strong>Независим от уровней сопровождения</strong>
+                Не засчитывается в Полное сопровождение. При покупке вместе: <strong>$1,099</strong> вместо $1,148.
+            </div>
+            {{ payButton(site.paypalButtons.mdtReview, 499, "mdt-review", "MDT Review", "Забронировать за $499 — пришлём ссылку на оплату &#8594;") }}
+        </div>
     </div>
 
     <!-- Comparison Table -->
     <div style="overflow-x:auto;">
     <table class="compare-table">
         <thead>
-            <tr><th></th><th>L1 — $49<br>Шорт-лист</th><th>L2 — $149<br>Верификация</th><th>L3 — $399<br>Полное сопровождение</th></tr>
+            <tr><th></th><th>Проверка приёма — $199</th><th>Полное сопровождение — $649</th></tr>
         </thead>
         <tbody>
-            <tr><td><strong>Что вы получаете</strong></td><td>2–3 больницы + данные о ценах</td><td>Реальные ответы от 2–3 больниц + прямой контакт</td><td>Всё из L2 + полное сопровождение</td></tr>
-            <tr><td><strong>Контакт с больницей</strong></td><td><span class="no">✕</span> Нет</td><td><span class="chk">✓</span> 2–3 больницы</td><td><span class="chk">✓</span> 2–3 больницы + MDT</td></tr>
-            <tr><td><strong>Персонализация</strong></td><td><span class="no">✕</span></td><td><span class="chk">✓</span> Ваш случай отправлен</td><td><span class="chk">✓</span> Полная подготовка</td></tr>
-            <tr><td><strong>Перевод</strong></td><td><span class="no">✕</span></td><td>Ответы больниц</td><td><span class="chk">✓</span> Все документы + ответы</td></tr>
-            <tr><td><strong>Срок ответа</strong></td><td>Мгновенно</td><td>4–7 раб. дней</td><td>4 часа в раб. дни</td></tr>
-            <tr><td><strong>Прямая связь с больницей</strong></td><td><span class="no">✕</span></td><td><span class="chk">✓</span> Знакомство с лучшей больницей</td><td><span class="chk">✓</span> Полностью управляемое</td></tr>
-            <tr><td><strong>Визовая поддержка</strong></td><td><span class="no">✕</span></td><td><span class="no">✕</span></td><td><span class="chk">✓</span> Приглашение</td></tr>
-            <tr><td><strong>Встреча в аэропорту</strong></td><td><span class="no">✕</span></td><td><span class="no">✕</span></td><td><span class="chk">✓</span> Трансфер + логистика</td></tr>
-            <tr><td><strong>Политика апгрейда</strong></td><td>Зачёт в L2 или L3</td><td>$149 зачёт в L3</td><td>—</td></tr>
+            <tr><td><strong>Что вы получаете</strong></td><td>Реальный письменный ответ от двух больниц</td><td>Всё из Проверки приёма + полное сопровождение</td></tr>
+            <tr><td><strong>Больницы, с которыми связываемся</strong></td><td><span class="chk">✓</span> Две больницы</td><td><span class="chk">✓</span> Две больницы</td></tr>
+            <tr><td><strong>Письменные ответы на английском</strong></td><td><span class="chk">✓</span> От обеих больниц</td><td><span class="chk">✓</span> От обеих больниц</td></tr>
+            <tr><td><strong>Поддержка на английском подтверждена</strong></td><td><span class="chk">✓</span></td><td><span class="chk">✓</span></td></tr>
+            <tr><td><strong>Документы в формате больницы</strong></td><td><span class="no">✕</span></td><td><span class="chk">✓</span></td></tr>
+            <tr><td><strong>Пригласительное письмо для визы</strong></td><td><span class="no">✕</span></td><td><span class="chk">✓</span></td></tr>
+            <tr><td><strong>Запись к конкретному специалисту</strong></td><td><span class="no">✕</span></td><td><span class="chk">✓</span></td></tr>
+            <tr><td><strong>Трансфер из аэропорта</strong></td><td><span class="no">✕</span></td><td><span class="chk">✓</span></td></tr>
+            <tr><td><strong>Координатор во время пребывания</strong></td><td><span class="no">✕</span></td><td><span class="chk">✓</span> Ответ за 4 часа</td></tr>
+            <tr><td><strong>Выписное резюме на английском</strong></td><td><span class="no">✕</span></td><td><span class="chk">✓</span></td></tr>
+            <tr><td><strong>Срок ответа</strong></td><td>4–7 раб. дней</td><td>4 часа в раб. дни</td></tr>
+            <tr><td><strong>Политика апгрейда</strong></td><td>$199 зачёт в течение 30 дней</td><td>—</td></tr>
         </tbody>
     </table>
     </div>
@@ -226,9 +190,10 @@ schema: |
     <!-- Guidance -->
     <div class="guide-box">
         <h3>Не уверены, с чего начать?</h3>
-        <p><strong>Начните с $49</strong>, если вы ещё исследуете — получите шорт-лист. Потом апгрейд, и $49 засчитаются.</p>
-        <p><strong>Начните с $149</strong>, если у вас конкретный диагноз — узнайте, примут ли ваш случай китайские больницы.</p>
-        <p><strong>Начните с $399</strong>, если вы готовы к поездке — мы всё организуем от подбора до выписки.</p>
+        <p><strong>Начните бесплатно.</strong> Прочитаем ваш случай и честно скажем, стоит ли ехать в Китай — и в какую больницу мы бы вас направили.</p>
+        <p><strong>Потом $199</strong>, если нужен настоящий ответ от больниц, а не только наше мнение — связываемся с двумя и приносим письменные ответы.</p>
+        <p><strong>Или $649</strong>, если вы уже решили ехать и хотите передать нам подготовку, логистику и координацию.</p>
+        <p><strong>$499 Консилиум MDT</strong> — когда вопрос не «где» и не «как», а «какое лечение действительно правильное».</p>
         <p style="margin-top:12px;color:#888;">Не уверены? Напишите нам. Честно скажем, какой вариант подходит — без навязывания.</p>
     </div>
 
@@ -236,9 +201,10 @@ schema: |
     <div style="margin-top:32px;">
         <h3 style="color:#1e3c72;text-align:center;margin-bottom:16px;">Условия возврата</h3>
         <div class="refund-grid">
-            <div class="refund-card"><h4>L1 — $49 Шорт-лист</h4><ul><li>Не возвращается после доставки</li><li>Минимальный риск — $49 всегда засчитываются при апгрейде</li></ul></div>
-            <div class="refund-card"><h4>L2 — $149 Верификация</h4><ul><li>Полный возврат до связи с больницами</li><li>Не возвращается после контакта — работа выполнена</li><li>Если ни одна больница не ответит — предложим альтернативы или полный возврат</li></ul></div>
-            <div class="refund-card"><h4>L3 — $399 Полное сопровождение</h4><ul><li>$369 возврат при отмене за 72+ часа до начала</li><li>Первые $30 не возвращаются (обработка информации)</li></ul></div>
+            <div class="refund-card"><h4>Бесплатная оценка случая</h4><ul><li>Возвращать нечего — вы ничего не должны, пока не выберете платную услугу</li></ul></div>
+            <div class="refund-card"><h4>$199 Проверка приёма в больнице</h4><ul><li>Полный возврат до связи с больницами</li><li>Не возвращается после контакта — работа выполнена</li><li>Если ни одна больница не ответит — предложим альтернативы или полный возврат</li></ul></div>
+            <div class="refund-card"><h4>$499 Консилиум MDT</h4><ul><li>$469 возврат при отмене до начала консилиума</li><li>Первые $30 не возвращаются (обработка информации)</li><li>Если подходящий пул собрать невозможно — полный возврат</li></ul></div>
+            <div class="refund-card"><h4>$649 Полное сопровождение</h4><ul><li>$619 возврат при отмене за 72+ часа до начала</li><li>Первые $30 не возвращаются (обработка информации)</li></ul></div>
             <div class="refund-card"><h4>Особые случаи</h4><ul><li>Медицинские или срочные ситуации — индивидуально</li><li>Свяжитесь с нами напрямую</li></ul></div>
         </div>
     </div>

@@ -55,8 +55,8 @@ const riskBannerHTML = `
 const leadMagnetHTML = `
 <div class="lead-magnet">
   <div class="lead-magnet-icon">📋</div>
-  <h3 class="lead-magnet-title">Get Your Free Hospital Cost Comparison</h3>
-  <p class="lead-magnet-desc">We'll match you with 2-3 top hospitals for your procedure, with pricing and English support details — all free.</p>
+  <h3 class="lead-magnet-title">Get Your Free Case Review</h3>
+  <p class="lead-magnet-desc">We'll read your case and tell you honestly whether China is the right choice — and which hospital we'd point you to. Free, no commitment.</p>
   <a href="/contact-new.html" class="lead-magnet-btn">Start Free Case Review</a>
 </div>
 `;

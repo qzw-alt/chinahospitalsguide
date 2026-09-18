@@ -1,6 +1,6 @@
 # China Hospitals Guide
 
-> An independent medical tourism resource helping international patients find JCI-accredited hospitals in China — surgery costs, hospital rankings, and a 3-tier hospital matching service ($49–$399).
+> An independent medical tourism resource helping international patients find JCI-accredited hospitals in China — surgery costs, hospital rankings, and a free case review followed by fixed-price coordination and specialist-review services.
 
 China Hospitals Guide (chinahospitalsguide.com) publishes research-based guides on medical treatment costs, hospital rankings, and practical advice for international patients seeking affordable healthcare in China. All content is written and updated by the founder, a medical tourism consultant with deep knowledge of China's Fudan University hospital ranking system, JCI accreditation, medical visa processes, and real surgery pricing across 40+ specialties. We are not affiliated with any hospital and take 0% commission — our recommendations are based on your medical needs, not kickbacks. Data is refreshed as new Fudan rankings and pricing surveys are released.
 
@@ -65,7 +65,7 @@ China Hospitals Guide (chinahospitalsguide.com) publishes research-based guides 
 ## Hospital Match Service
 
 - [How It Works](https://chinahospitalsguide.com/how-it-works.html): 3-step process — submit case, choose support level, arrive with appointments ready.
-- [Pricing](https://chinahospitalsguide.com/pricing.html): L1 Hospital Shortlist ($49), L2 Hospital Acceptance Check ($149), L3 Full Journey Management ($399). All paid via PayPal with published refund terms.
+- [Pricing](https://chinahospitalsguide.com/pricing.html): Free case review; Hospital Acceptance Check ($199) — we contact two hospitals and deliver both written answers in English; Full Journey Management ($649); MDT Review ($499), an independent multidisciplinary panel. All paid via PayPal with published refund terms.
 - [Start Free Case Review](https://chinahospitalsguide.com/contact-new.html): No-commitment consultation.
 
 ## Patient Resources

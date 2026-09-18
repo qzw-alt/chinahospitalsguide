@@ -1,10 +1,10 @@
 ---
 permalink: pricing.html
 layout: base.njk
-title: "China Hospital Pricing 2026 | $49 Shortlist · $149 Acceptance Check · $399 Full Journey"
-description: "Three tiers: $49 Hospital Shortlist (get matched), $149 Hospital Acceptance Check (we take your case to the most relevant hospital), $399 Full Journey Management (end-to-end). No hidden fees. PayPal secure."
+title: "China Hospital Pricing 2026 | Free Case Review · $199 Acceptance Check · $649 Full Journey"
+description: "Start with a free case review. $199 Hospital Acceptance Check — we contact two Chinese hospitals and bring back their written answer. $649 Full Journey Management. $499 independent MDT Review. No hidden fees."
 canonical: "https://chinahospitalsguide.com/pricing.html"
-ogDescription: "$49 Hospital Shortlist · $149 Hospital Acceptance Check · $399 Full Journey Management. We contact hospitals on your behalf. Any tier upgrades — only pay the difference."
+ogDescription: "Free case review to start. $199 Hospital Acceptance Check, $649 Full Journey Management, $499 independent MDT Review. We contact hospitals on your behalf — upgrade anytime and only pay the difference."
 extraHead: "<link rel=\"alternate\" hreflang=\"en\" href=\"https://chinahospitalsguide.com/pricing.html\">
 <link rel=\"alternate\" hreflang=\"ru\" href=\"https://chinahospitalsguide.com/ru-pricing.html\">
 <link rel=\"alternate\" hreflang=\"ar\" href=\"https://chinahospitalsguide.com/ar-pricing.html\">
@@ -219,6 +219,58 @@ pageStyle: |
           .guidance-box h3 { color: var(--primary); margin-bottom: 16px; }
           .guidance-box p { color: #4a5568; margin-bottom: 10px; }
           .guidance-box .cta-button { margin-top: 10px; }
+          .free-block {
+              max-width: 800px;
+              margin: 0 auto 56px;
+              padding: 40px 36px;
+              background: #fff;
+              border-radius: 22px;
+              border: 2px solid rgba(34, 197, 94, 0.35);
+              box-shadow: 0 12px 30px rgba(15, 23, 42, 0.07);
+          }
+          .free-block h2 { color: var(--primary); margin-bottom: 12px; }
+          .free-lead { color: #4a5568; font-size: 1.05rem; margin-bottom: 6px; }
+          .free-badge,
+          .mdt-badge {
+              display: inline-block;
+              color: #fff;
+              padding: 5px 16px;
+              border-radius: 20px;
+              font-size: 0.78rem;
+              font-weight: 700;
+              letter-spacing: 0.4px;
+              text-transform: uppercase;
+              margin-bottom: 16px;
+          }
+          .free-badge { background: #22c55e; }
+          .mdt-badge { background: #b78a42; }
+          .free-block ul,
+          .mdt-block ul {
+              list-style: none;
+              margin: 18px 0 0;
+              padding: 0;
+          }
+          .free-block li,
+          .mdt-block li {
+              padding: 8px 0;
+              color: #4f5b6c;
+          }
+          .free-block li { border-bottom: 1px solid #edf1f7; }
+          .mdt-block li { border-bottom: 1px solid #f0e6d4; }
+          .free-block li:last-child,
+          .mdt-block li:last-child { border-bottom: 0; }
+          .free-block .cta-button { display: inline-block; margin-top: 22px; }
+          .mdt-block {
+              max-width: 800px;
+              margin: 56px auto 0;
+              padding: 40px 36px;
+              background: #fbf8f2;
+              border-radius: 22px;
+              border: 1px solid #e8d5a8;
+              box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
+          }
+          .mdt-block h2 { color: var(--primary); margin-bottom: 12px; }
+          .mdt-lead { color: #4a5568; font-size: 1.02rem; margin-bottom: 6px; }
           .collapse-toggle {
               width: 100%;
               background: none;
@@ -304,41 +356,41 @@ schema: |
         "@type": "WebPage",
         "@id": "https://chinahospitalsguide.com/pricing.html#webpage",
         "url": "https://chinahospitalsguide.com/pricing.html",
-        "headline": "China Hospital Pricing 2026 — $49 Shortlist · $149 Acceptance Check · $399 Full Journey",
-        "description": "Three tiers: $49 Hospital Shortlist, $149 Hospital Acceptance Check (we take your case to the most relevant hospital), $399 Full Journey Management. Upgrade anytime — only pay the difference.",
+        "headline": "China Hospital Pricing 2026 — Free Case Review · $199 Acceptance Check · $649 Full Journey",
+        "description": "Start with a free case review. $199 Hospital Acceptance Check, $649 Full Journey Management, and a $499 independent MDT Review. Upgrade anytime — only pay the difference.",
         "publisher": { "@type": "Organization", "name": "China Hospitals Guide", "url": "https://chinahospitalsguide.com" }
       },
       {
         "@type": "OfferCatalog",
-        "name": "China Hospitals Guide Coordination Services",
+        "name": "China Hospitals Guide Services",
         "itemListElement": [
           {
             "@type": "Offer",
-            "itemOffered": { "@type": "Service", "name": "Hospital Shortlist", "description": "2-3 hospitals matched to your case. Includes cost comparison and travel checklist. Information only — no hospital contact." },
-            "price": "49", "priceCurrency": "USD",
-            "priceSpecification": { "@type": "PriceSpecification", "price": "49", "priceCurrency": "USD" },
+            "itemOffered": { "@type": "Service", "name": "Hospital Acceptance Check", "description": "We contact two Chinese hospitals on your behalf with your case file and deliver their written answers in English: whether they will accept your case, cost range, treatment duration, earliest available date, and prerequisites." },
+            "price": "199", "priceCurrency": "USD",
+            "priceSpecification": { "@type": "PriceSpecification", "price": "199", "priceCurrency": "USD" },
             "url": "https://chinahospitalsguide.com/pricing.html"
           },
           {
             "@type": "Offer",
-            "itemOffered": { "@type": "Service", "name": "Hospital Acceptance Check", "description": "We take your case to the most relevant Chinese hospital, translate their response, and connect you directly." },
-            "price": "149", "priceCurrency": "USD",
-            "priceSpecification": { "@type": "PriceSpecification", "price": "149", "priceCurrency": "USD" },
+            "itemOffered": { "@type": "Service", "name": "Full Journey Management", "description": "End-to-end coordination: full case file preparation, visa invitation letter, appointment booking, airport pickup, written pre-departure brief, a named coordinator during your stay, and an English discharge summary handover." },
+            "price": "649", "priceCurrency": "USD",
+            "priceSpecification": { "@type": "PriceSpecification", "price": "649", "priceCurrency": "USD" },
             "url": "https://chinahospitalsguide.com/pricing.html"
           },
           {
             "@type": "Offer",
-            "itemOffered": { "@type": "Service", "name": "Full Journey Management", "description": "End-to-end coordination from matching to discharge and follow-up." },
-            "price": "399", "priceCurrency": "USD",
-            "priceSpecification": { "@type": "PriceSpecification", "price": "399", "priceCurrency": "USD" },
-            "url": "https://chinahospitalsguide.com/pricing.html"
+            "itemOffered": { "@type": "Service", "name": "MDT Review", "description": "An independent multidisciplinary team review. Several specialists from the relevant departments jointly assess your case. You receive a written English MDT report, a video consultation with the panel, and a report walkthrough call." },
+            "price": "499", "priceCurrency": "USD",
+            "priceSpecification": { "@type": "PriceSpecification", "price": "499", "priceCurrency": "USD" },
+            "url": "https://chinahospitalsguide.com/mdt-review.html"
           }
         ]
       },
       {
         "@type": "Article",
         "headline": "China Hospital Pricing 2026",
-        "description": "$49 Hospital Shortlist, $149 Hospital Acceptance Check, or $399 Full Journey Management. PayPal secure. Upgrade anytime — only pay the difference.",
+        "description": "Free case review to start. $199 Hospital Acceptance Check, $649 Full Journey Management, $499 independent MDT Review. Upgrade anytime — only pay the difference.",
         "image": "https://chinahospitalsguide.com/og-image.webp",
         "author": { "@type": "Organization", "name": "China Hospitals Guide" },
         "publisher": { "@type": "Organization", "name": "China Hospitals Guide", "logo": { "@type": "ImageObject", "url": "https://chinahospitalsguide.com/og-image.webp" } },
@@ -354,9 +406,11 @@ schema: |
     ]
   }
 ---
+{% from "pay-button.njk" import payButton %}
+
 <section class="pricing-hero">
-    <h1>Three steps to the right hospital &mdash; pick where you are</h1>
-    <p>Shortlist. Verify. Go. Every tier upgrades &mdash; you only ever pay the difference.</p>
+    <h1>Start free. Pay only when we go to work.</h1>
+    <p>We read your case at no cost. Then you choose how far you want us to take it &mdash; and you only ever pay the difference when you upgrade.</p>
 </section>
 
 <main class="pricing-shell">
@@ -368,135 +422,88 @@ schema: |
         <p>You've searched "best hospital in China for my condition" and got nothing you can act on.</p>
         <p>You've asked around &mdash; nobody you know has done this before.</p>
         <p>We're not a directory. We're a <span class="highlight">Chinese speaker with a phone</span>, and we know which department picks up and which one doesn't. We are the person you wish you had.</p>
-        <p><span class="highlight">$49</span> &mdash; get a shortlist of hospitals matched to your case.<br>
-        <span class="highlight">$149</span> &mdash; we take your case to the most relevant hospital, translate what they say, and connect you.<br>
-        <span class="highlight">$399</span> &mdash; we run the entire journey, from matching to discharge.</p>
-        <p>Start at any tier. Upgrade anytime &mdash; you only pay the difference.</p>
+        <p><span class="highlight">Free</span> &mdash; we read your case and tell you honestly whether China fits, and which hospital we'd point you to.<br>
+        <span class="highlight">$199</span> &mdash; we put your case in front of two hospitals and bring back their written answer.<br>
+        <span class="highlight">$649</span> &mdash; we run the entire journey, from case preparation to discharge handover.</p>
+        <p>Or <span class="highlight">$499</span> for an independent <strong>MDT Review</strong> &mdash; several specialists assessing your case together, when a single opinion isn't enough.</p>
+        <p>Start anywhere. Upgrade anytime &mdash; you only pay the difference.</p>
     </div>
 
-    <!-- Three Pricing Cards -->
-    <h2 class="section-title">Pick where you are</h2>
-    <p class="section-copy">Not sure? We'll tell you honestly which one fits &mdash; we won't push you higher.</p>
+    <!-- Step 1: Free Case Review -->
+    <div class="free-block">
+        <span class="free-badge">Step 1 &mdash; Free</span>
+        <h2>Free Case Review</h2>
+        <p class="free-lead">Before you pay us anything, we read your case and tell you the truth about it.</p>
+        <ul>
+            <li>We read your medical records &mdash; in any language</li>
+            <li>We tell you whether China is a realistic option for your condition &mdash; <strong>including when it isn't</strong></li>
+            <li>We name <strong>one</strong> hospital we would point you to, and why that one</li>
+            <li>A realistic cost range and timeline expectation</li>
+            <li>Back to you by email within about 24 hours</li>
+        </ul>
+        <div class="not-included">
+            <strong>What's not included</strong>
+            <p>We don't contact any hospital at this stage, and we name one hospital rather than a list. Contacting hospitals &mdash; and bringing back their written answer &mdash; is what the $199 step is for.</p>
+        </div>
+        <a href="contact-new.html" class="cta-button">Start your free case review &#8594;</a>
+    </div>
+
+    <!-- Steps 2 &amp; 3: Paid coordination -->
+    <h2 class="section-title">When you're ready, we go to work</h2>
+    <p class="section-copy">Two levels of coordination. Both build on the free case review &mdash; if you start there and decide to go further, we pick up from what we already know about your case.</p>
     <div class="pricing-grid-local">
 
-        <!-- L1: $49 -->
-        <div class="pricing-card-local">
-            <h3>L1 &mdash; Hospital Shortlist</h3>
-            <p><strong>"Which hospitals should I be looking at?"</strong></p>
-            <p>For patients still exploring. Get a clear shortlist matched to your condition and timing &mdash; information only, no hospital contact.</p>
-            <div class="pricing-price">$49</div>
+        <!-- Step 2: $199 -->
+        <div class="pricing-card-local featured">
+            <h3>Hospital Acceptance Check</h3>
+            <p><strong>"Will a Chinese hospital actually accept my case?"</strong></p>
+            <p>For patients with a specific condition who need a real answer, in writing, from the hospital itself.</p>
+            <div class="pricing-price">$199</div>
             <ul>
-                <li>2&ndash;3 hospitals matched to your case</li>
-                <li>Cost comparison across cities</li>
-                <li>Transport guidance &mdash; airport to hospital</li>
-                <li>Travel preparation checklist</li>
+                <li>We put your case summary in Chinese and send it to <strong>two hospitals</strong> &mdash; straight to the right department for your condition</li>
+                <li>We put your specific questions to them, so what comes back is what you actually wanted to know</li>
+                <li>You receive <strong>both hospitals' written answers in English</strong>: whether they will accept your case, cost range, treatment duration, earliest available date, and what they need from you first</li>
+                <li>We confirm <strong>whether each hospital can support you in English</strong> while you are there</li>
+                <li>We tell you which one we would choose, and why</li>
+                <li>We give you the named contact in the hospital's international department</li>
             </ul>
             <div class="not-included">
                 <strong>What's not included</strong>
-                <p>We don't contact hospitals. No personalized medical advice. This is a research report &mdash; the information you need to plan your next step.</p>
+                <p>No appointment booking, visa support, airport pickup, or coordination during your stay. Those are part of Full Journey Management.</p>
             </div>
             <div class="upgrade-note">
-                <strong>&#128161; Upgrade anytime:</strong> your $49 is credited toward L2 (+$100) or L3 (+$350).
-            </div>
-            <p class="delivery-label">&#9201; Delivered immediately</p>
-            <div id="paypal-container-K4HNCDD7GDS5C" style="margin-top:24px;"></div>
-            <script>
-            (function renderPP49() {
-                if (window._ppLoaded) {
-                    paypal.HostedButtons({hostedButtonId:"K4HNCDD7GDS5C",onApprove:function(data){if(typeof gtag==='function'){gtag('event','purchase',{send_to:'G-RVYZENK472',currency:'USD',value:49,transaction_id:data.orderID,items:[{item_id:'L1',item_name:'Hospital Shortlist',quantity:1,price:49,currency:'USD'}]});}}}).render("#paypal-container-K4HNCDD7GDS5C");
-                } else if (window._ppFailed) {
-                    var ppHost1 = document.getElementById('paypal-container-K4HNCDD7GDS5C');
-                    ppHost1.innerHTML =
-                        '<a href="https://www.paypal.com/ncp/payment/K4HNCDD7GDS5C" target="_blank" rel="noopener" style="display:inline-block;background:#0070ba;color:#fff;padding:12px 28px;border-radius:8px;text-decoration:none;font-weight:700;font-size:0.95em;">Pay $49 with PayPal &#8594;</a>';
-                    ppHost1.querySelector('a').addEventListener('click', function () {
-                        if (typeof gtag === 'function') { gtag('event', 'payment_fallback_click', { send_to: 'G-RVYZENK472', currency: 'USD', value: 49, item_id: 'L1', item_name: 'Hospital Shortlist' }); }
-                    });
-                } else {
-                    document.addEventListener('pp:loaded', renderPP49, {once:true});
-                    document.addEventListener('pp:failed', renderPP49, {once:true});
-                    setTimeout(function(){ if(!window._ppLoaded&&!window._ppFailed){window._ppFailed=1;renderPP49();} }, 10000);
-                }
-            })();
-            </script>
-            <p class="payment-note">After payment: <a href="thank-you.html" style="color:#dc143c;font-weight:700;">Go to next steps &#8594;</a></p>
-        </div>
-
-        <!-- L2: $149 -->
-        <div class="pricing-card-local featured">
-            <h3>L2 &mdash; Hospital Acceptance Check</h3>
-            <p><strong>"Will a Chinese hospital actually accept my case?"</strong></p>
-            <p>For patients with a specific condition. We put your case in front of the most relevant hospital and bring back their answer in writing.</p>
-            <div class="pricing-price">$149</div>
-            <ul>
-                <li>We prepare your case summary in Chinese and send it to the <strong>most relevant hospital and department</strong> for your condition</li>
-                <li>If that hospital can't evaluate your case, we approach the next best match &mdash; you don't end up at a dead end</li>
-                <li>We translate the hospital's response into English and summarize what it means for your next step</li>
-                <li><strong>We connect you directly</strong> with the hospital &mdash; once you're in touch, our work is done</li>
-                <li>Delivered in 4&ndash;7 business days</li>
-            </ul>
-            <div class="upgrade-note">
-                <strong>&#128161; Upgrade anytime within 30 days:</strong> your $149 is fully credited toward L3 (+$250). Coming from L1? Only pay +$100 more.
+                <strong>&#128161; Upgrade within 30 days:</strong> your full $199 is credited toward Full Journey Management &mdash; you pay only +$450.
             </div>
             <p class="delivery-label">&#9201; Delivered in 4&ndash;7 business days</p>
-            <div id="paypal-container-WGZ9FPKYZ6X3Y" style="margin-top:24px;"></div>
-            <script>
-            (function renderPP149() {
-                if (window._ppLoaded) {
-                    paypal.HostedButtons({hostedButtonId:"WGZ9FPKYZ6X3Y",onApprove:function(data){if(typeof gtag==='function'){gtag('event','purchase',{send_to:'G-RVYZENK472',currency:'USD',value:149,transaction_id:data.orderID,items:[{item_id:'L2',item_name:'Hospital Acceptance Check',quantity:1,price:149,currency:'USD'}]});}}}).render("#paypal-container-WGZ9FPKYZ6X3Y");
-                } else if (window._ppFailed) {
-                    var ppHost2 = document.getElementById('paypal-container-WGZ9FPKYZ6X3Y');
-                    ppHost2.innerHTML =
-                        '<a href="https://www.paypal.com/ncp/payment/WGZ9FPKYZ6X3Y" target="_blank" rel="noopener" style="display:inline-block;background:#0070ba;color:#fff;padding:12px 28px;border-radius:8px;text-decoration:none;font-weight:700;font-size:0.95em;">Pay $149 with PayPal &#8594;</a>';
-                    ppHost2.querySelector('a').addEventListener('click', function () {
-                        if (typeof gtag === 'function') { gtag('event', 'payment_fallback_click', { send_to: 'G-RVYZENK472', currency: 'USD', value: 149, item_id: 'L2', item_name: 'Hospital Acceptance Check' }); }
-                    });
-                } else {
-                    document.addEventListener('pp:loaded', renderPP149, {once:true});
-                    document.addEventListener('pp:failed', renderPP149, {once:true});
-                    setTimeout(function(){ if(!window._ppLoaded&&!window._ppFailed){window._ppFailed=1;renderPP149();} }, 10000);
-                }
-            })();
-            </script>
+            {{ payButton(site.paypalButtons.acceptanceCheck, 199, "acceptance-check", "Hospital Acceptance Check", "Reserve at $199 &mdash; we&rsquo;ll send a payment link &#8594;") }}
             <p class="payment-note">After payment: <a href="thank-you.html" style="color:#dc143c;font-weight:700;">Go to next steps &#8594;</a></p>
         </div>
 
-        <!-- L3: $399 -->
+        <!-- Step 3: $649 -->
         <div class="pricing-card-local">
-            <h3>L3 &mdash; Full Journey Management</h3>
+            <h3>Full Journey Management</h3>
             <p><strong>"I'm ready to go. Handle everything."</strong></p>
-            <p>For patients ready to travel. We manage the entire journey &mdash; from hospital matching to discharge and follow-up.</p>
-            <div class="pricing-price">$399</div>
+            <p>For patients who have decided to travel. Most of this work happens <em>before</em> you land &mdash; so that when you arrive, nothing is left to chance.</p>
+            <div class="pricing-price">$649</div>
             <ul>
-                <li><strong>Includes everything in L2</strong> &mdash; hospital acceptance check + direct connection</li>
-                <li>Medical record translation and preparation</li>
-                <li>Visa invitation letter</li>
-                <li>Appointment booking + airport pickup arrangement</li>
-                <li>Ongoing communication and coordination during treatment</li>
-                <li>Discharge summary + follow-up handover</li>
-                <li>All-inclusive &mdash; no hidden fees</li>
+                <li><strong>Includes everything in the Hospital Acceptance Check</strong> &mdash; two hospitals contacted, both answers in writing</li>
+                <li><strong>Before you travel:</strong> we prepare your full case file in the exact format the hospital requires, so it isn't sent back for corrections</li>
+                <li>We obtain your <strong>visa invitation letter</strong> from the hospital</li>
+                <li>We book your <strong>appointment with the specific specialist</strong>, on the dates you need</li>
+                <li>We arrange <strong>airport pickup</strong> and your transfer to the hospital or accommodation</li>
+                <li>A written <strong>pre-departure brief</strong>: what to bring, what happens each day, who you will meet, how billing works</li>
+                <li><strong>While you are there:</strong> a named coordinator who responds within 4 hours on business days, and acts as your channel to the hospital for anything that needs confirming</li>
+                <li><strong>After discharge:</strong> an English discharge summary, your records organised for your doctor at home, and follow-up check-ins</li>
+                <li>If your dates shift or the plan changes, we re-coordinate it</li>
             </ul>
-            <div class="upgrade-note">
-                <strong>&#128161; Coming from L2?</strong> Pay only +$250. <strong>Coming from L1?</strong> Pay only +$350.
+            <div class="not-included">
+                <strong>What's not included</strong>
+                <p>An MDT Review is a separate service &mdash; see below. We do not promise medical outcomes, and we do not cap hospital costs. English support during your stay is provided by the hospital; we confirm it is in place before you travel.</p>
             </div>
-            <div id="paypal-container-ZBY36JV2X5A3U" style="margin-top:24px;"></div>
-            <script>
-            (function renderPP399() {
-                if (window._ppLoaded) {
-                    paypal.HostedButtons({hostedButtonId:"ZBY36JV2X5A3U",onApprove:function(data){if(typeof gtag==='function'){gtag('event','purchase',{send_to:'G-RVYZENK472',currency:'USD',value:399,transaction_id:data.orderID,items:[{item_id:'L3',item_name:'Full Journey Management',quantity:1,price:399,currency:'USD'}]});}}}).render("#paypal-container-ZBY36JV2X5A3U");
-                } else if (window._ppFailed) {
-                    var ppHost3 = document.getElementById('paypal-container-ZBY36JV2X5A3U');
-                    ppHost3.innerHTML =
-                        '<a href="https://www.paypal.com/ncp/payment/ZBY36JV2X5A3U" target="_blank" rel="noopener" style="display:inline-block;background:#0070ba;color:#fff;padding:12px 28px;border-radius:8px;text-decoration:none;font-weight:700;font-size:0.95em;">Pay $399 with PayPal &#8594;</a>';
-                    ppHost3.querySelector('a').addEventListener('click', function () {
-                        if (typeof gtag === 'function') { gtag('event', 'payment_fallback_click', { send_to: 'G-RVYZENK472', currency: 'USD', value: 399, item_id: 'L3', item_name: 'Full Journey Management' }); }
-                    });
-                } else {
-                    document.addEventListener('pp:loaded', renderPP399, {once:true});
-                    document.addEventListener('pp:failed', renderPP399, {once:true});
-                    setTimeout(function(){ if(!window._ppLoaded&&!window._ppFailed){window._ppFailed=1;renderPP399();} }, 10000);
-                }
-            })();
-            </script>
+            <div class="upgrade-note">
+                <strong>&#128161; Coming from the Acceptance Check?</strong> Your $199 is credited &mdash; pay only +$450.
+            </div>
+            {{ payButton(site.paypalButtons.fullJourney, 649, "full-journey", "Full Journey Management", "Reserve at $649 &mdash; we&rsquo;ll send a payment link &#8594;") }}
             <p class="payment-note">After payment: <a href="thank-you.html" style="color:#dc143c;font-weight:700;">Go to next steps &#8594;</a></p>
         </div>
 
@@ -504,83 +511,115 @@ schema: |
 
     <p style="text-align:center;margin-top:18px;font-size:0.9rem;color:#66758a;">Can't use PayPal from your country? <a href="contact-new.html" style="color:#1e3c72;font-weight:700;">Message us</a> &mdash; we'll arrange another way to pay.</p>
 
+    <!-- Independent product: MDT Review -->
+    <div class="mdt-block">
+        <span class="mdt-badge">Independent service &mdash; not a coordination tier</span>
+        <h2>MDT Review</h2>
+        <p class="mdt-lead">A second opinion from one doctor is a second opinion. An <strong>MDT</strong> &mdash; multidisciplinary team &mdash; is several specialists looking at your case <em>together</em>, in the same room, at the same time. For complex or uncertain cases, that difference matters.</p>
+        <div class="pricing-price">$499</div>
+        <ul>
+            <li>We organise your records and distil them into a <strong>Chinese case summary with a structured question list</strong> &mdash; this is what lets the panel work efficiently on your case</li>
+            <li>The hospital convenes a <strong>panel of specialists</strong> &mdash; typically 3&ndash;5 consultants from the relevant departments (for a cancer case: medical oncology, surgery, radiotherapy, pathology)</li>
+            <li>You receive a <strong>written MDT report in English</strong>: the panel's assessment, their recommended treatment approach, the alternatives and their trade-offs, and any points where they disagreed</li>
+            <li>What the hospital would still need from you in order to proceed</li>
+            <li>A <strong>video consultation with the panel</strong>, with medical interpretation, so you can question them directly</li>
+            <li>A follow-up call with us to walk through the report and what each part means</li>
+        </ul>
+        <div class="not-included">
+            <strong>What's not included</strong>
+            <p>No coordination of any kind &mdash; no booking, visa, pickup, or in-country support. An MDT Review tells you <em>what the right treatment is</em>. Full Journey Management handles <em>getting you there and through it</em>. If you want both, buy them together for <strong>$1,099</strong> &mdash; saving $49.</p>
+        </div>
+        <p class="delivery-label">&#9201; Delivered in 5&ndash;10 business days</p>
+        {{ payButton(site.paypalButtons.mdtReview, 499, "mdt-review", "MDT Review", "Reserve at $499 &mdash; we&rsquo;ll send a payment link &#8594;") }}
+        <p style="text-align:center;margin-top:14px;font-size:0.92rem;"><a href="mdt-review.html" style="color:#1e3c72;font-weight:700;">Read more about how the MDT Review works &#8594;</a></p>
+    </div>
+
     <!-- Comparison Table -->
+    <h2 class="section-title" style="margin-top:56px;">Acceptance Check or Full Journey?</h2>
     <div class="comparison-table-wrap">
         <table class="comparison-table">
             <thead>
                 <tr>
                     <th></th>
-                    <th>L1 &mdash; $49<br>Hospital Shortlist</th>
-                    <th>L2 &mdash; $149<br>Hospital Acceptance Check</th>
-                    <th>L3 &mdash; $399<br>Full Journey</th>
+                    <th>Hospital Acceptance Check &mdash; $199</th>
+                    <th>Full Journey Management &mdash; $649</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td><strong>What you get</strong></td>
-                    <td>2&ndash;3 hospital names + cost data</td>
-                    <td>A real hospital response + direct connection</td>
-                    <td>Everything in L2 + end-to-end journey management</td>
+                    <td><strong>What it answers</strong></td>
+                    <td>"Will they take my case, and on what terms?"</td>
+                    <td>"Handle the whole thing."</td>
                 </tr>
                 <tr>
-                    <td><strong>Hospital contact</strong></td>
-                    <td><span class="cross">&#10005;</span> None</td>
-                    <td><span class="check">&#10003;</span> Most relevant hospital contacted</td>
-                    <td><span class="check">&#10003;</span> 2&ndash;3 hospitals + MDT</td>
+                    <td><strong>Hospitals contacted</strong></td>
+                    <td><span class="check">&#10003;</span> Two hospitals</td>
+                    <td><span class="check">&#10003;</span> Two hospitals</td>
                 </tr>
                 <tr>
-                    <td><strong>Personalized to your case</strong></td>
+                    <td><strong>Written answers in English</strong></td>
+                    <td><span class="check">&#10003;</span> Both hospitals</td>
+                    <td><span class="check">&#10003;</span> Both hospitals</td>
+                </tr>
+                <tr>
+                    <td><strong>English support confirmed with the hospital</strong></td>
+                    <td><span class="check">&#10003;</span></td>
+                    <td><span class="check">&#10003;</span></td>
+                </tr>
+                <tr>
+                    <td><strong>Full case file prepared to hospital format</strong></td>
                     <td><span class="cross">&#10005;</span></td>
-                    <td><span class="check">&#10003;</span> Your case sent to hospitals</td>
-                    <td><span class="check">&#10003;</span> Full case preparation</td>
+                    <td><span class="check">&#10003;</span></td>
                 </tr>
                 <tr>
-                    <td><strong>Translation</strong></td>
+                    <td><strong>Visa invitation letter</strong></td>
                     <td><span class="cross">&#10005;</span></td>
-                    <td>Hospital replies to English</td>
-                    <td><span class="check">&#10003;</span> All medical records + replies</td>
+                    <td><span class="check">&#10003;</span></td>
                 </tr>
                 <tr>
-                    <td><strong>Response SLA</strong></td>
-                    <td>Immediate</td>
+                    <td><strong>Appointment booked with a specific specialist</strong></td>
+                    <td><span class="cross">&#10005;</span></td>
+                    <td><span class="check">&#10003;</span></td>
+                </tr>
+                <tr>
+                    <td><strong>Airport pickup and transfer</strong></td>
+                    <td><span class="cross">&#10005;</span></td>
+                    <td><span class="check">&#10003;</span></td>
+                </tr>
+                <tr>
+                    <td><strong>Coordinator while you are in China</strong></td>
+                    <td><span class="cross">&#10005;</span></td>
+                    <td><span class="check">&#10003;</span> 4-hour response, business days</td>
+                </tr>
+                <tr>
+                    <td><strong>English discharge summary + handover</strong></td>
+                    <td><span class="cross">&#10005;</span></td>
+                    <td><span class="check">&#10003;</span></td>
+                </tr>
+                <tr>
+                    <td><strong>Response time</strong></td>
                     <td>4&ndash;7 business days</td>
                     <td>4 hours on business days</td>
                 </tr>
                 <tr>
-                    <td><strong>Direct hospital connection</strong></td>
-                    <td><span class="cross">&#10005;</span></td>
-                    <td><span class="check">&#10003;</span> Best-fit hospital intro</td>
-                    <td><span class="check">&#10003;</span> Fully managed introductions</td>
-                </tr>
-                <tr>
-                    <td><strong>Visa support</strong></td>
-                    <td><span class="cross">&#10005;</span></td>
-                    <td><span class="cross">&#10005;</span></td>
-                    <td><span class="check">&#10003;</span> Invitation letter</td>
-                </tr>
-                <tr>
-                    <td><strong>Arrival support</strong></td>
-                    <td><span class="cross">&#10005;</span></td>
-                    <td><span class="cross">&#10005;</span></td>
-                    <td><span class="check">&#10003;</span> Airport pickup + logistics</td>
-                </tr>
-                <tr>
                     <td><strong>Upgrade policy</strong></td>
-                    <td>Credited toward L2 or L3</td>
-                    <td>$149 credited toward L3</td>
+                    <td>$199 credited toward Full Journey within 30 days</td>
                     <td>&mdash;</td>
                 </tr>
             </tbody>
         </table>
     </div>
 
+    <p style="max-width:760px;margin:24px auto 0;text-align:center;color:#5f6b7b;font-size:0.95rem;">An <strong>MDT Review ($499)</strong> sits outside this table on purpose. It is a medical opinion, not coordination &mdash; and neither tier above includes it.</p>
+
     <!-- Not sure which to pick? -->
     <div class="guidance-box">
         <h3>Not sure where to start?</h3>
-        <p><strong>Start with $49</strong> if you're still researching &mdash; get a shortlist, zero commitment. Upgrade later and your $49 counts.</p>
-        <p><strong>Start with $149</strong> if you have a specific condition &mdash; find out if Chinese hospitals will actually accept your case.</p>
-        <p><strong>Start with $399</strong> if you're ready to travel &mdash; we handle everything from match to discharge.</p>
-        <p style="margin-top:16px;color:#888;">Unsure? Message us. We'll tell you honestly which tier fits your situation &mdash; no upselling.</p>
+        <p><strong>Start free.</strong> We read your case and tell you honestly whether China is worth pursuing &mdash; and which hospital we would point you to. No card, no commitment.</p>
+        <p><strong>Then $199</strong> if you want a real answer from real hospitals rather than our opinion &mdash; we contact two of them and bring back what they say, in writing.</p>
+        <p><strong>Or $649</strong> if you have already decided to travel and want us to carry the preparation, the logistics and the coordination.</p>
+        <p><strong>$499 MDT Review</strong> is for when the question isn't "where" or "how" but "what treatment is actually right" &mdash; and one doctor's answer isn't enough.</p>
+        <p style="margin-top:16px;color:#888;">Unsure? Message us. We'll tell you honestly which one fits &mdash; including when the answer is none of them.</p>
         <a href="contact-new.html" class="cta-button">Message Us &#8594;</a>
     </div>
 
@@ -627,24 +666,31 @@ schema: |
             <p class="section-copy">Clear refund language so you know exactly where you stand.</p>
             <div class="compare-grid">
                 <div class="compare-card">
-                    <h3>L1 &mdash; $49 Hospital Shortlist</h3>
+                    <h3>Free Case Review</h3>
                     <ul>
-                        <li>Non-refundable once the shortlist is delivered</li>
-                        <li>Designed as a low-risk entry point &mdash; and your $49 is always credited if you upgrade</li>
+                        <li>Nothing to refund &mdash; you owe us nothing unless you choose a paid service</li>
                     </ul>
                 </div>
                 <div class="compare-card">
-                    <h3>L2 &mdash; $149 Hospital Acceptance Check</h3>
+                    <h3>$199 Hospital Acceptance Check</h3>
                     <ul>
-                        <li>Full refund if cancelled before we contact the hospital</li>
-                        <li>Non-refundable once the hospital has been contacted &mdash; our labor has been performed</li>
-                        <li>If no hospital responds, we'll offer to contact alternatives or issue a full refund</li>
+                        <li>Full refund if cancelled before we contact the hospitals</li>
+                        <li>Non-refundable once the hospitals have been contacted &mdash; our labor has been performed</li>
+                        <li>If neither hospital responds, we will approach alternatives or issue a full refund</li>
                     </ul>
                 </div>
                 <div class="compare-card">
-                    <h3>L3 &mdash; $399 Full Journey Management</h3>
+                    <h3>$499 MDT Review</h3>
                     <ul>
-                        <li>$369 refund if cancelled 72+ hours before service start</li>
+                        <li>$469 refund if cancelled before the panel is convened</li>
+                        <li>The first $30 remains non-refundable as information processing work</li>
+                        <li>If we cannot assemble an appropriate panel for your case, full refund</li>
+                    </ul>
+                </div>
+                <div class="compare-card">
+                    <h3>$649 Full Journey Management</h3>
+                    <ul>
+                        <li>$619 refund if cancelled 72+ hours before service start</li>
                         <li>The first $30 remains non-refundable as information processing work</li>
                     </ul>
                 </div>

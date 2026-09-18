@@ -40,7 +40,7 @@ schema: |
           "name": "Is China Hospitals Guide free to use?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Browsing the hospital directory, the cost calculator, and the guides are free. The matching service starts at $49 for a hospital shortlist, with higher tiers for a hospital acceptance check ($149) and full journey management ($399)."
+            "text": "Browsing the hospital directory, the cost calculator, and the guides are free, and so is the case review. The paid services start at $199 for a hospital acceptance check, $499 for an independent MDT review, and $649 for full journey management."
           }
         },
         {
@@ -56,7 +56,7 @@ schema: |
           "name": "How do I know a hospital is actually good?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "We apply a documented selection method — covering accreditation such as JCI or Grade 3A status, specialist volume, and international-patient capability — and publish 56 hospital pages with verified data. The $149 tier goes further by putting your case in front of the most relevant hospital and translating their actual response."
+            "text": "We apply a documented selection method — covering accreditation such as JCI or Grade 3A status, specialist volume, and international-patient capability — and publish 56 hospital pages with verified data. The Hospital Acceptance Check ($199) goes further by putting your case in front of two hospitals and delivering both written answers in English."
           }
         },
         {
@@ -64,7 +64,7 @@ schema: |
           "name": "How much will treatment cost in China?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The free calculator gives an estimate across nine common procedures, adjusted by city and hospital tier. A written quote requires a hospital to review your records, which the $149 and $399 tiers arrange on your behalf."
+            "text": "The free calculator gives an estimate across nine common procedures, adjusted by city and hospital tier. A written quote requires a hospital to review your records, which the Hospital Acceptance Check ($199) and Full Journey Management ($649) arrange on your behalf."
           }
         },
         {
@@ -102,11 +102,13 @@ The calculator is an estimate, not a quote, and it says so. A real number only c
 
 We are not a directory and not a booking agent taking a cut from hospitals. We are a **Chinese-speaking intermediary** who knows which department answers the phone. That distinction shapes everything, starting with how we are paid: **we charge patients a flat fee and take no commission from hospitals**, so the hospital we recommend is the one that fits your case, not the one that pays us.
 
-The service runs in three tiers, each building on the one before it, and you can upgrade at any time and only pay the difference:
+The service starts free and then moves to two paid levels. You can upgrade at any time and only pay the difference:
 
-- **$49 — Hospital Shortlist.** You tell us your condition and timeline; we return two to three hospitals matched to your case, with cost comparison across cities and travel guidance. Information only, no hospital contact.
-- **$149 — Hospital Acceptance Check.** We prepare your case summary in Chinese and put it in front of the most relevant hospital and department; if they can't evaluate your case, we approach the next best match. We translate their response into English and connect you directly with them. Delivered in four to seven business days.
-- **$399 — Full Journey Management.** Everything in the $149 tier, plus medical record translation, a visa invitation letter, appointment booking, airport pickup, and coordination through discharge and follow-up.
+- **Free Case Review.** You send your records in any language. We tell you whether China is a realistic option for your case — including when it isn't — and name the one hospital we would point you to, with a cost range and timeline. No card, no commitment.
+- **$199 — Hospital Acceptance Check.** We prepare your case summary in Chinese and put it in front of two hospitals and the right departments. You receive both hospitals' written answers in English: whether they will accept your case, the cost range, treatment duration, the earliest available date, and what they need from you first. Delivered in four to seven business days.
+- **$649 — Full Journey Management.** Everything in the Acceptance Check, plus your case file prepared to the hospital's required format, a visa invitation letter, appointment booking with a specific specialist, airport pickup, a named coordinator during your stay, and an English discharge summary.
+
+There is also an independent **$499 MDT Review** — a multidisciplinary panel of several specialists assessing your case together — for when the question is *what treatment is right* rather than *how to get there*. It sits outside the two coordination levels, and neither of them includes it.
 
 The full breakdown, including refund terms, is on the [pricing page](/pricing.html). The free starting point — browsing hospitals, running the calculator, reading the guides — is genuinely free.
 
@@ -137,16 +139,16 @@ The honest frame is not "China is better." It is "for a specific set of patients
 ## 6. Frequently Asked Questions
 
 ### Is China Hospitals Guide free to use?
-The [hospital directory](/hospitals.html), the [cost calculator](/calculator.html), and the guides are free. The matching service starts at $49 for a shortlist, with $149 for a hospital acceptance check and $399 for full journey management — and any tier upgrades, you only pay the difference.
+The [hospital directory](/hospitals.html), the [cost calculator](/calculator.html), and the guides are free — and so is the case review. The paid services are $199 for a hospital acceptance check, $649 for full journey management, and $499 for an independent MDT review. Upgrade at any time and you only pay the difference.
 
 ### Do you take commissions from hospitals?
 No. We charge patients a flat fee and take no commission from hospitals. That keeps the recommendation independent of any hospital's marketing budget.
 
 ### How do I know a hospital is actually good?
-We apply a [documented selection method](/how-we-choose-hospitals.html) — accreditation (JCI or Grade 3A), specialist volume, and international-patient capability — and publish 56 hospital pages with verified data. The $149 tier goes further by getting a real answer from the most relevant hospital about your case.
+We apply a [documented selection method](/how-we-choose-hospitals.html) — accreditation (JCI or Grade 3A), specialist volume, and international-patient capability — and publish 56 hospital pages with verified data. The Hospital Acceptance Check ($199) goes further by getting a real answer from two hospitals about your case.
 
 ### How much will treatment cost in China?
-Start with the [free calculator](/calculator.html) for an estimate across nine common procedures. A written quote needs a hospital to review your records, which the $149 and $399 tiers arrange on your behalf.
+Start with the [free calculator](/calculator.html) for an estimate across nine common procedures. A written quote needs a hospital to review your records, which the Acceptance Check ($199) and Full Journey Management ($649) arrange on your behalf.
 
 ### Which conditions do you cover?
 Cardiology, oncology and CAR-T therapy, orthopedics, IVF, neurology, and imaging, among others. A dedicated [heart-failure entry point](/heart-failure.html) was added in 2026, alongside the transit visa guide and imaging fast-track.
