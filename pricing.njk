@@ -503,6 +503,7 @@ schema: |
             <div class="upgrade-note">
                 <strong>&#128161; Coming from the Acceptance Check?</strong> Your $199 is credited &mdash; pay only +$450.
             </div>
+            {{ payButton(site.paypalButtons.fullJourneyUpgrade, 450, "full-journey-upgrade", "Full Journey Management — Upgrade", "Pay the +$450 difference &mdash; we&rsquo;ll send a payment link &#8594;") }}
             {{ payButton(site.paypalButtons.fullJourney, 649, "full-journey", "Full Journey Management", "Reserve at $649 &mdash; we&rsquo;ll send a payment link &#8594;") }}
             <p class="payment-note">After payment: <a href="thank-you.html" style="color:#dc143c;font-weight:700;">Go to next steps &#8594;</a></p>
         </div>
@@ -527,7 +528,7 @@ schema: |
         </ul>
         <div class="not-included">
             <strong>What's not included</strong>
-            <p>No coordination of any kind &mdash; no booking, visa, pickup, or in-country support. An MDT Review tells you <em>what the right treatment is</em>. Full Journey Management handles <em>getting you there and through it</em>. If you want both, buy them together for <strong>$1,099</strong> &mdash; saving $49.</p>
+            <p>No coordination of any kind &mdash; no booking, visa, pickup, or in-country support. An MDT Review tells you <em>what the right treatment is</em>. Full Journey Management handles <em>getting you there and through it</em>.</p>
         </div>
         <p class="delivery-label">&#9201; Delivered in 5&ndash;10 business days</p>
         {{ payButton(site.paypalButtons.mdtReview, 499, "mdt-review", "MDT Review", "Reserve at $499 &mdash; we&rsquo;ll send a payment link &#8594;") }}

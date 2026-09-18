@@ -140,6 +140,7 @@ schema: |
             <div class="upgrade">
                 <strong>💡 Пришли из Проверки приёма?</strong> $199 засчитываются — доплата +$450.
             </div>
+            {{ payButton(site.paypalButtons.fullJourneyUpgrade, 450, "full-journey-upgrade", "Full Journey Management — Upgrade", "Доплатить +$450 — пришлём ссылку на оплату &#8594;") }}
             {{ payButton(site.paypalButtons.fullJourney, 649, "full-journey", "Full Journey Management", "Забронировать за $649 — пришлём ссылку на оплату &#8594;") }}
         </div>
 
@@ -158,7 +159,7 @@ schema: |
             </ul>
             <div class="not-inc">
                 <strong>Независим от уровней сопровождения</strong>
-                Не засчитывается в Полное сопровождение. При покупке вместе: <strong>$1,099</strong> вместо $1,148.
+                Не засчитывается в Полное сопровождение.
             </div>
             {{ payButton(site.paypalButtons.mdtReview, 499, "mdt-review", "MDT Review", "Забронировать за $499 — пришлём ссылку на оплату &#8594;") }}
         </div>

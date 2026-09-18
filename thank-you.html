@@ -24,7 +24,8 @@
         var tiers = {
             'acceptance-check': { value: 199, name: 'Hospital Acceptance Check' },
             'mdt-review': { value: 499, name: 'MDT Review' },
-            'full-journey': { value: 649, name: 'Full Journey Management' }
+            'full-journey': { value: 649, name: 'Full Journey Management' },
+            'full-journey-upgrade': { value: 450, name: 'Full Journey Management — Upgrade' }
         };
         var id = (p.get('tier') || '').trim().toLowerCase();
         var t = tiers[id];
@@ -202,7 +203,7 @@
         <div style="text-align:center;font-size:2em;margin-bottom:8px;">💡</div>
         <h2 style="text-align:center;">Upgrade Anytime — Only Pay the Difference</h2>
         <p style="text-align:center;"><strong>Acceptance Check → Full Journey:</strong> Your $199 is credited toward Full Journey Management ($649) &mdash; you pay <strong>+$450 more</strong>. Valid for 30 days.</p>
-        <p style="text-align:center;"><strong>MDT Review + Full Journey Management:</strong> Bought together the two cost <strong>$1,099</strong> instead of $1,148. An MDT Review on its own does not credit toward coordination.</p>
+        <p style="text-align:center;"><strong>MDT Review &rarr; Full Journey:</strong> An MDT Review does not credit toward coordination &mdash; they are separate services.</p>
         <p style="text-align:center;font-size:0.9rem;color:#888;">Just message us and mention you want to upgrade. We'll handle the rest.</p>
     </div>
 
